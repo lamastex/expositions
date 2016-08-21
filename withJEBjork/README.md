@@ -2,7 +2,7 @@ Mathematical Expositions by Jan-Erik Bjork
 =================================================================
 ## with Raazesh Sainudiin (started July-August 2006)
 
-These are expository lectures are aimed at those interested in a concrete, constructive and elementary understanding of basic ideas in Mathematics.
+These expository lectures are aimed at those interested in a concrete, constructive and elementary understanding of basic ideas in Mathematics.
 
 They are highly incomplete at this stage and will be extended when possible.
 
