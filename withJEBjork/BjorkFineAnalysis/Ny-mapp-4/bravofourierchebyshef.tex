@@ -1,0 +1,1919 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+
+\def\vvv{-}
+
+ 
+\begin{document}
+
+
+
+\centerline{\bf \large{Fourier series}}
+\bigskip
+
+
+\noindent
+
+\centerline{\emph{Contents}}
+\bigskip
+
+
+\noindent
+\emph{A: The Fejer kernel}
+
+\bigskip
+
+
+\noindent
+\emph{B: Legendre polynomials}
+
+
+
+\bigskip
+
+
+\noindent
+\emph{C. The space $\mathcal T_n$}
+
+
+\bigskip
+
+
+\noindent
+\emph{D. Tchebysheff  polynomials}
+
+
+\bigskip
+
+
+\noindent
+\emph{E. Almost periodic functions.}
+
+
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+In section A we recall basic constructions of Fourier series.
+The major
+results give solutions to extremal problems
+such as the theorems in
+B.8, C.9  and D.4. The final section is more extensive and
+gives an exposition of Harald Bohr's theory about almost periodic functions on 
+the real line.
+
+
+\bigskip
+
+\centerline
+{\bf{A: Dini's and Fejer's kernels}}
+\bigskip
+
+\noindent
+We consider complex-valued 
+and continuous functions $f(\theta)$ defined in the interval
+$[0,2\pi]$ which satisfiy
+$f(0)=f(2\pi)$. To each such function $f$ and every integer $n$ we set
+\[ 
+\widehat f(n)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\
+e^{-in\phi}f(\phi)\cdot d\phi
+\]
+We refer to $\{\widehat f(n)\}$ as the Fourier coefficients of $f$.
+Next, if $N\geq 1$ we set
+\[
+S_N(\theta)=\sum_{n=-N}^{n=N}\, \hat f(n)\cdot e^{in\theta}
+\]
+We refer to $S_N$ as Fourier's partial sum function of degree $N$.
+\medskip
+
+\noindent
+{\bf A.1.The Dini kernel.}
+If $N\geq 1$ we set
+\[ 
+D_N(\theta)=
+\frac{1}{2\pi}\sum_{n=-N}^{n=N}\, e^{in\theta}
+\]
+
+
+\noindent
+{\bf A.2 Proposition.} \emph{One has the formula}
+\[
+D_N(\theta)=\frac{\text{sin}((N+\frac{1}{2})\theta)}{\text{sin}\,\frac{\theta}{2}}
+\]
+\medskip
+\noindent
+\emph{Proof.}
+We have
+\[
+\sum_{n=-N}^{n=N}\, e^{in\theta}
+=e^{-iN\theta}\cdot
+\frac{1}{2\pi}\sum_{n=0}^{n=2N}\, e^{in\theta}
+=e^{-iN\theta}\cdot
+\frac{
+e^{i(2N+1)\theta}-1}{e^{i\theta}-1}
+\]
+Proposition A.2 follows 
+after multiplication with
+$e^{i\theta/2}$
+and  the two equalities
+\[
+e^{i(N+1/2)\theta}-e^{i(N+1/2)\theta}=2i\cdot\text{sin}((N+1/2)\theta)
+\]
+\[
+e^{i \theta/2}-e^{-i\theta/2}=2i\cdot\text{sin}(\theta/2)
+\]
+
+
+\noindent
+{\bf A.3 Exercise.}
+Show that
+\[ S_N(\theta)=\int_0^{2\pi}\, D_N(\theta-\phi)\cdot f(\phi)\cdot d\phi=
+\int_0^{2\pi}\, D_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\]
+\medskip
+
+\noindent
+{\bf A.4 The Fejer kernel.}
+Given $f$ as above and $N\geq1$ we set
+\[
+F_N(\theta)=\frac{S_0(\theta)+\ldots+S_N(\theta)}{N+1}\implies
+\]
+\[ F_N(\theta)=\int_0^{2\pi}\,\mathcal F_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\quad\text{where}\quad
+\mathcal F_N(\phi)= D_0(\phi)\ldots+D_N(\phi)
+\]
+\medskip
+
+\noindent
+{\bf A.5 Proposition} \emph{One has the formula} 
+\[
+ F_N(\theta)=\frac{1}{N+1}\cdot\frac{1-\text{cos}((N+1)\theta)}{2\cdot \text{sin}^2(\frac{\theta}{2})}
+ \]
+
+ 
+ \noindent
+ \emph{Proof.}
+To each $\nu\geq 0$ we have
+\[
+\text{sin}((\nu+1/2)\theta)=
+\mathfrak{Im} \bigl [e^{i(\nu+1/2)\theta)}\bigr]
+\]
+It follows that $F_N(\theta)$ is equal to the imaginary part of
+\[
+\frac{e^{i\theta/2}}{\text{sin}(\theta/2)}\cdot
+\sum_{\nu=0}^{\nu=N}\, e^{i\nu\theta}=
+\frac{e^{i\theta/2}}{\text{sin}(\theta/2)}\cdot
+\frac{e^{i(N+1)\theta}-1}{e^{i\theta-1}}
+=
+\frac{e^{i(N+1)\theta}-1}{\text{sin}(\theta/2)}\cdot
+\frac{1}{e^{i\theta/2}-e^{-i\theta/2}}=
+\]
+\[
+\frac{e^{i(N+1)\theta}-1}{2i\cdot \text{sin}^2(\theta/2)}
+=i\cdot \frac{1-e^{i(N+1)\theta}}{2\cdot \text{sin}^2(\theta/2)}
+\]
+Finally,  the imaginary part of the last term is equal to
+\[
+\frac{1-\text{cos}((N+1)\theta)}{2\cdot \text{sin}^2(\theta/2)}
+\]
+which proves Proposition A.5.
+
+ \bigskip
+ 
+ \noindent
+{\bf A.6 A limit  formula.}
+When $f$ is given we set
+\[ 
+\mathcal F_N(\theta)= \int_0^{2\pi}\, F_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\]
+If $a>0$ and $a\leq\theta\leq 2\pi-a$
+the sine-function  $\text{sin}^2(\theta/2)$ is bounded below, i.e.
+\[
+\text{sin}^2(\theta/2)\geq \text{sin}^2(a/2)
+\]
+So if  $M$ is the maximum norm of
+$|f(\theta)|$ over $[0,2\pi]$
+it follows that
+\[
+ \int_a^{2\pi-a}\, F_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\leq
+\] 
+\[
+\frac{M}{(N+1)\cdot \text{sin}^2(a/2)}
+ \int_a^{2\pi-a}\, (1-\text{cos}(N\phi))\cdot d\phi
+\leq\frac{2M}{(N+1)\cdot \text{sin}^2(a/2)}
+\]
+\medskip
+
+\noindent
+{\bf A.7 Exercise.}
+Given some $\theta_0$ and $a>0$ we set
+\[
+\omega_f(a)=\max_{|\theta-\theta_0|\leq a}\, |f(\theta)-f(\theta_0)|
+\]
+Show  that
+\[
+|\mathcal F_N(\theta_0)-f(\theta_0)|
+\leq\frac{2M}{(N+1)\cdot \text{sin}^2(a/2)}+\omega_f(a)
+\quad\text{for all}\quad 0<a<\pi
+\]
+Finally, use the \emph{uniform continuity}
+of the function $f$ over the interval $[0,2\pi]$ to  conclude that
+the sequence $\{\mathcal F_N\}$ converges uniformly to $f$ over
+the interval $[0,2\pi]$.
+\medskip
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf{B. Legendre polynomials.}}
+\bigskip
+
+
+\noindent
+If $n\geq 1$ we denote by $\mathcal P_n$ the linear space of real-valued
+polynomials of degree $\leq n$. A bilinear form
+is defined by
+\[
+\langle q,p\rangle=
+\int_{-1}^1\, q(x)p(x)\cdot dx
+\]
+Since 
+$1,x,\ldots,x^{n-1}$ generate a subspace of  co-dimension  one
+in $\mathcal P\uuu n$ we get:
+
+\medskip
+
+\noindent
+{\bf {B.1 Proposition.}}
+\emph{There exists a unique 
+$Q_n(x)= x^n+q_{n-1}x^{n-1}+\ldots+q_0$
+such that}
+\[
+\int_{-1}^1\, x^\nu\cdot Q_n(x)\cdot dx=0\leq  \nu\leq n-1
+\]
+\medskip
+
+\noindent
+To find $Q_n(x)$.
+we consider the polynomial $(1-x^2)^n$ which vanishes up to order
+$n$ at the  end-points 1 and -1. 
+Its the derivative of order $n$ gives a polynomial of  degree $n$
+and partial integrations show that
+\[
+\int_{-1}^1\, x^\nu\cdot \partial^n((x^2-1)^n))\cdot dx=0\leq  \nu\leq n-1
+\]
+The leading coefficient of $x^n$ 
+in $\partial^n((x^2-1)^n))$
+becomes
+\[
+c_n=2n(2n-1)\cdots (n+1)
+\]
+Hence we have
+\[ Q_n(x)=\frac{1}{c_n}\cdot \partial ^n((x^2-1)^n)
+\]
+\medskip
+
+\noindent
+{\bf B.2 Definition.}
+\emph{The Legendre polynomial of degree
+$n$ is  given by}
+\[
+P_n(x)=k_n\cdot\partial ^n((x^2-1)^n)
+\]
+\emph{where the constant $k\uuu n$ is determined so that
+$P\uuu n(1)=1$.}
+
+\medskip
+
+\noindent
+Since $P_n$ is equal to $Q_n$ up to a constant we still have
+\[
+\int_{-1}^1\, x^\nu\cdot P_n(x)\cdot dx=0\leq  \nu\leq n-1
+\]
+From this we conclude that 
+\[
+\int_{-1}^1\, x^\nu\cdot P_n(x)\cdot P_mx)dx=0\quad  n\neq m
+\]
+Thus, $\{P_n\}$ is an orthogonal family
+with respect to the inner product defined by the integral over
+$[-1,1]$.
+\medskip
+
+\noindent
+{\bf B.3 A generating function.}
+Let $w$ be a new variable and set
+\[
+\phi(x,w)=1-2xw+w^2
+\]
+Notice that $\phi\neq 0$ when
+$-1\leq x\leq 1$ and $|w/<1$.
+Keeping $-1\leq x\leq 1$ fixed
+we have the function
+\[ 
+w\mapsto
+\frac{1}{\sqrt{1-2xw+w^2}}
+\]
+Recall that when  $|\zeta|<1$ one has the Newton series
+\[
+\frac{1}{\sqrt{1-\zeta}}=\sum\, g_n\cdot \zeta^n\quad
+\text{where}\quad g_n=\frac{3\cdot5\cdots(2n-1)}{2^n}
+\]
+It follows that
+\[
+\frac{1}{\sqrt{1-2xw+w^2}}=\sum\, g_n(2xw-w^2)^2
+\]
+With $x$ kept fixed the series is expanded into $w$-powers, i.e.  set
+\[
+\frac{1}{\sqrt{1-2xw+w^2}}=\sum\, \rho_n(x)\cdot w^n
+\]
+It is easily seen that as $x$ varies then
+$\rho_n(x)$ is a polynomial of degree
+$n$. Moreover, we notice that the coefficient of
+$x^n$ in $\rho_n(x)$ is equal to
+\[
+g_n\cdot 2^n
+\]
+Next, if $x=1$ we have
+\[
+\frac{1}{\sqrt{1-2w+w^2}}= \frac{1}{1-w}= \sum\, w^n
+\]
+From this we conclude that
+\[ 
+\rho_n(1)=1\quad\text{for all}\quad n\geq 0
+\]
+\medskip
+
+\noindent
+{\bf B.4 Theorem.} \emph{One has the equality $\rho_n(x)=P_n(x)$ for each $n$, i.e.} 
+\[
+\frac{1}{\sqrt{1-2xw+w^2}}=\sum\, P_n(x)\cdot w^n
+\]
+\emph{holds when $-1\leq x\leq 1$ and $|w|<1$.}
+
+
+\bigskip
+
+\noindent
+{\bf{B.5 Exercise.}} Prove this result.
+\bigskip
+
+\noindent {{\bf{B.6 The series for $P_n(\text{cos}\,\theta)$}}.
+With $x$ replaed by $\text{cos}\,\theta$ we notice that
+\[
+1-2\text{cos}\,\theta\cdot w+w^2=
+(1-e^{i\theta}w)(1-e^{-i\theta}w)
+\]
+It follows that
+\[
+\frac{1}{\sqrt{1-2\text{cos}(\theta)w+w^2}}=
+\frac{1}{\sqrt{1-1-e^{i\theta}w)}}\cdot 
+\frac{1}{\sqrt{1-e^{-i\theta}w)}}
+\]
+The last product becomes
+\[ \sum\sum\, g_m e^{im\theta}w^m\cdot g_\nu e^{-i\nu\theta}w^\nu
+\]
+Collecting $w$ powers the double sum becomes
+\[
+\sum\, \gamma_n(\theta)\cdot w^n
+\quad\gamma_n(\theta)=\sum_{m+\nu=n}\, g_mg_\nu e^{i(m-\nu)\theta}
+\]
+
+\noindent
+By Theorem B.4 the last sum represents $P_n(\text{cos}(\theta))$.
+One has for example
+\[ 
+P_3(\text{cos}(\theta)=
+2g_3\cdot\text{cos}(3\theta)+
+2g_2g_1\cdot \text{cos}(\theta)
+\]
+where we used that $g_0=1$.
+\medskip
+
+\noindent
+{\bf{B.7 An inequality  for $|P(x)|$.}}
+Since the $g$-numbers are  $\geq 0$
+we obtain
+\[
+|P_n(\text{cos}(\theta)|\leq
+g_ng_0+
+g_{n-1}g_1+\ldots+
+g_1g_{n-1}+
+g_0g_n=P_n(1)\quad\colon\,\,0\leq\theta\leq 2\pi
+\]
+
+\noindent
+Hence we have proved
+\medskip
+
+\noindent
+{\bf B.8 Theorem.}\emph{ For each $n$ one has}
+\[ 
+|P_n(x)|\leq 1\quad\colon\,\, -1\leq x\leq 1
+\]
+
+
+\noindent
+Next, we study the values when $x>1$. Here one has
+\medskip
+
+\noindent
+{\bf B.9 Theorem.} \emph{For each $x>1$ one has}
+\[
+1<P_1(x)<P_2(x)<\ldots
+\]
+
+
+\noindent
+\emph{Proof.}
+Let us put
+\[
+\psi(x.w)= 1+ \sum_{n=1}^\infty\, [P_n(x)-P_{n-1}(x)]\cdot w^n
+\]
+By Theorem B.4 this is equal to
+\[
+\frac{1-w}{\sqrt{1-2xw+w^2}}\tag{*}
+\]
+With $x>1$ we set $x=1+\xi$ and notice that
+\[
+1-2xw+w^2=(1-w)^2-2\xi w
+\]
+Hence (*) becomes
+\[
+\frac{1}{\sqrt{1-\frac{2\xi w}{1-w^2}}}=\sum\, g_n\cdot \frac
+{(2\xi w)^n} {(1-w^2)^n}=\sum\, g_n\cdot (2\xi)^n\cdot
+\frac{w^n}{(1-w^2)^n}\tag{**}
+\]
+Next, for each $n\geq 1$ we notice that the power series
+of 
+$\frac{w^n}{(1-w^2)^n}$ has positive coefficients. Since
+$g_n(2\xi)^n>0$ also hold we conclude that
+(**) is of the form
+\[
+1+ \sum_{n=1}^\infty\, q_n(\xi)\cdot w^n\quad\text{where}\quad q_n(\xi)>0
+\]
+Finally, Theorem B.9 follows since
+\[ 
+P_n(1+\xi)-P_{n-1}(1+\xi)=q_n(\xi)
+\]
+
+
+
+\centerline {\bf {B.10 An $L^2$-inequality.}}
+\medskip
+
+\noindent
+Let $n\geq 1$ and denote by $\mathcal P_n[1]$ the space of
+real-valued polynomials $Q(x)$ of degree $\leq n$ for which
+$\int_{-1}^1\, Q(x)^2\cdot dx=1$ and set
+\[ 
+\rho(n)=\max_{Q\in\mathcal P-n[1]}\,
+|Q|_\infty
+\] 
+where $|Q|_\infty$ is the maximum norm over
+$[-1,1]$.
+To find  $\rho(n)$ we use the orthonormal basis $\{P_k^*\}$
+and write
+\[
+Q(x)=t_0\cdot P_0^*(x)+\ldots+t_n\cdot P_n^*(x)
+\]
+Since $Q\in\mathcal P_n[1]$ we have
+$t_0^2+\ldots+t_n^2=1$. Recall also that
+\[
+P_\nu^*(x)=\sqrt{\frac{2\nu+1}{2}}\cdot P_\nu(x)
+\]
+Given $-1\leq x_0\leq 1$ the Cauchy-Schwarz inequality gives
+\[
+Q(x_0)^2\leq \sum_{\nu=0}^{\nu=n}\,
+\frac{2\nu+1}{2}\cdot |P_\nu(x_0)|\leq 
+\sum_{\nu=0}^{\nu=n}\,\frac{2\nu+1}{2}
+\]
+where the last inequality follows since the maximum norm of
+each $P_\nu$ is $\leq 1$.
+Finally, we notice that
+\[
+\sum_{\nu=0}^{\nu=n}\,\frac{2\nu+1}{2}
+=\frac{(1-n)^2}{2}
+\]
+We conclude that
+\[
+|Q(x_0)|\leq \frac{n+1}{\sqrt{2}}
+\]
+\medskip
+
+\noindent
+{\bf B.11 The case of equality.}
+To have equality above we take  $x_0=1$ and 
+\[
+ t_\nu=\alpha\cdot P^*_\nu(1)\quad\colon\quad \nu\geq 0
+\]
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf {C. The space $\mathcal T_n$}}
+\bigskip
+
+\noindent
+Let $n\geq 1$ be a positive integer.
+A real-valued trigonometric polynomial of degree
+$\leq n$ is given by
+\[
+g(\theta)=a_0+
+a_1\text{cos}\,\theta+\ldots
++
+a_n\text{cos}\,n\theta+
+b_1\text{sin}\,\theta+\ldots
+b_n\text{sin}\,n\theta
+\]
+Here $a_0,\ldots,a_n,b_1,\ldots,b_n$ are real numbers.
+The space of such functions is denoted by
+$\mathcal T_n$ which  is a vector space over
+${\bf{R}}$ of dimension $2n+1$.
+We can write
+\[
+\text{cos}\,kx=\frac{1}{2}[e^{ikx}+e^{-ikx}]\quad\text{and}\quad
+\text{sin}\,kx=\frac{1}{2i}[e^{ikx}-e^{-ikx}]\quad\colon\, k\geq 1
+\]
+It follows that there exist complex numbers
+$c_0,\ldots,c_{2n}$ such that
+\[
+g(\theta)=e^{-in\theta}\cdot[c_0+c_1e^{i\theta}+\ldots+c_{2n}e^{i2n\theta}]
+\]
+\medskip
+
+\noindent
+{\bf Exercise.}
+Show that
+\[
+c_\nu+c_{2n-\nu}=2a_\nu\quad \text{and}\quad c_{\nu}-c_{2n-\nu}=2 b_\nu\implies
+\]
+\[
+c_{2n-\nu}=\bar c_\nu\quad 0\leq\nu\leq n
+\]
+
+
+\noindent
+{\bf C.1 The polynomial $G(z)$.}
+Given $g(\theta)$ as above we set
+\[ 
+G(z)= c_0+c_1z+\ldots+c_{2n}z^{2n}
+\]
+Then we see that
+\[ 
+e^{-in\theta}\cdot G(e^{i\theta})= g(\theta)
+\]
+
+
+\noindent
+{\bf C.2 Exercise.}  Set
+\[ 
+\bar G(z)= \bar c_0+c-1z+\ldots+\bar c_{2n}z^{2n}
+\]
+and show that
+\[ z^{2n}G(1/z)= \bar G(z)\tag{*}
+\]
+Use this to show that if
+$0\neq z_0$ is a zero of $G(z)$ then
+$\frac{1}{\bar z_0}$ is also a zero of $G(z)$.
+\medskip
+
+\noindent
+{\bf{C.3 The case when $g\geq 0$}}. Assume that the $g$-function is non-negative.
+Let
+\[ 
+0\leq \theta_1<\ldots<\theta_\mu<2\pi
+\]
+be the zeros on the half-open interval $[0,2\pi)$.
+Since $g\geq 0$ every such zero has a multiplicity given by
+an \emph{even} integer.
+Consider also the polynomial $G(z)$. From Exercise C.2    it follows that
+$\{e^{i\theta_\nu}\}$ are complex zeros of $G(z)$
+with multiplicities given by even integers.
+Next, if $\zeta$ is a zero where
+$\zeta\neq 0$ and $|\zeta|\neq 1$, then (*) in C.2
+implies that
+$\frac{1}{\bar\zeta}$ also is  a zero and hence
+$G(z)$ has a factorisation
+\[
+G(z)= c_{2n}
+\cdot \prod_{\nu=1}^{\nu=\mu}\,
+(z-e^{i\theta_\nu})^{2k_\nu}\cdot \prod_{j=1}^{j=m}\,
+(z-\zeta_j)(z-\frac{1}{\bar\zeta_j})\cdot z^{2r}
+\quad\text{where}\quad 2\mu+2m+2r=2n
+\]
+Here $0<|\zeta_j|<1$ hold for each $j$ and it may occur that
+multiple zeros appear,  i.e. the
+$\zeta$-roots need not be distinct and  the integer $r$ may be zero
+or positive.
+\medskip
+
+\noindent
+{\bf {C.4 The $h$-polynomial}}. Let
+$\delta=\sqrt{|\zeta_1|\cdots|\zeta_m|}$ and put
+\[
+h(z)=c_{2n}\dot \delta\cdot \prod_{\nu=1}^{\nu=\mu}\,
+(z-e^{i\theta_\nu})^{k_\nu}\cdot \prod_{j=1}^{j=m}\,
+(z-\zeta_j)\cdot z^{r}
+\]
+
+
+\noindent
+{\bf C.5 Proposition.} \emph{One has the equality}
+\[
+|h(e^{i\theta})|^2=g(\theta)
+\]
+
+
+\noindent
+\emph{Proof.}
+With $z=e^{i\theta}$ and $0<|\zeta|<1$ one has
+\[
+(e^{i\theta}-\zeta)
+(e^{i\theta}-\frac{1}{\bar \zeta})=
+(e^{i\theta}-\zeta)\cdot (\bar\zeta -e^{-i\theta})\cdot
+e^{i\theta}\cdot\frac{1}{\bar \zeta}
+\]
+Passing to absolute values it follows that
+\[
+\bigl|(e^{i\theta}-\zeta)
+(e^{i\theta}-\frac{1}{\bar \zeta})\bigr|=
+\bigl|e^{i\theta}-\zeta\bigr|^2\cdot 
+\frac{1}{|\zeta|}
+\]
+Apply this to every root $\zeta_\nu$ and take the 
+product which
+gives 
+Proposition C.5.
+\bigskip
+
+\noindent
+{\bf C.6 Application.}
+Let $g\geq 0$ be as above 
+and assume that the constant coefficient $a_0=1$.
+This means that
+\[
+1=\frac{1}{2\pi}\cdot 
+\int_0^{2\pi}\, g(\theta)\cdot d\theta
+\]
+With
+$h(z)=d_0+d_1z+\ldots+d_nz^n$
+we get
+\[
+1 =\frac{1}{2\pi}\cdot 
+\int_0^{2\pi}\,h(e^{i\theta})|^2\cdot d\theta
+=|d_0|^2+\ldots+|d_n|^2
+\]
+Notice that
+\[ |d_n|^2=|c_{2n}|\cdot\delta\quad\text{and}\quad
+|d_0|^2= |c_{2n}\cdot \delta|\cdot\prod\,|\zeta_j|^2=|c_{2n}|\cdot \frac{1}{\delta}\tag{i}
+\]
+From this we see that
+\[
+|c_{2n}|\cdot(\delta+\frac{1}{\delta})= |d_0|^2+d_n|^2\leq 1\tag{iii}
+\]
+Here $0<\delta<1$ and therefore
+$\delta+\frac{1}{\delta}\geq 2$ which together with
+(iii) gives
+\[
+|c_{2n}|\leq \frac{1}{2}
+\]
+At the same time we recall  that
+\[
+c_{2n}=\frac{a_n+ib_n}{2}
+\]
+Hence we have proved the inequality:
+\[
+|a_n+ib_n|\leq 1\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Summing up} we have proved the following:
+\medskip
+
+\noindent
+{\bf {C.7 Theorem.}}
+\emph{Let $g(\theta)$
+be non-negative in $\mathcal T_n$ with constant term
+$a_0=1$. Then}
+\[
+|a_n+ib_n|\leq 1
+\]
+
+
+\noindent
+{\bf {C.8 An application}}.
+Let $n\geq 1$ and consider the space of all monic polynomials 
+\[
+P(x)=x^n+c_{n-1}x^{n-1}+\ldots+c_0
+\]
+where $\{c_\nu\}$ are real-
+To each such polynomial we can consider the maximum norm
+over the interval $[-1,1]$.
+Then one has
+\medskip
+
+\noindent
+{\bf {C.9 Theorem.}}
+\emph{For each $P\in\mathcal P_n^*$ one has the inequality}
+\[
+\max_{-1\leq x\leq 1}\, |P(x)|\geq 2^{-n+1}
+ \]
+\medskip
+
+\noindent
+\emph{Proof}. 
+Consider some $P\in\mathcal P_n^*$ and
+define the trigonometric polynomial
+\[ 
+g(\theta)= (\text{cos}\,\theta)^n
++c_{n-1}(\text{cos}\,\theta)^{n-1}+\ldots+c_0
+\]
+So here
+$P(\text{cos}\,\theta)= g(\theta)$ and 
+Theorem C.9 follows if we have proved that
+\[
+2^{-n+1}\geq 
+\max_{0\leq \theta\leq 2\pi}\, |g(\theta))|\tag{1}
+\]
+To prove this we set
+$M=\max_{0\leq \theta\leq 2\pi}\, |g(\theta))|$.
+Next, we can write
+\[ 
+g(\theta)= a_0+a_1\text{cos}\,\theta\ldots+
+a_n\text{cos}\,n\theta
+\]
+Moreover, since
+\[
+(\text{cos}\,\theta)^n=2^{-n}\cdot[e^{i\theta}+e^{-\theta}]^n
+\]
+we get
+\[ 
+a_n=2^n
+\]
+Now we shall apply Theorem C.8. For this purpose we construct
+non-negative trigonometric polynomials. First we define
+\[
+g^*(\theta)= \frac{M-g(\theta)}{M-a_0}
+\]
+Then $g^*\geq 0$ and its constant term is 1.
+We have also
+\[ 
+g^*(\theta)= 1-\frac{1}{M-a_0}\cdot \sum_{\nu=1}^{\nu=n}a_\nu\text{cos}\,\nu\theta
+\]
+Hence Theorem C.7 gives
+\[
+\frac{1}{|M-a_0|}\cdot |a_n|\leq 1\implies
+|M-a_0|\geq 2^{-n+1}\tag{1}
+\]
+Next, we have also the function
+\[
+g_*(\theta)= \frac{M+g(\theta)}{M+a_0}
+\]
+In the same way as above we obtain:
+\[ 
+|M+a_0|\geq 2^{-n+1}\tag{2}
+\]
+Finally, (1) and (2) give
+\[
+M\geq 2^{-n+1}
+\]
+which proves Theorem C.9
+\bigskip
+
+\centerline{\bf{D. Tchebysheff polynomials.}}
+\medskip
+
+\noindent
+The inequality in Theorem C.9 is sharp. To see this
+we shall construct a special polynomial $T_n(x)$ of degree $n$.
+Namely, with $n\geq 1$ we can write
+\[
+\text{cos}\,n\theta=
+2^{n-1}\cdot 
+(\text{cos}\,\theta)^n+
+c_{n-1}\cdot 
+(\text{cos}\,\theta)^{n-1}+
+\ldots+c_0
+\]
+Set
+\[ T_n(x) =2^{n-1}x^n+
+c_{n-1}\cdot x^{n-1}+\ldots+c_0
+\]
+Hence
+\[ 
+T_n(\text{cos}\,\theta)= \text{cos}\, n\theta
+\]
+We conclude that the polynomial
+\[ 
+p_n(x)=2^{-n+1}\cdot T_n(x)
+\]
+belongs to $\mathcal P_n^*$ and its maximum norm
+is $2^{-n+1}$. This proves that the inequality in Theorem 10 is sharp.
+\medskip
+
+\noindent
+{\bf D.1 Zeros of $T_n$}.
+Set
+\[ 
+\theta_\nu=\frac{\nu\pi}{n}+\frac{\pi}{2n}
+\]
+It is clear that
+$\theta_1,\dots,\theta_n$ are zeros of
+$\text{cos}\, n\theta$.
+Hence the  zeros of $T_n(x)$ are:
+\[
+x_\nu= \text{cos}\, \theta_\nu
+\]
+Notice that
+\[
+-1<x_n<\ldots<x_1<1
+\]
+Since $T_n(x)$ is a polynomial of degree
+$n$ it follows that $\{x_\nu\}$ give all zeros and we have
+\[
+T_n(x)=2^{n-1}\cdot \prod\,(x-x_\nu)
+\]
+
+
+\noindent
+{\bf{D.2 Exercise}}.
+Show that
+\[ 
+T'_n(x_\nu)\cdot\sqrt{1-x_\nu^2}=n
+\] 
+hold for every zero of $T_n(x)$.
+
+\medskip
+
+\noindent
+{\bf{D.3 An interpolation formula.}}
+Since $x_1,\ldots,x_n$ are distinct it follows 
+that if $p(x)\in\mathcal P_{n-1}$ is a polynomial of degree
+$\leq n-1$ then
+\[
+ p(x)=
+\sum_{\nu01}^{\nu=n}\, p(x_\nu)\cdot
+\frac{1}{T'(x_\nu)}\cdot \frac{T(x)}{x-x_\nu}
+\]
+By the exercise above we get
+\[
+ p(x)=
+\frac{1}{n}\cdot \sum_{\nu=1}^{\nu=n}\, (-1)^{\nu-1}p(x_\nu)\cdot
+\sqrt{1-x_\nu^2}\cdot \frac{T(x)}{x-x_\nu}
+\]
+\medskip
+\noindent
+We shall use the interpolation formula above to prove
+\medskip
+
+\noindent
+{\bf {D.4 Theorem}}
+\emph{Let $p(x)\in\mathcal P_{n-1}$ satisfy}
+\[
+\max_{-1\leq x\leq 1}\,
+\sqrt{1-x^2}\cdot |p(x)|\leq 1\tag{1}
+\]
+\emph{Then it follows that}
+\[
+\max_{-1\leq x\leq 1}\,
+|p(x)|\leq n\tag{2}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+First, consider the case when 
+\[
+-\text{cos}\frac{\pi}{2n}\leq
+x\leq \text{cos}\,\frac{\pi}{2n}\tag{*}
+\]
+Then we have
+\[
+\sqrt{1-x^2}\geq 
+\sqrt{1-\text{cos}^2\frac{\pi}{2n}}=
+\text{sin}\,\frac{\pi}{2n}
+\]
+Next,  recall the inequality
+$\text{sin}\, x\geq \frac{2}{\pi}\cdot x$.
+It follows that
+\[
+\sqrt{1-x^2}\geq \frac{1}{n}
+\]
+So when (1) holds in the theorem we have
+\[ 
+|p(x)|=\frac{1}{\sqrt{1-x^2}}\cdot
+\sqrt{1-x^2}\cdot |p(x)|\leq
+\frac{1}{\sqrt{1-x^2}}\leq n
+\]
+Hence the required inequality in Theorem D.4  holds when
+$x$ satisfies (*) above.
+Next, suppose that
+\[
+x_1\leq x\leq 1\tag{**}
+\]
+On this interval $T_n(x)\geq 0$ and from the interpolation formula
+xx and the triangle  inequality we have
+\[
+|p(x)\leq\frac{1}{n}
+\sum_{\nu=1}^{\nu=n}\,
+\sqrt{1-x_\nu^2}\cdot |p(x_\nu)|\cdot
+\frac{T(x)}{x-x_\nu}\leq\frac{1}{n}
+\sum_{\nu=1}^{nu=n}\,
+\frac{T(x)}{x-x_\nu}
+\]
+Next, the sum
+\[
+\frac{T(x)}{x-x_\nu}=T'_n(x)=n\cdot U_{n-1}(x)
+\]
+So when (**) holds we have
+\[
+|p(x)|\leq |U_{n-1}(x)|\tag{***}
+\]
+By xx the maximum normmof $U_{n-1}$ over $[-1,1]$ is $n$ and hence
+(***) gives
+\[
+ |p(x)|\leq n
+\]
+In the same way one proves htat
+\[
+-1\leq x\leq x_n\implies 
+ |p(x)|\leq n
+\] 
+Together with the upper bound in the case (xx) we get Theorem D.4.
+
+\bigskip
+
+\centerline{\bf{D.5 Berstein's inequality.}}
+\medskip
+
+\noindent 
+Let $g(\theta)\in\mathcal T_n$.
+The derivative $g'(\theta)$ is another trigonometric polynomial and we have
+\medskip
+
+\noindent
+{\bf Theorem.} \emph{For each $g\in\mathcal T_n$ one has}
+\[
+\max_{0\leq \theta\leq 2\pi}\,
+|g'(\theta)|\leq n\cdot 
+\max_{0\leq \theta\leq 2\pi}\,|g(\theta)|
+\]
+\medskip
+\noindent
+Before we prove this result
+we establish an inequality for certain trigonometric polynomials.
+Namely, consider a real-valued sine-polynomial
+\[
+S(\theta)= 
+c_1\text{sin}(\theta)+ \ldots+
+c_n\text{sin}(n\theta)
+\]
+Now $\theta\mapsto \frac{ S(\theta)}{\text{sin}\,\theta}$
+is an even function of $\theta$ and therefore
+one has
+\[
+\frac{ S(\theta)}{\text{sin}\,\theta}= 
+a_0+a_1\text{cos}\,\theta+
+\ldots+a_{n-1}(\text{cos}\,\theta)^{-n-1}
+\]
+Consider the polynomial
+\[
+p(x)= a_0+a_1x+\ldots+a_{n-1}x^{n-1}
+\]
+Then e see that:
+\[
+|p(\text{cos}\,\theta)|=
+\frac{|S(\theta)|}{\sqrt{1-\text{cos}^2\,\theta}}
+\]
+Using this we apply Theorem D.4 to the polynomial $p(x)$ and conclude
+\medskip
+
+\noindent
+{\bf{D.6 Theorem.}}
+\emph{Let $S(\theta)= 
+c_1\text{sin}(\theta)+ 
+c_n\text{sin}(n\theta)$ be a sine-polynomial as above.
+Then}
+\[
+\max_{0\leq\theta\leq 2\pi}\,
+\frac{|S(\theta)|}{\text{sin}\,\theta}\leq n\cdot
+\max_{0\leq\theta\leq 2\pi}\,
+|S(\theta)|
+\]
+\bigskip
+
+\noindent
+{\bf D.7 Proof of Bernstein's theorem.}
+Fix an arbitrary $0\leq\theta-0<2\pi$.
+Set
+\[
+S(\theta)=g(\theta_0+\theta)-g(\theta_0-\theta)
+\]
+We notice that $S(\theta$is an odd polynomial of
+$\theta$ and
+$S(0)=0$, It follows that
+$S(\theta)$ is a sine-polynomial as above of degree
+$\leq n$. Notice also that
+\[
+\max_{0\leq\theta\leq 2\pi}\,|S(\theta)|\leq 2\cdot
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|
+\]
+Theorem D.6 applied to $S(\theta)$ gives
+\[
+\bigl|\frac{g(\theta_0+\theta)-g(\theta_0-\theta)}{\text{sin}\,\theta}
+\bigr|\leq 2n\cdot 
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|\tag{i}
+\]
+Next, in the left hand side we can take the limit as $\theta|\to 0$ and notice that
+\[
+2\cdot  g'(\theta_0)=
+\lim_{\theta\to 0}\, 
+\frac{g(\theta_0+\theta)-g(\theta_0-\theta)}{\text{sin}\,\theta}
+\]
+Hence (i) gives
+\[
+|g'(\theta_0)|\leq n\cdot 
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|
+\]
+Finally, since $\theta_0$ was arbitrary we get Bernstein's theorem.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{Almost periodic functions.}}
+\bigskip
+
+\noindent
+The theory about almost periodic functions on the real line was created and developed by
+Harald  Bohr.
+The original proofs were rather cumbersome and 
+alternative methods and simplifications of proofs
+which also led to more precise approximations
+were found by Weyl and Bochner.
+One should also mention contributions by
+Besivcovich  whose articles
+[Bes:1+2]  completed Bohr's
+initial studies  of almost periodicity  for bounded complex analytic functions
+in strip domains. The interested reader 
+can consult Bohr's plenary talk at the IMU\vvv congress
+1950 for a survey about the development of the theory about
+almost periodic functions where contributions due to 
+xxxx in [Bel ??] are pointed out since his work
+brings the theory about  almost periodic functions
+closer to problems related to analytic number theory.
+In addition to this we refer to work by
+J. Favard about almost periodic harmonic functions
+and for applications to the study of
+differential and difference equations
+an overall reference is the collected work by Bochner and 
+articles by
+Neugebauer.
+\medskip
+
+\noindent
+We shall
+restrict the study to almost periodic
+ functions on the real line but
+remark that the theory
+extends to a a general set\vvv up where
+one starts from an arbitrary discrete abelian group $G$
+which yields a compact dual group
+$\widehat G$ whose elements are maps $\chi$ from $G$ into
+the unit  circle satisfying
+\[ 
+\chi(g\uuu 1+g\uuu 2)= \chi(g\uuu 1)\cdot \chi(g\uuu 2)\quad
+\text{for all pairs}\quad  g\uuu 1,g\uuu 2\in G\tag{*}
+\]
+One refers to such maps as characters 
+and when $G$ is equipped with the discrete topology then 
+(*) is the sole assumption, i.e. no continuity property is involved.
+Keeping $g\in G$ fixed we get  the   exponential
+function on
+$\widehat G$ defined by
+\[
+E\uuu g(\chi)= \chi(g)\quad \colon\quad \chi\in \widehat G
+\]
+Finite linear combinations of such $E$\vvv functions form a linear space and
+using the maximum norm for functions on $\widehat G$
+the  closure  yields a Banach space
+of functions on $\widehat G$  denoted by
+$\mathcal F(\widehat G)$.
+One equips $\widehat G$ with the weakest topology such that
+every function
+in $\mathcal F(\widehat G)$ is continuous. 
+Tychonof's Theorem from general topology shows that 
+$\widehat G$ becomes a compact topological space 
+equipped with the structure of an abelian group since
+the product of two $\chi$\vvv functions on $G$ again is a character function.
+We shall not enter a detailed discussion about this general construction which leads to
+harmonic analysis on  locally compact abelian groups.
+The interested reader should consult the
+excellent text\vvv book by Rudin in [Rudin] 
+devoted to   Fourier analysis on locally compact
+abelian groups.
+\medskip
+
+\noindent
+Now we turn to the special study on the real line
+which means that $G$ as a group is the real $x$\vvv line line equipped with
+the discrete topology. If $\xi$ is a real number we get the character defined by
+\[ 
+\chi\uuu \xi(x)= e^{ix\xi}
+\]
+In this way the dual group $\widehat {\bf{R}}\uuu{\text{dis}}$
+contains a copy of the real $\xi$\vvv line.
+But the whole compact dual group contains more characters
+whose existence rely upon the axiom of choice.
+So apart from the evident characters
+$\{\chi\uuu \xi\}$ which identify the real $\xi$\vvv line with a subset
+of $\widehat {\bf{R}}\uuu{\text{dis}}$, there exist 
+more characters which no longer are
+constructible in an elementary fashion.
+One refers to $\widehat {\bf{R}}\uuu{\text{dis}}$
+as the Bohr group over the real line. The induced topology on the embedded
+$\xi$\vvv line is much weaker  than the
+ordinary topology. For example, a fundamental system
+of relatively open neighborhoods of $x=0$ consists of sets of the form
+\[
+U\uuu\epsilon(\xi\uuu1,\ldots,\xi\uuu m)=
+\bigcap\uuu{\nu=1}^{\nu=m} \,\{e^{i\xi\uuu \nu\cdot x}\vvv 1|<\epsilon\}
+\]
+where $\epsilon>0$ and $\xi\uuu 1,\ldots,\xi\uuu m$ is some 
+$m$\vvv tuple of real numbers.
+Notice that every such set is unbounded.
+
+\medskip
+
+\noindent
+In the sequel we shall not discuss the Bohr group  since
+the constructions and results will be  expressed via ordinary calculus,
+and
+the subsequent proofs    have the merit that 
+no appeal  to the Axiom of Choice is needed.
+
+
+
+\medskip
+
+\noindent
+Now we present the major results in Bohr's theory.
+Denote by
+$C\uuu *({\bf{R}})$ the set of bounded and uniformly continuous functions
+$f(x)$ on the real $x$\vvv line. Recall that
+uniform continuity means that the non\vvv increasing function
+defined by
+\[
+\omega\uuu f(\delta)= \max\uuu {0<s\leq \delta}\,[
+\max\uuu x\,|f(x+\delta\vvv f(x)|\,]
+\] 
+tends to zero as $\delta\to 0$.
+Following Bohr we  give:
+
+\medskip
+
+
+
+
+
+\noindent
+{\bf{0.1 Definition.}} \emph{A function $f(x)$ is almost periodic if 
+it belongs to $C\uuu *({\bf{R}})$
+and to each $\epsilon>0$ there exists some $\ell >0$
+such that
+every interval $(a,a+\ell)$ contains a point $\tau\uuu a$ where
+the maximum norm}
+\[
+\max\uuu x\, |f(x+\tau\uuu a)\vvv f(x)|<\epsilon
+\]
+\emph{The class of these functions is denoted by $\mathcal{AP}$.}
+\bigskip
+
+
+\noindent
+{\bf{Remark. }} Apart from the condition that $\lim \omega\uuu f(\delta)=0$
+as $\delta\to 0$, almost periodicity means that
+translates of $f$ satisfy an addition condition.
+To each $\epsilon>0$ we put
+\[ 
+E\uuu f(\epsilon)=
+\{\tau\,\,\colon\,\,
+\max\uuu x\, |f(x+\tau)\vvv f(x)|\leq \epsilon\,\}
+\]
+A point $\tau$ in this set is called  a translation number of size $\leq \epsilon$ with
+respect to $f$.
+The continuity of $f$ shows that
+every  $E\uuu f(\epsilon)$ is a closed set and 
+almost periodicity means that
+for every $\epsilon>0$ there exists  $\ell\uuu f(\epsilon)>0$
+such that
+every open interval of length
+$\ell\uuu f(\epsilon)$ contains at least one point from
+$E\uuu f(\epsilon)$. One  says that
+$E\uuu f(\epsilon)$ is a relatively dense subset of
+${\bf{R}}$.
+Notice that the function $\epsilon\mapsto \ell\uuu f(\epsilon)$ is
+non\vvv decreasing.
+
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that the sum and the product of two almost periodic functions
+is almost periodic.
+Show also that if $\{f\uuu n\}$ is a sequence in $\mathcal{AP}$
+which converges uniformly to a limit function $f$
+then $f$ is almost periodic.
+Hence $\mathcal {AP}$ appears a a closed subalgebra of
+$C\uuu *({\bf{R}})$.
+\medskip
+
+
+\noindent
+{\bf{Exponential polynomials.}}
+ If $\tau$ is a real number it is clear that
+the function $e^{i\tau x}$ is almost periodic, and 
+we consider the  algebra of functions of the form
+
+\[
+p(x)= \sum\, c\uuu k\cdot e^{i\tau\uuu k\cdot x}
+\]
+where $\{c\uuu k\}$ is a finite set of complex numbers
+and $\{\tau\uuu k\}$ a finite set of real numbers.
+Denote this algebra by   $\mathcal {TP}$.
+A first major result in Bohr's theory is
+the following density result:
+
+\medskip
+
+\noindent
+{\bf {0.2 Theorem.}}
+\emph{$\mathcal {AP}$ is a closed subspace of
+$C\uuu *({\bf{R}})$ where
+$\mathcal {TP}$ appears as a dense
+subspace.}
+
+
+\bigskip
+
+\noindent
+The non\vvv trivial part  is the density
+which is  proved in XXX.
+Now we  introduce 
+the spectrum of an almost periodic function
+whose construction relies upon the following:
+
+
+\medskip
+
+\noindent
+{\bf{0.3 Proposition.}} \emph{Let $f\in \mathcal{AP}$. Then there exists a limit}
+\[
+M\uuu f(\lambda)=\lim\uuu {T\to\infty}\, \frac{1}{T}\cdot \int\uuu 0^T\,
+e^{\vvv i\lambda x}\cdot f(x)\cdot dx\quad\text{for every real number}\quad  \lambda.
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Since $e^{\vvv i\lambda x}\cdot f(x)$ are almost periodic for every
+$\lambda$ it suffices to prove the result when $\lambda=0$.
+Let  $\epsilon>0$ and pick some $\tau>0$ in the set
+$E\uuu f(\epsilon)$. If $T$ is a large number we find
+the positive integer $N$ such that
+$N\tau\leq T<(N+1)\tau$.
+Now
+\[ 
+\int\uuu 0^T\,  f\cdot dx=
+\sum\uuu{k=0}^{k=N\vvv 1}
+\int\uuu {k\tau}^{(k+1)\tau}\, f\cdot dx+
+\int\uuu {N\tau}^T\, f\cdot dx\tag{i}
+\]
+For each $k$ we have
+\[
+\int\uuu {k\tau}^{(k+1)\tau}\, f\cdot dx=
+\int\uuu 0^\tau\, f(x+k\tau)\cdot dx
+\] 
+At the same time
+\[
+\bigl|\int\uuu 0^\tau\, f(x+k\tau)\cdot dx
+\vvv\int\uuu 0^\tau\, f(x)\cdot dx\,\bigr|\leq \epsilon\cdot \tau
+\]
+The triangle inequality
+therefore gives
+\[
+\bigl|\, 
+\frac{1}{T}\int\uuu 0^T\,  f\cdot dx
+\vvv \frac{N}{T}\cdot \int \uuu 0^\tau\, f(x)\cdot dx\,
+\bigr|
+\leq \epsilon\cdot \frac{N\cdot \tau}{T}+
+\frac{1}{T}\cdot \bigl|\int\uuu {N\tau}^T\, f\cdot dx\,\bigr|
+\]
+
+
+\medskip
+
+\noindent
+{\bf{Bessel's inequality.}}
+It turns out that $M\uuu f(\lambda)\neq 0$.
+holds in set which is at most
+denumerable.
+To prove  this we consider the product $f\cdot \bar f=|f|^2$ which again is
+almost periodic  and this gives the existence of the  number:
+\[
+||f||^2=\lim\uuu {T\to\infty}\, \frac{1}{T}\cdot \int\uuu 0^T\,
+ |f(x)|^2\cdot dx\tag{*}
+\]
+We refer to $||f||^2$ as the squared mean of $f$.
+
+\medskip
+
+\noindent
+{\bf{0.4 Proposition.}} \emph{For every 
+finite set $\{\lambda\uuu ,\ldots,\lambda\uuu m\}$
+one has the inequality}
+\[
+\sum\uuu {\nu=1}^{\nu=m}\,
+ |M\uuu f(\lambda\uuu  k) |^2\leq ||f||^2
+\]
+\medskip
+
+\noindent
+\emph{Proof.}} Put $a\uuu k=M\uuu f(\lambda\uuu  k)$. Now
+\[
+|f(x)|^2\vvv \sum\, a\uuu k\cdot e^{i\lambda\uuu k x}|^2=
+|f(x)|^2+\sum\,|a\uuu k|^2\vvv
+\sum\, \bar a\uuu k\cdot f\dot e^{\vvv i\lambda\uuu k x}\vvv
+\sum\, a\uuu k\cdot \bar f\dot e^{i\lambda\uuu k x}
+\]
+\medskip
+
+
+\noindent
+Passing to mean values over $[0,T]$ while $T\to \infty$
+the reader may verify that
+\[
+||f||^2=\sum\,|a\uuu k|^2+
+\lim\uuu {T\to\infty}\, \frac{1}{T}\cdot \int\uuu 0^T\,
+|f(x)|^2\vvv \sum\, a\uuu k\cdot e^{i\lambda\uuu k x}|^2\cdot dt
+\]
+which  gives Bessel's inequality.
+
+\medskip
+
+\noindent
+{\bf{0.5 Bohr's spectral set
+$\sigma(f)$.}} Bessel's inequality shows that
+$M\uuu f(\lambda)\neq 0$  for at most
+a denumerable set. The set of all such $\lambda$ is 
+called Bohr's spectrum of $f$ and is
+denoted by
+$\sigma(f)$.
+Every denumerable set
+$\{\lambda\uuu k\}$ can appear as a Bohr spectrum.
+For consider some $\ell^1$\vvv sequence of non\vvv zero complex numbers
+$\{c\uuu k\}$, i.e. $\sum\,|c\uuu k|<\infty$.
+We get the almost periodic function
+\[ 
+\phi(x)= \sum\, c\uuu k\cdot e^{i\lambda\uuu k x}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $\sigma(\phi)=\{\lambda\uuu k\}$.
+The hint is that
+\[ \
+\lim\uuu{T\to \infty}\, \frac{1}{T}\int\uuu 0^T\, e^{i\alpha x}\cdot dx=0
+\quad\text{hold for every}\quad\alpha\neq 0
+\] 
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.7 Parseval's equality.}}
+\emph{For every $f\in \mathcal {AP}$ one has}
+\[
+||f||^2= \sum\uuu {\lambda\uuu k\in \sigma(f)}\, |M\uuu f(\lambda\uuu k)|^2
+\]
+\medskip
+
+\noindent
+The proof will be given in XX and relies upon the following result 
+which is proved in XX below.
+
+\medskip
+
+\noindent{\bf{0.8 Theorem}}
+\emph{The Bohr spectrum is non\vvv  empty for every $f\in\mathcal {AP}$
+which is not identically zero.}
+
+
+\bigskip
+
+\noindent{\bf{0.9 Bochner\vvv Fejer kernels.}}
+Parseval's equality
+leads not only to a proof of Theorem 0.2 but
+gives  a   procedure to approximate every
+$f$ in $\mathcal{AP}$.
+Namely, let $\{\lambda\uuu k\}=\sigma(f)$
+and if $\epsilon>0$ we choose $m$ so large that
+\[
+\sum\uuu{k=1}^{k=m} \, |M\uuu f(\lambda\uuu k)|^2>||f||^2\vvv \epsilon
+\]
+The finite set $\lambda\uuu 1,\ldots,\lambda\uuu m$
+generates a free abelian group where we choose some basis $\beta\uuu 1,\ldots
+\beta\uuu p$.
+So each $\lambda\uuu k$ is an
+integer combination of the $\beta$\vvv numbers.
+For each $p$\vvv tuple of integers $w\uuu 1,\ldots,w\uuu p$
+we assign the exponential function
+\[
+E\uuu{w\uuu1,\ldots,w\uuu p}(x)=e^{i(\beta\uuu 1\cdot w\uuu k1+\ldots+
+\beta\uuu k\cdot w\uuu k)\cdot x}
+\]
+
+\noindent
+Next, for each positive integer $N$ we set
+
+\[ 
+\mathcal B\uuu N(x)=
+\sum\, \prod\,\bigl(1\vvv \frac{|w\uuu k|}{N})\cdot M\uuu f(
+w\uuu 1\beta\uuu 1+
+\ldots+w\uuu p\beta\uuu p)\cdot 
+E\uuu{w\uuu1,\ldots,w\uuu p}(x)
+\]
+where $\Sigma$ extends over all $w$\vvv tuples for which
+\[ 
+\vvv N\leq w\uuu k\leq N\quad\colon\quad 1\leq k\leq p
+\]
+
+\noindent
+We refer to $\mathcal B\uuu N$ as a Bochner\vvv Fejer sum
+associated
+to $f$.
+Each $\mathcal B\uuu N$ belongs to
+$\mathcal {TP}$ and 
+its finite spectrum is confined to numbers
+of the form
+$w\uuu 1\beta\uuu 1+
+\ldots+w\uuu p\beta\uuu p$ where  $M\uuu f\neq 0$.
+In particular $\sigma(\mathcal B\uuu N)$ is a  subset of
+$\sigma(f)$.
+In XX we  prove that these  Bochner\vvv Fejer kernels
+can be used to approximate $f$ uniformly
+by functions in $\mathcal{TP}$.
+A special case occurs when
+the abelian group generated
+by the spectrum of $f$  is finitely generated. Then
+we construct $\{\mathcal B\uuu N\}$ as above starting from
+a finite set $w\uuu 1,\ldots,w\uuu k$ such that 
+every point in $\sigma(f)$ is an integer combination of
+this $m$\vvv tuple. In XXX we prove that
+\[ 
+\lim\uuu{N\to \infty}\, \max\uuu x\,|\mathcal B\uuu N(x)\vvv f(x)|=0\tag{*}
+\]
+
+\noindent
+Notice   that this result is similar to
+the uniform approximation by Fejer sums
+of continuous and periodic functions on $[0,2\pi]$.
+\medskip
+
+\noindent
+{\bf{0.10 Diophantic considerations.}}
+Let $\{f\uuu k\}$ be a sequence of periodic functions, where
+the periodic of $f\uuu k$ is some number $\tau\uuu k$.
+Suppose that this sequence converges uniformly to an almost 
+periodic function $f$ with a spectrum $\sigma(f)$.
+
+\medskip
+
+\noindent{\bf{0.11 Theorem.}} \emph{For each non\vvv zero
+$\lambda\in\sigma(f)$ 
+it follows
+that $\tau\uuu k$ is a rational multiple of $\lambda$ for all sufficiently
+large
+$k$.
+As a consequence every pair of points
+$\lambda\uuu 1,\lambda\uuu 2$ in $\sigma(f)$ must be
+$Q$\vvv linearly dependent.}
+\bigskip
+
+\noindent
+{\bf{0.12 Remark.}}
+Theorem 0.11 shows that only a restricted class
+in $\mathcal {AP}$\vvv  can
+be approximated uniformly
+by periodic functions.
+Theorem o.10 gives  the  necessary condition  that
+the the  numbers in $\sigma(f)$ are rationally dependent.
+Conversly, if
+there exists some $\lambda\uuu *\neq 0$ such that
+every $\lambda\in \sigma(f)$ is a rational multiple of
+$\lambda\uuu *$
+then
+we will show in XX that $f$ can be uniformly approximated by periodic functions.
+
+\bigskip
+
+\noindent
+{\bf{0.13 Arithmetical properties of translation numbers.}}
+In the remark after definition 0.1 we introduced
+the sets $E\uuu f(\epsilon)$.
+We can consider the subset of integers, i.e. put
+\[
+{\bf{Z}}\uuu f(\epsilon)=E\uuu f(\epsilon)\,\cap\, {\bf{Z}}
+\]
+It turns out hat this set is non\empty and even relatively dense, i.e.
+there exists some $\ell>0$ such that
+every interval of length $\ell$ contains at least one integer from
+${\bf{Z}}\uuu f(\epsilon)$.
+Keeping $\epsilon>0$ fixed we
+impose an "almost periodic condition" which we begin to describe.
+Consider an interval $(a,a+\ell)$ which gives us a finite set of integers
+\[
+{\bf{Z}}\uuu f(\epsilon)\,\cap (a,a+\ell)\tag{1}
+\]
+Consider also some
+$0<\rho<\epsilon$ which  gives the set
+${\bf{Z}}\uuu f(\rho)$.
+We say that an
+integer $n$ which belongs to (1)
+survives up to order  $\rho$ if one has the inclusion
+\[
+\{n\}+{\bf{Z}}\uuu f(\rho)\subset {\bf{Z}}\uuu f(\epsilon)\tag{2}
+\]
+\bigskip
+
+\noindent
+{\bf{0.14 Definition.}}
+\emph{The set ${\bf{Z}}\uuu f(\epsilon)$ is said to be almost periodic
+if there for each $\eta>0$ exists a pair $(\rho,\ell\uuu *)$
+for which the following hold: Whenever $\ell>\ell\uuu *$ and
+$a$ is a real number, it follows that the number of points in
+${\bf{Z}}\uuu f(\epsilon)\,\cap (a,a+\ell)$
+which survive up to order
+$\rho$ is $\geq$ then 
+$1\vvv\eta)$ times the number of integers in 
+${\bf{Z}}\uuu f(\epsilon)\,\cap (a,a+\ell)$.}
+\medskip
+
+
+\noindent
+{\bf{0.15 Theorem.}}
+\emph{The set of all $0<\epsilon<1$ for which
+${\bf{Z}}\uuu f(\epsilon)$ is almost periodic
+has Lebesgue measure one, i.e. almost periodicity 
+holds for all $\epsilon$ except for
+a possible empty null\vvv set.}
+\medskip
+
+\noindent 
+The proof is given in XXX below.
+
+
+
+\bigskip
+
+
+
+
+
+
+\centerline{\bf{Proof of Theorem 0.8}}
+\bigskip
+
+\noindent
+Let $f$ be almost periodic and assume that $\sigma(f)=\emptyset$. To prove that
+$f$ is identically zero the crucial step is the following:
+
+\medskip
+
+\noindent
+{\bf{1.1 Lemma.}}
+\emph{Assume that $\sigma(f)=\emptyset$.
+Then, for each $\epsilon>0$ 
+there exists $T\uuu \epsilon$ such that}
+\[
+T\geq T\uuu\epsilon\implies
+\frac{1}{T}\cdot \bigl|\, \int\uuu 0^T\,e^{i\lambda x} f(x)\cdot dx\bigr|\leq \epsilon
+\quad\text{for all}\quad \lambda
+\]
+\medskip
+
+\noindent
+We prove this technical result in XX below and first show why
+Lemma 1.1 gives Theorem 0.8.
+The idea is to employ certain periodic functions.
+Consider some $T>0$ and let
+$F\uuu T(x)= f(x)$ on $0\leq x\leq T$ and after $F$ is extended to a
+$T$\vvv periodic function.
+The  function $F\uuu T(x)$ on the bounded interval 
+$(0,T)$ has an ordinary Fourier series
+\[
+F\uuu T(x)= \sum\, A\uuu k(T)\cdot e^{2\pi i k x/T}
+\]
+where  we have
+\[ 
+A\uuu k(T)= \frac{1}{T}\int\uuu 0^T\, e^{2\pi i k x/T}\cdot f(x)\cdot dx
+\]
+for every integer $k$.
+Parseval's equality for ordinary Fourier series gives:
+\[
+\sum\, |A\uuu k(T)|^2=\frac{1}{T}\int\uuu 0^T\, |f(x)|^2\cdot dx\leq |f|\uuu\infty^2\tag{1}
+\]
+Next, introduce the following pair  of $T$\vvv periodic functions:
+
+
+\[ 
+G\uuu T(x)= \sum\, |A\uuu k(T)|^2\cdot e^{2\pi i k x/T}
+\quad\text{and}\quad 
+H\uuu T(x)= \sum\, |A\uuu k(T)|^4\cdot e^{2\pi i k x/T}\tag{2}
+\]
+
+\medskip
+
+\noindent
+By the general formula for periodic functions
+in XX we have
+\[ 
+G\uuu T(x)= \int\uuu 0^T\,H\uuu T(x+t)\cdot \bar H\uuu T(t)\cdot dt
+\]
+
+\noindent
+At this stage we apply Lemma 1.1 which gives:
+
+\[ 
+\lim\uuu{T\to\infty}\, \max\uuu k\, A\uuu T(k)=0\tag{3}
+\]
+Together with the inequality (1) for the sum of squares of $|A\uuu k(T)|$
+it follows that
+\[ 
+\lim\uuu{T\to \infty}\,\sum\,  |A\uuu T(k)|^4\to 0\tag{4}
+\]
+This implies that
+the $T$\vvv periodic
+function $H\uuu T(x)$ tends uniformly  to zero 
+on $[0,T]$ and 
+(2) entails that
+\[
+\lim\uuu{T\to \infty}\, G\uuu T(0)=0
+\]
+
+\medskip
+
+\noindent
+Next,
+the equality $F=f$ on $[0,T]$
+and the $T$\vvv periodicity of $F$ gives  for 
+each $0<x<T$:
+
+
+\[
+G\uuu T(x)= \frac{1}{T\uuu n}\int\uuu 0^{T\vvv x}\,f(x+t)\cdot \bar f(t)\cdot dt
++\int\uuu{T\vvv x}^T\, f(x+t\vvv T)\cdot dt\tag{5}
+\]
+Since $f$ is almost periodic we can find
+an increasing  sequence $\{T\uuu n\}$
+where $T\uuu n\to+\infty$ where
+\[
+\max\uuu x\, |f(x\vvv T\uuu n)\vvv f(x)|\leq \frac{1}{n}\tag{6}
+\]
+hold for every $n$.
+With $0<x<T\uuu n$ we get from (5):
+
+\[ 
+G\uuu{T\uuu n}(x)=\frac{1}{T\uuu n}\int\uuu 0^T\, 
+f(x+t)\cdot \bar f(t)\cdot dt+
++\frac{1}{T\uuu n}\int\uuu {T\uuu n\vvv x}^{T\uuu n}
+\,[f(x+t\vvv T\uuu n)\vvv f(x+t)]
+\cdot \bar f(t)\cdot dt
+\]
+By (6) the absolute value of the last term is majorized by
+$\frac{|f|\uuu\infty}{n}$ which gives:
+\[
+|G\uuu{T\uuu n}(x)\vvv
+\frac{1}{T\uuu n}\int\uuu 0^T\,f(x+t)\cdot \bar f(t)\cdot dt
+\bigl|\leq \frac{|f|\uuu\infty}{n}
+\]
+\medskip
+
+\noindent
+Apply this  with $x=0$ and a passage to the limit
+gives:
+\[
+\lim\uuu{T\uuu n\to\infty}
+\frac{1}{T\uuu n}\int\uuu 0^{T\uuu n}\,f(t)\cdot \bar f(t)\cdot dt=0
+\]
+\medskip
+
+\noindent
+By the observation from (XX) this limit formula implies that
+$f$ is identically zero which finishes the proof that Lemma 1.1 gives
+of Theorem 0.8
+
+\bigskip
+
+\centerline{\emph{B. Proof of Lemma 1.1.}}
+\bigskip
+
+EASY.. via uniform continuity estimates...
+
+\bigskip
+\centerline{\bf{C. Proof of Parseval's formula.}}
+
+\bigskip
+
+\noindent
+Let $\{\lambda\uuu k\}$ be the Bohr spectrum of $f$.
+By Bessel's inequality we know that the series
+formed by $\{|M\uuu f(\lambda\uuu k)|^2\}$
+converges which gives us the almost periodic function
+\[
+\phi(x)=\sum\, |M\uuu f(\lambda\uuu k)|^2\cdot e^{\i\lambda\uuu k\cdot x}
+\]
+At the same time the result in (xx) gives us the almost periodic function
+\[
+g(x)=\lim\uuu{T\to \infty}\,
+\frac{1}{T}\cdot\int\uuu 0^T\, f(x+t)\cdot \bar f(t)\cdot dt
+\]
+Moreover, $\sigma(g)=\sigma(f)$ and
+
+\[ 
+M\uuu g(\lambda\uuu k)=|M\uuu f(\lambda\uuu k)|^2
+\] 
+hold for each $k$.
+The same hold for the Bohr spectrum of $\phi$
+and it follows that the Bohr spectrum of the difference $\phi\vvv g$
+is empty and hence $\phi=g$ by Theorem 0.8.
+In particular we get
+\[
+\sum\, |M\uuu f(\lambda\uuu k)|^2=\phi(0)=g(0)=
+||f||^2
+\] 
+
+\noindent
+which proves Parseval's equality for $f$.
+
+\bigskip
+
+\centerline
+{\bf{D. The Bochner\vvv Fejer approximation.}}
+\bigskip
+
+\noindent
+Let $f\in\mathcal{A}$ be given and
+consider the $\mathcal B$\vvv functions defined as in (xx).
+They all arise via Fejer kernels and using
+the formula from the periodic case one has
+
+\medskip
+
+\noindent
+{\bf{Proposition.}}
+\emph{For every $\mathcal B$\vvv function constructed via (*) wiuth
+an arbitrary trary $N$ and an initial finite family from$\sigma(f)$ one has
+the inequality below for every real number $\tau$:}
+\[
+\max\uuu x\, |\mathcal B\uuu N(x+\tau)\vvv \mathcal B\uuu N(x)|\leq
+\max\uuu x\, |f(x+\tau)\vvv f(x)|
+\]
+\bigskip
+
+\noindent{\bf{Exercise.}} Prove this result using 
+the explicit formulas for Fejer kernels.
+\bigskip
+
+
+\noindent
+Let us now see how one can approximate the given function $f$.
+let us consider the case when the abelian group
+generated by $\sigma(f)$ is finitely generated.
+So now we have some $p$\vvv tuple $\beta\uuu 1,\ldots,\beta\uuu p$
+and each $w\in \sigma(f)$ is an integer combination
+of the $\beta$\vvv tuple.
+If
+
+\[ 
+w= m\uuu 1\beta\uuu 1+\ldots+m\uuu p\beta\uuu p
+\]
+then we have the equality
+\[
+M\uuu {\mathcal B\uuu N}(w)=
+\prod\,(1\vvv \frac{|m\uuu \nu|}{N})\cdot M\uuu f(w)
+\]
+From this and the $L^2$\vvv convergence of $\{ M\uuu f(w)\}$
+taken over $\sigma(f)$, it follows that
+\[
+\lim\uuu{N\to \infty}\, || f\vvv \mathcal B\uuu N||^2=0
+\]
+There remains to see that the $L^2$\vvv convergence entails 
+uniform convergence in the maximum norm, i.e. that
+
+\[ 
+\max\uuu x\, |f(x)\vvv \mathcal B\uuu N(x)|=0
+\]
+
+\bigskip
+
+Proof is EASY via (xx). Call it the Arzela\vvv Bohr Lemma via equi\vvv continuity
+and uniform
+$\ell(\epsilon)$ choice in the almost periodicity condition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

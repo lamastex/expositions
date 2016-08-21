@@ -1,0 +1,2253 @@
+
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+
+\def\vvv{-}
+
+
+\begin{document}
+
+
+Let $U$ be a utulity function.
+At time $t=0$ a consummer has a capital $K$
+and if $c8t<)$ is the rate of consumption we have a differential equation
+\[
+\dot K(t)= rK(t)-c(t)
+\]
+where $r$ is a positive constant ,i.e. a. discount rate.
+We seek
+\[
+V)K)= \max_c\,\int_0^\infty\, U(c(t))\cdot e^{-at}\, dt
+\]
+where $a>0$ is another constant.
+For a general utiliity function we cannot
+obtsan a "closed soluion". . But let us consider the "popular" case  
+\[
+U(c)= \sqrt{c}
+\]
+In this case it turn out that
+the rate of consumption at every moment is proportional to
+the capital, i.e. tghere exists a constsnt
+$\beta>0$ such thst
+\[
+c(t)= \beta\cdot K(t)
+\]
+Moreover, the whole maximum probelm is only well-posed when
+$a>2r$ and when it holds we have the equation
+\[
+V(K)=\frac{1}{\sqrt{2a-r}}\cdot \sqrt{K}\tag{*}
+\]
+It merans thst if the discount number $r$ is too large compred to
+the "negstive attiitude" for futire utility expressed by
+$e^{-at}$, then the
+consumer tends to let cspitsl increase and eventuysl obtsin
+an srbitrary large value $V$, even if the in itisl capitsl id
+very small.
+To prove (*) one preoceeds as follows. let
+$c(t)= c$ be constsnt duriung a small initial time interval
+$0\leq t\leq \Delta$.
+Then
+the value becomes
+\[
+\sqrt{c}\cdot \Delta+V(K+rK\delta-c\delta)e^{-a\Delta}=
+\]
+By a Tayklor expansion this becomes
+\[
+V(K)+ \Delta\sqrt{c}-V'(K)\cdot c-rK\cdot V'(K)- a\cdot V(K)]
++o(\delta)
+\]
+Now $c$ is determined whrn we tske the
+maximum of
+\[
+\sqrt{c}--V'(K)\cdot c\implies \sqrt{c}=V'(K)/2
+\] 
+For this it follows thst
+the value funtion satsfies the ODE:
+\[
+\frac(
+{1}{4V'(K)}+rKV'(K)= aV(K)
+\]
+with initial coindition $V(0)=0$ snd from this the
+reader can check (*) and after show that
+(xx) hold for a constant $\beta$ which the reader should determine.
+\bigskip
+
+
+\noindent
+{\bf{A more general case.}}
+For an arbitary utili8iy function
+$U(c)$
+one first weeks
+\[
+\max_c\, U(c)-V'(K)\cdot c\implies U'(c)= V'(K)
+\]
+Since $c\mapsto U'(c)$ by assumption is strictly increasing
+this determines $c$ via $V'(K)$,  i.e. if
+$\gamma$ is the inverse of the function $U'$ one has
+\[
+c= \gamma\circ V'(K)
+\]
+and  $V$ satisfies the ODE:
+\[
+U\circ \gamma(V'(K))+rKV'(k)-\gamma\circ V'(K)\cdot V'(K)=aV(K)
+\]
+Here one needs a computer to
+analyze the solution and also to  find
+conditions on the pair $r,a$ in order
+that the maxium problm is well-posed in
+the sense thst the value function $V(K)$ is bounded.
+\bigskip
+
+
+\noindent
+{\bf{Exercise.}}
+Consider the utility function
+\[
+U(c)=\log\, (c+1)
+\]
+So here $U'(c)= \frac{1}{c+1}$
+and from the above
+\[
+\frac{1}{1+c}=V'(K)\implies
+\frac{1}{V'(K}-1=c
+\]
+Now the reader is invited to solve
+the ODE and analyze for which pairs $r,a$ the
+problem is well-posed.
+Of course, here it is tempting to firt perform
+some numericl expåeriments when
+vlues for $r$ snd $a$ are assigned from
+the stsrt, ssy thst you take $r=0,1$ snd firdt try a rather large
+$a$ to see if $K\mapsto V(K)$ stays bounded.
+To fullfill this exercise gives considerable credit in the course !
+Cases when we for example have
+a iutility funvtion
+\[
+U(c)= \sqrt{c}+ c^{1/4}
+\]
+leads to quite involed computations where
+even
+the search for numercial solutions is not easy.
+\bigskip
+
+\centerline{\bf{The case of a riusky asset}}
+\bigskip
+
+
+\noindent
+At time $t=0$ the consumerr puts  intial capital n in a risky asset which means that
+$t\mapsto K(t)$ is a random vsriable, and
+while consumption takes place one gets  the "stocastic equation"
+\[
+dK= \mu\cdot K-\cdot \sigma K\cdot dW
+\]
+Via Taylor's   fornula and a similar 
+argument as in the case of a safe asset with  $U(c)= \sqrt{c}$
+it follows that the $V$-function satisfies the ODE:
+\[
+\frac{1}{4V'(K)}+\mu KV'(K)+
+\frac{\sigma^2 K^2}{2}\cdot V''(K)
+= aV(K)
+\]
+The solution becomes
+\[
+V(K)= \rho\cdot \sqrt{K}
+\]
+where $\rho$ is a constant and
+\[
+\frac{1}{2\rho}+\frac{\mu\rho}{2}-\sigma^2\cdot \rho\cdot
+\frac{1}{8}= a\rho\implies
+\frac{1}{\rho}=(2a-r+\sigma^2/)\|cdot \rho
+\]
+Hence we find
+the equation
+\[
+\rho= \frac{1}{2a-\mu+\sigma^2/4}
+\]
+Notice that $\rho$, and hence also $V(K)$ decreases with
+$\sigma$ which reflects that the consumer has an aversion to
+risk which follows from the concavity of
+the utiliity function. So compared to a rsiky asset
+the consumer only will prefer the risky asset if
+the
+positive rate $\mu>r$.
+A risk neutral case occurs when
+\[
+\mu=\sigma^2/4+r\tag{1}
+\]
+A notable fact is that if the consumer at time zero
+csn put a fraction $0<\gamma<1$ in a risky  
+asset and the rest $(1-\gamma)K$ in a safe asset when
+(1)  holds, then a clever choice of
+$\gamma$ leads to a higher expected value $V(K)$.
+Let us remark that
+this optimal portfoiio has become popular in
+text-books dealing with abstract economic models.
+Here we remakt thst a more detailed study involves
+the volatility when the risky asset is chosen, i.e.
+once the consumer puts an amonunt in a risky asset
+and after maximises the $V$-function, even the
+time-dependent conumption is a random variable and
+the outcome $V(K)$ is a random variable too, where
+we so far only have discussed its mean-value,
+Using a computer and eventual Monte-Carlo simulations one can
+get  a numerical insight about the
+random variable $V$, and 
+get numerical numbers for its
+volatility.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{A system of ODE:s}}
+\bigskip
+
+
+\noindent
+Consider  the following ODE-system
+\[
+\dot z_1=z_1^\alpha z_2^\beta-z_1\quad\&\quad
+\dot z_2=z_1^\alpha z_2^\beta-z_2\tag{*}
+\]
+where $\alpha,\beta$ are positive constants and
+$\alpha+\beta<1$.
+If $z_1=z_2=1$ 
+the solution to (*) with initial conditions
+$z_1(0)=z_2(0)=p$ stays at $(1,1)$, i.e. $(1,1)$ is a stationary  point for
+(*).
+It  turns out that
+every solution converges to this stationary point as
+the time variable increases.
+\medskip
+
+
+\noindent
+{\bf{1. Theorem.}} \emph{For every pair of positive numbers
+$a,b$ the unique solution to (*) with
+$z_1(0)=a$ and $z_2(0)=b$
+tends to $(1,1)$ as $t\to +\infty$.}
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Prove this. The hint is as follows:
+First (*) entails that
+\[
+\dot z_1+z_1=\dot z_2+z_2
+\]
+Check that this gives a function $f(t)$ defined for
+$t\geq 0$ where $f(0)=0$ and
+\[
+z_1(t)=e^{-t}\cdot (f(t)+a)\quad\&\quad
+z_2(t)=e^{-t}\cdot (f(t)+b)\tag{i}
+\]
+and $f$ satisfies the ODE:
+\[
+\dot f(t)= e^{t(1-\alpha-\beta)}\cdot (f(t)+a)^\alpha\cdot (f(t)+b)^\beta\tag{ii}i
+\]
+This non-linear first order ODE cannot be solved
+in closed form. But in the speciai case  $a=b$
+we find a solution.
+Namely, let 
+$a=b=M$ for some $M>0$ and put $\gamma=\alpha+\beta$.
+Then 
+\[
+\frac{df}{(f+M)^\gamma}= e^{(1-\gamma)t}\implies
+\]
+\[
+\frac{1}{1-\gamma}\cdot (f(t)+M)^{1-\gamma}=
+\frac{1}{1-\gamma}\cdot [e^{(1-\gamma)t}+C]
+\] 
+where the reader should determine  the constant $C$ from the initial condition $f(0)=0$. It follows that
+\[ 
+f(t)+M= [e^{(1-\gamma)t}+C]^{\frac{1}{1-\gamma}}=
+e^t\cdot [1+Ce^{(\gamma-1)t}]^ {\frac{1}{1-\gamma}}\tag{iii}
+\]
+Sinc $\gamma<1$
+we see that
+\[
+\lim_{t\to\infty}\, e^{-t}\cdot f(t)=1
+\]
+and then (i) give 
+the requested limits in the theorem.
+Next, suppose that $a\neq b$ sand consider for example the case
+$0<a<b$.
+Now we consider the function
+$\phi(t)$ which satisfies the ODE:
+\[
+\dot \phi(t)= e^{t(1-\alpha-\beta)}\cdot (\phi(t)+b)^\alpha\cdot (\phi(t)+b)^\beta\tag{ii}i
+\]
+with initial condition $\phi(0)=0$.
+The reader can recognize that
+the $\phi$-function increases faster than $f$ and from the special case
+we  have
+\[
+\lim_{t\to\infty}\, e^{-t}\cdot \phi(t)=1\implies
+\limsup_{t\to \infty}\, e^{-t}\cdot f(t)\leq 1\tag{1}
+\]
+In a similar fashion we regard the $\psi$-function which satisfies
+$\psi(0)=0$ and
+\[
+\dot \psi(t)= e^{t(1-\alpha-\beta)}\cdot (\psi(t)+a)^\alpha\cdot (\psi(t)+a)^\beta\tag{ii}i
+\]
+This time $\psi\leq f$ and the special case applies with
+$M=a$ so thast
+\[
+\lim_{t\to\infty}\, e^{-t}\cdot \psi(t)=1\implies
+\liminf_{t\to \infty}\, e^{-t}\cdot f(t)\geq 1\tag{2}
+\]
+Together (1-2) proves the theorem.
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+One can confirm the theorem via numerical
+experiments.
+In practice one is also interested
+in the rate towards the equilibrium point (1,1).
+To be precise, take some small $\delta>0$ and 
+with a given starting point $(a,b)$ one seeks the time
+$T$ when
+\[
+|z_1(T]-1|\leq \delta\,\&\,
+|z_2(T]-1|\leq \delta
+\]
+Here no analytic solutions are available so one must use the computer to get numeral
+solutions.
+For the special models in economy
+where asymptotic stability
+appears, it is of course
+interesting - and in a sense very relevant - to
+find approximations of time values as above.
+The numeral examples show that
+$T$ can be quite large even when
+$\delta$ is not too small, say that
+$\delta=0.1$.
+Keeping $\alpha$ and $\beta$ fixed
+the initial values $a$ and $b$
+effect $T$.
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{2. A more general system.}}
+Let $\phi(z_1,z_2)$ be a typical utlity funation
+and consider the system
+\[
+\dot z_1=\phi(z_1,z_2)-z_1\quad\&\quad
+\phi(z_1,z_2)-z_2\tag{**}
+\]
+One  gets $f$ as above which now satisfies the ODE
+\[
+\dot f=e^t\cdot \phi(e^{-t}(f(t)+a),e^{-t}(f(t)+b)\quad\&\quad f(0)=0\tag{2.1}
+\]
+When $\phi$ is a typical utility function of two variables
+one can expect that
+\[ 
+\lim_{t\to +\infty}\, e^{-t}\cdot f(t)=1\tag{2.2}
+\]
+exactly as in the very special case above.
+The reader is  invited to use a computer and perform
+numerical experiments to
+check if (2.2) hold for
+some
+non-trivial  $\phi$-functions apart from
+$z_1^\alpha\cdot z_2^\beta$.
+Let us notice  that with 
+\[
+f(t)= e^t\cdot y(t)
+\]
+ the $y$-function
+satisfies the ODE
+\[
+\dot y+y= \phi(y(t)+ae^{-t},y(t)+be^{-t})
+\]
+which gives an indication that
+$y(t)$ has a limit when $t\to +\infty$ because  $ae^{-t}$ and
+$be^{-t}$ both tend to zero.
+Of course, a numercial study using a more general $\phi$-function as in
+(*) goes  far beyond standard text-books where
+the popular choice $z_1^\alpha\cdot z_2^\beta$
+appears  in hundreds of text-books exposing 
+models in economy.
+Let us only remark that studies of asymptotic 
+limits to non-linear systems of ODE:s is an  extensive subject in mathematics where 
+pioneering work was done by Picard and Poincaré around 1880.
+But thanks to computers one can nowadsys at least
+perform  numerical experiments
+in order to analyze the eventual existence  of limits of solutions to
+a stationary point of the system (**) where 
+the stationary point would be $z_1=z_2=p$
+with
+\[
+p=\phi(p,p)
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf{Optimal copnsumption in a dynamic model}}
+
+
+\bigskip
+
+\noindent
+Let $U$ be a utiliity function. During a time
+interval $[0,T]$ a consumer
+seeks maximal 
+utlitiy expressed by a time dependent function
+$c(t)$ where $c(t)$ is the rate of consumption.
+We have also a budget constraint 
+\[
+\int_0^T\, c(t)=A\tag{*}
+\]
+and  seek
+\[
+V=\max_c\, \int_0^T\, U(c(t))e^{-rt}\, dt\tag{**}
+\]
+where $r>0$ is a discount factor.
+Euler's equation shows that the maximum is attained  when
+there exists a constant $B$ such that
+\[
+U'(c(t))= B\cdot e^{rt}\tag{1}
+\]
+for every $0\leq t\leq T$. Here  
+$B$ is determined via (*).
+Only in very special cases $c(t)$ can
+be expressed in  a  closed form.
+A popular example in text-books  is to take
+$U(c)= c^\alpha$ for some
+$0<\alpha<1$.
+Consider as an example the case $\alpha=1/2$. Now (1) gives
+\[
+\frac{1}{2\sqrt{c(t)}}=Be^{rt}\implies
+c(t)=\frac{1}{2B^2}e^{-2rt}
+\]
+Via (*) the reader can calculate $B$ when $A$ is given
+and  find
+the maximmum in (**), where the value function
+$V$  depends on the 3 parameters $A,r,T$.
+Using a computer one 
+gets numeral solutioins when numerical values are assigned to
+$A,T,r$.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Let us consider the utility function
+\[
+U(c)= \sqrt{c}+ ac^{1/3}+ bc
+\]
+where $a$ and $b$ are  positive contants.
+Here Euler's equation becomes
+\[
+\frac{1}{2}\cdot c^{-1/2}+ \frac{a}{3}\cdot c^{-2/3}+b= Ce^{rt}
+\]
+where the budget constraint determines $C$.
+Even for readers who like to perform algebraic manipulations
+it is quite hard to even vizualise the time dependent
+solution $c(t)$ to this equation.
+\medskip
+
+\noindent
+Let us consider the numerial example with $a=b=1$.
+Taking the time derivative in Euler's equation (1)
+we get he first order ODE:
+\[
+U''(c(t))\cdot \dot c(t)= Bre^{rt}\implies
+\]
+\[
+-[\frac{1}{4}\cdot c^{-3/2}+\frac{2a}{9}c^{-5/3}]\cdot \dot c=
+Bre^{rt}
+\]
+where $B$ is determined via the budget constraint
+(*) where we take $A=1$.
+Keeping $r$ and $T$ as "variable parameters" one may now try to
+exhibit numerical values for the $V$-function.
+
+
+
+\medskip
+
+
+\centerline{\bf{2. Salvage values.}}
+\medskip
+
+\noindent
+Above the consumer must obey the budget constraint (*).
+We can also  imagine that
+the consumer is allowed to take a loan which leads to determine 
+\[
+\max_c\, \int_0^T\, U(c(t))\cdot e^{-rt}\, dt  + G(\int_0^T\, c(t)\, dt -A)\tag{2.0}
+\]
+where $G$ is an increasing function. A special, case could be that
+$G(s)= Ms$ for some positive constant  $M$.
+So here we study  variational problem with
+a salvage value,
+Let us consider the  case
+ $U(c)= \sqrt{c}$ which gives  an analytic soluttion.
+Namely, the value function  $V$ from (**) for fixed $T$ and  $r$
+while $A$ varies becomes
+\[
+V(A)=\rho(r,T)\cdot \sqrt{A}
+\]
+where the reader is invited to determine the
+$\rho$-function.
+Sdding the salvage value it is  profitble to
+to
+take a lone if
+\[
+V(A+\xi)-M\xi>=V(A)
+\]
+for some $\xi>0$.
+To be precise, for $\xi\geq 0$ we consider the functioin
+\[
+\rho(T,r)\sqrt{A+\xi}- M\xi
+\]
+and one  finds
+the maximum when $0\leq \xi<\infty$.
+For example, the derivative at $\xi=0$
+becomes
+\[
+\frac{\rho(T,r)}{\sqrt{A}}-M
+\] 
+and if it is $>0$ the cosnumer will
+take a loan.
+The reader is invited to give specific numerical examples
+where
+a loan will
+give a maximum to (2.1).
+\bigskip
+
+
+\noindent
+{\bf{2.1 Consumption from a capital stock.}}
+A utility function $U(c)$ is given.
+At time $t=0$ he consumer has a capital $K_0$.
+Due to consumption the capital changes via the ODE
+\[
+\dot K(t)= \mu\cdot K(t)-c(t)\tag{i}
+\]
+where $\mu>0$ is a rate of interest.
+Now we seek
+\[
+\max_c\, \int_0^T\, U(c(t))e^{-rt}\, dt+
+K(T)\tag{2.1.1}
+\]
+Thus,   saved capital at the terminal time is
+a salvage value.
+To solve this optimization probelm we should first
+express $K(T)$ via a chosen rate of consumption.
+Here (i) gives
+\[
+\frac{d}{dt}(Ke^{-\mu t}=-c(t)\tag{ii}
+\]
+and from  this the reader should check that
+\[
+ K_0-K(T)= e^{\mu T}\cdot \int_0^T\, e^{-\mu t}c(t)\, dt\tag{iii}
+\]
+Hence 2.1.1 amounts to determine 
+\[
+V^*K_0+\max_c\, \int_0^T\, U(c(t))e^{-rt}\, dt-
+e^{\mu T}\cdot \int_0^T\, e^{-\mu t}c(t)\, dt\tag{2.1.2}
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Find the maximal value  $V^*$ in closed form
+when
+$U(c)= \sqrt{c}$ while $r,\mu,A,T$ are given parameters.
+\bigskip
+
+
+
+\noindent
+{\bf{A problem with a risky asset.}}
+Above a negative discount factor $e^{-rt}$ appears.
+One may also consider a positive discount where the utility 
+from consumption is expressed by
+\[
+\int\, U(c(t))\cdot e^{rt}\, dt
+\]
+An example could be when
+the consumtion is used for medical care where
+illness may increase over time and become more costy.
+With a budget constraint 
+as in (*) the maximum is now attainded by a function
+$c(t)$ which increases eith $t$.
+Let us now assume that the conumer can put a certain  initial capital in
+a risky asset - like an obligation- which
+may give extra capital at a random time.
+More precisely, a profit is received via
+a Poisson process. It  means that one has a positive number
+$\lambda$ and the probability to gain during  a small time
+interval $[t,t+\Delta]$ is equal to
+$e^{-\lambda t}\lambda\cdot \Delta$.
+If this happens - via a lucky  number from  the lottery - the 
+consumer gets  extra 
+capital $K$ which can be used for consumption up to time
+$T$, and a part may also be kept as a salavage value.
+At time  $t=0$ the consumer can  put
+a fraction $a$ of the initial  capital $A$ to by 
+an obligation whose  reward  becomes
+$a\cdot K$ if a lucky number comes up during the lottery.
+In practice  $K$ is quite large while $\lambda$ is small.
+Now one seeks maximum of \emph{expected utility}.
+Here  the outcome from the initial choice is random. So
+we are confronted with  a \emph{stochastic optimization}. 
+The solution to this optimiziation problem is far   more involved compared to
+determinisitc models. The reason is that
+before an  eventual profit in the lottery, the
+usual Euler equation cannot be used to
+determine  the optimal plan of consumption because future is random.
+So we  shall  not try to
+carty out the details which lead to a solution of the stochastic 
+optimization above. But in the next section
+we shal, consider
+a case where the necessary stochastic  analysis can
+be carried out explicitly.
+\bigskip
+
+
+\centerline{\bf{3. A random rescue  by a helicopter.}}\
+\medskip
+
+\noindent
+First we
+first regard a familiar problem  where one seeks
+\[
+\min \int _0^T\, \dot x(t)^2\, dt\tag{3.1}
+\]
+with fixed end-values $x(0)=0$ and $x(T)= A$.
+The Euler equation shows that mimimum is attaiend when 
+$\dot x$ is a constant, i.e 
+$\dot x(t)= A/T$ and the minimum becomes
+$A^2/T$.
+A stochastic optimization  arises as follows:
+Imagine  a person who starts
+at a place in a dry desert and must arrive to
+a lake at time $T$  to get water in order to  survive.
+The person, call him or her "Silly Bill" or "Silly Mariy"  has a compass and knows the straight way to
+the lake and the distance $A$.
+The squared velociity $\dot x^2$ corresponds to kinetic
+energy which Bill or Mary  try  to
+minimize  
+during the travel to the lake.
+Next, society feels pity for persons who 
+walk in the desert
+and with no cost a helicopter
+is looking around to search  Bill or Mary.
+The chance   to find a person walking in the desert
+is ruled  by a Poisson process with parameter
+$\lambda$, i.e. the probability to discover the person at
+a small  time interval $[t,t+\Delta]$ is equal to 
+\[
+e^{-\lambda t}\lambda\cdot \Delta
+\]
+Once the pilot  in  has discovered a  person
+we imagine  that the helicopeter comes to rescue
+in a very short time and gives 
+the person  free lift to the lake,
+So if the discovery is made at some time
+$0<t<T$ then
+the  loss of energy only comes from walking up to
+this time, i.e. given by
+\[
+\int_0^t\, \cdot x(t)^2\, dt
+\]
+The question arises how Bill or Mary  should behave before
+an eventual discovery.
+It is  tempting to just stay at rest in
+the desert  and hope that the helicopeter comes.
+But the probability that the pilot never discovers the person
+ïs $e^{-\lambda T}$. So  this strategy is  risky because
+the person dies from thirst if the lake is not reached before time
+$T$.
+So Mary who has studed some mathematics
+understands immediately thstit is necessary to
+start  walking, but with a
+speed which initiallly is smaller than
+$A/T$ since  the helicopter might arrive  to rescue.
+It turns out that expected energy is minimized when
+the person  walks with a certain  slowly increasing pace
+until the eventual arrival of 
+the helicopter.
+To solve this stochastic optimization one uses
+a device which in the literature is referred to as
+"dynamici programming" , though one should recall 
+that methods  to solve various stochastic optimzation has been
+known for a long time
+in matheamticla physics, where can mention  deep work
+Helmholtlz and Bolzmann more than a  century ago.
+\medskip¨
+
+\noindent
+{\bf{The solution.}}
+Introduce  the function $V(A,T)$
+defined as the minimum of \emph{expected cost of energy} when
+the person has two wak the distance $A$ during a time interval $T$.
+Notice that the $V$-function  is definec without knowing
+the optimal  strategy in advance !
+But we can find a PDE for $V$.
+Namely, during a small time interval $[0,\Delta]$ we let the person walk with constant  speed $u$, and then 
+expected energy becomes
+\[
+u^2\cdot \Delta+V(A-u\cdot \Delta,T-\Delta)\cdot e^{-\Delta\lambda}\tag{i}
+\]
+where we have used  that
+$e^{-\Delta\lambda}$ is the probability that the helicopter does not arrive
+during the small initial interval. Via Taylor expansion  (i) becomes
+\[
+V(A,T)+ (u^2- V_A\cdot u-V_T- \lambda\cdot V)\Delta+
+o(\Delta)
+\]
+The right hand side is minimized when
+$2u+V_A=0$ and  the definition of the $V$-function
+gives the PDE:
+\[
+\frac{V_A^2}{4}+V_T+\lambda V=0\tag{ii}
+\]
+To solve (ii) we try
+\[
+V(A,T)= A^2\cdot g(T)
+\]
+and  (ii) corresponds to the ODE:
+\[
+g(T)^2+g'(T)+\lambda g(T)=0\tag{iii}
+\]
+To solve (iii) we put
+\[
+g(T)=e^{-\lambda T}\cdot \phi(T)\tag{iv}
+\]
+and get
+the ODE:
+\[
+\phi'(T)=-e^{-\lambda T}\cdot \phi(T)^2\implies
+\frac{d\phi}{\phi^2}=-e^{-\lambda T}dT
+\]
+It follows that
+there is a constant $C$ such that
+\[
+\frac{1}{\phi(T)}= C-\frac{1}{\lambda}\cdot e^{-\lambda T}\tag{v}
+\]
+Above $T$ is a variable and
+the reader should confirm that
+\[
+\lim_{T\to 0}\, g(T)=+\infty
+\]
+and deduce that
+\[
+C=\frac{1}{\lambda}\implies \phi(T)= \frac{\lambda}{1-e^{-\lambda T}}
+\]
+Hence we have proved that
+\[
+g(T) =\frac{\lambda\cdot e^{-\lambda T}}{1-e^{-\lambda T}}=
+\frac{\lambda}{e^{\lambda T}-1}
+\]
+\medskip
+
+
+\noindent
+While Bill complains  that he
+never has studied mathematics
+and from his starting postion is  uncertain  how
+to
+start walking to save energy while he looks at the sky and hopes thst
+the heliopter arrives, Mary
+performs a clever computation and
+determines the optimal time dependent velocity until
+an eventual arrival of the helicopter.
+To begin with she finds  from the above that
+\[
+V(A,T) =A^2\cdot \frac{\lambda}{e^{\lambda T}-1}
+\]
+So at time $t=0$ the intial velocity should be
+\[
+\dot x(0)=\frac{V_A}{2}=  A\cdot \frac{\lambda}{e^{\lambda T}-1}\tag{1}
+\]
+The reader should check that
+(1) is $<\frac{A^2}{T}$ and  $\dot x(0)<\frac{A}{T}$.
+The last inequality reflects the  intuitive fact that
+the eventual   arrival of the helicopter
+means that the clever Mary  initially moves with slower speed
+compared to the case when no helicopter is present.
+
+\medskip
+
+\noindent
+Next, when $0<t<T$
+and the helicopter has not arrived
+up to time $t$, 
+the time dependent function
+$t\mapsto x(t)$ satisfies the following ODE:
+At time $t$ Mary has walked a distance $x(t)$ so
+there remains the distance $A-x(t)$ to the lake which
+must be reached before time $T-t$.
+Now one has the definite result:
+\medskip
+
+\noindent
+{\bf{1. Theorem.}}
+\emph{When Mary  walks  in order to minimize
+expected energy
+the optimal  velocity prior to the eventual arrival of the helicopter
+satisfies the differential equation}
+\[
+\dot x(t)=
+\frac{\lambda\cdot(A-x(t))}{e^{\lambda (T-t)}-1}=
+(A-x(t))\cdot\frac{\lambda\cdot e^{\lambda t}}{e^{\lambda T}-e^{\lambda t}}
+\tag{1.1}
+\]
+\emph{and the intial condition $x(0)=0$
+(1.1) has the solution}
+\[
+A-x(t)= \frac{A}{e^{\lambda T}-1}\cdot (e^{\lambda T}-e^{\lambda t})\implies
+x(t)=A\cdot \frac{e^{\lambda t}-1}{e^{\lambda T}-1}\tag{1.2}
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+So if the helicopter never arrives
+then the velocity at time
+$T$ becomes
+\[
+\dot x(T)= \frac{\lambda\cdot A\cdot e^{\lambda T}}{e^{\lambda T}-1}
+=\frac{\lambda\cdot A}{1-e^{-\lambda T}}
+\tag{1.3}
+\]
+The reader should check that (1.3) is strictly larger than
+$\frac{A}{T}$.
+\medskip
+
+
+\noindent
+Notice also that with $t$ and $A$ fixed, the function in (1.3) taken with respect to
+$\lambda$ is striclty increasing where the limit value as $\lambda\to 0$ is equal
+to $\frac{A}{T}$
+On the other hand (1.3) becomes quite large when
+$\lambda$ increases while $A$ and $T$ are kept fixed. This  is reflected by the intuitive
+fact that with a large $\lambda$ the person
+is optimistic and starts with a slow speed in the hope to  get a free lift
+before time $T$, i.e. it  is only when
+$t\to T$ that
+the person must start  running with higher speed in order to
+arrive at $x=A$ at time $T$.
+\medskip
+
+\noindent
+{\bf{Exercise}}.
+Give details of the proof of (1.1-1.2) in the Theorem above !
+\bigskip
+
+
+\noindent
+{\bf{2. Optimization with a salvage funtion.}}
+Above the peron is obliged to arrive
+at $A$ when $t=T$. In addition to
+the
+probability of an arriving helicopter - where no charge occurs 
+it it happens that the hrlicopter gives a free lift -
+we suppose that  the person can  
+rent a helicopter from a private company cost
+and 
+get an immediate rescue.
+For example, if the person moves with a rather slow speed compared with (1.1)
+in  Theorem 1, it may occur that
+$x(T)<A$. But   the person has now the option to rent
+a  helicopter
+at a time $T-\delta$ with small $\delta$ and quickly arrive at
+$x=A$ at time $T$, i.e. we imagine that a helicopter which
+picks up the person moves very fast to the terminal point $x=A$
+If  the person  rents the helicopter we suppose that
+the cost is
+$C\cdot (A-x(T)$ where $C$ is  a fairly large constaant.
+To solve this new optimization problem
+we regard the value function $V(A,T)$ which was computed above. 
+Now 
+the person can choose  a strategy with optimal speed $\dot x(t)$ before
+the free helicoppter eventually arrives where the new end-value
+$x(T)$ is equal to $a$ for some $a<A$ and  chosen to minimize the sum:
+\[
+V(a,T)+C\cdot (A-a)
+\]
+So it means that
+\[
+2a\lambda=(e^{\lambda T}-1)\cdot C\tag{2.1}
+\]
+Only when $a<A$ holds in (2.1 )  the person
+is willing to rent a helicopter.
+Thus, if
+\[
+2A\lambda\leq (e^{\lambda T}-1)\cdot C
+\]
+then the company who has a "saving helicopter" never gets a demand from
+persons moving as above, while
+the eventual resuce by the   helicopter which is free of charge  may appear.
+This salvage prblem leads to
+a further optimization problem.
+Namely, the company which has a  helicopter which
+can provide a free lift at any moment
+should decide a price $C$ in order to maximize
+\emph{expected profit} while clever 
+persons are moving as above and choose
+optimal strategies to minimize their expected cost of energy, plus eventual charge from
+the company's helicopter when
+$a<A$ holds in (2.1).
+The analysis of this new stochastic optimization problem, which has to be solved
+by the company which rents a helicopter is quite interesting.
+Let us only remark that the solution
+leads to a quite  involved calculation where computers help 
+to provide numerical solutions in order to
+get a feeling for this optimization problem.
+It goes wothout sayung that
+a solution to a problem of this nature wuold give
+a top-rate in the present course.
+
+
+\bigskip
+
+
+\centerline{\bf{Another optimization problem.}}
+\bigskip
+
+\noindent
+Imagine a company where research is essential to
+discover  a new item.
+A typical case would be to produce
+a new medicine   which  requires extensive research
+before it can be found and lead to profitable production.
+Let $[0,T]$ be a time interval and suppose that
+the company only gets
+profit if the discovery is found 
+during this time interval.
+Let $t\mapsto \rho(t)$ be the intensity of research.
+So
+\[
+R(t)= \int_0^t\, \rho(s)\, ds
+\]
+is  ackumulated research up to time
+$t$.
+We suppose that
+the non-decreasing $R$-function affect a time dependent Poisson parameter
+whose random process governs the probability that
+a new item is discovered.
+Thus, there exists a constant
+$a>0$ such that
+\[
+\lambda(t)= a\cdot R(t)
+\]
+hold before an eventual discovery.
+By Poisson's equation this means that
+if the company invests in research with a given rate, then
+the probability for a discovery during a small time
+interval $[\tau,\tau+\Delta]$ becomes
+\[
+a\cdot e^{-a\cdot \int_0^\tau \, R(s)\, ds}\cdot R(\tau)\cdot \Delta
+\]
+If the discovery of the new item is found
+at a time
+$t$ the company recieves a profit
+\[
+\Pi(t)= A\cdot e^{-rt}
+\]
+where $r$ is some positive constant, i.e. the sooner
+a discovery is found the higher is the reward.
+At the same time
+the company has a cost for performed research up to this time. So  net profit is 
+given by
+an equation
+\[
+\Pi_*(t)=\Pi(t)- B\cdot R(t)
+\]
+where $B$ is another positive constant.
+The company now tries to maximize expected profit, i.e. the problem is to find
+the optimal rate of research in order to maximize  expected net profit.
+Above we   assumed that
+the cost of research is constant, i.e.
+during the time period we imagine that the company
+already has
+employed people whose salaries remain fixed.
+It is  intuitively clear that
+the company should invest in research as quick as possible in order
+to
+increase Poisson's $\lambda$-parameter.
+For a company with large resources
+the time derivative $\dot R=\rho$ can be made large.
+However, in practice  limitations occur. One can imagine chemical processes 
+or examinations of biological bodies  which imply
+that the function $\rho(t)$ is bounded above by some constant.
+So one is led to  consider  a constrained optimization problem where
+one seeks  to maximize expected net profit when
+\[
+0\leq \rho(t)\leq M
+\]
+hold for every $t$.
+Adding this constraint the optimization problem has a Bang-bang solution.
+More precisely, during a time interval $[0,\tau]$
+the company decides to choose $\rho(t)=M$
+and after $\rho(t)=0$ when $t>\tau$.
+If one regards such a strategy one can  compute expected profit as a function of
+the switch time
+$\tau$ and  solve the optimization problem. One also finds
+$\Pi_*$ epxressed as  a function of the parameters
+$A,B,a,r$ and $M$.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The formal proof that
+$\Pi_*$ is maximized by a Bang-bang 
+strategy relies upon
+Pontryagin's general results in OCT.
+\bigskip
+
+
+\noindent
+{\bf{A more involved case.}}
+Tne model above is not always realistic. It may occur that
+the input of research
+at an early time
+eventually does not affect the Poisson parameter.
+One can imagine
+fragile  items which are studied during the research and
+if no disvovery has been made after a certain time, the
+information
+from early research becomes  diminished, or even lost.
+Above  we assumed that
+\[
+\lambda(t)= a\cdot\int_0^t\, \rho(s)\,ds\tag{*}
+\]
+Let us replace this by an equation of the form
+\[
+\lambda(t)=a\cdot \int_0^t\, e^{\mu(s-t)}\cdot \rho(s)\, ds\tag{**}
+\]
+where $\mu $ is a positive constant. It means that research performed during a 
+small early time
+interval $[s,s+\delta]$ will no
+enlarge $\lambda(t)$ so much when $t>s$.
+When (*) is replaced by (**) the optimization problem becomes more
+involved
+and it is no longer clear if the company will choose a Bang bang solution.
+For example, if $\mu$ is large  one may expect that
+the company will decide to perform some reseach at a late time value if
+no discovery has appeared since invested early research has diminished
+the Poisson parameter. For example,  one may get
+a Bang-bang solution where
+several switch times  appear.
+So the   discussion shows that
+more \emph{realistic optimization problems}  become quite complicated.
+A further scenarium appears in a competitive
+world where 
+our company is not alone in the search for a new item.
+But thanks to "clever spies" we suppose that  our  company knows
+input of resarch at every moment performed by another company $C^*$
+and
+the resulting time dependent Poisson parsmrter which
+$C^*$ has at every time.
+If a reward for a discovery only is given once, this means that our company
+is faced with a new optimization problem since
+expected net profit from reseach decays while the
+opponent is active.
+Models of this kind appear in "real life" and  require  a considerable effort to
+solve 
+a  stochastic optimization of this kind.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{Optimizing consumption of two
+commodities.}}
+
+\bigskip
+
+\noindent
+A consumer can share a given capital
+to buy two commodities.
+Let $x$ snd $y$ be the amount
+of them which gives a utility expressed by
+$U(x,y)$. Here $U$ is a function defined for pairs
+of positive numbers. We assume that
+the first order partial derivatives 
+$U_x$ and $U_y$ both are $>0$ for all points
+$(x,y)\in{\bf{R}}_+^2$.
+In addition 
+$U$ is such
+that for every
+$A>0$ the level curve
+$\{U=A\}$
+can be expresed by a decreasing function
+\[
+x\mapsto y_A(x)
+\]
+whose  second derivative $\frac{d^2y_A}{dx^2}>0$
+for all $x>0$.
+Examples of such utilitiy functions arise as follows:
+For every $m\geq 1$ and
+a pair of $m$-tuples $\{0<a_k<1\}$ and $0<b_k<1\}$
+and an arbitrary $m$-tuple
+$\{c_k\}$ of positive numbers, we set
+\[
+U(x,y)= \sum\, c_k\cdot x^{a_k}\cdot y^{b_k}
+\]
+Next, for
+each $A>0$ wee consider the open
+set
+$\{U>A\}$ and the reader should  verify that
+this set is convex.
+\medskip
+
+\noindent
+Given a utility function $U$ ss above we
+consider the optimmzation problem
+\[
+\max_{xy}\, U(x,y)\tag{*}
+\]
+where the maximum is taken over pairs
+$(x,y)$ which satisfy a  budget constraint
+\[|
+px+qy=A
+\]
+Here $p$ and $q$ are prices, i.e. both are $>0$.
+The maximum problem has a unique
+solution, i.e. for every triple $p,q,A$ there exists 
+a unique pair $(x^*,y*)$ which maximises (*).
+Keeping $p$ and $q$ fixed we denote the maximum in
+(*) by $V(A)$ and then
+$A\mapsto V(A)$ is an increasing functioin.
+It turns out that the derivstive
+$V'(A)$
+coincides with Lagrange's multiplier. More precisely,
+when (*) is maximized there exists $\lambda>0$ and
+\[
+U_x(x^*,y^*)=\lambda\cdot q\quad\&\quad
+U_y(x^*,y^*)=\lambda\cdot p
+\]
+and then one has the equality
+\[
+\lambda= V'(A)\tag{**}
+\]
+The reader should verify (**)  and we remark that
+(**) appears as a  popular equation in
+text-books devoted to
+economics since
+it gives an interpretation of Lagrange's multiplier.
+\medskip
+
+
+\noindent
+{\bf{Nujmerical experiments.}}
+Explicit  solutions are easily found
+when
+\[
+U(x,y)=x^ay^b
+\]
+for a pair $0<a,b<1$.
+The reader is invited to treat the case
+$a=b=1/2$ and analyze how
+$(x^*,y*)$ changes with a price vector
+$(p,q)$ while $A$ is kept fixed.
+Passing to a more general  utilitiy function one
+must rely upon
+the computer which gives numerical solutions.
+A specific case is when
+\[
+U(x,y)\sqrt{xy}+ ax+by
+\]
+where $a,b$ are teo positive constants.
+With $A=1$ and fixed equal prices
+$p=q=B$ the reader is invited to
+see how $(x^*,y^*)$ changes with the pair $a,b$ and 
+evaluate numerically the  maximal value
+$V$ which with $A$ and $B$ kept fixed becomes a function of
+$a$ and $b$.
+\medskip
+
+
+\noindent
+{\bf{Remark.}} It goes without  saying that
+the results above can be extended to the case
+when $n\geq 3$ and the consumer
+distributes the incomle to buy $n$
+commodities  where a orice vector
+$p_1,\ldots,p_n$ is given.
+So here a function $U(x_1,\ldots,x_n)$ is
+defined when the $n$-vector has $x_k>=$ for each $k$.
+The optmisation problem for a given price vector and  income
+has a unique  solution $x^*$
+when $U$ is such that 
+the first  order partial derivatives are  $>0$.
+and the sets
+$\{U>C\}$ are strictly convex for every $C>0$.
+
+
+
+\newpage
+
+
+\centerline{\bf{Composed ODE:s}}
+
+\medskip
+
+\noindent
+Consider the  variational problem
+\[
+\min\, \int_0^T\, [e^{rt}x(t)^2+\dot x(t)^2]\, dt\tag{i}
+\]
+with fixed end-values $x(0)=0$ and $x(1)=1$, while $r$ is a constant which can be
+$<0$ or $>0$.
+The Euler equation becomes
+\[
+\ddot x(t)= e^{rt}x(t)\tag{i}
+\]
+Without solving (i) explicitly one cank keep trace of
+this function and  introduce another ODE where
+ a time dependent function $z(t)$ satsfies 
+ \[
+ \dot z(t)=e^{rt}x(t)^2+\dot x(t)^2\quad\&\quad z(0)=0
+ \]
+ Now one gets a numerial solution of the $z$-function and
+ obtsan plot over given  time intervals $[0,T]$.
+ In this way the minmal values in our variational problem
+ can be found numerically while the time intevral $T$ varies.
+
+\medskip
+
+\noindent
+The reader is invited to
+perform numerical experiments and also 
+confirm them after
+having computed (by hand) the analytic solutions
+to our  given problem.
+To be precise, the Euler equstion has the solution
+\[
+x(t) C(e^{\sqrt{r}t}-1)
+\]
+where the constant $C$ is determined by the end-value $x(T)=1$,
+and after this the reader can try to exhibit  a "closed formula"
+for the $z$-function.
+'\medskip
+
+
+\noindent
+{\bf{A secomd example.}}
+Here one regsrds an optimization  with a salvage value:
+\[
+\max\, \int_0^T\, \sqrt{\dot x(t)}\cdot e^{-rt}\, dt+A(K-x(T))\tag{*}
+\]
+where $r$ and $A$ are $>0$ and
+the maximum is found in the family  of
+non-negative functions $c(t)$ defined on
+$[0,T]$ with the  constraint 
+\[
+x(T)= \int_0^T\, \cdot x(t)\, dt\leq A
+\]
+The Euler equstion gives
+the following ODE for an extremal $x$-function:
+\[
+\dot x(t)= C\cdot e^{-2rt}
+\] 
+where $C$ is a  constant which must satisfy
+\[
+C\cdot \int_=^T\, e^{-2rt}\, dt\leq A
+\]
+and then $C$ is  found via the salvage term while  one maximizes
+(*). To carry out the computations and
+get an equation for trhe maximal value $V$ when
+$r,T,A$ are given is rather involved.
+Using the computer  the
+reader is invited to perform numerical experiments.
+To be orecise, using the \emph{transversality equation}
+when a salvage value is present, the
+reader
+can get hold of the constabnt $C$ and after
+find a numerical vaklue fior $V$ by regarding the
+$z$-function
+which satisfies the ODE:
+\[
+\dot z= e^{rt}\cdot \dot x(t)^2
+\]
+This example  illustrates a general
+situation where one can perform numerical investigations in
+more general cases.
+Let us also remakr that
+apart from the standard device which for example is implemented in
+Mathemacitca, it often requires extra  "organisation"
+to
+express the compound ODE:s which  evaluates $z(T)$
+while $r,T,A$ are nuumerically assigned  from the start.
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf{ODE:s
+and the use of computers.}}
+
+
+\bigskip
+
+\noindent
+Very few ODE:s can be solved "nalayitcslly", i.e. via
+expressions of established functions.
+So in most applications one must rely upon numerical solutions.
+At the same time experiments by computers
+can suggest new theoretical results.
+Let us illuminate this by discussing
+a second order ODE of the form
+\[
+\ddot y=y+b(t)
+\]
+where we seek solutions defined for $t\geq 0$.
+If we for example takee $b(t)= a$ for some constant
+$a$
+then we get the soluti
+\[
+y(t)= -a+a\cdot e^{-t}
+\]
+where $y(0)=0$ and
+\[
+\lim_{t\to +\infty}\, y(t)=-a
+\]
+So this function is decreasing but converges to a finite negative number.
+Suppose now thst
+$b(t)$ is defined on $[0,+\infty)$ where
+\[
+0\leq b(t)\leq 1
+\]
+hold for every $t$.
+Now one can ask if the ODE:
+
+\[
+\ddot y=y+b(t)
+\]
+has a solution where  $y(0)=0$ and
+a finite limit as in (xx) exist, i.e. 
+\[
+\lim_{t\to +\infty}\, y(t)=A
+\]
+hold for some real number $A$.
+This problem is a challenge since
+we cannot
+solve the ODE explicitly.
+It is therefore tempting to
+perform  experiments by a computer.
+One such experiment can be done as follows:
+With a large positive integer, say $N=10^3$
+we define $b(t)$ as follows.
+on the interval $[1,N]$
+in a random way , i.e. on  each
+interval $[k,k+1]$ we let $b(t)$ be +1 or 0, where
+the choice of the sign is random and picked form
+a Monte Carlo box.
+So here $b(t)$ is picewise constant with jumps at
+the integers $1,2,\ldots,N$. When $t>N$ we declare  that
+$b(t)=0$.
+Fir each such $b$-function we find
+a solution $y(t)$ where $y(t)$ is contonoud on
+$[0,+\infty)$ with 
+$y/(0)=0$ and 
+\[
+y(t)= y(N)e^{N-t}\quad\colon t\geq N
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline {\bf{Calculus of variation.}}
+\bigskip
+
+
+\noindent
+We are given a function
+$f(x,z, t)$
+of three variables.
+For every $C^1$-function $x(t)$ of the variable $t$ we
+assign its derivative $\dot x(t)$ and obtain the function
+\[
+ t\mapsto f(x(t),\dot x(t),t)
+\]
+Let $[0,T]$ be a given interval and $A$ is a constant. Denote by
+$\mathcal C^1(A)$ the family of all $C^1$-functions
+$x(t)$ on $[0,T]$ such that
+$x(0)=0$ and $x(T)=A$.
+To each such function we set
+\[ 
+\mathcal F(x)=\int_0^T\, f(x(t),\dot x(t),t)\cdot dt\tag{*}
+\]
+Here $x\mapsto \mathcal F(x)$ is a  function whose domain
+of definition is $\mathcal C^1[A]$ and one refers to $\mathcal F$ as the 
+evaluating functional.
+Next, a \emph{bubble function} is  a $C^1$-function $\phi(t)$ with 
+$\phi(0)=\phi(T)=0$.
+
+\medskip
+
+\noindent
+{\bf{A. Exercise.}}
+Use Taylor expansion to show
+that
+if $x\in\mathcal C^1[A]$ and $\phi$ is a  bubble function, then
+\[
+\frac{\mathcal F(x+\epsilon\cdot\phi)-\mathcal F(x)}{\epsilon}
+=\int_0^T\, \bigl[\phi(t)\cdot f'_x(x(t),\dot x(t),t)+
+\dot \phi(t)\cdot f'_{\dot x}(x(t),\dot x(t),t)\,\bigr]\cdot dt+o(\epsilon)\tag{i}
+\] 
+where $o(\epsilon)$ is small ordo, and show 
+that partial integration gives
+\[
+\int_0^T\, 
+\dot \phi(t)\cdot f'_{\dot x}(x(t),\dot x(t),t)\,\cdot dt=
+\phi\cdot f'_{\dot x}|_0^T-\int_0^T\,
+\phi(t)\cdot \frac{d}{dt}\bigl(f'_{\dot x}(x(t),\dot x(t),t)\bigr)\,\cdot dt\tag{ii}
+\]
+Since $\phi$ is a bubble function the first term above vanishes and (i\vvv ii)
+give
+\[
+\frac{\mathcal F(x+\epsilon\cdot\phi)-\mathcal F(x)}{\epsilon}=
+\]
+\[
+\int_0^T\, \bigl[\phi(t)\cdot [f'_x(x(t),\dot x(t),t)-
+\frac{d}{dt}\bigl(f'_{\dot x}(x(t),\dot x(t),t)\,\bigr)\,\bigr]\cdot dt+o(\epsilon)\tag{iii}
+\]
+Passing to the limit  $\epsilon\to 0$
+we can ignore the small ordo-term and obtain
+\[
+\lim_{\epsilon\to 0} \frac{\mathcal F(x+\epsilon\cdot\phi)-\mathcal F(x)}{\epsilon}=
+\int_0^T\, \bigl[\phi(t)\cdot [f'_x(x,\dot x,t)-
+\frac{d}{dt}\bigl(f'_{\dot x}(x,\dot x,t)\,\bigr)\,\bigr]\cdot dt\tag{iv}
+\]
+\medskip
+
+
+\noindent
+{\bf{A.1 Extremal $x$-functions.}}
+Suppose that $x^*(t)$ is extremal in the sense that
+\[ 
+\mathcal F(x)\leq \mathcal F(x^*)
+\] 
+hold for all competing $\mathcal C^1(A)$-functions.
+Then (iv)  must be zero for all bubble-functions
+$\phi$, i.e.  the right hand side vanishes for all such $\phi$. This 
+implies that the function
+\[
+t\mapsto f'_x(x^*(t),\dot x^*(t),t)-
+\frac{d}{dt}\bigl(f'_{\dot x}(x^*(t),\dot x^*(t),t)=0\quad\text{for all}\quad 0\leq t\leq T
+\tag{A.1.1}
+\] 
+
+\medskip
+
+\noindent
+One refers to (A.1.1) as the Euler equation which from the above
+must  to be satisfied by every extremal 
+$\mathcal F$-function $x^*(t)$.
+\medskip
+
+\noindent
+Notice that
+the same conclusion holds if we instead suppose that
+$x_*(t)$ is an extremal function in the sense that
+\[ 
+\mathcal F(x)\geq \mathcal F(x^*)
+\] 
+hold for all competing functions. Thus, the Euler equation is
+necessary for an extremal which yields a maximum or a minimum
+to the variational problem.
+\medskip
+
+
+\noindent
+{\bf{A.2 Exercise.}}
+Consider the case when
+$f=f(x,\dot x)$ is independent of $t$.
+Use rules for differentiation to show the
+equaluity below for every
+function $x)t)$:
+\[
+\dot x(t)\cdot (f'_x(x(t),\dot x(t))-
+\frac{d}{dt}\bigl(f'_{\dot x}(x(t),\dot x(t)))=
+\]
+\[
+\frac{d}{dt}[(f(x(t),\dot x(t))-
+\dot x(t)\cdot f'_{\dot x}(x(t),\dot x(t))]
+\] 
+So ignoring very special solutions when
+$\dot x(t)=0$ on some intervsl, the EWuler equation for
+an extremal solution is equivalent to
+the existence of a constant $C$ such that
+\[
+f(x(t),\dot x(t)-
+\dot x(t)\cdot f'_{\dot x}(x(t),\dot x(t))=C\tag{A.2.1}
+\]
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{B. Examples.}}
+Consider the variatioinal  problem with
+\[
+\mathcal F(x)= \int_0^T\, (\dot x^2+ax^2)\, dt\tag{B.1}
+\]
+where $a$ is a real number which can be $>0$ or $<0$, and
+the end-values are $x(0)=0$ and $x(T)=1$.
+It is tempting to seek a minimum.
+To begin with the reader csn check thst the Euler equation becomes
+\[
+\ddot x=ax
+\]
+If $a>0$ this second order ODE has the solutlion
+\[
+x(t) =\frac{1}{e^T-e^{-T}}\cdot (e^t-e^{-t})
+\]
+which satisfies the end-value conditions.
+The case when
+$a<0$ leads to a more involved
+analysis.
+To begin eith
+Euler's equation has the general solution
+\[
+x(t)=c_1\cdot \sin\,\sqrt{a}t+
+c_2\cdot \cos\,\sqrt{a}t
+\]
+The conditiion that $x(0)=0$ gives $c_2=0$ and then
+\[
+1=x(T)= c_1\cdot  \sin\,\sqrt{a}T\tag{i}
+\]
+If we spoecify $a=-1$ and $T=\pi$
+then (i) \emph{cannot be satsified}
+because $\sin \,\pi=0$.
+So this example shows that a variational problem can be ill-posed
+and
+fail to have extremal solutions.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Take $a=-1$ and let $T=\alpha\cdot \pi$ for some
+$0<\alpha<\pi$.
+Kepinig the end-values $x(0)=0$ and $x(T)=1$
+we find Euler's solution
+\[
+x_*(t)= \frac{\sin t}{\sin T}
+\]
+and the reader can check that
+\[
+\mathcal F(x_*)=\int_0^T\,( \cos^2t-\sin^2t)\, dt
+\]
+Now
+\[
+\int_0^T\,( \cos^2t-\sin^2t)\, dt=\int_0^T\, \cos 2t\, dt=
+\frac{\sin 2T}{2}
+\]
+As an example we take
+\[
+T=\pi-\delta
+\]
+where $0<\delta<\pi/2$.
+When $\delta\to 0$ the reader should verify that
+\[
+\lim_{\delta\to 0}\, \mathcal F(x_*)=-\infty
+\]
+From this one can conclude that
+the varistional problem is ill-posed when
+$T=\pi$ in the sense that
+\[
+\min_x\, \mathcal F(x)=-\infty
+\]
+when we take competing functions
+$x(t)$ for which $x(0)=1$ and $x(\pi)=1$.
+
+
+
+\newpage
+
+
+\noindent
+\centerline{\bf{Legendre's test.}}
+
+\bigskip
+
+
+\noindent
+With $0<T<\pi$ we have found the Euler solution
+$x_*(t)$ above.
+Recall that  Euler*s  equation only asets a necessary condition for
+an extremal. So there remains  to investigate if 
+$x_*(t)$ is a global minimum, which amounts to show that
+\[
+\mathcal F(x_*)<\mathcal F(x_*+\phi)
+\]
+hold for every non-zero bubble function $\phi$ on $[0,T]$.
+To prove that this indeed holds
+the reader should fiurt verify the equation
+\[
+\mathcal F(x_*+\phi)=\mathcal F(x_*)+
+\int_0^T\, (\dot \phi^2-\phi^2)\, dt
+\]
+Hence (x) holds  if 
+\[
+\int_0^T\, \phi^2\,dt<\int_0^T\, \dot \phi^2\, dt\tag{*}
+\]
+hold for every non-zero bubble function.
+To prove  that (*) holds  
+one can empoy series examnsiuons of bubble functions.
+More precisely, every function
+$\phi(t)$ defined on the interval $[0,\pi]$
+for ehich
+$\phi(0)= \phi(\pi)$ has a sine-series expansion
+\[
+\phi(t)= \sum_{k=1}^\infty\, c_k\cdot \sin kt
+\]
+where the $c$-numbers are determined by
+\[
+c_k=\frac{2}{\pi}\cdot \int_0^\pi\, \sin kt\cdot \phi(t)\, dt
+\]
+The reader is invited to deduce (*) from  this
+wellknown fact from the theory about Fourier series.
+One can also confirm (*) by experiments on a computer.
+Namely, consider polynopmials $P(t)$ eith real coefficiets of
+the form
+\[
+P(t)= t(t-1)\cdot p(t)
+\]
+where $p(t)$ is an arbitrary polynomial and via a Monte-Carlo box
+one picks a fsmily of polynomials $\{p(t)\}$ and
+check that (*) holds numerically.
+
+
+\bigskip
+
+\centerline{\bf{Legendre's conditions.}}
+
+
+\bigskip
+
+
+\noindent
+The examples above show thst
+in general one ust be careful while a variational problem
+is studied, i.e. the Euler equstiongives only a necessary condition for an extremal, and it may even
+occur that
+no extremal solution exists which satisfied  prescribed end-values.
+But in many applications there exists  a unique extremal solution
+which satisfies Euler's equation.
+Of course, one should distinguish between maxima or minima.
+Follwing a classic stufy by Legendre we
+impose the following   condition on
+the function
+$f(t,x,y)$ which
+where $(x,y)$ vary in
+${\bf{R}}^2$ while $0\leq t\leq T$.
+\[
+a^2\cdot f''_{xx}(t,x,y)+
+2b\cdot f''_{xy}(x,y,t)+ c^2\cdot f''_{yy}(t,x,y)>0\tag{L.1}
+\]
+hold for every triple of real numbers
+$a,b,c$ where at least one is $\neq 0$
+and for all $(x,y,t)$.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Suppose that $x_*(t)$ solve Euler's equation
+and ket $\phi$ be a bubble function.
+For every real number $s$ we put
+\[
+J(s)= \int_0^T\, f(t,x(t)+s\phi(t),\dot x(t)+s\dot \phi(t))|, dt
+\]
+Show that (L.1) entals that the second derivative
+$J''8s)>0$ for every $0\leq s\leq 1$. At the same time
+Euers equation for $x_*(t)$ entails  that
+the derivative $J'(0)=0$.
+Conclude via the general result below that
+$x_*(t)$ yields a globsl minium.
+\medskip
+
+\noindent
+{\bf{Exercise.}} Let $g(s)$ be a $C^2$-.function on
+thr unit interval $[0,1]$ with $g'(0)=0$ and $g'')s)>0$
+for every $s$. Show that
+\[
+g(0)<g(1)
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+If $>0$ is replaced by $<0$ we find exactly as above
+a unique maximizing function $x^*(t)$.
+Let us remark  that (L.1) means that the symmetric $2\times 2$-matrix
+\[
+xxx
+\]
+is positive definite  for all $t,x,y)$.
+In the literature one often refers to
+this as the positive Hessian condition for
+the function $(x,y)\to f(t,x,y)$ which
+is regarded for every fixed time-vslue.
+Geometrically it means  that the function
+\[
+(x,y)\mapsto f(t,x,y)
+\]
+is stricly concave for every fixed $t$.
+Notice  also that unique minimimal funcions
+$x_*(T)$ csn exist even when
+Legendreäs condition fails. We have seen such examples with
+\[
+f(t,x,y)= x^2-ay^2
+\]
+where $a>0$. 
+But in most applicstions one of the teo legendre conditions
+are satisfied which  gives
+a unique minimizing .or maximizing - solution to the
+variatinsl problem.
+Excepy for a few cases one cannot find
+$x^*$ or $X_*$ explicitly, i.e. one must rely upon
+numerical experminetns. 
+\bigskip
+
+\noindent
+{\bf{An example.}}
+Let
+\[
+f(t,x,y)=y^2+x^4
+\]
+and with $T>0$ and $A>0$ we regard the variational probelm
+\[
+\min_x\, \int_=^T\, (\dot x^2+x^4)\, dt
+\] 
+with $x(0)=0$ and $x(T)= A$.
+Euler's equation becomes
+\[
+\ddot x= 4x^3
+\]
+This is a non-linear second order ODE.
+If one assigns a  numerical value for
+the time
+derivative, 
+\[
+\ddot x(0)=a
+\]
+for some $a>0$ then the computer  plots
+a solution and one evaluates numerically $x(T)$.
+usin the so called Back-Shooting one determines $a$ via
+the end-value condition $x(T)=A$, and the reader is invited
+to find numerical solutions 
+for various pairs of $A$ and $T$.
+\medskip
+
+
+\noindent
+{\bf{The value function
+$V(T,A)$.}}
+Keeping $f$ as above
+one gets $x_*(t)$ and evaluate $\mathcal F(x_*)$ which
+depends on $A$ and $T$.
+In many spplications one os foremost interested in
+this $V$-function.
+So as an extra exercise the reader is invited to
+evalue $V(T,A)$ numericslly with the aid of
+solutions $x_*(t)$ while varoius numercaik vakues for
+¨$A$ snd $T$ are regarded.
+A speciic case os to let $T=1$ be fixed while $A$ varies.
+it is thrn vlerar thst the function
+\[
+A\mapsto V(1,A)
+\]
+increases with $A$ but its shape can only be revealed numerically.
+\bigskip
+
+
+\noindent
+{\bf{A more special case.}}
+it occurs if
+$f(x,y) x^+y^2$, i.e with $T=1$ we consider
+\[
+\min_x\, \int_0^1\, (\dot x^2+x^2)\ dt
+\]
+Here we find the oinear Euler equation
+\[
+\ddot x= x
+\]
+and it can be solvled expocityl with
+end-values $x(0)=0$ and $X(1)=A$ which after yields 
+an explicit equation for
+$V(1,A)$ as a function of $A$.
+
+
+\bigskip
+
+\noindent
+{\bf{Exercise,}}
+In the previous examples no discount factors  were
+introduced.
+A typcal example in economis is to regard
+\[
+\min_x\, \int_0^T\, e^{rt}\cdot \dot x^2\,dt
+\]
+with $x(t)=0$ and $x(T)=A$.
+The Euler equation entails that
+\[
+t\mapsto e^{rt}\cdot x(t)
+\]
+is a constant function of $t$.
+From this the reader can check that
+\[
+x(t)= C\cdot (1-e^{-rt})
+\]
+where the constant $C$ satisfies
+\[
+C(1-e^{-rT})=A
+\]
+Let us instad regard the variational problem
+\[
+\min_x\, \int_0^T\, (e^{rt}\cdot \dot x^2+ax)\,dt
+\]
+where $a>0$ with end-valued $x(0)=0$ snd $x(T)=A$.
+The reader is invited to find the minimizing solution
+$x_*(t)$ and investigate numerically the value function
+$V$ where we take $T=1$ while $r,A$ and $a$ vary.
+For example, hos is $V$ affected by $a$ ?
+
+
+
+\bigskip
+
+\centerline{\bf{C. Variation of end-values.}}
+\medskip
+
+\noindent
+Assume  Legendre's concavity condition (l.1)  which gives
+a unique
+function $x_*(t)$  minimizing $\mathcal F$.
+Now we shall  study  variations with respect to $A$ and   the time
+horizon $T$ while the minimum value is taken.
+So for  each pair $A,T$ Legendre's result gives
+a unique  extremal function
+$x^*_{A,T}$ defined on $[0,T]$ and
+we 
+define the
+value function
+\[ 
+V(A,T)=\mathcal F(x^*_{A,T})
+\]
+
+\noindent
+When   $\delta A$ is small,  pertubations of
+solutions to an ODE of the Picard type give the existence
+of  a
+function $\xi(t)$ such that
+
+\[
+x^*_{A+\delta A,T}=
+x^*_{A,T}+\delta A\cdot \xi(t)+o(\delta A)\tag{i}
+\] 
+
+\noindent
+Using (i) a first order Taylor expansion gives:
+
+\[ 
+\frac{V(A+\delta A,T)-V(A,T)}{\delta A}= 
+\]
+\[
+\int_0^T\, [\xi(t)\cdot f'_x(x^*,\dot x^*,t)+
+\dot \xi(t)\cdot f'_{\dot x}(x^*,\dot x^*,t)]\cdot dt+o(\delta A)\tag{ii}
+\]
+A partial integration and using that $x^*$ satisfies the Euler's  equation
+implies that the integral above becomes
+\[
+\xi(T)\cdot f'_{\dot x}(x^*(T),\dot x^*(T),T)\tag{iii}
+\]
+At the same time 
+(i) and the equality
+$x^*_{A+\delta A,T}= A+\delta A$ entail that
+$\xi(T)=1$. Passing to the limit as $\delta A\to 0$ we have therefore proved:
+
+\medskip
+
+\noindent
+{\bf{C.1 Theorem.}}
+\emph{One has the equality}
+
+\[
+\frac{\partial V}{\partial A}(A,T)=
+f'_{\dot x}(x^*_{A,T},\dot  x^*_{A,T}, T)
+\]
+\medskip
+
+\noindent
+{\bf{C.2 Exercise }} Use Theorem C.1 and similar 
+arguments as above to show that
+
+\[
+\frac{\partial V}{\partial T}(A,T)=f(x^*_{A,T},\dot  x^*_{A,T}, T)-
+\dot x^*_T(A,T)\cdot
+f'_{\dot x}(x^*_{A,T},\dot  x^*_{A,T}, T)
+\]
+\bigskip
+
+
+\noindent
+{\bf{C.3 Exericise.}}
+Consider the variational problem
+\[ 
+\min_x\, \int_ 0^1\, (x^2+\dot x^2)\, dt
+\]
+Let $x(0)=1$  while the end-value
+$x(1)$ is free.
+The Euler equation becomes
+\[ 
+\ddot x=x
+\]
+With $x(0)=1$ the general solution is
+\[
+x(t)= Ae^t+(1\vvv A)e^{\vvv t}\tag{i}
+\]
+Since $x(1)$ is free
+the partial derivative
+$\frac{\partial V}{\partial A}$ in
+Theorem C.1 is zero a $T=1$. Since
+$f\uuu{\dot x}= 2\dot x$ it follows that
+$A$ should be chosen so that
+\[
+\dot x(1)= Ae+Ae^{\vvv 1}=0\implies A=0
+\]
+Hence the extremal function becomes 
+\[ 
+x_*(t)= e^{\vvv t}\tag{ii}
+\]
+If we try to prove (ii) without Theorem C.1 we
+consider some function from
+(i) and evaluate
+\[
+\int_0^1\, 
+[(Ae^t+(1-A)e^{- t})^2+
+(Ae^t+Ae^{-t})^2]\, dt
+\]
+This integral is a quadratic polynomial 
+of $A$ and the reader can check that it takes a minimum when
+$A=0$ which confirms the solution (ii) and at the same time
+illustrates that Theorem C.1 simplifies computations in
+situations  of a free terminal value.
+\medskip
+
+
+
+\centerline{\bf{D. Constrained Euler equations.}}
+\medskip
+
+
+\noindent
+A new clas  of variational problems arise when
+we in addition to
+boundary values $x(0)=0$ and $x(T)=A$ impose a further constraint that
+\[
+\int_ 0^1\, g(x,\dot x,t)\, dt=B\tag{D.1}
+\] 
+for a constant $B$ and a given  $g$function of three variables.
+An example is the isoperimetric problem  
+where
+$t$ is replaced by $x$ and we seek a curve
+$y(x)$ with $y(-1)= y(1)=0$
+and the  constraint 
+\[ 
+\int_0^1\, \sqrt{1+y'(x)^2}\, dx=L
+\]
+while $f=y$.
+Before we treat this special case we consider the general 
+problem where the pair $f,g$ are arbitrary.
+Exactl  as before  one works with bubble-functions
+$\phi$ and given some $x(t)$ for which (D.1) holds
+we take
+$x_\epsilon (t)+\epsilon\cdot \phi(t)$ . The new feature is that
+(D.1) again should be satisfied.
+With a small $\epsilon$ a Taylor expansion gives
+\[
+\int_0^1\, g(x\uuu\epsilon,\dot x\uuu\epsilon,t)\, dt=
+B+
+\int_0^1\, [\, 
+g'\_x(x,\dot x,t)\cdot \phi+
+g'\_{\dot x}(x,\dot x,t)\cdot\dot  \phi]\, dt
+\]
+After a partial integration of the last term we get the equation
+\[
+\int_0^1\, [\, 
+g'_x(x,\dot x,t)\vvv\frac{d}{dt}(
+g'_ {\dot x}(x,\dot x,t)]\cdot  \phi\, dt=0\tag{D.2}
+\]
+When this holds we say tha
+$\phi$ is an admissable bubble-function with respec to 
+$x(t)$.
+If $x_*(t)$ is an extremal for the variational problem
+one employs  admissable bubble-functions 
+and repeating the previous arguments from  when Euler's equation is derived
+it follows that
+\[
+\int_0^1\, [\, 
+f'_x(x,\dot x,t)-\frac{d}{dt}(
+f'_{\dot x}(x,\dot x,t)]\cdot  \phi\, dt=0\tag{D.3}
+\]
+So the vanishing in (D.2) implies that (D. 3) also vanishes
+and then an elementary argument
+which is left as an exercise to
+the reader gives the  conclusive result:
+\medskip
+
+\noindent
+{\bf{D.4 Theorem.}}
+\emph{If $x^*(t)$ is an extremal there exists a constant
+$c$ such that}
+\[
+f'_x(x^*,\dot x^*,t)\vvv\frac{d}{dt}(
+f'_{\dot x}(x^*,\dot x^*,t)= c\cdot [
+g'_x(x^*,\dot x^*,t)-\frac{d}{dt}(
+g'_{\dot x}(x^*,\dot x^*,t)]
+\]
+\newpage
+
+
+
+\centerline{\bf{Specific problems.}}
+
+\bigskip
+
+
+\noindent
+
+{\bf{Problem A.}}
+Consider the variational problem
+\[
+\min_x\, \int_0^1\, [\dot x^2(t)+ e^{\mu t}x(t)]\, dt
+\]
+with end-values $x(0)=0$ and $x(1)=1$.
+Above $\mu$ is a real number.
+Use Euler's equation
+to find the minimizing $x$-function which amounts to
+solve the ODE:
+\[
+2\cdot \ddot x=2e^{\mu t}x
+\]
+The minimium value is denoted by $V(\mu)$ which 
+the reader should  express  as a funtion of
+$\mu$, where $\mu$ can be either $>0$ or $<0$.
+\medskip
+
+
+\noindent
+{\bf{Problem A.1}}
+Do the same problem where we now
+seek
+\[
+\min_x\, \int_0^1\, [\dot x^2(t)+  A\dot x\cdot x\cdot e^{\mu t}x(t)]\, dt
+\]
+where $A$ is another constant.
+A hinit is that Euler's ODE for the differential equation is
+the same as when
+$A=0$. while the value function can depend on $A$.
+
+\bigskip
+
+\noindent
+{\bf{Problem B.}}
+Seek
+\[
+\max_c\, \int_0^\infty\, \sqrt{c(t)}\cdot e^{-rt}\,dt 
+\]
+where the competing $c$-functions are
+$\geq 0$ and
+\[
+\int_0^\infty\, c(t)\,dt=A
+\] 
+hold for a positive constant $A$.
+\bigskip
+
+
+\noindent
+{\bf{Problem C.}}
+Here we regard an optimization with
+a salvage value and seek
+\[
+\max_x\, \int_0^1\, \sqrt{\dot x}\, dt+A(K-x(T))
+\] 
+where $x(0)=0$ and
+the end value satisfies $0\leq x(T)\leq K$, while
+$A$ och $K$ are   positive  constants.
+\bigskip
+
+
+\noindent
+{\bf{Problem D (harder)}}
+Consider the variational problem
+\[
+\min_x\, \int_0^\pi\, [\dot x(t)^2-(\pi-t)x^2(t)]\, dt
+\]
+with end-value conditions $x(0)=0$ and $x(\pi)=1$.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+

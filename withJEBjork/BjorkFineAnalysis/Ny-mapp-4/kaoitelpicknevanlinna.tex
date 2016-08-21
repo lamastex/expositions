@@ -1,0 +1,1391 @@
+%\documentclass{amsart}
+%\usepackage[applemac]{inputenc}
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+\centerline{\bf\large{IV. Nevanlinna-Pick theory}}
+
+
+
+
+\bigskip
+\centerline{\emph{Contents}}
+
+
+\bigskip
+
+\noindent
+\emph{0. The Nevanlinna-Pick Interpolation}
+
+\bigskip
+
+\noindent
+\emph{1. The Lindelšf-Pick principle
+with an application}
+
+\bigskip
+
+\noindent
+\emph{2. A result by Julia}
+\bigskip
+
+\noindent
+\emph{3. Geometric results by Lšwner}
+
+\bigskip
+
+\centerline{\bf{Introduction.}}
+
+\bigskip
+
+\noindent
+In the unit  disc $D$ there exists the a metric defined by
+\[ 
+\frac{|dz|}{1-|z|^2}
+\]
+In a joint article from 1916, Lindelšf and Pick discovered that
+if $f(z)\in\mathcal O(D)$ has maximum norm $\leq 1$, then
+the map $z\to f(z)$ does not increase the metric (*).
+This result turns out to be very useful and
+is applied in  ¤ 2
+to give a proof of a theorem due  Julia.
+In ¤ 3 we prove some results due to Lšwner about
+geometric properties of analytic mappings.
+Section 0
+is devoted to an
+interpolation theorem
+due to  Nevanlinna and Pick.
+We give a detailed proof since the result has
+a wide range of applications beyond analytic function theory
+in various optimization problems.
+
+
+
+
+
+
+\bigskip
+
+\bigskip
+
+
+
+\centerline{\bf 0. The Nevanlinna-Pick Interpolation Theorem}
+\bigskip
+
+\noindent
+Let $D$ be the open unit disc.
+Given an  $n$-tuple  of distinct points
+$z_1,\ldots,z_n$ in $D$ and some $n$-tuple
+$w_1,\ldots,w_n$ of complex numbers we put:
+\[
+\rho(z(\cdot),w(\cdot))= \min_{f\in\mathcal O(D)}\,
+\,|f|_D\quad\colon\quad f(z_\nu)=w_\nu\quad\colon\, 1\leq\nu\leq n\tag{*}
+\]
+Thus we seek to interpolate preassigned values
+at the points $\{z\uuu k\}$
+with an analytic
+function $f(z)$ whose maximum norm is minimal.
+The case $n=1$ is trivial for then it is obvious that
+the constant function $f(z)=w_1$ minimizes (*) so $\rho(z_1,w_1)=|w_1|$
+hold for all $\alpha_1\in D$. If $n\geq 2$
+there exists
+at least some $f\in\mathcal O(D)$ which gives a minimum.
+For let $\{f_\nu\}$
+be a sequence of  functions which solve the interpolation
+while their  maximum norms tend
+to
+$\rho(\alpha(\cdot),w(\cdot))$. This is a normal family
+and hence we
+extract a subsequence which
+converges to a limit function $f_*$ whose maximum norm
+is equal to $\rho(z(\cdot),w(\cdot))$.
+It turns out
+that the minimizing $f$ is unique and of a special form.
+Before Theorem 1 is announced  we 
+introduce the class
+$\mathfrak{B}_{n\vvv 1}$ which consists of functions of the form:
+\[ 
+f(z)=e^{i\theta}\cdot \prod_{\nu=1}^{\nu=n\vvv 1}
+\,\frac{z-\alpha_\nu}{1-\bar \alpha_\nu\cdot z}\tag{**}
+\]
+where  $0\leq\theta\leq 2\pi$ and $(\alpha_1,\ldots,\alpha_{n\vvv 1})$ is some 
+$(n\vvv 1)$-tuple of  points in $D$ which are not necessarily distinct.
+
+
+\bigskip
+
+\noindent {\bf 0.1. Theorem}  \emph{For each pair of $n$-tuples $z(\cdot)$
+and $w(\cdot)$
+there exists a unique $f_*\in\mathfrak{B}_{n\vvv 1}$ 
+and a positive real number $\rho$ such that
+the  $\rho\cdot f_*(z)$
+minimizes the interpolation (*).}
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+With $\rho=\rho(z(\cdot),w(\cdot))$  the uniquenss
+means that if $g\in\mathcal O(D)$ is an arbitrary
+interpolating function which is $\neq f_*$ then
+$|g|_D>\rho$.
+
+
+
+\bigskip
+
+\noindent
+The proof of Theorem 0.1 requires several steps. 
+First we shall establish a result about Blaschke products.
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.3 Proposition.}}
+\emph{Let $f$ be a function in
+$\mathfrak{B}\uuu n$. For every 
+$k(z)\in \mathcal O(D)$ with  maximum norm $|k|\uuu D= 1$
+such that $f\vvv k$ has at least $n$ zeros counted with multiplicity in
+$D$, it follows that $f=k$.}
+
+
+\medskip
+
+
+
+\noindent
+\emph{Proof.}
+We argue by a contradiction. If $k\neq f$
+we
+denote by $N(f-k:r)$ the number of
+zeros of $f-k$ in $|z|<r$ counted with multiplicities.
+The hypothesis gives some   $r_*<1$ such that
+\[
+N(k-f,r_*)\geq n\tag{ii}
+\]
+Next, to each 0$<r<1$ we set
+\[
+\mathfrak{m}(r)= \min\uuu\theta\, |f(re^{i\theta})\vvv k(re^{i\theta})|
+\]
+The hypothesis gives a sequence $\{r\uuu\nu\}$ such hat
+$r\uuu\nu\to 1$ and every $\mathfrak{m}(r\uuu\nu)>0$.
+Consider some $r\uuu\nu>r\uuu *$
+and the analytic function
+
+\[
+h_\nu=\epsilon_\nu f+\frac{1}{2}(f-k)\quad\text{where}\quad
+\epsilon_\nu=\frac{1}{4}\mathfrak{m}(r_\nu)\tag{iii}
+\]
+Since $|\frac{1}{2}(f-k)|>\epsilon_\nu \cdot |f|$ holds 
+on the circle $|z|=r\uuu\nu$ it follows from
+(i) and Rouche's theorem that we have:
+\[ 
+N(h_\nu : r_\nu)=N(f-k:r_\nu)\geq n\tag{iv}
+\]
+At the same time we can write
+\[
+h_\nu=(1+\epsilon_\nu)f-\frac{1}{2}(k+f)\tag{v}
+\]
+By assumption   $|k|_D=|f|_D=1$  and since $f$ is a finite
+Blaschke product
+its absolute value tends uniformly to zero as $|z|\to 1$. So
+if $r\uuu\nu$ is sufficiently close to 1 we get:
+\[ 
+(1+\epsilon_\nu)\cdot |f(z)|>\frac{1}{2}|k(z)+f(z)|\quad\colon\quad |z|= r\uuu\nu\tag{vi}
+\]
+Then
+another application of
+Rouche's theorem gives:
+\[
+N(h_\nu : r)=N(f : r)\leq n-1\tag{vii}
+\]
+where the last inequality follows since
+$f\in\mathfrak B_n$.
+Now (vii) contradicts (iv) and hence we must have $k=f$
+as requested.
+
+\bigskip
+
+\noindent
+{\bf{A consequence.}}
+Let $z(\cdot)$ and $w(\cdot)$ be some  pair of $n$\vvv tuples
+and suppose there exists some $f\uuu *\in\mathfrak{B}\uuu {n\vvv 1}$
+and some $\rho>0$
+such that $\rho\cdot f\uuu *(z\uuu k)=w\uuu k$
+hold for each $k$.
+Then the function $f=\rho\cdot f\uuu *$ not only interpolates but it
+has also the minimal maximum norm, i.e. we have the equality
+$\rho=\rho(z(\cdot),w(\cdot))$.
+For suppose we have strict inequality
+$\rho(z(\cdot),w(\cdot))<\rho$ which gives an interpolating function $k(z)$
+with maximum norm $|k|\uuu D<\rho$.
+Since $|\rho\cdot f|=\rho$ holds on $|z|=1$ it follows by Rouche's theorem
+that
+$f$ and $f\vvv k$ has the same number of zeros i $D$.
+Now $f\vvv k$ has at least $n$ zeros while $f$ has at most $n\vvv 1$
+many zeros. This  contradiction and proves that
+$f$ is minimizing and Proposition 0.2 entails also that
+$f$ is uniquely determined in $\mathfrak{B}\uuu{n\vvv 1}$.
+\medskip
+
+\noindent
+The results   above show that
+there remains to establish an \emph{existence result}. Namely, there remains to prove
+that for every given 
+$n$\vvv tuple 
+$z(\cdot)$ in $D$ and  an  arbitrary
+$n$\vvv tuple 
+$w(\cdot)$ of complex numbers,  there exists a pair  $f\uuu *\in\mathfrak{B}\uuu n$
+and  $\rho>0$
+such that $\rho\cdot f\uuu *$ solves the interpolation. Moreover, if the pair has been
+found
+then we have the equality
+$\rho= \rho(z(\cdot),w(\cdot))$.
+\medskip
+
+\noindent
+{\bf{0.4 Induction over $n$}}.
+We shall prove the existence above by an induction over
+$n$. First we establish a result where Mšbius transformations intervene.
+To each  $n$\vvv tuple $(z\uuu 1,\ldots,z\uuu n)$
+we denote   for every   $\rho>0$  the family  $I\uuu \rho(z(\cdot))$
+of all $n$\vvv tuples $w(\cdot)$
+such that $\rho(z(\cdot),w(\cdot))=\rho$.
+\newpage
+
+
+\noindent
+{\bf{0.5 Exercise.}}
+For each point $a\in D$ we have the Mšbius transformation
+\[ 
+M_a(z)=\frac{z-a}{1-\bar a z}
+\]
+If $f(z)\in \mathcal O(D)$
+we get the new analytic function $f\circ M\uuu a$
+which  has the same maximum norm as $f$. Use this to show that
+\[ 
+I\uuu \rho(z(\cdot ))=
+I\uuu\rho(M\uuu a(z(\cdot)))
+\]
+hold for every $n$\vvv tuple $z(\cdot)$.
+Thus, we can change the $z$\vvv points via a Mšbius transformation
+without affecting the
+$I\uuu\rho$\vvv sets.
+\medskip
+
+\noindent
+{\bf{0.6 The induction step.}}
+If $g\in\mathfrak {B}\uuu{n\vvv 1}$
+and $|a|<1$  then the composed function $g\circ M\uuu a$
+again belongs to
+$\mathfrak {B}\uuu{n\vvv 1}$.
+So by  Exercise 0.5 it suffices to establish the existence of
+an interpolation $f\in\mathfrak{B}\uuu{n\vvv 1}$
+when $z\uuu 1=0$.
+So assume this and consider first the case $w\uuu 1=0$.
+Then we seek $f$ of the form
+\[ 
+f(z)= z\cdot g(z)\tag{1}
+\]
+where $g$ satisfies $g(z\uuu k)=\frac{w\uuu k}{z\uuu k}$
+when $2\leq k\leq n\vvv 1$. By an an induction over
+$n$
+we can find $g=\rho\cdot g\uuu *$ for some
+$g\uuu *\in \mathfrak{B}\uuu{n\vvv 2}$ and 
+(1) entails that
+\[
+f=\rho\cdot z\cdot g\uuu *
+\] 
+where $z\cdot g\uuu *$ belongs to
+$\mathfrak{B}\uuu{n\vvv 1}$ which gives  the requested interpolating function. 
+\medskip
+
+\noindent
+{\bf{The case $w\uuu 1\neq 0$ }}.
+To begin with we find
+$f\in\mathcal O(D)$ with the maximum norm
+$\rho=\rho(z(\cdot),w(\cdot))$
+such that $f(0)=w\uuu 1$ and $f(z\uuu k)=w\uuu k$
+when $2\leq k\leq n$. Put
+\[ 
+\mu\uuu k=\frac{w\uuu k\vvv w\uuu 1}{1\vvv
+\rho^{\vvv 2}\cdot \bar w\uuu 1\cdot w\uuu k}\tag{1}
+\]
+We have also the analytic function
+\[ 
+g(z)= \frac{f(z)\vvv w\uuu 1}{1\vvv
+\rho^{\vvv 2}\cdot \bar w\uuu 1\cdot f(z)}
+\]
+Since $|f|\uuu D=\rho$ we also have $|g|\uuu D=\rho$ where
+$g(z\uuu k)=\mu\uuu k$ for each $k\geq 2$ while $g(0)=0$.
+In particular 
+\[
+(0,\mu\uuu 2,\ldots,\mu\uuu n)\in
+I\uuu\gamma(0,z\uuu 2,\ldots,z\uuu n)\quad\text{where}\quad \gamma\leq\rho
+\]
+By the induction over $n$ and the previous special case we find
+$f\uuu *\in\mathfrak{B}\uuu{n\vvv 2}$ such that the function
+\[
+g\uuu *=\gamma \cdot z\cdot f\uuu *
+\]
+takes the interpolating values
+$(0,\mu\uuu 2,\ldots,\mu\uuu n)$.
+Next,  there exists the analytic function
+\[ 
+\phi(z)=\frac{g\uuu *(z)+w\uuu 1}{1+\rho^{\vvv 2}\cdot \bar w\uuu 1\cdot g\uuu *(z)}
+\]
+If $\gamma<\rho$
+we see that
+the maximum norm
+$|\phi|\uuu D<\rho$.
+At the same time
+(1) entails that $\phi(0)=w\uuu 1$ and
+$\phi(z\uuu k)= w\uuu k$ for $k\geq 2$.
+Since $\rho$ was the interpolation norm
+for the pair $(0,z\uuu 2,\ldots,z\uuu n)$ and the $n$\vvv tuple
+$w(\cdot)$ we have  contradiction. Hence  
+$\gamma=\rho$ holds and from the above it follows that
+
+\[
+\rho\cdot \frac{zf\uuu *(z)+w\uuu 1}{1\vvv \rho^{\vvv 2}
+\bar w\uuu 1 z f\uuu *(z)}
+\]
+takes the requested interpolation values
+$(w\uuu 1,\ldots,w\uuu n)$ which
+gives the induction step over $n$.
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Consider the case $n=2$ in Theorem 0.1 where we assume that
+$w_1\neq w_2$.
+Theorem 1 shows  that
+there exists a unique triple
+\[
+(a,\theta,\rho)\quad
+\text{where}\quad  a\in D\quad\colon 0\leq\theta\leq 2\pi\quad\colon\rho>0
+\]
+such that  function
+\[
+ f(z)=\rho\cdot e^{i\theta}\cdot \frac{z-a}{1-\bar a\cdot z}
+\]
+solves the interpolation problem.
+\medskip
+
+\noindent
+{\bf{0.7 Exercise.}}
+With $n=2$ and $z\uuu 1=0$ while $z\uuu  2\neq 0$
+is kept fixed
+we solve the interpolation for a given pair $(w\uuu 1,w\uuu 2)$,
+The minimizing interpolation function is of the form
+\[
+f(z)=\zeta\cdot \frac{z+\frac{w\uuu 1}{\zeta}}{
+1+\frac{\bar w\uuu 1\cdot  z}{\bar\zeta}}
+\] 
+for some $\zeta\neq 0$.
+So here $\zeta$ satisfies the equation
+\[
+z\uuu 2\cdot\zeta+w\uuu 1=
+w\uuu 2+w\uuu 2 \bar w\uuu 1\cdot z\uuu 2\cdot \frac{1}{\bar\zeta}
+\]
+Writing $w\uuu 2= w\uuu 1+\gamma$
+this amounts to solve the equation
+\[
+z\uuu 2\cdot |\zeta|^2=\gamma\cdot \bar\zeta+|w\uuu 1|^2\cdot z\uuu 2+
+\gamma\cdot \bar w\uuu 1\cdot z\uuu 2\tag{*}
+\]
+We assume that $w\uuu 2\neq w\uuu 1$ which means that
+$\gamma\neq 0$ and that the minimizing function
+$f$ is not reduced to a constant. Hence   its maximum norm
+$|\zeta|$ must be $|w\uuu 1|$,
+Theorem 1 implies that under these conditions
+(*) has a unique solution $\zeta$ with absolute value 
+$>|w\uuu 1|$.
+It is interesting to
+analyze how $|\zeta|$ depends on the triple $z\uuu 2,w\uuu 1w\uuu 2$.
+Dividing (*) with $z\uuu 2$ and regarding
+$\lambda=\gamma/z\uuu 2$ as a parameter which varies
+we are led to  the equation
+\[
+|\zeta|^2\vvv \lambda\cdot \bar\zeta=  
+|w\uuu 1|^2+\gamma\cdot \bar w\uuu 1
+\]
+
+
+\noindent
+The reader is invited to analyze the behaviour of $|\zeta|$
+with a special attention  to the case when
+$z\uuu 2$ is close to the origin while
+$\gamma$ stays fixed, So here 
+the interpolating function $f$ takes quite distinct  values at 
+the origin while   $z\uuu 2$. So  one expects that its maximum norm
+increases. Here is
+
+\medskip
+
+\noindent {\bf{0.8 A specific example.}}
+Let $\gamma=1$ and $z\uuu 2=\epsilon$ for some small positive 
+$\epsilon$ while $w\uuu 1=a$ is real and positive.
+So the equation becomes
+\[ 
+|\zeta|^2\vvv \frac{\bar\zeta}{\epsilon}
+= a^2+a
+\]
+The solution $\zeta$ is therefore real
+and we are led to the algebraic equation
+
+\[
+s^2\vvv \frac{s}{\epsilon}=a^2+a
+\]
+Notice that we require that $|\zeta|>|w\uuu 1|=a$
+so we seek the unique root $s$ for which $s>a$ and it is given by
+\[ 
+s=\frac{1}{2\epsilon}+
+\sqrt{a+a^2+
+4^{\vvv 1}\epsilon^{\vvv 2}}
+\]
+With $a$ kept fixed we obtain 
+$|\zeta|\simeq \frac{1}{\epsilon}$ as $\epsilon\to 0$
+which illustrates that 
+the maximum norm of
+the
+interpolating function increases when $\epsilon\to 0$.
+
+\bigskip
+
+
+\noindent{\bf{0.9 Interpolation constants.}}
+Let $E=(z\uuu 1,\ldots,z\uuu n)$
+be given. Each $f\in\mathfrak{B}\uuu{n\vvv1}$
+has $n\vvv 1$ many roots counted
+with multiplicities in
+$D$. In particular $f$ cannot vanish identically on
+$E$, i.e the maximum norm
+\[ 
+|f|\uuu E= \max\, |f(z\uuu k)|>0
+\] 
+This leads us to define the number
+\[
+\tau(E)=\min\uuu {f\in\mathfrak{B}\uuu {n\vvv 1}} \, |f|\uuu E
+\]
+We have also the interpolation number:
+\[ 
+\mathfrak{int}(E)= \max\uuu {w(\cdot)}\, \rho(z(\cdot),w(\cdot))
+\]
+with the maximum taken over all $w$\vvv sequences with
+$|w\uuu k|\leq 1$ for every $k$.
+With these notations one has the following result which is due to Beurling:
+
+
+\newpage
+
+\noindent
+{\bf{0.9 Theorem.}} \emph{For every finite set $E$ one has the equality}
+\[
+\tau(E)=\frac{1}{\mathfrak{int}(E)}\tag{*}
+\]
+
+
+\noindent
+\emph{Moreover,  a function $f\in\mathcal B\uuu {n\vvv 1}$
+which gives $|f|\uuu E= \tau(E)$ is unique up to a constant
+and for such an extremal $f$ one has $|f(\alpha\uuu k)|=\tau(E)$
+for every $1\leq k\leq n$.}
+
+
+\bigskip
+
+\noindent
+\emph{Proof.}
+With $n$ kept fixed
+the family of $\mathcal B\uuu{n\vvv 1}$
+enjoys normal properties in the sense of Montel so it
+follows  that there exists at least some
+extremal $f\in\mathcal B\uuu{n\vvv 1}$ such that
+$|f|\uuu E= \tau(E)$.
+Now we prove that
+$|f(\alpha\uuu k)|= \tau(E)$ for each $k$.
+For suppose strict inequality holds at some
+$\alpha$\vvv point which we can take to be
+$\alpha\uuu 1$.
+Consider the Blaschke product
+\[ 
+B(z)=\prod\uuu {k=2}^{k=n}
+\,\frac{z\vvv \alpha\uuu k}{1\vvv \bar\alpha\uuu k\cdot z}
+\]
+Rouche's theorem gives some $\delta>0$ such that
+if $|\zeta|<\delta$ then the analytic function
+$f(z)+\zeta\cdot B(z)$ has $n\vvv 1$ zeros in $D$
+and we can therefore write
+\[
+f(z)+\zeta\cdot B(z)=\rho(\zeta)\cdot \psi\uuu\zeta(z)\tag{1}
+\]
+where the $\zeta$\vvv indexed $\psi$\vvv functions 
+belong to $\mathcal B\uuu {n\vvv 1}$
+and $\rho(\zeta)$ are complex numbers.
+Notice that
+\[
+f(\alpha\uuu k)= \rho(\zeta)\cdot \psi\uuu\zeta(\alpha\uuu k)\tag{2}
+\] 
+hold when $2\leq k\leq n$.
+Moreover, since
+$|f(\alpha\uuu 1)|<\tau(E)$
+it is clear by continuity that
+if $\delta$ is sufficiently small then
+$|\psi\uuu\zeta(\alpha\uuu 1)|<\tau(E)$
+when $|\zeta|<\delta$.
+Since $f$ is extremal we conclude from
+(2) that there exists $\delta>0$ such that
+\[
+ |\zeta|<\delta\implies |\rho(\zeta)|\geq 1\tag{3}
+\]
+This gives a contradiction
+since the absolute value of the $\rho$\vvv function
+cannot have a relative minimum at $\zeta=0$
+by the local complex expansion
+of this $\rho$\vvv function  in Chapter III:XX.
+\medskip
+
+
+\noindent
+\emph{Uniqueness.}
+Let $f$ and $g$ be two extremal functions
+so that $|f|\uuu E= |g|\uuu E= \tau(E)$ and suppose they are not identical.
+For each $\zeta$ where $|\zeta|<\delta$ for a sufficiently small $\delta$
+we can write
+\[
+1\vvv \zeta)\cdot f+\zeta\cdot g= \rho(\zeta)\cdot \psi\uuu\zeta(z)
+\]
+with $\psi\uuu\zeta\in \mathcal B\uuu{n\vvv 1}$.
+The triangle inequality gives
+\[
+|1\vvv \zeta)\cdot f(\alpha\uuu k)+\zeta\cdot g(\alpha\uuu k)|\leq
+\tau(E)
+\]
+for every $k$ and since $|\psi\uuu \zeta|\geq \tau(E)$ we get as above
+that $|\rho(\zeta(\geq 1$
+whenever $\zeta$ is sufficiently close to zero.
+This contradicts again the complex expansion of this
+$\rho$\vvv function from Chapter III.
+\medskip
+
+\noindent
+{\bf{The equality $\mathfrak{int}(E)= \frac{1}{\tau(E)}$.}}
+To begin with, let $f$ be the unique  extremal   above which gives
+an $n$\vvv tuple of points on the unit circle so that
+\[ 
+f(\alpha\uuu k)= \tau(E)\cdot e^{i\theta\uuu k}
+\]
+The Nevanlinna\vvv Pick theorem shows that
+$\frac{f((z)}{\tau(E)}$
+has smallest maximum norm over $D$ when 
+the $n$\vvv tuple $\{w\uuu k= e^{i\theta\uuu k}\}$.
+This implies that
+\[
+\mathfrak{int}(E)\geq \frac{1}{\tau(E)}
+\]
+To prove the opposite inequality
+we consider some $n$\vvv tuple
+$\{w\uuu \bullet\}$ for which the interpolating function
+$g(z)$ has the maximum norm $|g|\uuu D=\mathfrak{int}(E)$.
+Theorem 0.1 gives
+\[
+ g=\mathfrak{int}(E)\cdot f\quad\text{where}\quad f\in\mathcal B\uuu{n\vvv 1}
+\]
+This entails that
+\[ 
+\tau(E)\leq |f|\uuu E\leq
+\frac{1}{\mathfrak{int}(E)}
+\]
+and the requested equality (*) in Theorem 0.9 follows.
+ 
+ 
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+\
+
+\centerline{\bf 1. The Lindelšf-Pick principle.}
+
+\bigskip
+
+
+\noindent {\bf Introduction.}
+The non-euclidian metric on $D$
+is defined by
+\[ 
+\frac{|dz|}{1-|z|^2}\quad\colon\, |z|<1\tag{0.1}
+\]
+When $D$ is equipped with this metric
+one gets  a model of
+hyperbolic geometry  in the sense of Bolyai and 
+Lobatschevsky which led to an  intense geometric study
+around 1890, foremost  by F. Klein and
+H. PoincarŽ. We shall not enter a detailed discussion about
+the geometry
+since
+our main concern  is to apply the  metric (0.1) to derive
+inequalities for 
+analytic functions.
+In a work from 1916, Lindelšf and Pick
+discovered that
+very analytic function $\phi(z)$ in the unit disc with maximum norm
+one at most decreases the
+metric (0.1).
+This result is called the Lindelšf-Pick principle
+and is proved in Theorem XX below.
+In section XX it is used to
+prove a result by
+Caratheodory and Julia concerned with the boundary behaviour
+of analytic functions.
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+{\bf{1. Schwarz' inequality}}
+The non-euclidian distance between
+two point  $z_1$ and $z_2$  in $D$
+will be  denoted by
+\[
+ \mathfrak{h}(z_1,z_2)\tag{1.1}
+\]
+
+
+\noindent
+To grasp this distance function we first notice the equality:
+\[ 
+\mathfrak{h}(0,z)=\frac{1}{2}\cdot
+ \text{Log}\,\frac{1+|z|}{1-|z|}\tag{*}
+\]
+Indeed, (*) follows  since it is obvious from
+(0.1) that the geodesic curve from the origin to a point  
+ $z\in D$ is  the ray from 0 to $z$. So   with $|z|=r$
+one computes
+ \[ 
+ \int_0^r\,\frac{ds}{1-s^2}
+ \]
+which after integration gives
+(*).
+Next, with $a\in D$ we consider a Mšbius transformation:
+\[ 
+w=\frac{z-a}{1-\bar a\cdot z}\implies
+\frac{dw}{dz}= \frac{1-|a|^2}{(1-\bar a \cdot z)^2}
+\]
+At the same time we notice that
+\[ 
+1-|w|^2= \frac{|1-\bar a z|^2-|z-a|^2}{|1-\bar a \cdot z|^2}=
+(1-|a|^2)\cdot\frac{1-|z|^2}{|1-\bar a \cdot z|^2}
+\]
+From this the reader may deduce that
+the Mšbius transform preserves the $\mathfrak h$-metric.
+\medskip
+
+\noindent
+{\bf 1.1 Example.} 
+Take $z_1=1/2$ and $z_2=e^{i\theta}/2$
+with some $0<\theta<\pi$.
+Now
+\[ z\mapsto \frac{z-1/2}{1-z/4}
+\]
+sends $z_1$ to the origin. It follows that
+\[
+\mathfrak{h}(1/2,e^{i\theta}/2)=
+\frac{1}{2}\cdot
+ \text{Log}\,\frac{1+r}{1-r}\quad\colon\, 
+r=\frac{2\cdot |e^{i\theta}-1|}{|2-e^{i\theta}|}
+\]
+
+
+\noindent
+The following
+consequence of Schwarz inequality was discovered by
+G. Pick in 1915. 
+
+
+\medskip
+
+
+\noindent 
+{\bf 1.2 Theorem.}
+\emph{Let $\phi\colon\,D\to\Omega$
+be a conformal map from the unit disc onto a simply
+connected domain contained in $|w|<1$. Then
+the non-euclidian metric decreases.}
+\medskip
+
+
+
+\noindent \emph {Proof.}
+Let $z_0\in D$ and set
+$w_0=\phi(z_0)$. The quotient
+\[ 
+G(z)= \frac{\phi(z)-w_0}{1-\bar w_0\phi(z)} \, \colon\,
+\frac{z-z_0}{1-\bar z_0z} 
+\]
+Since
+
+\[ \lim\, \frac{|z-z_0|}{|1-\bar z_0z|}=1\quad\text{as}\quad |z|\to 1
+\] 
+we see that
+$|G(z)|\leq 1$ holds for all $z\in D$. With $z=z_0$ we have
+\[ 
+G(z_0)= \phi'(z_0)\cdot \frac{1-|z_0|^2}{1-|\phi(z_0)^2|}
+\]
+Since $z_0\in D$ was arbitrary we get the
+differential inequality
+\[ 
+\frac{|d\phi(z)|}{|1-\phi(z)|^2}\leq \frac{|dz|}{1-|z|^2}
+\]
+and this is precisely the assertion in Pick's theorem.
+
+\medskip
+
+\noindent
+{\bf{The Lindelšf-Pick principle.}}
+Above $\phi$ was a  conformal mapping.
+Since the $\mathfrak{h}$-metric  is
+defined locally the inequality in Pick's theorem extends to analytic functions
+in $D$ of absolute value $<1$ and leads to the following general
+result:
+\bigskip
+
+\noindent
+{\bf 1.3 Theorem}
+\emph{Let $\phi(z)\in\mathcal O(D)$ have maximum norm
+$\leq 1$. Then $\phi$ decreases the $\mathfrak{h}$-metric.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Thus, if we set $w=\phi(z)$ and
+$z_1,z_2$ is a pair in the unit disc $D_z$ one has
+\[ 
+\mathfrak{h}(\phi(z_1),\phi(z_2))\leq
+\mathfrak{h}(z_1),z_2)\tag{*}
+\]
+\medskip
+
+\noindent 
+{\bf 1.4 The $\mathfrak{h}$-metric in half-spaces.}
+Passing to the right half-plane $U_+$ where
+$\mathfrak{Re}(w)>0$,
+the non-euclidian metric  is obtained via the conformal map
+\[
+z\mapsto w=\frac{1+z}{1-z}
+\]
+From this it follows that
+\[ 
+\frac{|dz|}{1-|z|^2}\mapsto
+2\cdot\frac{|w+1|^4\cdot |dw|}{|w+1|^2-|w-1|^2}
+\]
+So with  $w=\xi+i\eta$ the non-euclidian metric in the right half-plane becomes
+\[
+\frac{|w+1|^4\cdot |dw|}{2\xi}\tag{*}
+\]
+
+
+
+
+\medskip
+
+\noindent 
+Next, 
+the Lindelšf-Pick principle applies after
+a conformal mapping from $D$ onto any other simply connected
+domain $\Omega$ where one then
+regards analytic functions $g\in\mathcal O(\Omega)$ such that
+$g(\Omega)\subset\Omega$.
+\medskip
+
+{\noindent
+{\bf 1.5 Example.}
+Let 
+$\Phi(z)=u(x,y)+iv(x,y)\in\mathcal O(U^+)$
+be such that its real part $u$ is positive in $U_+$.
+The Lindelšf-Pick principle applies to
+$\Phi$ and using (*) in (1.4) one has the following result:
+
+\medskip
+
+\noindent
+{\bf 1.6 Proposition.} \emph{To every $k>0$ there exists another
+constant $k^*$ such that
+the following inequality holds for
+every pair of points $z_0=x_0+iy_0$ and $z_1=x_1+iy_1$ in $U_+$:}
+\[
+|\Phi(x_1+iy_1)|\leq |v(x_0+iy_0)|+k^*\cdot \frac{x_1\cdot u(x_0,y_0)}{x_0}
+\quad\colon\, |y_1|<k\cdot x_1
+\]
+
+
+\noindent 
+{\bf 1.7 Exercise.}
+Try to prove this result. If necessary, consult
+the text-book   [Nevanlinna: page 59-61]
+for a proof where it is also shown
+that for each $k>0$
+one can take
+\[
+k^*=3+2(k+1)^2\quad\colon\,\,
+\text{provided that}\,\, x_1>x_0\quad\text{and}\quad
+x_1>|y_0|\tag{*}
+\]
+
+\newpage
+
+
+
+
+
+
+
+
+\noindent
+\centerline {\bf{2. A result by  Julia.}} 
+
+
+\medskip
+
+\noindent
+Let $\phi\in\mathcal O(D)$
+be such that $|\phi(z)|<1$ when $z\in D$ and 
+consider the boundary point $z=1$.
+\medskip
+
+\noindent {\bf 2.1 Theorem.} \emph{For every $e^{i\theta}$
+there exists the limit}
+\[ 
+c(\theta)=\lim_{z\to 1}\, \frac{|e^{i\theta}-\phi(z)|}
+{|1-z|}\quad\colon 0\leq c(\theta)\leq +\infty\tag{1}
+\]
+
+
+\noindent
+\emph{where the limit $z\to 1$ is taken in any Fatou sector at 1. Moreover,
+if $\theta$ is such that the limit
+$0<c(\theta)<\infty$ then 
+there exist the Fatou limits}:
+\[
+\phi'(z)\to c(\theta)\cdot e^{i\theta}\quad\colon\,
+\text{arg}\,\frac{e^{i\theta}-\phi(z)}{1-z}\to \theta\tag{2}
+\]
+\emph{and the following inequality holds}
+\[ 
+\frac{1-|\phi(z)|^2}{|e^{i\theta}-\phi(z)|^2}\geq
+\frac{1}{c}\cdot \frac{ 1+|z|}{1-|z|}\quad\colon\, z\in D\tag{3}
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+Of course, only the  case when
+$c(\theta)<\infty$  is of  interest. Notice that this 
+finiteness only can occur for at most one
+$\theta$-value.
+The
+theorem  above was the starting point for an  extensive study of
+boundary values of analytic functions in Julia's work
+[Ju] and has  later led to a far-reaching study about 
+Julia sets in  complex dynamics. See [Carleson-Garnett] for this more recent and
+advanced theory in function theory.
+The reader may also consult Chapter IV in [Caratheodory]
+for an account of Julia's original theorem
+where some geometric interpretations appear.
+
+\bigskip
+
+
+
+\centerline{\emph{Proof of Theorem 2.1}}
+\medskip
+
+\noindent
+Applying the two  conformal mappings
+\[
+z\mapsto\frac{1+z}{1-z}\quad\colon\,w\mapsto
+\frac{e^{i\theta}+w}{e^{i\theta}-w}
+\]
+we can work in the right
+half plane where $z=1$  has been mapped into
+the point at infinity and $\phi$ has become an analytic function
+\[ 
+\Phi(x+iy)=u(x+iy)+iv(x+iy)\quad\colon u(x,y)>0
+\,\,\text{for all}\,\, (x,y)\in U_+
+\]
+
+
+\medskip
+
+
+\noindent
+The crucial step in the proof  is
+to show the result below:
+\medskip
+
+\noindent 
+\emph{Let $\Phi=u+iv$ be an arbitrary
+analytic map from $U_+$ to $U_+$ and assume that}
+\[ 
+\min_{x+iy\in U_+}\, \frac{u(x+iy)}{x}=0\tag{*}
+\]
+\emph{Then it follows that}
+\[ \lim_{x\to+\infty}\, 
+\frac{u(x+iy)}{x}=0\quad\colon\, \text{holds uniformly
+inside any  Fatou sector}
+\,\,|y|<kx\quad\colon\, k>0
+\]
+\medskip
+
+\noindent
+To prove
+this we take some
+$k>0$ and for each  $\epsilon>0$
+the hypothesis (*) gives a point
+$z_0=x_0+iy_0$ in $U_+$ such that
+\[ 
+\frac{u(x_0,y_0)}{x_0}<\epsilon\tag{1}
+\]
+Next, if $z=x+iy$  stays in the Fatou sector
+$|y|<k|x|$ and $x_1$ is large then   Proposition 1.6 gives:
+\[
+|\Phi(x+iy)|\leq
+|v(x_0+iy_0)|+k^*\cdot \frac{x\cdot u(x_0+iy_0)}{x_0}
+<|v(x_0+iy_0)|+\epsilon\cdot k^*\cdot x
+\]
+\medskip
+
+\noindent
+In particular we have
+\[
+\frac{u(x+iy)}{x}<\frac{|v(x_0+iy_0)|}{x}+\epsilon\cdot k^*
+\]
+Since $\epsilon>0$ can be chosen arbitrary small the conclusion after (*) follows.
+
+
+\medskip
+
+\noindent
+\emph{Proof continued.}
+Next, suppose that
+\[ 
+c=\min_{x+iy\in U_+}\, \frac{u(x+iy)}{x}>0\tag {1}
+\]
+is positive. The result above applies
+to $\Phi(z)-cz$
+and hence $\frac{\Phi(z)}{z}\to c$
+holds uniformly  as $|z|\to\infty$ inside any Fatou sector
+$|y|<k|x|$. Moreover, this
+gives:
+
+\[ 
+\liminf_{x\to\infty}\,
+\frac{u(x,y)}{x}=c\tag{2}
+\]
+\medskip
+
+\noindent
+Let us no consider the complex derivative of $\Phi$
+assuming that (1) above holds for some
+$c>0$.
+\bigskip
+
+
+
+
+\noindent
+\emph{Sublemma}
+\emph{One has}
+\[
+ \lim_{z\to\infty}\, \Phi'(z)=c
+\]
+\emph{where this limit holds uniformly while
+$z$ stays in any given
+Fatou sector.}
+\medskip
+
+\noindent
+\emph{Proof.} Replacing $\Phi$ by $\Psi(z)=\Phi(z)-cz$
+it suffices to show that
+\medskip
+\[ 
+\lim_z\, \Psi'(z)=c\quad\colon\text{uniformly when the limit is in a Fatou sector}\tag{i}
+\]
+
+
+\noindent To show (i) we proceed as follows. Consider some
+$0<p<1$ and choose also some $q$ so that
+$p<q<1$.
+For every $r>0$
+we consider the disc 
+\[
+\Delta_r=\{|z-r|<q \cdot r\}
+\]
+Since $q<1$ this disc stays in
+a fixed Fatou sector for all large $r$ and 
+Cauchy's inequality gives
+\medskip
+\[ 
+|\Psi'(z)|
+\leq \frac{qr}{2\pi}\,\int_0^{2\pi}\,
+\frac{|\Psi(r+qre^{i\theta})|}{
+|r+qre^{i\theta}-z|^2}\cdot d\theta
+\quad\colon\quad
+z\in\Delta_r\tag{ii}
+\]
+\medskip
+
+\noindent
+Next, if $\epsilon>0$  Propostion 1.6 gives
+some large $r^*$ such that 
+\[
+|\frac{\Psi(\zeta)}{\zeta}|<\epsilon\quad\colon 
+|\zeta-r|= qr\quad\colon\, r\geq r^*\tag{iii}
+\]
+Hence, if $|z-r|\leq pr$, the Cauchy inequality from (ii)
+and a  computation which is left to the reader
+gives:
+\[
+|\Psi'(z)|\leq
+\epsilon\cdot\frac{q(1+q)}{(q-p)^2}\tag{iii}
+\]
+\medskip
+
+\noindent
+This proves that
+$\Psi'(z)\to 0$ holds uniformly when  $z$ stays in the sector
+\[
+|\text{arg}\, z|< \text{arc.sin}(p)
+\]
+Above $p<1$ is arbitrary
+which therefore gives
+the Caratheodory-Julia theorem after   we have  returned to
+the unit disc  via a conformal map between  $D$ and 
+$U_+$. 
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf\large 3. Some geometric results}
+
+
+\bigskip
+
+
+
+\noindent
+{\bf 3.1 A study of convex domains.}}
+Let $\Omega$ be a bounded convex domain and  $p\in\Omega$ 
+an interior point. The convexity implies that
+if we start at some boundary  point $q_0\in\partial\Omega$ where
+$q_0-p$ is real and positive, then we obtain a function
+\[ 
+\phi\mapsto q(\phi)\quad\colon\,
+\text{arg}\,[q(\phi)-p\,]=\phi\quad\colon q(\phi)\in \partial\Omega\tag{*}
+\]
+where $q(2\pi)=q_0$ holds after one turn. The $q$-function is continuous and
+1-1, i.e. a homeomorphism between the unit circle and
+$\partial\Omega$. 
+Let $g(\phi)$ be a
+non-negative continuous function on $T$, i.e   here
+$g(2\pi)=g(0)$. We get $g^*\in C^0(\partial\Omega)$ satisfying
+\[ 
+g^*(q(\phi))=g(\phi)
+\]
+Starting from $g^*$ we solve the Dirichlet problem and find the
+harmonic function $G^*$ in $\Omega$ which extends $g^*$.
+With these notations we have
+\medskip
+
+
+\noindent
+{\bf Theorem 3.2} \emph{One has the inequality}
+\[ 
+G^*(p)\leq\frac{1}{\pi}\,\int_0^{2\pi}\, g(\phi)d\phi
+\]
+
+
+\noindent{\bf Remark.}
+The inequality is of special interest when $p$ approaches the boundary.
+Before Theorem 3.2 is proved we consider
+a general situation.
+Let $W$ be any bounded Jordan domain and $p\in W$
+an interior point. Let $a,b$ be two points  on $\partial W$.
+Denote by $\gamma$ the Jordan subarc of $\partial W$ 
+which joins $a$ and $b$.
+Let $L$ be the line passing through these two points.
+Suppose that the two infinite half lines from $a$ and $b$ 
+are outside $W$, i.e. $W\cap L$ is contained in
+the line segment $(a,b)$.
+Now $L$ cuts $W$ into two halfs. Let $W^*$ be one of these.
+Given a point $p\in W^*$ we shall find an upper bound
+for the harmonic measure
+$\mathfrak{m}_W(p;\gamma)$.
+After a rotation and a translation we may
+assume that $a=m$ and $b=-m$ for some $m>0$, i.e. 
+$[a,b]$ is an interval on the real axis and that $W^*$
+is contained in the upper half plane $U^+=\mathfrak{Im}(z)>0$.
+Now $W\subset U$ and Carleman's principle from XX
+gives:
+
+\[
+\mathfrak{m}_W(p;\gamma)\leq
+\mathfrak{m}_{W^*}(p:[a.b])\leq
+\mathfrak{m}_U^+(p:[a.b])\tag {1}
+\]
+
+
+\noindent
+By the result in XXX the last term is equal to $\frac{1}{\pi}\cdot\alpha$
+where $\alpha$ is the angle formed by $a-p$ and $b-p$.
+\bigskip
+
+
+
+\noindent 
+\emph{Proof of Theorem 3.2.}
+Consider a small arc $\gamma\subset\partial\Omega$ 
+which by the parametrisation (*) above is defined by some $\phi$-interval 
+$\phi_*\leq\phi\leq\phi^*$.
+Let $\mathfrak{m}_\Omega(p:\gamma)$ be the harmonic measure at
+$p$ with respect to this boundary arc.
+We can apply the  inequality (1)  and conclude that
+\[
+\mathfrak{m}_\Omega(p:\gamma)\leq \phi^*-\phi_*
+\]
+Now the Theorem  3.2 follows after an  integration over $0\leq\phi\leq 2\pi$
+where we  use that $G^*(p)$ is evaluated by
+the integral of $g^*$ over $\partial\Omega$
+with respect to the positive measure on
+$\partial\Omega$ defined by the harmonic measure at $p$.
+
+
+\bigskip
+
+
+\centerline {\bf 3.3. On the range of analytic functions}
+\bigskip
+
+\noindent
+Consider a domain $\Omega\in \mathcal D(C^1)$.
+Let $\phi\in\mathcal O(\Omega)$ and assume it  extends to
+$C^0(\bar\Omega)$.
+The $\phi$-function is not supposed to be 1-1.
+We get the domain
+\[
+ W=\phi(\Omega)
+\]
+Now
+the following may occur: There exists a subset
+$\Gamma$ of $\partial\Omega$ given as a finite union of
+arcs
+$\{\gamma_\alpha\}$
+such that the image set $\phi(\Gamma)$
+gives the boundary $\partial A$ of a domain $A\subset W$, i.e. here 
+$A$ is a relatively compact subset of the connected open set
+$W$.
+Put
+\[
+\Omega_*=
+\{z\in\Omega\quad\colon\,\phi(z)\in W\setminus A\}
+\]
+
+
+\noindent
+Here $A\subset\partial (W\setminus A)$
+and  we construct a harmonic measures as follows: If
+$z\in\Omega_*$ we have $\phi(z)\in W\setminus A$ and get
+the function
+\[ 
+z\mapsto\mathfrak{m}_{W\setminus A}\,(\phi(z);\partial A)
+\quad\colon\, z\in\Omega_*
+\]
+Since $w\mapsto\mathfrak{m}_{W\setminus A}(w;\partial A)$
+is a harmonic function in $W\setminus A$ it follows that the function above is harmonic in
+$\Omega_*$.
+Let us analyze its boundary values on $\partial \Omega_*$.
+If $z\in\Omega_*$ approaches $\Gamma$, then
+$\phi(z)\to A$ and hence
+\[ 
+\lim_{z\to\Gamma}\,
+\mathfrak{m}_{W\setminus A}\,(\phi(z);\partial A)=1
+\]
+
+
+\noindent
+Let us now regard the harmonic measure function
+\[ z\mapsto \mathfrak{m}_{\Omega_*}(z:\Gamma)
+\]
+By definition it has boundary value 1 along $\Gamma$ and otherwise it is zero. 
+Hence the maximum principle for harmonic functions gives:
+
+\bigskip
+\noindent {\bf 3.4 Theorem.} \emph{In the situation above one has
+the
+inequality:}
+\[
+\mathfrak{m}_{\Omega_*}(z:\Gamma)\leq
+\lim_{z\to\Gamma}\,
+\mathfrak{m}_{W\setminus A}\,(\phi(z);\partial A)\quad\colon\quad 
+z\in \Omega_*
+\]
+
+
+\noindent 
+{\bf Application.}
+Using Theorem 3.4 we  prove a result due to  Lšwner.
+Let $w(z)\in\mathcal O(D)$ where $w(0)=0$ and
+$|w(z)|<1$. Suppose there exists an arc $\gamma$ on the unit circle
+such that $w(z)$ extends continuously up to $\gamma$ and that
+\[ 
+|\gamma(e^{i\theta})|= 1\quad\colon\quad e^{i\theta}\in\gamma
+\]
+Consider the image $w(\gamma)$ which 
+is an another arc on the unit cicle.
+With these notations  Theorem 3.4 gives
+\medskip
+
+\noindent 
+{\bf 3.5 Lšwner's inequality.}
+\emph{The length of $w(\gamma)$ is $\geq$ the length of $\gamma$
+and equality can only hold if $w(z)$ from the start is
+$e^{i\alpha}z$ for some $\alpha$.}
+\bigskip
+
+\noindent
+{\bf 3.6 Remark.} Actually Lšwner proved a more precise 
+result. Before it is announced  we insert a preliminary remark. 
+Given $w(z)$ and an arc $\gamma\subset T$ where $|w(z)|=1$
+one should expect that $|w(z)|$ must tend to 1 rather quick
+as $z\in D$ approaches $\gamma$.
+To put this in a precise form, Lšwner proceeds as follows:
+Up to a rotation we may take
+\medskip
+\[ \gamma=\{ e^{i\theta}\quad\colon
+-a<\theta<a\}\quad\colon\, 0<a<\pi/2
+\]
+Now we consider the family of 
+circles $K_\lambda$ passing the two end-points
+$e^{ia}$ and $e^{-ia}$ where $\lambda>0$
+expresses
+the angle of intersection beteen
+$K_\lambda$ and the unit circle $T$.
+\medskip
+
+\noindent
+The reader should  draw a picture to see the situation where
+the constraint  that the $\lambda$-numbers are chosen
+so that  obtain a simple connected domain $\Omega_\lambda\subset D$
+bordered by $\gamma$ and a portion of $K_\lambda$.
+Next,   regard the image set $w(\Omega_\lambda)$.
+On its boundary we find the arc $w(\gamma)$ which by the
+hypothesis that $|w|=1$ on $\gamma$, is a sub-arc
+of $T$.
+At the same time we 
+can start with the arc
+$w(\gamma)$ and take the circle $K^*_\lambda$
+which passes the end-points of $w(\gamma)$. This
+gives a domain $\Omega^*_\lambda$ bordered by
+$w(\gamma)$ and a subarc of the circle
+$K^*_\lambda$.
+With these notations the precise  result by Lšwner goes as follows:
+\medskip
+
+\noindent {\bf 3.7 Theorem.}
+\emph{For each $\lambda$ as above one has the inclusion}
+\[ 
+w(\Omega_\lambda)\subset \Omega^*_\lambda
+\]
+\medskip
+
+\noindent
+{\bf {3.8 Exercise.}}
+Deduce  Theorem 3.7 from
+Theorem 3.5. The strategy is that if 
+$w(z)$ is \emph{outside} the set $\Omega_\lambda$
+while $z\in \Omega^*_\lambda$, then
+the inequality for harmonic measures is violated.
+We leave it to the reader to discover this contradiction which gives
+Lšwner's theorem.
+See also his article [Lš:1]:\emph{Untersuchungen Ÿber
+schlichte
+konforme Abildungen} for details and further results.
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+%\end{document}
+
+
+

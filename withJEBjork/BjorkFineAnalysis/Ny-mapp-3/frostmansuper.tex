@@ -1,0 +1,1645 @@
+%\documentclass{amsart}
+
+
+%\usepackage[applemac]{inputenc}
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+
+%\begin{document}
+
+\centerline{\bf\large{ II. The Jensen-Nevanlinna class and Blaschke products.}}
+
+
+\bigskip
+
+
+\noindent
+
+\bigskip
+
+
+\noindent
+\emph{0. Introduction.}
+\bigskip
+
+
+\noindent
+\emph{1. The Herglotz integral.}
+\bigskip
+
+
+\noindent
+\emph{2. The class JN(D)}
+
+\bigskip
+
+
+\noindent
+\emph{3. Blaschke products}
+
+
+\bigskip
+
+
+\noindent
+\emph{4.  Invariant subspaces of $H^2(T)$}
+\bigskip
+
+
+\noindent
+\emph{5.  Beurling's closure theorem}
+\bigskip
+
+
+\noindent
+\emph{6 The Helson\vvv Szegš theorem.}
+
+
+
+\bigskip
+
+
+\centerline{\bf{Introduction.}}
+\medskip
+
+\noindent
+If $\mu$ is a real Riesz measure on the unit circle
+we get the harmonic function in the disc $D$ defined by
+\[
+H\uuu\mu(z)=\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{1\vvv |z|^2}{|e^{i\theta}-z|^2}\cdot d\mu(\theta)\tag{0.1}
+\]
+For each $0<r<1$ one has the inequality
+\[
+\int_0^{2\pi}\,\bigl | 
+H_\mu(re^{i\theta})\bigr |\cdot d\theta\leq
+||\mu||\tag{0.2}
+\] 
+where $||\mu||$ is the total variation of $\mu$.
+Moreover, there exists  a weak limit, i.e. 
+\[
+\lim\uuu{r\to 1}\int_0^{2\pi}\, g(\theta)\cdot H_\mu(re^{i\theta})=
+\int_0^{2\pi}\, g(\theta)\cdot d\mu(\theta)\tag{0.3}
+\]
+holds for every continuous function $g(\theta)$ on $T$.
+Conversely we proved in XX that if $H(z)$ is a harmonic function in
+$D$ for which there exists a constant $C$ such that
+\[
+\int_0^{2\pi}\,\bigl | 
+H(re^{i\theta})\bigr |\cdot d\theta\leq C\tag{0.4}
+\] 
+hold for all $r<1$, then there exists a unique Riesz measure
+$\mu$ on $T$ and $H=H\uuu \mu$.
+In other words, there is a 1\vvv 1 correspondence between
+the space of harmonic functions in $D$ satisfying (0.4) and the space of real Riesz measures on $T$.
+There also exist radial limits almost everywhere.
+More precisely, define the
+$\mu$\vvv primitive
+function
+\[
+\psi(\theta)= \int\uuu 0^\theta\, d\mu(s)
+\]
+
+\noindent
+Fatou's Theorem
+asserts that for each Riesz measure $\mu$ there exists a radial limit
+\[
+H\uuu\mu^*(\theta)=\lim\uuu{r\to 1}\, H(re^{i\theta})\tag{0.5}
+\]
+for each $\theta$ where
+$\psi$ has an ordinary derivative.
+Since $\psi$ has a bounded variation this holds
+almost everywhere by Riesz's theorem in XXX.
+\medskip
+
+\noindent
+{\bf{0.6 The case when $\mu$ is singular.}}
+If $\mu$ is singular 
+the radial limit (0.5) is zero almost everywhere.
+If the singular measure $\mu$ is non\vvv negative
+with
+total mass $2\pi$ we have
+$H\uuu\mu(0)=1$ and  the mean\vvv value property for harmonic
+functions gives:
+\[
+\int\uuu 0^{2\pi}\, H\uuu\mu(re^{i\theta})\cdot d\theta=1
+\]
+for all $0<r<1$.
+At the same time the boundary function $H\uuu\mu^*(\theta)$ is almost everywhere zero
+which means that one cannot have any kind of dominated convergence.
+\medskip
+
+\noindent
+{\bf{0.7 Exercise.}}
+Let $\mu$ be singular with
+a Hahn\vvv decomposition
+$\mu=\mu\uuu+ \vvv\mu\uuu \vvv$.
+Assume that the positive part $\mu\uuu +(T)= a>0$.
+Now there exists a closed null set $E$ such that
+$\mu\uuu +(E)\geq a\vvv \epsilon$ while $\mu\uuu\vvv(E)=0$.
+The last equation
+gives a small $\delta>0$
+such that if $E\uuu{2\delta}$ is the open
+$2\delta$\vvv neighborhood of $E$ then
+$\mu\uuu \vvv(E\uuu{2\delta})<\epsilon$.
+Set
+
+
+\[
+H\uuu *(z) =
+\frac{1}{2\pi}\int_E\,
+\frac{1\vvv |z|^2}{|e^{i\theta}-z|^2}\cdot d\mu\uuu +(\theta)
+\]
+Since $\mu\uuu +(E)\geq a\vvv \epsilon$ we get
+\[
+\int\uuu 0^{2\pi}\, H\uuu *(re^{i\theta})\cdot d\theta \geq a\vvv \epsilon\tag{ii}
+\]
+Next, for each pair  $\phi\in E\uuu\delta$ and $e^{i\theta}\in T\setminus E\uuu{2\delta}$
+we have:
+\[
+\frac{1\vvv r^2}{|e^{i\theta}-re^{i\phi}|^2}
+\leq \frac{2(1\vvv r)}{1+r^2\vvv 2r\cos(\delta)}
+\]
+So with
+
+\[
+H\uuu\delta(z)=\frac{1}{2\pi}\int_{T\setminus E\uuu{2\delta}}\,
+\frac{1\vvv |z|^2}{|e^{i\theta}-z|^2}\cdot d\mu\uuu (\theta)
+\]
+it follows that
+\[
+|H\uuu\delta(re^{i\phi})|\leq\frac{1}{2\pi}\cdot 
+\frac{2(1\vvv r)}{1+r^2\vvv 2r\cos(\delta)}
+\cdot \int\uuu{T\setminus E\uuu{2\delta}}\, |d\mu(\theta)|\tag{iii}
+\]
+for each $\phi\in E\uuu\delta$.
+Since $H\uuu *$ is constructed via the
+restriction of $\mu\uuu +$ to $E$, a similar reasoning gives:
+\[
+|H\uuu*(re^{i\phi})|\leq
+\frac{1}{2\pi}\frac{2(1\vvv r)}{1+r^2\vvv 2r\cos(\delta)}
+\cdot \mu\uuu +(E)\tag{iv}
+\]
+when $e^{i\phi}\in T\setminus E\uuu\delta$.
+Next, by the constructions above we have
+
+\[ 
+H=H\uuu *+H\uuu \delta+H\uuu\nu
+\]
+where $\nu$ is the measure given by
+the restriction of $\mu\uuu +$ to $E\uuu{2\delta}\setminus E$
+minus $\mu\uuu \vvv$ restricted to
+to $E\uuu{2\delta}$. So by the above the total variation
+$||\nu||\leq 2\epsilon$ which gives
+
+\[
+\int\uuu 0^{2\pi}\, |H\uuu\nu(re^{i\theta})|\cdot d\theta
+\leq 2\epsilon
+\]
+
+
+\medskip
+
+\noindent
+Deduce from the above that one has an inequality
+
+\[
+\int\uuu {E\uuu\delta}\, H(re^{i\phi})\cdot d\phi\geq
+a\vvv \bigl[2\epsilon+\frac{1}{\pi}
+\frac{2(1\vvv r)}{1+r^2\vvv 2r\cos(\delta)}
+\cdot ||\mu||\bigl]\tag{*}
+\]
+Since $E$ is a null\vvv set
+this shows  that
+mean\vvv value integrals of $H$ behave in an "irregular fashion"
+when $r\to 1$.
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf{1. The Herglotz integral }}
+
+\bigskip
+
+\noindent
+Let $\mu$ be a real  Riesz measure on
+the unit circle $T$.
+Set
+\[
+g_\mu(z)=
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{e^{i\theta}+z}{e^{i\theta}-z}\cdot d\mu(\theta)\tag{*}
+\]
+This   analytic function is called the Herglotz
+extension of the Riesz measure. 
+Since $\mu$ is real it follows that
+\[
+\mathfrak{Re}\,g_\mu(z)=\frac{1}{2\pi}
+\int_0^{2\pi}\,
+\frac{1-|z[^2}{|e^{i\theta}-z|^2}\cdot d\mu(\theta)=H\uuu\mu(z)
+\]
+In particular the $L^1$\vvv norms from  (0.2) are uniformly bounded with
+respect to $r$ when we integrate the absolute value of
+$\mathfrak{Re}\,g\uuu\mu$.
+But the conjugate harmonic function representing
+$\mathfrak{Im}\, g\uuu\mu$ does not satisfy (0.2) in general.
+However the following holds:
+
+\medskip
+
+\noindent
+{\bf{1.1 Theorem.}}
+\emph{For almost every $\theta$ there exists a radial limit}
+\[
+\lim\uuu{r\to 1} \,g_\mu(re^{i\theta})
+\]
+\medskip
+
+\noindent
+To prove Theorem 1.1 we shall use some tricks.
+The Hahn\vvv decomposition
+$\mu=\mu\uuu +\vvv \mu\uuu \vvv$
+enables us to express $g\uuu\mu$ as a difference
+$g\uuu 1\vvv g\uuu 2$ where  $g\uuu 1,g\uuu 2 $ both are
+Herglotz extensions of
+non\vvv negative Riesz measures and hence
+$\mathfrak{Re}\,g\uuu\nu(z)>0$ in $D$.
+Let us now discuss analytic functions with a positive real part.
+
+\medskip
+
+\noindent
+{\bf{1.2 Exercise.}}
+Let $f\in\mathcal O(D)$ where $\mathfrak{Re}\,f(z)>0$
+and $\mathfrak{Im} f(0)=0$. Set $f=u+iv$ which gives
+the analytic function
+\[ 
+\phi(z)=\log (1+u+iv)
+\]
+Here
+\[ 
+\mathfrak{Re}\,\phi=\log\,|1+u+iv|=
+\frac{1}{2}\log [(1+u)^2+v^2]
+\]
+In particular $\mathfrak{Re}\,\phi>0$
+so 
+this  harmonic function has a radial limit almost everywhere.
+We also know that $u$ has a radial limit almost everywhere
+and from this the reader may conclude that there
+almost everywhere exist
+finite radial limits
+\[
+\lim\uuu{r\to 1}\, v^2(re^{i\theta})\tag{1}
+\]
+In order to determine the sign of these
+radial limits we consider  the analytic function
+\[ 
+\psi= e^{\vvv u\vvv iv}
+\]
+Since $u>0$ we have
+ $|\psi(z)|= e^{\vvv u(z)}\leq 1$
+and hence $\psi(z)$ is a bounded analytic function in
+$D$.
+The Brothers
+Riesz theorem shows that $\psi$ has a radial limit almost everywhere.
+Finally, when we have a radial limit
+\[
+ \lim\uuu {r\to 1}\, e^{\vvv u(re^{i\theta})\vvv i v(re^{i\theta})}
+\] 
+and  in addition suppose that
+$u$ has a radial limit, then it is clear that $v$ has a radial limit too.
+\bigskip
+
+\noindent
+\emph {Proof of Theorem 1.1}
+By the Hahn\vvv decomposition of $\mu$
+the proof is reduced to the case $\mu\geq 0$ and 
+Exercise 1.2 applies.
+
+\bigskip
+
+\noindent
+{\bf{1.3 The case when $\mu$ is singular.}}
+When this holds the radial limits of $\mathfrak{Re}\, g\uuu\mu$ are almost
+everywhere zero.
+With $v=\mathfrak{Im}\, g\uuu\mu$
+there remains  to study  the almost 
+everywhere defined function
+\[ 
+v^*(\theta)=\lim\uuu{r\to 1}\, v(re^{i\theta})
+\]
+It turns out that this  Lebesgue\vvv measurable function 
+never is integrable when $\mu$ is singular.
+In fact, the Brothers Riesz theorem
+shows that if
+there exists a constant $C$ such that
+
+\[
+\int\uuu 0^{2\pi}\, |v(re^{i\theta})|\cdot d\theta\leq C
+\]
+hold for all $r<1$, then the analytic function $g\uuu\mu$ belongs
+to the Hardy space and its radial limits give an
+$L^1$\vvv function $g^*(\theta)$ on the unit circle which
+would entail that $\sigma$ is equal to the absolutely continuous
+measure defined by $g^*$.
+Thus,  for every singular measure $\mu$ one has
+
+\[ 
+\lim\uuu {r\to 1}\, \int\uuu 0^{2\pi}\,
+\bigl| \,\mathfrak{Im} \,g\uuu\mu(re^{i\theta})\bigr | \cdot d\theta=+\infty\tag{*}
+\]
+
+\medskip
+
+\noindent
+{\bf{1.4 Example.}} Take the case where $\mu$ is 
+$2\pi$ times the Dirac measure at $\theta=0$
+which gives
+the analytic function
+\[ 
+g(z)=\frac{1+z}{1\vvv z}
+\]
+It follows that
+\[
+v(re^{i\theta})= \vvv 2r\cdot \frac{\sin\theta}{1+r^2\vvv 2 r\cos\,\theta}
+\]
+and radial limits exist except for $\theta=\pi/2$ or $\vvv \pi/2$, i.e.
+
+\[
+v^*(\theta)=\vvv2\cdot \frac{\sin\theta}{2\vvv 2 \cos\,\theta}
+\]
+when $\theta$ is $\neq \pi/2$ and $\vvv \pi/2$.
+At the same time
+the reader may verify that $v^*(\theta)$ does not belong to $L^1(T)$
+and  that
+\[ 
+\int\uuu 0^{2\pi}\, |v(re^{i\theta})|\cdot d\theta\simeq
+\log\,\frac{1}{1\vvv r}
+\] 
+as $r\to 1$.
+\medskip
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{2. The Jensen\vvv Nevanlinna class}}
+
+
+
+\bigskip
+
+\noindent
+Every Riesz measure $\mu$ on $T$
+gives the zero\vvv free analytic function
+\[ 
+G\uuu\mu(z)=e^{g\uuu\mu(z)}\tag{*}
+\]
+Here 
+$\log\,|G\uuu\mu (z)|=\mathfrak{Re}\,g\uuu\mu(z)$ which
+gives the inequality
+
+\[
+\log^+|G\uuu\mu(z)|\leq \bigl|\mathfrak{Re}\,g\uuu\mu(z)\bigr|
+\]
+Applying  (0.2) we obtain:
+\[
+\int_0^{2\pi}\,\log^+|G\uuu\mu (re^{i\theta})|\cdot d\theta\leq ||\mu||\tag{**}
+\]
+for each $r<1$.
+\medskip
+
+\noindent{\bf{2.1 A converse.}}
+Let $F(z)$ be a zero\vvv free analytic function in $D$ where
+$F(0)=1$. Assume that there exists a constant $C$ such that
+\[
+\int_0^{2\pi}\,\log^+|F(re^{i\theta})|\cdot d\theta\leq C\tag{i}
+\]
+hold for each $r<1$.
+The mean\vvv value property applied to the harmonic function
+$H=\log\, |F|$
+gives
+
+\[
+\int_0^{2\pi}\,|H(re^{i\theta})|\cdot d\theta=
+2\cdot \int_0^{2\pi}\,\log^+|F(re^{i\theta})|\cdot d\theta\tag{ii}
+\]
+\medskip
+
+\noindent
+Hence (i) entails that $H$ satisfies (0.4)
+and now the reader can settle the following:
+
+\medskip
+
+\noindent
+{\bf{2.2 Exercise.}}
+Show that (i) above entails that there exists a Riesz measure $\mu$ such that
+$F=G\uuu\mu$ where the normalisation $F(0)=1$ gives
+$\mu(T)=2\pi$.
+
+
+
+
+\medskip
+
+\noindent{\bf{2.3 Radial limits.}}
+Whenever $g\uuu\mu$ has a radial limit for some
+$\theta$ it is clear that $G\uuu\mu$ also has a radial limit in this
+direction. So Theorem 1.1 implies that there
+exists an almost everywhere defined boundary
+function
+\[
+G^*\uuu\mu(\theta)=\lim\uuu{r\to 1}\,
+G\uuu\mu(re^{i\theta})
+\]
+
+
+
+
+
+
+
+\noindent
+The material above suggests the following:
+
+\newpage
+
+
+\noindent {\bf 2.4 Definition.}
+\emph{An analytic function $f$ in $D$
+belongs to the Jensen-Nevanlinna class
+if there exists a constant
+$C$ such that}
+\[
+\int_0^{2\pi}\,\log^+|f(re^{i\theta})|\cdot d\theta\leq C
+\] 
+ \emph{hold for all $r<1$.
+The family of Jensen-Nevannlina functions is denoted by
+$\text{JN}(D)$.}
+\medskip
+
+\noindent
+Above we described zero\vvv free functions in 
+$\text{JN}(D)$.
+Now we shall  study eventual    zeros of
+functions in $\text{JN}(D)$.
+Recall  that if $f\in\mathcal O(D)$ 
+where $f(0)=1$ then  Jensen's formula gives:
+\[
+\sum_{|\alpha_\nu|<r}\,\text{Log}\,\frac{r}{|\alpha_\nu|}=
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\log\,|f(re^{i\theta})\bigr|\cdot d\theta\quad\colon\quad 0<r<1\tag{*}
+\]
+where the left hand side is the sum of zeros of $f$ in the disc 
+$D_r$.
+\medskip
+
+\noindent
+{\bf{A notation.}}
+If $f\in\mathcal O(D)$ and $r<1$ we set
+\[
+\mathcal T\uuu f(r)=\int_0^{2\pi}\,\log^+|f(re^{i\theta})|\cdot d\theta
+\] 
+
+\noindent
+Since $\log\,|f(re^{i\theta})\bigr|\leq \log^+|f|$ it follows that
+\[
+\sum_{|\alpha_\nu|<r}\,\text{Log}\,\frac{r}{|\alpha_\nu|}\leq
+\mathcal T_f(r)
+\]
+So if $f\in \text{JN}(D)$ we can pass to the limit 
+as $r\to 1$ and conclude that the positive series
+\[
+\sum\,\text{Log}\,\frac{1}{|\alpha_\nu|}<\infty\tag{**}
+\] 
+where the sum is taken over all zeros  in $D$.
+Next, recall form XX that the positive series  (**) converges
+if and only if
+
+\[
+\sum\,(1-|\alpha_\nu|<\infty\tag{***}
+\]
+When (***) holds
+we say that
+the sequence $\{\alpha\uuu\nu\}$ satisfies the Blaschke condition.
+Hence we have proved:
+
+\medskip
+
+\noindent
+{\bf 2.5 Theorem.} \emph{Let $f$ be in  JN(D). Then 
+its  zero set satisfies the Blaschke condition.}
+
+
+\bigskip
+
+
+
+\centerline
+{\bf 3. Blaschke products.}
+\bigskip
+
+\noindent
+Consider an infinite sequence
+$\{\alpha_\nu\}$ in $D$  which satisfies $|\alpha_1|\leq |\alpha_2|\leq\ldots$.
+For every $N\geq 1$ we put:
+\[ 
+B\uuu N(z)=
+\prod\uuu{\nu=1}^{\nu=N}\,\frac{|\alpha_\nu|}{\alpha_\nu}\cdot
+\frac{\alpha_\nu-z}{1-\bar\alpha_\nu z}
+\]
+We are going to prove that the sequence of analytic function
+$\{B\uuu N\}$ converge in $D$ to a limit function
+$B(z)$ expressed by the infinite product
+
+\[
+B(z)=
+\prod\uuu{\nu=1}^\infty\,
+\frac{|\alpha_\nu|}{\alpha_\nu}\cdot
+\frac{\alpha_\nu-z}{1-\bar\alpha_\nu z}
+\]
+
+\noindent
+To prove this  we first analyze
+the individual factors.
+For each non\vvv zero $\alpha\in D$
+we set
+\[ 
+B\uuu\alpha(z)=\frac{|\alpha|}{\alpha}\cdot
+\frac{\alpha-z}{1-\bar\alpha z}
+\]
+
+
+\noindent
+{\bf{Exercise.}}
+Show that
+\[
+B_\alpha(z)=
+|\alpha|\cdot\frac{1-z/\alpha}{1-\bar\alpha z}=
+|\alpha|+\frac{|\alpha|^2-1}{1-\bar\alpha z}
+\cdot\frac{|\alpha|}{\alpha}\cdot z\tag{i}
+\]
+and conclude that
+\[
+B_\alpha(z)\vvv 1=(|\alpha|-1)\cdot[1+\frac{|\alpha|+1}{1-\bar\alpha z}
+\cdot\frac{|\alpha|}{\alpha}\cdot z]\tag{ii}
+\]
+Finally, use the triangle inequality to show the inequality
+\[
+\max_{|z|=r}\,|B_\alpha(z)-1|\leq (1-|\alpha|)\cdot
+(1+\frac{2r}{1-r})=\frac{1+r}{1-r}\cdot (1-|\alpha|)\tag{iii}
+\]
+
+
+\noindent
+{\bf{.1 The convergence of (**)}}
+From (iii) and general results about product series
+we get the requested convergence in (**).
+In fact, when $|z|\leq r<1$ stays in a compact disc
+the Blaschke condition and (iii) entail that
+\[
+\sum\uuu{\nu=1}^\infty \max_{|z|=r}\,|B_\alpha(z)-1|<\infty
+\]
+which implies that (**) converges uniformly on $|z|\leq r$ to an
+analytic function and since
+$r<1$ is arbitrary we get a limit function $B(z)\in\mathcal O(D)$.
+\medskip
+
+\noindent
+{\bf{3.2 Exercise.}} The rate of convergence in $|z|\leq r$
+ can be described as follows:
+For each  $N\geq 1$ we set
+\[ 
+G_N(z)=
+\prod_{\nu=N+1}^\infty\,
+B_{\alpha_\nu}(z)\quad\colon\quad \Gamma_N=
+\sum_{\nu=N+1}^\infty\,1-|\alpha_\nu|
+\]
+
+\noindent
+With $r<1$ kept fixed
+we choose $n$ so large that
+\[
+\frac{1+r}{1-r}\cdot (1-|\alpha_\nu|)\leq \frac{1}{2}\quad\colon\quad \nu>N
+\]
+Show that this gives:
+\[
+\max_{|z|=r}\,
+|G_N(z)-1|\leq 8\cdot\frac{1+r}{1-r}\cdot \Gamma_N
+\]
+
+\medskip
+
+\noindent
+Since the Blaschke condition implies that
+$\Gamma\uuu N\to 0$ as $N\to\infty$
+this gives a control for the rate of convergence in
+$|z|\leq r$.
+
+
+
+\bigskip
+
+\centerline {\bf 3.3 Radial limits of $B(z)$}
+\bigskip
+
+\noindent
+When $z=e^{i\theta}$ the absolute value 
+$|B\uuu\alpha(e^{i\theta}|=1$.
+So $B(z)$ is the product of analytic functions where every
+term has absolute value $\leq 1$ and hence
+the maximum norm
+\[ 
+\max\uuu{z\in D}\, |B(z)|\leq 1
+\]
+
+
+
+
+
+\medskip
+
+
+\noindent
+Since the  analytic function $B(z)$ is bounded,
+Fatou's Theorem from Section XX  gives
+an almost everywhere defined  limit function
+\[ 
+B^*(e^{i\theta})=
+\lim_{r\to 1}\, B(re^{i\theta})\tag{1}
+\]
+where the radial convergence holds almost everywhere.
+Moreover, the Brothers Riesz theorem
+gives:
+\[
+\lim_{r\to 1}\int_0^{2\pi}\,
+|B^*(e^{i\theta})-B(re^{i\theta})|d\theta=0\tag{2}
+\]
+
+\medskip
+
+\noindent
+{\bf{3.4 Theorem.}}\emph{ The equality}
+\[
+|B^*(e^{i\theta})|=1\quad\text{holds almost everywhere}
+\tag{*}
+\] 
+\medskip
+
+\noindent
+\emph{Proof.}
+Since $|B^*|\leq 1$ it is clear that (*) follows if we have proved that
+\[
+\int\uuu 0^{2\pi}\,|B^*(e^{i\theta})|\cdot d\theta=1\tag{i}
+\]
+Using (2) above and the triangle inequality we get (i) if we prove the limit formula
+\[
+\lim\uuu {r\to 1}\,
+\int\uuu 0^{2\pi}\,|B(re^{i\theta})|\cdot d\theta=1
+\tag{ii}
+\]
+To show (ii) we will apply Jensen's formulas to $B(z)$ in discs
+$|z|\leq r$. 
+The convergent product which defines $B(z)$ gives
+
+\[
+B(0)=\prod\,\log\,|\alpha\uuu\nu|
+\]
+Next, for $0<r<1$ Jensen's formula gives
+\[
+\log B(0)=\sum\uuu{\nu=1}^{\rho(r)}\,\log\,\frac{|\alpha\uuu\nu|}{r}
++
+\frac{1}{2\pi}\int\, \int\uuu 0^{2\pi}\,\log\,|B(re^{i\theta})|\cdot d\theta
+\]
+where $\rho(r)$ is the largest $\nu$ for which $|\alpha\uuu\nu|=r$.
+It follows that
+\[
+\frac{1}{2\pi}\int\, \int\uuu 0^{2\pi}\,\log\,|B(re^{i\theta})|\cdot d\theta
+\geq \sum\uuu{\nu=1}^{\rho(r)}\,\log\,\frac{r}{|\alpha\uuu\nu|}\vvv
+\sum\uuu{\nu=1}^\infty \,\log\,\frac{1}{|\alpha\uuu\nu|}\tag{1}
+\]
+Next, with $\epsilon>0$ we find an integer $N$ such that
+\[
+\sum\uuu{\nu=1}^{\nu=N} \,\log\,\frac{1}{|\alpha\uuu\nu|}<\epsilon \tag{2}
+\]
+Since $|\alpha\uuu\nu|\to 1$
+here exists $r\uuu*$ such that
+\[ 
+r\geq r\uuu *\implies \rho(r)\geq N\tag{3}
+\]
+When (3) holds it follows from (1\vvv 2) that
+\[
+\frac{1}{2\pi}\int\, \int\uuu 0^{2\pi}\,\log\,|B(re^{i\theta})|\cdot d\theta
+\geq \sum\uuu{\nu=1}^{\rho(r)}\,\log\,\frac{r}{|\alpha\uuu\nu|}\vvv
+\sum\uuu{\nu=1}^{\rho(r\uuu *)}\,\log\,\frac{1}{|\alpha\uuu\nu|}\vvv\epsilon\tag{4}
+\]
+In the first sum every term is $\geq 1$
+so we get
+a better inequality when the sum is restricted to $\nu\leq\rho(r\uuu *)$, i.e. we have
+\[
+\frac{1}{2\pi}\int\, \int\uuu 0^{2\pi}\,\log\,|B(re^{i\theta})|\cdot d\theta
+\geq \sum\uuu{\nu=1}^{\rho(r\uuu *)}\,\log\,\frac{r}{\alpha\uuu\nu|}\vvv
+\sum\uuu{\nu=1}^{\rho(r\uuu *)}\,\log\,\frac{1}{\alpha\uuu\nu|}\vvv\epsilon\tag{5}
+\]
+Here (5) hold for every $r\uuu *<r<1$ and a passing to the limit 
+as $r\to 1$ where we only have a finite sum
+$1\leq\nu\leq \rho(r\uuu *)$ above
+we conclude that
+
+\[
+\lim\uuu{r\to 1}\, \frac{1}{2\pi}\int\, \int\uuu 0^{2\pi}\,\log\,|B(re^{i\theta})|\cdot d\theta
+>\vvv \epsilon
+\]
+Since $\epsilon>0$ is arbitrary we have proved (ii) and hence also Theorem 3.54.
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf 3.5 Division  by Blaschke products.} 
+
+
+\bigskip
+
+\noindent
+Let $F\in\mathcal O(D)$ and assume that  its zero set in
+$D$ is a Blaschke sequence $\{\alpha_\nu\}$.
+Then we obtain the analytic function
+\[ 
+G(z)=\frac{F(z)}{B(z)}
+\]
+
+
+\noindent
+Here  $G$ has no zeros in $D$
+and we can  construct the analytic function
+$\text{Log}\,G(z)$.
+Set
+\[
+\mathcal I^+_G(r)=\int_0^{2\pi}\,
+\log^+|\,G(re^{i\theta})|\cdot d\theta
+\]
+Since $\log^+[ab|\leq \log^+|a|+\log^+|b|$ for 
+every pair of complex numbers we get:
+
+\[
+\mathcal I^+_G(r)\leq
+\mathcal I^+_F(r)+
+\int_0^{2\pi}\,
+\log^+\frac{1}{|\,B(re^{i\theta})|}\cdot d\theta\tag{1}
+\]
+The last nondecreasing function is
+$\leq \log^+\frac{1}{|\,B(0)|}$ for every $r$ which gives 
+\[
+\mathcal I^+_G(r)\leq
+\mathcal I^+_F(r)+\log^+\frac{1}{|\,B(0)|}\tag{2}
+\] 
+for every $r<1$.
+When $F\in\text{JN}(D)$ this implies that
+$G$ also belongs to $\text{JN}(D)$. Hence we have proved
+
+\medskip
+\noindent{\bf{3.6 Theorem.}}
+\emph{For each $f\in\text{JN}(D)$
+the function $\frac{f}{B\uuu f}$ also
+belongs to $\text{JN}(D)$, where $B\uuu f(z)$ is the 
+Blaschke product formed by zeros of $f$Êoutside the origin.}
+\bigskip
+
+\noindent{\bf{3.7 Conclusion.}}
+Theorem 3.6 and the material in section 2 about zero\vvv free
+Jensen\vvv Nevanlinna functions  give
+the following factorisation  formula:
+
+\medskip
+
+\noindent{\bf{3.8 Theorem.}}
+\emph{For each $f\in\text{JN}(D)$ there exists a unique
+real Riesz measure $\mu$ on $T$ with $\mu(T)=0$
+such that}
+\[
+f(z)=az^k\cdot B\uuu f(z)\cdot
+e^{g\uuu\mu(z)}
+\]
+\emph{where $k\geq 0$ is the order of zero of $f$
+at $z=0$ and $a\neq 0$ a constant. Moreover}
+\[ 
+\mu=\log\, |f(e^{i\theta})|\cdot d\theta+\sigma
+\]
+\emph{where $\sigma$ is the singular part of $\mu$.}
+
+\medskip
+
+
+
+\noindent
+{\bf{3.9 Outer factors.}}
+In Theorem 3.8 we get the analytic function
+\[ 
+\mathfrak{O}\uuu f(z)=e^{g\uuu{\log |f|}(z)}
+\]
+We refer to $\mathfrak O\uuu f$ as the outer part of $f$.
+\medskip
+
+
+\noindent
+{\bf{3.10 A division result.}}
+Consider a pair $f,h$ in $\text{JN}(D)$
+which gives the analytic function in $D$ defined by
+
+\[ 
+k(z)= 
+\frac{\mathfrak{O}\uuu h(z)}
+{\mathfrak{ O}\uuu f(z)}
+\]
+By (2.3) there exists the almost everywhere defined quotient on $T$
+\[ 
+k^*(\theta)= \frac{\mathfrak{O}\uuu h^*(\theta)}
+{\mathfrak{ O}\uuu f^*(\theta)}
+\]
+
+\medskip
+
+\noindent
+{\bf{3.11 Theorem.}}
+\emph{Assume that $k^*\in L^1(T)$. Then 
+$k^*$ belongs to the Hardy space $H^1(T)$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+In $D$ there exists the harmonic  function
+\[
+k(z)=\log\,|\mathfrak{O}\uuu h(z)|\vvv\log\,\mathfrak |O\uuu f(z)|
+\] 
+The two harmonic functions in the right hasnd side
+have by definition boundary functions in $L^1(T)$ and
+Poisson's formula 
+gives  for each point $z=re^{i\theta}$:
+
+\[ 
+\log |k(re^{i\theta})|=
+\frac{1}{2\pi}\int\uuu 0^{2\pi}\, \frac{1\vvv r^2}{1+r^2\vvv
+2r\cos(\phi\vvv \theta)}\cdot \log |k^*(\phi)|\cdot d\phi
+\]
+By the general mean\vvv value inequality
+from (xx) the left hand side is majorized by:
+\[ 
+\leq \log
+\bigl[\frac{1}{2\pi}\int\uuu 0^{2\pi}\, \frac{1\vvv r^2}{1+r^2\vvv
+2r\cos(\phi\vvv \theta)}\cdot |k^*(\phi)|\cdot d\phi\bigr]
+\]
+Taking exponentials on both sides we get
+
+\[
+|k(re^{i\theta})|\leq 
+\frac{1}{2\pi}\int\uuu 0^{2\pi}\, \frac{1\vvv r^2}{1+r^2\vvv
+2r\cos(\phi\vvv \theta)}\cdot |k^*(\phi)|\cdot d\phi
+\]
+Now we integrate both sides with respect to $\theta$. Since
+\[
+\frac{1}{2\pi}\int\uuu 0^{2\pi}\, \frac{1\vvv r^2}{1+r^2\vvv
+2r\cos(\phi\vvv \theta)}\cdot d\theta=1
+\] 
+for every $\phi$, it follows that
+\[
+\int\uuu 0^{2\pi}\, |k(re^{i\theta})|\cdot d\theta\leq
+\int\uuu 0^{2\pi}\, |k^*(e^{i\phi})|\cdot d\phi
+\]
+This proves that the $L^1$\vvv norms of $\theta\to k(re^{i\theta})$
+are bounded which means that $k$ belongs to $H^1(T)$.
+Moreover, by the Brother's Riesz theorem
+there exist radial limits almost everywhere
+so we have also the equality
+\[
+\lim\uuu{r\to 1}\, k(re^{i\theta})= k^*(\theta)
+\] 
+almost everywhere. This proves that $k^*$ is the boundary value function of
+the $H^1(T)$\vvv function $k$.
+\medskip
+
+\noindent
+{\bf{3.12 Exercise.}}
+Show by a similar technique that if we instead assume that
+$k^*$ is square\vvv integrable, i.e. if $k^*\in L^2(T)$ then
+$k(z)$ belongs to the Hardy space $H^2(T)$.
+\bigskip
+
+\noindent
+{\bf{3.13 Inner functions.}}
+If $\sigma$ is a non\vvv negative and singular measure on $T$
+we get the bounded analytic function
+\[
+G\uuu{\vvv\sigma}(z)=
+e^{\vvv g\uuu\sigma(z)}\tag{1}
+\]
+Keeping $\sigma$ fixed we denote this function with $f$.
+Here 
+\[
+\lim\uuu{r\to 1}\, |f(re^{i\theta})|=1
+\] 
+holds almost everywhere.
+So the boundary function $f^*(\theta)$ has absolute value almost
+everywhere.
+The class of analytic functions obtained via (1) is denoted by
+$\mathfrak I\uuu *(D)$ and are called zero\vvv free inner functions.
+In general a bounded analytic function $f$ in $D$
+whose boundary values have absolute value almost everywhere
+is called an inner function and this class is denoted by
+$\mathfrak I(D)$.
+
+\medskip
+
+\noindent
+{\bf{3.14 Exercise.}}. Use the factorisation in Theorem 3.8
+to show that
+every $f\in\mathfrak I(D)$ is a product
+
+\[ 
+f=B\uuu f\cdot f\uuu *
+\] 
+where $f\uuu *$ is a zero\vvv free inner function.
+\medskip
+
+\noindent
+{\bf{3.15 The case of signed singular measures.}}
+Let $\mu=\mu\uuu +\vvv \mu\uuu\vvv$ be a signed singular measure
+where $\mu\uuu +\neq 0$.
+We get the analytic function $G\uuu\mu$ and from the above we know that it
+has radial limits almost everywhere and since $\mu$ is singular the boundary
+function $G^*\uuu\mu$ has absolute value almost everywhere.
+Here the presence of $\mu\uuu +$ implies that the analytic function
+$G\uuu\mu$ is unbounded.
+In fact, its maximum modules function 
+\[
+M(r)=\max\uuu{|z|=r|}\, |G\uuu\mu(z)|
+\]
+has a quite rapid growth as $r\to 1$.
+Moreover one always has
+\[
+\lim\uuu{r\to 1}\, \int\uuu 0^{2\pi}\,
+|G\uuu\mu(re^{i\theta})|\cdot d\theta=+\infty\tag{*}
+\]
+in other words, $G\uuu\mu$\vvv functions constructed by
+signed measures with non\vvv zero negative part never belongs to
+$H^1(T)$.
+\medskip
+
+
+\noindent
+{\bf{3.16 Exercise.}} Prove (*) above using the divergence in (*) from 1.3.
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf{4. Invariant subspaces of $H^2(T)$}}
+\bigskip
+
+
+\noindent
+The Hilbert space $L^2(T)$ of square integrable functions on
+$T$  contains the closed subspace $H^2(T)$
+whose elements are boundary values of analytic functions in
+$D$.
+If f $f\in H^2(T)$
+it is expanded as
+\[ 
+\sum\uuu{n=0}^\infty\, a\uuu n\cdot e^{in\theta}
+\]
+and Parseval's theorem gives  the equality
+
+\[
+\sum\uuu{n=0}^\infty\, |a\uuu n|^2=\frac{1}{2\pi}\cdot
+\int\uuu 0^{2\pi}\, 
+|f(e^{i\theta})|^2 d\theta
+\]
+Moreover, in $D$ we get the analytic function
+$f(z)=\sum\, a\uuu nz^n$ where
+radial limits
+\[ 
+\lim\uuu {r\to 1}\, f(re^{i\theta})= f(e^{i\theta})
+\]
+exist almost everywhere.in fact, this follows via
+the Brothers Riesz theorem and the inclusion 
+$H^2(T)\subset  H^1(T)$.
+We shall  study subspaces of $H^2(T)$
+which are invariant under multiplication by
+$e^{i\theta}$. 
+
+\medskip
+
+\noindent
+{\bf{4.2 Definition.}}
+\emph{A closed subspace $V$ of $H^2(T)$ is called invariant if
+$e^{i\theta}V\subset V$.}
+\bigskip
+
+
+
+
+\noindent
+{\bf{4.3 Theorem}}
+\emph{Let $V$ be an invariant subspace of $H^2(T)$.
+Then there exists
+$w(\theta)\in H^2(T)$ 
+whose absolute value is one almost everywhere
+and}
+\[ 
+V=H^2(T)\cdot w
+\]
+\medskip
+
+
+\noindent
+\emph{Proof.}
+First we show that that $e^{i\theta}V$ is a proper subspace of $V$.
+For an equality $e^{i\theta}V=V$  gives
+$e^{in\theta}V=V$ for every $n\geq 1$ which entails that if 
+$0\neq f\in V$ then 
+$f=e^{in\theta}\cdot g\uuu n$ for some $g\uuu n\in H^2(T)$. This  means
+that the Taylor series of $f$ at $z=0$ starts with order $\geq n$
+which  cannot
+hold
+for every $n$ unless $f$ is identically zero.
+So now $e^{i\theta}V$ is a proper closed subspace of  $V$
+which gives some $0\neq w\in V$
+which is $\perp$ to $e^{i\theta}V$. It follows that
+
+\[
+\langle w,e^{in\theta} \cdot w\rangle
+\int\uuu 0^{2\pi}\, w(e^{i\theta})\bar w(e^{i\theta})\cdot e^{\vvv in\theta}
+\cdot d\theta=0
+\]
+hold for every $n\geq 1$.
+Since $w\cdot \bar w=|w|^2$ is real\vvv valued we conclude that
+this function is constant and we can normalize $w$ so that
+$|w(\theta)|=1$ holds almost everywhere.
+There remains to prove the equality
+\[
+V=H^2(T)\cdot w\tag{i}
+\]
+Since $|w|=1$ almost everywhere the right hand side is a closed subspace of
+$V$. If it is proper we find
+$0\neq u\in V$ where $u\perp H^2(T)w$ which gives
+
+\[
+\int\uuu 0^{2\pi}\, u(e^{i\theta})\bar w(e^{i\theta})\cdot e^{\vvv in\theta}
+\cdot d\theta=0\quad\colon\quad n\geq 0\tag{ii}
+\]
+Taking complex conjugates we get
+
+\[
+\int\uuu 0^{2\pi}\, w(e^{i\theta})\bar u(e^{i\theta})\cdot e^{in\theta}
+\cdot d\theta=0\quad\colon\quad n\geq 0\tag{iii}
+\]
+At the same time
+$w\perp e^{i\theta}V$ which entails that
+\[
+\int\uuu 0^{2\pi}\, w(e^{i\theta})\bar u(e^{i\theta})\cdot e^{\vvv in\theta}
+\cdot d\theta=0\quad\colon\quad n\geq 1\tag{iv}
+\]
+Together (iiii\vvv iv) imply that
+$w\bar u$ has vanishing Fourier coefficients and is therefore identically zero which gives
+$u=0$ and proves that $V=H^2(T)\cdot w$ must hold.
+\bigskip
+
+\noindent
+{\bf{4.4 Examples.}}
+Let $B(z)$ be a non\vvv constant Blaschke product.
+Now $|B(e^{i\theta})|=1$  holds almost everywhere and
+the presence of zeros of $B(z)$ in $D$ show that
+$H^2(T)\cdot B$ is a proper 
+and invariant subspace of $H^2(T)$.
+Next, let
+$\sigma$ be a singular Riesz measure on $T$
+which is real and non\vvv negative.
+We get the analytic function
+\[ 
+f(z)= e^{\vvv g\uuu\sigma(z)}
+\]
+Here
+\[ 
+|f(z)|= e^{\vvv H\uuu\sigma(z)}
+\] 
+and since $\sigma\geq 0$ we have $H\uuu \sigma(z)\geq 0$ and hence
+$|f(z)|\leq 1$.
+So $f$ is a bounded analytic function in $D$ and
+in particular it belongs to $H^2(T)$. Moreover
+we know from XX that the boundary function $f(e^{i\theta})$ has absolute
+value one almost everywhere.
+So $H^2(T)\cdot f$ is an invariant subspace of $H^2(T)$ and the
+question arises if it is proper or not.
+In contrast to the case for Blaschke functions $B$ above this is not obvious since
+$f$ has no zeros in $D$.
+However it turns out that one has
+
+\medskip
+
+\noindent
+{\bf{4.5 Theorem.}} \emph{Let $\sigma$ be a 
+singular and non\vvv negative 
+Riesz measure which is not
+identically zero. Then $H^2(T)\cdot e^{\vvv g\uuu\mu}$
+is a proper subspace of $H^2(T)$.}
+\medskip
+
+\noindent
+\emph{Proof.} 
+Set $w(\theta)= e^{\vvv g\uuu\mu(e^{i\theta})}$. For the analytic function
+$w(z)$ in the disc  its value at $z=0$ becomes
+\[ 
+w(0)=e^{\vvv g\uuu\mu(0}= e^{\vvv \sigma(T)/2\pi}
+\]
+Next, 
+if $P(z)$ is a polynomial
+we have
+\[
+\frac{1}{2\pi}\int\uuu 0^{2\pi}\, |P(\theta)w(\theta) \vvv 1|^2d\theta
+=\frac{1}{2\pi}\int\uuu 0^{2\pi}\, |P(\theta)|^2\cdot d\theta
++1+2\mathfrak{Re}\,[\int
+\frac{1}{2\pi}\int\uuu 0^{2\pi}\, P(\theta)\cdot w(\theta)\cdot d\theta]
+\]
+By Cauchy's formula the last term becomes
+\[
+2\mathfrak{Re}(P(0)w(0))= 2w(0)\cdot \mathfrak{Re}(P(0))
+\]
+By (i) we have $0<w(0)<1$ and if $||P||\uuu 2$ is the $L^2$\vvv norm of $P$
+the right hand side majorizes
+\[
+||P||\uuu 2^2+1\vvv 2w(0)\cdot |P(0)|
+\]
+We have also the inequality
+\[
+|P(0)|\leq ||P||\uuu 2
+\]
+So if we set $\rho=||P||\uuu 2$
+then we have shown that
+
+\[
+\frac{1}{2\pi}\int\uuu 0^{2\pi}\, |P(\theta)w(\theta) \vvv 1|^2d\theta
+\geq \rho^2+1\vvv 2w(0)\cdot \rho
+\]
+Now we notice that the right hand side is $\geq 1\vvv w(0)^2$
+for every $\rho$.
+Since $P$ is an arbitrary polynomial we conclude that
+the $L^2$\vvv distance of 1 to the subspace
+$H^2(T)\cdot e^{\vvv g\uuu\mu}$
+is at least
+\[
+1\vvv w(0)^2= 1\vvv e^{\vvv 2\sigma(T)}\tag{*}
+\]
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf{5. Beurling's closure theorem.}}
+\medskip
+
+\noindent
+A zero\vvv free  function $f\in H^2(T)$ is of outer type when
+\[ 
+f(z)=G\uuu\mu(z)
+\] 
+where $\mu$ is the absolutely continuous Riesz measure
+$\log|f(e^{i\theta}|$.
+The following result is due to Beurling in   [Beur]:
+\medskip
+
+\noindent
+{\bf{5.1 Theorem.}}
+\emph{For every nonzero $f\in H^2(T)$ of outer type 
+the closed invariant subspace generated by analytic polynomials $P(z)$ times
+$f$ is equal to $H^2(T)$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+If the density fails we find
+$0\neq g\in H^2(T)$ such that
+
+\[
+\int\uuu 0^{2\pi}\, e^{in\theta} f(e^{i\theta})\cdot \bar g(e^{i\theta}) \cdot d\theta=0
+\tag{i}
+\] 
+for every $n\geq 0$.
+By Cauchy\vvv Schwarz the product $f\cdot \bar g$
+belongs to $L^1(T)$ and (i) implies that this function
+is of the form $e^{i\theta}\cdot h(\theta)$ where
+$h\in H^1(T)$.
+So on $T$ we have almost everywhere:
+\[ 
+\bar g(e^{i\theta})=e^{i\theta}\cdot \frac{h(e^{i\theta})}{f(e^{i\theta})}\tag{ii}
+\] 
+Now we take the outer factor $\mathfrak{O}\uuu h$
+whose absolute value is equal to $|k|$ almost everywhere on $T$. It follows that
+\[
+|g^*(\theta)|= 
+ \frac{\mathfrak{O}\uuu h^*(\theta)}
+{\mathfrak{ O}\uuu f^*(\theta)}\tag{iii}
+\]
+Since $g\in H^2(T)$ 
+Exercise 3.12 shows that 
+the quotient in (ii) is
+the boundary value of an analytic  function in $H^2(T)$ which implies that
+the conjugate function $\bar g$ also belongs to $H^2(T)$. But then
+$g$ must be a constant and this constant is zero
+because the factor $e^{i\theta}$ appears in (ii).
+So $g$ must be zero which gives a contradiction and
+the requested density is proved.
+
+\bigskip
+
+\centerline{\bf{5.2 Szegš's theorem.}}
+\bigskip
+
+\noindent
+Let $w(\theta)$ be  real\vvv valued and non\vvv negative
+function in $L^1(T)$ and  $\mathcal P\uuu 0$
+is the space of analytic polynomials $P(z)$ where $P(0)=0$.
+Put
+
+
+\[ 
+\rho(w)=\frac{1}{2\pi}\inf\uuu{P\in\mathcal P\uuu 0}\int\uuu 0^{2\pi}\,
+\bigl| 1\vvv P(e^{i\theta})\bigr|\cdot w(\theta)\cdot d\theta
+\]
+\medskip
+
+\noindent
+{\bf{5.3 Theorem.}}
+\emph{One has the equality}
+
+\[ 
+\rho(w)=\text{exp}\, [\frac{1}{2\pi}\int\uuu 0^{2\pi}\,  \log w(\theta)\cdot d\theta]
+\]
+\medskip
+
+\noindent
+\emph{Proof.} First we consider the case
+when
+$\log |w|\in L^1(T)$.
+Multiplying $w$ with a positive constant we may assume that
+\[
+\int\uuu 0^{2\pi}\,\log w(\theta)\cdot d\theta=0\tag{i}
+\]
+Now we must show that
+$\rho(w)=1$.
+To prove this we use that $\log w\in L^1(T)$ and construct the analytic function
+\[
+f(z)=G\uuu {\log w(z)}
+\]
+So $f$ is an outer function where
+on $T$ one has
+\[ 
+|f(e^{i\theta})|=e^{\log|w(\theta)|}=
+w(\theta)\tag{ii}
+\]
+Hence $f\in H^1(T)$
+and (1) gives  $f(0)=1$.
+Let us now consider some $P(z)\in\mathcal P\uuu 0$
+and set
+\[
+F(z)=(1\vvv P(z))f(z)
+\]
+Again $F(0)=1$ and $F\in H^1(T)$ which gives the inequality
+\[
+ 1\leq\int\uuu 0^{2\pi}\, |F(e^{i\theta})|\cdot d\theta\tag{iii}
+\]
+By (ii) this means that
+\[ 
+1\leq \int\uuu 0^{2\pi}\, |1\vvv  P(e^{i\theta})|\cdot 
+w(\theta) \cdot d\theta
+\] Since this hold for every $P\in\mathcal P\uuu 0$ we have proved the inequality
+\[
+\rho(w)\geq 1\tag{iv}
+\]
+To prove the reverse inequality we
+apply Beurling's theorem to the outer function $f$. This gives
+a sequence of polynomials $\{Q\uuu n(z)\}$ such that
+\[
+\lim\uuu{n\to \infty}\, ||Q\uuu n\cdot f\vvv 1||\uuu 1=0\tag{v}
+\] 
+where we use the norm on $H^1(T)$.
+Since $f(0)=1$ it follows that
+$Q\uuu n(0)\to 1$ and we can normalize the approximating
+sequence so that $Q\uuu n(0)=1$ for every $n$
+and write $Q\uuu n=1\vvv P\uuu n$ with $P\uuu n\in\mathcal P\uuu 0$.
+Finally using (ii) we get
+\[
+\lim\uuu{n\to\infty}\int\uuu 0^{2\pi}\, |1\vvv P(e^{i\theta})|\cdot w(\theta)\cdot d\theta=1
+\]
+This gives $\rho(w)\geq 1$ and Szegš's theorem is proved for the case A above.
+\medskip
+
+\noindent
+\emph{B. The case when 
+$\log^+\frac{1}{|w|}$
+is not integrable}.
+Here we must show 
+that
+$\rho(w)=0$ and the  proof of this is left as an exercise to the reader.
+
+
+
+
+\bigskip
+
+\centerline{\bf{6. The Helson\vvv Szegš theorem}}
+
+\bigskip
+
+\noindent
+A trigonometric polynomial
+on the unit circle is of the form
+\[
+P(\theta)=\sum\, a\uuu n\cdot e^{in\theta}
+\]
+where $\{a\uuu n\}$  are complex numbers and only
+a finite family is $\neq 0$.
+The conjugation operator $\mathcal C$ is defined by
+
+\[
+\mathcal C(P)=i\cdot \sum\uuu{n<0}\, a\uuu n\cdot e^{in\theta}\vvv
+i\cdot \sum\uuu{n>0}\, a\uuu n\cdot e^{in\theta}\tag{*}
+\]
+Let $w(\theta)$ be a non\vvv negative function in
+$L^1(T)$ and assume also that
+$\bigl|\log\,|w|\,\bigr|\in L^1(T)$.
+\medskip
+
+\noindent
+{\bf{6.1 Definition.}}
+\emph{A $w$\vvv function 
+as above is of Helson\vvv Szegš type if there exists a constant $C$ such that}
+\[
+\int\uuu 0^{2\pi}\, |\mathcal C(P)(e^{i\theta})|^2 \cdot w(\theta)\cdot d\theta
+\leq C\cdot \int\uuu 0^{2\pi}\, |P(e^{i\theta})|^2\cdot w(\theta)\cdot d\theta
+\tag{*}
+\] 
+\emph{hold for all trigonometric polynomials}.
+\medskip
+
+\noindent
+Notice that if (*) holds for some $w$ then it holds for every function of the form 
+$\rho\cdot w$ where
+$0<c\uuu 0\leq \rho(\theta)\leq c\uuu 1$ for some pair of
+positive constants. Or equivalently, with $w$ replaced by
+$e^u\cdot w$ for some bounded function $u(\theta)$.
+With this in mind we announce the result below which is due to Helson and Szegš in [HS]:
+
+\medskip
+
+\noindent
+{\bf{6.2 Theorem.}}
+\emph{A function $w(\theta)$ is of the Helson\vvv Szegš type if and only if
+there exists a bounded function $u$ and 
+a function $v(\theta)$ for which the maximum norm of $|v|$ over $T$ is $<1$
+and}
+\[ 
+w(\theta)= e^{u(\theta)+ v^*(\theta)}
+\] 
+\emph{where $v^*$ is the harmonic conjugate of $v$.}
+\bigskip
+
+\noindent
+The proof requires several steps. The first part is an exercise on
+norms on the Hilbert space $L^2(w)$ which is left to the reader.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $w$ is of the Helson\vvv Szegš type if and only if there exists a constant
+$\rho<1$ such that
+
+\[
+\bigl |\,\int\uuu 0^{2\pi}\,
+P(\theta)\cdot e^{\vvv i\theta}\cdot Q(\theta)\cdot w(\theta)\cdot d\theta\,\bigr|
+\leq \rho\cdot ||P||\uuu w\cdot ||Q||\uuu w\tag{*}
+\]
+hold for all pairs $P,Q$ in $\mathcal P\uuu 0$.
+\medskip
+
+\noindent
+{\bf{6.3 The outer function $\phi$}}.
+We define the analytic function $\phi(z)$ by
+
+\[
+\phi(z)=\text{exp}\bigl[\, \frac{1}{2\pi}\int\uuu 0^{2\pi}\,
+\frac{e^{i\theta}+z}{e^{i\theta}\vvv z}\cdot 
+\log 
+(\sqrt{w(\theta)})\cdot d\theta\,\bigr]
+\]
+Since
+$\log \,
+\sqrt{w(\theta)}=
+\frac{1}{2}\cdot \log\, 
+w(\theta)$ is in $L^1(T)$ it means that
+$\phi(z)$ is an outer function and
+on the unit circle we have  the equality
+\[ 
+|\phi(\theta)|^2=w(\theta)\tag{1}
+\]
+Using (1) we find a 
+real\vvv valued function $\gamma(\theta)$ such that
+\[
+w(\theta)= \phi^2(\theta)\cdot e^{i\gamma(\theta)}\tag{2}
+\]
+
+
+\noindent
+Next,  (1) implies  that the weighted $L^2$\vvv norm $||P||\uuu w$
+is equal to the standard $L^2$\vvv norm of $\phi\cdot P$ on
+$T$. Hence (1) holds if and only if
+\[
+\bigl |\,\int\uuu 0^{2\pi}\,
+\phi(\theta)P(\theta)\cdot e^{\vvv i\theta}\cdot 
+\phi(\theta)Q(\theta)\cdot e^{i\gamma(\theta)}\cdot d\theta\,\bigr|
+\leq \rho\cdot ||\phi\cdot P||\uuu 2 \cdot ||\phi\cdot Q||\uuu 2\tag{3}
+\]
+hold for all pairs $P,Q$ in $\mathcal P\uuu 0$.
+Now we use that $\phi$ is outer which by Beurling's closure
+theorem means that $\mathcal P\uuu 0\cdot \phi$ is dense in
+$H\uuu 0^2(T)$.
+Hence (3) is equivalent to 
+
+\[
+\bigl |\,\int\uuu 0^{2\pi}\,
+F(\theta)\cdot e^{\vvv i\theta}\cdot G(\theta)
+\cdot  e^{i\gamma(\theta)}
+\cdot d\theta\,\bigr|
+\leq \rho\cdot ||F||\uuu 2 \cdot ||G||\uuu 2\tag{4}
+\]
+for all pairs $F,G$ in $H^2\uuu 0(T)$.
+\medskip
+
+\noindent
+Next, in XX we prove that every $f\in H^1\uuu 0(T)$
+admits a factorization $f=F\cdot G\cdot e^{\vvv i\theta}$
+for a pair $F,G$  where $||f||\uuu 1=||F||\uuu 2\cdot ||G||\uuu 2$.
+So (4) is equivalent to 
+\[
+\bigl |\,\int\uuu 0^{2\pi}\,
+f(\theta)\cdot e^{i\gamma(\theta)}
+\cdot 
+d\theta\,\bigr|
+\leq \rho\cdot ||f||\uuu 1\tag{5}
+\] 
+for each $f\in H^1\uuu 0(T)$.
+At this stage we use the duality between
+$H^\infty(T)$ and $H^1\uuu 0(T)$ from 
+Section XX. It follows that
+(5) is equivalent to the following
+
+\medskip
+
+\noindent
+{\bf{6.4 Approximation condition.}}
+One has
+\[ 
+\min\uuu h\,||e^{i\gamma(\theta)}\vvv h(\theta)||\uuu\infty=\rho
+\]
+where the minimum is taken over $h$\vvv functions in $H^\infty(T)$.
+\bigskip
+
+\centerline{\emph {Final part of the proof.}}
+\medskip
+
+
+\noindent
+Since $w\geq 0$ and $>0$ outside a set of measure zero, 
+the approximation condition is equivalent with the existence of some
+$h\in H^\infty(T)$ and some $\rho<1$ such that
+
+
+\[ 
+|w(\theta)\vvv \phi^2(\theta)\cdot h(\theta)|\leq \rho\cdot w(\theta)\tag{*}
+\]
+hold on $T$.
+It remains to show that (*) is equivalent to the 
+existence of a pair $u,v$ in Theorem 6.2.
+Let us begin with
+
+\medskip
+
+\noindent
+\emph{Proof that (*) gives the pair $u,v$}.
+Since $\log w$ is in $L^1(T)$ we have $w>0$ almost everywhere
+and (*) entails that
+$\phi^2(\theta)\cdot h(\theta)$
+stay in the sector
+\[
+Z=\{z\colon \vvv\pi/2+ \delta\leq \text{arg}(z)\leq
+\pi/2\vvv \delta\}
+\]
+where we have put $\delta=\arccos(\rho)$.
+This inclusion of the range of 
+$\phi^2\cdot h$
+implies that it is outer. See XX above.
+Hence we can find a harmonic function
+$V$ such that
+\[
+\phi^2\cdot h= e^{ia}\cdot e^{V+iV^*}
+\]
+where $a$ is some real constant.
+The inclusion of the range implies that
+\[
+|a+V^*(\theta)|\leq \pi/2\vvv\delta
+\]
+Next, define the harmonic function
+\[ 
+v(\theta)= \vvv (a+ V^*(\theta))
+\]
+It follows that
+\[
+\phi^2(\theta)\cdot h(\theta)= e^{v(\theta)+iv^*(\theta)+c}
+\]
+for some constant $c$.
+Finally, since $w=|\phi|^2$ we obtain
+\[
+w(\theta)= e^{v(\theta)}\cdot \frac{e^a}{|h(\theta)|}
+\]
+By (xx) above the last factor is  bounded both below and above and hence $e^u$ for some bounded function.
+Together with the bound (xx) for the harmonic 
+conjugate of $v$
+we get the requested form for $w(\theta)$ in Theorem 6.2.
+\medskip
+
+\noindent
+\emph{Proof that a pair $(u,v)$ gives (*)}.
+Consider the special case when $w= e^v$ and 
+\[
+|v^*(\theta)|\leq 
+\pi/2\vvv \epsilon
+\] 
+holds for 
+some $\epsilon>0$.
+It is clear that the corresponding $\phi$function obtained via (xx) above
+satisfies
+
+
+\[
+\phi^2(\theta)= e^{v(\theta)+iv^*(\theta)}
+\] 
+This gives
+\[
+e^{i\gamma(\theta)}= e^{\vvv iv^*(\theta)}
+\]
+and we notice that if we take the constant function $h(\theta)=
+\epsilon$ then the maximum norm
+\[
+||e^{i\gamma(\theta)}\vvv \epsilon||\uuu \infty<1
+\]
+which proves that (*) holds.
+
+\newpage
+
+%\end{document}
+
+ 
+
+
+
+
+
+
+

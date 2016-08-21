@@ -1,0 +1,994 @@
+%\documentclass{amsart}
+
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+\centerline{\bf\large 10. Approximation theorems in complex domains}
+\bigskip
+
+\noindent 
+\emph{0. Introduction.}
+
+\medskip
+
+
+\noindent
+\emph{A. Weierstrass approximation theorem}\bigskip
+
+
+\noindent
+\emph{B. Polynomial approximation with bounds}
+
+\bigskip
+
+
+\noindent
+\emph{C. Approximation by fractional powers}
+
+
+\bigskip
+
+
+\noindent
+\emph{D. Theorem of MŸntz}
+
+
+
+
+\bigskip
+
+
+\noindent
+\centerline {\bf 0. Introduction.}
+\medskip
+
+
+\noindent
+This chapter is devoted to results  concerned with
+approximation by analytic functions
+due to Carleman, Lindelšf and MŸntz.
+
+
+
+
+
+
+
+\bigskip
+\centerline{\bf A. Weierstrass approximation theorem.}
+
+\medskip
+
+\noindent
+A wellknown result due to Weierstrass
+asserts that if $f(x)$ is a complex valued continuous
+function on a bounded interval $[a,b]$ then it can
+be uniformly approximated by polynomials.
+It turns out that
+uniform approximations exist
+on the whole real line where
+the approximating functions are entire.
+\medskip
+
+\noindent
+{\bf A.1 Theorem.} \emph{Let $f(x)$ be a continuous function on
+the real $x$-line. To every $\epsilon>0$ there exists
+an entire function
+$G(z)$ such that}
+\[
+\max_{x\in{\bf{R}}}\, \bigl|G(x)-f(x)\bigr|\leq\epsilon
+\]
+\medskip
+
+\noindent
+An elementary proof using Cauchys integral formula
+only was given  in [Carleman].
+Here we extend Theorem A.1 to a  more general
+situation.
+Let $K$ be a closed null\vvv set in ${\bf{C}}$ which in general is unbounded.
+If $0<R<R^*$ we put
+\[
+K[R,R^*]= K\cap \{ R\leq |z|\leq R^*\}
+\]
+If $R>0$ we denote by $\bar D\uuu R$ the disc of radius $R$
+and  $K\uuu R= K\cap \bar D\uuu R$.
+With these notations one has:
+
+\medskip
+
+\noindent
+{\bf{A.2 Theorem.}}
+\emph{Assume there exists a strictly increasing sequence $\{R\uuu\nu\}$
+where $R\uuu\nu\to +\infty$ such that the sets}
+\[ 
+\Omega\uuu\nu={\bf{C}}\setminus \bar D\uuu {R\uuu \nu}\,\cup K[R\uuu\nu,
+R\uuu{\nu+1}]
+\] 
+\emph{are connected for each $\nu\geq 1$ together with
+the set ${\bf{C}}\setminus K\uuu{R\uuu 1}$.
+Then every continuous function on $K$ can be uniformly approximated by entire functions.}
+\bigskip
+
+
+\noindent
+To prove this result we first establish the following.
+
+\medskip
+
+\noindent {\bf{A. 3 Lemma.}}
+\emph{Let $\nu\geq 1$ and $\psi$ is
+a continuous function
+on 
+$S= \bar D\uuu{R\uuu \nu}\cup\, K[R\uuu \nu,R\uuu{\nu+1}]$
+where $\psi$ is analytic in the open disc $D\uuu{R\uuu\nu}$.
+Then $\psi$ can be uniformly approximated on $S$ by polynomials in $z$.}
+
+\medskip
+
+\noindent 
+\emph{Proof}.
+If
+we have found a sequence of polynomials
+$\{p\uuu k\}$ which approximate $\psi$ uniformly on
+$S\uuu *=\{|z|=R\uuu\nu\}\cup K[R\uuu \nu,R\uuu{\nu+1}]$
+then this sequence approximates $\psi$ on $S$. In fact, this follows since
+$\psi$ is analytic in the disc $D\uuu{R\uuu \nu}$
+so by the maximum principle for analytic functions in a disc
+we have
+\[
+||p\uuu k\vvv\psi||\uuu S=
+||p\uuu k\vvv\psi||\uuu {S\uuu *}
+\] 
+for each $k$.
+Next, if uniform approximation on $S\uuu *$ fails
+there exists a Riesz\vvv measure $\mu$ supported by
+$S\uuu *$ which is $\perp$ to all analytic polynomials while
+\[
+\int\, \psi\cdot d\mu\neq 0\tag{1}
+\]
+To see that this cannot occur we consider the Cauchy transform
+\[
+\mathcal C(z)=\int\, \frac{d\mu(\zeta)}{z\vvv\zeta}
+\]
+Since $\int\, \zeta^n\cdot d\mu(\zeta)=0$ for every $n\geq 0$
+we see that $\mathcal C(z)=0$ in the exterior disc
+$|z|> R\uuu{\nu+1}$.
+The connectivity hypothesis implies that
+$\mathcal C(z)=0$ in the whole open complement of $S$.
+Now $K$ was a null set which means that the
+$L^1\uuu{\text{loc}}$\vvv function 
+$\mathcal C(z)$ is zero in the exterior disc
+$|z|>R\uuu\nu$ and hence its distribution derivative
+$\bar\partial(\mathcal C\uuu\nu)$ also vanishes in this exterior disc.
+At the same time we have the equality
+\[ \bar\partial(C\uuu\nu)= \mu
+\]
+We conclude that the support of $\mu$ is confined to the circle
+$\{|z|=R\uuu\nu\}$.
+But then (1) cannot hold since
+the restriction of $\psi$ to
+this circle by assumption extends to be analytic in the disc
+$D\uuu {R\uuu\nu}$ and therefore can be uniformly approximated by
+polynomials on the circle.
+
+\medskip
+
+\noindent
+\emph{Proof of Theorem A.2.}
+Let $\epsilon>0$ and
+$\{\alpha\uuu \nu\}$ is a sequence of positive numbers such that
+$\sum\,\alpha\uuu\nu<\epsilon$.
+Consider some $f\in C^0(K)$. Starting with the set
+$K\uuu{R\uuu 1}$
+we use the assumption that its complement is connected
+and using   Cauchy transforms as in  Lemma A.3
+one shows that the restriction of $f$ to this compact set
+can be uniformly approximated by polynomials. So we find
+$P\uuu 1(z)$ such that
+\[
+||P\uuu 1\vvv f||\uuu {K\uuu{R\uuu 1}}<\alpha\uuu 1\tag{i}
+\]
+From (i) one easily construct a continuous function
+$\psi$ on $\bar D\uuu{R\uuu 1}\cup K[R\uuu 1,R\uuu 2]$
+such that
+$\psi=P\uuu1 $ holds in the disc
+$\bar D\uuu{R\uuu 1}$ and
+the maximum norm
+\[
+||\psi\vvv f||\uuu { K[R\uuu 1,R\uuu 2]}\leq \alpha\uuu 1
+\]
+Lemma A.3 gives a polynomial $P\uuu 2$ such that
+\[
+||P\uuu 2\vvv P\uuu 1||\uuu {D\uuu{R\uuu 1}}<\alpha\uuu 2
+\quad\text{and}\quad 
+||P\uuu 2\vvv f||\uuu {K[R\uuu 1,R\uuu 2]}\leq
+\alpha\uuu 1+\alpha\uuu 2
+\]
+Repeat the construction where Lemma A.3 is used as $\nu$ increases.
+This gives
+a sequence of polynomials $\{P\uuu\nu\}$
+such that
+\[
+||P\uuu \nu \vvv P\uuu {\nu\vvv 1}||\uuu {D\uuu{R\uuu \nu }}<\alpha\uuu \nu
+\quad\text{and}\quad 
+||P\uuu\nu\vvv f||\uuu {K[R\uuu {\nu\vvv 1},R\uuu \nu]}<
+\alpha\uuu 1+\ldots+\alpha\uuu\nu
+\]
+hold for all $\nu$.
+From this it is easily seen that we obtain an entire function
+\[ 
+P^*(z)= P\uuu 1(z)+\sum\uuu{\nu=1}^\infty
+P\uuu{\nu+1}(z)\vvv P\uuu\nu(z)
+\]
+Finally the reader can check that the inequalities above imply that
+the maximum norm
+\[
+ ||P^*\vvv f||\uuu K\leq \alpha\uuu 1+ \sum\uuu{\nu=1}^\infty\,\alpha\uuu\nu
+\]
+Since the last sum is $\leq 2\epsilon$ and $\epsilon>0$ was arbitrary
+we have proved Theorem A.3.
+
+ 
+\bigskip
+
+
+
+
+\noindent
+{\bf Exercise.}
+Use similar methods as above to show that if
+$f(z)$ is analytic in the upper half plane
+$U^+=\mathfrak{Im}(z)>0$
+and has continuous boundary values on the real line, then
+$f$ can be uniformly approximated by an entire function, i.e. to
+every $\epsilon>0$ there exists an entire function
+$F(z)$ such that
+\[
+\max_{z\in U^+}\, |F(z)-f(z)|\leq\epsilon
+\]
+
+
+\bigskip
+
+
+
+\centerline{\bf B. Polynomial approximation with bounds}
+
+\medskip
+
+\noindent
+{\bf Introduction.} We  begin with a  result
+due to Lindelšf.
+Let $U$ be a Jordan domain and set $\Gamma=\partial U$.
+For each  $f(z)\in\mathcal O(U)$,  
+Runge's theorem
+gives a 
+sequence of polynomials $\{Q_\nu(z)\}$ which approximates $f$ uniformly over
+each compact subset of $U$.
+If we impose some bound on $f$ one may ask
+if 
+an approximation exists  where the
+$Q$-polynomials satisfy a similar bound as $f$.
+Lindelšf proved that  bounds exist
+for many different  norms on
+the given function $f$ 
+in the
+article 
+\emph{Sur un principe gŽneral de l'analyse et ses applications
+ˆ la theorie de la reprŽsentation conforme}
+from 1915.
+Let us  announce  two results from [Lindelšf]
+of this nature.
+Let  $p>0$ and consider the $H^p$-space
+of analytic functions in $U$ for which
+\[ 
+||g||_p=\iint_U\,|g(z)|^p\cdot dxdy<\infty
+\tag{1}
+\]
+
+
+\noindent
+{\bf B.1 Theorem } \emph{Let $p>0$ and suppose that
+$f(z)$ has a finite $H^p$-norm. Then there exists a sequence of polynomials
+$\{Q_n(z)\}$ which converge uniformly to
+$f$ in compact subsets of $U$ while}
+\[ 
+||Q_n||_p\leq ||f||_p\quad\colon\quad n=1,2,\ldots
+\] 
+\medskip
+
+\noindent
+A similar approximation holds when
+the $H^p$-norm is replaced by the maximum norm.
+Thus, if $f$ is a bounded analytic function
+in $U$ there exists a sequence of polynomials
+$\{Q_n\}$ which converge to $f$ in every relatively
+compact subset of $U$ and at the same time
+the maximum norms satisfy:
+\[
+||Q_n||_U\leq ||f||_U\quad\colon\quad n=1,2,\ldots
+\]
+
+
+\noindent
+To prove Theorem B.1 one constructs for each
+$n\geq 1$ a Jordan curve $\Gamma_n$
+which surrounds $\bar U$, i.e. its interior Jordan domain
+$U_n$ contains
+$\bar U$ and for every point  $p\in\Gamma_n$ the
+distance of $p$ to $\Gamma$ is $<1/n$.
+It is trivial to see that such a family of Jordan curves
+exist where the domains
+$U_1,U_2,\ldots$ decrease.
+Next, fix a point $z_0\in U$. There exists the unique  conformal map
+$\psi_n$ from $U_n$ onto $U$ such that
+\[ 
+\psi_n(z_0)=z_0\quad\colon\quad
+\psi'_n(z_0)\,\,\text{is real and positive}
+\]
+With these notations Lindelšf used the following lemma whose proof
+is  left as
+an exercise:
+\medskip
+
+\noindent
+{\bf B.2. Lemma}
+\emph{For each compact subset
+$K$ of $U$ the
+maximum norms
+$|\psi_n(z)-z|_K$ tend to zero as $n\to\infty$. Moreover,
+the complex derivatives $\psi'_n(z_0)\to 1$.}
+\medskip
+
+\noindent
+\emph{Proof of Theorem B.1.}
+To each $n$ we set
+\[
+F_n(z)=f(\psi_n(z))\cdot\psi'_n(z)^{\frac{2}{p}}
+\]
+
+
+\noindent
+By Lemma B.2 the sequence $\{F_n\}$ converges uniformly to
+$f$ on compact subsets of $U$. Moreover, each
+$F_n\in\mathcal O(U_n)$ and it is clear that
+
+\[
+\iint_U\,|f(z)|^p\cdot dxdy=
+\iint_{U_n}\,|F_n(z)|^p\cdot dxdy
+\]
+hold for every $n$.
+To get the required  polynomials $\{Q_n\}$
+in Theorem B.1 for $H^p$-spaces it suffices to apply Runge's theorem for
+each single $F_n$. This  detail of the proof is left to the reader.
+For maximum norms we use the functions
+\[
+F_n(z)=f(\psi_n(z))
+\]
+and after apply Runge's theorem in the domains $\{U_n\}$.
+
+\bigskip
+
+\noindent{\bf B.3 Remark.}
+More delicate
+approximations by polynomials where
+other norms such as the 
+modulus  of continuity,  were 
+established later by Lindelšf and  De VallŽ-Poussin.
+We shall not pursue this any further.
+The reader can
+consult
+articles by  De VallŽ-Poussin which contain
+many interesting results
+concerned with approximation theorems.
+
+
+
+\bigskip
+
+
+\centerline{\bf C. Approximation by fractional powers }
+
+\bigskip
+
+\noindent 
+Here is the set-up in
+the article \emph{†ber die approximation analytischer funktionen}
+by Carleman from 1922.  
+Let $0<\lambda_1<\lambda_2<\ldots$ 
+be a sequence of positive real numbers and
+$\Omega$ is a simply connected
+domain contained in
+the right half-space
+$\mathfrak{Re}(z)>0$.
+Notice that  
+the functions 
+$q_\nu(z)= z^{\lambda_\nu}$
+are analytic in the half-plane,  i.e. with
+$z=re^{i\theta}$ and $-\pi/2<\theta<\pi/2$ we have:
+\[ 
+q_\nu(z)=r^{\lambda_\nu}\cdot e^{i\lambda_\nu\cdot\theta}
+\]
+
+
+\noindent
+{\bf C.1 Definition.}
+\emph{We say that the sequence $\Lambda=\{\lambda_\nu\}$
+is dense for approximation if there for each
+$f\in\mathcal O(\Omega)$ exists a sequence of
+functions of the form}
+\[ 
+Q_N(z)=\sum_{\nu=1}^N
+\, c_\nu(N)\cdot q_\nu(z)\quad\colon\quad N=1,2,\ldots
+\]
+\emph{which converges uniformly to $f$ on compact subsets of $\Omega$.}
+
+\bigskip
+
+\noindent
+{\bf C.2 Theorem.}
+\emph{A sequence $\Lambda$ is dense if }
+\[
+\limsup_{R\to\infty}\,
+\frac{\sum_R\,\frac{1}{\lambda_\nu}}{\text{Log}\,R}>0\tag{*}
+\]
+\emph{where $\sum_R$ means that we take the sum over
+all $\lambda_\nu<R$.}
+\medskip
+
+\noindent
+{\bf Remark.}
+Above condition (*)  is the same for every
+simply connected  
+domain $\Omega$. Theorem C.2 gives
+a \emph{sufficient} condition for an   approximation.
+To get  necessary condition one must specify the domain
+$\Omega$ and we shall not try to discuss this
+more involved problem.
+The proof of Theorem C.2 requires several steps, the crucial
+is the 
+uniqueness theorem in C.4 while the proof of Theorem C.2 is
+postponed until C.5.
+\medskip
+
+
+\centerline {\bf C.3 A uniqueness theorem.}
+\medskip
+
+\noindent
+Consider a closed Jordan curve
+$\Gamma$ of class $C^1$ which is contained in
+$\mathfrak{Re}\, z>0$.
+When $z=re^{i\theta}$ stays in the right
+half-plane  we get an entire function of the complex 
+variable $\lambda$ defined by:
+\[ 
+\lambda\mapsto z^\lambda= r^\lambda \cdot e^{i\theta\cdot\lambda}
+\] 
+We conclude that
+a real-valued 
+and continuous function $g$ on $\Gamma$ gives
+an entire function of $\lambda$ defined by:
+\[
+ G(\lambda)=\int_\Gamma\, g(z)\cdot z^\lambda\cdot \bigl|dz\bigr|_\Gamma
+ \]
+where $|dz|_\Gamma$  is the arc-length on $\Gamma$.
+With these notations one has
+\bigskip
+
+\noindent
+{\bf C.4 Theorem.}
+\emph{Assume that $\Lambda$ satisfies the condition in
+Theorem C.2. Then, if $G(\lambda_\nu)=0$ for every
+$\nu$ it follows that 
+the $g$-function is  identically zero.}
+
+ 
+
+
+\medskip
+
+\noindent
+\emph{Proof.} If we have shown that
+the $G$-function is identically zero then the reader may verify
+that $g=0$.  There remains to show that if
+$G(\lambda_\nu)=0$ for every $\nu$ then
+$G=0$.
+To attain this one first   shows that
+there exist constants $A,K$ and $0<a<\frac{\pi}{2}$
+such that:
+\[ 
+|G(\lambda)|\leq K\cdot e^{|\lambda|}\quad\text{and}\quad
+|G(is)|\leq K\cdot e^{|s|\cdot a}\quad\colon\,\lambda\in{\bf{C}}\,\,
+\colon s\in{\bf{R}}\tag{i}
+\]
+
+
+\noindent
+The easy verification of (i) is left to the reader. 
+Next,  the first inequality in (i) means that
+$G$ is an  entire function of exponential type one.
+By assumption  $G(\lambda_\nu)=0$ for every  $\nu$.
+Now we can use
+Carleman's  formula for analytic functions in a half-space
+from XXX to conclude that $G=0$. Namely, set
+\[ 
+U(r,\phi)=\log\,\bigl |G(re^{i\phi})\bigr |\tag{ii}
+\]
+
+
+\noindent
+Let $\{ r_\nu e^{i\phi_\nu}\}$
+be the zeros of $G$ in $\mathfrak{Re}(z)>0$ which 
+by the hypothesis contains the set $\Lambda$.
+By Carleman's formula the following hold for each
+$R>1$:
+\[
+\sum_{1<r_\nu<R}\,
+\bigl[\frac{1}{r_\nu}-\frac{r_\nu}{R^2}\bigr]\cdot\text{cos}\,\theta_\nu=
+\frac{1}{\pi R}\cdot\int_{-\pi/2}^{\pi/2}\,
+U(R,\phi)\cdot\text{cos}\,\phi\cdot d\phi+
+\]
+\[
+\frac{1}{2\pi R}\cdot\int_1^R\, \bigl(\frac{1}{r^2}-\frac{1}{R^2}\bigr)
+\cdot\bigr[\, U(r,\pi/2)+U(r,-\pi/2)\,\bigr]\cdot dr+
+c_*(R)
+\]
+where $c_*(R)\leq K$ holds for some constant which is independent of
+$R$.
+Finally, the set  
+$\Lambda$ satisfies (*)  in
+Theorem C.2  and the  sum over zeros in Carleman's  formula above
+majorizes   the  sum extended over
+the real $\lambda$-numbers
+from $\Lambda$ satisfying $1<\lambda_\nu<R$.
+At this stage we leave it to the reader to
+verify that the second inequality in (i) above implies 
+that $G$ must be identically zero.
+
+
+
+\bigskip
+
+\centerline{\emph{C.5 Proof of Theorem C.2}}
+
+\bigskip
+\noindent
+Denote by $\mathcal O^*(\Lambda)$ the linear space of analytic functions
+in the right half-plane given by finite ${\bf{C}}$-linear combinations of the fractional
+powers $\{z^{\lambda_\nu}\}$.
+To obtain uniform approximations over relatively compact
+subsets when 
+$\Omega$ is a simply connected  domain in $\mathfrak{Re}(z)>0$,
+it suffices to regard a 
+closed Jordan arc
+$\Gamma$ 
+which borders a Jordan domain $U$ where
+$U$ is a relatively compact subset of
+$\Omega$. In particular $\Gamma$ has a positive distance to
+the imaginary axis and there remains  to show
+that when (*) holds in Theorem C.2, then
+an arbitrary analytic function $f(z)$ defined in some open
+neighborhood of $\bar U$ can be uniformly approximated
+by $\mathcal O^*(\Lambda)$-functions over a relatively compact subset
+$U_*$ of $U$.
+To achieve this 
+we shall use a trick which
+reduces the proof of uniform approximation
+to a problem concerned with $L^2$-approximation on
+$\Gamma$.
+To begin with
+we have
+\medskip
+
+\noindent
+{\bf C.6 Lemma.}
+\emph{The uniqueness in Theorem C.4 implies that
+if $V$ is a real-valued function on
+$\Gamma$ then there exists a sequence 
+$\{Q_n\}$ from the family $\mathcal O(\Lambda)$
+ such that}
+\[
+\lim_{n\to\infty}\, \int_\Gamma\,\bigl|Q_n-V|^2\cdot |dz|=0
+\]
+\medskip
+
+\noindent 
+The proof of this result is left as an exercise.
+
+\medskip
+
+\noindent
+{\bf C.7 A tricky construction.}
+Let $f(z)$ be analytic in a neighborhood of the closed
+Jordan domain $\bar U$ bordered by
+$\Gamma$. Define a new analytic function
+\[ 
+F(z)=\int_{z_*}^z\,\frac{f(\zeta)}{\zeta}\cdot d\zeta\tag{1}
+\]
+where $z_*$ is some point in $\bar U$ whose specific  choice
+does not affect the
+subsequent discussion.
+We can write $F=V+iW$ where $V=\mathfrak{Re}(F)$.
+Lemma C.6 gives a sequence $\{Q_n\}$ which approximates
+$V$ in the $L^2$-norm on $\Gamma$.
+Using this $L^2$-approximation we get
+\medskip
+
+\noindent
+{\bf Lemma C.8}
+\emph{Let $U_0$ be relatively compact in $U$.
+Then there exists a sequence of real numbers
+$\{\gamma_n\}$ such that}
+\[
+\lim_{n\to\infty}\, \bigl|| Q_n(z)-i\cdot\gamma_n-F(z)\bigl|_{U_0}=0
+\]
+\medskip
+
+\noindent
+Again we leave out the proof as an exercise.
+Next, taking complex derivatives  Lemma C.8  implies that
+if $U_*$ is even smaller, i.e. taken to be a relatively compact in
+$U_0$, then we a get uniform approximation of derivatives:
+\[
+Q'_n(z)\to F'(z)=\frac{f(z)}{z}
+\]
+This means that
+\[
+ z\cdot Q'_n\to f(z)
+\]
+holds uniformly in
+$U_*$. Next, notice that  
+\[
+z\cdot \frac{d}{dz}(z^{\lambda_\nu})
+=\lambda_\nu\cdot z^{\lambda_\nu}
+\]
+hold for each $\nu$. Hence
+$\{z\cdot Q'_n(z)\}$  again belong to  the $\mathcal O(\Lambda)$-family.
+So we achieve the required uniform approximation of
+the given $f$ function on $U_*$ which
+completes the proof of
+Theorem C.2.
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf D. Theorem of MŸntz}
+\bigskip
+
+
+
+\noindent
+{\bf Introduction.} Theorem D.1   below
+is due to MŸntz. See his article
+\emph{†ber den Approximationssatz von
+Weierstrass} from 1914. The simplified version of the original proof below
+is given in [Car].
+Here is the set up: Let
+$0<\lambda_1<\lambda_2<\ldots$. To
+each $\nu$ we get the function $x^{\lambda_\nu}$
+defined on the real unit interval $0\leq x\leq 1$.
+We say that the sequence $\Lambda=\{\lambda_\nu\}$
+is $L^2$-dense if the family
+$\{x^{\lambda_\nu}\}$
+generate a dense linear subspace of the Hilbert space of
+square integrable functions on $[0,1]$.
+\medskip
+
+\noindent
+{\bf D.1 Theorem.} \emph{The necessary and sufficient condition for
+$\Lambda$ to be $L^2$-dense is that
+$\sum\,\frac{1}{\lambda_\nu}$ is convergent.}
+\bigskip
+
+\noindent
+\emph{D.2 Proof of necessity.} 
+If
+$\Lambda$ is not $L^2$-dense there
+exists some $h(x)\in L^2[0,1]$
+which is not identically zero while
+\[ 
+\int_0^1\, h(x)\cdot x^{\lambda_\nu}\cdot dx=0
+\quad\colon\quad\nu=1,2,\ldots\tag{1}
+\]
+Now 
+consider the function
+\[ 
+\Phi(\lambda)= 
+\int_0^1\, h(x)\cdot x^{\vvv i\lambda}\cdot dx\tag{2}
+\]
+It is clear that
+$\Phi$ is analytic in
+the right half plane
+$\mathfrak{Im}\,\lambda>0$.
+If $\lambda=s+it$ with $t>0$ we have
+\[ 
+|x^\lambda|= x^t\leq 1
+\]
+for all $0\leq x\leq 1$. 
+From this and the Cauchy\vvv Schwarz inequality we
+see that
+\[
+|\Phi(\lambda)|\leq ||h||_2\quad\colon \lambda\in U_+\tag{3}
+\]
+
+
+\noindent 
+Hence $\Phi$ is a bounded analytic function in
+the upper half-plane. At the same time
+(1) means that the zero set of
+$\Phi$ contains the sequence 
+$\{\lambda\uuu\nu\cdot i\}$.
+By the  integral formula formula we have seen in XX that this entails that
+\[
+\sum\,\frac{1}{\lambda_\nu}<\infty\tag{*}
+\]
+which proves the necessity.
+
+\medskip
+
+\noindent
+\emph{Proof of sufficiency.}
+There remains to show that ifwe have the convergence in 
+(*) above then
+there exists a non-zero
+$h$-function i $L^2[0,1]$ such that
+(1) above holds. 
+To find $h$ we first construct an analytic function
+$\Phi$ by
+\[
+\Phi(z)= \frac{\prod_{\nu=1}^\infty\,
+\bigl(1-\frac{z}{\lambda_\nu}\bigr)}
+{ \prod_{\nu=1}^\infty\,\bigl(1+\frac{z}{\lambda_\nu}\bigr)}\cdot
+\frac{1}{(1+z)^2}\quad\colon\quad \mathfrak{Re}\, z>0\tag{i}
+\]
+Notice that $\Phi(z)$ is defined in the right half-plane
+since 
+the series (*) is convergent. 
+When $\mathfrak{Re}(z)\geq 0$ we notice that
+each quotient
+\[
+\frac{1-\frac{z}{\lambda_\nu}}
+{1+\frac{z}{\lambda_\nu}}
+\]
+has absolute value $\leq 1$.
+It follows that
+\[ 
+|\Phi(x+iy)|\leq\frac{1}{1+x+iy|^2}=\frac{1}{(1+x)^2+y^2}\tag{ii}
+\]
+In particular the function $y\mapsto \Phi(iy)$
+belongs to  $L^2$ on the real $y$\vvv line.
+Now we set
+\[
+f(t)=
+\frac{1}{2\pi}
+\int_{-\infty}^\infty\, e^{ity}\cdot
+\Phi(iy)\cdot dy\tag{ii}
+\]
+using the inequality (ii)
+If $t<0$
+we can move the line integral of $e^{tz}\cdot \Phi(z)$ from
+the imaginary axis to a line $\mathfrak{Re}(z)= a$
+for every $a>0$ and it is clear that
+
+\[
+\lim\uuu{a\to +\infty}\, 
+\int_{-\infty}^\infty\, e^{\vvv at+ity}\cdot
+\Phi(a+iy)\cdot dy=0
+\]
+We conclude that $f(t)=0$ when $t<0$.
+Next, since $y\mapsto \Phi(iy)$ is an $L^2$\vvv function it follows by
+Parseval's equality that
+
+\[
+\int\uuu 0^\infty\, |f(t)|^2\cdot dt<\infty
+\]
+Moreover, for a fixed $\lambda\uuu \nu$ we have
+\[
+\int_0^\infty\, f(t) e^{-\lambda_\nu t}\cdot dt=
+\frac{1}{2\pi}\cdot \int\uuu 0^\infty\,[
+\int_{-\infty}^\infty\, e^{ity}\cdot
+\Phi(iy)\cdot dy\,]\cdot e^{\vvv \lambda\nu t}\cdot dt=
+\]
+\[
+\int_{-\infty}^\infty\, \frac{1}{iy\vvv \lambda\uuu\nu}\cdot 
+\Phi(iy)\cdot dy
+\]
+where the last equality follows when the repeated integral is reversed.
+By construction $\Phi(z)$ has a zero at $\lambda\uuu\nu$
+and therefore (xx) above remains true with
+$\Phi$ replaced by
+$\frac{\Phi(z)}{z\vvv \lambda\uuu\nu}$ which entails that
+
+\[
+\int\uuu 0^\infty\, f(t)\cdot e^{\vvv \lambda\uuu\nu t}\cdot dt=0
+\]
+
+\noindent
+At this stage we obtain the requested
+$h$\vvv function. Namely, since $t\mapsto e^{\vvv t}$ identifies
+$(0,+\infty)$ with $(0,1)$ we get a function $h(x)$ on $(0,1)$
+such that
+\[ 
+h(e^{\vvv t})= e^{t/2}\cdot f(t)
+\]
+The reader may verify
+that
+\[
+\int\uuu 0^1\, |h(x)|^2\cdot dx=\int\uuu 0^\infty\, |f(t)|^2\cdot dt
+\]
+and hence $h$ belongs to $L^2(0,1)$.
+Moreover, one verifies that the vanishing in (xx) above entails that
+\[
+\int\uuu 0^1\,  h(x)\cdot x^{\lambda\uuu\nu}\cdot dx=0
+\]
+Since this holds for every $\nu$ we have proved the
+sufficiency which therefore finishes the proof of Theorem XX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline {\bf{D.2 Another density result}}
+\bigskip
+
+\noindent
+Density results using exponential functions are used in many
+applications. For example, 
+equi-distant sequences  appear in the
+the \emph{Sampling Theorem} by Shanning
+used in telecommunication engineering.
+When this
+result is expressed in analytic function theory
+via characteristic functions it 
+can be formulated as follows:
+\medskip
+
+\noindent {\bf {D.3  Theorem.}}
+\emph{Let $T>0$ and $g(t)$ is an $L^2$-function on the interval $[0,T]$
+which is not identically zero and suppose that
+$a>0$ is such that}
+\[
+\int_0^T\, e^{inat}\cdot g(t)\cdot dt=0
+\quad\colon\quad n\in{\bf{Z}}
+\]
+\emph{Then we must have}
+\[ 
+a\geq\frac{2\pi}{T}
+\]
+\medskip
+
+\noindent
+{\bf Remark} This result  is due to Fritz Carlson in his article
+[xx] from 1914.
+let us recall   that Carlson and Carleman later became 
+collegues at Stockholm University for more than
+two decades.
+Carlson's result was later improved by Titchmarsh
+and goes as follows:
+
+\bigskip
+
+\noindent
+{\bf{D.4 Theorem.}}
+\emph{Let $0<m\uuu 1<m\uuu 2<\ldots$
+be an increasing sequence of positive real numbers such that}
+\[
+\limsup\uuu{n\to\infty}\, \frac{n}{m\uuu n}>1\tag{*}
+\]
+\emph{Then if $f(x)\in L^2(0,2\pi )$ and}
+\[
+\int\uuu 0^{2\pi}\, e^{\frac{+}{-} im\uuu n x}\cdot f(x)\cdot dx=0\tag{**}
+\]
+\emph{hold for each $n$, it follows that $f=0$.}
+\medskip
+
+\noindent
+We give a proof below taken from the text\vvv book
+[Paley\vvv Wiener: page
+84\vvv 85].
+To begin with we notice that
+(**) implies that we also have vanishing integrals using
+$f(\vvv x)$.
+Replacing $f$ by $f(x)+f(\vvv x)$ or $f)x)\vvv f)\vvv x)$
+it suffices to prove the result when $f$ is even or odd.
+Let us show that there cannot exist an even
+$L^2$\vvv function $f$ such that the integrals (**) vanish while
+\[
+\int\uuu {-\pi}^\pi\, f(x)\cdot dx=1\tag{i}
+\]
+With  $f$ as above we set
+\[
+\phi(z)= \int\uuu{\vvv \pi}^\pi\, e^{izt}\cdot f(t)\cdot dt\tag{ii}
+\]
+The entire function $\phi$ is even and (i) means that
+$\phi(0)=1$.
+Moreover, $\phi$  is an entire function of exponential type
+and Cauchy\vvv Schwarz inequality gives
+\[
+|\phi(x+iy)|\leq ||f||\uuu 2\cdot e^{\pi|y|}\tag{iii}
+\]
+for all $z=x+iy$.
+Next, Parseval's equality shows that
+the restriction of $\phi$ to the real $x$\vvv line belongs to
+$L^2$ which by the Remark in (xx) implies
+that $\phi$ belong to the Carleman class $\mathcal N$.
+So Theorem ¤ xx [Section $\mathcal E$] gives the existence of a limit
+\[
+\lim\uuu{R\to \infty}\,
+\frac{N\uuu\phi(R)}{R}= A\tag{iv}
+\]
+The inequality (iiii) and the result in XXX entails that
+\[
+A\leq 2\tag{v}
+\]
+
+\noindent
+Next, since 
+the zeros of $\phi$ contains the even sequence $\{m\uuu\nu\}\cup
+\{-m\uuu\nu\}$
+we have the inequality
+
+\[
+N\uuu\phi(m\uuu n)\geq 2n\tag{vi}
+\]
+At the same time the limit formula (iv) gives:
+\[ 
+A=\lim\uuu{n\to \infty}\,
+\frac{N\uuu\phi(m\uuu n)}{m\uuu n}\tag{vii}
+\]
+Finally, (vi) and the hypothesis (*) in  Theorem D.4 give
+
+\[
+\limsup\uuu{n\to \infty}
+\frac{N\uuu\phi(m\uuu n)}{m\uuu n}\geq
+2\cdot \limsup\uuu{n\to \infty}\frac{n}{m\uuu n}>2\tag{viii}
+\]
+This contradicts (v) and we conclude that
+a non\vvv zero function  $\phi$ cannot exist which by the
+Laplace-Fourier formula (i) entails that
+a non-zero $f$ cannot
+exist.
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+%\end{document}

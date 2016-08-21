@@ -1,0 +1,1163 @@
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+
+
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+
+
+
+
+\begin{document}
+
+\centerline{\bf{Cauchy transforms.}}
+
+\medskip
+\noindent
+Let $\mu$ be a measire with compact support $K$ in the
+complex $z$-plane  We write  $z0=x+iy$ and identify ${\bf{C}}$ with 
+the 2-dimensionsl real $x(,y)$-space-
+Wen $z$ is outside $K$ there exists thr integral
+\[
+\widehat{\mu}(z)= \int\,\frac{d\mu(\zeta)}{z-\zeta}
+\]
+Notice that (*) yields an analytic funtion in
+${\bf{C}}\setminus K$. For example, the complex derivative
+\[
+\frac{d\widehat{\mu}}{dz}= - \int\,\frac{d\mu(\zeta)}{(z-\zeta)^2}
+\]
+Less onbious is thst (*)  is defined for all $z$  outside a null-set in
+lebegue's sense and in this way
+$\widehat{mu}$ is a locally integrable function in
+the $x,y)$.space.
+In fact, this follows sine (*) is the convolution of
+$\mu$ asnd the locally integrable function $z^{-1}$.
+More precisely, Lebesgue theoty teaches that if
+$\phi$ is an arbitrary $L^1_{loc}$-function in
+the $(x,y)$-plane and $\mu$ as above a measure with compact support, then
+the convolution
+$\phi*\mu$ is again locally integrable.
+In particular $\phi*\mu$ is a distriobuytion in the $x,y$-plane and
+we csn apply the $\bar\partial$-operator.
+A general formula in distribution  theory teaches thst
+\[
+\bar\partial(\phi*\mu)= \bar\partial(\phi)*\mu
+\]
+Apked with $\phi=z{-1}$ it follows from
+the Caciuhy-Pompieu theorem thst
+\[
+\bar\partial(\widehat{\mu})= \pi\cdot \mu
+\]
+\medskip
+
+
+\noindent
+Let us thrn consider a measure $\mu$ supported by
+a union $D(R)\cup K$, where
+$D(R)= \{|z|\leq R\}$ snd
+$K$ a compsct subet of $\{|z|\geq R\}$.
+We assume that $K$ is a null-set and that
+\[
+\Omega= {\bf{C}}\setminus (D(R)\cup K)
+\]
+is connected.
+Choose $R^*>R$ so tyaht
+$K$is contsined in the disc $D(R^*)$.
+Then $\widehat{mu}$ is analyric in$\{|z|>R^*\}$
+and in this exterior disc it is reprsetned by
+a series
+\[
+\widehat{\mu}(z)= \sum_{n=1}^\infty\, c_n\cdot z^{-n}
+\quad\colon\quad c_n= \int\, \zeta^{n-1}d \mu(\zeta)
+\]
+So if we assume that
+$\mu$ is ortgohongsl to analytic polynomials, then
+$\widehat{\mu}=0$ in the exteriro disc
+$\{z|>R^*$.
+Sunce $K$ is a null set it measnt aht
+the loclly integrble funvtion
+$\widehat{\mu}$ is supported by
+$D(R)$ snd hence $\bar\partial(\mu)$ is also supppoetd by
+$D(R)$, Then the Cauvhy-Pompieue theorr entslis thst
+the govrn mesfire $\mu$ is suppored by $D(R)$.
+\medskip
+
+
+\noindent
+{\bf{An applicstiuon.}}
+Now start:
+Fnd a polynomial  $P_1(z)$ such that
+the maximum norm
+\[
+|P_1-f|_{K_1}<\alpha_1\quad P_1(1)= f(1)\,\&\, P_1(-1)= f(-1)
+\]
+Now we consider the compact set
+\[
+S_2= D(1)\cup K_2
+\]
+ where we find the continuous function
+$g$ with $g=P_1$ in $D(1)$ while $g(x)=f(x)$ when
+$1\leq |x|\leq 2$.
+Let $\mu$ be a measiure supported by $S_2$ which is $\perp$ toanalytic poumonials $q(z)$.
+Since thunion of the two reslintevrlas $[-2,-1]$ nd $[1,2]$ is a null set, it
+follows from
+XX that $\mu$ is suppotted by $D(!1)$ whivh entials that
+\[
+\int \, g\cdot \mu= \int\, P_1\cdot  d\mu=0
+\]
+where the ladt equality follows since
+$P(z)$ is an analytic polymomial.
+Now (*) hold for every $\mu$ as above and hence
+$g$ csn be uniformly appriximated on $S_2$ by analytic polynomials.
+So we find $P_2(z)$ such tht
+\[
+|P_2-g|_{S_1}<\alpha_1\quad P_2(2)= f(2)\,\&\, P_2(-2)= f(-2)
+\]
+We can contonue and for every $N\geq 2$ we put
+\[
+S_N=D(N)\cup K_{N+1}
+\]
+and find a sequece of polynomials $\{P_N(z)$ such that
+\[
+|P_{N+1}-P_N|_{D(N)}<\alpha_{N+1}\quad \&\quad 
+|P_{N+1}-f|<\alpha_{N+1}
+\]
+Then the series 
+\[
+P_1+(P_2-P_1)+ (P_3-P_2)+\ldots
+\]
+xonverges uniforly on every cpmaŒct disc $D(R)$
+and the o it is an entire function $p(z)$.
+done ....
+\medskip
+
+
+\noindent
+An extension. 
+We do $P_1$ so that
+$|P_1-f|_{K-1}<\alpha-1$.
+On $K[1]= K\cap \{z|=1\}$
+we have the contomoud funtion $P_1-f$ whose maximum norm is small.
+on this null set the disc algebra interpolates.
+But how good is sup-norm prdsered. i.e. given
+$g$ on a null set of thr unit circle.
+To find $G$ in disc algebra with $G=g$ on the null set and not too large.
+Thus,  are null sets of interpolation .
+So one regards
+\[
+g\mapsto g_S\in C^0(S)
+\] 
+from 
+$A(D)$ into $C^0(S)$.
+Image is dense by the Brother Riesz's theorem.
+So we do it for small $\epsilon$
+This, first a polynomial
+$P-1$ with
+\[ 
+|P-1-f[_{K-1}<\epsilon
+\]
+Next, we have $P_1-f$ on $K[1]$ with a small sup-norm.
+Find $g$ in disc algebra so that
+\[
+|g+(P_1-f)|_{K[1]}<\epsilon
+\]
+and not too large $g$-norm on $D$.
+So we can modify ...
+Better, modify $f$ to $f_1=f+\rho$
+so thst
+\[
+P_1=f+\rho
+\]
+holds on $K[1]$.
+At he same time
+$\rho$ has a small sup-norm 
+on $K$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+\centerline{\bf \large A uniqueness theorem for PDE-equations.}
+\bigskip
+
+\noindent
+{\bf Introduction.}
+We shall work in  ${\bf{R}}^2$ with  coordinates
+$(x,y)$.
+An example of a boundary value
+problem is to determine a function
+$u(x,y)$ 
+which is harmonic in some open half-disc
+\[
+D_+(r)=\{x^2+y^2<r^2\}\,\cap \{x>0\}
+\]
+and satisfies the boundary conditions:
+\[
+u(0,y)=\psi(y)\quad\text{and}\quad
+u_x(0,y)=\phi(y)
+\]
+where $\phi$ and $\psi$ are given in advance.
+When $\phi$ and  $\psi$
+are real-analytic one proves  easily that
+(*) has a unique solution.
+With less regularity Hadamard gave examples where
+this fails to hold.
+In fact, Hadamard proved that a necessary and sufficient condition for
+the Cauchy problem to be well posed is that the function
+\[ 
+y\mapsto \phi(y)+\frac{1}{\pi}\int_a^b\,
+\text{Log}\bigl[\frac{1}{|s-y|}\bigr]\cdot \psi(s)\cdot ds
+\]
+is real analytic.
+Here we shall focus upon
+uniqueness of solutions to  homogeneous
+elliptic boundary value problems 
+expressed
+by
+a system of first order partial differential equations.
+Let
+$n=2m$ be an even positive integer and consider two $n\times n$-matrices
+$\mathcal A=\{A_{pq}\}$ and $\mathcal B=\{B_{pq}\}$
+whose elements are real-valued functions of $x$ and $y$
+where
+the $B$-functions are continuous and the
+$A$-functions  of class $C^2$. 
+The two matrices give
+a system of first order
+PDE-equations whose solutions are 
+vector valued functions $(f_1,\ldots,f_n)$
+defined in a half-disc
+\[
+D_+(\rho)=\{ x^2+y^2<\rho^2\quad\colon\, x>0\}
+\]
+where these $f$-functions satisfy the system:
+\[ 
+\frac{\partial f_p}{\partial x}+
+\sum_{q=1}^{q=n}\,
+A_{pq}(x,y)\cdot
+\frac {\partial f_p}{\partial y}+
+\sum_{q=1}^{q=n}\,
+B_{pq}(x,y)\cdot f_q(x,y)=0\tag{*}
+\]
+
+
+\noindent
+together with the boundary conditions:
+\[
+f_p(0,y)=0\quad\text{for all}\quad 1\leq p\leq n\tag{**}
+\]
+
+\medskip
+
+\noindent
+We  get   eigenvalues of the
+$\mathcal A$-matrix 
+when $(x,y)$-varies,  i.e.
+the $n$-tuple of  roots
+$\lambda_1(x,y),\ldots,\lambda_n(x,y)$ which solve
+\[
+\text{det}\,\bigl(\lambda\cdot E_n-\mathcal A(x,y)\bigr)=0\tag{1}
+\]
+
+
+
+\noindent
+If the $\lambda$-roots are non-real we say that (*)  is an elliptic system.
+Assuming vanishing Cauchy data expressed by (**) above
+one expects that a  solution
+$f$  is identically zero.
+This uniqueness  was proved by
+Erik Holmgren in the  article [Holmgren]
+from 1901
+under the assumption that the $A$-functions and the
+$B$-functions are real analytic.
+The question remained if the uniqueness still holds under less
+regularity on the coefficient functions. This was settled 30 years later 
+by  Carleman where
+the following is proved in [Carleman]:
+\bigskip 
+
+\noindent
+{\bf 1. Theorem.} \emph{Assume that the
+$\lambda$-roots are all simple and non-real as 
+$(x,y)$ varies in the open half-disc. Then every solution $f$ to (**) 
+with vanishing Cauchy-data  is identically zero}.
+\medskip
+
+\noindent
+The proof requires several steps and 
+the methods which occur below
+have inspired more recent work where   Carleman estimates 
+are used to handle  boundary value problems
+in PDE-theory.
+\newpage
+
+
+\centerline {\bf {A. Proof of Theorem 1: First part}}
+\medskip
+
+\noindent
+The system  in (*) is equivalent to a system of
+$m$-many equations where one  seeks
+complex-valued functions
+$g_1,\ldots,g_m$   satisfying:
+\[ 
+\frac{\partial g_p}{\partial x}+
+\sum_{q=1}^{q=m}\,
+\lambda_p(x,y)\cdot
+\frac {\partial g_p}{\partial y}=
+\]
+\[
+\sum_{q=1}^{q=m}\,
+a_{pq}(x,y)\cdot g_q(x,y)+
+b_{pq}(x,y)\cdot \bar g_q(x,y)=0\,\,\colon\,1\leq p\leq m\tag{**}
+\]
+Above $\{a\uuu{pq}\}$ and $\{b\uuu{pq}\}$
+are complex\vvv valued.
+The  reduction  to this complex family of equations
+is left to the reader and from  now
+on we study the system (**). Theorem 1 amounts
+to prove that
+if the $g$-functions satisfy (**) 
+in a half-disc
+$D_+(\rho)$
+and
+\[
+g_p(0,y)=0\quad\colon\quad 1\leq p\leq m
+\]
+then there exists some $0<\rho_*\leq \rho$ such that the $g$-functions
+are identically zero in 
+$D_+(\rho_*)$. To attai this we
+introduce domains as follows:
+For a pair  $\alpha>0$ and 
+$\ell>0$ we put
+\[ 
+D_\ell(\alpha)=\{
+x+y^2-\alpha x^2<\ell^2\}\cap\{ x>0\}\tag{1}
+\]
+
+
+\noindent
+Notice that the boundary
+\[ 
+\partial D_\ell(\alpha)=\{0\}
+\times[-\ell,\ell]\,\cup T_\ell\quad\text{where}\quad
+x+y^2-\alpha x^2=\ell^2\,\, \text{holds on}\,\, T_\ell
+\]
+
+
+
+\noindent
+Above $\alpha$ and $\ell$ are small so the the $g$-functions satisfy (**)
+in $D_\ell(\alpha)$.
+For  each  $t>0$
+we define  the  $m$-tuple of functions
+by
+\[
+\phi_p(x,y)= g_p(x,y)\cdot e^{-t(x+y^2-\alpha x^2)}\tag{2}
+\]
+Since the $g$-functions satisfy   (**)
+one verifies easily that
+the $\phi$-functions
+satisfy the system
+\[
+\frac{\partial \phi_p}{\partial x}+
+\frac {\partial}{\partial y}\bigl(\lambda_p\cdot\phi_p)+
+t(1-2\alpha x+2y\lambda_p\bigl)\cdot\phi_p=H_p(\phi)\tag{3}
+\]
+where 
+\[
+H_p(\phi)=\sum_{q=1}^{q=n}\,
+a_{pq}(x,y)\cdot \phi_q(x,y)+
+b_{pq}(x,y)\cdot \bar \phi_q(x,y)=0\,\,\colon\,1\leq p\leq m
+\]
+
+\noindent
+Next, we set
+\[ 
+\Phi(x,y)=\sum_{p=1}^{p=m}\, |\phi_p(x,y)|\tag{4}
+\]
+
+
+\noindent
+The crucial step in the proof
+of Theorem 1
+is to establish the following inequality.
+\medskip
+
+\noindent
+{\bf A.1 Proposition.} \emph{Provided that $\alpha$ from the start is sufficiently large
+there exists some $0<\ell_*\leq\ell$ and a constant $C$
+which is independent of $t$  such that}
+\[
+\iint_{D_{\ell_*}}\, \Phi(x,y)\cdot dxdy \leq
+C\cdot \int_{T_{\ell_*}}\, \sum_{p=1}^{p=n}\,|\phi_p|\cdot
+ |dy-\lambda_p\cdot dx|
+\]
+\medskip
+
+\noindent
+\centerline{\emph{How to deduce  Theorem 1.}}
+\medskip
+
+\noindent
+Let us show why Proposition A.1 gives Teorem 1.
+In addition to
+$\ell_*$ we fix some
+$0<\ell_{**}<\ell_*$.
+In  (2) above we have used the function
+\[
+w(x,y)= e^{-t(x+y^2-\alpha x^2)}\implies
+\]
+\[ w(x,y)= e^{-t\ell_*^2}\quad\colon\quad
+(x,y)\in T_{\ell_*}\quad\colon\quad
+w(x,y)\geq e^{-t\ell_{**}^2}\quad\colon\quad (x,y)\in D_{\ell_{**}}\tag{i}
+\]
+
+\medskip
+
+\noindent
+Next, we have
+$|\phi_p|= |g_p|\cdot w$ for each $p$. Replacing the left hand side in Proposition
+A.1 by the area integral over the smaller
+domain
+$D_{\ell_{**}}$
+we obtain the inequality;
+\[
+\iint_{D_{\ell_{**}}}\,
+\sum_{p=1}^{p=m}\,| g_p(x,y)|\cdot dxdy\leq
+C\cdot  e^{t(\ell_{**}^2-\ell_*^2)}\cdot 
+\int_{T_{\ell_*}}\, \sum_{p=1}^{p=n}\,|g_p|\cdot
+ |dy-\lambda_p\cdot dx|\tag{ii}
+\]
+\medskip
+
+\noindent
+Here (ii)  holds for every $t>0$. When
+$t\to+\infty$ we have 
+$ e^{t(\ell_{**}^2-\ell_*^2)}\to 0$
+and can therefore conclude that
+
+
+
+\[
+\iint_{D_{\ell_{**}}}\,
+\sum_{p=1}^{p=m}\,| g_p(x,y)|\cdot dxdy=0
+\]
+
+\noindent
+This means  that the $g$-functions are all zero in
+$D_{\ell_{**}}$ and Theorem 1 follows.
+
+
+\bigskip
+
+\centerline{\bf B. Proof of Proposition A.1}
+\medskip
+
+\noindent
+The proof  relies upon the
+construction of certain $\psi$-functions.
+More precisely, when
+$t>0$ and  a point $(x_*,y_*)\in D_\ell$ are given we shall construct
+an $m$-tuple of $\psi$-functions satisfying
+the following:
+
+ \bigskip
+
+\noindent
+{\bf Condition 1.} Each
+$\psi_p$ is defined in
+the punctured domain
+$D_\ell\setminus\{(x_*,y_*)\}$
+where $\psi_p$ for a given $1\leq p\leq m$
+satisfies the equation
+\[
+\frac{\partial\psi}{\partial x}+
+\lambda_p\cdot\frac{\partial\psi}{\partial y}-
+t(1-2\alpha x+2y\lambda_p)\psi_p=0\tag{i}
+\]
+
+
+
+
+
+\noindent
+{\bf Condition 2}. For each $p$ the
+singularity of $\psi_p$ at $(x_*,y_*)$
+is such that the line integrals below have a limit:
+\[
+\lim_{\epsilon\to 0}\,
+\int_{[z-z_*|=\epsilon}\,\psi_p\cdot (dx-\lambda_p\cdot dy)=2\pi\tag{ii}
+\]
+
+
+\noindent
+{\bf Condition 3.} There exists a constant $K$
+which is independent both of
+$(x_*,y_*)$ and of $t$ such that
+\[
+|\psi_p(z)|\leq\frac{K}{|z-z_*|}\tag{iii}
+\]
+Notice that the $\psi$-functions depend on the parameter
+$t$, i.e. they are found for each $t$ but the constant $K$ in (3) is independent of
+$t$.
+\bigskip
+
+\centerline {\emph{ The deduction of Proposition A.1}}
+\bigskip
+
+\noindent
+Before the $\psi$-functions are  constructed in Section C
+we show how  they  give
+Proposition A.1.
+Consider a point  $z_*\in D_+(\ell)$.
+We get the associated $\psi$-functions from ¤ B
+at this particular point.
+Remove a small disc
+$\gamma_\epsilon$ centered at $z_*$ and
+consider some fixed
+$1\leq p\leq m$.
+Now $\phi_p$ satisfies the differential equation (3) from section A and 
+$\psi_p$ satisfies (i) in Condition 1 above.
+Stokes theorem gives:
+\[
+\int_{T_\ell}\phi_p\cdot\psi_p\cdot \bigl(dy-\lambda_p\cdot dx\bigr)
+=\iint_{D_\ell\setminus\gamma_\epsilon}\,
+H_p(\phi)\cdot \psi_p\cdot dxdy+
+\int_{|z-z_*|=\epsilon}
+\, \phi_p\cdot\psi_p\cdot \bigl(dy-\lambda_p\cdot dx\bigr)
+\]
+\medskip
+
+
+\noindent
+Passing to the limit as $\epsilon\to 0$, Condition 2 
+\[
+\phi_p(x_*,y_*)=\frac{1}{2\pi}
+\int_{T_\ell}\phi_p\cdot\psi_p\cdot \bigl(dy-\lambda_p\cdot dx\bigr)
+-\frac{1}{2\pi}\cdot \iint_{D_\ell}\,
+H_p(\phi)\cdot \psi_p\cdot dxdy\tag{1}
+\]
+
+
+\noindent
+Let $L$ be the maximum over $D_\ell$ of the 
+coefficient functions  of $\phi$ and $\bar\phi$
+which appear in  $H_p(\phi)$
+from (3) i ¤ A. We have also the constant $K$ from
+Condition 3 for $\psi_p$. The
+triangle inequality gives:
+
+
+\[
+\bigl|\phi_p(x_*,y_*)\bigr|\leq
+\frac{K}{2\pi}
+\int_{T_\ell}\frac{|\phi_p|\cdot |dy-\lambda_p\cdot dx|}{z-z_*|}
++\frac{LK}{\pi}\cdot \sum_{q=1}^{q=m}\,
+\iint_{D_\ell}\,
+\frac{|\phi_q|}{|z-z_*|}\cdot dxdy\tag{*}
+\]
+\medskip
+
+\noindent
+Next, we use the elementary  inequality
+
+\[ \iint_\Omega\, \frac{dxdy}{\sqrt{x-a)^2+(y-b)^2}}
+\leq 2\cdot\sqrt{\pi}\cdot \sqrt{\text{Area}(\Omega)}\tag{**}
+\]
+where $\Omega$ is an arbitrary  bounded domain
+and $(a,b)\in\Omega$.
+Apply (**)  with
+$\Omega=D_\ell$ and set
+$S=\text{area}(D_\ell)$.
+Integrating both sides in (*) over $D_\ell$
+for every
+$p$ and taking the sum we get
+\[
+\iiint_{D_\ell}\, \Phi\cdot dxdy\leq
+\]
+\[
+K\cdot\sqrt{\frac{S}{\pi}}\cdot \int_{T_\ell}\,
+\sum_{p=1}^{p=m}\, |\phi_p|\cdot |dy-\lambda_p\cdot dx|
++2\pi m LK\cdot \sqrt{\frac{S}{\pi}}\iint_{D_\ell}\,
+\Phi\cdot dxdy
+\]
+\medskip
+
+\noindent
+This inequality hold for all small $\ell$.  Choose
+$\ell$ so small that
+\[
+2\pi m LK\cdot \sqrt{\frac{S}{\pi}}\leq\frac{1}{2}
+\]
+Then the inequality above gives
+\[
+\iiint_{D_\ell}\, \Phi\cdot dxdy\leq
+2\cdot 
+K\cdot\sqrt{\frac{S}{\pi}}\cdot \int_{T_\ell}\,
+\sum_{p=1}^{p=m}\, |\phi_p|\cdot |dy-\lambda_p\cdot dx|\tag{***}
+\]
+
+
+\noindent
+Finally, consider some relatively compact
+domain
+$\Delta$ in $D_\ell$. Then there exists
+$0<\ell_*<\ell$ such that
+\[
+\Delta\subset D_{\ell_*}
+\]
+Now we notice that
+
+\[ 
+|\phi_p(z)|\geq e^{-t\ell_*^2}\cdot |u_p(z)|
+\quad\colon\quad z\in \Delta\quad\colon\quad
+|\phi_p(z)|\geq e^{-t\ell^2}\cdot |u_p(z)|
+\quad\colon\quad z\in T_\ell
+\]
+
+
+\noindent
+We conclude that
+\[
+e^{-t\ell_*^2}
+\,\iiint_\Delta\, \sum_{p=1}^{p=m}\, |u_p(z)|\cdot dxdy\leq
+e^{-t\ell^2}\cdot 2\cdot 
+K\cdot\sqrt{\frac{S}{\pi}}\cdot \int_{T_\ell}\,
+\sum_{p=1}^{p=m}\, |u_p|\cdot |dy-\lambda_p\cdot dx|\tag{****}
+\]
+\medskip
+
+\noindent Here (****) hold for every $t>0$. Passing to the limit
+as
+$t\to+\infty$ it follows that
+
+\[
+\cdot \iiint_\Delta\, \sum_{p=1}^{p=m}\, |u_p(z)|\cdot dxdy\leq
+\]
+Since $\Delta$ was any relatively compact subset of
+$D_\ell$, we conclude  that the $u$-functions are zero in
+$D_\ell$ and Theorem 1   follows.
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf {C. Construction of the $\psi$-functions.}}
+
+\bigskip
+
+
+\noindent
+Before we embark upon specific constructions
+we investigate the whole family of solutions to
+a first order differential operators  of the form
+\[
+Q=\partial_x+\lambda(x,y)\cdot\partial_y\tag{*}
+\] 
+where $\lambda(x,y)$ is a complex 
+valued $C^2$-function whose
+imaginary part is $>0$. 
+Set
+\[ 
+\lambda(x,y)=\mu(x,y)+i\cdot\tau(x,y)\quad\colon\, \tau(x,y)>0
+\]
+
+
+\noindent
+Now we look for
+solutions 
+$h(x,y)$ to the equation $Q(h)=0$.
+With
+$h(x,y)=\xi(x,y)+i\cdot\eta(x,y)$
+where $\xi$ and $\eta$ are real-valued $C^2$-functions this gives
+the differential system:
+\[
+\frac{\partial\xi}{\partial x}+\mu_p\cdot
+\frac{\partial\xi}{\partial y}-
+\tau_p\cdot \frac{\partial\eta}{\partial y}=0
+\]
+\[
+\frac{\partial\eta}{\partial x}+\mu_p\cdot
+\frac{\partial\eta}{\partial y}+
+\tau_p\cdot \frac{\partial\xi}{\partial y}=0
+\]
+
+\medskip
+
+\noindent
+Suppose we have found one solution 
+ $h=\xi+i\cdot\eta$ where the 
+Jacobian 
+$\xi_x\eta_y-\xi_y\eta_x$
+is $\neq 0$ at the origin. 
+Then $(x,y)\mapsto (\xi,\eta)$ is a local $C^2$-diffeomorphism.
+With  $\zeta=\xi+i\eta$ 
+we have the usual Cauchy\vvv Riemann operator.
+\[ 
+\frac{1}{2}(\frac{\partial}{\partial\xi}+
+i\cdot \frac{\partial}{\partial\eta})
+\]
+
+\noindent
+Let $g(\xi+i\eta)$ be  a holomorphic function
+in the complex $\zeta$-space with $\zeta=\xi+i\eta$ and put
+\[ 
+g_*(x,y)=g(\xi(x,y)+i\eta(x,y))
+\] 
+Then one easily verifies that $Q(g\uuu*)=0$
+and conversely, every solution
+to this equation is expressed by 
+a $g\vvv*$function derived from an
+analytic function in the complex $\zeta$space.satisfies  $Q(g_*)$.
+\medskip
+
+\noindent
+{\bf{Conclusion.}} \emph{If a non-degenerate solution $h=\xi+i\eta$ has been found
+then the homogenous solutions to $Q$ is in a 1-1 correspondence to
+analytic functions in the $\zeta$-variable.}
+\medskip
+
+\noindent
+{\bf{Remark.}} The effect
+of a coordinate transformation
+as above is that
+the $Q$-operator 
+is transported to the
+Cauchy-Riemann operator in
+the complex $\zeta$-space where $\zeta=\xi+i\eta$.
+Later we   employ such  $(\xi,\eta)$-transformations
+to
+construct  
+solutions to an inhomogeneous equation of the form
+\[ 
+Q(\psi)=(t-\alpha x+2y\lambda(x,y))\cdot \psi(t,x,y)
+\]
+where $t$Êis a positive parameter and the
+$\psi$-functions 
+will have certain specified properties.
+Notice that it suffices to construct
+the
+$\psi$-functions separately, 
+i.e. we no longer have to bother about
+a differential system. With a fixed
+$p$ fixed   $\lambda_p(x,y)=\mu_p+\tau_p$ and
+from now on we may drop the index $p$ and explain how to obain
+$\psi$-functions satisfying
+the three conditions from ¤ B.
+So we consider
+the first order differential operator
+\[
+Q=\frac{\partial}{\partial x}+(\mu(x,y)+i\tau(x,y))\cdot
+\frac{\partial}{\partial y}\tag{1}
+\]
+where 
+$\tau(x,y)>0$.
+\bigskip
+
+
+
+\noindent
+{\bf C.1 A class of $(\xi,\eta)$-functions.}
+Let $V(x,y)$ and $W(x,y)$
+be two quadratic forms, i.e. both are homogeneous polynomials of
+degree two. Given a point $(x_*,y_*)$ 
+and with $z=x+iy$
+we seek  a coordinate transformation $(x,y)\mapsto(\xi,\eta)$
+of the form:
+
+\[ 
+\xi(z)= \tau_p(z_*)\cdot (x-x_*)+V(x-x_*,y-y_*)+\gamma_1(z)
+\cdot|z-z_*|^2
+\]
+\medskip
+\[ 
+\eta(z)= (y-y_*)-\mu_p(z_*)\cdot (x-x_*)+W(x-x_*,y-y_*)+
+\gamma_2(z)\cdot|z-z_*|^2
+\]
+\medskip
+
+\noindent{\bf Lemma.}
+\emph{There exists  a pair of quadratic forms
+$V$ and $W$ whose coefficients depend on
+$(x_*,y_*)$ and a pair of
+$\gamma$-functions which both vanish at
+$(x_*,y_*)$ up to order one such that the complex\vvv valued function
+$\xi+i\eta$ solves the homogeneous equation $Q(\xi+i\eta)=0$.}
+\medskip
+
+\noindent
+A solution above
+gives
+a change of variables
+so that
+$Q$ is expressed in new real coordinates
+$(\xi,\eta)$ by the operator
+\[
+\frac{\partial}{\partial \xi}+i\cdot \frac{\partial}{\partial\eta}\tag{2}
+\]
+There exist many coordinate transforms
+$(x,y)\to(\xi,\eta)$
+which change $Q$ into (2).
+This \emph{flexible choice} of coordinate transforms
+is used to  construct  the required
+$\psi$-functions. Notice  that
+Condition (2) in ¤ B is of a pointwise character, i.e. 
+it suffices to find a $\psi$-function for a given point
+$z_*=x_*+iy_*$. With this in mind
+the required construction in ¤ B boils down to perform
+a suitable coordinate transformation
+adapated to $z_*$,
+and after use the existence of
+a $\psi$-function which to begin with  is expressed in the
+$(\xi,\eta)$-variables where  the $Q$-operator is replaced by
+the Cauchy-Riemann operator. In this special case
+the required $\psi$-function is easy to find, i.e. see 
+the remark in ¤ B.0.
+So all that remains is to exhibit suitable coordinate transformations
+which send $Q$ to the $\bar\partial$-operator. We leave it to the reader to
+carry out such coordinate transformations. If
+necessary, consult
+Carleman's article where
+a very detailed construction appears.
+
+
+\bigskip
+
+
+
+\end{document}
+
+\centerline{\bf{The Schršdinger equation.}}
+
+\bigskip
+
+
+\noindent
+We work in ${\bf{R}}^3$ with the coordinates
+$(x,y,z)$. Let $c(x,y,z)$ be a real-valued function in 
+$L^2_{\text{loc}}({\bf{R}}^3$.
+In order that the subsequent
+formulas can be stated in a precise manner we also assume that
+$c$is almost everywhere continuous which of course is a rather weak condition and
+in any case satisfied in applications.
+Next, let $\Delta$ be the Laplace operator and
+define the operator $L$ by
+
+\[ 
+L(u)=\Delta(u)+c\cdot u\tag{*}
+\]
+Denote by $E_L({\bf{R}}^3)$
+the set of functions $u$ such that both
+$u$ and $L(u)$ belong to $L^2({\bf{R}}^3)$. Given a
+pair $(f,\lambda)$ where
+$f\in L^2({\bf{R}}^3$
+and $\lambda$ is a complex number
+we seek solutions $u\in E_L({\bf{R}}^3)$ such that
+
+\[ 
+L(u)+\lambda\cdot u=f\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf{The case $\mathfrak{Im}(\lambda\neq 0$.}}
+By
+a classic result about solutions to the Neumann
+boundary value problem  in
+open balls in ${\bf{R}}^3$ one proves that
+(1) has at least one solution $u$ whenever $\lambda$ is not real.
+The remains to investigate the uniqueness, i.e, when one has the implication
+
+
+\[
+\mathfrak{Im}(\lambda\neq 0\quad\text{and}\quad 
+L(u)+\lambda\cdot u=0\implies u=0\tag{***}
+\]
+\medskip
+
+
+\noindent
+This uniqueness property depends on the $c$-function.
+A sufficient  condition is the following:
+
+
+\medskip
+
+\
+\medskip
+
+\noindent
+{\bf{Theorem.}} \emph{Assume that there exists a constant $M$
+and some $r_*>0$ such that}
+\[ 
+c(x,y,z)\leq M
+\quad\text{when}\quad x^2+y^2+z^2\geq r_*^2
+\]
+Then (***) above holds.
+
+
+\bigskip
+
+
+\noindent
+{\bf{The spectral $\theta$-function.}}
+When (***)  holds it was proved in
+[Carleman] that
+classical solutions to the Neumanns boundary value problem in
+open balls yield a $\theta$-function
+which enable us to describe  solutions to 
+(*) for real $\lambda$-values.
+More precisely, there exists two increasing sequence of positive real numbers
+$\{\lambda^*(\nu)\}$ and $\lambda_*(\nu)\}$
+and two sequence of pairwise orthogonal functions
+$\{\phi_\nu(p))\}$ and $\{\psi_\nu(p)\}$ in $L^({\bf{R}})^3$
+where all these functions have $L^2$-norm equal to one such that
+the following hold. First, set 
+
+
+\[
+\theta(p.q,\lambda)= \sum_{0<\lambda^*(\nu)\leq\lambda}\, \phi_\nu(p)\cdot\phi_\nu(q)
+\quad\colon\quad \lambda>0
+\]
+
+\[
+\theta(p.q,\lambda)= -\sum_{\lambda\leq \lambda_*(\nu)\leq<0}
+\, \psi_\nu(p)\cdot\psi_\nu(q)
+\quad\colon\quad \lambda<0
+\]
+such that the following hold:
+\bigskip
+
+\[
+v(p)=\lim_{R\to \infty}\, \sum_{[\lambda_\nu<R}\, 
+\theta(p,q,\lambda)\cdot v(q)\cdot dq\quad\text{for all}
+\quad v\in L^2({\bf{R}}^3)\tag{1}
+\]
+
+\[
+v\in E_L({\bf{R})^3}\quad\text{if and only if}\quad
+xxxx\tag{2}
+\]
+
+\[
+L(v)(p)=
+\lim_{R\to \infty}\, \sum_{[\lambda_\nu<R}\, 
+\lambda\cdot [
+\int_{{\bf{R}}^3}
+\theta(p,q,\lambda)\cdot v(q)\cdot dq]\cdot d\lambda\quad\text{for all}\quad
+v\in E_L({\bf{R}}^3)\tag{3}
+\]
+Here the equaliy holds in $L^2$, i.e, in the sense of a Plancherel's limit.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+Here the equaliy holds in $L^2$, i.e, in the sense of a Plancherel's limit.
+
+
+\medskip
+
+\noindent
+{\bf{Construction of the $\phi$-functions. }}
+For each finite $r$ we have the ball $B_r$ and consider the space $E_L(B_r)$ of 
+functions 
+$u$ in $B_r$ such that both $u$
+and $L(u)$ also belong to $L^2(B_r)$.
+By a classical result in the Fredholm theory that
+exist discrete sequences of real numbers
+$\{\lambda*(\nu)$ and $\lambda_*(\nu)$ as above
+and two families of orthonormal functions
+$\{\phi^{(r)}_\nu\}$ and $\{\psi^{(r)}_\nu\}$
+satisfying (xx) 
+
+and here a classical result shows that the real eigenvalues 
+to the equation $L(u)+\lambda\cdot u=0$
+xxx
+
+\[ 
+xxx
+\]
+
+
+\noindent
+The proofs of the assertions above rely on a systematic use of Green's formula.
+To begin with we recall how to
+express solutions to an inhomogeneous
+the Laplace equation by an integral formula.
+\medskip
+
+
+\noindent
+{\bf{A. The equation $\Delta(u)=\phi$}}.
+let $D$ be a domain in
+${\bf{R}}^3$ and $\phi$
+a function in $L^2(D)$.
+Then a function $u$ for which both $u$ and $\Delta(u)$ belong to
+$L^2(D)$ gives $\Delta(u)=\phi$ if and only if
+the following hold for every $p\in D$ and every 
+$\rho<\text{dist}(p,\partial D)$:
+
+\[
+u(p)=
+\frac{1}{2\pi \rho^2}\cdot \int_{B_p(\rho)}\,
+\frac{1}{|p-q|}\cdot u(q)\cdot dq+
+\frac{1}{4\pi \rho^2}\cdot \int_{B_p(\rho)}\,
+A(p,q)\cdot \phi(q)\cdot dq\tag{i}
+\]
+where we have put
+
+\[ 
+A(p,q)= \frac{2}{\rho}-\frac{1}{|p-q|}-\frac{|p-q|}{\rho^2}\tag{ii}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this result.The hint is to apply Green's formula
+while $\phi$ is replaced by $\Delta(u)$ in the last integral.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Let us also recall
+also that when $\Delta(u)$ is in $L^2$, then $u$ is automatically
+a continuous function in $D$.
+\medskip
+
+
+\noindent
+{\bf{The class $\mathfrak{Neu}(B_r)$}}.
+Let $B_r$ be the open ball of radius $r$ centered at the origin.
+The class of functions $u$  which are continuous on the closed ball
+and whose interior normal derivative
+$\frac{\partial u}{\partial{\bf{n}}}$ is continuous on the boundary
+$S^2[r]$ is denoted by
+$\mathfrak{Neu}(B_r)$. 
+\medskip
+
+
+\noindent
+{\bf{The Neumann equation.}}
+Let $c(x,y,z)$ be a function in $L^2({\bf{R}}$
+and consider also a pair $a,H$ where
+$a$ be a continuous function on
+$S^2[r]$ and 
+$H(p,q)$ a continuous hermitian function on
+$S^2[r]\times S^2[r]$, i.e.  $H(q,p)=\bar H(p,q)$ hold for all pairs 
+of point $p,q$ on
+the sphere $S^2[r]$.
+With these notations the following hold:
+
+
+\bigskip
+
+
+\noindent
+{\bf{Theorem}} For each $f\in L^2(B_r)$ and every
+non-real complex number $\lambda$ there exists a unique $u\in 
+\mathfrak{Neu}(B_r)$
+such that $u$ satisfies the two equations:
+
+
+\[ 
+L(u+\lambda\cdot u=f\quad\text{holds in}\quad B_r
+\] 
+
+\[
+\partial u/\partial {\bf{n}}(p)=xx
+\]
+Moreover, one has the $L^2$-estimate
+
+\[
+\int_{B_r}\, |u|^2\cdot dxdydz\leq
+\bigl|\frac{1}{\mathfrak{Im}(\lambda)}\bigr|\leq
+\int_{B_r}\, |f|^2\cdot dxdydz
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+Classic result: $R>0$ we have unit ball $B_R$ and unit sphere $S_R$.
+Let $\mathfrak{Neu}(R)$
+set uf $u$ -functions where $\Delta(u)$ in $L^2$, continuous on closed ball
+and limit of interior derivative as a continuous funtion.
+Given $c\in L^2(B_R)$ define
+
+\[
+L(u)= \delta(u)+c\cdot u
+\]
+\medskip
+
+
+\noindent
+{\bf{Theorem}} For each pair $(a,H)$ in (*) there exists a unique
+$u\in \mathfrak{Neu}(R)$ such that
+\[ 
+L(u+\lambda\cdot u=f\quad\text{holds in}\quad B_R
+\] 
+and $u$ saisfies th boundsry condition
+
+\[
+\partial u/\partial {\bf{n}}(p)=xx
+\]
+
+from that $L^2$-esteimate as well.
+
+\bigskip
+
+Do if for $R=m$ running over positive integers.
+Catch up sequence with $L^2$-convergence bounded uniformly.
+$u_m\to u_*$ weak sense and see tha $u_*$ is a solution to (*) on al over space.
+
+Second point about eventual uniquenss. Class I type. Euquialent condition-
+
+
+\end{document}
+
+

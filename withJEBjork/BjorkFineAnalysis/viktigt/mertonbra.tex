@@ -1,0 +1,897 @@
+
+\documentclass[12pt]{amsart} 
+
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\begin{document} 
+
+
+\centerline{\bf{An optimization problem 
+in the course Mathematical Economics}}
+
+
+\bigskip
+
+
+\noindent
+Let us first describe a  model 
+in continuous time.
+At time $t=0$ one starts the
+Brownian  motion $\mathcal W$
+at $x=0$. So   $W(t)$ is normally distributed
+with variance $\sqrt{t}$
+for every $t>0$.
+Imagine a player who seeks
+to maximize a profit 
+where the role is that
+the player can stop the random Brewnian path at any time
+value $0<t\leq 1$ and get the reward $W(t)$.
+If the player never stops
+the game and $W(1)<0$ no
+debt occurs, i.e.  the net reward is zero in this case.
+It means that the player never can loose money 
+in this game. The question arises how to maximize expected profit.
+The absence of
+"negative loss" at the terminal tim value $t=1$
+implies that the optimal strategy to maximize
+\emph{expected profit} is to
+wait until $t=1$ and receive  the profit $W(1)$ if it happens to
+be positive.
+With this strategy  the expected profit becomes
+\[
+\frac{1}{\sqrt{2\pi}}\cdot \int_0^\infty\, xe^{-x2/2}\, dx=
+\frac{1}{\sqrt{2\pi}}
+\]
+A more involved problem arises if a 
+discount factor is introduced. With $r>0$ we suppose that the player gets the
+reward 
+\[
+e^{-rt}\cdot W(t)
+\]
+if the game is stopped at a time value $t$.
+With $r>0$  the previous strategoy is not optimal in order to
+maximize the expected profit. 
+Denote the expected profit for a given $r>0$ by
+$\mathcal P(r)$. It is clear that the function
+\[
+r\mapsto \mathcal P(r)
+\] 
+decreases with $r$.
+One may ask if this function can be
+found in a "closed form".
+This is
+not
+known at present,  i.e. so far mathmatics is  not     sufficiently 
+developed to
+determine $\mathcal P(r)$ with
+an "analytic formula".
+The reason is that 
+the 
+$\mathcal P$-function appears to a solution of a  free boundary
+value problem where  certain non-linear differential
+PDE-equations appear whose solutions are not known.
+However, one can derive numerical solutions with high
+degree of precision using
+approximations of  the continuous $W$-process with  binomial trees. Here
+one 
+follows a device introduced by Kolmogorov in 1930
+which gives a backward solution to
+determine the discrete $\mathcal P$-functions.
+More precisely, let $N$
+be a large positive integer, say $N=10^3$.
+In the  discrete process which
+runs over $N$  trials with heads or tails of equal
+probability, one moves at every step 
+with the size
+plus or minus $\frac{1}{\sqrt{N}}$.
+After $k$ many  trials the player gets the reward
+\[
+\rho _k(\nu)=e^{-rk/N}\cdot \frac{v}{\sqrt{N}}\tag{1}
+\]
+where $\nu$ is the difference of the number of heads and tails after these 
+$k$ trials.
+Next, for each $0\leq k\leq N$
+we denote by $\Pi_k(\nu)$
+the expected profit when the player has not 
+terminated the game
+up to the $k$-th tossing with the coin
+and $\nu$  is the difference of number of heads and tails after
+these  first $k$ trials.
+If the player has continued the game until
+$k=N$ there is no longer a chice and we see that
+\[
+\pi_N(\nu)=\frac{\nu}{\sqrt{N}}\cdot e^{-r}\quad\colon \nu\geq 1\quad \&\quad 
+\pi_N(\nu)=0\,\colon\,  \nu\leq 0\tag{2}
+\]
+When $k<N$
+the player can either stop the game and receive
+(1) or continue. The choice is determined by the equation
+\[
+\pi_k(\nu)= \max\, \{\rho_k(\nu)\,;\,
+\frac{1}{2}(\pi_{k+1}(\nu-1)+\Pi_{k+1}(\nu+1)\}\tag{*}
+\]
+One refers to (*) as Kolmogorov's backward equation. Since
+we know the function in (2) it is clear that
+an induction which starts with $K=N$ and then moves
+back determine
+the functions
+\[
+\nu\mapsto \pi_k(\nu)
+\]
+for every $k$. In particular we find the number
+$\pi_0(0)$ which is the expexted profit when the player starts
+the game.
+This number depends on $r$ and $N$. Put
+\[
+\mathcal P(N,r)= \pi_0(0)
+\] 
+with
+the $\pi$-function determined via (1-2) and (*). Now 
+de Moivre's central limit theorem from 1730
+implies that
+\[
+\lim_{N\to \infty}\, \mathcal  P_N(r)= \mathcal P(r)
+\]
+\medskip
+
+
+\noindent
+{\bf{2. Optimal strategy.}}
+If $N$ is given and we have found
+the doubly indexed $\pi$-function, then
+the player knows   how to maximize expected profit.
+More precisely, if the game has continued up to $k$ trials
+and  the number of heads minus tails is some integer $\nu$
+then the player stops
+at this moment to pick the reward in (1) if and only if
+\[
+\pi_k(\nu)=\rho_k(\nu)\tag{2.1}
+\]
+Thus yields
+a "striking curve"
+of pairs $(\nu,k)$ for which  (2.1) holds,
+With the aid of a computer one may
+also plot this curve for a given $r>0$ and then let
+$N$ increase, The "limit" of these strikting curves
+exists for a fixed $r$ and turns out to be a decreasing and
+concave function 
+\[
+t\mapsto \phi_r(t)
+\]
+So here $\phi_r(t)$  is the function where a player
+following a continuous Brownian motion
+stops the process at the first time value $t_*$ for which
+$W(t_*)=\phi_r(t_*)$ while
+\[
+t<t_*\implies W(t)<\phi_r(t)
+\]
+Hence,  using a computer 
+one gets good numerical  solutions to
+these $\phi$-functios for every given  $r>0$.
+\medskip
+
+
+\noindent
+Another  function arises for the owner of the Casino when
+many players are eager to try the game. Namely, each player will
+stop the game at a tandom time
+$t_*$ determined as above.
+Now the owner of the Casino may  be interested to
+find
+the distribution of these terminating time values
+which for every individual player is a random
+event.
+To solve this numerically with a given $r$
+one can  first
+find a good numerical solution for the striking function
+$\phi_r$mabovce,   i.e. in a discrete model it is picewise linear with
+$N$ m any conrner points. Then the owner of the Casino - expecting that all players
+are as smart as Kolmogorov !  - can perfom a Monte  Carlo simulation
+using this $\phi$-function and find the 
+distribution of the random time when  players  stop the game.
+The solution to this
+problem is of course of interest  in a large Casino  where several players
+want to try their luck on "machines" at free disposal, but thr number of these
+machines is limited.
+If the enrtrance  ticket for a game is precisly equal to 
+$\mathcal P(r)$ this does not give any expected profit for the Casino when 
+all palyers have learnt the lesson from Kolmogorov. One may then suppose that a "small" extra amount
+must be  paid by every player to the casino which therefore makes a net profit
+in the long run,  i.e. just as the extra zero in a roulette.
+While all this takes place, we notice that the casino may also
+choose the delay factor $r$ in advance.
+Here one encounters a new optimisation problem
+related to the number of available machines where
+players  try their luck. The  point is of
+course
+that the fee for a play measured by $\mathcal P(r)$ plus a small quantity
+increases with $r$, and  on the other hand the
+expected time before an individual player stops increases.
+So  the Casino is confronted with optimization problem
+and it is not clear how
+to choose $r$ in an optimal fashion.
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{Risky asssets}}
+
+
+\bigskip
+
+
+
+\centerline{\emph{Contents}}
+
+\bigskip 
+
+
+
+\noindent
+1. The log-normal distribution
+\bigskip 
+xxxxx
+
+\noindent
+2. The CLT and risky assets
+xxxxx
+
+\bigskip 
+
+
+\noindent
+3. An optimal portfolio
+
+\bigskip 
+
+
+\noindent
+4. Consumption from a risky asset
+
+
+\bigskip 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip 
+
+
+\centerline {\bf Introduction.}
+\bigskip 
+
+
+\noindent
+We 
+ study \emph{risky assets}
+where capital increases in a random way, ruled by "small 
+independent changes" over small discrete time intervals. 
+The CLT  implies that the distribution of the risky asset  at a later 
+time $T$ has a \emph{log-normal} distribution.
+This can be used to  compare the choice between a safe and a risky asset, given 
+that the person has \emph{risk aversion} measured by a strictly 
+concave utility function. 
+In Section  3  we describe
+how to optimize a portfolio with a part  put in a safe asset and the
+rest in a risky asset.
+
+
+
+
+\bigskip
+
+\centerline{\bf 1. The log-normal distribution}
+\bigskip
+
+\noindent
+The \emph{standard normal distribution} with mean-value
+zero and unit variance  has the distribution
+\[
+\Phi(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x
+\, e^{-t^2/2} dt
+\]
+Its frequency function becomes
+\[
+\Phi'(x)=\frac{1}{\sqrt{2\pi}}
+\, e^{-x^2/2} 
+\]
+
+\noindent
+The normal distribution with mean value $m$ and variance $\sigma$ is denoted by ${\bf {N}}_\sigma(m)$.
+It has the distribution function
+$\Phi(\frac{x-m}{\sigma})$ and the  frequency function 
+\[
+\frac{1}{\sigma\sqrt{2\pi}}
+\, e^{-(x-m)^2/2\sigma^2} 
+\]
+
+\noindent {\bf 1.1 The log-normal distribution}
+For each pair $m,\sigma$ we denote by $\mathcal L_\sigma(m)$
+the random variable whose distribution is zero when $x\geq 0$ and if $x>0$ it is 
+defined by the increasing function
+\[
+x\mapsto 
+\Phi(\frac{\text{log}(x)-m}{\sigma})\tag{1}
+ \]
+\medskip 
+
+\noindent 
+Its frequency function becomes
+ \[
+\mathcal L'_\sigma(m)(x)=\frac{1}{\sigma x\sqrt{2\pi}}
+\, e^{-(\text{log}(x)-m)^2/2\sigma^2} \quad x>0\tag{2}
+\]
+
+\medskip
+
+ 
+
+\noindent
+{\bf 1.2 Moments of $\mathcal L_\sigma(m)$.} For each $\alpha>0$
+the moment of order $\alpha$ is defined by
+
+\[
+M_\alpha(\sigma,m)=\frac{1}{\sigma\sqrt{2\pi}}
+\int_0^\infty\, \frac{x^\alpha}{x}\cdot e^{-(\text{log}(x)-m)^2/2\sigma^2}dx
+\]
+\medskip
+
+\noindent
+{\bf 1.3 Theorem} \emph{One has the formula}
+$M_\alpha(\sigma,m)= 
+e^{\alpha m +\alpha^2\sigma^2/2}.$
+\medskip
+
+\noindent {\bf Proof.} The variable substitution $x\to e^t$ gives
+\[
+M_\alpha(\sigma,m)=\frac{1}{\sigma\sqrt{2\pi}}
+ \int_{-\infty}^\infty\,e^{\alpha t}\cdot
+ e^{-(t-m)^2/2\sigma^2}\cdot dt
+ \]
+
+
+\noindent
+To compute this integral we first use the substitution
+$t-m\to s$ and obtain
+\[
+M_\alpha(\sigma,m)=\frac{1}{\sigma\sqrt{2\pi}}e^{\alpha m}
+ \int_{-\infty}^\infty\,e^{\alpha s}\cdot
+ e^{-s^2/2\sigma^2}\cdot dt
+ \]
+
+
+\noindent
+Using the substitution $s\to \sigma u$ and writing
+$\alpha\sigma u-u^2/2=-\frac{1}{2}(u-\alpha\sigma)^2-
+\alpha^2\sigma^2/2$ we get the asserted formula for $M_\alpha(\sigma,m)$.
+\bigskip
+
+\noindent {\bf 1.4 The mean value and the central variance. } 
+Let $\rho^2$ be the central variance of
+$\mathcal L(\sigma,m)$. By definition it is 
+the $M_2$-moment minus the square of the mean value.
+Hence Theorem 1.3. gives
+\[
+\rho^2=e^{2m+2\sigma^2}-e^{2m+\sigma^2}=
+e^{2m+\sigma^2}(e^{\sigma^2}-1)\tag{*}
+\]
+\bigskip
+ \noindent
+ With $\alpha=1$ we obtain the mean value 
+ \[
+ e^{m+\sigma^2/2}\tag{**}
+ \]
+Notice that the mean value \emph{increases} with $\sigma$.
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf\large  2. Risky assets} 
+\bigskip
+
+\noindent
+At time zero we start with a capital
+$K_0>0$. Given a time interval $[0,T]$ and a large positive integer $N$
+we consider the discrete time values 
+$t_\nu=\frac{\nu T}{N}$.
+With fixed positive numbers $\mu,\sigma$ we assume that
+the capital varies in a random way under the rule
+ \[
+K_{\nu+1}=K_\nu\cdot
+(1+\frac{\mu T}{N}+
+\frac{\sigma\sqrt{ T}}{\sqrt{N}}\cdot\bf B_\nu)\quad
+0\leq\nu\leq N-1
+\]
+
+
+\noindent
+Here $\bold B_0,\ldots,\bold B_{N-1}$
+are independent two point distributions, i.e.
+$\{\bold B_\nu\}$ are  random variables which
+takes one of the values
++1 or -1 with equal probability 1/2.
+With $\nu=N$ we arrive at time $T$ and put
+\begin{equation}
+K_T(N)=K_0\cdot \prod_{\nu=0}^{\nu=N-1}\,
+(1+\frac{\mu T}{N}+
+\frac{\sigma\sqrt{ T}}{\sqrt{N}}\cdot\mathbf B_\nu)
+\end{equation}
+This  random variable has a sample space
+with 
+$2^N$ possible events, each of which is given
+by a sequence of +1 or -1 taken by the independent random variables
+$\bold B_0,\ldots,\mathbf B_{N-1}$.
+We assume that $N$ is so large that
+$1+\frac{\mu T}{N}-
+\frac{\sigma\sqrt{ T}}{\sqrt{N}}>0$. So
+$K_T(N)$ is the product of $N$
+independent  and equally distributed  random variables where 
+each individual random variable can take  two 
+positive values.
+\bigskip
+
+\noindent
+{\bf 2.1 A limit formula.} Above we have defined
+random variables $K_T(N)$ for each $N$. When
+$N\to\infty$ the distributions of these random variables converge.
+Namely , let $F_N(x)$ be the distribution of $K_N(T)$. 
+Then one has the limit formula:
+\[
+\text{Lim}_{N\to\infty} F_N(x)=
+K_0\cdot \Phi\bigl(\frac{\text{log}(x)-\mu T+\sigma^2T/2}
+{\sigma\sqrt{T}}\bigr)\tag{1.2}
+\]
+\medskip
+
+\noindent 
+{\bf Remark.} 
+During this passage to the limit
+one uses the Taylor expansion up to order 3 of
+the log-function, i.e. that 
+\[
+\text{log}(1+x)=1+x-x^2+O(x^3)
+\]
+The 
+negative term 
+$-x^2/2$  gives rise
+to the term $-\sigma^2T/2$ in the
+log-normal  limit distribution above. 
+Using 
+\emph{Monte Carlo} simulations of the discrete random process
+one can "discover" the limit formuka abovce which goes back to
+work by 
+De Moivre from 1730   by comparing 
+experimental results with the analytically defined log-normal distribution.
+Thus, with the aid of the computer one  becomes familiar - or rather \emph{confident} -
+with the limit formula (1.2).
+
+
+
+\bigskip
+ 
+ \noindent
+{\bf 2.2  A general limit formula}
+Above we only used two-point variables.
+Using Lindeberg's  additive version  of the CLT and taking exponential one extends the
+previous
+limit theorem. More precisely,  consider 
+the case where capital changes in a random way over the discrete time
+values via the rules:
+
+\[
+K_{\nu+1}=K_\nu\cdot
+(1+\frac{\mu_\nu T}{N}+
+\frac{\sqrt{ T}}{\sqrt{N}}\cdot\bold \chi_\nu)\quad
+0\leq\nu\leq N-1
+\]
+
+
+\noindent
+Here $\mu_1,\mu_2,\ldots$ is a sequence of real numbers
+and $\chi_1,\chi_2,\ldots$ a sequence of discrete random variables, each with
+mean value equal to zero.
+Exactly as in (1) we construct the product
+\[
+K_T(N)=K_0\cdot \prod_{\nu=0}^{\nu=N-1}\,
+(1+\frac{\mu_\nu T}{N}+
+\frac{\sqrt{ T}}{\sqrt{N}}\cdot\chi_\nu)
+\]
+
+
+\noindent
+Let $\sigma_\nu^2$ be the variance of $\chi_\nu$ 
+and suppose the following two limits
+exist as $N\to\infty$:
+\[
+\frac{\mu_1+\ldots+\mu_N}{N}\to\mu\quad
+\frac{\sigma^2_1+\ldots+\sigma^2_N}{N}\to\sigma^2
+\]
+
+\noindent
+In addition we assume that the random variables $\chi_\nu$ do not have too
+\emph{fat tails}, i.e. the last  condition in Lindenberg's theorem hold.
+Under these assumptions
+the distribution functions  of $K_T(N)$ converge to a log-normal distribution
+given  by (1. 2)  above.
+
+\bigskip
+
+\noindent
+{\bf 2.3 Remark} The limit theorem above, where one starts from
+the discrete  random variables  $\{K_N(T)\}$, yields a \emph{continuous version}
+if one regards
+the sequences $\mu_\nu$ and $\sigma_\nu$ as values at the discrete 
+time values $t_\nu$ of  continuous functions $\mu(t)$ and $\sigma(t)$.
+The finite sample spaces of the random variables
+$K_N(T)$ can be "glued together" during the passage to
+the limit. This follows from    constructions 
+due to  Norbert Wiener.
+In fact, Wiener  showed that the sample space
+the whole stochastic process of a
+Brownian motion  can be
+described by tossing "heads or tails" in a denumerable  sequence, i.e.
+every outcome is given by as sequence of 0 or 1
+which also can be identified with the binary series of a real number
+on the interval $[01]$. From  this one constructs the so called
+Wiener measure of
+the Brownian motion. Wiener's  construction has  a  \emph{conceptual merit} 
+but is not very useful
+for numerical 
+investigations by computers where \emph{Monte Carlo} simulations
+rely  on discrete random walks.
+
+
+
+
+
+\bigskip
+
+
+
+
+\centerline{ \bf\large  3. Moments and mean values} 
+
+\bigskip
+
+\noindent
+Consider 
+a person who owns the capital $K_0$ at time zero.
+During a time interval $[0,T]$ there are two
+alternatives for the growth of capital. First, there is a 
+{\it{safe asset}} with constant rate of interest $\mu_\ast$.
+Using this safe asset the capital at time $T$
+will be $K_0\cdot e^{\mu_\ast T}$.
+Next, suppose there also exists  a {\it{risky asset}}
+governed by the rules from section 2.
+The risky asset has a
+constant 
+rate of interest $\mu$ while    $\sigma>0$ 
+measures the volatility.
+With $N$ large the risky asset changes
+over the discrete time values $\nu T/N$ as in
+Section 2. 
+\medskip
+
+\noindent
+If the capital $K_0$ is placed in the risky asset
+the outcome at time $T$ is random ,i.e. the capital $K_T$ at time
+$t=T$ is random.
+This amount of capital is evaluated via utility function
+$U$ which as usual is increasing and concave.
+The \emph{expected utility}
+of the risky asset at time $T$ becomes
+
+\[
+\frac{K_0}{\sigma_T\cdot \sqrt{2\pi}}\int_0^\infty\, U(x)\cdot x^{-1}\cdot e^{-(\log x-m_T)^2/2\sigma_T^2}\cdot dx\tag{*}
+\]
+where
+\[ 
+\sigma_T=\sigma\cdot\sqrt{T}\quad\text{and} \quad m_T= \mu T-\sigma^2T/2
+\]
+
+\noindent
+With the substitution $x\to e^s$
+the integral (*) becomes
+\[
+\frac{K_0}{\sigma_T\cdot \sqrt{2\pi}}\int_{-\infty}^\infty\, 
+U(e^s)\cdot e^{-(s-m_T)^2/2\sigma_T^2}\cdot ds\tag{**}
+\]
+
+\noindent
+{\bf{The case $U(c)= c^\alpha$}}.
+in this case (**) becomes
+\[
+\bold M_\alpha= 
+\frac{K_0}{\sigma_T\cdot \sqrt{2\pi}}\int_{-\infty}^\infty\, 
+e^{\alpha s}\cdot e^{-(s-m_T)^2/2\sigma_T^2}\cdot ds=
+\]
+\[
+\frac{K_0\cdot e^{\alpha m_T}}{\sigma_T\cdot \sqrt{2\pi}}\int_{-\infty}^\infty\, 
+e^{\alpha \xi}\cdot e^{-\xi^2/2\sigma_T^2}\cdot d\xi=
+\frac{K_0\cdot e^{\alpha m_T}}{\cdot \sqrt{2\pi}}\int_{-\infty}^\infty\, 
+e^{\alpha \sigma_T\cdot \eta}\cdot e^{-\eta^2/2}\cdot d\eta=
+\]
+\[
+K_0\cdot e^{\alpha m_T}\cdot e^{\alpha^2\sigma_T^2/2}=
+K_0\cdot e^{\alpha\mu T}\cdot e^{\sigma^2T(\alpha^2-\alpha)/2}
+\]
+
+
+
+
+\medskip
+
+\noindent
+Since $\alpha<1$ this number is strictly smaller than
+$e^{\alpha\mu T}$.
+So in order that the risky asset
+has a mean value equal to a safe asset whose rate of interest is $\mu_*$
+we must have 
+$\mu>\mu_*$. More precisely,
+the person has  \emph{neutral preference} between the safe and the risky asset
+when 
+\[
+\mu+(\alpha-1)\sigma^2/2=\mu_*\tag{***}
+\]
+
+\bigskip
+\noindent
+{\bf{The case $U(c)= \log(1+c)$}}.
+With this utility function  we see that (**) above gives
+the expected
+utility
+\[
+\frac{K_0}{\sigma_T\cdot \sqrt{2\pi}}\int_{-\infty}^\infty\, 
+\log
+(1+e^s)\cdot e^{-(s-m_T)^2/2\sigma_T^2}\cdot ds
+\]
+
+\noindent
+{\bf{Exercise.}}
+The integral above can only be computed numerically.
+Given the pair $\mu,\sigma$
+one uses the computer  to find $\mu_*$ in order
+neutral preference holds between the risky and the safe asset.
+
+\bigskip
+
+
+\centerline{\bf 3.1 Maximising a portfolio}
+
+\medskip
+
+\noindent
+At time zero we suppose that the person can put
+a fraction of the initial capital in a risky
+asset and the rest in a safe asset. We assume that
+$U(c)= c^\alpha$.
+It turns out that such a mixture can lead to a {\it{higher
+expected profit}}, even in the case when the neutral equality (**) holds.
+To see this, let $0<s<1$ and suppose that the person 
+initially puts $sK_0$ in the risky asset and $(1-s)K_0$ into
+the safe asset.
+Then  capital changes over 
+the discrete time values $t_\nu=\nu T/N$
+by the rule:
+\[
+K_{\nu+1}=K_\nu(1+\frac{(1-s)\mu_\ast T}{ N}+
+\frac{s\mu T}{N}+\frac{s\sigma\sqrt{T}}{\sqrt{N}}\cdot
+\mathbf B_\nu)\tag{1}
+\]
+
+\medskip
+
+\noindent
+By De Moivre's limit formula
+$K_T(N)$ converges as 
+$N\to\infty$ to a log normal distribution whose distribution function is
+\[
+\Phi(\frac{\text{log}(x)-m^*}{\sigma^*})\quad
+m^*=T(1-s)\mu_\ast+s\mu-s^2\sigma^2/2)\quad 
+\sigma^*=s\sigma\sqrt{ T}\tag{2}
+\]
+
+
+
+
+\noindent
+We can evaluate the expected utility of this portfolio using  (*).
+It is denoted by $M_\alpha(s)$ and we
+obtain 
+\[
+M_\alpha(s)=e^{\alpha T((1-s)\mu_\ast+s\mu-\sigma^2s^2/2)+
+T\alpha^2\sigma^2s^2/2}\tag{3}
+\]
+
+\medskip
+
+\noindent
+Now we choose $s$ in order to maximise (3). This amounts 
+to find the maximum of the second order  $s$-polynomial
+\[
+(1-s)\mu_\ast+s\mu-\sigma^2s^2/2+
+\alpha\sigma^2s^2/2
+\]
+
+\noindent
+Regarding the $s$-derivative we find that (3) is maximised when
+\[
+\sigma^2(1-\alpha)s=\mu-\mu_\ast
+\]
+
+\medskip
+
+
+
+ \noindent
+{\bf 3.2 The risk neutral case}
+When (***)  holds above we see that $s=\frac{1}{2}$ yields a maximum.
+Inserting this $s$-value in (3) a computation which is left to the reader
+shows that expected profit of the chosen portfolio becomes
+
+
+\[
+e^{\alpha T\mu_*+T\alpha^2\sigma^2/8}
+\]
+
+\noindent
+Since the factor $e^{T\alpha^2\sigma^2/8}>1$ this means that the
+chosen portfolio yields a strictly larger expected profit 
+compared to the risk neutral safe asset.
+
+
+\newpage
+
+
+\centerline {\bf {4. Infinite time horizon}}
+
+
+\bigskip
+
+\noindent
+When $T=\infty$
+we can use "dynamic programming",i .e. the classic Hamilton-Jacboi
+variation introduced around 1840 which  derives a differential equation for 
+expected maximal utility. Let $U$ be some utility function and  seek:
+\[
+\max_c\,\int_0^\infty\, U(c(t))e^{-rt} dt\tag{*}
+\]
+
+\noindent
+Here
+$c(t)$ is consumption  taken from a capital ruled by the stochastic 
+equation
+\[
+dK=\mu K-c(t)+\sigma K\cdot dW\tag{1}
+\]
+where $W$ is the standard Wiener process.
+At time zero one has $K(0)=K_0>0$.
+Moreover, $\mu$ and $r$ are  positive constants and we assume that 
+$r>\mu$. Finally we impose the  condition
+$K(t)\geq 0$ for all $t\geq 0$.
+This means that it is not possible to keep the consumption to high.
+To  solve this stochastic optimisation problem
+we study the value function.
+To each initial capital
+$K>0$  we denote by $V(K)$ the \emph{expected value under optimal consumption}.
+If $dt$ is a small initial time interval where $c(t)=c$
+is kept constant, then Taylor's formula shows that
+the expected profit becomes $V(K)$ plus
+\[
+ U(c)dt-rV(K)dt+\mu KV'_K dt-cV'(K)dt+
+ \sigma^2K^2 V''(K)dt+\text{small ordo}(dt)\tag{2}
+\]
+
+\noindent
+To attain maximal expected profit $c$ is chosen
+to
+maximise $U(c)-cV'(K)$.
+This gives
+\[
+U'(c)=V'(K)\tag{3}
+\]
+
+\noindent
+Since $U$ is a utility function this determines
+$c=c(K)$ uniquely  and now  $V$ satisfies the second order
+differential equation
+\[
+ U(c(K))-rV+\mu KV'(K) -c(K)V'(K)+
+ \sigma^2K^2 V''(K)=0\tag{*}
+\]
+
+\medskip
+
+
+\noindent
+{\bf The case $U(c)=\sqrt{c}$}. In this case 
+\[
+c(K)=\frac{1}{4\cdot V'(K)^2}
+\]
+Hence the ODE  (*) becomes
+\[
+\frac{1}{4V'(K)}-rV+\mu K V'(K)+\sigma^2K^2V''(K)/2=0\tag{**}
+\]
+
+\medskip
+
+\noindent
+Here  one can "guess" the solution to be of the form
+\[
+V(K,T)=a(K)\cdot \sqrt{K}\tag{i}
+\]
+Indeed, we see that (**) will be satisfied when the $a$-function
+satisfies the linear ODE-equation
+\[
+\frac{1}{2a}-ra+\frac{\mu a}{2}-\frac{\sigma^2a}{8}=0\tag{ii}
+\]
+
+\bigskip
+
+\noindent
+{\bf {Exercise}}.
+Perform numerical investigations where
+the parameters change. For example,  analyze 
+how the expected profit changes with respect to $\sigma$ and $r$.
+In text-bboks examples of thisind are
+often chosen with a simple $U$-function such as $c^\alpha$ with
+$0<\alpha<1$ which by the Hamilon-Jacobi metheod yields explicit solutions sitiubvsle for
+examination problems.
+Today one should studt the general case and find numerical solutions where
+the $U$-functions is  more  general, i.e. strictly increasing and concave.
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+  \enddocument

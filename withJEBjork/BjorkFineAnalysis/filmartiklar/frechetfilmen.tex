@@ -1,0 +1,413 @@
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+\centerline{\bf{4.    Frechet spaces.}}
+
+\bigskip
+
+
+\noindent
+Recall from ¤ xx that a  pseudo-norm on a  vector space $E$ is  a map $\rho$ from $E$ into
+the non-negative real numbers
+with the properties
+\[
+\rho(\alpha\cdot x)= |\alpha|\cdot \rho(x)
+\quad\colon
+\rho(x_1+x_2)\leq \rho(x_1)+\rho(x_2)\tag{*}
+\]
+where $x,x_1,x_2$ are vectors in
+$X$ and $\alpha\in {\bf{R}}$. 
+Let 
+ $\{\rho_n\}$ is a denumerable sequence of pseudo-norms and put
+\[ 
+d (x,y)=\sum_{n=1}^\infty\, 2^{-n}\cdot 
+\frac{\rho_n(x-y)}{1+\rho_n(x-y)}\tag{**}
+\]
+Assume that the intersection
+\[
+\bigcap\,\, \text{ker}(\rho_n)= \{0\}
+\]
+Then $d$ yilds a metric on $E$.
+iIf every Cauchy-sequence with respect to $d$ converges to a vector in
+$E$ one refers to   
+$E$ as a Frechet space  defined by the sequence $\{\rho_n\}$.
+Denote by
+$\mathcal K_E$ he family of
+convex, symmetric and  absorbing sets defined as in ¤ xx.
+\medskip
+
+
+\noindent
+{\bf{4.2 Theorem.}}
+\emph{Let $(E,d)$ be a Frechet space. 
+Then every 
+$d$-closed  set $K\in \mathcal K_E$
+contains an open neighborhood of the origin.}
+\medskip
+
+\noindent
+\emph{Proof.}
+To each integer $N\geq 1$ we have the closed set
+\[
+F_N= N\cdot K
+\]
+Since $K$ is absorbing
+the union of these $F$-sets is equal to $E$.
+Baire's theorem applied to the complete metric space
+$(E,d)$ yields some $N$ and $\epsilon>0$ such
+that $F_N$ contains
+an open ball of radius $\epsilon$ centered at some
+$x_0\in F_N$. If $d(x)<\epsilon$ we write
+\[ 
+x=\frac{x_0+x}{2}-\frac{x_0-x}{2}
+\]
+Now $F_N$ contains $x_0+x$ and $x_0-x$. By symmetry it also contains
+$-(x_0-x)$ and the convexity entails that
+$x\in F_N$.
+Hence one has  the implication
+\[
+d(x,0)<\epsilon\implies x\in N\cdot K\tag{i}
+\]
+Choose an integer $M$ where $2^{-M}<\epsilon/2$.
+The construction of $d$  shows that
+if
+$\rho_n(x)<\frac{\epsilon}{2M}$ hold for $1\leq n\leq M$, then
+$d_\rho(x)<\epsilon$. Hence (i) gives
+\[ 
+\max_{1\leq n\leq M}\, \rho_n(x)<
+\frac{\epsilon}{2M}\implies x\in N\cdot K\tag{ii}
+\]
+After a  scaling one has
+\[
+\max_{1\leq n\leq M}\, \rho_n(x)<
+\frac{\epsilon}{2M N}\implies x\in K\tag{iii}
+\]
+Finally, for each $1\leq n\leq M$ and every vector $x$ one has
+\[
+\frac{\rho_n(x)}{1+\rho_n(x)}\leq 2^n\cdot d(x,0)\leq 2^M\cdot d(x,0)
+\]
+Now
+the  reader can check that there exists $\epsilon_*>0$ such that
+\[
+d(x,0)<\epsilon_*\implies
+\max_{1\leq n\leq M}\, \rho_n(x)<
+\frac{\epsilon}{2M N}
+\]
+and Iii) implies  that  $K$ contains an
+open neighborhood of  the origin.
+
+
+\medskip
+
+\noindent
+Now $d$ and $\delta$ define
+Frechet on same $E$.
+We get
+\[
+\{d\leq \epsilon_N\}\subset \overline{\{\delta\leq 2^{-N}\}}
+\]
+where $\epsilon_N\to 0$ decrease.
+shrinking so that
+$\sum\,\epsilon_N<\epsilon_*$.
+Now start $d(x_1)<\epsilon_1$.
+Pick $\delta(y_1)< 1/2$ and 
+\[
+d(x-1-y_1)< \epsilon_2
+'\]
+Find $\delta(y_2)<1/4$ and
+\[
+d(x-1-y_1-y_2)< \epsilon_3
+\]
+Continue and so on.
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+{\bf{4.3 The open mapping theorem.}}
+\emph{Consider  a pair of
+Frechet spaces $X$ and $Y$ and let}
+\[
+u\colon X\to Y
+\]
+\emph{be  a continuous linear and surjective map.
+Then $u$ is an open mapping, i.e.
+for every $\epsilon>0$
+the $u$-image of the $\epsilon$-ball with respect to
+the Frechet metric on $X$ contains
+an open neighborhood of the origin in $Y$.}
+\medskip
+
+\noindent
+Proof via above !!!
+
+\medskip
+
+
+\noindent
+{\bf{4.4 Closed Graph Theorem.}}
+\emph{Let $X$ and $Y$ be Frechet spaces and 
+$u\colon X\to Y$ is 
+a linear map. Set}
+\[ 
+\Gamma(u)=\{ (x,u(x)\}
+\]
+\emph{and suppose it is a closed subspace of the Frechet space $X\times Y$.
+Under this hypothesis it follows that
+$u$ is continuous.}
+\bigskip
+
+\noindent
+{\bf{  Exercise.}}
+Verify the closed graph theorem. A hint is that
+one has  the bijective linear map
+from $X$ onto $\Gamma(u)$ defined by
+$x\mapsto  (x,u(x))$.
+Since $\Gamma(u)$ is closed in
+$X\times Y$ it is a Frechet
+space so the  mapping above
+is open and from this one easily checks 
+that $u$ is continuous.
+
+\bigskip
+
+
+
+
+
+\centerline {\bf{5.7  The Krein-Smulian theorem.}}
+\bigskip
+
+
+\noindent
+Articles by these authors
+from the years around 1940 contain
+a wealth of results. Here we expose one of them.
+Let $X$ be a Banach space and
+$X^*$ its dual on which we have  constructed the weak star topology.
+The  
+\emph{bounded weak-star topology}
+is defined as follows.
+Let $S^*$ be the open 
+ball  of vectors in $X^*$ with norm
+$<1$. If $n$ is a positive integer we get
+the ball $nS^*$ of vectors with norm $<n$.
+A subset $V$ of  $X^*$ is open in the bounded weak-star
+topology if and only
+if
+the interesections $V\cap nS^*$ are weak-star open
+for every positive integer $n$.
+In this way we get a new topology on $X^*$
+whose corresponding
+topological vector space is denoted 
+by
+$X^*_{bw}$,  while $X^*_w$ denotes
+the topological  vector space when
+$X^*$ is equipped with the weak-star topology.
+Notice that  the family of open sets in
+$X^*_{bw}$
+contains the open sets in
+$X^*_w$, i.e. the bounded weak-star topology is stronger.
+Examples show that the topologies in general are not equal.
+\medskip
+
+\noindent
+Next, let 
+$\lambda$ be  a linear functional on $X^*$ which is continuous with
+respect to the weak-star  topology.
+This gives by
+definition  a finite set
+$x_1,\ldots,x_M$ in $X$ such that
+if $|x^*(x_\nu)|<1$ for each $\nu$, then
+$\lambda(x^*)|<1$.
+This  implies that the 
+subspace of $X^*$ given by
+the common kernels of
+$\widehat{x}_1,\ldots\widehat{x}_M$
+contains the $\lambda$-kernel and   linear algebra gives
+an $M$-tuple of complex numbers
+such that
+\[
+\lambda=\sum\, c_\nu\cdot \widehat{x}_\nu
+\]
+We can express this by saying that 
+the dual space of $X^*_w$
+is equal to $\widehat{X}$, i.e. every linear functional on $X^*$ which is continuous 
+with respect to the
+weak-star topology is of the form
+$\widehat{x}$ for a unique $x\in X$.
+Less obvious is the following:
+
+\medskip
+
+\noindent
+{\bf{5.7.1. Theorem.}}
+\emph{The dual of $X^*_{bw}$ is equal to $\widehat{X}$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+For  each finite
+subset $A$ of  $X$ we put
+\[ 
+\widehat{A}=\{x^*\,\colon\, \max_{x\in A}\,|x^*(x)|\leq 1\}
+\]
+Let $U$ be an open set in $X^*_{bw}$
+which contains the origin
+and $S^*$ is the closed unit ball in
+$X^*$.
+The construction of the bounded weak-star topology gives
+a finite set $A_1$ in $X$ such that
+\[
+S^*\,\cap \widehat{A}^0\subset U\tag{i}
+\]
+Next, let $n\geq 1$ and suppose we have constructed
+a finite set $A_n$ where
+\[
+nS^*\,\cap \,\widehat{A_n}\subset U\tag{ii}
+\]
+To each finite set $B$ of vectors 
+in $X$ with norm $\leq n^{-1}$
+we notice that   
+\[
+ \widehat{A_n\cup\, B}\subset \widehat{A_n}\tag{iii}
+\]
+Put
+\[
+ F(B)=(n+1)S^*\cap \,\widehat{A_n\cup\, B} \,\cap (X^*\setminus U)
+\]
+It is clear that $F(B)$  is weak-star closed
+for
+every finite set $B$ as above. If these sets are non-empty for all $B$,
+it follows from 
+the weak-star compactness of $(n+1)S^*$
+ that the whole intersection is non-empty. So we find a vector
+ \[
+ x^*\in \bigcap_B\, F(B)
+ \]
+Notice that $F(B)\subset \widehat{B}$ for every finite set $B$ as above
+which means that  
+$|x^*(x)||leq 1$ for every  vector $x$ in 
+in $X$ of norm $\leq n^{-1}$. 
+Hence the norm
+\[
+||x^*||\leq n
+\]
+ But then (iii) gives the inclusion
+\[
+ x^*\in nS^*\,\widehat{ A_n}\bigr)\, \cap (X\setminus U)\tag{iv}
+\]
+This contradicts (ii) and hence we have proved that there exists a finite set
+$B$ of vectors with norm
+$\leq n^{-1}$ such that 
+$F(B)=\emptyset$.
+\medskip
+
+\noindent
+From the above it is clear that an induction over $n$ gives
+a sequence of sets $\{A_n\}$ such that  (ii) hold
+for each $n$ and
+\[ 
+A_{n+1}=A_n\,\cup B_n\tag{v}
+\]
+where
+$B_n$ is a finite set of vectors of norm
+$\leq n^{-1}$.
+\medskip
+
+\noindent{\emph{Final part of the  proof.}}
+Let $\theta$ be a linear functional on $X^*$ which is
+continuous with respect to the bounded weak-star topology.
+This gives an open neighborhood
+$U$ in
+$X^*_{bw}$ such that
+\[
+|\theta(x^*)\leq 1\quad\colon\,  x^*\in U\tag{i}
+\]
+To the set $U$
+we find a sequence $\{A_n\}$ as above.
+Let us enumerate the vectors in this sequence of finite sets by
+$x_1,x_2,\ldots$, i.e.
+start with the finite string of vectors in $A_1$, and so on.
+By the inductive construction of the $A$-sets we have
+$||x_n||\to 0$ as $n\to \infty$.
+If $x^*$ is a vector in $X^*$ we 
+associate the complex sequence
+\[
+\ell(x^*)= \{x^*(x_n)\}
+\]
+which tends to zero since
+$||x_n||\to 0$ as $n\to \infty$.
+Then
+\[ 
+x^*\mapsto \ell(x^*)
+\]
+is a linear map from $X^*$ into the 
+Banach space ${\bf{c}}_0$.
+If
+\[
+\max_n\, |x^*(x_n)|\leq 1
+\]
+we have by definition $x^*\in A_n^0$ for each $n$.
+Choose  a positive integer $N$ so  that $||x^*||\leq n$. Thus entails that
+\[
+x^*\in NS^*\cap A_N^0
+\]
+From (ii) during the inductive construction of the $A$-.sets,
+the last set is contained in $U$. Hence
+$x^*\in U$
+which by (i) gives
+$\theta(x^*)|\leq 1$.
+We conclude that $\theta$ yields
+a linear functional on
+on the image space of the $\rho$-map  with norm one at most.
+The 
+Hahn-Banach theoren gives
+$\lambda\in{\bf{c}}_0^*$
+of norm one at most such that
+\[
+\theta(x^*)= \lambda(\ell(x^*))
+\]
+Next,  by a wellknown result due to
+Banach the dual of ${\bf{c}}_0$ is $\ell^1$. Hence there exists
+a sequence $\{\alpha_n\}$ in $\ell^1$ such that
+\[
+\theta(x^*)= \sum\,\alpha_n\cdot x^*(x_n)
+\]
+In $X$ we find the vector $x=\sum\, \alpha_n\cdot x_n$
+and conclude that
+$\theta=\widehat{x}$ which proves the Krein-Smulian theorem.
+
+
+
+
+\end{document}
+
+
+
+\newpage

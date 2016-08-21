@@ -1,0 +1,2408 @@
+                                         %\documentclass{amsart}
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+\centerline {\bf\large {III.B The Hardy space $H^1$}}
+
+
+
+\bigskip
+
+
+\noindent
+\emph{0. Introduction.}\bigskip
+
+
+\noindent
+\emph{1. Zygmund's inequality}
+\bigskip
+
+
+\noindent
+\emph{2. A weak type estimate.}
+\bigskip
+
+
+\noindent
+\emph{3. Kolmogorov's inequality.}
+\bigskip
+
+
+\noindent
+\emph{4. The dual space of $H^1(T)$}
+
+\bigskip
+
+
+\noindent
+\emph{5. The class BMO}
+\bigskip
+
+
+
+
+\noindent
+\emph{6. The dual of $\mathfrak{Re}\, H^1\uuu 0(T)$}
+\bigskip
+
+
+
+
+\noindent
+\emph{7. Theorem of Gundy and Silver}
+\bigskip
+
+\noindent
+\emph{8. The Hardy space on ${\bf{R}}$.}
+
+\bigskip
+
+\noindent
+\emph{9. BMO and radial norms on measures in $D$}.
+
+
+\bigskip
+
+
+
+
+
+
+\centerline {\bf {0. Introduction.}}
+\medskip
+
+
+\noindent
+At several occasions we have met the situation where
+$F(z)\in\mathcal O(D)$
+has bounded $L^1$-norms over circles of radius $r<1$.
+The Brothers Riesz theorem in  Section I
+shows that
+if there
+is a constant $M$ such that
+\[
+\int_0^{2\pi}\, |F(re^{i\theta})|d\theta\leq M\quad\colon\quad
+0<r<1
+\]
+then there exists an $L^1$-function $F(e^{i\theta})$
+on the unit circle and
+\[
+\lim_{r\to 1}\, \int_0^{2\pi}\, 
+|F(re^{i\theta})-F(e^{i\theta}|\cdot d\theta=0\tag{*}
+\]
+
+\noindent
+The class of analytic functions $F$ with boundary function in
+$L^1(T)$ is denoted by $H^1(T)$ and called the \emph{Hardy space}.
+It is tempting to start with a real valued $L^1$-function
+$u(\theta)$ on the unit circle and apply the
+Herglotz integral formula  which  produces both
+the harmonic extension of $u$ and  its conjugate
+harmonic function by the equation:
+\[
+g\uuu\mu(z)=
+\frac{1}{2\pi}
+\int_0^{2\pi}\,\frac{e^{i\theta}+z}
+{e^{i\theta}-z}\cdot u(\theta)d\theta\tag{**}
+\]
+\medskip
+
+\noindent
+It turns out that $g\uuu\mu$ in general does not belong to $H^1(T)$,
+i.e. the condition that
+$u\in L^1(T)$ does not imply that $g\uuu\mu\in H^1(T)$.
+Theorem  0.1 below is due to Zygmund and
+gives a necessary and sufficient condition for
+the inclusion
+$F\in L^1(T)$ when
+$u$ is non-negative.
+\medskip
+
+\noindent
+{\bf 0.1 Theorem.} \emph{Let $u(\theta)$ be a non-negative $L^1$-function on $T$.
+Then  $g\uuu\mu(z)\in H^1(T)$ if and only if}
+
+\[
+\int_0^{2\pi}
+\,u(\theta)\cdot\log^+\,|u(\theta)|\cdot d\theta<\infty
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+That the condition is necessary is proved in ¤ 1.
+The proof of sufficiency relies upon  study of
+linear operators satisfying 
+weak type estimates where  a result due to  Kolmogorov is
+the essential point. To profit upon 
+Kolmogorov's result in section 3
+we   need a weak-type estimate
+for the harmonic
+conjugation functor which is proved in ¤ 2.
+\medskip
+
+
+\noindent
+{\bf{0.2 The dual space of $H^1(T)$.}}
+On the unit circle  the Banach space
+$C^0(T)$ of continuous complex-valued functions
+contains the closed subspace $A_*(D)$ which consists of
+those continuous function $f(e^{i\theta})$
+on $T$ which extend to analytic functions in the open
+disc $|z|<1$ and vanish at $z=0$.
+In Theorem 4.3 we prove that
+$H^1(T)$ is the dual of the quotient space
+\[
+B=\frac{C^0(T)}{A_*(D)}
+\]
+The proof uses the Brothers Riesz theorem.
+We shall also consider the subspace $H^1\uuu 0(T)$
+of those functions in the Hardy space for which $f(0)=0$.
+Here we find that
+\[ 
+H^1\uuu 0(T)\simeq \bigl[\frac{C^0(T)}{A(D}\bigr]^*\tag{1}
+\]
+Next,
+we seek the dual space
+of $H\uuu 0^1(T)$. Using the Brothers Riesz theorem
+one finds that
+\[ 
+H\uuu 0^1(T)^*\simeq \frac{L^\infty(T)}{H^\infty(T)}\tag{2}
+\]
+where $H^\infty(T)$ is the space of 
+boundary values of bounded analytic functions in $D$.
+
+\medskip
+
+
+\noindent
+{\bf{0.3 The dual of $\mathfrak{Re}\, H^1\uuu 0(T)$.}}
+The real part determine functions in
+$H^1\uuu 0(T)$ which
+means that we can identify $H^1\uuu 0(T)$ with a real subspace of
+$L^1\uuu{{\bf{R}}}(T)$ whose elements consist of those real\vvv valued
+and integrable functions $u(\theta)$ for which the
+the Riesz transform also is integrable. Or equivalently,
+if we take the harmonic extension
+$H\uuu u$ then 
+the harmonic conjugate has a boundary function in $L^1\uuu{{\bf{R}}}(T)$
+which we denote by $u^*$.
+The norm of such a $u$\vvv function 
+is defined as
+
+\[ 
+||u||= ||u||\uuu 1+||u^*||\uuu 1\tag{*}
+\]
+
+
+
+\noindent
+The norm in (3) is not equivalent to the $L^1$\vvv norm
+so we cannot conclude that the dual space is reduced to
+real\vvv valued functions in $L^\infty(T)$.
+To exhibit elements in the dual space
+we first consider some
+real\vvv valued function
+$F(\theta)$ on $T$.
+Let $H\uuu F$ be its harmonic extension to $D$.
+For each $0<r<1$
+we define the linear functional on 
+$\mathfrak{Re}\, H^1\uuu 0(T)$ by:
+\[
+u\mapsto \int\uuu 0^{2\pi}\, H\uuu F(re^{i\theta})\cdot u(\theta)\cdot d\theta\tag {**}
+\]
+If  the limit  (*) exists for every $u$
+when $r\to 1$
+and
+the absolute value of this limit is $\leq C\cdot ||u||$ for a constant
+$C$, then we have produced a continuous linear functional on
+$\mathfrak{Re}\, H^1\uuu 0(T)$.
+This leads to a description of the dual space which goes as follows.
+The definition of the norm in (*) and the Hahn\vvv Banach theorem
+yields for each $\Lambda$ in the dual space a pair
+$(\phi,\psi)$ in $L^\infty(T)$ such that
+when $f=u+iu^*$ is in $H^1\uuu 0(T)$ then
+\[
+\Lambda(u+iu^*)=
+\int\uuu 0^{2\pi}\, u(\theta)\cdot \phi(\theta)\cdot d\theta+
+\int\uuu 0^{2\pi}\, u^*(\theta)\cdot \psi(\theta)\cdot d\theta
+\]
+Let $\psi^*$ be the harmonic conjugate of $\psi$ which gives
+the analytic function $H\uuu\psi+iH\uuu \psi^*$ in $D$.
+Since $f=u+iu^*$ vanishes at $z=0$
+we get
+\[
+\int\uuu 0^{2\pi}\, (u+iu^*)(\psi+i\psi^*)
+\cdot d\theta=0
+\]
+Regarding the imaginary part it follows that
+\[
+\int\uuu 0^{2\pi}
+u^*\cdot \psi\cdot d\theta=\vvv \int\uuu 0^{2\pi}\, u\cdot \psi^*\cdot d\theta
+\]
+We conclude that $\Lambda$ is expressed by
+\[
+\Lambda(u)= \lim\uuu{r\to 1}\int\uuu 0^{2\pi}\, H\uuu F(re^{i\theta})\cdot
+u(\theta)\cdot d\theta
+\]
+where
+\[ 
+F(\theta)= \phi(\theta)\vvv \psi^*(\theta)\tag{***}
+\]
+\medskip
+
+\noindent
+Above $\psi^*$ is the harmonic conjugate of a bounded
+$\psi$\vvv function where an arbitrary 
+$\psi\in L^\infty(T)$ can be chosen.
+Next,
+recall from XXX that if $\psi\in L^\infty(T)$ then its conjugate
+$\psi^*$ belongs to $\text{BMO}(T)$. Hence (***) identifies
+the of
+$\mathfrak{Re}\, H^1\uuu 0(T)$ with  a subspace of
+$\text{BMO}(T)$.
+It turns out that one has equality.
+More precisely, Theorem 0.4 below which is 
+due to C. Fefferman and E. Stein 
+asserts that $F$ yields such a continuous linear form if and only if
+$F$ has a bounded mean oscillation in the sense of F. John and L. Nirenberg.
+
+
+\medskip
+
+\noindent
+{\bf{0.4 Theorem.}}
+\emph{A real\vvv valued $L^1$\vvv function $F$
+on $T$ yields a continuous linear functional on
+$H^1\uuu 0(T)$ as above if and only if $F\in \text{BMO}(T)$.
+Moreover, there exists an absolute constant $C$ such that}
+\[
+\bigl|\int\uuu 0^{2\pi}\, H\uuu F(re^{i\theta})\cdot u(\theta)\cdot d\theta\,\bigr|\leq
+C\cdot ||F||\uuu{\text{BMO}}\cdot ||u||\uuu 1
+\]
+\emph{for all $r<1$ and $u\in H^1\uuu 0(T)$.}
+\bigskip
+
+\noindent
+We refer to Section 6 for  details of the  proof which involves several steps
+where the essential
+step  is to exhibit
+certain Carleson measures.
+The space of real\vvv valued functions of bounded mean oscillation is
+denoted by $\text{BMO}(T)$ and  studied in
+Section 5 where
+Theorem 5.5 is an important result which clarifies many properties
+of functions in $\text{BMO}(T)$.
+
+\medskip
+
+\noindent
+{\bf{0.5 The Hardy space on ${\bf{R}}$.}}
+It consists of analytic functions $F(z)$ in the upper half\vvv plane
+for which there exists a constant $C$ such that
+\[ 
+\int\uuu{\vvv\infty}^\infty\, |F(x+i\epsilon)\cdot dx\leq C\tag{*}
+\] 
+hold for every $\epsilon>0$.
+This space is denoted by
+$H^1({\bf{R}})$.
+Let us remark that it differs from $H^1({\bf{T}})$ even if we
+employ  the conformal map
+\[
+w=\frac{z\vvv i}{z+i}\tag{i}
+\] 
+onto the unit disc.
+More precisely, with $F(z)$ given in the upper half\vvv plane
+we set
+\[ 
+f(w)= 
+F(\frac{i+iw}{1\vvv w})\tag{ii}
+\]
+Then the reader can verify that
+\[
+\lim\uuu{r\to 1}\int\uuu 0^{2\pi}\, |f(re^{i\theta})|\cdot d\theta=
+\int\uuu{\vvv\infty}^\infty\, 
+\frac{|F(x)|}{1+x^2}\cdot dx\tag{iii}
+\]
+where $F(x)$ is the almost everywhere defined limit of $F$
+on the real $x$\vvv line which by (*)
+identifies $F(x)$ with an element in
+$H^1({\bf{R}})$.
+Since
+$\frac{1}{1+x^2}$ is bounded 
+it follows that the right hand side is finite in (iii) and hence
+$f$ belongs to $H^1({\bf{T}})$.
+However, the map $F\to f$ is not bijective
+because the convergence in (iii) need not imply that
+(*) is finite.
+In other words, the Hardy space on the real line is
+more constrained and via $F\mapsto f$
+it appears s a proper subspace
+of $H^1({\bf{T}})$  and the corresponding norms are not equivalent.
+Sections 7 and  9  study  $H^1({\bf{R}})$ and at the end of
+¤ 9 we  introduce Carleson norms on
+non\vvv negative Riesz measures in $\mathfrak{Im}(z)>0$
+which will be used for interpolation of bounded analytic functions
+in Chapter XXX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\centerline {\bf 1. Zygmund's  inequality}
+
+
+\bigskip
+
+
+\noindent
+Let
+$u(\theta)$ be a non-negative real-valued function on
+$T$ such that
+\[
+\frac{1}{2\pi}
+\int_0^{2\pi}u(\theta)d\theta=1\tag{*}
+\]
+Put
+\[
+F(z)=
+\frac{1}{2\pi}
+\int_0^{2\pi}\,\frac{e^{i\theta}+z}
+{e^{i\theta}-z}\cdot u(\theta)d\theta
+\]
+We write
+\[ 
+F=u+iv
+\] 
+where $u$ is the harmonic extension of
+$u(\theta)$ from $T$ to $D$ and 
+$v$ is the harmonic conjugate  which by the
+Herglotz
+formula is normalised so that $v(0)=0$
+The
+sufficency part in Zygmund's theorem
+follows from the general inequality below:
+
+ \medskip
+ 
+ \noindent
+{\bf 1.1 Theorem.} \emph{When   $u(\theta)$ is non-negative and (*) holds
+we have}
+\[
+\int_0^{2\pi}
+\,u(\theta)\cdot\log^+\,|u(\theta)|\, d\theta\leq
+\frac{\pi}{2}\cdot
+\int_0^{2\pi}
+|v(\theta)|
+\cdot d\theta+
+\int_0^{2\pi}\,\log^+|F(e^{i\theta}]|\,d\theta\tag{*}
+\]
+
+
+
+
+\bigskip
+
+\noindent \emph{Proof.}
+Since $\mathfrak{Re}(F)>0$ holds in $D$
+we can write
+\[ 
+\log \,F(z)=\log\,|F(z)|+i\gamma(z)\quad\colon\quad
+-\pi/2<\gamma(z)<\pi/2\tag{i}
+\]
+Set $G(z)=F(z)\cdot\log\,F(z)$.
+Since $F(0)=1$ we have
+$G(0)=0$    and  the mean value formula for harmonic functions gives
+\[
+\int_0^{2\pi}
+u(e^{i\theta})\cdot\log\,|F(e^{i\theta})|\, d\theta=
+\int_0^{2\pi}
+\gamma(e^{i\theta)})\cdot v(e^{i\theta})\, d\theta\tag{iii}
+\]
+
+
+\noindent
+By (i) the absolute value of the right hand side is majorised by
+\[
+\frac{\pi}{2}\cdot
+\int_0^{2\pi}
+|v(\theta)|
+\cdot d\theta\tag{iii}
+\]
+
+\noindent
+Now we use the decomposition
+\[
+\log\,|F(e^{i\theta})|=
+\log^+\,|F(e^{i\theta})|+\log^+\,\frac{1}{|F(e^{i\theta})|}
+\]
+Then (ii) and (iii) give
+the inequality
+\[
+\int_0^{2\pi}
+u(e^{i\theta})\cdot\log^+\,|F(e^{i\theta})|\, d\theta\leq
+\]
+\[\frac{\pi}{2}\cdot
+\int_0^{2\pi}
+|v(\theta)|
+\,d\theta+
+\int_0^{2\pi}
+u(e^{i\theta})\cdot\log^+\frac{1}{\,|F(e^{i\theta})|}\,d\theta
+\tag{iv}
+\]
+
+\noindent
+Since
+$\log^+\frac{1}{\,|F(e^{i\theta})|}\neq 0$
+entails that $|F|\leq 1$ and hence also $u\leq 1$,
+it follows that the last integral above is majorised by
+\[
+\int_0^{2\pi}
+\log^+\frac{1}{\,|F(e^{i\theta})|}\, d\theta\tag{v}
+\]
+Next, $\log\,|F(z)|$ is a harmonic function whose value at $z=0$ is zero.
+So the mean-value formula for harmonic functions in $D$ gives
+the equality:
+\[
+\int_0^{2\pi}
+\log^+\frac{1}{\,|F(e^{i\theta})|}\, d\theta=
+\int_0^{2\pi}
+\log^+\,|F(e^{i\theta})|\,d\theta\tag{vi}
+\]
+\medskip
+
+
+\noindent
+Using this and (iv) we get the requested inequality in
+Theorem 1.1 since
+we also have the trivial estimate
+\[
+\log^+\,u(e^{i\theta})\leq
+\log^+\,|F(e^{i\theta})|\tag{vii}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline
+ {\bf 2. The weak type estimate.}
+\bigskip
+
+\noindent
+Let $u(\theta)$ be non-negative and denote by $v(\theta)$ its harmonic conjugate
+function which is obtained via Herglotz formula.If $E$ is a subset of $T$ we denote its
+linear Lebesgue measure by
+$\mathfrak{m}(E)$.
+With these notations the following weak-type estimate hods:
+
+\medskip
+
+\noindent
+{\bf 2.1 Theorem.} \emph{For each non-negative $u$-function on $T$
+with mean-value one the following holds:}
+\[
+\mathfrak{m}(\{|v|)>\lambda\}\leq
+\frac{ 4\pi}{1+\lambda}\quad\colon\quad \lambda>0
+\]
+
+
+\noindent
+\emph{Proof.}
+For a given $\lambda>0$ we set
+\[ 
+\phi(z)=1+\frac{F(z)-\lambda}{F(z)+\lambda}\tag{1}
+\]
+where $F(z)$  the analytic function constructed as in section 1.
+Here $F(0)=u(0)=1$ which gives:
+\[
+\phi(0)=\frac{2}{\lambda+1}\tag{2}
+\]
+Next, since $\mathfrak{Re}\, F=u\geq 0$ it
+follows that
+\[
+\bigl |\frac{F(z)-\lambda}{F(z)+\lambda}\bigr |\leq 1\tag{3}
+\]
+
+\medskip
+
+\noindent
+Hence (1)  gives $\mathfrak{Re}(\phi)\geq 0$ and
+mean value formula for the harmonic function
+$\mathfrak{Re}(\phi)$ gives:
+\[
+\frac{4\pi}{1+\lambda}=
+\int_0^{2\pi}\,
+\mathfrak{Re}\,\phi(e^{i\theta})\cdot d\theta\geq
+\int_{\mathfrak{Re}\,\phi\geq 1}
+\mathfrak{Re}\,\phi(e^{i\theta})\cdot d\theta\geq
+\mathfrak{m}(\{\mathfrak{Re}\,\phi\geq 1\})\tag{4}
+\]
+Rewriting the last inequality we get:
+\[
+\mathfrak{m}(\{ \mathfrak{Re}\,\phi\geq 1\})\leq
+\frac{4\pi}{1+\lambda}\tag{5}
+\]
+
+
+\noindent
+Next,  the construction of
+$\phi$ yields the following equality of sets:
+\[
+\{\mathfrak{Re}\,\phi(e^{i\theta})\geq 1\}=\{\mathfrak{Re}
+\,\frac{F(e^{i\theta})-\lambda}
+{F(e^{i\theta})+\lambda}\geq 0\}\tag{6}
+\]
+
+
+\noindent
+Finally,  with $F(e^{i\theta})= u(\theta)+iv(\theta)$
+one has
+\[
+\mathfrak{Re}\,[\,\frac{F(e^{i\theta})-\lambda}
+{F(e^{i\theta})+\lambda}\,]=\frac{u^2+v^2-\lambda^2}{(u+\lambda)^2+v^2}
+\]
+The right hand side is $\geq 0$ when
+$|v|\geq \lambda$ which  gives the
+set-theoretic inclusion:
+\[
+\{|v|>\lambda\}\subset
+\{\mathfrak{Re}\,\phi\geq 1\}).\tag{7}
+\]
+Then  (5) above gives Theorem 2.1.
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf 3. Kolmogorov's inequality}
+
+\bigskip
+
+
+\noindent {\bf 3.1 Notations.}
+Consider a measure space equipped with a probability measure
+$\mu$.
+Let $f$ be a complex-valued and $\mu$-measurable 
+function. For each  $\lambda>0$ we get
+the $\mu$-measurable set $\{|f|>\lambda\}$ and then
+\[ 
+\lambda\mapsto \mu(\{|f|>\lambda\})
+\] 
+is a decreasing function. Construct
+the differential function defined for every $\lambda>0$ by:
+\[ 
+d\rho_f(\lambda)=\lim_{\delta\to 0}\,
+\frac{\mu(\{|f|>\lambda-\delta\})-\mu(\{|f|>\lambda\})}{\delta}\tag{*}
+\]
+For an arbitrary continuous function
+$Q(\lambda)$ defined when $\lambda\geq 0$ 
+the  formula in  XX gives the equality: 
+\[
+\int_0^\infty 
+Q(|f|)d\mu=
+\int_0^\infty\, Q(\lambda)\cdot d\rho_f(\lambda)\tag{**}
+\]
+Recall also from XX the formula
+\[ 
+\int_0^\infty \,
+\mu[\{|f|>\lambda\}]\cdot d\lambda=\int\,|f|\cdot d\mu\tag{***}
+\]
+
+\medskip
+
+\noindent
+{\bf 3.2 Operators of Weak type (1,1).}
+Let $\gamma$ be a probability measure on another sample space
+and  $T$ is  some   linear map from
+$\mu$-measurable functions into
+$\gamma$-measurable functions.
+\medskip
+
+\noindent
+{\bf 3.3 Definition. }\emph{We say that
+$T$ satisfies a weak-type estimate of type (1,1)
+if
+there is a constant $K$ such that  the inequality below holds
+for every $\lambda>0$:}
+\[ 
+\gamma(\{|Tf|>\lambda\}\,)\leq\frac{K}{\lambda}\cdot\int\,|f|\cdot d\mu
+\quad\text{when}\quad f\,\,\,\text{is} \,\mu-\text{measurable}
+\]
+
+\medskip
+\noindent
+We can  also regard $L^2$-spaces. The operator
+$T$ is $L^2$-continuous if there exists
+a constant $K_2$ such that one has the inequality
+\[
+\int\,|T(f)|^2\cdot d\gamma\leq K_2^2\cdot
+\int\,|f|^2\cdot d\mu
+\]
+Taking square roots it means that the $L^2$-norm
+is $K_2$. 
+\medskip
+
+\noindent 
+{\bf 3.4 Theorem.}
+\emph{Let $T$ be a linear operator whose $L^2$-norm is 1 and with
+finite weak-type norm $K$.
+Then the following holds for each $\mu$-measurable function $f$:}
+\[ 
+\int\,
+|T(f)|\cdot d\gamma\leq 1+4\cdot\int\,|f|\cdot d\mu+
+2K\cdot \int\, |f|\cdot\log^+\,|f|\cdot d\mu
+\]
+
+\medskip
+
+\noindent
+\emph{Proof.} 
+When $\lambda>0$ we decompose $f$
+as follows:
+\[
+f=f_*+f^*\quad\colon
+f_*=\chi_{\{|f|\leq\lambda\}}\cdot f\quad\colon\quad
+f^*=\chi_{\{|f|>\lambda\}}\cdot f\tag{i}
+\]
+
+\noindent For the lower $f_*$-function we use that $T$ has
+$L^2$-norm $\leq 1$ and get
+\[
+\gamma[\{|Tf_*|>\lambda/2\}\,]
+\leq\frac{4}{\lambda^2}\int_0^\lambda\, s^2\cdot d\rho_f(s)\tag{ii}
+\]
+
+\noindent For $Tf^*$ we apply the weak-type estimate which gives 
+\[
+\gamma[\{|Tf^*|>\lambda/2\}\,]\leq
+\frac{2K}{\lambda}\cdot\int_\lambda^\infty s\cdot d\rho_f(s)\tag{iii}
+\]
+
+\noindent 
+where we used that
+$\int_\lambda^\infty s\cdot d\rho_f(s)$ is the $L^1$-norm of $f^*$.
+The set-theoretic inclusion 
+\[
+\{|Tf|>\lambda\}\subset
+\{|Tf_*|>\lambda/2\}\cup\,\{|Tf^*|>\lambda/2\}\implies
+\]
+\[
+\gamma[\{|Tf|>\lambda\}\,]\leq
+\frac{4}{\lambda^2}
+\int_0^\lambda\, s^2\cdot d\rho_f(s)+
+\frac{2K}{\lambda}\cdot\int_\lambda^\infty sd\rho_f(s)\tag{iv}
+\]
+Next, since $\gamma$ has total mass one the  inequality:
+\[ 
+\int_0^\infty\,|Tf|\cdot d\gamma\leq 1+
+\int_{\{|Tf|>1 \}}\,|Tf|\cdot d\gamma\tag{v}
+\]
+
+
+\noindent
+Now (***) in (3.1) is applied to $Tf$ and the measure $\gamma$ which gives
+\[
+\int_{\{|Tf|>1 \}}\,|Tf|\cdot d\gamma=
+\int_1^\infty\, \gamma[\{|Tf|>\lambda\}\cdot d\lambda
+\]
+
+\noindent 
+By (iv) the
+last integral in (v) is majorised by:
+\[
+4\cdot \int_1^\infty
+\,\bigl[\frac{1}{\lambda^2}
+\int_0^\lambda\, s^2\cdot d\rho_f(s)\bigr]\cdot d\lambda
++2K\int_1^\infty\, \frac{1}{\lambda}\cdot [\int_\lambda^\infty sd\rho_f(s)]\cdot d\lambda\tag{vi}
+\]
+
+
+
+\noindent
+Next,  from (XX)  one has the equality:
+\[
+\int_0^\infty\,\bigl[\frac{1}{\lambda^2}
+\int_0^\lambda\, s^2\cdot d\rho_f(s)\bigr]\cdot d\lambda=\int\,|f| \cdot d\mu\tag{vii}
+\]
+The left hand side is only smaller if the 
+$\lambda$-integration starts at 1. It follows that the
+first term in (vi) above is majorised by
+$4\cdot \int\,|f| \cdot d\mu$ and together with (v) we
+conclude that
+
+\[
+\int_0^\infty\,|Tf|d\gamma\leq 1+4\int\,|f|d\mu+
+2K
+\int_1^\infty\,[\frac{1}
+{\lambda}\cdot\int_\lambda^\infty sd\rho_f(s)]\cdot d\lambda\tag{viii}
+\]
+Finally, 
+\[
+\int_1^\infty\,[\frac{1}
+{\lambda}\cdot\int_\lambda^\infty sd\rho_f(s)]\cdot d\lambda=
+\iint_{1\leq\lambda\leq s}\,
+\frac{1}{\lambda}\cdot
+s\rho_f(s) ds=\int_1^\infty s\cdot \log\, s\cdot d\rho_f(s)
+\]
+\medskip
+
+\noindent
+The last integral is equal to $\int \,f\cdot\log^+\,|f|\cdot d\mu$
+by the general formula XX. 
+Inserting this in (viii) we get  Theorem 3.4.
+
+\bigskip
+
+\noindent{\bf 3.5. Final part of  Theorem 0.1}
+There remains to show that if $u$ is non-negative and if 
+$u\cdot \log^+u$ is integrable so is $v$.
+To prove this we use $d\mu=d\gamma=\frac{d\theta}{2\pi}$
+on the unit circle.
+Theorem 2.1  which shows that the harmonic conjugation operator
+$T\colon u\mapsto v$ is of weak-type (1,1) and it is
+continuous on $L^2(T)$  by
+Parseval's formula. Hence  Kolomogorv's Theorem gives
+$v\in L^1(T)$ which proves the necessity in Theorem 0.1.
+
+
+\medskip
+
+\noindent
+{\bf Remark.} Notice that
+Theorem 3.4 applies when we start from any
+real-valued function  $u(\theta)$.
+So have the following supplement to Theorem 0.1.
+
+\bigskip
+
+\noindent
+{\bf 3.6 Theorem.} \emph{There exists an absolute constant $A$ such that}
+\[
+\int_0^{2\pi}\, |v(\theta)|\, d\theta\leq
+A\cdot\bigr[\int_0^{2\pi}\, |u(\theta)|\, d\theta+
+\int_0^{2\pi}\, |u(\theta)|\cdot \log^+|u(\theta)|\,  d\theta\,\bigr]
+\]
+
+
+
+
+\bigskip
+
+\centerline{\bf 4. The Dual space of $H^1(T)$}
+\medskip
+
+\noindent
+On the unit circle $T$
+we have the Banach space
+$L^1(T)$ 
+where $H^1(T)$ is a closed subspace.
+Next, let $C^0(T)$ be the Banach space of continuous
+functions on $T$ equipped with the maximum norm.
+It contains the closed subspace $A(D)$
+whose functions can be extended as
+analytic  functions in the open disc $D$.
+We have also the subspace $A_*(D)$
+which consists of  the functions in $A(D)$ whose analytic
+extensions are zero at the origin.
+As explained in XXX a continuous function $f$ on $T$
+belongs to $A_*(D)$ if and only if
+\medskip
+\[
+\int_0^{2\pi}\, e^{in\theta}\cdot f(e^{i\theta})\cdot d\theta=0
+\quad\colon\quad n=0,1,\ldots
+\tag{*}
+\]
+
+
+\noindent
+From (*) it follows that
+\[
+\int_0^{2\pi}\,g(e^{i\theta})\cdot f(e^{i\theta})\cdot d\theta=0
+\quad\colon\quad f\in A_*(D)\quad\text{and}\quad \, g\in H^1(T)\tag{**}
+\]
+Let us now regard the
+Banach space
+\[ 
+B=\frac{C^0(T)}{A_*(D}
+\]
+
+
+\noindent
+Riesz representation formula identifies the
+dual space of $C^0(T)$ with Riesz measures on $T$.
+Since $B$ is a quotient space its dual space becomes
+\[ 
+B^*=\{\,\mu\in M(T)\quad\colon\, \mu\perp A_*(D\,\}\tag{i}
+\]
+
+
+\noindent
+Now a Riesz measure $\mu$ is $\perp A_*(D$
+if and only if
+\[
+\int_0^{2\pi}\, e^{in\theta}\cdot d\mu(\theta)=0
+\quad\colon\quad n=1,2\ldots\tag{ii}
+\]
+
+
+\noindent The Brothers Riesz theorem means
+that  (ii) holds if and only if
+$\mu$ is absolutely continuous, i.e. $\mu$
+is given by some $L^1$-function $f$ which 
+satisfies:
+\[
+\int_0^{2\pi}\, e^{in\theta}\cdot f(e^{i\theta})\cdot d\theta=0
+\quad\colon\quad n=1,2\ldots\tag{iii}
+\]
+This is precisely the condition  that
+$f\in H^1(T)$. Hence the whole discussion gives:
+\bigskip
+
+\noindent 
+{\bf 4.1 Theorem.}
+\emph{The Hardy space $H^1(T)$ is the dual of $B$.}
+\bigskip
+
+\noindent
+{\bf 4.2 The dual of $H^1(T)$.}
+Recall that $L^\infty(T)$ is the dual space of
+$L^1(T)$.
+So by a general formulafrom Appendix: Functional analysis
+we get:
+
+\[
+H^1(T)^*=
+\frac{L^\infty(T)}{H^1(T)^\perp}
+\]
+
+
+\noindent
+Next, an $L^\infty$-function $f$ is $\perp H^1(T)$ if and only if
+\[
+\int_0^{2\pi}\, e^{in\theta}\cdot f(e^{i\theta})\cdot d\theta=0
+\quad\colon\quad n=0,1,2\ldots
+\]
+
+
+\noindent
+But this means precisely that $f$ is the boundary value of an analytic function
+in $D$ which vanishes at the origin.
+Let us identify  $H^\infty(D)$ with
+a subalgebra of  $L^\infty(T)$
+which is denoted by $H^\infty(T)$. Then we also get the subspace
+$H_0^\infty(T)$ of those functions which are zero at
+the origin.
+Hence we have proved
+\medskip
+
+\noindent 
+{\bf Theorem  4.3} \emph{The dual space of $H^1(T)$ is equal to the quotient
+space}
+\[ 
+\frac{L^\infty(T)}{H^\infty_0(T)}
+\]
+\medskip
+
+
+
+\centerline{\bf 5. BMO}
+
+
+\bigskip
+
+
+\noindent
+{\bf Introduction.}
+Functions of bounded mean oscillation were
+introduced by F. John and L. Nirenberg in
+[J-N].
+This class of Lebesgue measurable functions
+can be defined in $\bf R^n$ for every $n\geq 1$. Here we are content to
+study the case $n=1$ and  restrict the attention to periodic functions
+which is adapted to the class BMO on the unit circle. 
+So let $F(x)$ be a locally integrable function on the real $x$-line
+which is $2\pi$-periodic, i.e. 
+$F(x+2\pi)=F(x)$.
+If $J=(a,b)$ is an interval we  get the mean value
+\[ 
+F_J=\frac{1}{b-a}\cdot\int_a^b\, F(x)dx
+\]
+To every interval $J$ we put
+\[
+|F|_J^*=\int_J\,|F(x)-F_J|\cdot dx
+\]
+\medskip
+
+\noindent 
+{\bf 5.1 Definition.}
+\emph{The function $F$ has a bounded mean oscillation if there exists a constant
+$C$ such that
+$|F|_J\leq C$ for all intervals $J$. When this holds the smallest constant
+is denoted by $|F|_{\text{BMO}}$.}
+\medskip
+
+\bigskip
+
+\noindent
+{\bf 5.2 The case $n\geq 2$.}
+Even though these notes are devoted to complex analysis in
+dimension one, we cannot refrain from
+mentioning a result which illustrates how the class BMO enters
+in Fourier analysis. Let $F(x)$ be an $L^1$-function with
+compact support in $\bf R^n$. Assume 
+that there exists a constant $C$ such that
+the  Fourier transform
+$\widehat F(\xi)$
+satisfies the decay condition
+\[ 
+|\widehat F(\xi)\leq C\cdot(1+|\xi|)^{-n}\quad\colon\quad \xi\in\bf R^n\tag{*}
+\]
+This is not quite enough for $\widehat F$
+to be integrable. So we cannot expect
+that (*) implies that $F(x)$ is a bounded function.
+However, its belongs to BM0 and more precisely one has:
+
+\medskip
+
+\noindent
+{\bf{5.3 Theorem.}}
+\emph{To each $M>0$ there exists a constant $C_M$ such that if $F(x)$
+has support in the ball $\{|x|\leq M\}$
+then}
+\[ ||F||_{\text{BMO}}\leq C_M\cdot \max_\xi\,
+\bigl[1+|\xi|)^n\cdot |\widehat F(\xi)|\bigr]
+\]
+For the proof we refer to [Bjšrk] and   [Sjšlin] contains the 
+improved result
+that $F$ belongs to BMO under less restrictive conditions expressed by
+certain $L^2$-integrals of $\widehat F$ over   dyadic
+grids. 
+\bigskip
+
+\noindent{\bf{5.4 The John-Nirenberg inequality.}}
+We turn to the main topic in this section and prove
+an 
+inequality due to  F. John and L. Nirenberg  which is
+presented for the 1\vvv dimensional periodic case.
+See  [J-N] for
+higher dimensional results.
+\medskip
+
+
+
+
+
+
+
+
+
+\noindent
+{\bf 5.5 Theorem}
+\emph{Let $F(x)$ be a $2\pi$-periodic function on
+the real $x$-line which belongs to  BMO on $T$.  For every interval $J$ on
+${\bf{R}}$ 
+and every positive integer $n$ one has}
+\[ 
+\mathfrak{m}[\{ x\in J\,\colon\, \bigl|F(x)-F_J\bigr|\geq
+4n\cdot |F|_{\text{BMO}}\}]\leq 2^{-n}\cdot |J|
+\]
+\medskip
+
+
+\noindent
+The proof requires several steps.
+To begin with we make some trivial observations.
+The BMO-norm of $F$ is unaffected when we add a constant to
+$F$ and also 
+under a translation, i.e. when we regard $F_a(x)=F(x+a)$ for some
+real number $a$. Moreover, the BMO-norm is 
+unchanged under dilations, i.e. when 
+$t>0$ and $F_t(x)=F(tx)$.
+Before we enter the proof we  need a preliminary result.
+\medskip
+
+\noindent {\bf 5.6 Lemma.}
+\emph{Let $F$ belong to BMO. Let $I\subset J$ be two intervals with the same 
+mid-point. Then}
+\[
+|F_J-F_I|\leq  2\cdot[\text{Log}_2\,\frac{|J|}{|I|}+1]\cdot |F|_\text{BMO}
+\]
+
+
+
+
+\noindent{\bf{Exercise.}} Prove this result.
+
+\bigskip
+
+
+
+\noindent
+\emph{Proof of Theorem 5.5}.
+Replacing $F$ by $cF$ for some positive constant 
+we may assume that its BMO-norm is 1/2.
+and that $F_J=0$. Moreover, by the invariance under dilations
+and translations  we may
+assume that $J$ is the unit interval.
+Thus, there remains to consider the set
+\[ 
+E_n=\{ x\in [0,1]\,\, \colon\,\, F(x)> 2n\}\tag{i}
+\]
+and  show that 
+\[
+\mathfrak{m}(E_n)\leq 2^{-n}\tag {ii}
+\]
+
+\noindent
+Let us begin with the case $n=1$. 
+For every $x\in E_1$ which is a Lebesgue point for $F$ we find the
+unique largest dyadic interval $J(x)$ such that
+\[
+x\in J(x)\subset [0,1]\quad\colon\quad
+\frac{1}{\mathfrak{m}(J(x))}\int_{J(x)}\, F(t)dt >1\tag{iii}
+\]
+Up to measure zero, i.e. ignoring the null set where
+$F$ fails to have Lebesgue points, we have the inclusion 
+\[ 
+E_1\subset\,\cup_{x\in E_1}\, J(x)\tag{iv}
+\]
+
+
+\noindent 
+Next, suppose we have a \emph{strict} inclusion $J(x)\subset J(y)$
+for a pair of dyadic intervals in this family
+which means that
+$\mathfrak{m}(J(y))>\mathfrak{m}(J(x))$.
+But this is impossible for then $x\in J(y)$ which contradicts 
+the maximal choice of $J(x))$ as the dyadic interval of largest possible length containing $x$.
+Hence the family $\{J(x_\nu)\}$ consists of dyadic intervals which either are equal or disjoint.
+We can therefore pick a disjoint family where the corresponding $x$-points are
+denoted by $x^*_\nu$
+and obtain the set-theoretic inclusion
+\[ 
+E_1
+\subset\,\cup\,\, (J(x^*_\nu)\tag{v}
+\]
+Next, put $\mathcal E=\cup\, J(x^*_\nu)$.
+Since the mean value of $F$ over each $J(x^*_\nu)$ is 
+$\geq 1$ we obtain
+\[
+\mathfrak{m}( \mathcal E)\leq
+\sum\,\int_{J(x^*_\nu)}\,F(x)dx=
+\int_{\mathcal E}\,F(x)dx\leq
+\int_{\mathcal E}\,|F(x)|dx\leq\int_0^1\, |F(x)|dx
+\leq |F|_{\text{BMO}}
+\]
+where the last inequality follows from the definition of the BMO-norm
+and the condition that the mean-value of $F$ over the unit interval was zero.
+Since the BMO-norm of $F$ was 1/2 the inclusion (v) gives:
+\[
+\mathfrak{m}( E_1)\leq\mathfrak{m}(\mathcal E)\leq 1/2\tag{*}
+\] 
+
+
+\noindent
+This proves the case $n=1$ and  we proceed by an
+induction over $n$.
+Let us first regard one of the dyadic intervals $J(x^*_\nu)$
+from the family covering $E_1$.
+If $2^{-N}$ is the length of $J(x_\nu^*$
+the
+dyadic exhaustion of $[0,1]$ gives
+a dyadic interval $J'$ of length $2^{-N+1}$
+which contain $J(x_\nu^*)$.
+The maximal choice of $J(x_\nu^*)$ gives:
+\[
+\frac{1}{\mathfrak{m}(J')}\int_{J'} F(t)dt\leq 1\tag{vi}
+\]
+Apply Proposition XX to the pair $J(x_\nu^*)$ and $J'$.
+Since $|F|_{\text{BMO}}=1/2$ is assumed and $\text{Log}_2(2)=0$
+we obtain
+\[
+F_{J(x_\nu^*)}=\frac{1}{\mathfrak{m}(J(x_\nu^*))}\int_{J(x_\nu^*)}\, F(t)dt \leq 2
+\tag{vii}
+\]
+Let $n\geq 2$ and for every $\nu$ we set:
+\[
+E_n(\nu)=E_n\cap J(x_\nu^*)\tag{viii}
+\]
+Since $F(x)>2n$ holds on $E_n$ we  get
+\[
+F(x)-F_{J(x_\nu^*)}>2(n-1)\quad\colon\quad  x\in E_n(\nu)\tag{ix}
+\]
+ 
+ 
+ 
+\medskip
+
+\noindent Hence we have the inclusion
+\medskip
+\[ 
+E_n(\nu)\subset W_n(\nu)= \{
+x\in J(x_\nu^*)\quad\colon\,
+F(x)-F_{J(x_\nu^*)}>2(n-1)\}\tag{x}
+\]
+
+
+
+\noindent
+By a change of scale we can use
+the interval $J(x_\nu^*)$ instead of the unit interval 
+and by an induction assume that the inequality in
+Theorem 5.5 holds for $n-1$. It follows that
+the set in right hand side  in (x) is estimated by:
+\medskip
+\[ 
+\mathfrak{m}(W_n(\nu))\leq 2^{-n+1}\cdot
+\mathfrak{m}(J(x_\nu^*))\tag{xi}
+\]
+
+
+\noindent
+The set-theoretic inclusion (x)
+therefore gives
+\[
+\mathfrak{m}(E_n(\nu))\leq 2^{-n+1}\cdot
+\mathfrak{m}(J(x_\nu^*))\tag{xii}
+\]
+
+\noindent
+Finally, since $E_n\subset E_1$ and
+we already have the inclusion (iv)
+we obtain
+\[ 
+\mathfrak{m}(E_n)=
+\sum\,
+\mathfrak{m}(E_n(\nu))\leq 2^{-n+1}\cdot\sum\, 
+\mathfrak{m}(J(x_\nu^*))=2^{-n+1}\mathfrak{m}(\mathcal E)
+\leq2^{-n+1}\cdot\frac{1}{2}= 2^{-n}
+\]
+\medskip
+This proves the induction step and Theorem 5.5 follows.
+\bigskip
+
+\centerline{\bf{5.7 An $L^2$\vvv inequality}}
+\medskip
+
+
+\noindent
+Let $F\in\text{BMO}(T)$ be given.
+Given some interval $J\subset T$
+and $\lambda>0$ we set
+\[
+\mathfrak{m}\uuu J(\lambda)=
+\{\theta\in J\,\colon\, |F(\theta)\vvv F\uuu J|>\lambda\}
+\]
+Consider the integral
+
+\[ 
+I=\frac{1}{|J|}\cdot\int\uuu 0^\infty\,\lambda\cdot \mathfrak{m}\uuu J(\lambda)\cdot d\lambda\tag{*}
+\]
+Set $A=4\cdot ||F||\uuu{\text{BMO}}$. 
+Theorem 5.5. gives
+
+\[
+I=\frac{1}{|J|}\cdot \sum\uuu{n=0}^\infty\,
+\int\uuu {nA}^{(n+1)A}\,\lambda\cdot \mathfrak{m}\uuu J(\lambda)\cdot d\lambda
+\leq
+\frac{1}{|J|}\cdot \sum\uuu{n=0}^\infty\,(n+1)A\cdot |J|\cdot \cdot 2^{\vvv n}=
+C||F||\uuu{\text{BMO}}
+\]
+where $C= 4\cdot \sum\uuu{n=0}^\infty\,(n+1)\, 2^{\vvv n}$
+is an absolute constant.
+Next, by the general result in XX (*) is equal to
+\[
+\frac{1}{|J|}\cdot \int\uuu J\, |F(x)\vvv F\uuu J|^2\cdot dx\tag{**}
+\]
+So by the above  (**) is majorized by an absolute constant times
+the BMO\vvv norm of $F$.
+
+
+
+
+\bigskip
+
+
+
+
+\centerline{\bf{5.8 BMO and the Garsia norm.}}
+\bigskip
+
+\noindent
+Using the $L^2$\vvv inequality in (5.7)
+an elegant description of $\text{BMO}(T)$
+was discovered by Garsia which we shall use in
+Section 6. First we give:
+\bigskip
+
+
+\noindent
+{\bf{5.9 Definition.}} \emph{To each real\vvv valued $u\in L^1(T)$
+we define a function in $D$ by}
+
+\[
+\mathcal G\uuu u(z)=
+\frac{1}{8\pi^2}
+\cdot \iint\,\frac{(1\vvv |z|^2)^2}{|e^{i\theta}\vvv z|^2\cdot |e^{i\phi}\vvv z|^2}
+\cdot
+[u(\theta)\vvv u(\phi)]^2\cdot d\theta d\phi
+\]
+
+
+\noindent
+\emph{If this function is bounded  we set}
+\[ 
+\mathcal G(u)=\max\uuu{z\in D}\, \sqrt{\mathcal G\uuu u(z)}\tag{*}
+\]
+\emph{and say that $u$ has a finite Garsia norm.}
+
+\medskip
+
+\noindent
+{\bf{Remark.}} Notice that constant functions have
+zero\vvv norm. So just as for BMO the 
+$\mathcal G$\vvv norm is defined on the quotient of functions modulu
+constants.
+
+
+
+\medskip
+
+\noindent
+{\bf{5.10 Exercise.}}
+Expanding
+the square $[u(\theta)\vvv u(\phi)]^2$
+the reader can verify that
+\[ 
+\mathcal G\uuu u= H\uuu{u^2}\vvv H^2\uuu u\tag{*}
+\] 
+where $H\uuu {u^2}$ is the harmonic extension of $u^2$.
+and $ H^2\uuu u$ the square of the harmonic extension $H\uuu u$.
+
+
+\medskip
+
+\noindent
+{\bf{5.11 Theorem.}} 
+\emph{An $L^1$\vvv function $u$ has finite Garsia norm if and only if
+it belongs to BMO. Moreover, 
+there exists a constant $C\geq 1$ such that}
+
+\[ 
+\frac{1}{C}\cdot 
+||u||\uuu{\text{BMO}}\leq
+\mathcal G(u)\leq 
+C\cdot ||u||\uuu{\text{BMO}}
+\]
+\medskip
+
+\noindent{\bf{5.12 Exercise.}}
+The reader is invited to prove this result using
+the previous facts about BMO and also
+straightforward properties of the Poisson kernel.
+if necessary, consult [Koosis  p. xxx\vvv xxx]
+for details.
+\bigskip
+
+
+\noindent
+{\bf{5.13  The Garsia norm and Carleson measures.}}
+Let $f$ be a real\vvv valued continuous function on $T$.
+We get the two harmonic functions $H\uuu f$ and $H\uuu{f^2}$ and recall from
+(5.10) that
+\[ 
+\mathcal G\uuu f=H\uuu{f^2}\vvv(H\uuu f)^2
+\]
+In XX we  introduced the family of Carleson
+sectors in $D$ and now we prove
+an important inequality.
+
+
+\medskip
+
+\noindent
+{\bf{5.14 Theorem.}}
+\emph{For every Carleson sector $S\uuu h$ with $0<h<1/2$
+and each $f\in C^0(T)$
+one has the inequality}
+
+\[
+\frac{1}{h}\cdot \iint\uuu{S\uuu h}\, 
+|z|\cdot \log\,\frac{1}{|z|}\cdot
+\bigl |\nabla(H\uuu f)\bigr |^2\cdot dxdy\leq
+96\cdot \mathcal G(f)^2
+\]
+\medskip
+
+
+\noindent
+\emph{Proof.}
+We use the conformal map where $z=\frac{\zeta\vvv i}{\zeta+i}$.
+If $\phi(z)$ is a function in $D$ we get the function
+$\phi^*(\zeta)$  in the upper half\vvv plane where 
+\[
+\phi(\frac{\zeta\vvv i}{\zeta+i})=\phi^*(\zeta)
+\]
+One easily verifies that 
+\[ 
+(|z|\cdot \log\,\frac{1}{|z|})^*(\xi+i\eta)\leq
+8\cdot \eta\tag{i}
+\]
+Set $w(\zeta)= H\uuu f^*(\zeta)$.
+Then (i) implies that
+the double integral which appears in the Theorem  5.14 is majorised by 
+\[ 
+J^*=8\cdot \iint\uuu{S\uuu h^*}\, \eta\cdot|\nabla(w)|^2 \cdot d\xi d\eta\tag{ii}
+\]
+where $S\uuu h^*$ is the image of $S\uuu h$ under the conformal map
+and 
+$|\nabla(w)|^2=w\uuu\xi^2+w\uuu\eta^2$.
+Next, from (*) in Exercise 5.10 we have
+
+\[
+w^2=H\uuu{f^2}^*\vvv\mathcal G\uuu f^*
+\]
+Since $H^*\uuu{f^2}$ is harmonic  we obtain
+\[
+2\cdot |\nabla(w)|^2=\Delta(w^2)=\vvv\Delta(\mathcal G\uuu f^*)\tag{iii}
+\]
+where the first easy equality follows since $w$ is harmonic.
+As explained by figure XX the set $S^*\uuu h$
+is placed above an interval on the real $\xi$\vvv line and 
+and since the subsequent estimates are invariant under the center of this interval
+we therefore may take it as $\xi=0$.
+Let us  introduce the half\vvv disc
+\[
+ D\uuu{2h}=\{|\zeta|<2h\}\cap \{\eta>0\}
+ \]
+Then a figure shows that
+\[
+S^*\uuu h\subset D\uuu{2h}\tag{iv}
+\]
+Next, consider the 
+function $1\vvv\frac{|\zeta|}{2h}$ and notice that it is
+$\geq 1/4$ in $D\uuu{2h}$.
+Recall from the above that
+\[
+\Delta(\mathcal G\uuu f^*)=\vvv 2\cdot |\nabla(w)|^2\leq 0
+\]
+From the inclusion (iv) and taking the minus signs into the account
+it follows from (ii) that
+\[ 
+J^*\leq \vvv 16\cdot \iint\uuu{D\uuu{2h}}
+ \eta(1\vvv\frac{|\zeta|}{2h})\cdot\Delta (\mathcal G^*\uuu f) \cdot d\xi d\eta\tag{v}
+\]
+Apply Green's formula
+to the pair $\mathcal G^*\uuu f$ and $\rho=\eta(1\vvv\frac{|\zeta|}{2h})$.
+Here $\rho=0$ on the boundary of $D\uuu{2h}$
+and it is easily checked that the outer normal 
+$\partial\uuu n(\rho)\leq 0$. At the same time
+$\mathcal G^*\uuu f\geq 0$ and from this it follows that
+(v) gives:
+\[ 
+J^*\leq \vvv 16\cdot \iint\uuu{D\uuu{2h}}
+ \Delta(\eta(1\vvv\frac{|\zeta|}{2h}))\cdot\mathcal G^*\uuu f
+ \cdot d\xi d\eta\tag{iv}
+\]
+Next, using polar coordinates
+$(r,\phi)$ an easy computation gives
+\[
+ \Delta(\eta(1\vvv\frac{|\zeta|}{2h}))=\vvv\frac{3}{2h}\cdot \sin\,\phi
+ \]
+It follows that
+\[ 
+J^*\leq  \frac{24}{h}\cdot 
+\iint\uuu{D\uuu{2h}}
+\mathcal G^*\uuu f\cdot \sin\,\phi\cdot rdr d\phi
+\]
+Finally, by definition  $\mathcal G(f)^2 $ is the maximum norm of 
+$\mathcal G\uuu f$ in $D$ which is $\geq$ the maximum norm of
+$\mathcal G^*\uuu f$ in $D\uuu{2h}$. So
+the last integral is majorised by
+\[
+\frac{24 \mathcal G(f)^2}{h}\cdot 
+\iint\uuu{D\uuu{2h}}
+\sin\,\phi\cdot rdr d\phi=
+96\cdot  \mathcal G(f)^2\cdot h
+\]
+After a division with $h$ we get Theorem 5.14.
+\medskip
+
+\noindent
+{\bf{5.15 Remark.}}
+Since $|z|\geq 1/2$ holds in sectors $S\uuu h$ with $0<h<1/2$
+we can remove the factor $|z|$ and hence  Theorem 5.14
+shows that
+if $\mathcal G\uuu f(z)$ is  bounded  in $D$
+then we obtain a Carleson measure in $D$ defined by
+\[
+\mu\uuu f=
+\log\,\frac{1}{|z|}\cdot
+\bigl |\nabla(H\uuu f)\bigr |^2\tag{*}
+\]
+Moreover, its Carleson norm is estimated via Theorem 5.11 and
+Theorem 5.24 by an absolute constant times
+$|F|\uuu{\text{BMO}}$.
+
+
+\bigskip
+
+\centerline{\bf{6. The dual of $\mathfrak{Re}(H_0^1(T)$}}
+
+\bigskip
+
+\noindent
+By the observations before Theorem 0.4 there remains to prove that if
+$F\in\text{BMO}(T)$ then (*) holds in Theorem 0.4 for some
+constant $C$. To obtain this we need some
+preliminary results.
+\medskip
+
+\noindent
+{\bf{6.1 Some integral formulas.}}
+To simplify notations we set
+\[ 
+\int\uuu0^{2\pi}\, g(e^{i\theta})\cdot d\theta= \int\uuu T\, g\cdot d\theta
+\]
+for integrals over the unit circle.
+Now follow some results which are left as exercises and  proved by
+Green's formula.
+\medskip
+
+\noindent
+{\bf{A. Exercise.}}
+For every $C^2$\vvv function
+$W$ in the closed unit disc with $W(0)=0$
+we have
+\[
+\int\uuu T\, W\cdot d\theta=\iint\uuu D\, \log\,\frac{1}{|z|}\cdot \Delta(W)\cdot dxdy\tag{1}
+\]
+Next, if
+ \[
+W= |z|\cdot W\uuu 1\tag{2}
+\]
+
+
+\noindent
+{\bf{B. Exercise.}}
+Let $u,v$ is a pair of $C^2$\vvv functions which both are harmonic
+in the open disc. Show that 
+\[
+\Delta(uv)=2\cdot \langle \nabla(u),\nabla(v)\rangle\tag{i}
+\]
+and use (A) to prove the equality
+\[ 
+\int\uuu T\, uv\cdot d\theta=\iint\uuu D\, \log\,\frac{1}{|z|}\cdot
+\langle \nabla(u),\nabla(v)\rangle\cdot dxdy\tag{ii}
+\]
+\medskip
+
+\noindent
+{\bf{C. Exercise.}}
+Let $f=u+iv$ be analytic in $D$. Verify that
+\[
+\Delta(|f|)=\frac{1}{|f|}\cdot |\nabla(u)|^2\tag{i}
+\]
+holds outside the zeros of $f$. Show also that
+if 
+\[ 
+f=z\cdot g\tag{ii}
+\] 
+where $g$ is zero\vvv free in $D$ then
+\[
+\int\uuu T\, |f|\cdot d\theta=
+\iint\uuu D\, \log\,\frac{1}{|z|}\cdot\frac{|\nabla(u)|^2}{|f|}\cdot dxdy\tag{iii}
+\]
+
+\noindent
+Finally, let  $f$ be as in (ii) and $F$ a  real\vvv valued $C^2$\vvv function in
+$D$. Show that
+\[
+\frac{1}{2}\int\uuu T\, u\cdot F\cdot d\theta=
+\iint\uuu D\, \log\,\frac{1}{|z|}\cdot
+\langle \nabla(u),\nabla H\uuu F\rangle\cdot dxdy\tag{iii}
+\]
+
+
+
+
+
+
+\bigskip
+
+\centerline{\emph{6.2 Proof of Theorem 0.4}}
+\bigskip
+
+\noindent
+Let $f\in H^1\uuu 0(T)$. Then one finds a Blaschke product
+$B$ such that
+\[
+f(z)=z\cdot B(z)\cdot g(z)
+\]
+where $g$ is zero\vvv free in $D$.
+It follows that
+\[
+2f=z(B+1)\cdot g+z(B\vvv 1)\cdot g=f\uuu 1+f\uuu 2
+\]
+where 
+$||f\uuu\nu||\uuu 1\leq 2\cdot ||f||\uuu 1$ hold for each $\nu$.
+Using this trick we conclude that
+it suffices to estasblish 
+Theorem 0.4 for $H^1(T)$\vvv functions
+of the form
+$f(z)= z\cdot g(z)$ with a
+zero\vvv free function $g$ in $D$.
+We write $f=u+iv$
+and for each real\vvv valued $C^2$\vvv function $F(\theta)$ on $T$
+we have by (iii) from Exercise C:
+
+\[
+\frac{1}{2}\cdot 
+\int\uuu 0^{2\pi}\, F(\theta)\cdot u(\theta)\cdot d\theta=
+\iint\uuu D\, \log\,\frac{1}{|z|}\cdot \langle \nabla(u),\nabla(H\uuu F)\rangle
+\cdot dxdy\tag{1}
+\]
+Insert the factor $1=\sqrt{|f|}\cdot \frac{1}{\sqrt{|f|}}$
+and apply the Cauchy\vvv Schwarz inequality which
+estimates the absolute value of (i)
+by
+
+\[ 
+J=\sqrt{
+\iint\uuu D\, \log\,\frac{1}{|z|}\cdot \frac{|\nabla(u)|^2}{|f(z)|}
+\cdot dxdy}\cdot
+\sqrt{\iint\uuu D\, \log\,\frac{1}{|z|}\cdot |\nabla(H\uuu F)|^2\cdot |f(z)|}
+\cdot dxdy\tag{2}
+\]
+The equality (iii) in Exercise C shows the first factor is equal to
+$\sqrt{||f||\uuu 1}$.
+In the second factor appears the density function 
+$\log\,\frac{1}{|z|}\cdot |\nabla(H\uuu F)|^2$ in $D$.
+\medskip
+
+\noindent
+Finally,  by
+the  Remark in (5.15) 
+the Carleson norm of the density
+$\log\,\frac{1}{|z|}\cdot |\nabla(H\uuu F)|^2$
+is bounded by an absolute constant
+$C$ times the BMO\vvv norm of $F$.
+Together with the result in XXX in Section XXX we get an absolute constant
+$C$ such that the last factor in (2) above is bounded by
+\[
+C\cdot |F|\uuu{\text{BMO}}\cdot\sqrt{||f||\uuu 1}\tag{3}
+\]
+which finishes
+the proof of
+Theorem 0.4.
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline {\bf 7. A theorem by Gundy Silver}
+
+
+\bigskip
+
+
+
+
+\noindent
+{\bf Introduction.}
+Let $U(x)$ be in $L^1({\bf{R}})$ and construct its
+harmonic extension  to the upper half plane:
+\[
+U(x+iy)=\frac{1}{\pi}\cdot \int\,\frac{y}{(x-t)^2+y^2}\cdot
+U(t)\cdot dt
+\]
+\noindent
+The  harmonic conjugate of $U(x+iy)$   is given by:
+\[ 
+V(x+iy)=\frac{y}{\pi}\int\,\frac
+{U(t)\cdot dt}{(x-t)^2+y 2}\tag{0.1}
+\]
+\medskip
+
+
+\noindent
+Next, to each real  $x_0$  the Fatou sector in the upper half-plane is defined by
+\[
+\{x+iy)\quad\text{such that}\quad \,|x-x_0|\leq y\}\tag{0.2}
+\]
+and the maximal function $U^*$ over Fatou sectors 
+is defined on the real $x$\vvv axis by
+\[ 
+U^*(x_0)=\max\, |U(x+iy)|\colon\quad\colon |x-x_0|\leq y\tag{0.3}
+\]
+
+\medskip
+
+\noindent
+In XXX we proved that if $V\in L^1(R)$
+then $U^*(x)\in L^1({\bf{R}})$
+and there exists
+an absolute constant $C_0$ such that
+\[ 
+||U^*||_1\leq \int_{-\infty}^\infty\, \bigl(\,|U(x)|+|V(x)| \,\bigr)dx\tag{*}
+\]
+
+
+\noindent
+A reverse inequality is due to
+Burkholder, Gundy and Silverstein.
+
+\medskip
+
+\noindent {\bf Theorem 7.1.} \emph{One has the inequality}
+\[ 
+\int\,|V(x)|dx\leq  4\int\,U^*(x)dx
+\]
+\medskip
+
+
+\noindent
+{\bf Remark.}
+Hence $U^*$ belongs to $L^1$ if and only if
+the boundary value function $V(x)$ belongs to $L^1$.
+The  original proof in [BGS] used 
+probabilistic methods. Here we  give a proof
+based upon
+methods from [Feff-Stein].
+Since we 
+shall establish an \emph{a priori estimate}, it suffices to assume that
+$U(x)$ from the start is a nice function. In particular
+we may assume that both $U(x+iy)$ and $V(x+iy)$
+have rapid decay when $y\to+\infty$ in the upper half-plane.
+This assumption is used below to ensure that a certain complex line
+integral is zero.
+
+\bigskip
+
+
+
+\centerline{\emph{Proof of Theorem 7.1}}
+\medskip
+
+
+\noindent
+Given $\lambda>0$ we put
+\[ 
+J_\lambda=\{ x\colon U^*(x)>\lambda\}
+\]
+\medskip
+
+
+\noindent
+The closed complement
+${\bf{R}}\setminus J_\lambda$ is denoted by $E$.
+Let $\{(a_\nu,b_\nu)\}$ be the disjoint intervals of $J_\lambda$.
+Construct the piecewise linear
+$\Gamma$-curve
+which stays on the real $x$-line on 
+$E$ while it follows the two sides
+of the triangle $T_\nu$
+standing on $(a_\nu,b_\nu)$ for each $\nu$.
+So  the  corner point of $T_\nu$ in the upper half-plane is:
+\[
+p_\nu=\frac{1}{2}(a_\nu+b_\nu)(1+i)
+\]
+Set $\partial T= \Gamma\setminus E$ and notice 
+that the construction of Fatou sectors gives
+\[ 
+U^*(x)\leq \lambda\quad\colon\quad x\in T\tag {1}
+\]
+
+\noindent
+In $\mathfrak{Im}(z)>0$
+we have the
+analytic function
+$G(z)=(U+iV)^2$.
+By hypothesis  $U$
+$y\mapsto G(x+iy)$ decreases quite rapidly which gives
+a vanishing complex line integral:
+\[ 
+\int_\Gamma\,G(z)dz=0
+\] 
+
+
+
+\noindent
+Now $\Gamma$ is the union  of $E$
+and the union of  of the broken lines which give the two sides
+of the $T_\nu$-triangles.
+Let $\partial T$ denote the union of these
+broken lines. Since the complex differential $dz=dx+idy$
+the real part of the complex line integral is zero which gives
+
+\[
+\int_E\, (U^2-V^2)\cdot dx+
+\int_{\partial T}(U^2-V^2)\cdot dx-2\cdot 
+\int_{\partial T}U\cdot Vdy\tag{2}
+\]
+On the sides of  the $T$-triangles
+the slope is plus or minus $\pi/4$  and hence $|dy|=|dx|$
+where $|dx|= dx$ is positive.
+Hence the he inequality
+$2ab\leq a^2+b^2$ for any pair of  non-negative numbers gives:
+\[ 
+2\cdot \bigl|\int_{\partial T}\,
+ UV dy\,\bigr |\leq  \int_{\partial T}\, U^2\cdot dx+\int_{\partial T}\,V^2\cdot dx\tag{3}
+\]
+
+
+\noindent
+Since (2) is zero we see that (3) and the triangle inequality
+give:
+\[
+\int_E\, V^2\cdot dx\leq 
+\int_E\, U^2\cdot dx+
+2\cdot \int_{\partial  T}\, U^2\cdot dx
+\tag{4}
+\]
+
+\medskip
+
+
+
+\noindent
+Next, put
+\[
+V^+_\lambda=\{x\,\colon |V(x)|>\lambda\}
+\]
+Then (4) gives:
+\[
+\mathfrak{m}(V^+_\lambda\cap E)\leq
+\frac{1}{\lambda^2}\cdot
+\int_E  V^2\cdot dx\leq
+\frac{1}{\lambda^2}\cdot\int_E\, U^2\cdot dx+
+\frac{2}{\lambda^2}\cdot\int_{\partial  T}\, U\cdot dx\tag{5}
+\]
+
+
+\medskip
+
+\noindent
+Next, 
+Since the
+integral  $\int_{T_\nu}dx=(b_\nu-a_\nu)$ for each $\nu$
+and (1) holds we have
+\[
+\frac{2}{\lambda^2}\cdot
+\int_{\partial T} U^2\cdot dx\leq 2\cdot \sum (b_\nu-a_\nu)=
+2\cdot \mathfrak{m}(J_\lambda)\tag{6}
+\]
+Using the set-theoretic inclusion $V^+_\lambda\subset 
+(V^+_\lambda
+\cap E_\lambda)\,\cup
+J_\lambda$ it follows after adding $\mathfrak{m}(J\uuu\lambda)$
+on both sides in (5):
+\[
+\mathfrak{m}(V^+_\lambda)\leq 3\cdot\mathfrak{m}(J_\lambda)+
+\frac{1}{\lambda^2}\cdot\int_E \,U^2\cdot dx\tag{6}
+\]
+Finally, $U\leq U^*$ holds on $E$
+and since $E$ is the complement of $J\uuu\lambda$
+we have $E=\{x\,\colon U^*(x)\leq\lambda\}$.
+Now we apply general integral formulas which after integration over 
+$\lambda\geq 0$
+gives
+
+\[
+\int\,|V(x)\cdot dx=3\cdot \int\,U^*(x)\cdot dx+
+\int\uuu 0^\infty\, \frac{1}{\lambda^2}\bigl [\int\uuu {(U^*\leq\lambda}\,(U^*)^2\cdot dx\,\bigr ]
+\cdot d\lambda
+\]
+By the integral formula from XX the last term is equal to
+$\int\,U^*(x)\cdot dx$ and Theorem 7.1 follows.
+
+
+
+
+\newpage
+
+
+\centerline{\bf{8. The Hardy space on ${\bf{R}}$}}
+
+
+\medskip
+
+\noindent
+Consider an analytic function $F(z)$ in the upper half\vvv plane
+whose boundary value function $F(x)$ on the real line is integrable.
+This class of analytic functions in $\mathfrak{Im}\,z>0$
+is denoted by $H^1({\bf{R}})$.
+To each such $F$ we introduce the
+non\vvv tangential maximal function
+\[ 
+F^*(x)=\max\uuu {z\in\mathcal F(x)}
+\, |F(z)|\tag{*}
+\]
+where $\mathcal F(x)$ is the Fatou sector of points
+$z=\xi+i\eta$ for which $|\xi\vvv x|\leq \eta$.
+With these notations one has
+
+\medskip
+
+\noindent{\bf{8.1 Theorem.}}
+\emph{There exists an absolute constant $C$ such that}
+\[
+\int\uuu{\vvv\infty}^\infty |F^*(x)|\cdot dx\leq
+C\cdot \int\uuu{\vvv\infty}^\infty |F(x)|\cdot dx
+\]
+\medskip
+
+
+\noindent
+To prove this we shall first study harmonic functions
+and reduce the proof of Theorem 8.1 to a certain $L^2$\vvv inequality.
+To begin with, let  $u(x)$ is a real\vvv valued function on
+the $x$\vvv axis such that the integral
+\[ 
+\int\uuu{\vvv\infty}^\infty\, \frac{|u(x)|}{1+x^2}\cdot dx<\infty
+\]
+The harmonic extension to the upper half\vvv plane becomes:
+
+\[
+U(x+iy)=
+\frac{1}{\pi}\cdot \int\uuu{\vvv\infty}^\infty\, \frac{y}{(x\vvv t)^2+y^2}
+\cdot u(t)\cdot dt
+\]
+The non\vvv tangential maximal function is defined by:
+\[
+ U^*(x)=\max\uuu {z\in\mathcal F(x)}
+\, |U(z)|\tag{*}
+\]
+When $u(x)$ belongs to $L^2({\bf{R}})$
+it turns out that one there is an  $L^2$\vvv inequality.
+
+\bigskip
+
+\noindent{\bf{8.2 Theorem.}}
+\emph{There exists an absolute constant $C$ such that}
+
+\[
+\int\uuu{\vvv\infty}^\infty\,(U^*(x))^2\cdot dx\leq
+\int\uuu{\vvv\infty}^\infty\,u^2(x)\cdot dx
+\]
+\emph{for every $L^2$\vvv function on the $x$\vvv axis.}
+\medskip
+
+\noindent
+In 8.X below   we show how Theorem 8.2 gives Theorem 8.1.
+The proof of Theorem 8.2 relies upon a point\vvv wise estimate
+of $U$ via the Hardy\vvv Littlewood maximal function of
+$u$.
+Let us first consider a function $u(x)$ supported by
+$x\geq 0$ such that the function
+\[
+t\mapsto \frac{1}{t}\, \int\uuu 0^t\, |u(x)|\cdot dx
+\]
+is bounded on $(0,+\infty)$.
+Let $u^M(0)$ denote this supremum over $t$.
+Then one has
+
+\medskip
+
+\noindent
+{\bf{8.3 Proposition.}}
+\emph{For each $z=x+iy$ in the upper half\vvv plane one has}
+
+\[
+|U(x+iy)|\leq (1+\frac{|x|}{2y})\cdot u^M(0)
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Since the absolute values  $|U(x+iy)|$
+increase when $u$ is replaced by $|u|$ we may assume that
+$u\geq 0$ from the start. Put
+\[ 
+\Phi(t)=
+\int\uuu 0^t\, u(x)\cdot dx
+\]
+which yields a primitive of $u$ and
+a partial integration gives
+\[
+U(x+iy)= \lim\uuu {A\to \infty}
+\frac{1}{\pi}
+\cdot\bigr| \frac{y}{(x\vvv t)^2+y^2}
+\cdot  \Phi(t)\bigl|  \uuu 0^A+
+\lim\uuu {A\to \infty}
+\frac{2}{\pi}\cdot\int\uuu 0^A\, \frac{y(t\vvv x)}{((x\vvv t)^2+y^2)^2}
+\cdot \Phi(t)\cdot dt
+\]
+With $(x,y)$ kept fixed the finiteness of $u^M(0)$ entails that
+$t^{\vvv 2}\cdot \Phi (t)$ tends  to zero 
+with $A$ and there remains
+
+\[
+U(x+iy)=
+\frac{2}{\pi}\cdot \int\uuu 0^\infty\, \frac{y(t\vvv x)}{((x\vvv t)^2+y^2)^2}
+\cdot \Phi(t)\cdot dt
+\]
+Now $\Phi(t)\leq u^M(0)\cdot t$
+gives the inequality
+
+\[
+U(x+iy)=\frac{2 u^M(0)}{\pi}\cdot \int\uuu 0^\infty\, 
+\frac{y(t\vvv x)\cdot t}{((x\vvv t)^2+y^2)^2}\cdot dt
+\]
+To estimate the integrand we notice that it is equal to
+\[
+\frac{y}{((x\vvv t)^2+y^2)}+
+\frac{y(t\vvv x)x}{((x\vvv t)^2+y^2)^2}
+\]
+The Cauchy\vvv Schwarz inequality gives
+\[
+|\frac{2y(t\vvv x)x}{((x\vvv t)^2+y^2)^2}|\leq
+\frac{|x|}{(x\vvv t)^2+y^2}
+\]
+It follows that
+
+\[ 
+|U(x+iy)|\leq \frac{2u^M(0)}{\pi}\cdot 
+\int\uuu 0^\infty\, \frac{y}{(x\vvv t)^2+y^2)}+\frac{u^M(0)\cdot |x|}{\pi}
+\cdot 
+\int\uuu 0^\infty\, \frac{1}{(x\vvv t)^2+y^2}\cdot dt
+\]
+The last sum of integrals is obviously
+majorised by
+$u^M(0)(1+\frac{|x|}{2y})$ and Proposition XX is proved.
+\medskip
+
+
+\noindent
+{\bf{8.4 General cae.}}
+If no constraint is imposed on the support of $u$
+it is written as $ u\uuu 1+u\uuu 2$ where $u\uuu 1$ is supported by
+$x\leq 0$ and $u\uuu 2$ b $x\geq 0$.
+Here we consider the  maximal function
+\[
+u^M(0)=
+\max\uuu t\, \frac{1}{2t}\int\uuu{\vvv t}^t\, |u(x)|\cdot dx
+\]
+Exactly as above the reader may verify that 
+\[ 
+|U(x,y)|\leq u^M(0)(2+\frac{|x|}{y})\tag{i}
+\]
+
+
+\noindent
+In the Fatou sector at $x=0$ we have $x\leq |y|$
+and hence (i) gives
+\[
+U^*(0)\leq \leq 3\cdot u^M(0)
+\]
+After a translation with respect to $x$ a similar inequality holds.
+More precisely, put
+\[ 
+u^M(x)= \max\uuu t\, \frac{1}{2t}\int\uuu{\vvv t}^t\, |u(x+s)|\cdot ds
+\]
+for every $x$, Then we have
+\[
+U^*(x)\leq 3\dot u^M(x)
+\]
+\medskip
+
+\noindent
+Now we apply the Hardy\vvv Littlewood inequality from XX
+for the $L^2$\vvv case and obtain the conclusive result:
+
+\medskip
+
+\noindent
+{\bf{8.5 Theorem.}} \emph{There exists an absolute constant $C$ such that}
+
+\[ 
+\int\uuu{\vvv\infty>}^\infty\, U^*(x)^2\cdot dx\leq
+C\cdot \int\uuu{\vvv\infty>}^\infty\, u^2(x)\cdot dx
+\]
+\emph{for every $L^2$\vvv function $u$ on the real line.}
+\bigskip
+
+\noindent
+{\bf{8.6 Proof of  Theorem 8.1}}
+We use a factorisation via Blaschke products which enable us to
+write
+
+\[
+ F(z)= B(z)\cdot g^2(z)
+ \]
+ where $g(z)$ is a zero\vvv free analytic function in
+ the upper half\vvv plane.
+ Since $|B(z)|\leq 1$ holds in $\mathfrak{Im}(z)>0$
+ we have trivially
+ \[
+ F^*(x)\leq g^*(x)^2
+ \]
+On the real axis we have $|F(x)|= |g(x)|^2$ almost everywhere so the 
+$L^1$\vvv norm of $F$ is equal to the $L^2$\vvv norm of $g$.
+Next, with $g=U+iV$
+we have a pair of harmonic functions and since
+$|g|^2= U^2+V^2$ we can apply Theorem 8.5 to each of 
+these harmonic functions
+and at this stage we leave it to the reader to confirm
+the assertion in Theorem 8.1
+\bigskip
+
+\centerline{\bf{8.7 Carleson measures }}
+\bigskip
+
+\noindent
+Let $F(z)$ be in the Hardy space $H^1({\bf{R}})$.
+If $\lambda>0$ we put
+\[
+J\uuu\lambda= \{F^*(x)>\lambda\}
+\]
+We assume that the set is non\vvv empty and hence this open set
+is a union of disjoint intervals $\{(a\uuu k,b\uuu k)\}$.
+To each interval we construct the triangle $T\uuu k$
+with corners at the points
+$a\uuu k,b\uuu k$ and $p\uuu k=
+\frac{1}{2}(a\uuu k+b\uuu k)+ \frac{i}{2}(b\uuu k\vvv a\uuu k)$.
+Put
+\[ 
+\Omega=\cup\, T\uuu k
+\]
+
+
+\noindent{\bf{Exercise.}}
+Use the construction of Fatou sectors 
+and the definition of $F^*$ to show that
+\[ 
+\{|F(z)|>\lambda\} \subset \Omega\tag{1}
+\]
+
+\noindent
+Let us now consider a non\vvv negative 
+Riesz measure $\mu$ in the upper half\vvv plane.
+For the moment we assume that $\mu$ has compact support
+and that  $F(z)$ extends to a continuos function on
+the closed upper half\vvv plane
+This is to ensure that various integrals exists but 
+does not affect the final a priori
+inequality in Theorem X below.
+General formulas for distribution functions give:
+\[
+\int\,|F(z)|\cdot d\mu(z)=
+\int\uuu 0^\infty\, \lambda\cdot \mu( \{|F(z)|>\lambda\})\cdot d\lambda\tag{2}
+\]
+
+
+\noindent
+To profit upon (1) we impose a certain norm  on $\mu$.
+To each $x$ and every $h$ we construct the triangle $T\uuu x(a)$
+standing on the interval $(x\vvv a/2,x+a/2]$.
+
+\medskip
+
+\noindent
+{\bf{8.8 Definition.}}
+\emph{The Carleson norm of $\mu$ is defined as
+smallest constant $C$ such that}
+\[
+\mu(T\uuu x(a)\leq C\cdot a
+\]
+\emph{hold for all pairs $x\in{\bf{R}}$ and $a>0$ and is
+denoted by $\mathfrak{car}(\mu)$}.
+\medskip
+
+\noindent{\bf{8.9 Application.}}
+Given $\mu$ with its Carleson norm
+the inclusion (1)  gives
+
+\[
+\mu( \{|F(z)|>\lambda\})\leq \sum\, \mu(T\uuu k)\leq
+\mathfrak{car}(\mu)\cdot \sum\, (b\uuu k\vvv a\uuu k)\tag{i}
+\]
+
+\noindent
+The last sum is the Lebesgue measure of $\{F^*>\lambda\}$
+and hence the right hand side in (i) is estimated above by
+\[
+\mathfrak{car}(\mu)\cdot \int\uuu 0^\infty\, \lambda\cdot 
+\mathfrak{m}(\mu( \{F^*>\lambda\})
+\cdot
+d\lambda= 
+\mathfrak{car}(\mu)\cdot 
+\int\uuu{\vvv \infty}^\infty\, F^*(x)\cdot dx\tag{ii}
+\]
+Together with Theorem 8.1 we arrive at the conclusive result:
+
+\bigskip
+
+\noindent
+{\bf{8.10 Theorem.}}
+\emph{There exists an absolute constant $C$ such that}
+\[ 
+\int\, |F(z)|\cdot d\mu(z)\leq C\cdot
+\mathfrak{car}(\mu)\cdot 
+\int\uuu{\vvv \infty}^\infty\, |F(x)|\cdot dx
+\]
+\emph{hold for each $F\in H^1({\bf{R}})$ and every 
+non\vvv negative Riesz measure $\mu$ in the upper half\vvv plane.}
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{9. BMO and radial norms of measures}}
+
+\bigskip
+
+
+\noindent
+Theorem 0.4 together with the preceeding description of the dual space of
+$\mathfrak{Re}\, H^1\uuu 0(T)$
+implies that every BMO\vvv function $F$ can be written as a sum
+\[
+F=\phi+v^*\tag{i}
+\]
+where $\phi$ is bounded and $v^*$ is the harmonic conjugate of 
+a bounded function.
+However, this decomposition is not unique.
+A \emph{constructive} procedure to find a pair $u,v$ in
+for a given BMO\vvv function $F$
+was given by P. Jones in [Jones].
+See also the article [Carleson] from 1976.
+
+
+
+ 
+
+\bigskip
+
+\noindent
+{\bf{9.1 Radial  norms on measures.}}
+Let $D$ be the unit disc. An $L^1$-function $u(z)$ in
+$D$ is radially bounded if there exists a constant $C$ such that
+\[
+\frac{1}{\pi}\cdot \iint_{S_h}\, |u(z)|\cdot dxdy\leq C\cdot h\tag{*}
+\] 
+for each sector
+\[
+S_h=\{z\colon \theta-h/2<\arg z\theta+h/2\}\quad\colon\quad h>0
+\]
+
+\medskip
+
+\noindent
+The smallest   $C$ for which (*) holds is denoted by $|u|^*$.
+Notice that $|u|^*$ in general is strictly larger than
+the $L^1$-norm over $D$ which
+occurs when we take $h=\pi$ above.
+If $u$ satisfies (*) we define a function $P_u$ on the unit circle by
+
+\[
+P_u(\theta)=
+\frac{1}{\pi}\cdot \iint_D\, \frac{1-|z|^2}{|e^{i\theta}-z|^2}\cdot u(z)\cdot dxdxy
+\]
+
+\noindent
+With these notations Fefferman proved:
+\medskip
+
+
+\noindent
+{\bf{9.2 Theorem}} \emph{There exists an absolute constant $C$ such that}
+\[
+|P_u|_{\text{BMO}}\leq C\dot |u|^*
+\]
+
+\noindent
+Thus, $u\mapsto P_u$ sends radially bounded
+$L^1(D)$-functions to
+$\text{BMO}(T)$.
+The proof of Theorem 8.1  relies upon Theorem 0.4 and 
+the following observation:
+
+\medskip
+
+\noindent
+{\bf{9.3 Exercise.}}
+Show that when $u$ is radially bounded and $H(z)$ is a harmonic function in
+$D$ with continuous boundary values on $T$ then
+\[
+ \iint_D\, H(z)\cdot u(z)\cdot dxdy=
+\int_0^{2\pi}\, H(e^{i\theta})\cdot P_u(\theta)\cdot d\theta
+\]
+
+\bigskip
+
+\noindent
+The following  result is also due to
+Fefferman:
+
+\medskip
+
+\noindent
+{\bf{9.4 Theorem.}}
+\emph{Let $F(\theta)\in \text{BMO}(T)$. Then there exists a radially bounded
+$L^1(D)$-function $u$ and some
+$s(\theta)\in H^\infty(T)$ such that}
+\[
+ F(\theta)= s(\theta)+ P_u(\theta)
+\]
+For detailed proofs of the results above we refer to Chapter XX in [Koosis].
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{document}

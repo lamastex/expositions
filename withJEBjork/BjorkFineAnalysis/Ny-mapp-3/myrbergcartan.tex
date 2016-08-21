@@ -1,0 +1,2032 @@
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+\def\vvv{-}
+\begin{document}
+
+
+
+\centerline{\bf\large{14. Sets of harmonic measure zero }}
+
+\bigskip
+
+\noindent
+{\bf Introduction.} 
+The study of harmonic measures
+and other areas in potential theory goes back to
+a problem raised by G. Robin in the article [Rob]
+from 1886 which had  
+physical background in electric engineering.
+The problem is: \emph{Let $E$ be a compact set in
+${\bf{C}}$. Find a probability
+measure $\mu$ on $E$ such that the function}
+\[ 
+U_\mu(z)=
+\int_E\,\log\,\frac{1}{[z-\zeta|}\,\cdot d\mu(\zeta)\quad
+\colon\, z\in{\bf{C}}\setminus E\tag{*}
+\]
+\emph{takes  constant boundary values on $E$.}
+For every 
+probability measure $\mu$ on $E$, i.e. a non\vvv negative
+Riesz measure of unit  mass  supported by $E$, 
+the integral (*) is defined for points in $E$
+where the value can be finite or infinite.
+To be precise, if $z\uuu *\in E$ is fixed and $n$ is a positive integer
+we put $E\uuu n= E\setminus \{|z\vvv z\uuu *|\geq 1/n\}$. Since
+$\log\,\frac{1}{|z\uuu *-\zeta|}\geq 0$ when $|\zeta\vvv z\uuu *|\leq 1$
+it follows 
+\[
+n\mapsto \int_{E\uuu n}\,\log\,\frac{1}{|z\uuu *-\zeta|}\,\cdot d\mu(\zeta)
+\]
+is increasing and by  definition the integral (*) taken
+on $E$ with $z=z\uuu *$ is equal to
+the limit if (1) which therefore is  finite or $+\infty$.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The  limits above which  compute
+$U\uuu\mu(z)$ at points in $E$ imply that
+the function
+\[ 
+z\mapsto U\uuu\mu(z)
+\] 
+is superharmonic function  
+which is harmonic in the open complement of 
+the support of $\mu$.
+Recall also from § XX that
+the Laplacian  of $U_\mu$ taken in
+the distribution sense is
+equal to the negative measure
+$-\pi\cdot \mu$.
+One refers to $U\uuu\mu(z)$ as the logarithmic potential of
+$\mu$. 
+After measure theory had been developed
+and the notion of
+subharmonic functions
+had been consolidated a
+first major discovery is due to Lindeberg
+who proved that a
+compact set $E$  whose 
+Hausdorff measure with respect to the function
+$h(r)= \log\,\frac{1}{r}$  ois zero is a set of  removable singularities for bounded
+harmonic functions, i.e. a bounded harmonic function
+$H$ defined  in $U\setminus E$ for some open neighborhood
+$U$  extends
+to a harmonic function in  $U$.
+In § A we expose more precise results due to Myhrberg
+about the
+connection between sets which are removable siungularities for
+bounded harmonic functions and the class of
+harmonic null sets, i.e. compact sets with a vanishing
+logarithmic capacity.
+In § C we expose a result  due to
+H. Cartan (the son of Elie Cartan)
+which gives a \emph{necessary condition} in order that
+a compact set $E$
+has harmonic measure zero.
+For several decades it was an open question of
+Cartan's metric conditions
+entail the converse. More precisely,
+let $E$ be a  compact set which is thin in
+Cartan's sense, i.e.  its 
+Hausdorff measure is zero for every $h$-function in
+Cartan's class. Then one may ask if
+$E$
+ has logartihmic capacity zero.
+In 1952 Carleson constructed a totally disconnected
+comppact
+set $E$ on the real line which is thin in Cartan's sense
+and has positive capacity. This example  shows that
+the search for metric conditions in order that
+a compact set has harmonic measure zero is
+more or less
+hopeless, unless one adds
+some extra kind of properties. A notable point is that
+if $E$ is an "ordinary Cantor set" on the real line then
+it is a harmonic null set if and only if its logarithmic length
+is zero, i.e. its Hausdorff measure with respect to
+$\log\,\frac{1}{r}$ is zero.
+We prove this result in § XX and remark that
+Carleson's construction in § XX is far more subtle and general
+compared to
+the standard construction of Cantor sets.
+\medskip
+
+\noindent
+\emph{About literature.}
+Many text-books treat potential theory with special emphasis on
+the present study of the logarithmic potential in
+${\bf{C}}$.
+The text-book [Nevanlinna] covers the results in this chapter
+except for
+Carleson's constructions in § F.
+Passing to potential theory in
+dimension $\geq 3$, Frostman's book
+\emph{xxx}  is a veritable master-piece which contains 
+concise and yet very
+complete proofs leading to  existence results  of equilibrium measures in
+a quite general context.
+The reader may also consult the text-book
+[Garnett-Marshall] where §§ XX contains material from
+lectures by Carleson at UCLA during the years 19xx-xx devoted to complex potential theory.
+In this chapter we
+foremost follow material from Nevanlinna's 
+text-book [nev].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+\noindent
+\centerline {\bf{§ 0. Energy integrals.}}
+\medskip
+
+
+\noindent
+We can  integrate $U\uuu\mu$ with respect to
+$\mu$ and put
+\[ 
+J(\mu)=\int\, U\uuu\mu(z)\cdot d\mu(z)
+\]
+$J(\mu)$ is called the energy integral of $\mu$. Notice that
+the energy is expressed  by a double integral:
+\[
+J(\mu)=\iint \,\log\,\frac{1}{|z-\zeta|}\,\cdot d\mu(\zeta)\cdot d\mu(z)
+\]
+\medskip
+
+\noindent
+In general the energy can be $+\infty$, i.e. it is not always
+true that   $U_\mu$ belongs to $L^1(\mu)$.
+If there exists
+at least one probability measure $\mu$ on $E$ with finite energy
+one is led to the variational problem
+\[
+ \min_\mu\, J(\mu)
+\] 
+with the minimum taken over all probability measures on
+$E$.
+Let $\mathcal J_*(E)$ denote the minimum and set
+\[ 
+\text{Cap}(E)= e^{-\mathcal J_*(\mu)}\tag{*}
+\]
+One refers to (*) as the logarithmic capacity of
+$E$.
+In § E we  prove that
+$\text{Cap}(E)$ is equal to the transfinite diameter
+of $E$ which is obtained via a limit of
+well-posed variational problems.
+One is also led to ask if there
+exists a probability measure $\mu_*$ on $E$ such that
+$J(\mu_*)= \mathcal J_*(E)$.
+This is indeed true and
+can be seen as follows: Let
+$\{\mu_n\}$ be a sequence
+of probability measires on $E$ such that
+$\{J(\mu_n)\}$ converge to $\mathcal J_*(E)$. Passing to a subsequence
+we can assume that $\{\mu_n\}$ converge weakly to a limit measure
+$\mu_*$.
+For each positive integer $N$ we wet
+\[ 
+J_N(\mu_*)=
+\iint_{|z-\zeta|\geq N^{-1}}\, 
+\,\log\,\frac{1}{|z\uuu *-\zeta|}\,\cdot d\mu_*(\zeta)\cdot d\mu_*(z)
+\]
+Then it is clear that
+$\{J_N(\mu_*)\}$ is increasing and the limit is $J(\mu_*)$.
+Next,
+for each fixed $N$
+we have
+\[
+J_N(\mu_*)=\lim_{n\to \infty}\,J_N(\mu_n)\leq
+\lim_{n\to \infty}\,J(\mu_n)=\mathcal J_*(E)
+\]
+Since this hold for every $N$ we conclude that
+$J(\mu_*)=\mathcal J_*(E)$.
+\medskip
+
+
+\noindent
+{\bf{0.1 Equilibrium measures.}}
+Let  $E$ be  a compact set with positive capacity. in § xx we prove that 
+there exists a unique
+probability measure $\mu_*$ on $E$ such that
+$J(\mu_*)= \mathcal J_*(E)$. Moreover, the potential function
+$U_\mu(z)$ regarded as a
+function in $L^1(\mu)$
+is almost everywhere equal to
+the constant
+$\mathcal J_*(E)$.
+This result settles Robin's problem. In the case when
+$E$ is a closed rectifiable Jordan curve
+$\Gamma$ we remark that 
+the equilibrium measure is found
+via Riemann's conformal mapping theorem as explained in
+§ XX.
+
+
+
+
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{0.2 Harmonic null sets.}}
+Let
+$E$ be 
+compact and
+totally disconnected which means that 
+if 
+$\Omega={\bf{C}}\setminus E$ is 
+the open complement. So here
+the connected component of every boundary point
+to $\Omega$
+is reduced to a singleton set and therefore it is not sure that
+the Dirichlet problem can be solved.
+But we can consider
+harmonic functions defined in
+open complementary sets to $E$.
+If $z\uuu *\in E$ there exist
+arbitrary small Jordan
+domains $U$ which where $z\uuu *$ is an interior point while the
+closed Jordan curve $\partial U$ has empty intersection with $E$.
+This leads to the following:
+
+\medskip
+
+\noindent{\bf{0.3 Definition.}}
+\emph{A compact and totally disconnected set $E$
+is a removable singularity for bounded harmonic functions if every bounded
+harmonic function $H$ in $U\setminus E$ for a pair $(z\uuu *,U)$ as above
+extends to a harmonic function in the whole Jordan domain $U$.}
+\medskip
+
+\noindent
+The following result is due to Myhrberg.
+
+\medskip
+
+\noindent
+{\bf{0.4 Theorem.}} \emph{A compact and totally disconnected set $E$
+is a removable singularity for bounded harmonic functions if and only if
+there exists a probability measure $\mu$ on $E$ such that
+$U\uuu \mu(z)=+\infty$ for every $z\in E$.}
+
+\medskip
+
+
+
+\noindent
+When the two equivalent conditions hold in Theorem 0.4  we say that
+$E$ is a  harmonic null\vvv set and
+denote by $\mathcal N_{\text{harm}}$
+the family  of totally 
+disconnected sets   harmonic null\vvv sets.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In the literature one also refers to sets of  capacity zero, i.e. a compact and totally disconnected 
+subset $E$ if ${\bf{C}}$ has capacity zero if and only if its is a harmonic
+null set.
+One may ask for metric conditions in order that
+a given compact and totally disconnected set $E$ belongs to
+$\mathcal N_{\text{harm}}$. 
+To analyze this we 
+consider Hausdorff measures.
+In general, 
+$h(r)$ be  a continuous and non-decreasing function
+defined for $r>0$ and $h(0)=0$.  If $F$ is a compact set
+we  consider open coverings of $F$ by discs and
+define its outer $h$-measure by
+\[ 
+h^*(F)=\min\, \sum h(r_\nu)
+\] 
+where the minimum is taken over
+coverings of $F$ by open discs
+$\{D_\nu\}$ of radius  $\{r_\nu\}$. 
+The family of
+compact sets whose outer $h$-measure is zero
+is denoted by
+$\mathcal N(h)$.
+The case $h(r)=r^2$  means precisely that
+$F$ has planar Lebesgue measure zero.
+If $h(r)$ tends more slowly to zero as $r\to 0$
+we get a more restrictive class. If
+\[
+h(r)=\frac{1}{\log\,\frac{1}{r}}
+\] 
+one says that a compact set in $\mathcal N(h)$
+has
+logarithmic capacity
+zero .
+The first major result
+about harmonic null\vvv sets
+was proved by 
+Lindeberg in 1918:
+
+\medskip
+
+\noindent
+{\bf{0.5 Theorem.}} \emph{Let $E$ be a compact set whose logarithmic measure zero.
+Then $E$ has harmonic measure zero.}
+
+
+\medskip
+
+
+
+
+
+
+
+\noindent
+Theorem 0.5 was improved in
+the article \emph{Note on the 
+transfinite diameter} [London.Math. Soc. Vol. 12: 1937)
+by Erdös and Gillis
+improved Theorem 0.5 where it was shown that 
+if $E$ has a finite logarithmic measure
+then it has harmonic measure zero. We prove this result in § XX.
+\medskip
+
+
+
+\centerline{\bf{Metric conditions.}}
+\medskip
+
+
+\noindent
+A   necessary metric condition 
+for a set $E$ to be a  harmonic null\vvv set
+was established  by
+Henri Cartan in [Cartan]. First we give:
+\medskip
+
+\noindent
+{\bf 0.6 Definition}
+\emph{Let $\mathfrak{H}_*$ denote
+the class of 
+non-decreasing and continuous function
+$h(r)$ satisfying}
+\[
+ \int_0^1\,\frac{h(r)}{r}\cdot dr<\infty
+\]
+
+
+\bigskip
+
+\noindent
+{\bf 0.7 Theorem.} \emph{For every
+$E\in\mathcal N_{\text{harm}}$
+it follows that}
+\[
+E\in\mathcal N(h)=0\quad\colon\,\forall\,\, h\in \mathfrak{H}_*
+\]
+
+
+
+
+
+\noindent
+{\bf Remark.} 
+Cartan's result   is
+close to Lindeberg's sufficiency result.
+Namely,  if $\eta>0$ we set
+\[ 
+h(r)=\frac{1}{
+\bigl[\text{Log}\,\frac{1}{r}]^{1+\eta}}
+\]
+It is clear that
+$h\in\mathfrak{H}_*$
+and hence
+$h^*(E)=0$ for every   $E\in\mathcal N_{\text{harm}}$.
+With $\eta$ small this comes close to say
+that the logarithmic capacity of $E$ is zero.
+However, Cartan's Theorem 
+does not give sufficient  conditions in order that a compact
+and totally disconnected  set
+$E$ has harmonic measure zero.
+\medskip
+
+
+\noindent
+{\bf{0.8 Carleson's example.}}
+In the article \emph{On the connection between Hausdorff measures
+and capacity} [Arkiv för matemtaik: vol. 3 (1956)], 
+Carleson constructed a compact totally disconnected subset
+$E$ of the  unit interval $[0,1]$ which 
+is outside the class
+$\mathcal N_{\text{harm}}$ while the
+Hausdorff measure $h(E)=0$  is zero for every
+$h\in\mathfrak{H}_*$.
+Carleson's construction shows that the
+search for both necessary and sufficient metric condtions in order
+that a given totally disconnected compact set belongs to
+$\mathcal N_{\text{harm}}$ appears to be more or less hopeless.
+See
+also Carleson's text-book
+\text{Exceptional sets} for a discussion.
+Let us also 
+remark that  Carelson's set $E$ above is not  a standard Cantor set.
+In fact, if $\mathcal C$ is a Cantor   set in
+$[0,1]$ as described in § D below 
+then the vanishing of its Hausdorff measure for every
+$h\in\mathcal H_*$ implies that $\mathcal C$ is a harmonic null set.
+So via cartan's theorem there exists 
+a necessary and sufficient metric condition in order that
+Cantor sets on the real line
+ belongs to $\mathcal N_{\text{harm}}$.
+
+\bigskip
+
+
+
+
+\centerline{\bf{A. Proof of Myhrberg's theorem}}
+
+
+\medskip
+
+\noindent
+{\bf{A.1 Nested coverings }}
+We shall employ  
+a construction which was originally introduced 
+by
+De Vallé Poussin. 
+Let $E$  be a totally disconnected
+and compact set and consider  some  $z\uuu *\in E$.
+Choose a small Jordan domain $U$ which contains $z\uuu *$
+while $\partial U\cap E=\emptyset$.
+For each positive integer $N$ one has  the dyadic grid
+$\mathcal D_N$
+of closed  squares whose sides are $2^{-N}$.
+We consider only those $N$ such
+that 
+\[ 
+2^{-N}<\text{dist}(E,\partial U)
+\]
+
+\medskip
+\noindent
+We get the finite family
+$\mathcal D_N(E\cap U)$  of squares
+in $\mathcal D_N$
+which have a non-empty intersection with
+$E\cap U$ and let
+Let $V_N$ be the union of these squares.
+Next, denote by
+$\Omega^*_N$ the connected component of 
+$D\setminus \bar V_N$ whose closure contains the Jordan curve
+$\partial U$. It follows that
+$\Omega^*\uuu N$
+is a doubly connected domain whose boundary is the disjoint union of
+$\partial U$ and a closed Jordan curve $\Gamma\uuu N$
+formed by line segments from squares in the finite family
+$\mathcal D_N(E\cap U)$.
+Notice  also that
+$\{\Omega^*\uuu N\}$ is  an increasing sequence of
+open sets where $\Gamma\uuu N$ appears as a compact subset
+of $\Omega^*\uuu{N+1}$ for each $N$ and  finally:
+\[
+ \cup\,\, \Omega_N^*=D\setminus E
+\]
+\medskip
+
+
+
+\noindent
+Next, fix some point $z_0\in D\setminus E$ and  from now on $N$ are so large that
+$z\uuu 0\in \Omega^*\uuu N$ hold.
+The Dirichlet problem has a solution in
+each domain $\Omega^*\uuu N$.
+This gives a unique pair of non\vvv negative measures
+$\mu\uuu N,\rho\uuu N$
+where $\mu \uuu N$ is supported by $\Gamma\uuu N$ and $\rho \uuu N$
+by $\partial U$ such that
+\[
+h(z_0)=
+\int_{\Gamma \uuu N}
+\, h(\zeta)\cdot d\mu_N(\zeta)+
+\int_{\partial U}\,h(\zeta)\cdot d\rho_N(\zeta)\tag{*}
+\] 
+hold for every $h$-function which
+is harmonic
+in $\Omega^*_N$ with continuous boundary values.
+In particular we let $h$ be the harmonic  function which is zero on
+$\partial U$ and one on $\Gamma_N$.
+This gives the harmonic measure
+\[ 
+\mathfrak{m}_{\Gamma _N}(z\uuu 0)=
+\int_{\Gamma \uuu N}
+\, d\mu_N(\zeta)|\tag{**}
+\]
+Since $\Gamma\uuu N\subset \Omega^*\uuu {N+1}$
+we have $\mathfrak{m}\uuu {N+1}\leq
+\mathfrak{m}\uuu N$ in $\Omega^*\uuu N$ so 
+the masses of the non-negative $\mu$-measures descrease, i.e.
+\[
+||\mu\uuu {N+1}||\leq ||\mu\uuu N||
+\]
+Hence there exists the limit
+\[
+\alpha=\lim\uuu{N\to\infty}\, ||\mu\uuu N||\tag{***}
+\]
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{A.2 The case $\alpha=0$.}}
+When this holds the mass of $\rho\uuu N$ tends to one and
+since (*) in particular hold for $h$\vvv functions which are harmonic in
+the whole set $U$ with continuous boundary values on $\partial U$
+the reader may verify:
+
+\medskip
+
+\noindent
+{\bf{A.3 Proposition.}}
+\emph{If $\alpha=0$
+the sequence  $\{\rho\uuu N\}$ converges weakly to
+the representing measure $m(z\uuu 0)$ for which}
+\[ 
+H(z\uuu 0)= \int\uuu{\partial U}\, H(\zeta)\cdot dm(z\uuu 0,\zeta)
+\]
+\emph{when $H$ is harmonic in $U$ and continuous on $\bar U$.}
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Apply Harnakck's inequality inthe domains
+$\Omega^*_N$ to show that
+when $\alpha=0$ holds for one chosenpoint
+$z_0\in U\setminus e$ then
+we get a similar vanishing for every other  point
+$z_1\in U\setminus E$.
+Thus, the condition that
+$\alpha)=0$ is intrinsic.
+\medskip
+
+\noindent
+{\bf{A.4 Extending bounded harmonic functions.}}
+Suppose that $\alpha=0$ and let $H$ be a bounded
+harmonic function
+defined in $U\setminus E$ which in addition extends to
+a continuous function on
+$\partial U$.
+For each $z_0\in U\setminus E$
+we start with large $N$ so that $z_0\in \Omega^*_N$
+and represent $H(z_0)$ by (1).
+Since $H$ is bounded the hypothesis $\alpha=0$ 
+entails that
+
+\[
+\lim_{N\to \infty}\, 
+\int_{\Gamma \uuu N}
+\, H(\zeta)\cdot d\mu_N(\zeta)=0
+\]
+It follows that
+\[
+H(z_0)= \lim_{N\to \infty}\, \int_{\partial U}
+\, H(\zeta)\cdot d\rho_N(\zeta)
+\]
+DSince this hold for every
+$z_0\in U\setminus E$
+it follows from Propostion A.3 that
+$H$ is equal to the everywhere defined harminic function in
+$u$ which extends  the continuous boundary value function
+$H|\partial U$.
+This shows that 
+if $\alpha=0$ then $E$ is a removable singularity for buounded
+harmonic functions.
+\medskip
+
+
+\noindent
+{\bf{A.6 An infinite potential function.}}
+The condition that
+$\alpha=0$ is intrinsic and by a conformal mapping
+we may assume that
+$U$ is the open unit disc
+which is convenient because now we can write out more
+explicit formulas.
+\medskip
+
+\noindent
+{\bf{A.5 Proposition.}}
+\emph{When $\alpha=0$   there exists a pair of positive numbers
+$0<a<A$ such that}
+\[
+a\leq 
+\int_{\Gamma \uuu N}
+\, \log\,\frac{1}{|\zeta\vvv w|}
+\cdot d\mu_N(\zeta)\leq A
+\]
+\emph{hold for all $w\in E$ and every $N$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Fix some $z_0\in D\setminus E$ and consider a
+point  $w\in E$. Since 
+$|e^{i\theta}\vvv w|= |1\vvv \bar w\cdot e^{i\theta}|$ hold for
+all $e^{i\theta}$ on the unit circle we get 
+\[
+\int_T
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\rho\uuu N(\zeta)=
+\int_T
+\, \log\,\frac{1}{|1\vvv \bar w\zeta|}\cdot
+d\rho\uuu N(\zeta)\quad N=1,2\ldots \tag{i}
+\]
+Next, in $D$ we have
+the harmonic function $H(z)=
+\log\,\frac{1}{|1\vvv \bar w z|}$ in $D$ and Proposition A.3 entails that
+\[
+\log\,\frac{1}{|1\vvv \bar w z\uuu 0|}=
+\lim\uuu{N\to\infty}\, 
+\int_T
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\rho\uuu N(\zeta)\tag{ii}
+\]
+At the same time
+(*)  in § A.1 applied with $h(z)= \log\,\frac{1}{|z\vvv w|}$
+gives
+\[
+ \log\,\frac{1}{|z\uuu 0\vvv w|}=
+\int_{\Gamma\uuu N}
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\mu\uuu N(\zeta)+
+\int_T
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\rho\uuu N(\zeta)\tag{iii}
+\]
+ By (ii) the last integral converges to
+ $\log\,\frac{1}{1\vvv \bar wz\uuu 0|}$ and hence (iii) gives the limit formula
+
+\[
+\lim\uuu{N\to \infty}\, \int_{\Gamma\uuu N}
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\mu\uuu N(\zeta)
+= \log\frac{1\vvv \bar wz\uuu 0|}{|z\uuu 0\vvv w|}
+\]
+Since $|z\uuu 0|<1$ and there is some $r<1$ such that
+$|w|\leq r$ for every $w\in E$
+the last term is between $a$ and $A$ for a pair of positive numbers
+which proves Proposition A.5.
+
+\medskip
+
+\noindent
+{\bf{A.7 The limit measure $\mu\uuu *$.}}
+Assume as above that
+$\alpha=0$ and set $\alpha_N= ||\mu_N||$.
+On $E$ we  get the probability measures
+\[ 
+\nu\uuu N=\frac{1}{\alpha_N}\cdot \mu\uuu N
+\]
+We can extract a subsequence which converges weakly to a probability measure
+$\mu$ which by (A.1.0)  is supported by $E$. The left hand side in
+Proposition A.5 gives the inequality
+\[
+\min_{w\in E} \int_{\Gamma \uuu N}
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\nu_N(\zeta)\geq
+\frac{a}{\alpha_N}
+\]
+Since $|alpha_N|to 0$
+while $a>0$ is a fixed positive constant, it
+follows that
+the potential function of the weak limit $\mu_*$ is everywhere 
+$+\infty$ on $E$, i.e. 
+\[
+\int_E
+\, \log\,\frac{1}{|\zeta\vvv w|}\cdot d\mu_*(\zeta)=+\infty
+\] 
+hold for
+every $w\in E$.
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline {\emph{A.9 Proof of Theorem 0.4}}
+\medskip
+
+
+\noindent
+Suppose first that $E$ is a removable singularity for bounded
+harmonic functions.
+Working locally as above around  
+some $z\uuu *\in E$ and a Jordan domain $U$,
+we obtain for each $N$ the harmonic measure function
+$\mathfrak m\uuu N$ in $\Omega^*\uuu N$.
+They take values in $(0,1)$ and passing to a subsequence we obtain
+a bounded harmonic limit function $\mathfrak m\uuu *$
+defined in $U\setminus E$.
+By construction $\mathfrak m\uuu *=0$ on $\partial U$
+so if it extends to a harmonic function in $U$ it must be identically zero which 
+entails that
+\[
+\lim\uuu{N\to\infty}\, 
+\mathfrak m\uuu N(z\uuu 0)=0
+\]
+This means precisely that $\alpha=0$ and
+from the above we construct a potential function which is everywhere $+\infty$ on $E$.
+\medskip
+
+\noindent
+\emph{The converse.}
+Suppose there exists a probability measure
+$\mu$ on $E$ whose potential
+$U\uuu \mu(w)=+\infty$ for all $w\in E$.
+Let $z_*\in E$ and choose
+some small Jordan domain $U$
+around $z_*$ as in § A.1 where we have constructed the
+nested sequence of $\Gamma$-curves. 
+Put
+\[ 
+C_N=\min_{z\in\Gamma_N}
+U_\mu(z)
+\]
+Since
+the distances from $\Gamma_N$ to   $E$ tend to zero 
+it follows that $C_N\to +\infty$.
+Next,  $U\uuu\mu$ restricts to a continuous function on
+$\partial U$ and we find its harmonic extension $H(z)$ to the  Jordan domain $U$.
+If $C_*$ is the maximum of
+$U_\mu$ on $\partial U$we have $H\leq C_*$ in the whole Jordan
+domain. With large $N$ we have
+$C_N>C_*$ and at the same time
+\[
+U\uuu\mu(z\uuu 0)\vvv H(z\uuu 0)=
+\int_{\Gamma_N}\,(U_\mu-H)\ddot d\mu_N
+\geq (C_N-C_*)\cdot ||\mu_N||
+\]
+Since $C_N\to +\infty$ we conclude that $||\mu_N||\to 0$
+which means tha
+$\alpha=0$ and then we have proved that
+bounded harmonic functions outside $E$ can be extended which  finishes 
+the proof of Myhrberg's theorem.
+
+\bigskip
+
+\centerline{\bf{B. Equilibrium distributions
+and Robin's constant.}}
+\bigskip
+
+
+\noindent
+Let $E$ be a compact set in ${\bf{C}}$.
+To each probability measure $\mu$ supported by $E$ we get the potential function
+
+\[
+U\uuu \mu(z)= \int\,\log\,\frac{1}{|z\vvv \zeta|}\cdot d\mu(\zeta)
+\]
+We are going to construct a special $\mu$ for which
+$U\uuu \mu$ either is identically $+\infty$ or else 
+takes a constant value almost everywhere 
+on $E$ with respect to $\mu$.
+First we carry out the construction in the special case when
+$E$ is a finite union of pairwise disjoint 
+and closed Jordan domains
+$U\uuu 1,\ldots,U\uuu m$ for some $m\geq 1$.
+We also assume that each Jordan curve
+$\partial U\uuu k$ is of class $C^1$.
+When this holds we get the connected exterior domain
+
+\[
+ \Omega^*={\bf{C}}\cup \{\infty\}\setminus
+ \cup \,\, \bar U\uuu k
+\]
+Here we can solve Dirichlet's problem. in particular we obtain the
+unique probability measure $\mu$ on $\partial \omega^*$ such that
+\[
+H(\infty)=\int\, H\cdot d\mu
+\]
+for every harmonic function $H$ in $\Omega^*$ with continuous boundary
+values.
+If $z\uuu 1$ and $z\uuu 2$ are two points in
+$/cup \,U\uuu k$ which may or may not belong to the same Jordan
+domain then we notice that the function
+\[
+H(z)=\log |z\vvv z\uuu 1|\vvv\log |z\vvv z\uuu 2|
+\] 
+is harmonic i $\Omega^*$.
+Moreover, as $|z|\to \infty$ we notice that
+\[
+H(z)=\log |1\vvv \frac{z\uuu 1}{z}|\vvv 
+\log |1\vvv \frac{z\uuu 2}{z}|
+\]
+and in the limit we have $H(\infty)=0$.
+Since $\log r=\vvv \log\,\frac{1}{r}$ for each $r>0$
+ it follows that
+\[ 
+U\uuu \mu(z\uuu 1)= U\uuu \mu(z\uuu 2)
+\]
+Hence the function $z\mapsto U\uuu \mu(z)$ is constant in
+the interior of $E$
+Since the boundary curves $\{\partial U\uuu k\}$ are $C^1$ it follows that
+$U\uuu\mu$ extends to a continuous function
+with constant value on the whole set $E$.
+Of course, $U\uuu\mu$ is also continuous outside $E$ where it is
+harmonic.
+In fact, we conclude that $U\uuu\mu$ is a globally defined and continuous super\vvv harmonic function in
+${\bf{C}}$.
+The measure $\mu$ is called the equilibrium distribution
+of $E$.
+\medskip
+
+\noindent
+{\bf{Remark.}} If $E$ is contained in the unit disc
+it is clear that the constant value of $U\uuu\mu$ is positive.
+On the other hand, let $R>1$ and $E$ is the disc $|z\leq R$.
+here $\mu$ is the measure $\frac{1}{\pi}\cdot d\theta$ on
+the circle of radius $R$ and we find that the constant value is 
+$\vvv
+\log \,R$.
+ \medskip
+ 
+ \noindent
+{\bf{Notation.}}
+If $a$ is the constant value of $U\uuu\mu$ we set
+
+\[
+ \text{cap}(E)= e^{\vvv a}
+\]
+and refer to this as the capacity of $E$.
+For example, if $E$ is the disc $|z|\leq r$ where $r$ is small we see that
+the capacity becomes $r$.
+\bigskip
+
+\noindent
+{\bf{The general case.}}
+Now $E$ is an arbitrary compact set.
+To construct a special probability
+measure $\mu\uuu E$
+we use a similar construction as in section A.
+Thus, for $N\geq 1$ we get the family of cubes in $\mathcal D\uuu N$
+which have a non\vvv empty intersection with $E$
+and then we construct the outer boundary curves of thus set
+which borders a connected exterior domain $\Omega^*\uuu N$
+whose boundary now
+will be a union of closed and piecewise linear Jordan  curves
+where two of these may interest at corner points.
+We solve the Dirichlet problem and exactly as above we find 
+the equilibrium measure $\mu\uuu N$ supported by
+$\partial\Omega^*\uuu N$.
+
+ 
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+\centerline {\bf C. Cartan's theorem}
+\bigskip
+
+\noindent
+We shall 
+actually establish
+an inequality in
+Theorem C.1  below which
+has independent interest since
+it applies to compact sets $E$ which are not necessarily
+harmonic null sets. 
+Consider a pair $(h,\mu)$ where
+$\mu$ is a probability  measure with compact support
+in a compact  set  $E$ of ${\bf{C}}$
+with planar Lebesgue measure zero
+while 
+$h\in \mathfrak{H}_*$.
+To each point $a\in E$
+and every $r>0$ we have the open disc $D_r(a)$ centered at
+$a$ and can regard its $\mu$-mass. This   gives anon\vvv decreasing
+function
+\[ 
+r\mapsto \mu(D_r(a))\quad\colon\, r>0
+\]
+Put
+\[ 
+\mathcal U^*=\{ a\in E\quad\colon\,\exists\,\,r>0
+\quad\colon\,
+\mu(D_r(a))>h(r)\}\tag{1}
+\]
+
+
+\noindent
+We assume that the pair $(h,\mu)$ is such that
+this set is non\vvv empty.
+Since $\mu$ is a Riesz measure one has the limit formula
+\[
+\lim_{\rho\to r}\,\mu(D_\rho(a)=\mu(D_r(a)
+\]
+for each $r>0$ where the limit is taken as $\rho$ increases to $r$.
+From this it is obvious that $\mathcal U^*$ is a relatively open
+subset of $E$ and 
+in the closed complement we have
+\[ 
+a\in E\setminus\mathcal U^*\,\implies\,
+\mu(D_r(a))\leq h(r)\quad\colon\,\,\forall\,\, r>0\tag{2}
+\]
+
+\noindent
+Now the size of $\mathcal U^*$ is
+controlled as  follows:
+\bigskip
+
+\noindent {\bf C.1 Cartan's Covering Lemma.}
+\emph{There  exists a sequence $\{a_\nu\}$
+in $E$ and a sequence of positive numbers
+$\{r_\nu\}$ such that the following hold:}
+\[
+\mathcal U^*\subset\,\cup\,\bar D_{r_\nu}(a_\nu)
+\quad\text{and}\quad
+\sum\, h(r_\nu)\leq 6
+\]
+\emph{Moreover, for each $z\in{\bf{C}}$
+at most five discs from the family
+$\{D_{r_\nu}(a_\nu)\}$ contains $z$.}
+\bigskip
+
+
+\noindent \emph{Proof} We may assume that
+$\mathcal U^*\neq\emptyset$. Set
+\[
+\lambda_1^*(r)=
+\max_{a\in E}\, \mu(D_r(a))\tag{1}
+\]
+Since the functions $r\mapsto \mu(D_r(a))$ are lower semi-continuous for
+each $a$, it follows that the maximum function
+$\lambda_1^*(r)$ also is lower semi-continuous.
+Hence the set 
+$\{r\colon\, \lambda_1^*(r)>h(r)\}$ is open
+and we find
+its least upper bound
+$r_1^*$. Thus,
+\[
+\lambda_1^*(r_1^*)=h(r_1^*)\quad\colon\,
+\lambda_1^*(r)<h(r)\,\,\,\text{for all}\,\, \, r>r_1^*\tag{2}
+\]
+Pick $a_1\in E$ so that
+\medskip
+\[
+\lambda_1^*(r_1^*)<\mu(D_{r^*_1}(a_1))+1/2\tag{3}
+\]
+Next, set $E_1=E\setminus D_{r^*_1}(a_1)$ and define
+\[
+\lambda_2^*(r)=
+\max_{a\in E_1}\, \mu(D_r(a))
+\]
+If $\lambda_2^*(r)\leq h(r)$ for every $r$ we stop the process.
+Otherwise we find the unique largest $r_2^*$ such that
+\[
+\lambda_2^*(r^*_2)=h(r_2^*)
+\]
+Notice that $r_2^*\leq r_1^*$
+holds since
+$h$ is non-decreasing while it is obvious that
+$\lambda_2^*\leq\lambda_1^*$.
+This time we pick $a_2\in E$ so that
+\[
+\lambda_2^*(r_2^*)<\mu(D_{r^*_2}(a_2))+2^{-2}
+\]
+Put $E_2=E_1\setminus D_{r^*_2}$ and continue as above, i.e.
+inductively
+we get  $E_n$ and set
+\[ 
+\lambda_{n+1}(r)=\max_{a\in E_n}\,\mu(D_r(a))
+\] 
+The process continues if we have found $r^*_{n+1}$
+so that
+$\lambda_{n+1}(r^*_{n+1})=h(r^*_{n+1})$, then we pick 
+$a_{n+1}\in E_n$ where
+\[
+\lambda_{n+1}(r^*_{n+1})\leq \mu(D_{r^*_{n+1}}(a_{n+1}))+ 2^{-n-1}\tag{4}
+\]
+
+
+\noindent
+In this way we get the sequence $r_1^*\geq r_2^*\geq\ldots$
+and a family of discs $\{ D_{r_\nu^*}(a_\nu)\}$.
+To simplify notations we set
+\[
+D^*_\nu=D_{r_\nu^*}(a_\nu)
+\]
+
+
+\noindent \emph{Sublemma}\emph{ Every point $a\in E$ belongs to at most five
+many $D^*$-discs.}
+\medskip
+
+\noindent 
+\emph{Proof.}
+If some $a$ belongs to six discs then elementary geometry gives
+a pair $a_k,a_\nu$
+such that the angle between the lines $[a,a_k]$ and $[a.a_\nu]$ is $<\pi/3$.
+Suppose that for example that $|a-a_k|\geq [a-a_\nu|$.
+Euclidian geometry gives
+\[ 
+|a_k-a_\nu|<|a-a_k|
+\]
+But this is impossible. For say that $k<\nu$.
+Now the disc $D^*_k$ was removed and $a_\nu$ is picked from
+the subset $E_\nu$ of $E_k$ while $E_k\cap\Delta_k=\emptyset$.
+\medskip
+
+\noindent
+\emph{Proof continued.}
+The Sublemma implies that
+\[ 
+\sum\,\mu(D^*_\nu)\leq 5\cdot \mu(E)= 5\tag{5}
+\]
+The convergence of (5) and (4) imply that
+$\lim_{\nu\to\infty} r^*_\nu= 0$. From this it follows that
+\[
+\mathcal U^*\subset\,\cup\,\bar D_{r_\nu}(a_\nu)\tag{6}
+\]
+
+\noindent
+Finally we have
+\[ 
+\sum h(r^*_\nu)= \sum\,\lambda^*_\nu(r_\nu^*)\leq
+\sum\,[ \mu(D^*_\nu)+ 2^{-\nu}]\leq
+5\cdot \mu(E)+\sum\, 2^{-\nu}=6\tag{7}
+\]
+
+
+\noindent
+This completes the proof of Cartan' s Covering Lemma.
+
+
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{The family $\mathcal G\uuu h$}}.
+Let $g(r)$ be a positive   function defined on $(0,+\infty)$
+which satisfies:
+\[ 
+\lim_{r\to 0}\,g(r)=+\infty
+\]
+In this family we get those $g$\vvv functions for which
+\[ 
+\int_0^1\, g(r)\cdot dh(r)<\infty\tag{*}
+\]
+This family is denoted by $\mathcal G\uuu h$.
+With this notation we have:
+\bigskip
+
+\noindent
+{\bf C.2 Lemma}
+\emph{For each $g\in\mathcal G\uuu h$
+and every point $a\in E\setminus \mathcal U^*$
+one has}
+\[ 
+\int_E\,
+g(|z-a|)d\mu(z)\leq\int_0^\rho\, g(r)dh(r)\quad\text{where}\,\,\,h(\rho)=1
+\]
+
+\medskip
+
+\noindent
+\emph{Proof.} Since $a$ is outside $\mathcal U^*$
+we have
+\[
+\mu(D\uuu r(a))\leq h(r)
+\]
+for every $r>0$.
+Moreover, we recall that $\mu$ has total mass one
+and now the reader can verify the inequality in Lemma C.2 b
+using a partial integration.
+
+
+
+
+\bigskip
+
+\noindent
+{\bf C.3 A special choice of $g$.}
+Let us take
+\[ 
+g(r)=\text{Log}\,\frac{1}{r}\,\quad\colon\, 0<r<1\quad\colon\quad
+g(r)=0\quad\colon\,r\geq 1
+\]
+\medskip
+
+\noindent
+This $g$-function belongs to $\mathcal G\uuu h$
+by the  
+condition on  $h$-functions in Cartan's theorem.
+Next, for every  $\lambda>1$ we get the function
+$h_\lambda=\lambda\cdot h$ in $\mathfrak{H}_*$ and set:
+\[ 
+E\setminus\mathcal U^*(\lambda)=\{
+a\in E\quad\colon\,\mu(D_r(a))\leq\lambda\cdot h(r)\,\,\colon\, 
+\forall\,\, r>0\}
+\]
+
+
+\noindent
+Proposition XX(measure general)  applied with $h_\lambda$
+gives:
+\[ 
+\int_E\,
+g(|z-a|)d\mu(z)\leq\lambda\cdot \int_0^{\rho/\lambda}\, g(r)dh(r)
+\quad\colon\, a\in E\setminus\mathcal U^*(\lambda)\tag{1}
+\]
+
+\medskip
+
+\noindent
+A partial integration shows that the right hand side in (1)  becomes
+\[
+g(\rho)+\lambda\cdot \int_0^{\rho}\, \frac{h(r)dr}{r}
+\]
+
+
+\noindent
+Hence we have the inequality
+\[
+\int\,g(|z-a|)\cdot d\mu(z)\leq g(\rho)+\lambda\cdot \int_0^{\rho}\, \frac{h(r)dr}{r}
+\quad\colon\quad a\in E\setminus\mathcal U^*(\lambda)\tag{2}
+\]
+
+
+\noindent
+In addition to this,  the Covering Lemma gives
+an  inclusion
+\[
+\mathcal U^*(\lambda)\subset \,\cup\,\, D_{r_\nu}(a_\nu)\quad\text{where}\, \sum
+\,\,\, h_\lambda(r_\nu)<6\tag{3}
+\]
+Since $h_\lambda=\lambda\cdot h$
+this means that the outer $h$-measure
+\[
+h^*(\mathcal U^*(\lambda))\leq \frac{6}{\lambda}\tag{4}
+\]
+
+
+\noindent
+Hence we have proved the following
+where we  recall that
+$g(r)=\text{Log}\,\frac{1}{r}$:
+
+\medskip
+
+\noindent
+{\bf C.4 Theorem.}
+\emph{For
+every  triple $(E,\mu,h)$, where $\mu$ is a probability measure supported by
+$E$ and $h\in \mathfrak{H}_*$, and any $\lambda>1$
+there exists a relatively open
+subset $\mathcal U^*(\lambda)\subset E$ such that
+the following two inequalities hold:}
+\[
+\int_E\,\log\,\frac{1}{|z-a|}\cdot d\mu(z)\leq \log\,\frac{1}{\rho}
++
+\lambda\cdot \int_0^{\rho}\, \frac{h(r)dr}{r}
+\quad\colon\quad a\in E\setminus\mathcal U_*(\lambda)\tag{i}
+\]
+\[
+h^*(U_*(\lambda))<\frac{6}{\lambda}\tag{ii}
+\]
+
+
+\noindent
+{\bf {C.11 Proof of Theorem 0.5}}.
+Let $E\in\mathcal N_{\text{harm}}$ which by
+Theorem 0.2  gives
+a probability measure
+$\mu$ supported by $E$ such that that the left hand side in (i) 
+is $+\infty$ for every $a\in E$.
+It follows that the set
+$E\setminus \mathcal U^*(\lambda)$ is empty for
+every $\lambda>1$. With a fixed $\lambda$ we apply
+Cartan's covering Lemma and since
+$E=\mathcal U^*(\lambda)$ it follows that
+\[
+h^*(E)\leq \frac{6}{\lambda}
+\]
+Here  $\lambda>1 $ is
+arbitrary  which gives 
+$h^*(E)=0$ as required and 
+of Cartan's theorem follows.
+
+
+
+
+
+
+\newpage
+
+
+
+
+\bigskip
+
+\centerline{\bf D. Cantor sets.}
+
+\bigskip
+\noindent
+We construct  
+a  family of 
+closed subsets of  $[0,1]$ as follows.
+Let $1<p_1<p_2<\ldots$ be some  strictly increasing sequence
+of real numbers such that the products
+$\{p_1\cdots p_n\}$ tend to $+\infty$ as $n$ increases.
+Then we can construct  a
+decreasing sequence
+of closed sets $E_1,E_2,\ldots$
+where each $E_n$ is the union of $2^n$-many closed intervals
+with equal
+length
+\[ 
+\ell_n= 2^{-n}\cdot\frac{1}{p_1\cdots p_n}
+\]
+
+
+\noindent
+{\bf D.1 The construction.}
+First $E_1$ is any closed interval $[a_1,b_1]$
+with 
+\[ 
+b_1-a_1=\frac{1}{2p_1}
+\]
+Inside this closed interval we 
+pick two pairwise disjoint closed interval both of length
+$\ell_2$ and  let $E_2$ be  their union.
+In the next step we pick a pair of closed intervals both of length
+$\ell_3$ from each of the two intervals in $E_2$. Their union gives the set $E_3$
+and we continue in the same way for every $n$ and arrive at
+a closed set
+\[ 
+\mathcal E=
+\,\cap\, E_n
+\]
+
+\noindent
+We refer to $\mathcal E$ as a Cantor set.
+The construction  is  flexible since
+we do not impose any condition on specific positions while we at
+stage $n$ pick pairs of intervals of length
+$\ell_{n+1}$ from each of the $2^n$ many intervals of $E_n$.
+Thus, for a given $p$-sequence we obtain a whole family of
+Cantor sets denoted by $\text{Cantor}(p_\bullet)$.
+The next result gives a condition for such  Cantor sets
+to have
+harmonic measure zero.
+\bigskip
+
+\noindent
+{\bf D.2 Theorem.} \emph{The following are equivalent
+for an arbitrary  sequence $p_\bullet$ as above}:
+\[ 
+\text{Cantor}(p_\bullet)\subset
+\mathcal N_{\text{harm}}
+\,\,\text{holds if and only if}\,\,\,
+\sum_{\nu=1}^\infty\,
+\frac{\text{Log}\,p_\nu}{2^\nu}=+\infty
+\]
+\bigskip
+
+\noindent
+The proof 
+uses  the explicit formulas for 
+Robin constants  of  intervals on the real line. For the detailed proof
+we refer to page xx-xx in [Nevanlinna].
+
+
+\bigskip
+
+
+\centerline {\bf{E. Transfinite diameters and  the logarithmic capacity.}}
+\bigskip
+
+\noindent
+Let $E$ be a compact set where we
+do not assume that $E$ is totally disconnected.
+To each $n$\vvv tuple of distinct points
+$z\uuu 1,\ldots,z\uuu n$ we put:
+\[ 
+L\uuu n(z\uuu\bullet)=\frac{1}{n(n\vvv 1)}\cdot
+\sum\uuu {k\neq j}\,
+\log\,\frac{1}{|z\uuu j\vvv z\uuu k|}
+\quad\colon\quad  
+\mathcal L\uuu n(E)=\min \, L\uuu n(z\uuu\bullet)
+\]
+where the minimum in the right hand side
+is taken over all $n$\vvv tuples in $E$.
+Since $\log\,\frac{1}{r}$ is large when $r\simeq 0$ this means intuitively that
+we use  separated $n$\vvv tuples  to
+minimize the $L\uuu n$\vvv function.
+For example, if
+$n=2$ 
+the minium is achieved for a pair of points in $E$ whose
+distance is maximal, i.e. $\mathcal L\uuu 2$ is the diameter of $E$.
+
+\medskip
+
+\noindent
+{\bf{E.1 Proposition.}}
+\emph{The sequence $\{\mathcal L\uuu n\}$ is non\vvv decreasing.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $z\uuu1,\ldots,z\uuu{n+1}$ minimize  the $L\uuu{n+1}$\vvv
+function which gives
+\[
+\mathcal L\uuu{n+1}(E)=\frac{1}{n(n+1)}\cdot
+\sum^{(1)}\uuu {k\neq j}\, \log\,\frac{1}{|z\uuu j\vvv z\uuu k|}
++\frac{2}{n(n+1)}\cdot\sum\uuu{k=2}^{k=n+1}\log\,\frac{1}{z\uuu 1\vvv z\uuu k|}
+\]
+where $(1)$ above the sum above means that we only consider pairs
+$k,j$ which both are $\geq 2$.
+Since $z\uuu 2,\ldots,z\uuu {n+1}$ is an $n$\vvv tuple we get the inequality
+\[ 
+\mathcal L\uuu{n+1}(E)\geq 
+\frac{1}{n(n+1)}\cdot  n(n\vvv1)\cdot \mathcal L\uuu n(E)
++\frac{2}{n(n+1)}\cdot\sum\uuu{k=2}^{k=n+1}\log\,\frac{1}{z\uuu 1\vvv z\uuu k|}
+\]
+The same inequaliiy holds when when  some
+$z\uuu j\,\colon\, 2\leq j\leq n+1$ is deleted.
+Taking the sum of the resulting inequalities we obtain
+\[
+(n+1)\mathcal L\uuu{n+1}(E)\geq 
+\frac{1}{n}\cdot n(n\vvv1)\cdot \mathcal L\uuu n(E)+
+\frac{2}{n(n+1)}\cdot\sum\uuu{k\neq j}\log\,\frac{1}{|z\uuu j\vvv z\uuu k|}
+\]
+The last term is $2\cdot \mathcal L\uuu{n+1}$ which gives:
+\[
+(n\vvv 1)\cdot \mathcal L\uuu{n+1}(E)\geq 
+\frac{1}{n}\cdot n(n\vvv1)\cdot \mathcal L\uuu n(E)=(n\vvv 1)\mathcal L\uuu n(E)
+\]
+A division by $n\vvv 1$ gives the requested inequality.
+\medskip
+
+\noindent
+{\bf{E.2 Definition.}}
+\emph{Put}
+\[
+\mathfrak{D}(E)=
+\lim\uuu{n\to\infty}\, e^{\vvv \mathcal L\uuu n(E)}
+\]
+\emph{This non\vvv negative number is called the transfinite diameter of $E$.}
+\medskip
+
+\noindent
+{\bf{Remark.}} The definition means that
+$\mathfrak D(E)=0$ if and only if
+$\mathcal L\uuu n(E)$ tends to $+\infty$ as $n$ increases.
+Intuitively this means that we are not able to choose  large tuples in $E$ separated
+enough to keep  the sum of the $\log$\vvv terms bounded.
+Another number is associated to $E$ is defined by:
+\[
+\mathcal J\uuu *(E)= \min\uuu\mu\, J(\mu)
+\] 
+where the minimum is taken over all probability measures in
+$E$ and $J(\mu)$ are the energy integrals from § 0.2.
+
+\medskip
+
+\noindent
+{\bf{E.3 Definition.}}
+\emph{The  
+logarithmic capacity of $E$ is defined by:}
+\[
+\text{Cap}(E)=e^{\vvv J\uuu *(E)}
+\]
+\medskip
+
+
+\noindent
+{\bf{E.4 Theorem.}}\emph{ For each compact set $E$ one has the equality}
+\[
+\text{Cap}(E)=\mathfrak D(E)
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $n\geq 2$ and $z^*\uuu 1,\ldots,z^*\uuu n$
+is some $n$\vvv tuple where $L\uuu n(z\uuu\bullet)= \mathcal L\uuu n(E)$.
+Now we have the probability measure
+\[ 
+\mu= \frac{1}{n}\cdot \sum\uuu{k=1}^{k=n}\,\delta\uuu{z^*\uuu k}
+\]
+It is clear that
+the energy
+\[ 
+J(\mu)= \frac{n(n\vvv 1)}{n^2}\cdot L\uuu n(z\uuu\bullet)
+\]
+Hence we have the inequality
+\[ 
+\mathcal J\uuu *(E)\leq  \frac{n(n\vvv 1)}{n^2}\cdot\mathcal L\uuu n(E)
+\]
+Since $\frac{n(n\vvv 1)}{n^2}$ tends to one as $n\to\infty$
+a passage to the limit gives:
+\[
+\mathcal J\uuu *(E)\leq \lim\uuu{n\to\infty}\, \mathcal L\uuu n(E)
+\]
+Taking exponentials and recalling the negative signs in E.2 and E.3
+we conclude that
+\[
+\mathfrak{D}(E)\leq\text{Cap}(E)\tag{i}
+\]
+
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove the opposite inequality. The hint
+is that
+probability measures on $E$
+can be approximated
+by discrete measures. 
+
+
+
+\newpage
+
+
+\centerline{\bf{F. Thin  sets with positive capacity on the real line.}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We expose results 
+from the article [Carleson].
+In contrast to 
+ "ordinary Cantor sets" the
+inductive process while open intervals are removed
+is far more flexible in Carleson's construction below.
+This leads to 
+an   extensive class of totally disconnected compact subsets 
+of the interval $[0,1]$ which are null sets for all $h$ in the  family
+from Definition 0.4. Foloowing [ibid]
+we show in § X how to
+construct a compact totally disconnected set
+$E$ with a positive capacity while $h(E)=0$ for all $h$ in Cartan's family.
+Let us remark that the construction of $E$
+gave a negative answer to previously open question
+ whether
+ a converse to Cartan's theorem for
+ sets on a real line was  
+ valid or not.
+ 
+ \bigskip
+
+
+\noindent
+{\bf{F.1. A set-theoretic construction}}
+Let $J=[a,b]$ be a subinterval of $[0,1]$
+and $(m,q)$ is a pair
+of positive integers
+such that
+\[
+\sum_{\nu=0}^{\nu=m}\, e^{-m-\nu}+
+m\cdot e^{-q}= b-a\tag{i}
+\]
+Then $[a,b]$ is covered by
+$2m+1$ intervals
+taken in increasing order with lengths
+\[ 
+e^{-m}, e^{-q}, e^{-m-1}\,\ldots, e^{-q},e^{-2m}\tag{ii}
+\]
+We refer to this as a decomposition of type $(m,q)$ of the  interval $[a,b]$.
+When this has been done
+we remove
+the $q$-intervals and
+are left with $m+1$ many intervals $J_0,J_1,\ldots,J_m$ where
+$J_\nu$ has length
+$e^{-m-\nu}$.
+Consider a  pair
+$(m^*_0,q^*_0)$ adapated to the length
+of $J_0$, i.e. 
+\[
+\sum_{\nu=0}^{\nu=m^*_0}\, e^{-m^*_0-\nu}+
+m_0\cdot e^{-q^*_0}= e^{-m}
+\]
+Exactly as above we
+get a partion of $J_0$ and remove
+the $m_0^*$ many
+open $q$-intervals  from $J_0$ which gives
+a closed set
+$J_0^*$ formed by $m^*_0+1$ many closed intervals
+of length $\{ e^{-m^*_0-\nu}\}$
+Next,  consider some  pair $(m^*_1,q^*_1)$   adapted to
+$J_1$ and proceed as above. Removing $m^*_1$ many
+$q$-intervals from $J_1$ there remains a set  $J_1^*$.
+In the next stage we chooise a pair $(m^*_2,q^*_2)$ apated to $J_2$
+and remove $q$-intervals. At  the final stage we
+have a pair $m^*_m,q^*_m$
+where $q$-intervals are removed from $J_m$.
+In this way a chosen $(m+1)$-tuple $\{(m_k^*,q_k^*)\}$
+leads to the removal of $q$-intervals on the family
+$J_0,J_1,\ldots,J_m$
+and we get a smaller closed set
+which  consists of 
+$M=m_0+ m_1+\ldots+m^*_m$
+many disjoint and closed intervals denoted by
+$J_1^*,\ldots, J^*_M$.
+We  repeat the construction starting from this $M$-tuple 
+and begin with a pair $m_0^{**},q_0^{**})$ adapated to $J_0^*$ and so on.
+After one has removed $q$-intervals from
+$J_0^*,J_1^*,\ldots,J_M^*$ there
+remains a family $J^{**}$
+which consists of $M^*_0+M^*_1+\dots+M^*_M$ many disjoint intervals.
+This  process can be repeated an infinite number of times and yields
+a decreasing sequence of closed
+sets $\{E_n\}$ where $E_n$ is the
+union of $J$-intervals after $n$ many constructions.
+At last we obtain
+the intersection $E_*=\cap\, E_n$.
+\medskip
+
+\noindent
+{\bf{F.2 How to make $E_*$ thin.}}
+At every single step above where one has some
+$J$-interval in the $n$-th partition of some
+length
+$\ell$ we  choose an adapted pair $(m,q)$ to this intervall
+where $m>2\dot \ell$.
+Under this condition one verifies that if
+we for an arbitrary  large $n$ pick a finite set of
+intervals which appear in $E_n$ with
+lengths
+$e^{-s_1},\ldots,e^{-s_p}$ then
+the integers $s_1,\dots,s_p$ are all distinct !
+As pointed out by
+in [Carleson: page 405] 
+this is \emph{a  crucial of  the  construction.}.
+Let us  now consider some Cartan-function  $h$.
+To estimate the $h$-measure of $E_*$
+we  choose $n$ large and cover
+$E_*$ by a finite set of intervals with lenghts
+$\{e^{-s_\nu}\}$ where $s_1<\ldots<s_p$ are different integers
+and $s_1$ can be made arbitrary large.
+This entails that
+
+\[
+\sum_{j=1}^{j=p}\, h(e^{-{s_j}})\leq
+\sum_{\nu=s_1}^\infty\, h(e^{-\nu})<
+\int_0^{e^{-s_1}}\, \frac{h(r)}{r}\,dr
+\]
+So if $h$ belongs to the  family from  Definition 0.4 
+we conclude that
+$\mathfrak{h}(E_*)=0$.
+\bigskip
+
+\noindent
+{\bf{The construction of a $\mu$-measure.}}
+By the above one has a flexible way to obtain sets
+$E_*$ with vanishing $h$-measures for 
+$h\in \mathfrak{H}$.
+There remains to make  one such construction along  with
+an inductively defined sequence of positive measures
+$\{\mu_n\}$  supported by $\{E_n\}$ and then
+pass to a limit measure $\mu_*$ supported by $E_*$ whose
+energy integral
+\[ 
+\iint\,\log\bigl|\frac{1}{x-y}\bigr |\, d\mu(x)d\mu(y)<\infty
+\]
+
+
+\bigskip
+
+TO FINISH
+
+
+
+
+
+
+
+
+
+
+
+\newpage 
+
+
+
+
+\bigskip
+
+\centerline {\bf{E. Further result  and someexamples.}}
+
+
+
+\medskip
+
+
+
+
+
+\centerline {\emph{A. The Robin constant}}.
+
+\medskip
+
+
+\noindent
+First we consider a finite union
+of pairwise disjoint Jordan domains $U_1,\ldots U_p$
+and get the compact boundary
+$\Gamma=\,\cup\,\partial U_\nu$.
+The closed Jordan curves $\{\partial U_\nu\}$ are in general disjoint but
+we may also allow that a pair intersect at some finite set of points.
+We also impose the condition that
+the open complement 
+\[
+\Omega={\bf{C}}\setminus\,\cup \bar U_\nu
+\]
+is connected.
+We  add the point at infinity to
+$\Omega$ where
+$w=1/z$ is a new coordinate.
+A harmonic function $H(z)$ defined in $\Omega$
+becomes harmonic at infinity if $w\mapsto H(1/w)$
+extends to a harmonic function in a whole disc centered at $w=0$.
+\medskip
+
+\noindent
+{\bf{A.1 A basic construction}}
+In the exterior domain  $\Omega^*=\Omega\cup\{\infty\}$ 
+the Dirichlet problem is well posed. 
+Hence there exists  a unique probability measure
+$\mu$ on $\partial\Omega^*$  such that
+\[ 
+H(\infty)= \int\, H(\zeta)\cdot d\mu(\zeta)\tag{*}
+\]
+holds for every harmonic function $H$ in
+$\Omega^*$. Notice that
+$\partial\Omega^*$ is equal to the union of the closed
+Jordan curves $\{\partial U\uuu\nu\}$.
+Let us then consider two points
+$a$ and $b$ in
+in $\cup\,U_\nu$.
+It may occur that they belong to a common Jordan
+domain or in two different $U$-domains.
+In any case we get a harmonic function in $\Omega^*$
+defined by:
+\[
+ H(z)=\text{Log}\, |z-a|-\text{Log}\, |z-b|
+\] 
+Here
+$H$  is harmonic at the point at infinity. For if
+$w=1/z$  we have 
+\[
+H(w)= \text{Log}\, |1-aw|-\text{Log}\, |1-bw|
+\] 
+which is harmonic
+in a disc $|w|<\delta$ and  zero if $w=0$, i.e. 
+$H(\infty)=0$.
+Since the pair $a,b$ above was arbitrary we conclude that the function
+\[ 
+a\mapsto \int  \text{Log}\,\frac{1}{ |\zeta-a|}\cdot d\mu(\zeta)\tag{**}
+\] 
+is constant as $a$ varies in
+$\cup\,U_\nu$. Here $\mu$ is supported by the union of the Jordan curves
+$\{\partial U_\nu\}$
+Since every point on  a single Jordan curve
+can be approximated from the inside by
+$a$-points in $U_\nu$, it follows by continuity that
+the potential function (**) is constant
+on $\partial\Omega^*$. So when $E$ is the union of the closed
+Jordan curves $\{\partial U_\nu\}$
+we conclude that $\mu$ is
+a probability measure which settles Robin's problem, i.e. $U\uuu\mu(z)$
+is constant on the compact set $E=\cup\,\,\partial U\uuu\nu$.
+
+
+\medskip
+
+
+\noindent
+{\bf{A.2 An inequality.}}
+Consider a pair of
+open sets $\Omega$ and $\Omega_1$ which both consist of a finite union of Jordan domains as above and
+$\Omega$ is a relatively compact
+subset of  $\Omega_1$, i.e. the closure of each Jordan domain in
+$\Omega$ is a compact subset of
+$\Omega_1$.
+Pick some point $a\in\Omega$. In the exterior domain
+$\Omega^*$ we find the harmonic function $H\uuu a(z)$
+whose boundary values on $\partial\Omega^*$ is equal to the continuous function $z\mapsto \log\,|z\vvv a|$.
+Set
+\[ 
+g\uuu a(z)= \log |z\vvv a|\vvv H\uuu a(z)\tag{1}
+\]
+This gives a super\vvv harmonic function in
+$\Omega^*$
+with a singularity at $\infty$ while $g\uuu a=0$ on
+the boundary.
+It follows from the minimum principle for super\vvv harmonic
+functions that 
+\[
+g\uuu a(z)>0\tag{2}
+\]
+for all $z\in\Omega^*$.
+Next, replacing $\Omega$ by $\Omega\uuu 1$
+we find the harmonic function $H\uuu a^1(z)$
+which equals $\log|z\vvv a|$ on $\partial \Omega^*\uuu 1$
+and  the super\vvv harmonic function
+\[
+g^1 \uuu a(z)= \log |z\vvv a|\vvv H^1\uuu a(z)\tag{3}
+\]
+Now $\partial\Omega_1$ is contained in $\Omega^*$ so
+$g_a$ restricts to a non-negative function on
+$\partial\Omega_1$. 
+At $\infty$ the two $g$\vvv functions have the same
+logarithmic singularity and hence  $G\uuu a=g_a-g^1_a$ is harmonic in $\Omega_1^*$.
+Now $\partial\Omega^*_1$ is contained in $\Omega^*$ and (2) entails that
+$G\uuu a>0$ on $\partial\Omega\uuu 1^*$.
+We conclude that
+$G_a(\infty)\geq 0$.
+At the same time we notice that
+\[
+G_a(\infty)=H\uuu a^1(\infty)\vvv H\uuu a(\infty)
+\]
+It follows that
+\[
+H\uuu a ^1(\infty)\geq H\uuu a(\infty)\tag{4}
+\]
+
+
+\noindent
+The monotonic property expressed by (4) above
+will be used to study the case when
+$E$ is a
+totally  disconnected and compact
+subset of
+${\bf{C}}$.
+Let  $\Omega^*$ be the exterior domain of $E$, i.e. the union of
+$\infty$ and  
+${\bf{C}}\setminus E$. 
+Since $E$ is totally disconnected the 
+boundary points $a\in\partial\Omega^*$ fail to satisfy the
+Perron condition for  Dirichlet's problem.
+However, we shall   define Robin's constant for
+$E$ by a limit process
+and    find  a probability measure $\mu$ on $E$ 
+such that the potential
+
+\[
+z\mapsto 
+\int_E\,\text{Log}\,|1-\frac{\zeta}{z}|\,\cdot \mu(\zeta)\tag{*}
+\]
+is constant as $z$ varies in $E$. But in contrast to the case 
+case when $E$ is a union of Jordan arcs,  it may occur that the "constant value" is 
+$+\infty$.  
+To attain this
+we  use a construction which goes back to De 
+Vallé\vvv Poussin.
+\medskip
+
+
+
+
+
+
+
+
+\noindent
+{\bf{A.2 Nested coverings }}
+Let $E$ be a totally disconnected
+and compact set.
+Without essential loss of generality we
+may  assume that $E$ is a compact subset
+of the open unit disc $D$.
+We
+construct a sequence of open sets $\{V_N\}$ as follows.
+For each positive integer $N$ one has  the dyadic grid
+$\mathcal D_N$
+of open squares whose sides are $2^{-N}$.
+We get the finite family
+$\mathcal D_N(E)$ of  dyadic squares in $\mathcal D_N$
+which have a non-empty intersection with
+$E$. The union of this finite 
+family of open squares gives an open neighborhood $V_N$ of $E$. 
+If necessary one starts with a large $N$ so that
+$2^{-N}$ is strictly larger than the distance of $E$ to the unit
+circle $T$ which entails that the closure of $V_N$ is a compact subset
+of $D$.
+Let $\Omega^*_N$ be the exterior connected component of
+$D\setminus \bar V_N$ whose closure contains the unit circle.
+So here
+$\Omega^*_N$  contains an annulus $r<|z|<1$ 
+for some $0<r<1$
+and $\partial \Omega_N$
+is the union of $T$ and a closed subset $\Gamma_N$
+of $\partial V_N$
+which is a finite union of line segments with a finite set of corner
+points.
+During this construction it is clear that the open sets $\{\Omega_N^*\}$
+increase and since $D\setminus E$ is connected we have
+\[
+ \cup\, \Omega_N^*=D\setminus E
+\]
+
+
+\noindent
+Next, fix some point $z_0\in D\setminus E$
+which is chosen relatively close to $T$.
+For all sufficiently large $N$ we have $z_0\in\Omega^*_N$
+and get the unique   probability measure $\mathfrak{m}_N$ which is supported
+by $\partial\Omega_N$ and satisfies:
+\[ 
+g(z_0)=\int_T\, g(e^{i\theta})\cdot d\mathfrak{m}_N(\theta)+
+\int_{\Gamma_N}\, g(\zeta)\cdot d\mathfrak{m}_N(\zeta)
+\] 
+for every $g$-function which
+is harmonic
+in $\Omega^*_N$ with continuous boundary values.
+Since $\{\Omega^*_N\}$ is a nested sequence
+it follows that the masses
+\[ 
+\rho_N=\int_{\Gamma_N}\, d\mathfrak{m}_N(\zeta)
+\] 
+is a decreasing sequence of positive real numbers.
+Hence there exists the limit
+\[ 
+\rho_*=\lim_{N\to\infty}\,\rho_N\tag{*}
+\]
+Above two cases may occur. Either $\rho_*>0$ or it is zero.
+The condition that $\rho_*=0$ is intrinsic since Harnack's inequality
+shows that 
+the choice of $z_0$ in $D\setminus E$
+is irrelevant. 
+
+\medskip
+
+
+\noindent
+{\bf{A.3 The case $\rho_*=0$.}}
+If $a\in E$ is kept fixed then
+$g(z)=\text{Log}\frac{1-\bar az|}{|z-a|}$ is a harmonic function
+in the domain $\Omega^*_N$ for every integer $N$ which is
+identically zero on the unit circle. Hence
+\[ 
+g(z_0)=\int_{\Gamma_N}\, g(\zeta)\cdot d\mathfrak{m}_N(\zeta)\tag{1}
+\]
+Consider the probability measure
+$\mu_N=\frac{1}{\rho_N}\cdot \mathfrak{m}_N$ which gives:
+\[
+\frac{1}{\rho_N}\cdot g(z_0)=
+\int_{\Gamma_N}\, \log\, \frac{1}{|\zeta-a|}\cdot d\mu_N(\zeta)
++\int_{\Gamma_N}\, \log\,|1-\bar a\zeta | \cdot d\mu_N(\zeta)\tag{2}
+\]
+\medskip
+
+\noindent
+Next, from $\{\mu_N\}$
+we  can extract a subsequence which
+converges weakly to a Riesz measure $\mu_*$. It is clear that 
+$\mu\uuu *$ is supported by $E$ and
+the weak convergence gives:
+\[
+\lim_{N\to\infty}\, 
+\int_{\Gamma_N}\, \log\,|1-\bar a\zeta | \cdot d\mu_N(\zeta)=
+\int\, \log\,|1-\bar a\zeta | \cdot d\mu_*(\zeta)\tag{3}
+\]
+Indeed, this holds since
+the integrand
+$\text{Log}\,|1-\bar a\zeta z|$ is continuous on $E$.
+Next, when $\rho_N\to 0$ is assumed
+it follows from (2) that
+\[ 
+\lim_{N\to\infty}\, 
+\int_{\Gamma_N}\, \log\, \frac{1}{|\zeta-a|}\cdot d\mu_N(\zeta)=+\infty\tag{4}
+\]
+\medskip
+
+\noindent
+{\bf{A.4 Exercise.}} 
+Show 
+that (4) together with  the weak convergence of  $\{\mu_N\}$ to $\mu_*$ imply that
+\[
+\int_E\log\, \frac{1}{|\zeta-a|}\cdot d\mu_*(\zeta)=+\infty
+\]
+
+\noindent
+This holds for an arbitrary $a$ in $E$ and hence we have proved:
+
+\medskip
+
+
+\noindent
+{\bf{A.5 Theorem.}} \emph{Let $E$ be a 
+totally disconnected and compact set where $\rho_*=0$.
+Then there exists 
+at least one  probability measure
+$\mu$ supported by $E$ such that}
+\[ 
+\int_E\,\log\, \frac{1}{|a-\zeta|}\cdot d\mu(\zeta)=+\infty
+\quad\text{for all}\quad a\in E
+\]
+
+
+
+
+
+
+\bigskip
+
+\centerline {\emph{B. Removable singularities}}.
+\medskip
+
+\noindent
+Let $E$ be a totally disconnected and compact subset of some open domain
+$\Omega$. 
+We say that $E$ is a removable singularity if
+every 
+bounded harmonic function in $\Omega\setminus E$
+extends to be harmonic in the whole domain $\Omega$.
+Now we shall use Theorem A.5 to prove Myrberg's result.
+
+
+
+\noindent
+\emph{Proof.} XXXX
+TO BE GIVEN 
+
+\newpage
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

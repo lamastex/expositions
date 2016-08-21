@@ -1,0 +1,375 @@
+
+
+
+\documentclass[12pt]{amsart}
+
+
+\usepackage[applemac]{inputenc}
+
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22 mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+\centerline{\bf{Sobolev inequalities}}
+
+
+\bigskip
+
+
+
+\noindent
+
+\noindent
+Let $n\geq 2$ abnd $F(x)$ is a funvtion with compact support contaimed in a
+ball $\{|x|\leq K\}$ fopr some $K>0$ whose partial derivtives
+$\{\partial_j(F)\}$ belong to $L^1({\bf{R}}^n)$.
+Let $\omega$ denote points on the unit sphere $S^{n-1}$.
+For each fixed $\omega$ we set
+\[ 
+F_\omega(x)=
+\int_0^\infty\, \frac{\partial}{\partial r}(
+F(x-r\omega)\cdot b(r)\, dr
+\]
+A psrtial integration shows that the right hand side becomes
+\[ 
+F(x)+\int_0^\infty\, 
+F(x-r\omega)\cdot b'(r)\, dr
+\]
+Now $b'(r)\neq 0$ only occurs if $2K<r<3K$ so if
+$|x|\leq K$ it is clear that the last integral is zero because $F$
+vanishes when
+$|x|>K$.
+Hence $F_\omega(x)= F(x)$ when $|x|\leq K$.
+This implies that the $L^q$-norm of $F$ is majorized by
+the $L^q$-norm of $F_\omega$ for every $q\geq 1$ and
+every $\omega\in S^{n-1}$.
+Since $L^q$-norms satisfy the triangle inequality we conclude that if 
+$a(\omega)$ is some non-negaitve function on $S^{n-1}$ such that
+\[
+\int_{S^{n-1}}\, a(\omega)\, d\omega=1
+\]
+then every $L^q$-norm of $F$ is majorized
+by that of
+\[
+F_a(x)= \int_{S^{n-1}}\int_0^\infty\, 
+\int_0^\infty\,
+ \frac{\partial}{\partial r}(
+F(x-r\omega)\cdot b(r) a(\omega) \, dr d\omega
+\]
+Notice that
+\[
+ \frac{\partial}{\partial r}(
+F(x-r\omega)=\sum_{j=1}^{j=n}\, \omega_j\cdot 
+\frac{\partial}{\partial x_j}( F(x-rw)
+\]
+Define the functions $h_1,\ldots,h_n$ in
+${\bf{R}}^n$ by
+\[ 
+h_j(r\omega)=\frac{b(r)\cdot \omega_j \cdot a(\omega)}{r^{n-1}}
+\]
+Since $dx= r^{n-1}d\omega$
+holds when we pass to polar coordinates in ${\bf{R}}^n$, it follows 
+from (xx) that
+\[
+F_a(x)=\sum\, \int_{{\bf{R}}^n}\, \partial_j(F(x-y))\cdot h_j(y)\, dy
+\]
+The individual $h$-functions satisfy 
+\[
+|h_j(r\omega)|\leq \frac{b(r)a(\omega)}{r^{n-1}}
+\leq C\cdot\frac{b(r)}{r^{n-1}}
+\]
+where $C$ is the maximum norm of $a$.
+So if $\sigma_{n-1}$ denotes the $n-1$-dimensional volume of 
+$S^{n-1}$ 
+and $s>1$ it follows that
+
+\[
+\int_{{\bf{R}}^n}\, |h_j(x)|^s\, dx\leq \sigma_{n-1}
+\int_0^\infty\, \frac {b(r)^s}{r^{(n-1)(s-1)}}
+\]
+The last integral is convergent provided that
+\[
+(n-1)(s-1)<1\implies 1\leq s< \frac{n}{n-1}
+ \]
+\medskip
+
+\noindent
+{\bf{Conclusion.}}
+If $p\geq 1$ and each $\partial_j(F)$ belongs to $L^p({\bf{R}}^n)$
+then Hšlder's inequality entails that
+$F_a$ belongs to $ L^{p_*}$ when
+\[
+\frac{1}{p_*}>\frac{1}{p}-\frac{1}{n}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{The case of equality.}}
+The inequality (*) holds for every $p\geq 1$, i.r. even if $p=1$.
+To get (*) in the critical case when equality holds
+one must appeal to the Calderon-Zygmund inequality
+and use the rather spcial properties of the $h$-functions above. 
+More precisely, one
+should choose $a(\omega)$ so that
+not only (xx) above holds, but also 
+\[ 
+\int_{S^{n-1}}\, \omega_j\cdot a(\omega)\, d\omega=0
+\quad\colon\quad 1\leq j\leq n
+\]
+The fact that (xx) entails that Theorem xx also holds in
+the critical case when
+$\frac{1}{p_*}= \frac{1}{p}-\frac{1}{n}$ follows by
+general facts about convolution operators. More precsiely,
+(xx) entails that convolution by the $h$-functions satisfy a
+certain weak-type estimate in the critical case when one takes $p=1$ and after 
+Thorin's interpolation theorem is applied.
+We leave this to the reader who may consult text-books
+for details. See
+in particular [Stein-Fourier analysis] and the reader may also consult
+Chapter XIV: ¤ 4 in [Dunford-Schwarz] for a further 
+discussion of Sobolev inequalities.
+\bigskip
+
+\noindent
+{\bf{Passage to higher order derivatives.}}
+By repeated use of Theorem XX
+it follows that if $F(x)$ has bounded support and
+$k\geq 2$ is an integer such that
+the partial derivatives
+$\frac{\partial^\alpha}{\partial x^\alpha}(F)$ belong to
+$L^p$ for some $p>1$, then
+\[ 
+F\in L^{p_*}({\bf{R}}^n) \quad\text{where}\quad
+\frac{1}{p_*}=\frac{1}{p}-\frac{k}{n}
+\]
+\medskip
+
+\noindent
+Finally, if it happens that $\frac{1}{p}-\frac{1}{n}<0$
+one cann establish a continuity result
+which goes as follows:
+
+\medskip
+
+\noindent
+Consider a bounded open set
+$\Omega$  in
+${\bf{R}}^n$ with a smooth boundary, i.e. of class
+$C^\infty$. Let $p\geq 1$ and $k$ is a positive integer
+which yields the largest integer $m$ such that
+\[ 
+\frac{1}{m}<k-\frac{n}{p}
+\]
+Then the folloewing hold:
+
+\medskip
+\noindent
+{\bf{Theorem.}}
+\emph{Let $F(x)$ be a function in $\Omega$
+whose partial derivatives up to order $k$
+belong to $L^p(\Omega)$.
+Then every derivative of order $\leq m$ exists and is even
+a continuous function defined on the closure of $\Omega$.}
+
+\newpage
+
+
+
+
+
+
+
+
+
+\centerline{\bf{Sobolev inequalities}}
+
+
+\bigskip
+
+
+
+\noindent
+{\bf{Theorem.}}
+\emph{Let $p>1$ and assume that
+each $\partial_j(F)$ belongs to $L^p({\bf{R}}^n)$. Then it follows that
+$F\in L^{p_*}({\bf{R}}^n)$ where}
+\[ 
+\frac{1}{p_*}= \frac{1}{p}-\frac{1}{n}
+\]
+\medskip
+
+\noindent
+The proof relies upon an interesting construction.
+With $K$ given as above we cohoose some $C^\infty$-function
+$b(r)$ on the real line where
+$b(r)=1$ if $0\leq r\leq 2K$ and zero if $r> 3K$.
+Let $\omega$ denote points on the unit sphere $S^{n-1}$.
+For each fixed $\omega$ we set
+\[ 
+F_\omega(x)=
+\int_0^\infty\, \frac{\partial}{\partial r}(
+F(x-r\omega)\cdot b(r)\, dr
+\]
+A psrtial integration shows that the right hand side becomes
+\[ 
+F(x)+\int_0^\infty\, 
+F(x-r\omega)\cdot b'(r)\, dr
+\]
+Now $b'(r)\neq 0$ only occurs if $2K<r<3K$ so if
+$|x|\leq K/2$ it is clear that the last integral is zero because $F$
+vanishes when
+$|x|>K$.
+Hence $F_\omega(x)= F(x)$ when $|x|\leq K/2$.
+This implies that the $L^q$-norm of $F$ is majorized by
+the $L^q$-norm of $F_\omega$ for every $q\geq 1$ and
+every $\omega\in S^{n-1}$.
+Since $L^q$-norms satisfy the triangle inequality we conclude that if 
+$a(\omega)$ is some non-negaitve function on $S^{n-1}$ such that
+\[
+\int_{S^{n-1}}\, a(\omega)\, d\omega=1
+\]
+then every $L^q$-norm of $F$ is majorized
+by that of
+\[
+F_a(x)= \int_{S^{n-1}}\int_0^\infty\, 
+\int_0^\infty\,
+ \frac{\partial}{\partial r}(
+F(x-r\omega)\cdot b(r) a(\omega) \, dr d\omega
+\]
+Next, we notice that
+\[
+ \frac{\partial}{\partial r}(
+F(x-r\omega)=\sum_{j=1}^{j=n}\, \omega_j\cdot 
+\frac{\partial}{\partial x_j}( F(x-rw)
+\]
+Let us now define the functions $h_1,\ldots,h_n$ in
+${\bf{R}}^n$ by
+
+\[ 
+h_j(r\omega)=\frac{b(r)\cdot \omega_j \cdot a(\omega)}{r^{n-1}}
+\]
+Since $dx= r^{n-1}d\omega$
+holds when we pass to polar coordinates in ${\bf{R}}^n$, it follows 
+from (xx) that
+
+\[
+F_a(x)=\int_{{\bf{R}}^n}\, \partial_j(F(x-y))\cdot h_j(y)\, dy
+\]
+Next,  consider the individual $h$-functions and notice that
+\[
+|h_j(r\omega)|\leq \frac{b(r)a(\omega)}{r^{n-1}}
+\leq C\cdot\frac{b(r)}{r^{n-1}}
+\]
+where $C$ is the maximum norm of $a$.
+So if $\sigma_{n-1}$ denotes the $n-1$-dimensional volume of 
+$S^{n-1}$ 
+and $s>1$ it follows that
+
+\[
+\int_{{\bf{R}}^n}\, |h_j(x)|^s\, dx\leq \sigma_{n-1}
+\int_0^\infty\, \frac {b(r)^s}{r^{(n-1)(s-1)}}
+\]
+The last integral is convergent provided that
+\[
+(n-1)(s-1)<1\implies 1\leq s< \frac{n}{n-1}
+ \]
+\medskip
+
+\noindent
+{\bf{Conclusion.}}
+If $p\geq 1$ and each $\partial_j(F)$ belongs to $L^p({\bf{R}}^n)$
+then Hšlder's inequality entails that
+$F_a$ belongs to $ L^{p_*}$ when
+\[
+\frac{1}{p_*}>\frac{1}{p}-\frac{1}{n}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{The case of equality.}}
+The inequality (*) holds for every $p\geq 1$, i.r. even if $p=1$.
+To get (*) in the critical case when equality holds
+one must appeal to the Calderon-Zygmund inequality
+and use the rather spcial properties of the $h$-functions above. 
+More precisely, one
+should choose $a(\omega)$ so that
+not only (xx) above holds, but also 
+\[ 
+\int_{S^{n-1}}\, \omega_j\cdot a(\omega)\, d\omega=0
+\quad\colon\quad 1\leq j\leq n
+\]
+The fact that (xx) entails that Theorem xx also holds in
+the critical case when
+$\frac{1}{p_*}= \frac{1}{p}-\frac{1}{n}$ follows by
+general facts about convolution operators. More precsiely,
+(xx) entails that convolution by the $h$-functions satisfy a
+certain weak-type estimate in the critical case when one takes $p=1$ and after 
+Thorin's interpolation theorem is applied.
+We leave this to the reader who may consult text-books
+for details. See
+in particular [Stein-Fourier analysis] and the reader may also consult
+Chapter XIV: ¤ 4 in [Dunford-Schwarz] for a further 
+discussion of Sobolev inequalities.
+\bigskip
+
+\noindent
+{\bf{Passage to higher order derivatives.}}
+By repeated use of Theorem XX
+it follows that if $F(x)$ has bounded support and
+$k\geq 2$ is an integer such that
+the partial derivatives
+$\frac{\partial^\alpha}{\partial x^\alpha}(F)$ belong to
+$L^p$ for some $p>1$, then
+\[ 
+F\in L^{p_*}({\bf{R}}^n) \quad\text{where}\quad
+\frac{1}{p_*}=\frac{1}{p}-\frac{k}{n}
+\]
+\medskip
+
+\noindent
+Finally, if it happens that $\frac{1}{p}-\frac{1}{n}<0$
+one cann establish a continuity result
+which goes as follows:
+
+\medskip
+
+\noindent
+Consider a bounded open set
+$\Omega$  in
+${\bf{R}}^n$ with a smooth boundary, i.e. of class
+$C^\infty$. Let $p\geq 1$ and $k$ is a positive integer
+which yields the largest integer $m$ such that
+\[ 
+\frac{1}{m}<k-\frac{n}{p}
+\]
+Then the folloewing hold:
+
+\medskip
+\noindent
+{\bf{Theorem.}}
+\emph{Let $F(x)$ be a function in $\Omega$
+whose partial derivatives up to order $k$
+belong to $L^p(\Omega)$.
+Then every derivative of order $\leq m$ exists and is even
+a continuous function defined on the closure of $\Omega$.}
+
+\end{document}
+
+
+
+
+
+
+

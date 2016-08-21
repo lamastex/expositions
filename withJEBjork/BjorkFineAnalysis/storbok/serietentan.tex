@@ -1,0 +1,4038 @@
+
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf\large Series}
+\bigskip
+
+
+
+\centerline{\emph{Contents}}
+\medskip
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+1. Additive series
+\medskip
+
+\noindent
+1:B Counting functions
+
+\medskip
+
+\noindent
+2. Power series
+
+
+\medskip
+
+
+
+\noindent
+2:B Radial limits
+\medskip
+
+\noindent
+2:C A theorem by Landau
+
+
+\medskip
+
+\noindent
+3. Product series
+\medskip
+
+\noindent
+4. Blascke products
+\medskip
+
+\noindent
+5. Estimates using the counting function
+\medskip
+
+\noindent
+6. Convergence on the boundary
+\medskip
+
+\noindent
+7. An example by Hardy
+\medskip
+
+\noindent
+8. Convergence under substitution
+\medskip
+
+\noindent
+9. The series $\sum\, (a_1\cdots a_\nu)^{\frac{1}{\nu}}$
+\medskip
+
+\noindent
+10. Thorin's convexity theorem.
+
+
+\medskip
+
+\noindent
+11. Cesaro and Hölder limits
+\medskip
+
+\noindent
+12. Power series and arithmetic means
+\medskip
+
+\noindent
+13. Taylor series and quasi\vvv analytic functions
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+\centerline {\bf Introduction.} 
+
+
+
+\bigskip
+
+\noindent
+The study of infinite series is fundamental. 
+The concepts are initially easy to grap but many
+results require quite involved proofs.
+In § 1-3 we study general facts about   additive series,
+power series, and finally  product series.
+Then we enter more advanced material.
+An example is the Hardy-Littlewood theorem in § 6, and
+§ 8,9 and 12  expose resiults due to Carelman 
+whose proofs also are quite technical.
+The discussion in § 13
+goes beyond the present scope where we
+only describe som facts from 
+Carleman's  deep studies about quasi-analytic  functions.
+We shall  work with complex series. The reason is that
+this is useful  when one begins to study  analytic functions  
+of one complex variable.
+\emph{Blaschke products}   play a central   role
+in analytic function theory
+and 
+are studied  in § 4.
+Another example where analytic function theory is used
+occurs in the proof of Thorin's convexity theorem in § xx.
+\medskip
+
+\noindent
+The literature about series is  extensive and treated
+in many text-books where the reader may find
+examples and applications.
+Apart from the results due to Carleman  which
+were established after 1920, the
+material to be presented is inspired by classic texts-books  by Landau
+and de Vallé-Poussin where the Hardy-Littlewood Theorem from 1913
+is of the most recent origin.
+\medskip
+
+\noindent
+{\bf{A remark.}}
+Some students prefer to enter abstract, or general theories.
+here we are confronted with material whose underlying concpets
+are almost trivial. But I would like to point out that
+the results are fundamental and used  in many areas of mathematics.
+Personally  I  think that the best way to advance studies in mathematics is to
+learn details of  proofs 
+which do not require sophistaceted
+definitions. It does not means that the proofs are simple.
+To digest details in a section like  § 8  is for example
+quite  demanding.
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline
+{\bf I. Additive series}
+
+\medskip
+
+\noindent
+{\bf 1. Partial sums and convergent series.} To each  sequence $\{a_\nu\}$
+of complex numbers
+indexed by non-negative integers 
+one associates  the partial sums:
+\[
+S_N=\sum_{\nu=0}^{\nu=N}\, a_\nu\quad\colon\quad N=1,2,\ldots
+\]
+If  $\{S_N\}$
+converges converge to a limit $S_*$ one 
+says
+that $\{a_\nu\}$ yields a  convergent series
+and writes
+\[
+S_*=\sum_{\nu=0}^{\infty}\, a_\nu\tag{1}
+\]
+
+\medskip
+
+
+\noindent {\bf 2. Absolute convergence.}
+The series is
+absolutely convergent  if
+\[ 
+\sum_{\nu=0}^\infty\,|a_\nu|<\infty
+\]
+
+\medskip
+
+\noindent
+{\bf 3. A majorant principle.}
+Let $\{b_\nu\}$ be a bounded sequence and
+$\{a_\nu\}$ a sequence such that 
+$\sum\,|a_\nu|<\infty$. Then it is obvious that
+\[
+\sum\,|a_\nu\cdot b_\nu|<\infty
+\]
+{\bf{Warning.}}
+Absolute convergence implies that  $\sum\,a_\nu$ converges. 
+For if $\{S_N\}$ are the partial sums 
+the triangle inequality gives
+\[
+|S_M-S_N|=
+|\sum_{\nu=N+1}^M\,a_\nu\,|\leq \sum_{\nu=N+1}^M\,|a_\nu|
+\quad\colon\quad M>N\geq 0
+\]
+The absolute convergence therefore implies that the
+sequence of partial sums is a \emph{Cauchy sequence} of complex numbers and 
+hence has a limit.
+The converse is false.
+The series defined by the sequence
+$\{a_\nu=\frac{(-1)^\nu}{\nu}\colon\,\,\nu\geq 1\}$
+is not
+absolutely convergent since 
+\[
+\sum_{\nu=1}^\infty\,\frac{1}{\nu}=\infty
+\]
+
+\medskip
+
+
+\medskip
+
+
+\noindent
+{\bf 4. Alternating series.}
+Let $a_0,a_1,\ldots$ be a sequence of positive real numbers which
+is strictly decreasing, i.e. $a_0>a_1>\ldots$.
+Assume also that $\lim a_n=0$.
+Then one gets a convergent series by taking alternating signs, i.e.
+the series below  converges:
+\[ 
+\sum_{\nu=0}^\infty\,(-1)^\nu\cdot a_\nu\tag{*}
+\]
+
+
+\noindent 
+\emph{Proof.} 
+Even partial sums are expressed by a positive series:
+\[
+S_{2N}=(a_0-a_1)+\ldots+(a_{2N}-a_{2N-1})>0\quad\colon\,N\geq 1
+\]
+At the same time 
+\[ 
+S_{2N}= a_0-[(a_1-a_2)+\ldots+a_{2N-1}-a_{2N}]
+\]
+where the last term is the negative of a positive series. Hence
+$\{S_{2N}\}$
+is a
+non-increasing sequence of positive real numbers which    implies that
+there exists a limit:
+\[ 
+\lim_{N\to\infty}\, S_{2N}= S_*
+\]
+Finally, since $a_n\to 0$ we get the same limit using odd indices
+and hence  (*) is convergent.
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf 5. The partial sum formula.}
+Consider two sequences $\{a_\nu\}$ and
+ $\{b_\nu\}$.
+Set
+\[
+S_N=\sum_{\nu=0}^{\nu=N}\, a_\nu\quad\colon\quad
+T_N=
+\sum_{\nu=0}^{\nu=N}\, a_\nu\cdot b_\nu
+\]
+\medskip 
+\noindent
+Since $a_\nu=S_\nu-S_{\nu-1}$ it follows that
+\[
+T_N=\sum_{\nu=0}^{\nu=N}\, (S_\nu-S_{\nu\vvv 1})\cdot b_\nu
+=
+a_0b_0+
+\sum_{\nu=1}^{\nu=N\vvv 1}\, S_\nu\cdot(b_\nu-b_{\nu+1})+
+S_N\cdot b_N\tag{*}
+\]
+This formula which resembles partial integration of functions is quite useful.
+
+\medskip
+
+\noindent {\bf {6. Exercise}}
+Let $b_1\geq b_2\geq\ldots$
+be a non-increasing sequence of positive real numbers.
+Show that for
+every finite $n$-tuple $a_1,\ldots,a_n$ of complex numbers one has
+the inequality
+\[
+\bigl| b_1a_1+\ldots+b_na_n\bigr|\leq
+b_1\cdot M\quad\text{where}\quad M=\max_{1\leq k\leq n}\, |a_1+\ldots+a_k|
+\]
+
+
+
+
+\medskip
+
+\noindent {\bf{7. Theorem by Abel.}}
+\emph{Assume that the partial sums $\{S_N\}$ 
+of $\{a_\nu\}$
+is a bounded sequence and that 
+the positive series $\sum\,|b_\nu-b_{\nu+1}|<\infty$ where  $b_\nu\to 0$
+as $\nu\to\infty$. Then the series below is  convergent}
+\[
+\sum_{\nu=0}^{\infty}\, a_\nu\cdot b_\nu
+\] 
+
+
+\noindent
+\emph{Proof.} By (3)
+the series
+$\sum_{\nu=0}^\infty\, S_\nu\cdot(b_\nu-b_{\nu+1})$
+is absolutely convergent and by the hypothesis we also have
+$S_N\cdot b_N\to 0$ as $N\to\infty$.
+Hence (*) in (5) shows that $\{T_N\}$
+has a limit  $T_*$ expressed by the absolutely convergent series
+\[ 
+T_*=a_0b_0+
+\sum_{\nu=1}^\infty\, S_\nu\cdot(b_\nu-b_{\nu+1})
+\]
+
+
+
+\noindent
+Next,
+let $\{b_\nu(p)\}$ be a doubly indexed sequence of
+non-negative numbers which satisfies
+\[
+\nu\mapsto b_\nu(p)
+\quad\text{is non-increacing for each}\quad p=0,1,\ldots
+\]
+\[
+\lim_{p\to\infty}\, b_\nu(p)=1
+\quad\text{for each}\quad \nu=0,1,\ldots
+\]
+\medskip
+
+\noindent
+{\bf{8. Theorem}}.\emph{ For each
+convergent series $\sum\, a_\nu$ it follows that}
+\[
+\sum_{\nu=0}^\infty a_\nu\cdot b_\nu(p)
+\] 
+\emph{converges and one has the  limit formula}
+\[
+\lim_{p\to\infty}\, 
+\sum_{\nu=0}^\infty a_\nu\cdot b_\nu(p)
+=\sum_{\nu=0}^\infty a_\nu
+\]
+{\bf{9. Exercise.}} Prove Theorem 8.. The hint is to employ the partial sum
+formula.
+\medskip
+
+\noindent
+We finish with another useful result.
+
+\medskip
+\noindent
+{\bf{10. Theorem}}
+\emph{Let $\{a_\nu\}$
+be a non-decreasing sequence of real numbers such that}
+\[ 
+\sum_{k=1}^\infty\, 2^{-k}(a_{k+1}-a_k)<\infty\tag{*}
+\]
+\noindent
+\emph{Then}
+\[
+\lim_{k\to\infty}\, 2^{-k}a_k\to 0\tag{**}
+\]
+
+
+\noindent
+\emph{Proof.}
+Let $S_N$ denote partial sums of (*). If $M>N$ the partial summation formula gives:
+\[
+S_M-S_N=2^{-M}a_{M+1}-2^{-N}a_N+
+\sum_{\nu=N+1}^{M}\, 2^{-\nu}a_\nu\tag{i}
+\]
+By the assumption
+$a_N\leq a_\nu$ when $\nu>N$  which gives:
+\[ S_M-S_N\geq
+2^{-M}a_{M+1}-2^{-N}a_N+
+a_N\cdot \sum_{\nu=N+1}^{\nu=M}\, 2^{-\nu}=
+\]
+\[
+2^{-M}a_{M+1}-2^{-N}a_N+
+a_N\cdot 2^{-N}(1- 2^{-M+N})=2^{-M}a_{M+1}-
+a_N\cdot ^{-M}
+\]
+
+
+\medskip
+
+\noindent
+Now we can argue as follows. Since (*) holds the partial sums
+is a Cauchy sequence. So if $\epsilon>0$
+there exists $N_*$ such that
+$S_M<S_{N_*}+\epsilon$ for every $M>N_*$. With $N=N_*$ above we therefore get
+\[
+2^{-M}a_{M+1}\leq \epsilon+a_{N_*}\cdot 2^{-M}
+\quad\colon\quad M>N_*\tag{iii}
+\] 
+With
+$N_*$ fixed we find a large $M$ such that (iii) entails
+\[
+2^{-M-1}a_{M+1}\leq 2\cdot \epsilon
+\]
+Since $\epsilon$ is arbitrary we get the limit (**).
+
+
+
+
+
+
+
+\bigskip
+
+\centerline {\bf B. Counting functions.}
+\medskip
+
+\noindent
+A counting function $N(s)$
+is an integer-valued function with unit 
+jumps at some strictly increasing sequence
+$0<s_1<s_2<\ldots$. Suppose that
+$N(s)$ is defined for $0<s<1$ and assume that:
+\[ 
+\int_0^1\, (1-s)\cdot dN(s)<\infty\tag{*}
+\]
+
+
+\noindent
+{\bf 1.B Theorem.} When (*) holds it follows that
+\[
+\lim_{s\to 1}\, (1-s)N(s)=0\tag{**}
+\]
+
+
+\noindent
+\emph{Proof.}
+Put $a_k=N(1-2^{-k})$.
+The interval $[0,1]$ can be divided into
+the intervals $[1-2^{-k},1-2^{-k-1})$.
+It is easily seen that (*) implies that
+\[ 
+\sum\, 2^{-k}(a_{k+1}-a_k)<\infty
+\]
+Hence Theorem 7 gives
+\[ 
+\lim_{k\to\infty}\, 2^{-k}N(1-2^{-k})=0\tag{i}
+\]
+Next,
+if 
+$s<1$ we choose $k$ such that
+$1-2^{-k}\leq s<1-2^{-k-1}$ and then
+\[
+(1-s)N(s)\leq 2^{-k}\cdot N(1-2^{-k-1})=2\cdot2^{-k-1}\cdot N(1-2^{-k-1})
+\tag{ii}
+\] 
+Hence (i) implies that (**) tends to zero as required.
+
+
+\bigskip
+
+\centerline {\bf 2.B A study of $\sum\, (1-a_k)$}.
+\medskip
+
+\noindent
+Let $0<a_k<1$ and suppose that the series
+\[
+ \sum\, (1-a_k)<\infty\tag{1}
+\]
+Let $N(s)$ be the counting function with unit jumps at $\{a_k\}$.
+So (1) means that
+\[ 
+\int_0^1\, (1-s)dN(s)<\infty\tag{2}
+\]
+
+\noindent
+{\bf{Exercise.}}
+With $s=1-\xi$ close to 1, i.e. when
+$\xi$ is small the Taylor expansion of the Log-function at
+$s=1$ gives
+\[
+\log\frac{1}{s}=
+\log\frac{1}{1-\xi}=\xi+\text{higher order terms in}\,\,\xi
+\]
+Use this to prove that  (2) holds if and only if
+\[
+\int_0^1\,\log(\frac{1}{s})\cdot dN(s)<\infty\tag{3}
+\]
+\medskip
+
+\noindent
+Next, assume that (2) holds and for each $0<r<1$ we set
+
+\[
+S(r)=\int_0^r\,\log\, \frac{1}{s}\cdot dN(s)\quad\text{and}\quad
+T(r)=\int_0^r\,\log\,\frac{r}{s}\cdot dN(s)\tag{4}
+\]
+\medskip
+
+
+\noindent
+Since $\log(\frac{1}{s})-\log(\frac{r}{s})=\log\,\frac{1}{r}$
+it follows that
+\[ 
+S(r)-T(r)=\log\,\frac{1}{r}\int_0^r\,dN(s)=
+\log\,\frac{1}{r}\cdot N(r)\tag{5}
+\]
+
+
+\noindent
+Now
+$\log\,\frac{1}{r}\simeq 1-r$ as $r\to 1$ and since (2)  is assumed, it
+follows from Theorem 1.B that:
+\[
+\lim_{r\to 1}\log\,\frac{1}{r}\cdot N(r)=0
+\]
+Hence (5) gives
+\[
+\lim_{r\to 1}\, S(r)-T(r)=0\tag{6}
+\]
+
+
+\noindent With the notations above we have therefore proved
+\medskip
+
+\noindent {\bf 3.B Theorem.} \emph{Assume that (2) holds. Then
+the following limit formula holds}
+
+
+\[
+\lim_{r\to 1}\int_0^r\,\log\,(\frac{r}{s})\cdot dN(s)=
+\int_0^1\,\log(\frac{1}{s})\cdot dN(s)
+\]
+\medskip
+
+\noindent
+{\bf 4.B Remark.}
+By the multiplicative property of the Log-function
+the last term becomes
+\[
+\sum\,\log\,\frac{1}{a_k}
+=\log\,\prod\, \frac{1}{a_k}\tag {i}
+\]
+In the right hand side there appears a \emph{product series}
+defined by the $a$-sequence. In  section III we study
+product series in more detail but already here we have seen an example of
+the interplay between additive series and product series.
+Notice also that via the equivalence of (1) and (2)
+above, Theorem 3.B gives the following:
+\medskip
+
+\noindent
+{\bf 5.B Theorem.} \emph{Let $\{a_k\}$ be a sequence with each
+$0<a_k<1$. Then the additive series
+$\sum\, (1-a_k)$ is convergent if and only if
+the product series}
+\[ 
+\prod_{k=1}^\infty\, \frac{1}{a_k}<\infty\tag {i}
+\]
+\emph{Moreover, when (i)  holds one has the limit formula}
+\[
+\lim_{r\to 1}\,
+\prod_r\, \frac{r}{a_k}=
+\prod_{\nu=1}^\infty\, \frac{1}{a_k}<\infty\tag {ii}
+\]
+\emph{where $\prod_r$ is extended over those $k$ for which $a_k\leq r$.}
+
+
+\medskip
+
+\centerline {\bf{6.B Asymptotic formulas.}}
+\medskip
+
+
+\noindent
+Here we announce a deeper result without proof.
+Let $\{\lambda\uuu \nu\}$ be a strictly increasing sequence of positive numbers
+where $\lambda_\nu=+\infty$ as $\nu\to \infty$.
+Consider another sequence of positive numbers
+$\{a\uuu\nu\}$ and assume that the series
+\[
+\sum\uuu{\nu=1}^\infty\, \frac{a\uuu\nu}{\lambda\uuu\nu}<\infty
+\]
+For each $s>0$ we denote by $\Lambda(s)$ be the largest integer $\nu$
+such that $\lambda\uuu\nu\leq s$.
+So the $\Lambda$\vvv function is a non\vvv decreasing integer\vvv valued 
+function with jumps at every $\lambda\uuu\nu$.
+Next, define the following pair of
+functions when $0<x<\infty$:
+\[
+\mathcal A(x)=\sum\uuu{\nu<\Lambda(x)}\, a\uuu\nu
+\quad\text{and}\quad
+f(x)= \sum\uuu{\nu=1}^\infty\, \frac{a\uuu\nu}{\lambda\uuu\nu+x}
+\]
+Notice that $\mathcal A(x)$ is non\vvv decreasing while $f(x)$ is
+decreasing.
+With these notations the following hold:
+
+\medskip
+
+\noindent
+{\bf{7.B Theorem.}}
+\emph{Assume that there exists some $0<\alpha<1$ and a positive constant
+$C$ such that}
+\[
+\lim\uuu{x\to \infty}\, x^\alpha\cdot f(x)=C
+\]
+\emph{Then there also exists the limit}
+\[
+\lim \uuu{x\to \infty}\, x^{\alpha\vvv 1}\cdot \mathcal A(x)=
+\frac{C}{\pi}\cdot \frac{\sin \pi\alpha}{1\vvv\alpha}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+Theorem 7.B  is due to Carleman and was established in  his lectures 
+at Institute Mittag\vvv Leffler in 1935. The proof requires
+analytic methods based upon  Fourier transforms
+and is given in § XX from Special Topics.
+In the special case when $\lambda\uuu\nu=\nu$ we see that
+$\mathcal A(n)$ is equal to the partial sum
+$S\uuu n$ of $\{a\uuu\nu\}$ for positive integers $n$.
+So in this  special case Theorem 7.B 
+asserts  that if the positive series
+\[
+\sum\, \frac{a\uuu\nu}{\nu}<\infty
+\]
+and if there exists 
+\[ 
+\lim\uuu{x\to\infty}\,x^\alpha\cdot \sum\, \frac{a\uuu\nu}{\nu+x}=C
+\] 
+then 
+\[
+\lim\uuu{n\to\infty}\frac{n^\alpha\cdot S\uuu n}{n}=
+\frac{C}{\pi}\cdot \frac{\sin \pi\alpha}{1\vvv\alpha}
+\]
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf\large II. Power series.}
+\medskip
+
+\noindent
+ Starting with a sequence
+$\{a_\nu\}$ and a complex number $z\neq 0$ 
+we get the  sequence $\{a_\nu\cdot z^\nu\}$.
+If this sequence yields a convergent additive series
+the sum is denoted by 
+$S(z)$. 
+\medskip
+
+\noindent 
+{\bf 1. Definition} \emph{The set of all $z\in\bf C$
+for which the series}
+\[ 
+\sum_{\nu=0}^\infty\, a_\nu\cdot z^\nu
+\] 
+\emph{converges is denoted by $\mathfrak {conv}(\{a_\nu\})$ and called the 
+set of convergence for the $a$-sequence.}
+\medskip
+
+\noindent
+{\bf Remark.} It may occur that 
+$\mathfrak{conv}(\{a_\nu\})$ just contains $z=0$. 
+An example is when $a_\nu=\nu\,!$.
+But if the absolute values $|a_\nu|$ do not 
+increase too fast, then $\mathfrak {conv}(\{a_\nu\})$
+contains non-zero complex numbers.
+Since the terms of a
+convergent sequence  is 
+ bounded, each
+ $z_0\in \mathfrak{conv}(\{a_\nu\})$
+ gives a constant $M$ such that
+\[
+|a_\nu|\cdot |z_0|^\nu\leq M\quad\colon\quad\nu=0,1,\ldots
+\tag{1}
+\]
+If $|z|<|z_0|$ it follows that the series defined by 
+$\{a_\nu\cdot z^\nu\}$ is absolutely convergent.
+Indeed, 
+we have
+\[ 
+|a_\nu\cdot z^\nu|\leq M\cdot \frac{|z|^\nu}{|z_0|^\nu}
+\]
+Here $r=\frac{|z|}{|z_0|}<1$ and the geometric series
+$\sum\, r^\nu$ is convergent. Hence
+the \emph{Majorant principle }  from I.3  yields the
+the absolute convergence of
+$\{a_\nu\cdot z^\nu\}$.
+
+\medskip
+
+\noindent
+{\bf 2. The radius of convergence.}
+Above we  saw that if  $z_0\in\mathfrak{conv}(\{a_\nu\})$ then
+the domain of convergence contains the open disc of radius $|z_0|$.
+Put
+\[
+\mathfrak{r}=\max\, |z|\quad\colon\quad
+z\in \mathfrak{conv}(\{a_\nu\})\tag{*}
+\]
+Assume that
+$\mathfrak{conv} (\{a_\nu\})$ is not reduced to $z=0$. Then $\mathfrak r$
+is a positive number
+or $+\infty$. It is called the radius of convergence for
+$\{a_\nu\})$. The case $\mathfrak{r}=+\infty$
+means that the series
+\[ 
+\sum\, a_\nu\cdot z^\nu
+\]
+converges for all $z\in\bf C$.
+\bigskip
+
+\noindent 
+{\bf 3. Hadamard's formula for $\mathfrak{r}$.}
+Given a sequence $\{a_\nu\}$ its radius of convergence
+is
+found by taking a limes superior. More precisely
+\[ 
+\frac{1}{\mathfrak{r}}=
+\limsup_{\nu\to\infty}\,\,
+|a_\nu|^{\frac{1}{n}}\tag{*}
+\]
+
+
+\noindent 
+{\bf{3.1 Exercise.}}
+Prove Hadamard's formula.
+\medskip
+
+\noindent
+{\bf{3.2 Remark.}} A sufficient condition in order that 
+$\mathfrak{r}\geq 1$ for a given sequence $\{a_\nu\}$
+can be  checked as follows.
+Suppose that
+\[ 
+|a_\nu|\leq e^{\rho(\nu)}
+\]
+for some sequence $\{\rho(\nu)\}$. With  $r<1$ we can write
+$r=e^{-\delta}$ for some $\delta>0$
+and obtain
+\[
+|a_n|\cdot r^n\leq \text{exp}(\rho(n)-\delta\cdot n)\quad\colon\, n=1,2,\ldots
+\]
+From this we  conclude that $\mathfrak{r}\geq 1$ holds  if
+\[
+\lim_{n\to\infty}\, \rho(n)-\delta\cdot n=-\infty
+\quad\text{for each}\quad \delta>0\tag{**}
+\]
+
+\medskip
+
+
+\noindent
+{\bf{4. Application.}}
+Let $\sum\, a_n\cdot z^n$
+be a power series whose radius of convergence is one.
+Let $\{b_n\}$ be some other sequence of complex numbers.
+We seek for conditions in order that
+the series $\sum\, b_n a_n\cdot z^n$
+also converges when $|z|<1$.
+The result below gives a sufficient condition for this to hold.
+\newpage
+
+\noindent
+{\bf{5. Theorem.}}
+\emph{Let $\{\gamma_n\}$
+be a sequence of positive numbers such that}
+\[ 
+\lim_{n\to\infty}\,
+\frac{\gamma_n}{n}\cdot \text{log}(n)=0\tag{i}
+\]
+\emph{Then the $\mathfrak r$-number of
+$\{b_\nu\cdot a_\nu\}$ is $\geq 1$ for every
+$b$-sequence such that}
+\[
+|b_n|\leq n^{\gamma_n}\quad\colon\quad n=1,2,\ldots
+\]
+
+\noindent
+{\bf{6. Exercise.}} Prove this theorem.
+ It applies in particular when 
+$\gamma_n=k$ for some positive integer $k$ and hence the radius of convergence of
+$\{\nu^k\cdot a_\nu\}$ is at least one. Of course, this can be seen directly from
+the formula in (3) above since
+\[
+\lim\uuu{n\to \infty}\, n^{\frac{k}{n}}=1
+\] 
+hold for every positive integer $k$.
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+\noindent 
+{\bf{7. Hadamard's Lemma.}}
+Let $\{c_n\}$ be a sequence if numbers such that the following two conditions hold:
+
+\[ 
+\limsup_{n\to \infty}\, |c_n|^{\frac{1}{n}}=1\tag{i}
+\]
+There exists some $0<\alpha<1$ such that
+\[
+\bigl|c_{n+1}^2-c_{n+2}\cdot c_n\bigr|\leq \alpha^n
+\quad\colon\quad n=1,2,\ldots\tag{ii}
+\]
+Show that (i-ii) imply that
+one has an unrestricted limit:
+\[ 
+\lim_{n\to \infty}\, |c_n|^{\frac{1}{n}}=1\tag{*}
+\]
+
+
+
+
+
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+\noindent 
+{\bf{8. Exercise.}}
+Let $a_0,a_1,\ldots$ be a sequence of positive real numbers.
+Suppose there exists an integer $m$ and a constant
+ $C$ such that
+\[ 
+a_k\leq \frac{a_{k-1}+\ldots+a_{k-m}}{k}
+\quad\text{for all}\quad k\geq m
+\]
+Show that no matter how $a_0,\ldots,a_{m-1}$ are determined initially
+it follows that 
+the power series
+\[ 
+\sum\, a_\nu\cdot z^\nu
+\] 
+has an infinite radius of convergence, i.e. for every
+$R>0$ the positive series
+$\sum\, a_\nu\cdot R^\nu<\infty$.
+
+
+
+
+
+\newpage
+
+
+
+\noindent 
+\centerline {\bf  II.B Convergence at the boundary}
+
+\bigskip
+
+
+
+\noindent 
+Let $\{a_\nu\} $ be a sequence with  $\mathfrak{r}=1$.
+Given some $0\leq\theta\leq 2\pi$ we have the complex number 
+$e^{i\theta}$  whose absolute value is one. It
+is not always true that the series
+\[
+\sum_{\nu=}^\infty a_\nu\cdot e^{i\nu\theta}\tag{1}
+\] 
+converges. So we have a possibly empty subset of $[0,2\pi]$ defined by
+\medskip
+\[ 
+\mathcal F=\{0\leq\theta\leq 2\pi\}\quad\colon\quad
+\text{The series (1) converges for}\,\,\theta\tag{2}
+\]
+\medskip
+
+\noindent {\bf  1. Example}
+Let $\{a_\nu=\frac{1}{\nu}\}$.
+Here $\mathfrak{r}=1$ and
+the series
+$\sum\,\frac{1}{\nu}$ is divergent.
+On the other hand 
+\[ 
+\sum\,\frac{e^{i\nu\theta}}{\nu}
+\]
+converges for each  $0<\theta<2\pi$. In other words
+\[
+\mathcal F=(0,2\pi)\tag{i}
+\]
+
+\noindent
+To see this we notice that if
+$b_\nu= e^{i\nu\theta}$ with $0<\theta<2\pi$ then the partial sums are:
+\[ 
+S_N=\frac{1-e^{i(N+1)\theta}}{e^{i\theta}-1}
+\]
+This sequence is bounded
+and since the positive series
+$\sum\,(\frac{1}{\nu}-\frac{1}{\nu+1})$
+converges, the reader can deduce the inclusion (i) from
+Abel's theorem in A.7
+
+\bigskip
+
+
+\noindent{\bf 2. Radial limits}
+Let  $\{a_\nu\}$ be a sequence whose radius of convergence is 1.
+If $0<r<1$ and $0\leq \theta\leq 2\pi$ we get the convergent series
+\[
+S(r,\theta)=\sum_{\nu=0}^\infty\, 
+a_\nu \cdot r^\nu e^{i\nu\theta}
+\]
+Keeping $\theta$ fixed we say that one has a radial limit if
+there exists
+\[ 
+\lim_{r\to 1}\, S(r,\theta)=S_*(\theta)\tag{*}
+\]
+
+\noindent 
+Denote by Let $\mathfrak{rad}(\{a_\nu\})$  the set of $\theta$ for which the limit above exists.
+The question arises if $\theta\in\mathfrak{rad}(\{a_\nu\}) $
+implies that the series 
+$\sum\, a_\nu e^{i\nu\theta}$ converges.
+This is not true in general. The simplest example is 
+to take $a_\nu=(-1)^\nu$
+and $\theta=1$. Here 
+$S(r,0)=\frac{1}{1+r}$ whose limit is $\frac{1}{2}$
+while  $\sum\,a_\nu$  diverges  since the $a$-sequence
+does not tend to zero. 
+But the converse is true, i.e. one has:
+
+
+\bigskip
+\noindent{\bf {3. Theorem}}
+\emph{Let $\{a_\nu\}$ give a convergent additive series with sum $S\uuu *$.
+Then there exists the limit}
+
+\[ 
+\lim\uuu{x\to 1}\, \sum\, a\uuu n\cdot x^n
+\]
+\emph{Moreover, the radial limit is equal to the series sum $S\uuu *$ of the additive series.}
+\medskip
+
+\noindent
+\emph{Proof.}
+We can always modify $a_0$ and assume that $S_*=0$.
+Set
+\[ 
+\rho_N=\max_{\nu\geq N}\, |S_\nu|\tag{i}
+\]
+So the hypothesis is now that $\rho_N\to 0$ as $N\to\infty$.
+For each  $0<x<1$ we set:
+\[ 
+S_N(x)=\sum_{nu=0}^{\nu=N}\, a_\nu\cdot x^\nu
+\] 
+When $0<x<1$ is fixed  the infinite power series
+\[ 
+S_*(x)=\sum_{\nu=0}^{\infty}\, a_\nu\cdot x^\nu\tag{ii}
+\] 
+converges.
+Next,
+when $0<x<1$ then
+the sequence $\{b_\nu=x^\nu-x^{\nu+1}\}$
+is non-increasing. 
+Hence Exercise 6 from [Additive Series] implies   that
+that for each pair $M>N$ 
+and every $0<x<1$ one has 
+\[
+|S_M(x)-S_N(x)|\leq\rho_N
+\]
+Since this holds for every $M>N$ and the series
+(ii) converges we obtain
+\[
+[S_*(x)-S_N(x)|\leq\rho_N\tag{iii}
+\]
+\noindent
+Next, the triangle inequality
+gives:
+\[
+|S_*(x)|\leq |S_*(x)-S_N(x)|+
+|S_N(x)-S_N|+|S_N|\leq 
+\]
+\[
+2\cdot \rho_N+
+|S_N(x)-S_N|
+\]
+Finally,  if $\epsilon>0$ we first choose $N$ so that
+$2\cdot \rho_N<\epsilon/2$ and with $N$ fixed we have
+\[ 
+\lim_{x\to 1}\, S_N(x)=S_N
+\]
+This proves the requested limit formula
+\[
+\lim_{x\to 1}\, S_*(x)=0
+\]
+
+\bigskip
+
+\centerline{\bf 4.  A theorem of Landau.}
+\medskip
+
+\noindent
+One can also study
+limits on
+sparse sets which converge to a boundary point.
+Results of this nature appear in the 
+article
+\emph{Über die Konvergenz einiger Klassen von unendlichen
+Reihen am Rande des Konvergenzgebietes} by Landau from 1907.
+Here we announce and prove one of these  results.
+Consider a sequence of complex numbers
+$\{z_k\}$ in the open unit disc $D$ 
+which converge to 1.
+We say that the sequence is of   Landau type  if there exists a constant $
+{\bf{L}}$
+such that
+\[
+\frac{|1-z_k|}{1-|z_k|}\leq {\bf{L}}\quad\colon\quad
+\frac{1}{{\bf{L}}}\leq k\cdot |1-z_k|\leq {\bf{L}}\quad\colon\, k=0,1,2,\ldots
+\tag{i}
+\]
+\medskip
+\noindent
+{\bf Remark.}
+The first inequality means that
+$z_k$ come close to the real axis as $|z_k|\to 1$.
+The second condition means that the sequence of absolute values
+$1- |z_k|$ decreases  in a 
+regular fashion.
+\bigskip
+
+
+\noindent
+{\bf 4.1 Theorem}.
+\emph{Let 
+$\{a_\nu\}$ be a sequence such that
+$\nu\cdot a_\nu\to 0$ as $\nu\to+\infty$ and suppose there exists a sequence
+$\{z_k\}$  of the Landau type such that  there exists a limit}
+\[ 
+\lim_{k\to\infty}\sum a_\nu \cdot z_k^\nu=A
+\]
+
+
+
+\noindent
+\emph{Then  the series
+$\sum\, a_\nu$ is convergent and the series sum is equal to $A$.}
+
+\medskip
+
+
+
+\noindent
+\emph{Proof.}
+Since
+$\nu\cdot a_\nu\to 0$ it follows that
+\[
+\lim_{k\to\infty}\,
+\frac{1}{k}\cdot \sum_{\nu=1}^k\, a_\nu=0\tag{i}
+\]
+Next, set
+\[
+f(k)=\sum_{\nu=1}^{\nu=k}\, a_\nu z_k^\nu\quad\text{and}\quad 
+S_k=\sum_{\nu=1}^{\nu=k}\, a_\nu\tag{ii}
+\]
+The triangle inequality gives
+\[
+|S_k-f(k)|\leq 
+\bigl|\sum_{\nu=1}^{\nu=k}a_\nu(1-z_k^\nu)-
+\sum_{\nu>k}\, a_\nu z_k^\nu\bigr |\leq
+\]
+\[
+\sum_{\nu=1}^{\nu=k}|a_\nu|(1-z_k|\cdot \nu +
+\sum_{\nu>k}\, |a_\nu|\cdot | z_k|^\nu=W(k)_*+W(k)^*\tag{iii}
+\]
+Put 
+\[
+\epsilon(k)=\max\,\{\nu\cdot |a_\nu|\colon\,\, \nu\geq k+1\}\implies
+|a_\nu|\leq \frac{\epsilon(k)}{k}\quad\colon\,\nu\geq k+1\tag{iv}
+\]
+Since we also have
+$|z_k|^{k+1}\leq 1$
+it follows from (iv) that
+\[ 
+W^*(k)\leq \frac{\epsilon(k)}{k}\cdot\frac{1}{1-|z_k|}
+\leq\frac{{\bf{L}}\cdot \epsilon(k)}{k\cdot |1-z_k|}\leq
+{\bf{L}}^2\cdot\epsilon(k)\tag{v}
+\]
+At the same time we have
+\[
+W_*(k)\leq k\cdot |1-z_k|\cdot\frac{\,\sum_{\nu=1}^{\nu=k}\nu\cdot |a_\nu|}{k}
+\leq{\bf{L}}\cdot\frac{\,\sum_{\nu=1}^{\nu=k}\nu\cdot |a_\nu|}{k}\tag{vi}
+\]
+Now we are done,  i.e. $W_*(k)\to 0$
+by
+the observation in (*) and $W^*(k)\to 0$  since
+the hypothesis on $\{a_\nu\}$
+gives
+$\epsilon(k)\to 0$.
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf\large III. Product series}
+\bigskip
+
+\noindent
+Consider a sequence of positive real numbers
+$\{q_\nu\}$. To each $N\geq 1$ we define the partial product
+\[
+\Pi_N=\prod_{\nu=1}^{\nu=N}\,q_\nu
+\]
+If $\lim_{N\to\infty}\,\Pi_N$ exists we say that the infinite product
+converges and put
+\[
+ \Pi_*=
+\prod_{\nu=1}^\infty\,q_\nu
+\]
+It is clear  that if the product converges then
+$\lim_{\nu\to\infty}\, q_\nu=1$.
+A very useful result goes as follows:
+
+\medskip
+
+\noindent 
+{\bf 1. Theorem.} \emph{Let $\{q_\nu\}$ be a sequence where
+$0<q_\nu<1$ hold for all $\nu$.
+Then the following three conditions are equivalent:}
+\[ 
+\sum\,(1-q_\nu)<\infty\quad\colon\,
+\sum\,\text{Log}\,\frac{1}{q_\nu}<\infty\quad\colon
+\prod_{\nu=1}^\infty\,q_\nu>0
+\]
+
+
+\noindent
+{\bf{Exercise}}
+Prove this theorem. A hint is that
+the function $\log r$ 
+has the Taylor expansion close to $r=1$
+given by
+\[
+\log r=(r-1)+(r-1)^2/2+\ldots
+\]
+
+
+\medskip
+
+\noindent {\bf 2. Proposition}
+\emph{One has the inequality}
+\[
+|\text{Log}(1+z)-z|\leq  |z|^2\quad\colon\,|z|\leq 1/2
+\]
+
+\noindent
+{\bf{Exercise.}}
+Prove this inequality.
+A hint is to use the series expansion of rhe complex log-function:
+ \[
+\log (1+z)=
+z-z^2/2+z^3/3+\ldots
+\]
+
+
+
+\medskip
+
+\noindent 
+Next, consider a complex sequence $a(\cdot)$ where
+$|a_\nu|\leq\frac{1}{2}$ hold for all $\nu$ and put:
+\[
+\Pi_N=\prod_{\nu=1}^{\nu=N}\,(1-a_\nu)\implies
+\log\, (\Pi_N)=
+\sum_{\nu=0}^{\nu=N}\,
+\log (1-a_\nu)
+\]
+Proposition 2 gives  the inequality
+\[
+|\log (1-a_\nu)+a_\nu|\leq |a_\nu|^2\tag{*}
+\]
+
+\noindent
+This enable us to investigate the convergence of the product series with
+the aid of the additive series for $\{a_\nu\}$. We get for example
+\[
+|\log\, (\Pi_N)+\sum_{\nu=1}^{\nu=N}\, a_\nu\,|\le
+\sum_{\nu=1}^{\nu=N}\, |a_\nu|^2\tag{**}
+\]
+
+\noindent
+From (**) we can conclude:
+\medskip
+
+\noindent
+{\bf 3. Theorem.}
+\emph{Let $\{a_\nu\})$ be a sequence where each $|a_\nu|\leq\frac{1}{2}$ and
+$\sum\, |a_\nu|^2<\infty$. Then  $\sum\,a_\nu$ converges if and only if
+the product series $\Pi\,(1-a_\nu)$ converges.
+Moreover, when convergence holds one has the equality}
+\[ 
+\log\,(\Pi_*)=\sum_{\nu=1}^\infty\,
+\log(1-a_\nu)
+\]
+
+
+\newpage
+
+\centerline {\bf IV. Blaschke products.}
+\bigskip
+
+
+\noindent 
+Let $\{a_\nu\}$ be a sequene in the open unit disc $D$ which
+are  enumerated 
+so that their absolute values are non-decreasing.
+But repetitions may occur, i.e. several $a$-numbers can be equal.
+We always assume that $|a_\nu|\to 1$ as $\nu\to+\infty$. Hence
+$\{a_\nu\}$ is a discrete subset of $D$.
+To each $\nu$ we set
+\[ 
+\beta_\nu(\theta)=
+\frac{e^{i\theta}-a_\nu}{ 1-
+e^{i\theta}\cdot\bar a_\nu}\cdot\frac{\bar a_\nu}{|a_\nu|}\quad\colon\quad
+0\leq\theta\leq 2\pi\tag{1}
+\]
+
+
+\noindent
+The \emph{Blaschke product of order $N$} is the partial product
+\[ 
+B_N(\theta)=\prod_{\nu=1}^{\nu=N}\,
+\beta_\nu(\theta)\tag{2}
+\]
+
+
+\noindent 
+The question arises when the product series converges and gives a limit
+\[
+B_*(\theta)=\prod_{\nu=1}^\infty\,
+\beta_\nu(\theta)\tag{3}
+\]
+
+
+\noindent To analyze this we use polar coordinates and put
+\[
+a_\nu= r_\nu e^{i\theta\nu}
+\]
+Each $\beta$\vvv number has absolute value one
+and if $\theta\neq \theta\uuu\nu$ for every
+$\nu$ we have
+\[ 
+\beta_\nu(\theta)=e^{i\cdot\gamma(r_\nu,\theta-\theta_\nu)}
+\quad\colon\quad 0<\gamma(r_\nu,\theta-\theta_\nu)<2\pi
+\tag{4}
+\]
+
+
+\noindent
+{\bf{Exercise.}}
+Show that when $\vvv \pi/2<\theta \vvv \theta\uuu\nu<\pi/2$
+then the construction of the $\arctan$\vvv function gives
+\[
+\gamma(r,\theta\vvv \theta\uuu\nu)=
+\text{arctg}\,[\frac{(1-r^2)\cdot \text{sin}(\theta\uuu\nu\vvv\theta)}
+{1+r^2-2r\text{cos}(\theta\uuu \nu\vvv \theta)}\,]\tag{4}
+\]
+
+
+\medskip
+
+\noindent {\bf 4.2. Blashke's condition}
+We impose the condition that the positive series
+\[ 
+\sum\, (1-r\uuu \nu)<\infty\tag{*}
+\]
+\noindent
+{\bf{4.3 Exercise.}}
+If  $x$ is a real number we set
+\[
+\{x\}=\min\uuu {k\in{\bf{Z}}}\, [x\vvv 2\pi k|
+\]
+Assume that (*) holds. Show that the Blaschke product has a radial limit at
+$\theta=0$ if and only if there exists the limit
+\[
+\lim\uuu{N\to\infty}\,\bigl\{
+\,\sum\uuu{\nu=1}^{\nu=N}\,
+\frac{(1-r_\nu)\cdot \theta_\nu}
+{(1-r_\nu)^2+\theta_\nu^2}\,\bigr\} \tag{4.3.1}
+\]
+In other words, (4.3.1) holds if and only if
+the infinite product $B_*(0)$ exists and
+\[
+\lim_{r\to 1}\, B(r)= B_*(0)
+\]
+{\bf{4.4.Remark.}}
+Notice  that $\theta_\nu$ may be $<0$ or $>0$
+and it is not necessary that all of them become close to
+$0$. 
+To determine all sequence of
+pairs $(r\uuu\nu,\theta\uuu\nu)$
+where 4.3.1 holds and $\theta\uuu\nu\to 0$
+appears to be a very difficult problem.
+\bigskip
+
+
+\noindent
+In  complex analysis
+one considers the analytic function
+defined in the open unit disc $|z|<1$ by
+\[ 
+B(z)=\prod_{\nu=0}^\infty\, \frac{z-a_\nu}{1-\bar a_\nu\cdot z}
+\cdot e^{-i\text{arg}(a_\nu)}\tag{i}
+\]
+which exists under the sole condition that Blascke's condition (*) is valid.
+A major resultdue tio Blaschke
+asserts that the
+\[ 
+\lim_{r\to 1}\,
+ B(re^{i\theta})= B_*(\theta)
+\]
+exists for almost every
+$\theta$, and
+the absolute value 
+of the limit valkue $B_*(\theta)$ is equal to one almost everywhere,
+taken in the sens of Lebesgue.
+But the determination of the set of all
+$0\leq \theta\leq 2\pi$ for which the radial limit exists
+is not clear when
+no special assumptions are imposed on
+the $\{\theta_\nu\}$-sequence.
+For example, divergence may appear when many 
+$\theta_\nu$:s  are close to $\theta$ even if 
+$\{r\uuu\nu\}$ tend rapidly to 1.
+\medskip
+
+
+\newpage
+
+\centerline{\bf \large V. Estimates using the counting function.}
+\bigskip
+
+\noindent
+Let $\{\alpha_\nu\}$ be a complex sequence where
+$0<|\alpha_1|\leq |\alpha_2|\leq\ldots\}$, amnd assume that
+the absolute values tend to $+\infty$. We get
+the counting function $N(R)$ which for every $R>0$ is the number of
+$\alpha_\nu$ with absolute value $\leq R$.
+Consider the situation when
+there exists a constant $C$ such that
+\[ 
+N(R)\leq C\cdot R\quad\text{for all}\quad R>0\tag {*}
+\]
+
+\medskip
+
+\noindent
+{\bf 5.1. The first estimate.} To each $R>0$ we set
+\[
+S(R)=\prod\, (1+\frac{R}{|\alpha_\nu|})\quad\colon
+\text{product taken over all}\,\,|\alpha_\nu|\leq 2R\tag {2}
+\]
+Then we have
+\[ 
+S(R)\leq e^{KR}\quad\text{where}\quad
+K=2C(1+\text{Log}\,\frac{3}{2})\tag{*}
+\]
+
+
+\noindent
+To prove this we consider $\log\,S(R)$. A partial integration gives:
+\[ 
+\log\,S(R)=\int_0^{2R}\,\log\,(1+\frac{R}{t})\cdot dN(t)=
+\log\, (1+\frac{1}{2})\cdot N(2R)+
+\int_0^{2R}\, \frac{R\cdot N(t)}{t(t+R)}\cdot dt
+\]
+
+
+\noindent Since $\frac{R}{t+R}\leq 1$ for all $t$, the last integral is
+estimated by $2R\cdot C$ and (*) follows.
+
+
+\medskip
+
+
+\noindent
+{\bf 5.2. The second estimate.}
+For each $R>0$ we consider
+infinite tail products:
+\[
+S^*(R)=\prod\,(1+\frac{R}{\alpha_\nu})\cdot e^{-\frac{R}{\alpha_\nu}}
+\quad\colon\text{product taken over all}\,\,|\alpha_\nu|\geq 2R\tag {i}
+\]
+
+
+\noindent
+To estimate (i) we notice that 
+the analytic function $(1+\zeta)e^{-\zeta}-1$ has a double zero
+at the origin. This gives  a constant $A$ such that
+\[
+|(1+\zeta)e^{-\zeta}-1|\leq A\cdot |\zeta|^2\quad\colon\, |\zeta|\leq\frac{1}{2}\tag{ii}
+\]
+
+
+\noindent
+Since $|\alpha_ \nu|\geq 2R$ for every $\nu$ we obtain:
+\[ \log^+|(1+ \frac{R}{\alpha_\nu})\cdot e^{-\frac{R}{\alpha_\nu}}|
+\leq\log\,[1+A\frac{R^2}{|\alpha_\nu|^2})\leq
+A\cdot \frac{R^2}{|\alpha_\nu|^2}\tag{iii}
+\]
+
+
+\noindent
+From (6) we get
+\[
+\log^+(S^*(R))\leq
+AR^2\int_{2R}^\infty\, \frac{dN(t)}{t^2}= A\cdot N(2R)+
+2AR^2\cdot \int_{2R}^\infty\, \frac{N(t)}{t^3}\tag{iv}
+\]
+
+
+\noindent
+The last term is estimated by 
+\[
+2AR^2\cdot C\cdot\int_{2R}^\infty\,\frac{dt}{t^2}=AC\cdot R\tag {8}
+\]
+
+
+\noindent
+Adding up the result we get
+\medskip
+
+\noindent 
+{\bf 5.3 Theorem.}
+\emph{One has the inequality}
+\[ 
+S^*(R)\leq \frac{5A}{4}\cdot C\cdot R
+\]
+
+
+\newpage
+
+
+
+
+
+
+\centerline{\bf \large{VI. Theorems by Abel, Tauber, Hardy and Littlewood}}
+\bigskip
+
+
+\noindent
+{\bf Introduction.}
+Consider a power series
+$f(z)=\sum\, a_nz^n$ whose radius of convergence is one.
+If $r<1$ and $0\leq\theta\leq 2\pi$
+the series
+\[ 
+f(re^{i\theta})= 
+\sum\, a_nr^ne^{in\theta}
+\]
+Passing to $r=1$ it is in general not true that the series
+$\sum\, a_ne^{in\theta}$ is convergent. An example arises if we consider
+the geometric series
+\[ \frac{1}{1-z}= 1+z+z^2+\ldots
+\] 
+So here $a_n=1$ for all $n$ and hence the absolute values
+$|a_nre^{in\theta}|=1$ for sll $n$ so the series
+$\sum\, a_ne^{in\theta}$ diverges.
+At the same time we notice that when
+$0<\theta<2\pi$  there exists the limit
+\[
+\lim_{r\to 1}\, \sum\, r^ne^{in\theta}=\frac{1}{1-re^{i\theta}}
+\]
+This leads to the following  problem where we without loss of
+generality can take 
+$\theta=0$.
+Consider as above a
+convergent power series and assume that there exists the limit
+\[
+\lim_{r\to 1}\, \sum\, a_nr^n\tag{*}
+\]
+When can we conclude that the series
+$\sum\, a_n$ also is convergent and that
+one has the equality
+\[
+ \sum\, a_n=
+\lim_{r\to 1}\, \sum\, a_n r^n\tag{**}
+\]
+The first result in this direction was established by Abel in a work from 1823:
+\medskip
+
+\noindent
+{\bf{A. Theorem}} \emph{Let $\{a_n\}$ be a sequence such that
+$\frac{a_n}{n}\to 0$
+as $n\to \infty$
+and there exists}
+\[
+A=\lim_{r\to 1}\, \sum\, a_nr^n
+\] 
+\emph{Then  
+$\sum\, a_n$ is convergent and the  sum is $A$.}
+
+\medskip
+
+\noindent
+An extension of Abel's result was
+established by  Tauber in 
+1897. 
+\medskip
+
+\noindent
+{\bf B. Theorem.}
+\emph{Let $\{a_n\}$ be a sequence of real numbers such that}
+\[ 
+\lim_{n\to\infty}\, \frac{a_1+2a_2+\ldots+na_n}{n}=0
+\]
+\emph{Then, if there exits the radial limit}
+ \[
+A=\lim_{r\to 1}\, \sum\, a_nr^n
+\]
+\emph{it follows that 
+the series $\sum\, a_n$ is convergent and the sum is $A$.}
+
+\noindent
+
+\bigskip
+
+
+\centerline {\bf C. Results by 
+Hardy and Littlewood.}.
+\medskip
+
+\noindent
+The following extension of Abel's  result was proved by Hardy and Littlewood
+in 1913:
+
+\medskip
+
+\noindent
+{\bf {C Theorem.}}
+\emph{Let $\{a_n\}$ be a sequence of real numbers such that there 
+exists a constant $C$ so that
+$\frac{a_n}{n}\leq C$ for all $n\geq 1$. Assume also that the
+power series $\sum\, a_nz^n$ converges when
+$|z|<1$. Then the same conclusion as in Abel's theorem holds.}
+\medskip
+
+\noindent
+{\bf {Remark.}}
+The proof of Theorem C
+requires several steps where an essential ingredient is a result 
+about
+positive series from the cited article which has independent interest.
+
+\newpage
+
+\noindent
+{\bf {D. Theorem.}}
+\emph{Assume that
+each $a_n\geq 0$ and that there exists the limit:}
+\[ 
+A=
+\lim_{r\to 1}\, (1-r)\cdot \sum\,a_nr^n\tag{*}
+\]
+\emph{Then  there exists the limit}
+\[
+A=\lim_{N\to \infty}\, \frac{a_1+\ldots+a_N}{N}\tag{**}
+\]
+\medskip
+
+\noindent
+Notice that we do not impose any growth condition on
+$\{a_n\}$ above, i.e. the sole assumption
+is the existence of the   limit (*). 
+\medskip
+
+\noindent
+{\bf{Remark.}} The proofs of Abel's and Tauber's results are rather  easy
+while C and D require more effort.
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{1. Proof of Abel's theorem.}}
+
+\medskip
+
+\noindent
+Without loss of generality we can assume that
+$a_0=0$ and set  $S_N=a_1+\ldots+a_N$.
+Given $0<r<1$ we let $f(r)=\sum\, a_nr^n$. For every positive integer $N$
+the triangle inequality gives:
+\[
+\bigl| S_N-f(r)\bigr|\leq
+\sum_{n=1}^{n=N}\, |a_n|(1-r^n)+
+\sum_{n\geq N+1}\, |a_n|r^n
+\]
+Set $\delta(N)=\max_{n\geq N}\,\frac{|a_n|}{n}$.
+Since  $1-r^n)=(1-r)(1+\ldots+r^{n-1}\leq (1-r)n$
+the last sum is majorised by
+\[
+(1-r)\cdot \sum_{n=1}^{n=N}\, n\cdot |a_n|
++
+\delta(N+1)\cdot
+ \sum_{n\geq N+1}\, \frac{r^n}{n}
+\]
+Next, the obvious inequality 
+$\sum_{n\geq N+1}\, \frac{r^n}{n}\leq\frac{1}{N+1}\cdot \frac{1}{1-r}$
+gives the new majorisation
+\[
+(1-r)\cdot \sum_{n=1}^{n=N}\, \frac{|a_n|}{n}
++\frac{\delta(N+1)}{N+1}\cdot  \frac{1}{1-r}\tag{1}
+\]
+This hold for all pairs $N$ and $r$.
+To each $N\geq 2$ we take $r=1-\frac{1}{N}$
+and hence the right hand side in (1)
+is majorised by
+
+\[
+\frac{1}{N}\cdot \sum_{n=1}^{n=N}\, \frac{|a_n|}{n}
++\delta(N+1)\cdot \frac{N}{N+1}
+\]
+Here both terms tend to zero as $N\to\infty$. Indeed, Abel's condition 
+$\frac{a_n}{n}\to 0$   implies that
+$\frac{1}{N}\cdot \sum_{n=1}^{n=N}\, \frac{|a_n|}{n}$ 
+tends to zero as $N\to \infty$. Hence
+we have proved the limit formula:
+\[ 
+\lim_{N\to\infty}\,\bigl |s_N-f(1-\frac{1}{N})\bigr|=0\tag{*}
+\]
+Finally it is clear that (*)  gives Abel's result.
+
+\bigskip
+
+\centerline{\bf{3. Proof of Tauber's theorem.}}
+\medskip
+
+\noindent
+We may assume that $a_0=0$. Notice that
+\[
+a_n=\frac{\omega_n-\omega_{n-1}}{n}\quad\colon\, n\geq 1
+\]
+It follows that
+\[ 
+f(r)=\sum\, \frac{\omega_n-\omega_{n-1}}{n}\cdot r^n
+=\sum\,\omega_n\bigl(\frac{r^n}{n}-\frac{r^{n+1}}{n+1}\bigr )
+\]
+Using  the equality
+$\frac{1}{n}=
+\frac{1}{n+1}=
+\frac{1}{n(n+1)}$ we can  rewrite the right hand side as follows:
+\[
+\sum\,\omega_n\bigl(\frac{r^n-r^{n+1}}{n+1}+\frac{r^n}{n(n+1)}\bigr )
+\]
+Set
+\[ g_1(r)=\sum\,\omega_n\cdot\frac{r^n-r^{n+1}}{n+1}
+=(1-r)\cdot \sum\, \frac{\omega_n}{n+1}\cdot r^n
+\]
+By the hypothesis 
+$\lim_{n\to\infty}\,  \frac{\omega_n}{n+1}=0$ and then it is
+clear that we get
+\[
+\lim_{r\to 1}\, g_1(r)=0
+\]
+Since we also have $f(r)\to 0$ as $r\to 1$ we conclude that
+\[
+\lim_{r\to 1} \sum\, \frac{\omega_n}{n(n+1)}\cdot r^n=0\tag{1}
+\]
+Next, with
+$b_n= \frac{\omega_n}{n(n+1)}$ we have
+$nb_n= \frac{\omega_n}{n+1}\to 0$.
+Hence Abel's theorem applies so (1) gives  convergent series
+\[
+\sum\, \frac{\omega_n}{n(n+1)}=0\tag{2}
+\]
+If $N\geq 1$ we have the partial sum
+\[
+S_N=\sum_{n=1}^{n=N} 
+\, \frac{\omega_n}{n(n+1)}=
+\sum_{n=1}^{n=N}, \omega_n\cdot\bigl(\frac{1}{n}-\frac{1}{n+1}\bigr)
+\]
+The last term becomes
+\[
+\sum_{n=1}^{n=N}\,\frac{1}{n}(\omega_n-\omega_{n-1})-
+\frac{\omega_N}{N+1}=
+\sum_{n=1}^{n=N}\,a_n-\frac{\omega_N}{N+1}
+\]
+Again, since
+$\frac{\omega_N}{N+1}\to 0$ as $N\to\infty$ we conclude that the convergent series
+from (2) implies that the series
+$\sum\, a_n$ also is converges and has sum equal to zero.
+This finishes the proof of Tauber's result.
+\bigskip
+
+
+we need some results from calculus in one variable.
+So before we enter the proofs of the  theorems above insert
+some  preliminaries.
+\medskip
+
+\centerline{\bf{3. Results from calculus}}
+
+\medskip
+
+\noindent
+To prove the theorems by Hardy sand Littlewood
+we need some results from calculus in one variable.
+So before we enter the proofs of Theorem C and D
+we insert
+some  preliminaries.
+Below $g(x)$ is a real-valued function defined on $(0,1)$ and
+of class $C^2$ at least.
+\medskip
+
+
+\noindent
+{\bf 3.1 Lemma } \emph{Assume that there exists a constant $C>0$ such that}
+\[
+g''(x)\leq C(1-x)^{-2}\quad\colon\, 0<x<1\quad\text{and}\quad
+\lim_{x\to 1}\, g(x)=0
+\] 
+\emph{Then one  has the limit formula}:
+\[
+\lim_{x\to 1}\, (1-x)\cdot g'(x)=0
+\]
+
+\medskip
+
+\noindent
+{\bf 3.2 Lemma } \emph{Assume that the second order derivative
+$g''(x)>0$.
+Then the following implication holds for each $\alpha>0$:}
+
+\[
+\lim_{x\to 1}\, (1-x)^\alpha\cdot g(x)=1\implies
+\lim_{x\to 1}\, (1-x)^{\alpha+1}\cdot g'(x)=\alpha
+\]
+
+
+
+
+\noindent
+{\bf{Remark.}}
+If $g(x)$ has higher order derivatives
+which all are
+$>0$ on $(0,1)$
+we can iterate the conclusion in Lemma 1.2 where 
+we take $\alpha$ to be positive integers.
+More precisely, by an induction over
+$\nu$ the reader may verify that if
+\[
+\lim_{x\to 1}\, (1-x)\cdot g(x)=1
+\]
+exists and  if 
+$\{g^{(\nu)}(x)>0\}$ for all 
+every $\nu\geq 2$ then 
+\[
+\lim_{x\to 1}\, (1-x)^{\nu+1}\cdot g^{(\nu)}(x)=\nu\,!
+\quad\colon\, \nu\geq 2\tag{*}
+\]
+
+
+
+\bigskip
+
+\noindent
+Next, to each integer $\nu\geq 1$ we denote by $[\nu-\nu^{2/3}]$
+the largest integer $\leq\,(\nu-\nu^{2/3}).$ Set
+\[
+J_*(\nu)=\sum_{n\leq [\nu-\nu^{2/3}]}\,
+n^\nu e^{-\nu}
+\quad\colon\quad J^*(\nu)=\sum_{n\geq [\nu+\nu^{2/3}]}\,
+n^\nu e^{-\nu}
+\]
+
+\medskip
+
+\noindent
+{\bf 3.3 Lemma }
+\emph{There exists a constant $C$
+such that}
+\[
+\frac{J^*(\nu)+J_*(\nu)}{\nu\,!}\leq \delta(\nu)\quad\colon\quad
+\delta(\nu)=C\cdot \text{exp}\, \bigl(-\frac{1}{2}\cdot \nu^{\frac{1}{{3}}}\bigr )
+\quad\colon\,\nu=1,2,\ldots
+\]
+
+\medskip
+
+\centerline{\emph{Proofs}}
+
+\bigskip
+
+\noindent
+We prove only  Lemma 1.1 which is a bit tricky 
+while the proofs of Lemma 1.2 and 1.3 are
+left as  exercises to the reader.
+Fix $0<\theta<1$. Let
+$0<x<1$ and set
+\[
+x_1=x+(1-x)\theta
+\]
+The mean-value theorem in calculus gives
+\[ 
+g(x_1)-g(x)=\theta(1-x)g'(x)+\frac{\theta^2}{2}(1-x)^2\cdot g''(\xi)\quad
+\text{for some}\quad \, x<\xi<x_1\tag{i}
+\]
+By the hypothesis
+\[
+g''(\xi)\leq C(1-\xi)^{-2}\leq C)1-x_1)^{-2}
+\]
+Hence (i) gives
+\[
+(1-x)g'(x)\geq
+\frac{1}{\theta}(g(x_1)-g(x))-
+C\cdot \frac{\theta}{2}\frac{(1-x)^2}{1-x_1)^2}=
+\]
+\[
+\frac{1}{\theta}(g(x_1)-g(x))-
+\frac{C\cdot \theta}{2(1-\theta)^2}
+\]
+Keeping $\theta$ fixed we have by assumption
+\[
+\lim_{x\to 1}\, g(x)=0
+\]
+Notice also that $x\to 1\implies x_1\to 1$. It follows that
+
+
+
+\[
+\liminf_{x\to 1}\,\,
+(1-x)g'(x)\geq -\frac{C\cdot \theta}{2(1-\theta)^2}
+\]
+Above  $0<\theta<1$ is arbitrary, i.e. we can choose 
+small $\theta>0$ and hence we have proved that
+\[
+\liminf_{x\to 1}\,
+(1-x)g'(x)\geq 0\tag{*}
+\]
+\medskip
+
+\noindent
+Next we  prove the opposed inequality
+
+\[
+\limsup_{x\to 1}\,
+(1-x)g'(x)\leq 0\tag{**}
+\]
+To get (**) we apply the mean value theorem in the form
+\[
+g(x_1)-g(x)=\theta(1-x)g'(x_1)-\frac{\theta^2}{2}(1-x)^2\cdot g''(\eta)\quad
+\colon\, x<\eta<x_1\tag{ii}
+\]
+Since $(1-x_1)=\theta(1-x)(1-\theta)$ we get
+\[ 
+(1-x_1)g'(x_1)=\frac{1-\theta}{\theta}\cdot (g(x_1)-g(x))+
+\frac{(1-\theta)\theta}{2}\cdot(1-x)^2g''(\eta)\tag{iii}
+\]
+Now $g''(\eta)\leq C(1-\eta)^{-2}\leq C(1-x_1)^{-2}$ so
+the right hand side in (iii) is majorized by
+\[
+\frac{1-\theta}{\theta}\cdot (g(x_1)-g(x))+
+C\cdot \frac{(1-\theta)\theta}{2}\cdot(1-x)^2(1-x_1)^2=
+\]
+ \[
+\frac{1-\theta}{\theta}\cdot (g(x_1)-g(x))+
+C\cdot \frac{\theta}{2(1-\theta}\tag{iv}
+\]
+Keeping $\theta$ fixed while $x\to 1$ we obtain:
+\[
+\liminf_{x\to 1}\, (1-x)g'(x)\leq 
+C\cdot \frac{\theta}{2(1-\theta}
+\]
+Again we can choose arbitrary small $\theta$ and hence (**) 
+holds which finishes the proof of 
+Lemma 3.1.
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+\centerline{\bf{4. Proof of Theorem D. }}
+\medskip
+
+\noindent
+Set $g(x)=\sum\, s_nx^n$ which is defined when $0<x<1$.
+Notice that 
+\[
+(1-x)g(x)=\sum\, a_nx^n
+\]
+Since $s_n\geq 0$ for all $n$  all the higher order derivatives
+\[
+g^{(p)}(x)= \sum_{n=p}^\infty\, n(n-1)\cdots (n-p+1)s_nx^{n-p}>0
+\]
+when $0<x<1$.
+The hypothesis (*)
+and the inductive result in the
+remark after Lemma 1.2 give:
+\[
+\lim_{x\to 1}\, (1-x)^{\nu+2}\cdot
+\sum\, s_n\cdot n^\nu x^n=(\nu+1)!\quad\colon\,\nu\geq 1\tag{1}
+\]
+We shall use the substitution $e^{-t}=x$ where $t>0$.
+Since $t\simeq 1-x$ when
+$x\to 1$ we see that
+(1) gives
+\[
+\lim_{t\to 0}\, t^{\nu+2}\cdot 
+\sum\, s_n\cdot n^\nu e^{-nt}=(\nu+1)!\quad\colon\,\nu\geq 1\tag{2}
+\]
+Put
+\[ J_*(\nu,t)=\frac{t^{\nu+2}}{(\nu+1)!}\cdot 
+\sum_{n=1}^\infty\, s_n\cdot n^\nu e^{-nt}
+\]
+So (2) gives for each fixed $\nu$
+\[
+\lim_{t\to 0}\, J_*(\nu,t)=1\tag{3}
+\]
+
+\medskip
+
+\noindent
+Next, for each pair $\nu\geq 2$ and $0<t<1$ we define the integer
+\[ 
+N(\nu,t)=\bigl[\frac{\nu-\nu^{2/3}}{t}\bigr]\tag{*}
+\]
+Since the sequence $\{s_n\}$ is non-decreasing we get
+\[
+s_{N(\nu,t)}\cdot\sum_{n\geq N(\nu,t)}\, n^\nu e^{-nt}\leq
+\sum_{n\geq N(\nu,t)}\, s_n\cdot n^\nu e^{-nt}\leq\frac{(\nu+1)!\cdot J_*(\nu,t)}{t^{\nu+2}}
+\tag{i}
+\]
+Next,  the construction of $N(\nu,t)$ and Lemma 1.3 give:
+
+\[
+\sum_{n\geq N(\nu,t)}\, n^\nu e^{-nt}\geq \frac{\nu !}{t^{\nu+1}}\cdot (1-\delta(\nu))\tag{ii}
+\]
+where the $\delta$ function is independent of $t$ and
+tends to zero as $\nu\to\infty$. Hence (i-ii) give
+\[
+s_{N(\nu,t)}\leq \frac{(\nu+1)}{t}\cdot \frac{1}{1-\delta(\nu)}\cdot
+J_*(\nu,t)\tag{iii}
+\]
+Next, by the construction of $N$ one has
+\[ 
+N(\nu,t)+1\geq \frac{\nu-\nu^{2/3}}{t}=\frac{\nu}{t}\cdot(1-\nu^{-1/3})
+\]
+It follows that (iii) gives
+\[
+\frac{s_{N(\nu,t)}}{N(\nu,t)+1}\leq 
+\frac{\nu+1}{\nu}
+\cdot\frac{1}{1-\nu^{-1/3}}\cdot\frac{1}{1-\delta(\nu)}\cdot 
+J_*(\nu,t)\tag{iv}
+\]
+Since $\delta(\nu)\to 0$
+it follows that for any $\epsilon>0$ there exists some
+$\nu_*$ such that
+\[
+\frac{\nu_*+1}{\nu_*}
+\cdot\frac{1}{1-\nu_*^{-1/3}}\cdot\frac{1}{1-\delta(\nu_*)}<1+\epsilon \tag{v}
+\]
+\medskip
+
+\noindent
+Increasing $\nu_*$ if necesssty we also notice that
+the construction of $N(\nu_*,t)$ gives
+\[
+\bigl|\, N(\nu_*,t)-\frac{\nu_*+1}{t}\bigr |<\epsilon
+\]
+CVhpoisng a fixed  $\nu_*$  as above,we find for each large postive integer
+$N$ some $t_N$ such that $N=N(\nu_*,t_N)$, and  notice that
+\[
+ N\to+\infty\implies t_N\to 0\tag{vi}
+\]
+
+\medskip
+\noindent
+Next, (iv) and (v) yield:
+\[
+\frac{s_N}{N+1}<(1+\epsilon)\cdot J_*(\nu_*,t_N)\tag{vii}
+\]
+Now (vi) and the limit in (3) which applies with
+$\nu_*$ is kept fixed while while $t_N\to 0$
+entail that
+\[
+\lim_{N\to \infty}\, J(\nu_*,t_N)=1\tag{viii}
+\]
+At the same time 
+$\frac{N}{N+1}\to 1$ and since $\epsilon>0$ was arbitrary
+we conclude  from  (vii) that:
+\[ 
+\limsup_{N\to\infty}\, 
+\frac{s_N}{N}\leq 1\tag{4}
+\]
+So Theorem 2 follows if we also prove that
+\[
+\liminf_{N\to\infty}\, 
+\frac{s_N}{N}\geq 1\tag{5}
+\]
+The proof of (II) is similar where we now define  the integers
+\[ 
+N(\nu,t)=\bigl[\frac{\nu+\nu^{2/3}}{t}\bigr]
+\]
+Then 
+\[ 
+S_{N(\nu,t)}\cdot\sum_{n\leq N(\nu,t)}\, n^\nu e^{-nt}\geq
+\frac{(\nu+1)!\cdot J_*(\nu,t)}{t^{\nu+2}}-
+\sum_{n> N(\nu,t)}\,s_n\cdot n^\nu e^{-nt}
+\]
+Here the last term can be estimated  since the Lim.sup
+inequality (4) gives a constant $C$ such that
+$s_n\leq Cn$ for all $n$ and then
+\[
+\sum_{n> N(\nu,t)}\,s_n\cdot n^\nu e^{-nt}
+\leq C\cdot \sum_{n> N(\nu,t)}\,n^{\nu+1} e^{-nt}
+\leq C\cdot \delta(\nu)\cdot 
+\frac{(\nu+1)!}{t^{\nu+2}}
+\]
+where Lemma 1.3  entails that
+$\delta(\nu)\to 0$ as $\nu$ increases. At the same time Lemma 1.3 also gives
+\[
+\sum_{n\leq N(\nu,t)}\, n^\nu \cdot e^{-nt}=
+\frac{\nu !}{t^{\nu+1}}\cdot (1-\delta_*(\nu)
+\] 
+where $\delta_*(\nu)\to 0$ as $\nu\to +\infty$.
+Given $\epsilon>0$ we choose $\nu_*$ large so that
+$C\cdot \delta(\nu_*)<\epsilon$ and $\delta_*(\nu_*)<\epsilon$.
+Increasing $\nu_*$ if necesssty we also notice that
+the construction of $N(\nu_*,t)$ gives
+\[
+\bigl|\, N(\nu_*,t)-\frac{\nu_*+1}{t}\bigr |<\epsilon
+\]
+Choosing a fixed  $\nu_*$  as above,we find for each large postive integer
+$N$ some $t_N$ such that $N=N(\nu_*,t_N)$, and  notice that
+Keeping $\nu_*$ fixed we conclude that
+\[
+S_{(N(\nu_*,t)}\cdot \frac{\nu_* !}{t^{\nu_*+1}} \cdot (1-\epsilon)
+\geq \frac{(\nu_*+1)!}{t^{\nu_*+2}}\cdot [
+J_*(\nu_*,t)-\epsilon]\implies
+\]
+\[
+S_{(N(\nu_*,t)} \cdot (1-\epsilon)
+\geq \frac{(\nu_*+1)}{t}\cdot [
+J_*(\nu_*,t)-\epsilon]
+\]
+For large integers $N$ we find $t_N$ so that
+$N(\nu_*,t_N)=N$ and we notice that
+the construction of $N(\nu_*,t)$
+
+\newpage
+
+
+
+\centerline{\bf{4. Proof of Theorem D. }}
+\medskip
+
+\noindent
+Set $g(x)=\sum\, s_nx^n$ which is defined when $0<x<1$.
+Notice that 
+\[
+(1-x)g(x)=\sum\, a_nx^n
+\]
+Since $s_n\geq 0$ for all $n$  all the higher order derivatives
+\[
+g^{(p)}(x)= \sum_{n=p}^\infty\, n(n-1)\cdots (n-p+1)s_nx^{n-p}>0
+\]
+when $0<x<1$.
+The hypothesis (*)
+and the inductive result in the
+remark after Lemma 1.2 give:
+\[
+\lim_{x\to 1}\, (1-x)^{\nu+2}\cdot
+\sum\, s_n\cdot n^\nu x^n=(\nu+1)!\quad\colon\,\nu\geq 1\tag{1}
+\]
+We shall use the substitution $e^{-t}=x$ where $t>0$.
+Since $t\simeq 1-x$ when
+$x\to 1$ we see that
+(1) gives
+\[
+\lim_{t\to 0}\, t^{\nu+2}\cdot 
+\sum\, s_n\cdot n^\nu e^{-nt}=(\nu+1)!\quad\colon\,\nu\geq 1\tag{2}
+\]
+Put
+\[ J_*(\nu,t)=\frac{t^{\nu+2}}{(\nu+1)!}\cdot 
+\sum_{n=1}^\infty\, s_n\cdot n^\nu e^{-nt}
+\]
+So (2) gives for each fixed $\nu$
+\[
+\lim_{t\to 0}\, J_*(\nu,t)=1\tag{3}
+\]
+
+\medskip
+
+\noindent
+Next, for each pair $\nu\geq 2$ and $0<t<1$ we define the integer
+\[ 
+N(\nu,t)=\bigl[\frac{\nu-\nu^{2/3}}{t}\bigr]\tag{*}
+\]
+Since the sequence $\{s_n\}$ is non-decreasing we get
+\[
+s_{N(\nu,t)}\cdot\sum_{n\geq N(\nu,t)}\, n^\nu e^{-nt}\leq
+\sum_{n\geq N(\nu,t)}\, s_n\cdot n^\nu e^{-nt}\leq\frac{(\nu+1)!\cdot J_*(\nu,t)}{t^{\nu+2}}
+\tag{i}
+\]
+Next,  the construction of $N(\nu,t)$ and Lemma 1.3 give:
+
+\[
+\sum_{n\geq N(\nu,t)}\, n^\nu e^{-nt}\geq \frac{\nu !}{t^{\nu+1}}\cdot (1-\delta(\nu))\tag{ii}
+\]
+where the $\delta$ function is independent of $t$ and
+tends to zero as $\nu\to\infty$. Hence (i-ii) give
+\[
+s_{N(\nu,t)}\leq \frac{(\nu+1)}{t}\cdot \frac{1}{1-\delta(\nu)}\cdot
+J_*(\nu,t)\tag{iii}
+\]
+Next, by the construction of $N$ one has
+\[ 
+N(\nu,t)+1\geq \frac{\nu-\nu^{2/3}}{t}=\frac{\nu}{t}\cdot(1-\nu^{-1/3})
+\]
+It follows that (iii) gives
+\[
+\frac{s_{N(\nu,t)}}{N(\nu,t)+1}\leq 
+\frac{\nu+1}{\nu}
+\cdot\frac{1}{1-\nu^{-1/3}}\cdot\frac{1}{1-\delta(\nu)}\cdot 
+J_*(\nu,t)\tag{iv}
+\]
+Since $\delta(\nu)\to 0$
+it follows that for any $\epsilon>0$ there exists some
+$\nu_*$ such that
+\[
+\frac{\nu_*+1}{\nu_*}
+\cdot\frac{1}{1-\nu_*^{-1/3}}\cdot\frac{1}{1-\delta(\nu_*)}<1+\epsilon \tag{v}
+\]
+\medskip
+
+\noindent
+Increasing $\nu_*$ if necesssty we also notice that
+the construction of $N(\nu_*,t)$ gives
+\[
+\bigl|\, N(\nu_*,t)-\frac{\nu_*+1}{t}\bigr |<\epsilon
+\]
+CVhpoisng a fixed  $\nu_*$  as above,we find for each large postive integer
+$N$ some $t_N$ such that $N=N(\nu_*,t_N)$, and  notice that
+\[
+ N\to+\infty\implies t_N\to 0\tag{vi}
+\]
+
+\medskip
+\noindent
+Next, (iv) and (v) yield:
+\[
+\frac{s_N}{N+1}<(1+\epsilon)\cdot J_*(\nu_*,t_N)\tag{vii}
+\]
+Now (vi) and the limit in (3) which applies with
+$\nu_*$ is kept fixed while while $t_N\to 0$
+entail that
+\[
+\lim_{N\to \infty}\, J(\nu_*,t_N)=1\tag{viii}
+\]
+At the same time 
+$\frac{N}{N+1}\to 1$ and since $\epsilon>0$ was arbitrary
+we conclude  from  (vii) that:
+\[ 
+\limsup_{N\to\infty}\, 
+\frac{s_N}{N}\leq 1\tag{4}
+\]
+So Theorem 2 follows if we also prove that
+\[
+\liminf_{N\to\infty}\, 
+\frac{s_N}{N}\geq 1\tag{5}
+\]
+The proof of (II) is similar where we now define  the integers
+\[ 
+N(\nu,t)=\bigl[\frac{\nu+\nu^{2/3}}{t}\bigr]
+\]
+Then 
+\[ 
+S_{N(\nu,t)}\cdot\sum_{n\leq N(\nu,t)}\, n^\nu e^{-nt}\geq
+\frac{(\nu+1)!\cdot J_*(\nu,t)}{t^{\nu+2}}-
+\sum_{n> N(\nu,t)}\,s_n\cdot n^\nu e^{-nt}
+\]
+Here the last term can be estimated  since the Lim.sup
+inequality (4) gives a constant $C$ such that
+$s_n\leq Cn$ for all $n$ and then
+\[
+\sum_{n> N(\nu,t)}\,s_n\cdot n^\nu e^{-nt}
+\leq C\cdot \sum_{n> N(\nu,t)}\,n^{\nu+1} e^{-nt}
+\leq C\cdot \delta(\nu)\cdot 
+\frac{(\nu+1)!}{t^{\nu+2}}
+\]
+where Lemma 1.3  entails that
+$\delta(\nu)\to 0$ as $\nu$ increases. At the same time Lemma 1.3 also gives
+\[
+\sum_{n\leq N(\nu,t)}\, n^\nu \cdot e^{-nt}=
+\frac{\nu !}{t^{\nu+1}}\cdot (1-\delta_*(\nu)
+\] 
+where $\delta_*(\nu)\to 0$ as $\nu\to +\infty$.
+Given $\epsilon>0$ we choose $\nu_*$ large so that
+$C\cdot \delta(\nu_*)<\epsilon$ and $\delta_*(\nu_*)<\epsilon$.
+Increasing $\nu_*$ if necesssty we also notice that
+the construction of $N(\nu_*,t)$ gives
+\[
+\bigl|\, N(\nu_*,t)-\frac{\nu_*+1}{t}\bigr |<\epsilon
+\]
+Choosing a fixed  $\nu_*$  as above,we find for each large postive integer
+$N$ some $t_N$ such that $N=N(\nu_*,t_N)$, and  notice that
+Keeping $\nu_*$ fixed we conclude that
+\[
+S_{(N(\nu_*,t)}\cdot \frac{\nu_* !}{t^{\nu_*+1}} \cdot (1-\epsilon)
+\geq \frac{(\nu_*+1)!}{t^{\nu_*+2}}\cdot [
+J_*(\nu_*,t)-\epsilon]\implies
+\]
+\[
+S_{(N(\nu_*,t)} \cdot (1-\epsilon)
+\geq \frac{(\nu_*+1)}{t}\cdot [
+J_*(\nu_*,t)-\epsilon]
+\]
+For large integers $N$ we find $t_N$ so that
+$N(\nu_*,t_N)=N$ and we notice that
+the construction of $N(\nu_*,t)$
+
+
+
+
+
+\newpage
+
+
+
+
+\bigskip
+\centerline{\bf{5. Proof of Theorem C}}
+\medskip
+
+\noindent
+Set $f(x)=\sum\, a_nx^n$. Notice that it suffices to prove
+Theorem C when
+the limit value
+\[
+\lim_{x\to 1}\, \sum\,a_nx^n=0
+\]
+Next,
+the assumption that $a_n\leq\frac{c}{n}$ for a constant $c$ gives
+\[
+f''(x)=\sum\, n(n-1)a_nx^{n-2}\leq c\sum\, (n-1)x^{n-2}=\frac{c}{1-x)^2}
+\]
+The hypothesis $\lim_{x\to 1}\, f(x)=0$ and Lemma xx therefore gives
+\[
+\lim_{x\to 1}\, (1-x)f'(x)=0\tag{i}
+\]
+Next, notice the equality
+\[
+\sum_{n=1}^\infty\, \frac{na_n}{c} x^n=
+\frac{x}{c}\cdot f'(x)\tag{ii}
+\]
+At the same time
+$\sum_{n=1}^\infty\,x^n=\frac{x}{1-x}$
+and hence (i-ii)  together give:
+
+\[
+\lim_{x\to 1}\, (1-x)\cdot\sum\, (1-\frac{na_n}{c} )\cdot x^n=1
+\]
+Here $1-\frac{na-n}{c}\geq 0$ so Theorem 2 gives
+\[
+\lim_{N\to \infty}\,
+\frac{1}{N} \sum_{n=1}^{n=N}\, (1-\frac{na_n}{c})=1
+\]
+It follows that
+\[
+\lim_{N\to \infty}\,\frac{1}{N} \cdot \sum_{n=1}^{n=N}\, na_n=0
+\]
+This means precisely that the condition in Tauber's Theorem holds and hence 
+$\sum\, a_n$ converges and has series sum
+equal to 0 which finishes the proof of Theorem C.
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\medskip
+
+\centerline{\bf VII. An example by Hardy}
+
+\medskip
+
+\noindent
+Consider the  series expansion of
+\[
+(1-z)^{\alpha}=\sum\, b_nz^n
+\]
+where $\alpha$ in general is a complex number.
+Newton's binomial formula gives:
+\[ 
+b_n=\frac{\alpha(\alpha+1)\ldots (\alpha+n-1)}{ n\,!}\tag{*}
+\]
+Apply this with
+$\alpha=i$. If $n\geq 1$ which entails that
+\[
+|n\cdot b_n|=\frac{|(i+1)|\ldots |i+n-1|}{ n\,!}=
+\sqrt{\bigl(1+\frac{1}{1^2})\cdot (1+\frac{1}{2^2})\cdots
+(1+\frac{1}{(n-1)^2}}
+\]
+It follows that
+\[
+\lim_{n\to\infty}\, 
+|n\cdot b_n|=
+\sqrt{\,\prod_{\nu=1}^\infty\, \bigl(1+\frac{1}{\nu^2})}
+\]
+\medskip
+
+\noindent
+In particular $|b_n|\simeq\frac{1}{n}$ when $n$ is large and therefore
+the series
+\[ 
+\sum_{n=2}^\infty\,\frac{|b_n|}{\text{Log}\,n}=+\infty\tag{i}
+\]
+
+
+\noindent
+In spite of the divergence above one has:
+
+\medskip
+
+\noindent
+{\bf Theorem 7.1.} \emph{The  series}
+\[ 
+\sum_{n=2}^\infty\, \frac{b_n}{\text{Log}\,n}\cdot e^{in\phi}
+\]
+\emph{converges uniformly when
+$0\leq\phi\leq 2\pi$.}
+\medskip
+
+\noindent
+Before we give the proof of Theorem 7.1 we
+need a result if independent interest.
+\medskip
+
+\noindent
+{\bf{7.2. Theorem.}}
+\emph{Let $\{a_n\}$ be a sequence of complex numbers
+such that $|a_n|\leq \frac{C}{n}$ hold for all $n$ and some constant $C$
+and the analytic function
+$f(z)=\sum\, a_nz^n$ is bounded in $D$, i.e. }
+\[
+ |f(z)|\leq M\quad \colon z\in D
+\]
+\emph{Then, if $B_n(z)=a_0+ a_1+\ldots+a_nz^n$
+are the partial sums one has the inequality}
+\[
+\max_\theta\,  |B_m(e^{i\theta})|\leq M+2C
+\quad\text{for all}\quad m=1,2,\ldots\]
+
+
+\noindent
+\emph{Proof.}
+When $0<r<1$ and $\theta$ are given we have
+\[
+\bigl|B_m(\theta)-f(re^{i\theta})\bigr|=
+\sum_{n=0}^{n=m}\, a_ne^{in\theta}(1-r^n)-
+\sum_{n=m+1}^\infty \, a_ne^{in\theta}\cdot r^n\leq
+\]
+\[
+(1-r)\sum_{n=0}^{n=m}\, n\cdot|a_n|+
+\sum_{n=m+1}^\infty \, |a_n|\cdot r^n
+\]
+\medskip
+
+\noindent
+With $m$ given we apply this when $r=1-1/m$.
+Then the last sum above is estimated above by
+\[
+\frac{1}{m}\cdot \sum_{n=1}^{n=m}\, n\cdot\,|a_n|+
+\frac{c}{m}\cdot \sum_{n=m+1}^\infty \,  r^n\leq
+C+\frac{c}{m}\cdot \sum_{n=0}^\infty \,  r^n=2C\tag{*}
+\]
+Finally, since the maximum norm of $f$ is $\leq M$
+the triangle inequality gives
+\[
+ |B_m(e^{i\theta})|\leq 2C+M
+\] 
+Here $m$ and $\theta$ are arbitrary so Theorem 7.2 follows.
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\noindent
+\emph{Proof of Theorem 7.1}
+To
+each $m\geq 2$ we consider the partial sum series
+\[
+S_m(\phi)=
+\sum_{n=2}^{n=m}\, \frac{b_n}{\text{Log}\,n}\cdot e^{in\phi}
+\]
+Theorem 7.1 follows if there  to every $\epsilon>0$  exists
+an integer $M$ such that
+\[ 
+\max_{0\leq\phi\leq2\pi}\,
+|S_m(\phi)-S_M(\phi)|<\epsilon\quad\colon\quad
+\forall\,\, m>M\tag{1}
+\]
+
+
+\noindent
+To prove (1) we employ the partial sums
+\[ 
+B_n(\phi) =\sum_{\nu=1}^{\nu=n}\, b_\nu\cdot e^{i\nu\phi}\tag{2}
+\]
+
+
+\noindent For each pair $m>M\geq 2$, the  partial 
+summation formula in gives
+\[
+S_m(\phi)-S_M(\phi)=
+\]
+\[
+\sum_{n=M}^{n=m}\, B_n(\phi)\cdot\bigl[\,\frac{1}{\text{Log}\, n}-
+\frac{1}{\text{Log}\, (n+1)}\bigr]-
+\frac{B_{M-1}(\phi)}{\text{Log}\,M}+
+\frac{B_m(\phi)}{\text{Log}\,(m+1)}\tag{3}
+\]
+\medskip
+
+\noindent
+Now we can apply Theorem 7.2 and find a constant $K$ such that
+\[
+|B_n(\phi)|\leq K\quad>\colon\quad n\geq 2\,\quad\text{and}\quad
+0\leq\phi\leq 2\pi\tag{4}
+\]
+
+
+\noindent
+Notice  that
+if (4) holds then (3) gives the inequality
+\[
+\bigl|S_m(\phi)-S_M(\phi)\bigr|\leq
+K\cdot 
+\sum_{n=M}^{n=m}\,\bigl[\frac{1}{\text{Log}\, n}-
+\frac{1}{\text{Log}\, (n+1)}\bigr]+
+\frac{1}{\text{Log}\,M}+
+\frac{1}{\text{Log}\,(m+1)}=\frac{2K}{\text{Log}\, M}
+\]
+\medskip
+
+\noindent
+Hence  Theorem 7.1 is proved if we
+establish the inequality (4).
+To prove this we  study
+the  analytic function defined in the open
+unit disc $D$  by
+the convergent power series:
+\[
+(1-z)^i=\sum\, c_n\cdot z^n\tag{*}
+\]
+Since $\mathfrak{Re}(1-z)>0$ when
+$|z|<1$ there exists
+a single valued branch of $\log(1-z)$ and
+the function above can be written
+as
+\[
+g(z)=e^{i\cdot\log\,(1-z)}
+\]
+Now the argument of
+$\log(1-z)$ stays in $(-\pi/2,\pi/2$
+and we conclude that
+\[ 
+|g(z)|\leq e^{\pi/2}\quad\colon z\in D
+\]
+Hence the $g$-function is bounded in $D$.
+Now
+\[ g(z)=\sum\, b_nz^n
+\] 
+and  Newton's binomial formula gives:
+
+\[ 
+|b_n|\leq \frac{C}{n}\quad \colon n\geq 1
+\]
+Then it is clear that Theorem 7.2 applied  to $g$ gives (4) above.
+\
+
+
+\newpage
+
+
+
+
+\medskip
+
+\centerline{\bf {8. Convergence under substitution.}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+Let $\{a_k\}$ be a sequence of complex numbers where
+$\sum\, a_k$ is convergent. This gives an analytic function
+$f(z)$ defined in the open disc by
+\[
+f(z)=\sum\, a\uuu n\cdot z^n\tag{1}
+\]
+If $0<s <1$
+we can expand $f$ around $s$ and obtain another series
+\[
+f(s+z)=\sum\, c\uuu n\cdot z^n\tag{2}
+\]
+From the   convergence of $\sum\, a\uuu k$
+one  expects 
+that the series
+\[
+\sum\, c\uuu n\cdot (1\vvv s)^n\tag{3}
+\]
+also is convergent. This is indeed true and was proved by Hardy and Littlewood
+in (H\vvv L]. A more general result was established in [Carleman]
+and we are going to expose results from Carleman's article.
+Let $f(z)$ be give as in (1)
+and consider another
+power series
+\[ 
+\phi(z)=\sum\, b_\nu\cdot z^\nu\tag{1}
+\]
+which 
+represents an analytic function
+$D$ where
+$|\phi(z)|<1$ hold when $|z|<1$. Then there exists  the
+composed analytic function 
+\[ 
+f(\phi(z))= \sum_{k=0}^\infty\ c_k\cdot z^k\tag{*}
+\]
+We seek conditions on $\phi$ in order that  the convergence of
+$\{a\uuu k\}$ entails that
+the series
+\[
+ \sum\, c\uuu k\quad\text{also converges}\tag{**}
+\] 
+
+\medskip
+
+\noindent
+First we consider the special case when
+the $b$\vvv coefficients are real and non\vvv negative.
+\medskip
+
+
+\noindent
+{\bf{8.1. Theorem.}} \emph{Assume that $\{b\uuu \nu\geq 0\}$
+and that $\sum\, b\uuu \nu=1$. Then  (**) converges and the sum is equal to 
+$\sum\, a\uuu k$.}
+
+
+
+\bigskip
+
+
+\noindent
+\emph{Proof.}
+Since  $\{b\uuu\nu\}$ are real and non\vvv negative
+the Taylor series for $\phi^k$ also has non\vvv negative
+real coefficients for every  $k\geq 2$. Put
+\[ 
+\phi^k(z)=\sum \, B\uuu{k\nu}\cdot z^ \nu
+\]
+and for  each pair of integers $k,p$ we set
+\[
+\Omega\uuu{k,p}=\sum\uuu{\nu=0}^{\nu=p} \, B\uuu{k\nu}\
+\]
+By  assumption on $\{b\uuu\nu\}$ we have $\phi81)=1$
+which entials that
+$\phi^k(1)=01$ for every $k\geq 2$ and hence
+\[
+\sum\uuu {\nu=0}^\infty\, B\uuu{k\nu}=1
+\quad\colon\,\, k\geq 1\tag{i}
+\]
+\medskip
+
+\noindent
+{\bf{Sublemma.}} \emph{The following hold for every fixed $p\geq 0$}
+
+\[ 
+\lim_{N\to\infty}\, \Omega_{N,p}=0\quad\text{and}\quad
+k\mapsto \Omega_{k,p}
+\quad\text{decreases}\tag{ii}
+\]
+The proofs of (ii-iii) are left as excercises to the reader.
+\medskip
+
+\noindent
+Next, the Taylor series of the composed analytic function 
+$f(\phi(z))$ becomes
+\[
+\sum a\uuu k\cdot \phi^k(z)
+=\sum\uuu{\nu=0}^\infty\,\bigl[\sum\uuu {k=0}^\infty\, a\uuu k\cdot B\uuu{k\nu}\bigr ]\cdot z^\nu
+\]
+
+\noindent
+For  each positive integer $n^*$ we set
+\[ 
+\sigma_p[n^*]=
+\sum_{\nu=0}^{\nu=p}\, \,\bigl[\,\sum_{k=0}^{k=n^*}\, a_k\cdot B_{k,\nu}\bigr]\tag{1}
+\]
+\[
+\sigma_p(n^*)= \sum_{\nu=0}^{\nu=p}\, \,\bigl[\,\sum_{k=n^*+1}^\infty\, a_k\cdot B_{k,\nu}\,\bigr]=\sum\uuu{k=n^*+1}^\infty\,a\uuu k \cdot \Omega\uuu{k,p}
+\tag{2}
+\]
+Notice that 
+\[
+\sigma_p[n^*]+
+\sigma_p(n^*)=\sum\uuu {k=0}^{k=p}c\uuu k\quad\text{hold for each}\quad p
+\]
+Our aim is to show that the last partial sums have a 
+limit. To obtain  this we
+study the $\sigma$\vvv terms   separately. Introduce the partial sums
+\[
+s\uuu n=\sum\uuu{k=0}^{k=n}\, a\uuu k
+\]
+By assumption  there exists a limit $s\uuu n\to S$ which  entails that
+the sequence $\{s\uuu k\}$ is bounded and so is
+the sequence $\{a\uuu k=s\uuu k\vvv s\uuu{k\vvv 1}\}$.
+The first limit formula in the Sublemma entails
+that
+the last term in (2) tends to zero when $n^*$ increases. So if $\epsilon>0$
+we find
+$n^*$ such that
+\[
+n\geq n^*\implies |\sigma\uuu p(n)|
+\leq \epsilon\tag{3}
+\]
+
+
+
+\noindent
+
+\noindent
+\emph{A study of $\sigma_p[n^*]$}.
+Keeping $n^*$ and $\epsilon$ fixed we apply (i) for each $0\leq k\leq n^*$
+and find an integer $p^*$ such that
+\[
+1- \sum_{\nu=0}^{\nu=p} B_{k,\nu}\leq \frac{\epsilon}{n^*+1}
+\quad\text {for all pairs }\quad p\geq p^*\,\colon\, 0\leq k\leq n^*\tag{4}
+\]
+
+\noindent
+The   triangle inequality gives
+\[
+|\sigma_p(n^*)-s_{n^*}|\leq \frac{\epsilon}{n^*+1}\cdot \sum\uuu{k=0}^{k=n^*}\, |a\uuu k|
+\quad\text {for  all  }\quad p\geq p^*\tag{5}
+\]
+
+\noindent
+Since  $\sum\, a_k$ converges the sequence
+$\{a\uuu k\}$ is bounded, i.e. we have
+a constant $M$ such that
+$|a\uuu k|\leq M$ for all $k$.
+Hence (4) gives
+\[
+|\sigma_p[n^*]-S|\leq |s_{n^*}-S|+\epsilon\cdot M
+\quad\colon\quad p\geq p^*\tag{6}
+\]
+Together with (5) this entails that
+\[
+n\geq n^*\implies |\sum\uuu{k=0}^{n^*}\,  |c_k-S|\leq 
+\epsilon+|s_{n^*}-S|+ M\cdot \epsilon
+\]
+Above  $\epsilon$ is arbitrary small and since $n^*$ csn be chosen large
+while $s_{n^*}\to S$,  
+we conclude that 
+$\sum c\uuu k$ converges and the limit is equal to $S$. This 
+finishes the proof of Theorem 8.1.
+
+
+
+\bigskip
+
+\centerline{\bf{Another result.}}
+
+
+
+
+\bigskip
+
+\noindent
+Now we  relax the condition that $\{b\uuu\nu\}$ are real and nonnegative
+but  impose extra conditions on $\phi$.
+First we assume that $\phi(z)$ extends to a continuous function on
+the closed disc, i.e. $\phi$ belongs to the disc\vvv algebra.
+Moreover, 
+$\phi(1)=1$ while $|\phi(z)|<1$ 
+for all $z\in\bar D\setminus \{1\}$ which means that
+$z=1$ is a peak point for $\phi$.
+Consider   also  the function
+$\theta\mapsto \phi(e^{i\theta})$ where $\theta$ is close to zero.
+The final condition on $\phi$ is
+that there exists some positive real number
+$\beta$ and a constant $C$ such that
+\[ 
+|\phi(e^{i\theta})\vvv 1\vvv i\beta|\leq C\cdot \theta^2\tag{1}
+\]
+holds in some interval $\vvv \ell\leq \theta\geq\ell$.
+This gives for every integer $n\geq 2$
+another constant $C\uuu n$ so that
+\[ 
+|\phi^n(e^{i\theta})\vvv 1\vvv in\beta|\leq C\uuu n\cdot \theta^2\tag{2}
+\]
+Hence the following integrals exist for all pairs
+of integers $p\geq 0$ and $n\geq 1$:
+\[
+J(n.p)= \int\uuu{\vvv\ell}^\ell\,
+\frac{\phi(e^{i\theta})^n\cdot (1\vvv \phi(e^{i\theta})}{
+e^{ip\theta}\cdot (1\vvv e^{i\theta})}\cdot d\theta\tag{3}
+\]
+With these notations one has
+\medskip
+
+\noindent{\bf{8.2. Theorem.}}
+\emph{Let $\phi$ satisfy the conditions above.
+Then, if 
+there exists a constant $C$ such that}
+\[ 
+\sum\uuu {k=0}^\infty\, |J(k,p)|\leq C\quad\text{for all}\quad p\geq 0\tag{*}
+\] 
+\emph{it follows that
+the series (**) from the introduction
+converges  and the   sum is equal to $\sum\, a\uuu k$.}
+\bigskip
+
+
+
+
+
+
+
+\noindent
+{\emph {Proof}
+With similar   notations as in  the  proof  of Theorem 8.1
+we introduce the $\Omega$-numbers by:
+\[
+\Omega\uuu{k,p}=\sum\uuu{\nu=0}^{\nu=k}\, B\uuu{k\nu}
+\]
+Repeating the proof of Theorem 8.1 the reader may
+verify that
+the series $\sum c\uuu k$ converges and has the limit $S$
+if the following two conditions hold:
+\[
+\lim\uuu{N\to\infty}\, \Omega\uuu{N,p}=0
+\quad \text{holds for every} \quad p\tag{i}
+\]  
+\[
+\sum \uuu{k=0}^{\infty}\, 
+\bigl|\Omega\uuu{k+1,p}\vvv \Omega\uuu{k,p}\bigr|\leq C
+\quad\text{for  a constant}\quad C
+\tag{ii}
+\] 
+where $C$ is
+is independent of $p$.
+Here (i) is clear since 
+$\{g\uuu N(z)= \phi^N(z)\}$ converge uniformly to zero in
+compact subsets of the unit disc and therefore
+their Taylor coefficients  tend to zero with $N$.
+\medskip
+
+\noindent
+\emph{Proof of (ii)}. Residue calculus  gives:
+\[
+\Omega_{k+1,p}-\Omega_{k,p}=
+\frac{1}{2\pi i}
+\int_{|z|=1}\frac{\phi^k(z)}{z^{p+1}}\cdot \frac{1-\phi(z)}{1-z}\cdot dz\tag{iii}
+\]
+\medskip
+
+\noindent
+Let $\ell$ be a small positive number
+and    $T_\ell$ denotes  the portion of the
+unit circle where
+$\ell \leq \theta\leq 2\pi\vvv \ell$. 
+Since 1 is a peak \vvv point for $\phi$ there exists
+some $\mu<1$ such that
+\[ 
+\max\uuu{z\in T\uuu\ell}\,|\phi(z)|\leq \mu
+\]
+This gives
+\[
+\frac{1}{2\pi}\cdot \bigl|\int_{z\in T\uuu\ell }\frac{\phi^k(z)}{z^{p+1}}\cdot \frac{1-\phi(z)}{1-z}\cdot dz
+\bigl|\leq \mu^k\cdot \frac{2}{|e^{i\ell}\vvv 1}\bigr |\tag{iv}
+\]
+Since the geometric series $\sum\,\mu^k$ converges
+it follows from (iii) and the construction of the $J\uuu\ell$\vvv functions in
+Theorem 8.2 that (ii) is valid  precisely when 
+\[ 
+\sum\uuu{k=0}^\infty\, |J\uuu \ell (k,p]|\leq C
+\]
+hold for a constant which is independent of $p$.
+But this holds by the hypothesis  (*)  and finishes
+the proof of Theorem 8.2.
+
+\newpage
+
+\noindent
+{\bf{8.3. An oscillatory integrals.}}
+Condition  (*) Theorem 8.2 is   implicit. 
+A sufficient condition  that
+the $J$\vvv integrals satisfy (*) can be expressed by
+conditions on the 
+$\phi$\vvv function close to
+$z=1$. To begin with the condition   (1) above Theorem 8.2
+entails that 
+\[ 
+\phi(e^{i\theta})= e^{i\beta \theta+\rho(\theta)}\tag{i}
+\]
+holds in a neighborhood of $\theta=0$ 
+where the $\rho$\vvv function behaves like big ordo of $\theta^2$ when $\theta\to 0$.
+The next result gives  the requested
+convergence of the composed series
+expressed  by an additional   condition on the $\rho$\vvv function 
+in (i) above.
+
+\bigskip
+
+\noindent{\bf{8.4. Theorem.}}
+\emph{Assume that $\rho(\theta)$ is a $C^2$-function on some interval 
+$\vvv\ell <\theta<\ell$ and that the second derivative
+$\rho''(0)$ is real and negative.
+Then (*) in Theorem 8.2 holds.}
+\bigskip
+
+
+\noindent
+The proof is left as  an exercise to the reader. If necessary, consult
+Carleman's article [Car] which contains  a detailed proof.
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf IX. The series $\sum\, \bigl [a_1\cdots a_\nu\bigr ]^{\frac{1}{\nu}}$}
+\bigskip
+
+\noindent
+We shall prove a result from [Carleman:xx. Note V page 112-115].
+Let $\{a_\nu\}$ be a sequence of positive real numbers
+such that $\sum\, a_\nu<\infty$ and 
+$e$ denotes Neper's constant. 
+
+\medskip
+
+\noindent
+{\bf 9.1 Theorem.} \emph{Assume that the series $\sum\, a_\nu$  is 
+convergent and let $S$ be the sum.
+Then one has the strict inequality}
+\[
+\sum_{\nu=1}^\infty\, 
+\bigl [a_1\cdots a_\nu\bigr ]^{\frac{1}{\nu}}<e\cdot S\tag{*}
+\]
+
+
+
+\noindent
+{\bf Remark.}
+The result is sharp in the sense that $e$ cannot be replaced by a smaller constant.
+To see this we
+consider a large positive integer $N$ and take the finite series
+$\{a_\nu=\frac{1}{\nu}\quad\colon 1\leq \nu\leq N\}$.
+Stirling's limit formula gives:
+\[
+\bigl [a_1\cdots a_\nu\bigr ]^{\frac{1}{\nu}}\simeq\frac {e}{\nu}\quad\colon\,\nu>>1
+\] 
+Since the harmonic series
+$\sum\,\frac{1}{\nu}$ is divergent we conclude that
+for every $\epsilon>0$ there exists some large integer $N$ such that
+$\{a_\nu=\frac{1}{\nu}\}$ gives
+\[
+\sum_{\nu=1}^{\nu=N}\, 
+\bigl [a_1\cdots a_\nu\bigr ]^{\frac{1}{\nu}} >
+(e-\epsilon)\cdot \sum_{\nu=1}^{\nu=N}\, \frac{1}{\nu}
+\]
+
+
+
+\noindent
+There remains to prove the strict upper bound (*)
+when $\sum\, a_\nu$ is an arbitrary  convergent positive series.
+To attain this we  first establish  inequalities for finite series.
+Given a positive integer $m$ we consider the variational problem
+\[
+\max_{a_1,\ldots,a_m}\, 
+\sum_{\nu=1}^{\nu=m}\, 
+\bigl [a_1\cdots a_\nu\bigr ]^{\frac{1}{\nu}} \quad
+\text{when}\quad a_1+\ldots+a_m=1\tag{1}
+\]
+\medskip
+
+\noindent
+Let $a^*_1,\ldots,a^*_m$ give a maximum and set
+$a_\nu^*=e^{-x_\nu}$.
+The Lagrange multiplier theorem gives a number
+$\lambda^*(m)$ such that if
+\[ 
+y_\nu=\frac{x_\nu+\ldots+x_m}{\nu}
+\]
+then
+\[
+\lambda^*(m)\cdot e^{-x_\nu}=\frac{1}{\nu}\cdot e^{-y_\nu}+\ldots+
+\frac{1}{m}\cdot e^{-y_m}\quad \colon\quad 1\leq\nu\leq m\tag{2}
+\]
+A summation over all $\nu$  gives
+\[ 
+\lambda^*(m)=e^{-y_1}+\ldots+e^{-y_m}=
+\sum_{\nu=1}^{\nu=m}\, 
+\bigl [a^*_1\cdots a^*_\nu\bigr ]^{\frac{1}{\nu}}
+\]
+Hence $\lambda^*(m)$ gives
+the maximum for the variational problem which is
+no surprise since $\lambda^*(m)$ is 
+Lagrange's multiplier.
+Now we shall
+prove  the strict inequality
+\[ 
+\lambda^*(m)<e\tag{3}
+\]
+We prove (3) by  contradiction.
+To begin with, subtracting the successive equalities in (2) we get
+the following equations:
+\[
+\lambda^*(m)\cdot [e^{-x_\nu}-e^{-x_{\nu+1}}]=
+\frac{1}{\nu} \cdot e^{-y_\nu}\quad
+\colon\quad 1\leq\nu\leq m-1\tag{4}
+\]
+\[
+m\cdot \lambda^*(m)=e^{x_m-y_m}\tag{5}
+\]
+Next, set
+\[ 
+\omega_\nu=\nu(1-\frac{a_{\nu+1}}{a_\nu})\colon\quad 1\leq\nu\leq m-1\tag{6}
+\]
+With these notations it is clear that (4) gives
+\[
+\lambda^*(m)\cdot\omega_\nu=
+e^{x_\nu-y_\nu}\quad \colon\quad 1\leq\nu\leq m-1\tag{7}
+\]
+It is clear that (7) gives:
+\[
+\bigl(\lambda^*(m)\cdot\omega_\nu\bigr)^\nu=
+e^{\nu(x_\nu-y_\nu)}=
+\frac{a_1\cdots a_{\nu-1}}{a_\nu^{\nu-1}}\tag{8}
+\]
+By an induction over $\nu$ which is left to the reader it follows
+the $\omega$-sequence satisfies the recurrence equations:
+\medskip
+\[
+\omega_\nu^\nu=\frac{1}{\lambda^*(m)}\cdot
+\bigl(
+\frac{\omega_{\nu-1}}{1-\frac{\omega_{\nu-1}}{\nu-1}}\bigr)^{\nu-1}
+\quad \colon\quad 1\leq\nu\leq m-1\tag{9}
+\]
+Notice that we also have
+\[
+\omega_1=\frac{1}{\lambda^*(m)}\tag{10}
+\]
+
+
+\noindent
+{\bf{A special construction.}}
+With $\lambda$ as a parameter
+we define a sequence $\{\mu_\nu(\lambda)\}$
+by the recursion formula:
+\[ 
+\mu_1(\lambda)=\frac{1}{\lambda}\quad\text{and}\quad
+[\mu_\nu(\lambda)]^\nu=\frac{1}{\lambda}\cdot
+\bigl[
+\frac{\mu_{\nu-1}(\lambda)}{1-\frac{\mu_{\nu-1}(\lambda)}{\nu-1}}\bigr]^{\nu-1}
+\quad \colon\quad \nu\geq 2\tag{**}
+\]
+
+
+\noindent
+From (5) and (9) 
+it is clear that 
+$\lambda=\lambda^*(m)$ gives
+the equality
+\[
+\mu_m(\lambda^*(m))=m\tag{***}
+\]
+Now we come to the key point during the whole proof.
+
+\medskip
+
+\noindent
+{\bf{Lemma}}
+\emph{If $\lambda\geq e$ then
+the $\mu(\lambda)$ -sequence satisfies}
+\[
+\mu_\nu(\lambda)<\frac{\nu}{\nu+1}\quad \colon\quad \nu=1,2,\ldots
+\]
+
+
+\noindent
+\emph{Proof.}
+We use an induction over $\nu$. With $\lambda\geq e$ we have
+$\frac{1}{\lambda}<\frac{1}{2}$ so the case $\nu=1$ is okay.
+If $\nu\geq 1$ and the lemma  holds for $\nu-1$, then
+the recursion formula (**) and the hypothesis $\lambda\geq e$ give:
+\[
+[\mu_\nu(\lambda)]^\nu=\frac{1}{\lambda}\cdot
+\bigl[
+\frac{\mu_{\nu-1}(\lambda)}{1-\frac{\mu_{\nu-1}(\lambda)}{\nu-1}}\bigr]^{\nu-1}<
+\frac{1}{e}\cdot
+\bigl[
+\frac{\frac{\nu-1}{\nu}}{1-\frac{\nu-1}{\nu(\nu-1)}}\bigr]^{\nu-1}
+\]
+Notice that the last factor  is 1 and hence:
+\[
+[\mu_\nu(\lambda)]^\nu<e<\bigl(1+\frac{1}{\nu})^{-\nu}
+\]
+where the last inequality follows from the wellknown
+limit  of Neper's constant.
+Taking the $\nu$:th root we get
+$\mu_\nu(\lambda)<\frac{\nu}{\nu+1}$ which finishes the induction.
+\medskip
+
+\noindent
+{\bf{Conclusion.}}
+If $\lambda^*(m)\geq e$ then  the lemma  above and the
+equality (***)  would entail that
+\[ 
+m=\mu(\lambda^*(m))<\frac{m}{m+1}
+\] 
+This is impossible when $m$ is a positive integer and hence 
+we must have proved the  strict inequality
+$\lambda^*(m)<e$.
+
+
+\medskip
+
+
+\noindent
+{\bf{The strict inequality for an infinite series.}}
+It remains to prove that the strict inequality holds for
+a convergent series with an infinite number of terms.
+So assume that we have an equality
+\[
+\sum_{\nu=1}^\infty\, 
+\bigl [a_1\cdots a_\nu\bigr ]^{\frac{1}{\nu}}=e\cdot \sum_{\nu=1}^\infty\, a_\nu\tag{i}
+\]
+Put as as above
+\[ 
+\omega_n=n(1-\frac{a_{n+1}}{a_n})\tag{ii}
+\]
+Since we already know that the left hand side  is at least equal to  the right hand side
+one can apply  Lagrange multipliers and we leave it to the reader to verify that
+the  equality (i) gives  the recursion formulas
+\[
+\omega^n_n=\frac{1}{e} \cdot \bigl[
+\frac{\omega_{n-1}}{1-\frac{\omega_{n-1}}{n-1}}\bigr]^{n-1}\tag{iii}
+\]
+Repeating the proof of the Lemma  above it follows that
+\[
+ \omega_n<\frac{n}{n+1}\implies
+\frac{a_{n+1}}{a_n}>\frac{n}{n+1}\tag{iv}
+\]
+where (ii) gives the implication.
+So with
+$N\geq 2$ one has:
+\[ 
+\frac{a_{N+1}}{a_1}>
+\frac{1\cdots N}{1\cdots N(N+1)}=\frac{1}{N+1}
+\]
+Now $a_1>0$ and since the harmonic series $\sum\,\frac{1}{N}$ is 
+divergent it would follows that
+$\sum\, a_n$ is divergent.
+This contradiction
+shows that a strict inequality must hold
+in Theorem 9.1.
+
+\newpage
+
+\centerline{\bf{10. Thorin's convexity theorem.}}
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+In the article [Thorin]
+a  convexity theorem was established which goes as follows:
+Let $N\geq 2$ be a positive integer and $\mathcal A=\{A_{\nu k}\}$ a
+complex $N\times N$-matrix.
+To each pair of real numbers $a,b$ in the square
+$\square=\{0<a,b<1\}$ we set
+\[ 
+M(a,b)=
+\max_{x,y}\, \bigl|
+\sum\sum\, A_{\nu k}\cdot x_k\cdot y_\nu|
+\quad\colon\, \sum\, |x_\nu|^{1/a}= \sum\, |y_k|^{1/b}=1
+\]
+
+\medskip
+
+\noindent{\bf{10.1 Theorem}}
+\emph{The function
+$(a,b)\mapsto \log M(a,b)$
+is convex in $ \square$}.
+
+
+\medskip
+
+\noindent
+The proof relies upon Hadamard's inequality for maximum norms of
+bounded analytic functions in strip domains.
+More precisely, let $f(w)$ be an entire function which is
+bounded in the infinite strip domain
+\[
+\Omega=\{ \sigma+is\quad\colon 
+0\leq \sigma\leq 1\colon -\infty<s<\infty\}
+\]
+Set
+\[
+ M_f(\sigma)=
+\max_s\, f(\sigma+is)|\quad\colon\quad 0\leq \sigma\leq 1
+\]
+Then the following is proved in § XX: 
+\[ 
+M_f(\sigma)\leq M_f(0)^{1-\sigma}\cdot M_f(1)^\sigma\tag{*}
+\]
+
+
+\noindent
+\emph{Proof of Theorem 10.1.}
+With $0<a,b<1$ fixed we
+consider $N$-tuples $x_\bullet$ and $y_\bullet$ 
+in ${\bf{C}}^N$
+and write
+\[ 
+x_\nu=c_\nu^a\cdot e^{i\theta_\nu}\quad
+\text{ and}\quad
+y_k=d_ke^{i\phi_k}
+\]
+where the $c$-and the $d$-numbers are real and positive whenever
+they are $\neq 0$.
+It is is clear that
+\[ 
+M(a,b)=\max_{c,d,\theta,\phi}\,
+\bigl|\sum\sum\, A_{\nu k}\cdot c_\nu^a\cdot d_k^b\cdot
+e^{i\theta_\nu}e^{i\phi_k}\bigr|\tag{1}
+\]
+where the maximum is taken over  $N$-tuples
+$\{c_\bullet\}$ and $\{d_\bullet\}$ of non-negative real numbers such that
+\[ 
+\sum c_\nu=\sum d_k=1\tag{2}
+\] 
+and   $\{\theta_\nu\}$ and $\{\phi_k\}$
+are arbitrary $N$-tuples from the periodic interval $[0,2\pi]$.
+Consider a pair $(a_1,b_1)$ and $(a_2,b_2)$ in $\square$
+and let $(\bar a,\bar b)$ be the middle point.
+Then we find $c^*,d^*,\theta^*,\phi^*$ so that
+\[ 
+M(\bar a,\bar b)=
+\bigl|\sum\sum\, A_{\nu k}\cdot (c^*_\nu)^a\cdot (d^*_k)^b\cdot
+e^{i\theta^*_\nu+i\phi^*_k}\bigr|\tag{3}
+\]
+
+
+
+\noindent
+Let $w=\sigma+is$ be a complex variable 
+and define the analytic function $f$ by
+
+\[
+f(w)=
+\sum\sum\, A_{\nu k}\cdot (c^*_\nu)^{a_1+w(a_2-a_1)}\cdot 
+(d^*_k)^{b_1+w(b_2-b_1)}\cdot
+e^{i\theta^*_\nu+i\phi^*_k}\tag{4}
+\]
+It is clear that $f(w)$ is an entire analytic function and
+$|f(1/2)|= M(\bar a,\bar b)$.
+Next, with $w=is$ purely imaginary we have
+
+\[ 
+f(is)= \sum\sum\, A_{\nu k}\cdot (c^*_\nu)^{a_1}\cdot 
+(d^*_k)^{b_1}\cdot
+e^{is(a_2-a_1)\log c_\nu^*+is(b_2-b_1)\log d_k^*}\cdot 
+e^{i\theta^*_\nu+i\phi^*_k}\tag{5}
+\]
+For each pair $\nu,k$
+the exponential product
+\[
+e^{is(a_2-a_1)\log c_\nu^*+is(b_2-b_1)\log d_k^*}\cdot 
+e^{i\theta^*_\nu+i\phi^*_k}=
+e^{i(\theta_\nu(s)+\phi_k(s))}
+\]
+for some pair $\theta_\nu(s),\phi_k(s)$.
+From (1) we see that
+\[
+\max_s\, |f(is)|\leq M(a_1,b_1)\tag{6}
+\]
+In the same way the reader can verify that
+\[ 
+\max_s\, |f(1+is)|\leq M(a_2,b_2)\tag{7}
+\]
+Now Hadamard's inequality (*) entails that
+\[
+\log M(\bar a,\bar b)\leq \frac{1}{2}\cdot 
+[
+\log M(a_1, b_1)+\log M( a_2, b_2)
+\]
+This proves the required convexity.
+
+\newpage
+
+\centerline{\bf{11. Cesaro and Hölder limits}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+In 1880 Cesaro introduced a certain summation procedure which
+which is a substitute for divergent series and leads to the notion of 
+Cesaro summability to be  defined below.
+Another summability was introduced by Hölder
+and later Knopp and Schnee 
+proved that
+the conditions for Cesaro\vvv respectively Hölder
+are equivalent. 
+In Theorem 11.8 we present  
+the elegant proof due to Schur taken from 
+[Landau; Chapter 2].
+For  a given  sequence of complex numbers $a_0,a_1,a_2,\ldots$
+we put:
+\[ 
+S_n=a_0+\ldots+a_n
+\]
+If $k\geq 0$ we define inductively
+\[ 
+S_n^{(k+1)}=
+S_0^{(k)}+\ldots+
+S_n^{(k)}\quad\text{where}\quad S_n^{0)}= S_n
+\]
+
+
+
+
+\medskip
+
+\noindent
+{\bf{11.1  Definition.}}
+\emph{For a given integer $k\geq 0$
+we say that
+the sequence $\{a_n\}$ is Cesaro summable of order $k$
+if there exists a limit}
+\[ 
+s\uuu *(k)=\lim_{n\to\infty}\,
+\frac{k !}{n^k}\cdot S_n^{(k)}\tag{*}
+\]
+
+\medskip
+
+\noindent
+{\bf{11.2 Exercise.}}
+Assume that $\{a\uuu n\}$ is Cesaro summable of some order
+$k$. Show that 
+\[ 
+a\uuu n=O(n^k)
+\]
+
+
+\noindent
+{\bf{11.3 The power series
+$f(x)= \sum\, a\uuu nx^n$}}.
+Assume that $\{a\uuu n\}$ is Cesaro summable of some order $k$. 
+Exercise 11.2 shows  that
+the power series $f(x)$ has a radius of convergence which
+is at least one and 
+for every integer $k\geq 0$ the reader can  verify the equality
+\[ 
+f(x)=\sum a_nx^n
+=(1-x)^{k+1}\cdot \sum S_n^{(k)}\cdot x^n\tag{*}
+\]
+
+\noindent
+{\bf{11.4 Exercise.}}
+Deduce from the above  that if $\{a\uuu n\}$
+is Cesaro summable of some order $k\uuu *$ with limit value $s\uuu *(k\uuu *)$ then
+one has the limit formula:
+\[
+s\uuu *(k\uuu *)=\lim\uuu{x\to 1}\, f(x)
+\]
+
+\noindent
+Now we prove that Cesaro summability of some order implies the
+summability for every higher order.
+\medskip
+
+
+
+
+
+\noindent
+{\bf{11.5 Proposition.}}
+\emph{If (*) holds for some $k\uuu *$ then the Cesaro 
+limit exists for every $k\geq k\uuu *$ and one has the equality
+$s\uuu *(k)=s\uuu *(k\uuu *)$.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+Cesaro summability of some order $k$
+with a limit $s\uuu *(k)$ means that
+\[
+S_n^{(k)}= \frac{n^k}{k!}\cdot s\uuu *(k)+o(n^k)\tag{i}
+\]
+where the last term is small ordo.
+If (i) holds we get
+\[
+S_n^{(k+1)}=\frac{s\uuu *(k)}{k !}
+\sum\uuu{\nu=0}^n\, n^\nu+
+o\bigl(\sum\uuu{\nu=0}^n\, n^\nu\bigr)
+=\frac{s\uuu *(k)}{k !}\cdot [\frac{n^{k+1}}{k+1}\vvv 1]+
+o(n^{k+1})
+\]
+From this the reader discovers the requested induction step and
+Proposition 11.5 follows.
+\medskip
+
+\medskip
+
+\noindent
+{\bf{11.6 Hölder's summation.}}
+To each sequence of complex numbers $a_0,a_1,a_2,\ldots$
+we put
+\[ 
+H_n^{(0)}=a_0+\ldots+a_n
+\]
+and if  $k\geq 0$ we define inductively
+\[ 
+H_n^{(k+1)}=\frac{
+H_0^{(k)}+\ldots+
+H_n^{(k)}}{n+1}
+\]
+
+\noindent
+{\bf{11.7 Definition.}}
+\emph{The sequence $\{a_n\}$ is Hölder summable of order $k$
+if there exists a limit}
+\[ 
+\lim_{n\to\infty}\,
+H_n^{(k)}\tag{**}
+\]
+
+
+
+\medskip
+
+\noindent
+{\bf{11.8 Theorem}}
+\emph{A sequence $\{a_n\}$ is Cesaro summable of
+of some order $k$ if and only if it is Hölder summable of the same order
+and there respectively limits are the same.}
+\bigskip
+
+\noindent
+The proof of Theorem 11.8 requires several steps.
+First we introduce  arithmetic mean value sequences attached to every 
+sequence $\{x\uuu 0,x\uuu 1,\ldots\}$:
+
+\[ 
+M(\{x\uuu \nu\})[n]= \frac{x\uuu 0+\ldots+x\uuu n}{n+1}
+\]
+Next, to each $k\geq 1$ we 
+construct the sequence $T\uuu k(\{x\uuu\nu\})$
+by
+\[ 
+T\uuu k(\{x\uuu\nu\})[n]=\frac{k\vvv 1}{k}\cdot M(\{x\uuu \nu\})[n]+
+\frac{x\uuu n}{k}
+\]
+\medskip
+
+\noindent
+So above $M$ and $\{T\uuu k\}$
+are linear operators which send a complex sequence to another complex sequence.
+The reader may verify that these operators commute, i.e.
+\[
+ T\uuu k\circ M= M\circ T\uuu k
+\] 
+hold for every $k$ and similarly the $T$\vvv operators commute.
+For a given $k$ we can also regard the passage to 
+the Cesaro sequence $\{S\uuu n^{[k)}\}$
+as a linear operator which we denote by
+$\mathcal C^{(k)}$. Similarly we get the Hölder operators
+$\mathcal H^{(k)}$ for every $k\geq 1$.
+\medskip
+
+\noindent
+{\bf{11.9 Proposition.}}
+\emph{The following identities hold}
+\[
+T\uuu k\circ \mathcal C^{(k\vvv 1)}= M\circ \mathcal C^{(k)}
+\quad\colon\quad k\geq 1\tag{i}
+\]
+\[
+\mathcal H^{(k)}=
+T\uuu 2\circ\ldots\circ T\uuu k\circ \mathcal C^{(k)}
+\quad\colon\quad k\geq 2\tag{ii}
+\]
+
+
+
+\noindent
+{\bf{11.10 Exercise.}} Prove (i) and (ii) above.
+\medskip
+
+\noindent
+As a last preparation towards the proof of Theorem 11.8
+we need certain  limit formulas  which show that the
+$T$\vvv operators have robust properties. First we have:
+\medskip
+
+\noindent
+{\bf{11.11 Lemma}}
+\emph{Let $\{x_1,x_2,\ldots \}$ be a sequence of complex numbers
+and $q$ a positive integer such that}
+\[
+\lim_{n\to\infty}\, 
+q\cdot \frac{x_1+\ldots+x_n}{n}+x_n=0
+\]
+\emph{Then  it follows that}
+\[
+\lim_{n\to\infty}\, x_n=0
+\]
+
+
+\noindent
+\emph{Proof}.
+Set $y_n=q(x_1+\ldots+x_n)+n x_n$.
+By an induction over $n$ one verifies that
+\[
+\sum_{\nu=1}^{\nu=n}\, (\nu+1)\cdots (\nu+q-1)\cdot y_\nu=
+(n+1)\cdots(n+q)\cdot \sum_{\nu=1}^{\nu=n}\,x_\nu\tag{1}
+\] 
+hold for every $n\geq 1$.
+By the hypothesis $y_n=o(n)$ where $o(n)$ is small ordo of $n$.
+It follows that the left hand side in (1) is $o(n^{q+1})$
+and since the product 
+$(n+1)\cdots(n+q)\simeq n^q$ we conclude that
+\[
+\sum_{\nu=1}^{\nu=n}\,x_\nu=o(n)\tag{2}
+ \]
+Finally, we have
+\[ 
+nx_n=y_n-q\cdot  \sum_{\nu=1}^{\nu=n}\,x_\nu
+\]
+and by (2) and the hypothesis the right hand side is $o(n)$ which
+after division with $n$ gives
+$x_n=o(1)$ as required.
+
+\medskip
+
+\noindent
+{\bf{11.12 Proposition. }}
+\emph{Let $\{x\uuu \nu\}$ be a sequence and $k\geq 1$ an integer
+such that there exists}
+\[
+\lim\uuu{n\to \infty}\, T\uuu k(\{x\uuu\nu\}][n]= s
+\]
+\emph{Then it follows that $\{x\uuu n\}$ converges to $s$.}
+\medskip
+
+\noindent
+{\bf{11.13 Exercise.}} Deduce Proposition 11.12 from Lemma 11.11.
+
+\bigskip
+
+\noindent
+\centerline{\emph{11.14 Proof of Theorem 11.8.}}
+\medskip
+
+\noindent
+The easy case $k=1$ is left to the reader and we proceed to 
+prove the theorem when $k\geq 2$.
+Assume first that $\{a\uuu n\}$
+is Cesaro summable of some order $k\geq 2$
+with a limit $s$.
+Exercise 11.12 implies that $T\uuu k\circ \mathcal C^{(k)}$ sends
+$\{a\uuu n\}$ to a convergent sequence with limit $s$.
+If $k\geq 3$ we apply the exercise to $T\uuu{k\vvv 1}$ and continue until
+the composed operator
+\[
+ T\uuu 2\circ\cdots\circ T\uuu k\circ \mathcal C^{(k)}
+\] 
+sends the $a$\vvv sequence to a convergent sequence with limit $s$.
+By (ii) in Proposition 11.8 this entails that
+$\{a\uuu k\}$ is Hölder summable of order $k$ with limit $k$.
+Conversely, assume that $\{a\uuu n\}$
+is Hölder summable of some order $k\geq 2$.
+The equality (ii) from  Proposition 11.9  gives
+\[ 
+\mathcal H^{(2)}= T\uuu 2\circ \mathcal C^{(2)}
+\]
+Hence Proposition 11.13 applied to $T\uuu 2$ shows that Hölder summability
+of order 2 entails Cesaro summability of the same order.
+Next, if $k\geq 3$ we  again use (ii) in 11.9 and conclude that
+the sequence
+\[
+T\uuu 3\circ\ldots T\uuu k\circ \mathcal C^{(k)}(\{a\uuu n\})
+\] 
+is convergent.
+By repeated application of (ii) in 11.18 applied to $T\uuu 3,\ldots,T\uuu k$
+we conclude that the $a$\vvv sequence is Cesaro summable of order $k$
+and has the same limit as the Hölder sum.
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf{12.  Power series and arithmetic  means.}}
+
+\bigskip
+
+\noindent
+Consider a power series
+\[ 
+f(x)=\sum\, a\uuu n\cdot x^n
+\]
+which converges when $|x|<1$ and  assume also that
+\[
+\lim\uuu{x\to 1}\,\sum\, a\uuu n\cdot x^n=0\tag{*}
+\]
+For each $k\geq 1$ we get the sequence $\{S\uuu n^{(k)}\}$
+from the previous section and we prove the following:
+
+\medskip
+
+\noindent
+{\bf{12.1 Theorem.}}\emph{ Assume (*) and that there exists some integer 
+$k\geq 1$ such that}
+\[
+\lim\uuu{n\to\infty}\, S\uuu n^{(k)}=0
+\]
+\emph{Then the series $\sum\, a \uuu n$ converges.}
+\medskip
+
+
+\noindent
+{\bf{Example.}}
+Consider the case $r=1$ where
+\[
+S\uuu n^{(1)}=\frac{na\uuu 0+(n\vvv 1)a\uuu 1+\ldots+a\uuu n}{n}
+\]
+The sole assumption that
+$S\uuu n^{(1)}\to 0$ does not imply
+$\sum\, a\uuu n$ converges. But in addition (*) is assumed in Theorem 12.1 
+which will give the convergence.
+The proof of Theorem 12.1
+is based upon the following convergence criterion where (*) above is tacitly assumed.
+
+
+\medskip
+
+\noindent
+{\bf{12.2 Proposition.}} \emph{The series $\sum\, a\uuu n$ converges if there to every
+$\epsilon>0$ exists a pair $(p\uuu 0,n\uuu 0)$ such that}
+\[
+p\geq p\uuu 0\implies J(n\uuu 0,p)=\bigl|\, 
+\int\uuu 0^1\, \frac{\sin 2p\pi(x\vvv 1)}{x\vvv 1}\cdot 
+\sum\uuu{n=n\uuu 0}^\infty\, a\uuu n x^n
+\cdot dx
+\,\bigr|<\epsilon
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this classic result which already
+was wellknown to Abel.
+\bigskip
+
+\noindent
+\emph{Proof of theorem 12.1}.
+To profit upon  Proposition 12.2 we need the two inequalities
+below which are valid for all pairs of positive integers $p$ and $n$:
+
+\[
+\bigl|\, \int\uuu 0^1\, \sin (2p\pi x)\cdot x^k(1\vvv x)^n
+\cdot dx\,\bigr|\leq 2\pi(k+2)\,!\cdot\frac{p}{n^{k+2}}\tag{i}
+\]
+
+\[
+\bigl|\, \int\uuu 0^1\, \sin 2p\pi x\cdot x^k(1\vvv x)^n
+\cdot dx\,\bigr|\leq \frac{C(k)}{p\cdot n^k}\tag{ii}
+\]
+where the constant $C(k)$ in (ii) as indicated only depends upon $k$.
+The verification of (i\vvv ii) is left to the reader.
+Next, recall from (*) in  § 11.4
+that:
+\[
+f(x)=\frac{(1\vvv x)^{k+1}}{(k+1)!}\cdot \sum\, S\uuu n^{(k)} n^k\cdot x^n\tag{iii}
+\]
+Let $\epsilon>0$ and choose $n\uuu 0$ such that
+\[ 
+n\geq n\uuu 0\implies |S\uuu n^{(k)}|<\epsilon\tag{iv}
+\]
+which is possible from the assumption in  Theorem 12.1
+Notice that (iii) gives the equality
+\[
+\sum\uuu{n=n\uuu 0}^\infty\, a\uuu n x^n=
+\frac{(1\vvv x)^{k+1}}{(k+1)!}\cdot \sum\uuu{n=n\uuu 0}^\infty
+\, S\uuu n^{(k)} n^k\cdot x^n\tag{iii}
+\]
+
+\noindent
+Hence  (iv) and the triangle inequality shows that with 
+$n\uuu 0$ kept fixed, the absolute value of the integral in Proposition 12.2  is 
+majorized as follows for every $p$:
+\[ 
+J(n\uuu 0,p)\leq \epsilon\cdot 
+\sum\uuu{n=n\uuu 0}^\infty
+\frac{n^k}{(k+1)!}\cdot
+\bigl|\,
+\int\uuu 0^1\, \sin (2p\pi x)\cdot x^k(x\vvv 1)^n
+\cdot dx\,\bigr|
+\]
+In (iv) we have chosen  $n\uuu 0$ and for an arbitrary $p\geq p\uuu 0=
+n\uuu 0+1$
+we decompose the sum from $n\uuu 0$ up to $p$ and
+after we take a sum with $n\geq p+1$ which means that
+$J(n\uuu 0,p)$ is majorized by $\epsilon$ times
+the sum of
+the following two expressions:
+
+\[
+\sum\uuu{n=n\uuu 0}^{n=p}
+\frac{n^k}{(k+1)!}\cdot
+\bigl|\,
+\int\uuu 0^1\, \sin (2p\pi x)\cdot x^k(x\vvv 1)^n
+\cdot dx\,\bigr|\tag{1}
+\]
+\[
+\sum\uuu{n=p+1}^\infty
+\frac{n^k}{(k+1)!}\cdot
+\bigl|\,
+\int\uuu 0^1\, \sin (2p\pi x)\cdot x^k(x\vvv 1)^n
+\cdot dx\,\bigr|\tag{2}
+\]
+
+\noindent
+Using (i) above it follows that (1) is estimated by
+
+\[
+2\pi\cdot (k+2) !\cdot \frac{C(k)}{p}\cdot (p\vvv n\uuu 0)
+\leq 2\pi\cdot (k+2) !\cdot C(k)=K\uuu 1
+\]
+Next, using (ii) it follows that (2) is estimated by
+
+\[
+\pi\cdot \frac{k+2}{k+1}\cdot p\cdot \sum\uuu{n=p+1}^\infty n^{\vvv 2}
+\leq\pi\cdot \frac{k+2}{k+1}=K\uuu 2
+\]
+So with $K=K\uuu 1+K\uuu 2$ we have
+\[ 
+J(n\uuu 0,p)\leq 2K\cdot \epsilon
+\] 
+for every $p\geq n\uuu 0+1$
+and since $\epsilon>0$ was arbitrary  the proof of Theorem 12.2
+is finished.
+
+\newpage
+
+\centerline{\bf{13. Taylor series and quasi\vvv analytic functions.}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+Let $f(x)$  an infinitely differentiable function
+ defined on the interval $[0,1]$.
+At $x=0$ we can take the derivatives and set
+ \[
+C\uuu\nu= f^{(\nu)}(0)
+\]
+In general the sequence
+$\{C\uuu \nu\}$ does not determine $f(x)$. The standard example is the 
+$C^\infty$\vvv function defined for $x>0$ by $e^{\vvv 1/x}$ and
+zero on $x\leq 0$. Here $\{C\uuu\nu\}$ is the null sequence and yet
+the function is no identically zero.
+But if we impose sufficiently strong growth conditions on the derivatives of $f$ over
+the whole interval $(\vvv 1,1)$
+then $\{C\uuu\nu\}$
+determines $f$. In general, 
+let $\mathcal A=\{\alpha\uuu\nu\}$ be an increasing sequence of positive real numbers
+and denote by $\mathcal C\uuu\mathcal A$ the class of $C^\infty$\vvv functions
+on $[0,1]$ where the maximum norms of the derivatives satisfy
+\[
+\max\uuu x\, |f^{(\nu)}(x)|\leq k^\nu\cdot \alpha\uuu\nu^\nu
+\quad\colon\quad \nu=0,1,\ldots\tag{*}
+\]
+for some $k>0$ which may depend upon $f$.
+One says that $\mathcal C\uuu\mathcal A$ is a quasi\vvv analytic class
+if every $f\in C\uuu \mathcal A$ whose Taylor series is identically
+zero at $x=0$ vanishes identically on $[0,1)$.
+In the article [Denjoy 1921),  Denjoy proved that
+$C\uuu\mathcal A$
+is quasi\vvv analytic if the series
+\[
+ \sum\, \frac{1}{\alpha\uuu\nu}=+\infty\tag{**}
+\] 
+The conclusive result which gives a necessary and sufficient condition on 
+the sequence $\{\alpha_\nu\}$ in order  that $C\uuu \mathcal A$
+is quasi\vvv analytic is proved in Carleman's book [1923].
+The criterion is as follows:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Set $A\uuu \nu=\alpha\uuu\nu^\nu$ for each $\nu\geq 1$.
+Then $C\uuu\mathcal A$ is quasi\vvv analytic if and only if}
+\[
+ \int\uuu 1^\infty\, \log\,\bigl[\,\sum\uuu{\nu=1}^\infty\,
+\frac{r^{2\nu}}{A\uuu \nu^2} \,\bigr] \cdot \frac{dr}{r^2}=+\infty
+\]
+
+\medskip
+
+\noindent
+For the proof of this result we refer to § XX in Special Topics.
+\medskip
+
+\noindent
+{\bf{The reconstruction theorem.}}
+Since quasi\vvv analytic functions by definition
+are determined by their Tayor series at a single point
+there remains the question how to determine $f(x)$ in a given  
+quasi\vvv analytic class $C\uuu \mathcal A$
+when the sequence of its Taylor coefficients at $x=0$ are given.
+Such a reconstruction   was announced   by
+Carleman in [CR\vvv 1923] and the  detailed proof appears in
+[Carleman\vvv book].
+Carleman
+considered a class of  
+variational problems
+to  attain  the reconstruction.
+Let $n\geq 1$ and for a given sequence
+of real numbers $\{C\uuu 0,\ldots,C\uuu{n\vvv  1}\}$
+we consider the class of $n$\vvv times differentiable functions $f$
+on $[0,1]$ for which
+\[
+f^{(\nu)}(0)= C\uuu\nu\quad\colon\quad \nu=0,\ldots ,n\vvv 1\tag{i}
+\]
+Next, let $\{\gamma\uuu 0,\gamma\uuu 1,\ldots,\gamma\uuu n\}$
+be some $n+1$\vvv tuple of positive numbers and consider
+the variational problem
+\[
+\min\uuu f J\uuu n(f)=
+\sum\uuu {\nu=0}^{\nu=n}\,\gamma\uuu\nu^{\vvv 2\nu}
+\cdot \int\uuu 0^1\, [f^{(\nu)}(x)\,]^2\cdot dx\tag{ii}
+\]
+where the competing family consist
+of $n$\vvv times differentiable functions on 
+$[0,1]$ satisfying (i) above. 
+The strict convexity of $L^2$\vvv norms
+entail  that the variational problem has a unique minimizing function 
+$f\uuu n$
+which depends linearly upon $C\uuu 0,\ldots,C\uuu n$.
+In other words, there exists a unique doubly indexed sequence
+of functions $\{\phi\uuu{p,n}\}$ defined for pairs $0\leq p\leq n$
+such that 
+\[
+f\uuu n(x)= \sum\uuu{\nu=0}^{\nu=n\vvv 1} \, C\uuu p\cdot \phi\uuu{p,n\vvv 1}(x)
+\]
+where the functions
+$\{\phi\uuu {0,n\vvv 1},\ldots \phi\uuu {n\vvv 1,n\vvv 1}\}$
+only depend upon $\gamma  \uuu 0,\ldots,\gamma  \uuu n$.
+\newpage
+
+\noindent
+{\bf{A specific choice of the $\gamma$\vvv sequence.}}
+Let $\mathcal A=\{\alpha\uuu \nu\}$ be a Denjoy sequence, i.e. 
+(**) above diverges. Set $\gamma\uuu 0=1$ and 
+\[ 
+\gamma\uuu\nu= \frac{1}{\alpha\uuu\nu}\cdot
+\sum\uuu{p=1}^{p=\nu}\,
+\alpha\uuu p\quad\colon\quad \nu\geq 1
+\]
+Given some $F(x)\in C^\infty[0,1]$
+we get the sequence $\{C\uuu\nu= F^{(\nu)}(0)\}$
+and to each $n\geq 1$ we consider the variational problem above
+using the $n$\vvv tuple 
+$\gamma\uuu 0,\ldots,\gamma\uuu{n\vvv 1}$
+which yields the extremal function $f\uuu n(x)$.
+With these notations Carelan  proved the following:
+\medskip
+
+\noindent
+{\bf{ 13.1 Theorem.}}
+\emph{If  $F(x)$ belongs to  the class $C\uuu\mathcal A$
+it follows that }
+\[
+\lim\uuu{n\to\infty}\, f\uuu n(x)=F(x)
+\] 
+where the convergence holds uniformly on interval $[0,a]$ for every $a<1$.
+
+\medskip
+
+\noindent{\bf{13.2 A series expansion.}}
+Using Theorem 13.1  Carleman also  proved that
+when  the series (**) diverges, then there exists a 
+doubly indexed sequence $\{a\uuu{\nu,n}\}$ defined for pairs $0\leq \nu\leq n$
+which only depends on the sequence $\{\alpha\uuu\nu\}$
+such that if   $F(x)$ belongs to $\mathcal C\uuu\mathcal A$
+then it is given by a limit of series:
+\[
+F(x)=\lim\uuu{n\to\infty}\, \sum\uuu{\nu=0}^{\nu=n}
+\, a\uuu{\nu,n}\cdot \frac{F^{(\nu)}(0)}{\nu\,!}\cdot x^\nu\quad\colon\quad 
+0\leq x<1
+\]
+\medskip
+
+
+\noindent
+{\bf{ Remark.}}
+Above we exposed the reconstruction for  quasi\vvv analytic classes of the Denjoy type.
+For a general quasi\vvv analytic class
+a similar result is proved in
+[Carleman]. Here the
+proof and the result is of a more technical nature 
+so we refrain to present  the details.
+Concerning the doubly indexed $a$\vvv sequence it is found in a rather implicit
+manner via solutions to the variational problems and an extra complication is that
+these $a$\vvv numbers depend upon the given
+$\alpha$\vvv sequence.
+it appears that several open problems remain concerning
+effective formulas and the reader may also consult [Carleman: page xxx]
+for some open questions related to the reconstruction above.
+
+
+. 
+\medskip
+
+
+\noindent
+{\bf{13.4 Quasi\vvv analytic boundary values.}}
+Another  problem 
+is concerned with  boundary values of analytic functions
+where
+the set of non\vvv zero Taylor\vvv coefficients is sparse.
+In general, consider a power series $\sum\, a\uuu nz^n$
+whose radius of convergence equal to one. Assume that there exists an interval $\ell$
+on the unit circle such that
+the analytic function $f(z)$ defined by the series extends to
+a continuous function in the closed sector where
+$\text{arg}(z)\in\ell$. So on $\ell$ we get a continuous boundary
+value function $f^*(\theta)$
+and suppose that $f^*$ belongs to some quasi\vvv analytic class on
+this interval.
+Let $f$ be given by the series
+\[
+f=\sum\, a\uuu n\cdot z^n
+\]
+Suppose that gaps occur
+and write  the sequence of non\vvv zero coefficients
+as $\{ a\uuu{n\uuu 1}, a\uuu{n\uuu 2}\ldots\}$
+where $k\mapsto n\uuu k$ is a  strictly increasing sequence.
+With these notations the following result is due to Hadamard:
+\medskip
+
+\noindent
+{\bf{13.5 Theorem.}}\emph{
+Let $f(z)$ be analytic in the open unit disc
+and assume it has a continuous extension to some open  interval on the 
+unit circle where 
+the boundary function $f^*(\theta)$ is real\vvv analytic. Then there exists an integer 
+$M$ such that}
+\[ 
+n\uuu{k+1}\vvv n\uuu k\leq M
+\]
+\emph{for all $k$. In other words,   the sequence of non\vvv zero coefficients 
+cannot be too  sparse.}
+\bigskip
+
+\noindent
+Hadamard's result was extended to the quasi\vvv analytic case in
+[Carleman] where it is proved that if $f^*$ belongs to some quasi\vvv analytic class
+determined by a sequence $\{\alpha\uuu\nu\}$
+then the gaps cannot be too sparse, i.e. after a rather involved analysis
+one finds that $f$ must be identically zero if
+the integer function $k\mapsto n\uuu k$ increases too fast.
+The rate of increase depends upon $\{\alpha\uuu\nu\}$
+and it appears that no precise descriptions of
+the growth of $k\mapsto n\uuu k$ which would ensure unicity
+is known for a general quasi\vvv analytic class, i.e. even in
+the situation considered by
+Denjoy.
+So there remains many interesting open questions concerned with quasi-analyticity.
+
+
+
+ 
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage

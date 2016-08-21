@@ -1,0 +1,2612 @@
+\documentclass[18pt]{amsart} 
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-18mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-18mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document} 
+
+\centerline{\bf{The diffusion equation}}
+
+\bigskip
+
+
+\noindent
+Random walk governed by
+a Brownian motion in continuous time
+leads to the PDE:
+\[
+\frac{\partial p}{\partial t}=
+\frac{1}{2}\cdot \frac{\partial^2p}{\partial x^2}\tag{*}
+\]
+where $p(x,t)$ 
+is a function of two variables  Here $t$ is a time variable which
+is positve.
+It  appears  in many
+scientific areas, both in medicine
+and biology, as well as physics and chemistry.
+In general a diffusion constant $\sigma$ appers while one
+solves the PDE:
+\[
+\frac{\partial p}{\partial t}=
+\frac{\sigma^2}{2}\cdot \frac{\partial^2p}{\partial x^2}\tag{0.1}
+\]
+To describe situations where
+solutions to (0.1) are needed under various boundary
+value conditions would require
+a very extensive discussion. The interested reader may
+turno to numerous lectures by Nobel Price winners  in medicine, chemisiry and
+physics during the last century. One can  for example mention
+August Krough who  received the prize in 1920
+for his expianation of
+the penetration of blood through
+very small walls which
+border flowing blood  with
+tissues in the body.
+He gave  mathematical expansions of these
+processes  which
+have been applied to improve 
+medical  treatment during the last 90 years. 
+A kinetic  theory used upon solutions to (*) was 
+established by Einstein in 1905 and  led to
+a whole scientific  area in chemisity devoted to so called colloidal solutions.
+A profound and very
+interactive exposition of 
+ Brownian  motion
+related yo microscopic
+phenomena  appear
+in the famous text-book \emph{Les Atom} from 1913, written by
+Jean Perrin who received the Nobel Prize in 1925
+for his empirical verifications of Einstein's kinetic theory.
+
+\medskip
+
+\noindent
+From a pour mathematical point  of view, the PDE is an example of
+a parabolic equation.
+It is usually solved when
+one assigns
+initial data, i.e. the function
+\[
+x\mapsto p(x,0)
+\]
+is supposed to be known.
+At the same time the state  variable $x$
+varies and  in many problems the state us  confined
+to
+intervals, either bounded or an 
+unbounded interval $(0,+\infty)$, 
+while one seeks solutions so that
+\[
+\lim_{x\to 0}\, p(x,t)=\phi(t)
+\]
+hold for a given time dependent $\phi$-function.
+The heat equation was
+considered long time ago and
+specific solutions to (*) were 
+established before 1800 by d'Alembert and Lagrange.
+More recent construction of transforms due to Laplace and Fourier 
+give a method to solve [*).
+We shall expose a few of these, and  mention that
+in
+the so called "Mathematics of finance" these classic
+solutions have become quite popular,  especially in connection with
+option-pricing where various modlels have been introduced whose analytic solutions
+are found via
+the clasic d'Alembert-Fourier method.
+\medskip
+
+
+\noindent
+{\bf{A. An example.}}
+Here  we seek solutions to (*)
+with the two boundary  conditions
+\[
+\lim_{x\to 0}\, p(x,t)=0
+\quad\colon\quad t>0\quad\&\quad
+\lim_{t\to 0}\, p(x,t)=f(x)
+\quad\colon\quad x>0\tag{i}
+\]
+where $f(x)$ is some function defined for
+$0<x<\infty$.
+To solve this one employs a transform.
+Namely, let $\xi$ be a new variable  and for
+each function $\phi(\xi)$ we define  $p(x,t)$ by
+\[
+p(x,t)= \frac{1}{\pi}\cdot \int_0^\infty\, \phi(\xi)\cdot \sin(x\xi)\cdot
+e^{-2\xi^2t}\, d\xi\tag{A.1}
+\]
+The reader can check that $p(x,t)$ satisfies (*) and 
+the first boundary vale condition in (i) holds.
+To attain the second boundary value one takes  $\phi$ as the so called sine-transform of
+$f$.
+More precisely, put
+\[
+\phi(\xi)=  \int_0^\infty\, \sin(x\xi)\cdot f(x)\, dx\tag{A.2}
+\]
+Then one has the inversion formula 
+\[
+f(x)=\frac{1}{\pi}\cdot \int_0^\infty\, \sin(x\xi)\cdot \phi(\xi)\, d\xi\tag{A.3}
+\]
+
+\medskip
+\noindent
+{\bf{Remark.}}
+Readers who are not familiar  with
+the inversion formula above can 
+check the case when
+$f(x)=1$ for $0<x<A$ while  $f(x)=0$ for $x\geq A$. Here
+$A$Êis an arbitrary constant and we have 
+\[
+\phi(\xi)= \int_0^A\, \sin(x\xi)\, dx
+=\frac{1-\cos(A\xi)}{\xi}\tag{i}
+\]
+When $x>A$ one has
+\[
+\int_0^\infty\, \sin(x\xi)\cdot \phi(\xi)\, d\xi=0\tag{ii}
+\]
+To show (ii) one employs one of the most importent results in
+mathematics,  namely the addition formula  for the sine-function
+which in particular gives
+\[
+\sin(x\xi)\cdot \cos (A\xi)=
+\frac{1}{2}\cdot [\sin(A+x)\xi-
+\frac{1}{2}\cdot [\sin (A-x)\xi\,]
+\]
+Now the reader can check (ii) since
+the integrals
+\[
+\int_0^\infty\, \frac{\sin(a\xi)}{\xi}\, d\xi =\frac{\pi}{2}\quad\colon\quad
+\forall\,\, a>0\tag{iii}
+\]
+The reader should also check that
+\[
+\int_0^\infty\, \sin(x\xi)\cdot \phi(\xi)\, d\xi=\pi\quad 0< x <a
+\]
+and conclude that the inversion formula (A.3) holds with the special $f$ above.
+
+
+
+\medskip
+
+\noindent
+{\bf{A second remark.}}
+Above we  used that
+\[
+\int_0^\infty\, \frac{\sin\,\xi}{\xi}\,  d\xi=\frac{\pi}{2}\tag{*}
+\]
+The  magic equality  is proved via a detour to
+the complex domain. 
+Readers familiar with 
+reside calculus knows how to prove (*).
+Namely, for every $\epsilon$ we put
+\[
+J(\epsilon)=
+\int_{\epsilon}^\infty\, 
+\frac{\sin\,\xi}{\xi}\,  d\xi=
+\frac{1}{2i}\cdot \int_{|\xi|\geq \epsilon}\,
+\frac{e^{i\xi}}{\xi}\,  d\xi
+\]
+Using Stokes  Theorem and properties of the complex exponential function
+the last integral above is equal to
+\[
+\frac{1}{2i}\cdot \int_0^\pi\,
+e^{i\epsilon\cdot e^{i\theta}}\,i\cdot d\theta
+\]
+Finally,
+\[
+\lim_{z\to 0}\, e^z=1\implies
+\lim_{\epsilon\to 0}\, J(\epsilon)=\frac{\pi}{2}
+\]
+which gives  (*).
+
+
+
+\newpage
+
+
+\noindent
+{\bf{The d'Alembert-Fourier formula.}} 
+The solution of  the diffusion equation  when
+the boundary value function $f(x)=1$ for all $x>0$ becomes
+\[
+p(x,t)=\frac{2}{\pi}\cdot  \int_0^\infty\, \frac{\sin (x\xi)}{\xi}\cdot e^{-2\xi^2t}\, d\xi\tag{**}
+\]
+One refers to (*)  as the d'Alembert-Fourier formula for the $p$-function.
+It  is used extensively in "mathematics of finance". For  example 
+to
+evaluate European options via the Black-.Sholes equation.
+The point  is  here the  probabilistic interpretation.
+Namey, the construction of the Brownian motion entails that
+for every fixed $x>0$, the function
+$t\mapsto p(x,t)$
+express the survival probability that  a particle which
+starting at $x$ at time zero, stays in $\{x>0\}$ up to time $t$, i.e.  during the time interval $[0,t]$
+it has  not reached the barrier $\{x=0\}$.
+Various numerical studies of this special $p$-function are
+found in \emph{Lab 5} to this course. 
+Keping $x>0$ e consider the negative time derivative
+\[
+-\frac{\partial p}{\partial t}=
+\frac{4}{\pi}\cdot  \int_0^\infty\, \xi\cdot \sin (x\xi)\cdot e^{-2\xi^2t}\, d\xi\tag{**}
+\]
+which is the frequency function for the
+first hitting time along the barrier $\{x=0\}$.
+Plots of (**) for fixed numerical values of $x$
+can be obtained via the computer.
+The frequency function has a "fat tail". In fact, already the mean-value is
+infinite.
+\medskip
+
+
+\noindent
+Many interesting
+probabilistic 
+result can be attained via (**).
+For example, let $a>0$ be given and fr a given $T>0$ 
+we consider the number $p(a,T=$ which from the above is the
+probability that a Brownian path starting at $a$
+stays in $\{x>0\}$ up to time $T$.
+In this restricted family of
+paths
+one can ask  how the stage $x$ varies at time $T$.
+Another problem is for example to
+investigate the maximum of the stage
+during the time interval
+$(0,T)$ of paths from this restricted family.
+The reader is invited to try
+to find equations for these probability densities.
+\medskip
+
+
+\noindent
+{\bf{The geometric case.}}
+So far we have discussed the additive Brownian motion.
+We can also analyze the geometric case and
+in
+\emph{Lab 5} there appear
+some numerical studies related to
+the geometric case.
+Suppose for example that we start at $x=1$ at time zero.
+Under a geometric Brownian motion we seek the
+the probability  that the geometric Brownian path
+does not reach an upper barrier $\{x=A\}$
+during a time interval $(0,t)$, where
+$A>1$.
+It turns out that this probability, denoted by
+$p^*(A,T)$ can be found for all pairs  $T>0$ and $A>1$.
+Moe precisely, one regards the logarithm of the
+geometric Brownian motion denoted by 
+$X^*_t$ which imlies that
+\[
+t\mapsto \log X^*_t
+\]
+is the usual additive motion.
+The requested probability $p^*(A,T)$
+is then equal to
+$q(\log A,T)$ where
+$\log A>=$ is a barrier while the additive Brownian motion
+starts at $x=$ at time zoo and moves
+in the interval $(-\infty,\log A)$. Hence one gets
+\[
+p^*(A,T)=
+\frac{2}{\pi}\cdot  \int_0^\infty\, \frac{\sin (\log A\cdot \xi)}{\xi}\cdot e^{-2\xi^2T}\, d\xi
+\]
+Equations of  this kind show that
+the use of computers is essential since it is not easy
+to
+grasp the $p^*$-function above !
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf{The lognormal distribution}}
+
+\bigskip
+
+
+\noindent
+For each $t>0$ the normal distribution with variance $t$
+ha the  frequency  function 
+\[
+g_t(x)= \frac{1}{\sqrt{2\pi t}}\cdot e^{-x^2/2t}
+\]
+To be precise one has the equality
+\[
+t= \int_{-\infty}^\infty\, x^2\cdot g_t(x)\, dx\tag{0.1}
+\]
+The reader should check (0.1) where the hint is to employ
+the variable substation $x\mapsto \sqrt{y}\cdot u$.
+The distribution  function becomes
+\[
+G_t(x)= \int_{-\infty}^x\, g_t(u)\,du
+\]
+It   is instructive too ploy  $g_t$ and $G_t$ for some different values of $t$,
+In particular to see how they change when $t$ is small respectively large,
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Take $t=1$ and seek the  higher even monuments
+\[
+{\bf{m}}_{2k}=\frac{1}{\sqrt{2\pi}}\cdot
+ \int_{-\infty}^\infty\, x^{2k}\cdot e^{-x^2/2}\, dx \quad\colon\, k\geq 2
+ \]
+A hint is to use partial integration and verify the recursion formula
+\[
+{\bf{m}}_{2k}=(2k-1){\bf{m}}_{2k-2}
+\]
+\medskip
+
+
+\noindent
+{\bf{The central limit theorem.}}
+It asserts that
+suitably normalized sum variables of a sequence of independent random variables converge to
+the normal distribution.
+The classic version was established by de Moivre in 1733 who
+considered a sequence oif independent Bernoulli variables
+$B_1,B_2, \ldots$ and proved that the sum variables
+\[
+S_N=\frac{B_1+\ldots+B_N}{\sqrt{N}}
+\]
+converge to the nomal distribution.
+More generally, if $X_1,X_2,\ldots$ are independent random variables, each with mean value zero and a finite variances
+$\{\sigma_k\}$, which by defintionis
+the square root of the second moment, then
+the sum variables
+\[
+S_N=\frac{X_1+\ldots+X_N}{\sqrt{N}}
+\]
+converge to the normal distribution if one first has
+\[
+\lim_{N\to \infty}\, \frac{\sigma_1^2+\ldots+\sigma_N^2}{N}=1
+\]
+and in addition the tails of the these variables satisfy the Lindeberg condition.
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{B. The log-normal distribution.}}
+
+
+\bigskip
+
+\noindent
+For each $t>0$
+we have the distribution function defined by
+\[
+L_t(x)=  \int_{-\infty}^{\log x}\, g_t(u)\,du\quad\colon\quad x>0\tag{B.1}
+\]
+Its frequency function $f_t(x)$ is zero when
+$x<0$ and if $x>0$ we have
+\[
+f_t(x)= \frac{1}{\sqrt{2\pi t}}\cdot \frac{1}{x}\cdot
+e^{-(\log x)^2/2t}\tag{B.2}
+\]
+The reader should check that even if $1/x$ appears as a term above,
+the expontential log-function
+\[
+x\mapsto e^{-(\log x)^2/2t}
+\]
+tends to zero more quite rapidly as $x\to 0$ a
+which implies that
+\[
+\lim_{x\to 0}\, f_t(x)=0
+\]
+It is instructive to plot the frequency function $f_t(x)$ for some different values of $t$.
+\medskip
+
+
+\noindent
+{\bf{Moment formulas}}.
+For each real number $a>0$ we consider the moment
+\[
+{\bf{m}}_a(t)=\frac{1}{\sqrt{2\pi t}}\cdot
+\int_0^\infty\, x^a\cdot f_t(x)\, dx
+\]
+The variable substation $x\mapsto e^u$ identifies  the integral by
+\[
+\frac{1}{\sqrt{2\pi t}}\cdot 
+\int_{-\infty}^\infty\, e^{ua}\cdot e^{-u^2/2t}\, du
+\]
+To compute this integral one
+rewrites the integrand and get
+\[
+{\bf{m}}_a(t)=e^{a^2t/2}\cdot
+\frac{1}{\sqrt{2\pi t}}\cdot 
+\int_{-\infty}^\infty\,  e^{-(u-at)^2/2t}\, du=e^{a^2t/2}
+\]
+We find for example the mean value
+\[
+{\bf{m}}_1(t)=e^{t/2}
+\]
+The second moment becomes
+$e^{2t}$ and hence the central variance $\sigma$ is given by
+\[
+\sigma^2={\bf{m}}_2(t)-{\bf{m}}_1(t)^2= e^{2t}-e^t= e^t(e^t-1)
+\]
+\medskip
+
+\noindent
+One has also the multiplicative version of the CLT.
+Namely, let $t>0$ and for each $N$ we get the random variable
+\[
+Q_N(t)= \prod_{k=1}^{k=[tN]}\,
+(1+\frac{B_k}{\sqrt{N}})
+\]
+Passing to logarithms we get
+\[
+\log L_N(t)=\sum_{k=1}^{k=[tN]}\,
+\log(1+\frac{B_k}{\sqrt{N}})\tag{i}
+\]
+Taylor expansion of the log-function with a remainder shows that
+(i) is equal to
+\[
+\sum_{k=1}^{k=[tN]}\,
+\frac{B_k}{\sqrt{N}}-
+\frac{1}{2N} \sum_{k=1}^{k=[tN]}+ O(N^{-1/2}
+\]
+De Moivres theorem entiuasls that this converges to
+to the normal distribution with
+variance $t$ minus $t/2$.
+It follows that
+\[
+\lim _{N\to \infty}\, Q_N(t)=e^{-t/2}\cdot L(t)
+\]
+The right hand side is a log-normal distribution whose mean-value is zero.
+\medskip
+
+
+
+\noindent
+Given a positive real number
+$\mu$ we can also consider the sequence of random variables
+\[
+Q^\mu_N(t)== \prod_{k=1}^{k=[tN]}\,
+(1+\frac{\mu}{N}+ \frac{B_k}{\sqrt{N}})
+\]
+The reader should confirm that
+\[
+\lim _{N\to \infty}\, Q^\mu_N(t)=e^{\mu t-t/2}\cdot L(t)
+\]
+So this time the mean-values
+tend to $e^{\mu t}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+\noindent
+{\bf{Remark.}}
+The PDE above implies that
+the stochastic process in continuous time
+with frequency functions $\{f_t\}$
+is a diffusion process.
+More precisely, recall that if
+$\{X_t\}$Êis a stochastic process with white  noise as 
+increment, i.e.  satisfying  the stochastic PDE:
+'\[
+dX= a(t,X)\cdot dt+ b(t,X)\cdot dW
+\]
+then the frequency functions
+$\{f_t(x)\}$ satisfy the PDE:
+\[
+\partial_t(f)=\partial_x(af)+\frac{1}{2} \cdot \partial_x^2(b^2\cdot f(x,t))
+\]
+So via (v) one has $a=x/2$ and $b=x$, i.e.the stochastic PDE becomes
+\[
+dX=\frac{X}{2}\cdot dt+ XdW
+\]
+Introducing the mean values $E(X_t)$  gives 
+the ODE;
+\[
+\frac{d}{dt}(E(X_t)= \frac{X_t}{2}\implies
+E(X_t)= e^{t/2}
+\]
+which is in accordance with the
+mean-value formula found in (0.4)
+\bigskip
+
+
+\noindent
+The solution to the parabolic PDE in (v)
+expressed by the function $f(x,t)$ has been determined
+via the initial condition that
+$X_0=1$, i.e. 
+\[
+\lim_{t\to 0} f_t(x)= \delta(0)
+\]
+where $\delta(0)$ is the nit point mass at $x=0$.
+In general one can consider an initial  condition expressed by
+a frequency function $\phi_0(x)$
+and then the PDE in (v) has the solution
+\[
+\phi(x,t)= \int\, f(x-y,t)\cdot \phi(y)\, dy\quad\colon\, t>0
+\]
+It is instructive to plot such $\phi$-functions
+when $\phi_0(x)$ is specified.
+Take as an example the case when
+$\phi_0(x)= a/2$ on an interval $[-a,a]$ while
+$\phi_0(x)=$ for $x|\geq a$.
+Since we have found a closed formula for
+the frequency functions $f_t(x)$ it is possible to
+get accurate plots of the frequency functions
+$\phi_t(x)$ when one assigns a numerical value $t>0$ 
+Let us also remark that one can pass
+to vector-valued PDE:s and also consider cases of
+several $x$-variables. With $n=2$
+one takes $x=(x_1,x_2)$ and  regards the PDE:
+\[
+\partial_t(f)= \frac{1}{2}\cdot \Delta(|x|^2\dot f)
+\]
+where $|x|^2=x_1^2+x_2^2$ and $\Delta$ is the Laplace  operator.
+With initial condition $f(0,x)= \delta(0)$ the solution
+is a radial function of $x$ which therefore admits a
+plot when $t>9$.
+The reader is invited to
+obtain this, where the hint is to
+express $\Delta$ in polar coordinates
+which reduces to a second order operator in
+$r$ with $r=|x|\geq 0$.
+Of course one can try to solve more involved PDE:s.
+Conider as an example with $n=1$ the equation
+\[
+\partial_t(f)= \frac{1}{2}\cdot \partial_x^2(x^4f)
+\]
+So here the stochastic PDE becomes
+\[
+dX= X^2\cdot dW\tag{i}
+\]
+In ¤ xx we
+use the Central Limit Theorem to
+approximate this by a stochastic
+process in discrete time
+where Monte Carlo simulations provide approximate solutions.
+Notice that the mean-values $E(X_t)=1$ for all $t>0$, i.e.
+no drift appears.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{The Central Limit Theorerm}}
+
+\bigskip
+
+
+\noindent
+Let $\{f_n(x)\}$ be  sequence of
+frequency functions, i.e. each function is non-negative and
+\[
+\int\, f_n(x)\, dx=1
+\]
+hold for every $n$,
+We get the distribution functions
+\[
+F_n(x)= \int_{-\infty}^x\, f_n(s)\,ds
+\]
+Next, consider the Gaussian density function
+\[
+g(x)= \frac{1}{\sqrt{2\pi}} \cdot e^{-x^2/2}
+\]
+and let $G(x)$ be its distribution function.
+We shall find a sufficient condition in order that
+\[
+\lim_{n\to\infty}\, \max_x\, |F_n(x)-G(x)|=0\tag{*}
+\]
+To achieve this we introduce the Fourier transforms
+\[
+\widehat{f_n}(\xi)=
+\int\, e^{-ix\xi}\cdot f(x)\,dx
+\]
+and recall that the Fourier transform
+\[
+\widehat{g}(xi)= e^{-\xi^2/2}
+\]
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Assume that for every $A>0$ one has}
+\[
+\lim_{n\to\infty}\, \int_{-A}^A\, |\widehat{f}_n(\xi)-e^{-\xi^2(2}|\, d\xi=0
+\]
+\emph{Then (*) follows.}
+\bigskip
+
+\noindent
+First we prove Theirem A under the extra assumption that
+there exists a constant $C$ such that
+\[
+|\widehat{f}_n(\xi)|\leq \frac{C}{\xi^2+1}\tag{1}
+\]
+hold for every $n$.
+Namešly when (1) holds and $A>=$, then Fouier's inversion formula
+and the triangle inequality give
+the inequality  below for every $x$:
+\[
+|f_n(x)-g(x)|\leq \frac{1}{2\pi}\cdot \int_{-A}^A\, |\widehat{f}_n(\xi)-e^{-\xi^2(2}|\, d\xi+
+\frac{1}{2\pi}\cdot \int_{|\xi|>A}\,(|\widehat{f}_n(\xi)|+e^{-\xi^2(2})\, d\xi
+\]
+By (1) the last term is majored by
+\[
+\frac{1}{2\pi}\cdot \frac{2C}{A}+
+\frac{1}{2\pi}\cdot \int_{|\xi|>A}\,e^{-\xi^2(2})\, d\xi\leq \frac{1}{2\pi A}\cdot (2C+2e^{-A^2/2})
+\]
+In particular the last term tends to zero as
+$A\to +\infty$  and then it is clear that
+(*) entails that
+\[
+\lim_{n\to \infty} \, \max_x |f_n(x)-g(x)|=0
+\]
+Thus, the sequence of frequency functions converge uniformly to
+the Guassain density. Passing to the distribution functions ne easily checks that
+(ii) gives true requested limit in Theorem A.,
+
+\medskip
+
+\noindent
+{\bf{The use of convolutions.}}
+There remains to see that
+chart the specie case when (x) holds suffices to obtain Theorem A.,
+The idea its to use suitable bubble functions. More preciously, for every
+$\delta>0$ we find a non-negative $C^\infty$-function $\phi_\delta(x)$ 
+with support in
+$[-\delta,\delta]$ and the integral
+$\int\, \phi_\delta(x)\, dx=1$.
+Put
+\[
+f^\delta _n(x)=\int\, \phi_\delta(x-y)\cdot f_n(y)\, dy
+\]
+which gives 
+\[
+\widehat{f^\delta}_n(\xi)= \hat{f}_n(\xi)\cdot \hat{\phi}_\delta(\xi)
+\]
+Since the function
+$\xi\mapsto \hat{\phi}_\delta(\xi)$ is rapifly decreasing we find in
+particular a constant $C(\delta)$ such that
+\[
+|\hat{f}^\delta _n(\xi)|\leq \frac{C(\delta)}{\xi^2+1}
+\]
+Next, we also get the convoilutions
+\[
+g^\delta(x)= \phi_\delta)*g(x)
+\]
+where
+\[
+\widehat{g^\delta}(\xi)=
+\hat{\phi_\delta}(\xi)\cdot e^{-\xi^2/2}
+\]
+From this we see that the special case applies and hence
+\[
+\lim_{n\to \infty}\, \max_x\, |F_n^\delta(x)-G^\delta(x)|=0
+\]
+Here (zz) hold for every $¦delta>0$. Now we use that
+$\phi_\delta$ is supported by $[-\delta,\delta]$ which gives
+\[
+F_n^\delta(x-\delta)\leq
+F_n(x)\leq F_n^\delta(x+\delta)
+\] 
+for all $x$ sand every $n\geq 1$, and a similar inequality hold when we take
+$G$.
+So for every $x$ one has
+\[
+F_n(x)-G(x)\leq F^\delta_n(x+\delta)-G(x)\leq
+|F_n^\delta(x+\delta)-G(x+\delta)|+ G(x+\delta)-G(x)
+\]
+and similarly
+\[
+F_n(x)-G(x)\geq F^\delta_n(x-\delta)-G(x)\geq
+|F_n^\delta(x-\delta)-G(x-\delta)|+ G(x-\delta)-G(x)
+\]
+Finally, it is clear that
+\[
+\lim_{\delta|\to 0}\max_x\, \,G(x+\delta)-G(x-\delta)= 0
+\]
+and taking arbitrary  small,l $\delta$ we get the requested limit in Theorem A.
+\bigskip
+
+
+\noindent
+{\bf{Applications.}}
+Let $X_1,X_2,\ldots $ be a sequence oif ubsepoebdebt rabdoim variuabkes where
+each $X_:k$ has mean value zero band a finite variance
+$\sigma_k$, i.e.
+\[
+\int\, x^2\cdot f_k(x)\,dx=\sigma_k^2
+\]
+hold for every $k$.
+To each $N\geq 1$ we get the sum variable
+\[
+S_N= \frac{X_1+\ldots +X_N}{\sqrt{N}}
+\]
+Let $\phi_N(x)$ be its frequency function.
+Then we have
+\[
+\hat{\phi}_N(\xi)= \prod_{k=1}^{k=N}\, \widehat{f}_n(\xi/\sqrt{N})
+\]
+Theorem A entails that
+$\{S_N\}$ converge to the normal distributions  in
+the sense of (*), provided that
+the integrals from Theorem A tend to zero for each fixed $A>0$.
+A necessarty condiot is firt thst
+one has a limit for the variance, i.e.
+\[
+\lim_{N\to \infty}, \frac{\sigma_1^2+\ldots \sigma_N^2}{N}=1
+\]
+must hold. The question arises if this condition also is sufficient.
+Examples show that this is not so.
+More precisely one
+must impose a further condition which wads
+introduced  Lindeberg in a famous work from
+1919
+which gives an almost optimal version of the
+Central Limit Theorem.
+We shall discuss Lindeberg's theorem in ¤ x. But let
+us first porove a classic versdioln of the CLt where
+we impose the ext ran condition that
+the 3rd-moments are
+bounded by a fixed constant ,i.e, suppode that
+yjrtr rcidyd as consdtsnt $C$  such that 
+\[
+\int\, |x|^3\cdot f_n(x)\, dx\leq C
+\]
+hold for every $n$.
+Now we prove that (xx) implies that
+the
+convergence criterion from Theorerm A is valid.
+Namely, with a fixed $A>0$
+we notice that
+$\xi/\sqrt{N}$ stays close to zero when
+$-A\leq\xi\leq A$.
+Hence we can use a ixck Taykoir exobasion fro
+the funcvtyions $\widehat{f}_k(\xi)$.
+More precisely, (xx) imply that
+they are of class $C^3$ and
+the maximum norms of the
+derivsties up tom order
+3 are uniofrmula bounded.
+So when $N$ is large one has
+via TayklorŠs formula with a rest-term
+\[
+\widehat{f}_k(\xi/\sqrt{N})= -\frac{\sigma_k^2}{2N}+
+\rho_k(\xi)\cdot N^{-3/2}
+\]
+where there exists a constant $C(A))$ such that 
+\[
+|\rho_k(\xi)|\leq \frac{C(A)}{N^{3/2}}\quad\colon\quad -A\leq \xi\leq A
+\]
+for every $k$.
+From (x-xx) and (x) it follows that
+\[ 
+\sum_{k=1}^{k=N}\, \log\, f_k(\xi/\sqrt{N})\to -\xi/2
+\]
+holds uniformly on the interval $[-A,A]$.
+Passoing to the exponent ails we get
+\[
+\lim_{N\to \infty}\,
+\widehat{\phi}_N(\xi)-e^{-\xi^2/2}=0
+\]
+holds uniformly in the interval $[-A,A]$.
+This gives  in particular  (*) and hence Theorem A entails that
+the random variables $\{S_N\}$ converge to the normal distribution in
+the
+strong sense expressed by (A.1).
+\bigskip
+
+
+\noindent
+The CLT holds in particular when
+$\{X_k\}$ are independent  Bernoulli variables
+In this special case one cash also 
+get a quite sharp upper bound for rthe rate of convergence.
+More precisely, there exists a constant $C$such that
+\[
+\max_x\, |\Phi _N(x)- G(x)|\leq \frac{C}{\sqrt{N}}
+\]
+where $\{\Phi_N\}$ are rthe distribution funtyions of
+the sum variables in
+(x) when each $X_l$ is a Bernoulii variable.
+let us remark that
+estimates for $C$ were established by Gustav Essen in his 
+doctor's  thesis  from Uppsala in 1942, with
+Arne Beurllng as adviser.
+With the power of today's  computer one can perform very extensive
+Monte Carlo simulations and
+in this way it is tempting to try to
+predict some
+value of the constant $C_*$ for which
+(*) hold for very  large $N$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{An optimization problem}}
+
+\bigskip
+
+
+\noindent
+Let $[0,T]$ be a time interval
+and $U$ is a utility function, i.e. it is defined
+for $x\geq 0$ and striclty increasing and stricly concave.
+If an invidual has a capital $K_0$ st time
+$t=0$ and $t\mapsto c(t)$ is the rate of cunsuyption, then
+t
+we get the function $K(t)$ which satisfies the ODE:
+
+\[
+\dot K(t)= r\cdot K(t)-c(t)
+\]
+where $r>0$ is an interest rate.
+We seek a $c$-function in order to maximise
+\[
+\int_0^T\, U(c(t))\, dt+e^{-rT}K(T)\tag{*}
+\]
+Above the last term is the discounted capital at time
+$T$, i.e. it appears as a salvage value.
+\medskip
+
+
+\noindent
+{\bf{Solution}}
+The maximum is attained when
+the time  dependent $c$-function satisfies  the equation
+\[
+U'(c(t))= e^{-rt}\quad\colon\quad 0\leq t\leq T(i)
+\]
+\medskip
+
+\noindent
+{\bf{Example.}}
+Tajke
+\[
+U(c)=2A\cdot \sqrt{c}
+\]
+where $A$ is a positive constant.
+Then (i) holds with
+\[
+c(t)=A^2\cdot e^{2rt}
+\]
+\medskip
+
+
+\noindent
+{\bf{Exerixe.}}
+Find the maximum in (*) with $8t9$ given as above.
+Next, in this solution it may occur thst
+$K(T)<0$. This leads to a restriited optiimization problem
+where one in addition resuires thst
+$K(T)\geq 0$.
+For example, the solution above gives
+$k(T)<0$ if $K_0$ is rsther small.
+The reader should find the solution to the OCT
+in this restricted case.
+Next, we cn also discount utiliity and consider ome
+positive constant $\mu$ and seek the maximum of
+\[
+\int_0^T\, e^{-\mu t}\cdot U(c(t))\, dt+e^{-rT}K(T)\tag{**}
+\]
+Tge reader is invited to determine the optimal consmuption
+$c(t)$.
+Let us finally remark that
+we later on will consider a stochastic situstion where the chnge of
+$K(t)$ is not only governed by a fixed interest rate, but
+may also be disposed in a risky asset.
+In this stochastic optimization one seeks a strsgey of time dependent consumption over
+the time
+interval $[0,T]$ in order to maximise utility  plus the salvage value at
+$t=T$.
+Of course, here the analysis becomes
+more involved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+\centerline{\bf{About linear ODE:s}}
+
+\bigskip
+
+
+\noindent
+We shall discuss linear ODE:s of order one or two.
+The independent variable is denoted by $t$ and
+in appplications  regarded as a time variable.
+A first example is the exponential function
+$y(t)= e^t$ which solves the ODE:
+\[
+\dot y= y\tag{*}
+\]
+where $\dot y$ denotes the time derivative
+$\frac{dy}{dt}$.
+It is  important to grasp  solution to
+(*).
+Without knowing about the expoential funtion one  solves (*) by a series expansion.
+Namely, suppose thst $y(t)$ solves (*) with
+the initial condition $y(0)=1$ and where the function has a series expansion
+\[
+y(t)=1+c_1t+c_2t^2+\ldots
+\]
+Since the time derivative of $t^k$ is $kt^{k-1}$ for every positive integer
+we see that (*) gives the recursive fomulas:
+\[
+k\cdot c_k=c_{k-1}\quad\colon\, k\geq
+1
+\]
+By an induction over $k$ this gives
+\[
+c_k= \frac{1}{k !}
+\] which mesns that
+the solution has the series expansion
+\[
+y(t)= 1+\sum_{k=1}^\infty\frac{t^k}{k !}\tag{0.1}
+\]
+This series represents  by definition the exponential  function
+$e^t$m where $e$ is Neper's constant  found by 
+
+\[
+e= \lim_{n\to \infty}\, (1+1/n)^n\tag{0.2}
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+Let us briefly recall  how Isaac Newton and his collegue John Wallis at
+Oxford University
+perceived the result above around 1680.
+First  one defines a function
+$L(x)$ when $x\geq 1$ by
+\[
+L(x)=\int_1^x\, \frac{ds}{s}
+\]
+Thus, following Newton we have taken the primitive function of
+$1/x$ when $x\geq 1$.
+Notice that $L(1)=0$
+and the $L$-function is strictly increasing with the derivative
+\[
+L'(x)= \frac{1}{x}
+\]
+Next, let $x$ snd $y$ be $>1$.
+Then
+\[
+L(xy)=\int_1^x\, \frac{ds}{s}+
+\int_x^{xy}\, \frac{ds}{s}
+\]
+By a variable substituion the reader checks that the last integral is equal to
+$L(y)$, Hence
+\[
+L(xy)=L(x)+L(y)\tag{i}
+\]
+hold for every pair $x,y>1$.
+Next, one verifies easily that
+\[
+\lim_{x\to \infty}\, 
+\int_1^x\, \frac{ds}{s}=+\infty
+\]
+This means that the range  of the $L$-function is
+$[0,+\infty)$Êand since it is strictly increasing we find
+an inverse function denoted by $E$. So here
+$[0,+\infty)$ is the domain of definition for
+$E$ and
+\[
+E(L(x))= x\quad\colon\, x\geq 1\tag{ii}
+\]
+The $e$-number will   now be defined by
+the equation
+\[
+1= \int_1^e\, \frac{ds}{s}=L(e)\tag{iii}
+\]
+Next, using (i) and (ii) the reader can check that
+the $E$-function satisfies
+\[
+E(t+s)= E(t)E(s)\tag{iv}
+\]
+for every pair of non-negative resl numbers.
+Keeping $t$ fixed while $s\to 0$
+it follows that
+\[
+\dot E(t)= \lim_{s\to 0}\frac{E(t+s)-E(t)}{(s}=
+E(t)\cdot  \lim_{s\to 0}\frac{E(s)-1}{(s}
+\]
+From the construction of $E$ via (ii) the reader can finally check that
+\[
+ \lim_{s\to 0}\frac{E(s)-1}{s}=
+ \lim_{x\to 1}\,\frac{1}{1-x}\cdot \int_1^x\, \frac{ds}{s}=1
+ \]
+ Hence the $E$-function satsfies the ODE from (*)-
+ \medskip
+
+
+\noindent
+Finally, from the construction of $e$ above
+and the functional equation for the $E$-function expressed via
+(iv) the reader should confirm that
+\[
+E(t)= e^t
+\]
+where the right hand side as a function of $t$
+is found via  rules for exponential  of real numbers
+with $e$ kept as a base while the
+exponentials  are constructed for positive values of
+$t$.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Show via formulas for binomial expansions that
+when
+we define the function $y(t)$ via (0.1), then it satisfies the functional equation
+\[
+y(t+s)= y(t)y(s)
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+When $x\geq 1$ one puts
+\[
+\log(x)=L(x)
+\]
+i.e. the log-function is the primitive of $1/x$.
+Show that $\log x$ has a series expansion
+\[
+\log (1+s)= s-s^2/2+s^3/3-s^4/4+\ldots
+\]
+which converges when $0<s<1$.
+One can also define the log-function when
+$0<x<$ by the equation
+\[
+\log x= -\log( x^{-1})
+\]
+Show that when  $0<s<1$ this gives
+the series expansion
+\[
+\log (1-s)=-[ s+s^2/2+s^3/3+s^4/4+\ldots
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Use the above to show thst
+with $e$ defined via (iii)n above it is equal to Neper's limit in (0.2).
+\bigskip
+
+
+\centerline{\bf{1. First order ODE:s}}
+\bigskip
+
+\noindent
+Let $a(t)$ be a real-valued function defined for
+$t\geq 0$.
+Now one seeks a function $y(t)$ where
+$y(0)=1$ and
+\[
+\dot y= a\cdot y\tag{1.1}
+\]
+Suppose thst $a(t)$ has a series expansion
+\[
+a(t)= a_0+a_1t+a_2t^2+\ldots
+\]
+An example is when the series is finite, i.e. when
+$a$ is a polynomial.
+Now $y$ is found via a series
+\[ 
+y(t)= 1+c_1t+c_2t^2+\ldots
+\]
+Namely, the reader can check that
+the $c$-coefficients satisfy the reursive equations
+\[
+k\cdot c_k=a_{k-1}+ a_{k-2}c_1+\ldots +a_0\cdot c_{k-1}\tag{1.2}
+\]
+Here the $c$-numbers become uniquely determined
+which means that the solution to
+the ODE in (1.1) is unique.
+\medskip
+
+\noindent
+One can solve (1.1) in another way using
+exponential functions.
+Namely, if we seek $y$ in the form
+\[
+y(t)= e^{f(t)}
+\] 
+then (1.1) means that
+\[
+\dot f= a
+\]
+i.e. $f$ is a primitive function of
+$a$. With the inital condition $y(0)=1$ this means that we take
+the primitive
+function
+\[ 
+A(t)= a_0\cdot t+a_2\cdot t^2/2+\ldots
+\]
+and the requested $y$-solution becomes
+\[
+y(t)= e^{A(t)}
+\]
+\bigskip
+
+
+\noindent
+{\bf{1.2 The equation $\dot y= af+b$.}}
+Let $b(t)$ be another function of $t$
+defined for $t\geq 0$.
+One seeks $y$ which solves the equation above with
+initial condition $y(0)=0$.
+With $A(t)$ as above we try a solution of the form
+\[
+y(t)= e^{A(t)}\cdot f(t)
+\]
+Then
+\[
+\dot y= a\cdot y+ e^{A(T)}\cdot \dot
+f
+\]f
+Hence $y$ gives the requested solution if
+\[
+e^{A(T)}\cdot \dot f= b
+\]
+We conclude that
+a solution to the inhomogenous equation
+is given by
+\[
+y(t) =e^{A(t)}\cdot \int_0^t\, e^{-A(s)}\cdot b(s)\, ds
+\]
+
+
+\bigskip
+
+
+\centerline{\bf{2. Second order ODE:s}}
+\bigskip
+
+\noindent
+Given a pair  of time dependent functions
+$a,b$ we seek $y(t)$ which satisifes
+\[
+\ddot y=a\dot y+ by\tag{2.1}
+\]
+To solve (2.1) one proceeds as follows.
+First we regard a first order system where one seeks a pair 
+$f,g$ so that
+\[
+\dot f=g\quad\&\quad \dot g= ag+bf\tag{2.2}
+\]
+The reader can check that if $f,g$ satisfy the system
+(2,2) then
+$f$ alone satisfies (2.1).
+Now the idea is to employ $2\times 2$-matrices
+and get solutions to (2.2) via series expansions exactly
+as 
+for first order ODE:s.
+Namely, let us introduce the $t$-dependent $2\times 2$-matrices
+\[
+A(t)= 
+\begin{pmatrix}
+0&1\\a&b
+\end{pmatrix}
+\]
+Now we seek a $t$-dependent $2\times 2$-matrix
+$\phi(t)$ where $\Phi(0)= E_2$ is the identity matrix
+and
+\[
+\dot \Phi= A(t)\dot \Phi(t)
+\]
+We can find $\phi$ via
+a reursion. Namely, expanding the functions
+$a,b,c$ as a series of $t$ we can write
+\[
+A(t)=A_0+tA_1+t^2A_2+\ldots
+\]
+where $\{A_k\}$ are constant  $2\times 2$-matrices.
+Then $\phi$ is found by a  series
+\[
+\Phi(t)= E_2+t\cdot \Phi_1+t2\cdot \Phi_2+\ldots
+\]
+where
+the constant  matrices
+$\{\Phi_k\}$ satisfy
+\[
+k\dot \Phi_k=A_{k-1}+ A_{k-2}\Phi_1+\ldots+A_0\Phi_{k-1}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+One refers to $\Phi(t)$ as the fundamental  solution to
+the systrm defined via the matrix-valued function
+$A(t)$.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Introducing the elements of the $\Phi$-matrix we get four time dependent functions
+where
+\[
+\Phi(t)= \begin{pmatrix}
+\phi_{11}&\phi_{12}\\
+\phi_{21}&\phi_{22}
+\end{pmatrix}
+\]
+\medskip
+
+
+\noindent
+Show that the  function
+\[
+y_1(t)= \phi_{11}(t)
+\]
+satisfies  (2.1) where $y_1$ satisfies the  initial
+conditions
+\[
+y_1(0)= 1\quad\&\quad \dot y(0)=0
+\]
+Show also that the function
+\[
+y_2(t)= \phi_{12}(t)
+\]
+satisfies  (2.1) where $y$ satisfies the  initial
+conditions
+\[
+y_2(0)= 0\quad\&\quad \dot y_2(0)=1
+\]
+These two functions constitute a base for the 2-dimensional solution space to
+the ODE in (2,1) where
+a general solution $y$ with intial conditions
+$y(0)=\alpha$ and $\dot y(0)=\beta$ is found
+by
+\[
+y=\alpha\cdot y_1+\beta\cdot y_2
+\]
+
+\medskip
+
+\noindent
+{\bf{3. Inhomogeneous equations.}}
+Given a third function $c$ we seek $y$ so that
+\[
+\ddot y= a\dot y+by+c\tag{3.1}
+\]
+It turns out that (3.1)
+can be solved by a similar procedure as for 1st order ODE:s.
+To achieve this one
+first proves thst
+the time dependent fundamental solution
+give invertible matrices for every $t$.
+To see this we use the product formula for
+determinants. This implies that
+\[
+\frac{d}{dt}(\det \Phi)=\det A\cdot \det \Phi
+\]
+So the real-vslued function defined by
+$g(t)=\det\Phi(t)$ satisfies the ODE:
+\[
+\dot g= \det A\cdot g
+\]
+Recall that $\phi_2(0)= E_2$ which gives
+$\det\phi(O)=1$ and hence $g(0)=1$. It follws that
+
+\[
+\det\phi(t)= e^{\int_0^t\, \det A(s)\, ds}
+\]
+hold for every $t$. So every determinant is $\neq 0$
+and hence the matrices $\Phi(t)$ are invertible.
+\bigskip
+
+
+\noindent
+Now we can apply the inverse $2\times 2$-matrices
+$\Phi^{-1}(t)$ to time dependent 2-vectors.
+in this way we
+get for example a vector valued funvtion defined by
+\[
+t\mapsto V(t)= \int_0^t\, \Phi^{-1}(s)\begin{pmatrix} c(s)\\0\end{pmatrix}
+\, ds
+\]
+Now we  apply $\Phi(t)$ to this vector-valued function
+and regsrd
+\[
+t\mapsto W(t) \Phi(t)(V(t))
+\]
+Rules for differentation give
+\[
+\frac{dW}{dt}= 
+\dot  \Phi(t)(V(t))+\Phi(t)(\dot V(t))=
+A(t)\Phi(t)+ \begin{pmatrix} c(t)\\0\end{pmatrix}
+\]
+\medskip
+
+\noindent
+{\bf{Exericse.}}
+Use the above to express a solution to
+(3.1) which satisfies $y(0)= \dot y(0)=0$ where
+the two  solutions $y_1(t)$ and $y_2(t)$ can be used.
+\medskip
+
+\noindent
+{\bf{A special case.}}
+Cnosder the ODE
+\[
+\ddot y+y=c(t)
+\]
+where $c(t)$ is a givn function.
+With $c=0$ the teo homogeneous solutions $y_1$ and $y_2$
+are known, i.e. the reader can check that
+\[ 
+y_1(t)=\cos t\quad\&\quad y_2(t)=\sin t
+\]
+To solve (x) we should firdt find the fundamental solution
+$\phi(t)$. To begin with we notice that the matrix $A(t)$ from (xx) 
+is constant and becomes
+\[
+A(t)=A= \begin{pmatrix}0&1\\-1&0 \end{pmatrix}
+\]
+Now $\Phi(t)$ is given by
+rhe exponetial  matrix-valued function
+\[
+t\mapsto e^{tA}= E_2+tA+t^2A^2/2 !+\ldots
+\]
+In order to evaluate the sum above we first notice that
+\[
+A^2=-E_2
+\]
+i.e. minus the identy matrix.
+Recalling the poer series formulas for the cosine- and the sine funvtion
+the reader can check thst
+\[
+\Phi(t)= \begin{pmatrix}\cos t&-\sin t  \\\sin t&\cos t \end{pmatrix}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}} Compute the inverse matrix
+$\phi^{1}(t)$ and use this to
+find the solution to the inhomogeneous equation
+(xx) where
+$y(0)=\dot y(0)=0$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{Some further examples.}}
+
+\bigskip
+
+
+\noindent
+Of course one can try to solve a second order ODE directly.
+Let us give some examples. Consider the ODE:
+\[
+\ddot y= ty\tag{i}
+\]
+and seek a solution $y(t)$ with initial conditions
+$y(0)=0$ and $\ddot y(0)=1$.
+To find $y(t)$ we consider a power series expansion
+\[
+y(t)= t+c_2t^2+c_3t^3+\ldots
+\]
+Then (i) holds if the $c$-numbers satisfy
+the recursive equations
+\[
+k(k-1)c_k=c_{k-3}\quad\colon\quad k\geq 3
+\]
+while the reader csn check that $c_2=c_3=0$.
+We
+find for example
+\[
+c_4=\frac{1}{2}\quad\&\quad c_7= \frac{1}{42} c_4
+\]
+and so on. The solution $y(t)4Êis not expressed by
+an "elementary function", i.e. not realised by
+thod which occur in ordinary calculus where
+a list of special funtions
+appesr for historic  reasons.
+Without knowing the exact doluion one csn st least
+derive propeties of $y(t) from the ODE in (i). For example,
+since $\dot y(0)=1$ it follows that
+$\ddot y(t)>0$ and hence $y(t)$ is a strictly increasing and convex
+funvtion of $t$. Using a computer one csn plot
+$y(t)$ over an interval $[0,T]$ snd confirm this observation.
+\medskip
+
+
+\noindent
+{\bf{Back-shooting.}}
+Above one gets the eries soluion from the
+two initial conditions
+$y(0)=$ snd $\dot y(0)=1$.
+Suppose now that we only impose  $y(0)=0$ snd
+instead of prescribing $\dot y(0)$ we
+fix some $T>0$ and require  thst
+$y(T)=A$.
+So on the  interval $[0,T]$ we prescribe end-values of 
+the $y$-function.
+It turns out that there exists a unique positive number
+$a$ with
+$\dot y(0)=a$ for which
+$y(T)=A$.
+To find - or st least approximate $a$ numerically i not
+an easy affair.
+Using a computer one can employ experiments to
+approach the  solution. Namely, start with
+some initial value $\alpha$ for $\dot y(0)=\alpha$ and plot this solution
+and inspect if the value at $t=T$ is $>$Êor $<$ than $A$. If it is
+$<A$ one trie a new initial  value for $\dot y(0)$ which is larger than
+$\alpha$, and so on.
+In this way it is always possible to
+attsin a solution where $y(T)$ is very close to $A$.
+
+
+\newpage
+
+
+
+\centerline{\bf{Non-linear ODE:s}}
+
+\bigskip
+
+\noindent
+An example is the first order ODE:
+\[
+\dot y= y^2
+\]
+Even  though the right hand side is a polynomial of $y$, the
+solution has a finite life-span. More precisely, let us find 
+the  solution defined for $t\geq 0$ with initial  value $y(0)=1$.
+The ODE csn be written as
+\[
+\frac{dy}{y^2}= dt\implies
+-\frac{1}{y}= t+C
+\] 
+for some constant $C$.
+With $y(0)=1$ it follows that
+\[
+y(t)=\frac{1}{1-t}
+\]
+This solution explodes when
+$t\to 1$, for then $y(t)\to +\infty$.
+More generally, consider an ODE of the form
+\[
+\dot y= P(y)
+\]
+where $P(y)$ is a polynomial of $y$
+which is $>0$ when $y\geq 0$.
+An example could  be
+\[
+\dot y= (y+1)(y+2)\tag{0.1}
+\]
+with  initial value $y(0)=0$.
+Via numerical experiments on a computer one csn
+approximate the life-span, i.e find the postive  number
+$t^*$ for which $y(t)$ exists on
+$[0,t^*)$ while $y(t)\to+\infty$ as $t\to t^*$.
+At the same time one can solve the ODE. Namely,  use the
+algebraic identity
+\[
+\frac{1}{(y+1)(y+2)}=
+\frac{1}{y+1}-\frac{1}{y+2}
+\]
+Hence (0.2) has a
+solution 
+\[
+\log (1+y)-\log(2+y)= t+C
+\]
+for a constant $C$.
+Since $y(0)=0$ we get $C=-\log 2$
+and get
+\[
+\log\frac{1+y}{2+y}= t-\log 2\implies t^*= \log 2
+\]
+It is instructive to check this theoretical discovery
+via the computer  where plots approximate the life-span $t^*$.
+\medskip
+
+
+\noindent
+{\bf{Another example.}}
+Consider the ODE:
+\[
+\dot y= (y+1)(y^2+1)
+\]
+and seek the life span when
+$y(0)=0$.
+To get the solution one uses Newton's classic decomposition 
+which gives constants $A;B;C$ so that
+\[
+\frac{1}{(y+1)(y^2+1)}=
+\frac{A}{y+1}+ \frac{By+C}{y^2+1}
+\]
+A computation shows that 
+\[
+A=1/2\,\, \&\,\, B=-A\&\,\, C=A
+\]
+Friom this the reader can deduce thst the solution becomes
+\[
+\frac{1}{2}\dot \log (y+1)-
+\frac{1}{4}\log (1+y^2)+\frac{1}{2}\cdot \arctan y=
+t
+\]
+for a constant $c$.
+Notice th‡t the left hand side can be written 
+as
+\[
+\frac{1}{4}\cdot \log\, \frac{y^2+2y+1}{y^2+1}+
++\frac{1}{2}\cdot \arctan y
+\]
+Now the $\arctan$-function tends to $\pi/2$ as
+$y\to +\infty$. From this the reader should dduce that
+the life span becomes
+\[ 
+t^*=\frac{\pi}{4}
+\]
+Again it is instructivle to check this result by numerical experiments  on
+a computer, i.e. simply plot solutions to
+the given ODE where the length of the time interval
+is chosen in a careful way until
+one gets an "explosive character" of solutions when
+$t\to \pi/4$.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+Above one gets formulas for $t^*$ since we have started
+with relatively simple ODE:s.
+in general one cannot get explciit solutions and must therefore rely
+upon numerical experiments.
+Consider as an example the ODE
+\[
+\dot y= y^2+1+3ty+t^2
+\]
+with
+initial condition $y(0)=0$.
+The reader is invited to
+approximate the life span by numerical experiments.
+
+
+\bigskip
+
+
+\noindent
+{\bf{A problem for Homework.}}
+In general one can consider a polynomial $P(y)$ where we
+assume that $P(y)>0$ for every $y\geq 0$.
+So the zerios of $P$ are either strictly negative real numbers or
+complex, where complex roots
+$a+ib$ appear in conjugate pairs.
+Under the assumption that
+the zeros of $P$ are all simple one has a  decomposition
+\[
+\frac{1}{P(y)}=
+\sum\ \frac{C_\nu}{y+c_\nu}+ \sum\, \frac{A_k+B_k y}{(y-a_k)^2+b_k^2)}
+\]
+where $-c_1,\ldots,   -c_m$ are the real negative roots
+and the conjugate complex roots are
+$a_k+ib_k$ and $a_k-ib_k$.
+The solution to $\dot y= P(y)^{-1}$ with $y(0)=0$
+becomes
+\[
+y(t)= \sum\, C_\nu\cdot \log (y-c_\nu)+
+\sum \,B_k\cdot \log \sqrt{y-a_k)^2+b_k^2)}+
+\sum\, A_k\cdot \arctan((y-a_k)^2+b_k^2)= t+D\tag{i}
+\]
+for a constant $D$ determined by $y(0)=0$.
+Next, by a general fact when
+$P^{1}$ is decomposed as above one has
+\[\sum\, C:\nu+\sum \, B_k=0
+\]
+From this it folows that the sum in (i)
+converges to
+\[
+\frac{\pi}{2}\cdot \sum A_k
+\]
+when $y=y(t)\to+\infty.$.
+Hence the life span $t^*$ is given by 
+\[
+t^*= \frac{\pi}{2}\cdot \sum A_k-C\tag{ii}
+\]
+Using a comuter one csn perform epxeriments via
+various polynomials $P(y)$.
+The reader csn for example analyze the case when
+\[
+P(y)= y^5+y+1
+\]
+and use the computer to
+find apprximate eros of $P$ and the constsnts which sppesr
+in (i) . After one can check (ii) numerically, i.e. a first stsge is simply to plot solutiond to the ODE and recognize at which time value the
+solution explodes.
+Nticie also thst in a converse way the numerial solution to the ODE
+gives insight sbout the algebraically determined numbers in
+(i).
+let us remark thst the polynomial $P(y)$ above was chosen to
+illustrate a  deep discovery due to   Niels Henrik Abel.
+In 1823 he demonstrated that the roots of
+this equation of degree 5 cannot be found by extracting roots
+and radicals as in the case for algebraic equation of
+degree 2,3 or 4.
+So whether the algebraically minded student  likes it or not, it is
+necessary to employ numerical analysis in almost  all situations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf{A general existence theorem for ODE:s}}
+\bigskip
+
+
+\noindent
+Let $f(x,y)$ be a real-valued and continuous function  defined
+on the closed rectangle $\square$:
+\[
+0\leq x\leq A\quad\&\quad -B\leq y\leq B
+\]
+Put
+\[
+M=\max_{x\in\square}\, |f(x,y)|
+\]
+We shall assume that
+\[
+AM\leq B\tag{0.0}
+\]
+Under these conditions there exists a solution
+$y(x)$ to the ODE
+\[ 
+y'(x)= f(x,y(x))\tag{0.1}
+\]
+which is defined for $0\leq x\leq A$ and where
+$y(0)=0$ is the initial condition.
+Before we enter the proof we give an exampe which shows
+thst such a solution in general is not unique.
+Namely, consider the ODE;
+\[
+y'= y^{1/3}
+\]
+So here $f(x,y)= y^{1/3}$ onlyl dpends upon $y$.
+Now we get a solution defined for $x\geq 0$ by
+\[
+y(x)=\frac{2}{3}x^{3/2}
+\]
+More genrally for every positive number
+$a$ we find a solution $y_a(x)$  which is identically zero when
+$0\leq x\leq a$ while
+\[
+y(x)= \frac{2}{3}(x-a)^{3/2}\quad\colon\quad x\geq a 
+\]
+To ensure uniqueness of a solution to (0.1) we impose
+an extra condition. Namely, that there exists a constant
+$C$ so that
+\[
+|f(x,y_1)-f(x,y_2)|\leq C\cdot |y_1-y_2|\quad\colon\quad
+0\leq x\leq A\quad \&\,\, -B\leq y_1,y_2\leq B\tag{0.2}
+\]
+\medskip
+
+
+\noindent
+{\bf{Theorem.}}
+\emph{When  (0.2) holds there
+exists a unique solution $y(x)$ to the ODE
+wirh $y(0)=0$ and for every $0\leq x\leq A$ one has} 
+\[
+|y(x)|\leq
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+This general   result  is attributed
+to Picard whose classic text-books 
+contain a wealth of results about ODE:s.
+Prior to Picard one treated the case when
+$f(x,)$ is a polynomial, or more generlly an analytic
+function of t $x$ snd $y$. Many specific situations, where 
+the classic analyris from Newton's famous text-books from 1665 
+confirmed  the existence and uniqueness in Picard's theorem.
+Another, and for numerical applications important
+study was performed by Euler who found approximate solutions
+by decomposition  the $x$-interval and associated  
+difference equations.
+Euler's approximate solutions were  later been refined by
+several authors. Conclusive.
+- and for numerical approximations  - 
+fundamental results were established by Germund Dahlquist
+whose Phd-thesis from Stockholm university in 1958
+is a veritable classic.
+Here we shall not try to expose the
+analysis by Dahlquiet. Today's  student can profit  upon
+implemented
+programs which solve ODE:s numerically via
+fast algorithms.
+\medskip
+
+
+\noindent
+{\bf{About the proof of Picard's theorem.}}
+It will 
+be presented during the lectures in the course and 
+detsils will be included 
+as Homework
+where answers which  those  provide a "nice details  " gets credit for
+the exam.
+\bigskip
+
+\noindent
+{\bf{Pertubations.}}
+Picard's theorem yieds both existence and uniqueness
+and has several  consequences. Let us expose one of them.
+Consider the fsmily $\mathcal F$ of all
+functions $f(x,y)$ which satisfy  (0.0 )  in
+the given rectsngel $\square$, and 
+for  each $f$ in this family there also exists a Lipschitz constant 
+$C(f)$ in (0.2) which  can depend on $f$.
+To each $f\in\mathcal F$ we get the unique solution
+denoted by $y_f(x)$.
+Now
+\[
+f\mapsto y_f
+\]
+is a functional  whose domain of definition is
+$\mathcal F$ where each  $f$ produces the unique solution
+$y_f$.
+One expects continuity propertites of this map.
+The actual proof of Picard's Theorem   reveals 
+why "nice properties" hold.
+In paricular there exists a certain differential
+which we begin to explain. Consider a fixed
+$f\in\mathcal F$ where we assume that
+its maximum norm $f$ is such that one has a strict inequslity
+\[
+AM<B
+\]
+Then, for every Lipshitz function $\phi$ on $\square$, it follows
+that $f+\epsilon\cdot \phi$ belongs to
+$\mathcal F$ when $\epsilon$ is sufficiently  small.
+So for small $\epsilon$ we find
+the solution
+\[
+y(f+\epsilon\cdot \phi)
+\]
+It turns out that there exists a function
+$\rho(x)$ defined on $[0,A]$
+so that
+\[
+\lim_{\epsilon  \to 0}\, \max_{0\leq x\leq A}\,
+\bigl| \frac{y(f+\epsilon\cdot \phi)(x)-y(f)(x)\bigr|}{\epsilon}- \rho(x)
+\bigr|=0
+\]
+Moreover, $\rho(x)$ is the unique  solution to the linear ODE
+\[
+\rho'(x)=\phi(x)\cdot f'_y(,y(x))
+\]
+
+\bigskip
+
+
+\centerline{\bf{The ODE $\dot y=f(t,x,y)$.}}
+
+\bigskip
+
+\noindent
+In many applications one
+starts from a function $f(t,x,y)$ if 3 variables.
+Here $t$ is regarded as a time parameter.
+Given a time dependent function
+$x(t)$ one seeks $y(t)$ which solves the ODE
+\[
+\dot y(t)= f(t,x(t),y(t))\tag{i}
+\]
+Keeping $f$ fixed one can   solve this ODE for 
+different   time dependent $x$-functions.
+Under suitable  Lipschitz cionditions one
+gets unique solutions to (i), and again one can
+analyze pertubed solutions when
+$x(t)$ is replaced by
+functions of the form 
+\[
+t\mapsto x(t)+\epsilon\cdot \phi(t)
+\]
+Keeping $\phi$ fied we get a solution
+$y_\epsilon(t)$ which satisfies the ODE
+\[
+\dot y_\epsilon (t)= f(t,x(t)+\epsilon\cdot \phi(t), ),y_\epsilon(t))\tag{ii}
+\]
+It turns out that there exists a limit function
+\[
+\rho(t)= \lim_{\epsilon\to 0}\, 
+\frac{y_\epsilon(t)-y(t)}{\epsilon}
+\]
+where $\rho$ satisfies the linear ODE:
+\[
+\dot\rho(t)= f'_x(t,x(t),y(t)\cdot \phi(t)+
+f'_y(t,x(t),y(t))\cdot \rho(t)\tag{iii}
+\]
+This equation is  often used 
+in optimal control theory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+Let $n\geq 2$ and $A=(a_{pq})$ is an $n\times n$-matrix
+whose elements in general are complex numbers.
+The determinatn is defined by
+\[
+\det A= \sum\,\text{sign}(i_1\ldots i_n)\cdot a_{1i-1}\cdots
+\]
+To each pair $1\leq  p,q\leq n$
+we obtain an $(n-1)\times(n-1)$-matrix by removing the $p$.th row and the $q$:th column.
+it ios deboted by $A[p,q]$.
+Now $\det(A)$ can be cpomuted via an exanbiusion along
+rows. For every $1\leq p\leq n$ this entials that
+\[
+\det(A)=\sum_{q=1}^{q=n}\, a_{p,q}\cdot (-1)^{p+q}\cdot \det(A[p,q])
+\]
+We degbiun e the $n\times $n-matrix
+$\mathfrak{C}_A$ with
+elements
+\[
+c_{pq}= (-1)^{p+q}\cdot \det A[q,p]
+\]
+and refer to $\frak{C}_A$ as Cremer's matrix associated to $A$.
+From (i-ii) one has
+\[
+A\cdot \frak{C}_A= \frak{C}_A\cdot A=
+\det A\cdot E
+'\]
+where $E$ is the dientity matrix.
+Next, let $s$ be a variable and wiuth $A$ kepts fixed we put
+\[
+C(s)= \frak(C)_{sE-A}
+\]
+QWe have also the characterstic piolynomial
+\[
+\phi(s)= \det(sE-A)
+\]
+which has degree $n$.
+With these nottiuons
+\[
+(sE-A)\cdot C(s)= \phi(s)\cdot E
+\]
+Next, let
+\[
+ r^*=\max\, \lambda
+\]
+wiuth the maximum taken over the roots of $\phi$.
+Then the inverse matrix $/(sE_a)^{-1}$ exists when $|s|>r^*$
+and (xx) gives
+\[
+(sE-A)^{-1}= \frac{1}{\phi(s)}\cdot C(s)
+\]
+Letr us now assume that
+$\phi$ has a simple root at $s=r^*$ while
+the absolute values of the remaning roots are all $\geq r_*$
+for some $r_*<r^*$.
+We can write
+\[
+\phi(s)= (s-r^*)\psi(s)
+\]
+and newton'Šs fractional series
+gives
+\[
+\frac{1}{\phi(s)}= \frac{1}{(s-r)\cdot \phi'(r)}+\frac{g(s)}{\psi(s)}
+\]
+where $g(s)$ is a polynomial of degree $\leq n-2$.
+It follows that
+\[
+(sE-A)^{-1}=\frac{1}{(s-r)\phi'(r)}\cdot C(s)+
+\frac{g(s)}{\psi(s)}\cdot C(s)
+\]
+next, we have the neumann series expansion
+\[
+(sE-A)^{-1}= \frac{E}{s}+ \frac{A}{s^2}+
+\]
+At the same time one has the geometric series expansion
+\[
+\frac{1}{s-r}= \frac{1}{s}+\frac{r}{s^2}+\ldots
+\]
+Next, since the rooots of $\psi(s)$ stay in the disc
+$|s|\leq r_*$, it follows that one has a expansion
+\[
+\frac{g(s)}{\psi(s)}\cdot C(s)= \sum\, \frac{B_k}{s^{k+1}}
+\]
+which converges in the exterior disc $|s|>r_*$.
+Inserting $s=r$ in (xx) the expnaions abopve give
+\[
+A^k=r^k\cdot C(r)/\phi'(r)+ B_k
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{¤ 0. The normal distribution.}}
+
+\bigskip
+
+\noindent
+The normal distribution
+is defined by the function
+\[
+\mathcal N(x)= \frac{1}{\sqrt{2\pi}}\cdot \int_{-\infty}^x\, e^{-t^2/2}\, dt\tag{0.1}
+\] 
+The derivative becomes
+\[
+{\mathfrak{g}}(x)=  \frac{1}{\sqrt{2\pi}}\cdot e^{-x^2/2}
+\]
+This is an even function of $x$ and
+one has
+\[
+\int_{-\infty}^\infty \, \mathfrak{g}(x)\, dx=1\tag{0.2}
+\]
+Recall the proof of (0.2). First, since $\mathfrak{g}$ is an even function
+we have
+\[
+\int_{-\infty}^\infty \, \mathfrak{g}(x)\, dx=2\cdot \int_0^\infty \, \mathfrak{g}(x)\, dx
+\]
+The idea is now to consider the double integral
+\[
+J=\iint\, e^{-x^2/2-y^2/2}\, dxdy
+\]
+where integration takes place when $0\leq x,y<\infty$, i.e over the
+non-negative quarter-plane ${\bf{R}}^2_+$.
+Usng polar coordinates we see that
+\[
+J=\int_0^\infty\int_0^{\pi/2}\, e^{-r^2/2}\cdot r\cdot drd\theta=
+\frac{\pi}{2}\cdot 
+\int_0^\infty\, e^{-r^2/2}\cdot r\cdot dr=\frac{\pi}{2}\implies
+\]
+\[
+\sqrt{\frac{\pi}{2}}=\int_0^\infty\, e^{-x^2/2}\, dx
+\]
+and from this the reader can check (0.2).
+\medskip
+
+\noindent
+{\bf{0.3 Exercise.}}
+Show that
+\[
+\int_{-\infty}^\infty \, x^2\cdot \mathfrak{g}(x)\, dx=1\tag{0.3.1}
+\]
+More generally, let $k\geq 2$ and put
+\[
+\mathfrak{m}_{2k}^2= 
+\int_{-\infty}^\infty \, x^{2k}\cdot \mathfrak{g}(x)\, dx=
+\frac{2}{\sqrt{2\pi}}\cdot \int_0^\infty \, x^{2k}\cdot e^{-x^2/2}\, dx\tag{0.3.2}
+\]
+The variable substituion $x^2=2u$ identifies the last integral by
+\[
+\frac{2}{\sqrt{2\pi}}\cdot \int_0^\infty \, u^k\cdot e^{-u}\, \frac{du}{\sqrt{u}}
+\]
+The integral above is
+found via the
+$\Gamma$-function which is defined by
+\[
+\Gamma(\lambda)=\int_0^\infty\, u^{\lambda}\cdot e^{-u}\, du\tag{0.3.3}
+\]
+for every non-negative real number $\lambda$.
+In the special case when $\lambda$ is a positive integer $m$ the reader can check that
+succesive partial integration gives
+\[
+\Gamma(m)= m\,!\tag{0.3.4}
+\]
+From the above one has
+\[
+\frak m_{2k}^2= \frac{2}{\sqrt{2\pi}}\cdot \Gamma(k-1/2)\tag{0.3.5}
+\]
+Hence (0.3.4) entails  that 
+the sequence $\{\mathfrak{m}_{2k}\}$ increases like
+$\{m\,!\}$ as $m\to +\infty$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+
+\noindent
+Later on we shall  need the following:
+
+\medskip
+
+\noindent
+{\bf{0.4  Proposition.}} \emph{For every real number $a$ one has
+the equaity}
+\[
+e^{a^2/2}\cdot \int_0^\infty\, \cos(ax)\cdot e^{-x^2/2}\, dx=\sqrt{2\pi}\tag{0.4.1}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Put
+\[
+\psi(a)= \int_0^\infty\, \cos(ax)\cdot e^{-x^2/2}\,dx
+\]
+The derivative with respect to $a$ becomes
+\[
+\psi'(a)=  -\int_0^\infty\, \sin(ax)\cdot x\cdot e^{-x^2/2}\,dx
+\]
+Partial integration shows that the right hand side is equal to
+\[
+\sin(ax)\cdot  e^{-x^2/2}\bigl|_0^\infty-
+a\cdot \int_0^\infty\, \cos(ax)\cdot e^{-x^2/2}\,dx=-a\cdot \psi(a)
+\]
+So the $\psi$-function satisfies the differential equation
+\[
+\psi'(a)=-a\cdot\psi(a)
+\]
+At the same time the $a-$derivative of $\phi(a)= e^{a^2/2}$
+is equal to $a\cdot \phi(a)$.
+Hence Leibniz's rule gives
+\[
+\frac{d}{da}(\phi(a)\cdot \psi(a)=0
+\]
+Hence (0.4.1) is a constant function of $a$ as $a>+$. Finally, since
+$\cos 0=1$ we see that this constant function is equal to
+$\sqrt{2\pi}$  by (0.2).
+\medskip
+
+\noindent
+{\bf{0.4.2  Remark.}}
+When $a\to+\infty $ we notice that $e^{a^2/2}$ gets large. At the same time the function
+\[
+x\mapsto \cos(ax)
+\]
+oscillates with values taken between $-1$ and $+1$
+and as $a$ increases the
+osciallations becomes rapid which  entails that
+the integrals 
+$\int_0^\infty\, \cos(ax)\cdot e^{-x^2/2}\, dx$
+tend to zero as $a\to+\infty$.
+
+
+\bigskip
+
+
+\noindent
+{\bf{0.5. The general normal distribution.}}
+For each $\sigma>0$ and every real number $m$
+we define the density function
+\[
+x\mapsto \frac{1}{\sigma\cdot \sqrt{2\pi}}\cdot e^{-(x-m)^2/2\sigma^2}\tag{0.5.1}
+\]
+By the variable subsituion $x\mapsto m+\sigma\cdot u$
+one verifies that the integral  taken over the real $x$-line is one.
+The distribution function 
+\[
+x\mapsto \frac{1}{\sigma\cdot \sqrt{2\pi}}\cdot \int_{-\infty}^x
+e^{-(t-m)^2/2\sigma^2}\, dt
+\]
+is given by 
+\[
+x\mapsto \mathcal N(\frac{x-m}{\sigma})
+\]
+with $\mathcal N$ as in (0.1).
+Here (0.5.1) is the  frequency) function of
+a normally distributed stochastic variable whose mean value is $m$.
+The variance is
+defined by
+\[
+\frac{1}{\sigma\cdot \sqrt{2\pi}}\int\, (x-m)^2\cdot \cdot e^{-(x-m)^2/2\sigma^2}\,dx
+\]
+After a variable substitution the reader can check that
+this integral is equal to 
+$\sigma^2$.
+
+\bigskip
+
+\noindent
+{\bf{0.6 Remark.}}
+It  is instructive to plot graphs of the functions
+\[
+x\mapsto  \frac{1}{\sigma\cdot \sqrt{2\pi}}\cdot e^{-x^2/2\sigma^2}
+\]
+for various choice of $\sigma$.
+When $\sigma$ is small 
+the area below the graph is concentrated to small intervals around $x=0$.
+For example, let $\epsilon>0$ be a small positive number.
+Now
+\[
+\int_{|x|\geq \epsilon}\,  \frac{1}{\sigma}\cdot e^{-x^2/2\sigma^2}\,dx
+=\int_{|x|\geq \epsilon/\sigma }\,  e^{-u^2/2}\,du
+\]
+Keeping $\epsilon>0$ fixed while $\sigma\to 0$
+we have $\epsilon/\sigma\to +\infty$, and
+when $R$ is a large positive number 
+\[
+\int_{x\geq R}\,  e^{-u^2/2}\,du
+\leq \frac{1}{R}\cdot \int_R^{+\infty}\,
+u\cdot e^{-u^2/2}\,du=\frac{1}{R}\cdot e^{-R^2/2}\tag{0.6.1}
+\]
+where the last term gets very small as $R\to+\infty$.
+\bigskip
+
+\noindent
+\centerline{\bf{0.7 Log-normal distributions}}.
+\medskip
+
+
+\noindent
+We define a
+distribution funtion $\mathcal L$ which  is zero if
+$x\leq 0$ and
+\[
+\mathcal L(x)= \mathcal N(\log x)\quad\colon\quad x>0
+\]
+The frequency function becomes
+\[
+\mathcal L'(x)=
+\frac{1}{\sqrt{2\pi}\cdot x}\cdot  e^{-(\log x)^2/2}\tag{0.7.1}
+\]
+It is instructive to plot the graph of this function, and 
+the reader should check that
+(0.6.1) tends to zero as $x\to 0$ and that  the maximum is taken when $x=1$ where
+\[
+\mathcal L'(1)=
+\frac{1}{\sqrt{2\pi}}\cdot  e^{-(\log 1)^2/2}=
+\frac{1}{\sqrt{2\pi}}\tag{0.7.2}
+\]
+Next, the mean value
+\[
+E(\mathcal L)=
+\int_0^\infty\, x\cdot \mathcal L'(x)\, dx=
+\frac{1}{\sqrt{2\pi}}\cdot  \int_0^\infty e^{-(\log x)^2/2}\,dx
+\]
+The substitution  $x=e^u$ 
+gives $dx=e^u\cdot du$
+and the right hand side above  is equal to
+\[
+\frac{1}{\sqrt{2\pi}}\cdot  \int_{-\infty}^\infty e^{-u^2/2}\cdot e^u\, du\tag{0.7.3}
+\]
+The reader can check that (0.7.3) becomes
+\[
+\frac{\sqrt{e}}{\sqrt{2\pi}}\cdot  \int_{-\infty}^\infty\,
+e^{-(u-1)^2/2}\, du=\sqrt{e}\tag{0.7.4}
+\]
+For the second moment one has  
+\[
+\mathfrak{m}_2(\mathcal L)=
+\frac{1}{\sqrt{2\pi}}\cdot \int_0^\infty\,  s\cdot e^{-(\log s)^2/2}\,ds=
+\frac{1}{\sqrt{2\pi}}\cdot  \int_{-\infty}^\infty e^{-u^2/2}\cdot e^{2u}\, du
+\]
+The reader can check that the last integral is equal to $e^2$.
+It follows that the 
+central variance 
+\[
+\sigma^2(\mathcal L)= 
+\mathfrak{m}^2(\mathcal L)-E(\mathcal L)^ 2= e^2-e=(e-1)e\tag{0.7.5}
+\]
+\medskip
+
+\noindent
+If $k\geq 3$ the  moment
+\[
+\mathfrak{m}_k(\mathcal L)=
+\frac{1}{\sqrt{2\pi}}\cdot  \int_{-\infty}^\infty e^{-u^2/2}\cdot e^{ku}\, du=
+\]
+\[
+e^{k^2/2}\cdot \frac{1}{\sqrt{2\pi}}\cdot   \int_{-\infty}^\infty e^{-(u-k)^2/2}\, du
+= e^{k^2/2}\tag{0.7.6}
+\]
+
+\bigskip
+
+
+\noindent
+{\bf{0.8 Other distribution functions.}}
+In ¤ xx we  study stochastic processes and encounter
+situations where the distribution functions no longer are normal.
+An example is the  stochastic variable $\chi$
+defined by a sum:
+\[
+\chi=\chi_*+\mathcal N
+\]
+where $\chi_*$ and $\mathcal N$ are independent
+stochastic variables and $\mathcal N$ the standard normal distribution.
+Let  $f_*(x)$ be the frequency  function  of $\chi_*$. In ¤ xx we  shall learn that
+the frequency function of $\chi$ becomes:
+\[
+f(x)= \frac{1}{\sqrt{2\pi}}\cdot \int\, f_*(x+s)\cdot e^{-s^2/2}\, ds
+\]
+Consider as an example  the case when
+$\chi_*$ takes the values +1 or -1 with probability 1/2. 
+Then
+\[
+f(x)= \frac{1}{\sqrt{8\cdot \pi}}\cdot
+[e^{-(s+1)^2/2}+e^{-(s-1)^2}]\tag{0.8.1}
+\]
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

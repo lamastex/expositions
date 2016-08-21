@@ -1,0 +1,484 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+\centerline{\bf{On minimal surfaces.}}
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+To avoid possible confusion we  remark that the subsequent material deals with
+an  isoperimetric problem with a fixed boundary curve. 
+Considerably  more involved situations
+ appear when the boundary value problem for minimal surfaces
+do not   have entirely fixed Jordan curves, but are free to move on
+prescribed manifolds.
+Here one encounters the problems by Plateau and Douglas.
+For an account about the general case we refer to Courant's article
+\emph{The existence of minimal surfaces of given toplogical structure
+under prescribed boundary conditions}. (Acta. Math. Vol 72 1940]) where the reader
+also finds an extensive references to relevant literature.
+\medskip
+
+\noindent
+From now on we discuss the problem when the boundary curve is fixed in
+${\bf{R}}^3$.
+Let $(x,y,z)$ be the coordinates
+in ${\bf{R}}^3$.
+Consider a rectifiable   closed Jordan curve
+$C$ and denote by $\mathcal S(C)$ the family of surfaces 
+which are bordered by $C$.
+A surface $M$ in this family is minimal if
+it has smallest possible area.
+To find such a minimal surface
+corresponds to a problem in the calculus of variation and  was 
+studied by Weierstrass in a series of articles
+starting from \emph{Untersuchungen über die Flächen
+deren mittlere Krümmung überall gleich null ist}  from 1866.
+A revised version  appears in volume I of 
+his collected work.
+To begin with a local study shows that 
+minimal surface $M$ in $\mathcal S(C)$ has vanishing 
+imean curvature. Moreover, Weierstrass proved that
+$M$ has no singular points and is simply connected.
+These properties for a minimal surface
+are natural and rather easy to prove.
+After a more careful analysis, Weierstrass
+proved that there exists a homeomorphic
+parametrization
+of $M$ above an open disc in the complex $u$-plane which can be
+achieved via complex analytic functions, or as expressed by
+Weierstrass in the introduction to [Wei]:
+\emph{Ich habe mich mit der Theorie die Flächen, deren mittlere
+Krümmung überall gleich null ist, besonders auf dem grunde eingehender beschäftigt, weil
+sie, wie ich zeigen werde, auf das Innigste mit der Theorie der analytischen funktionen
+einer komplexen Argumentz zusammenhhängt.}
+Or shortly phrased: 
+\emph{The theory about minimal surfaces
+is closely linked to the theory of  analytic functions in one complex variable.}
+\medskip
+
+
+\noindent
+{\bf{The isoperimetric inequality.}}
+Using Weierstrass'  description of minimal surfaces 
+the following was proved
+by
+Carleman in the article
+\emph{Zur Theorie der Minimalflächen} in 1920:
+
+\bigskip
+
+\noindent
+{\bf{Theorem 1.}}
+\emph{For every rectifiable simple closed curve
+$C$ the area $A$ of the minimal surface
+in $\mathcal S(C)$ satisfies the inequality}
+\[ 
+A\leq \frac {\ell(C)^2}{4\pi}
+\]
+where $\ell(C)$ is the arc-length of $C$.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+For historic reasons one may wonder why this result was not already
+discovered by Weierstrass. The reason might be that 
+analytic function theory was not   developed enough in 1890.
+Carleman's proof relies upon 
+the Jensen-Blascke factorisation
+of analytic functions which was not know prior to 1900.
+Another obstacle was the discovery by Hermann Schwarz that
+the minimal surface in the family $\mathcal S(C)$
+is not
+determined by vanishing mean curvarute alone. See
+Volume II, page 264 and  151-167 in the collected work
+of Hermann Schwarz for this "ugly phenomenon" which was one reason
+why Weierstrass  paid much attention to existence problems in
+the calculus of variation.
+As remarked by Carleman at the end of his article, the
+alternative proof by Blaschke which was given after
+[Carleman[ had been published, is restricted to
+a special class of minimal surfaces.
+The case when $C$ is piecewise linear and  consists of
+$n$ many line segements $L_1,\ldots ,L_n$ means
+in the words of Weierstrass  that one regards the following problem:
+\emph{Es soll ein einfach zusamenhängenden Minimalflächenstück
+$M$ analytish bestimmt werden, dess vorgeschiebinen
+begrenzung $C$
+aus $n$ geradlinigen strecken  bestecht, welche eine einfache,
+geschlossene, nicht verknotete Linie bilden.}
+In  [Weierstrass] appears a  far reaching study of this problem. 
+The main result shows that
+$M$ is determined via
+a speciai pair of analytic functions $G(u)$ and $H(u)$ defined in
+the lower half-plane $\mathfrak{Im}u<0$
+for which the three functions defined by
+
+\newpage
+
+\[
+\phi_1(u)=\text{det}\,
+\begin{pmatrix} G(u)&H'(u)\\
+G'(u)&H'(u)\end{pmatrix}
+\]
+\[
+\phi_2(u)= \text{det}\,
+\begin{pmatrix} G(u)&H'(u)\\
+G''(u)&H''(u)\end{pmatrix}
+\]
+\[
+\phi_3(u)= \text{det}\,
+\begin{pmatrix} G'(u)&H'(u)\\
+G''(u)&H''(u)\end{pmatrix}
+\]
+become rational functions of $u$.
+Moreover, [ibid]  exhibits 
+second order differential equations of the Fuchsian type 
+satisfied by the rational functions which appear above and the position of their
+poles are described in terms of the 
+geometric configuration
+of $C$. It would lead us too far to
+enter
+the  material in [Weierstrass] so its rich contents is left
+to the interested reader for further  studies.
+\medskip
+
+
+\noindent
+{\bf{The planar case.}}
+If $C$ is a simple closed curve in the complex $z$-plane
+the isoperimetric inequality follows easily via analytic function theory.
+Namely, let $M$ be the Jordan domain bordered by $C$.
+By Riemann's theorem there exists 
+a conformal mapping $\phi\colon\, D\to M$ and we have
+\[ 
+\ell(C)= \int_0^{2\pi}\ |\phi'(e^{i\theta})|\, d\theta
+\quad \colon\quad
+A=\text{area}(M)=
+\iint_D\, |\phi'(z)|~2\, dxdy
+\]
+We leave as an exercise to verify the isoperimetric
+inequality in
+Theorem 1 and that equality holds if and only if the complex derivative satisfies
+\[ 
+\phi'(z)=\frac{a}{(1-qz)^2}
+\] 
+for a pair of constants $a,b$. This means that $\phi$ is
+is a Möbius transform and hence $C$ must be a circle, i.e.
+equality in Theorem 1 for a planar curve holds
+if and only if $C$ borders a disc,
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\emph{B. Proof of Theorem 1.}}
+\medskip
+
+
+
+
+\noindent
+The crucial step in the proof relies upon the following:
+\medskip
+
+\noindent
+{\bf{B.1 Proposition.}}
+\emph{Let $M$ be a minimal surface in $\mathcal S(C)$.
+Then there exists an analytic function $F(u)$ in the open 
+unit disc such that
+points $(x,y,z)\in M$ are given by the equations:}
+\[ 
+x=\mathfrak{Re} \int\, (1-u^2) F(u)\,du
+\quad\colon\quad
+y=\mathfrak{Re}\int \, i(1+u^2)F(u)\,du\quad\colon\quad
+z=\mathfrak{Re}\int \, 2F(u)\, du
+\]
+\medskip
+
+\noindent
+The proof is  quite involved and occupies
+more than five pages in [Weierstrass].
+Let us at least indicate some
+steps in Weierstrass' constructions which lead to
+Proposition B.1. To begin with
+the one finds a planar domain
+$\Sigma$ with real coordinates
+$(p,q)$ and a diffeomorphism
+between
+$M$ and $\Sigma$ which is conformal, i.e. 
+$M$ is defined by the equations
+\[ 
+x=x(p,q)\quad\colon
+y=y(p,q)\quad\colon z=z(p,q)
+\]
+where the 
+vectors ${\bf{v}}=
+(\frac{\partial x}{\partial p}, 
+(\frac{\partial y}{\partial p}, (\frac{\partial x}{\partial p},)$
+and
+${\bf{w}}=(\frac{\partial x}{\partial q}, (\frac{\partial y}{\partial q}, (\frac{\partial z}{\partial q})$
+are pairwise orthogonal unit vectors.
+Since
+the mean curvature of $M$ vanishes the three functions in (1) are harmonic, i.e.
+\[
+\Delta(x)= \frac{\partial^2 x}{\partial p^2}+\frac{\partial ^2x}{\partial q^2}=0\tag{i}
+\]
+and similarly for $y$ and $z$.
+In fact, this  follow from classical calculus of variation
+and basic differential geometry on surfaces which
+is exposed in many text-books such as [Darbroux].
+The harmonic functions above are real parts of analytic functions
+which yields a triple $f,g,h$ in $\mathcal O(\Sigma)$
+such that
+\[ 
+x= \mathfrak {Re}\, f(u)
+\]
+The orthogonality
+of
+the vectors ${\bf{v}}$ and ${\bf{w}}$ above entails via the
+Cauchy Riemann equations that
+\[
+(f'(u))^2+(g'(u))^2+(h'(u))^2=0
+\]
+
+
+\medskip
+
+\noindent
+Starting from this, Weierstrass
+used  sterographic projections and Riemann's conformal mapping theorem
+to construct
+an analytic function
+$F(u)$ which gives the equations in Proposition B.1.
+Admitting this one  we can prove the following:
+ 
+
+\medskip
+
+\noindent
+{\bf{B.2 Propostion.}} \emph{One has the formulas}
+\[
+\text{area}(M)=
+\iint_D\, (1+|u|^2)^2\cdot |F(u)|^2\, d\xi d\eta\quad\colon\quad 
+\ell(C)=2\cdot \int_0^{2\pi}\,  |F(e^{i\theta})|\, d\theta
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+With $u=\alpha+i\beta$ this amounts to show that
+\[ 
+dx^2+dy^2+dz^2=
+(1+|u|^2)|F(u)|^2\cdot (d\alpha^2+d\beta^2)\tag{i}
+\]
+
+\noindent
+To prove  (i) we consider some point $u\in D$.
+Set $F(u)= |F(u)|\cdot e^{i\theta}$
+and $u= se^{i\alpha}$. With
+$du=d\alpha$ real we have
+\[
+dx=\mathfrak{Re}(1-u^2)F(u))\cdot d\alpha=
+|F(u)|\cdot  \bigl
+(\cos\theta-|u|^2\cos\theta\cdot \cos 2\alpha
+-|u|^2\sin\theta\cdot \sin 2\alpha\bigr)\cdot d\alpha
+\]
+By trigonometric forulas it follows that
+
+\[ 
+(dx)^2=|F(u)|\cdot \bigl[\cos^2\theta+|u|^4\cos^2(2\alpha-\theta)-
+2|u|^2\cos\theta\cdot \cos(2\alpha-\theta)\,\bigr]\cdot (d\alpha)^2\tag{i}
+\]
+\medskip
+
+
+\noindent
+In the same way we find that
+\[
+(dy)^2 =|F(u)|^2 \cdot  \bigl[\sin^2 \theta+|u|^4\sin^2(2\alpha-\theta)+
+2|u|^2\sin\theta\cdot \sin(2\alpha-\theta)\bigr]\cdot d\alpha\tag{ii}
+\]
+
+\[ 
+(dz)^2=4|F(u)|^2\cdot |u|^2\bigl(\cos^2(\theta-\alpha)]\cdot
+(d\alpha)^2\tag{iii}
+\]
+\medskip
+
+\noindent
+Adding (i-ii) we get
+\[
+(dx)^2+(dy)^2= |F(u)|^2\cdot \bigl[1+|u|^4-
+2\cdot|u|^2\cos(2\theta-2\alpha)\bigr]\cdot (d\alpha)^2
+\]
+Finally, the trigonometric formula
+
+\[
+4 \cos^2\phi=2-2\cos\,2\phi
+\]
+shows that
+\[
+(dx)^2+(dy)^2+(dz)^2 = |F(u)|^2\cdot (1+|u|^2)^2\cdot (d\alpha)^2
+\]
+\medskip
+
+\noindent
+The same hold when $u=id\beta$ and this infinitesmal
+equations give 
+Proposition B.2.
+
+
+
+
+
+\bigskip
+
+
+
+\centerline {\bf{Proof of Theorem 0.1}}
+
+\bigskip
+
+
+\noindent
+With $F$ as above we put
+\[
+f_1(u) =F(u)u^2\quad\text{and}\quad  f_2(u)=F(u)\implies
+\]
+\[
+A=\text{area}(M)=
+\iint_D\,\bigl[|f_1(u)|^2+|f_2(u)|^2\,\bigr]\, d\xi d\eta+
+2\cdot \iint_D\,|f_1(u)|\cdot |f_2(u)|\, d\xi d\eta\tag{i}
+\]
+where the implication follows from Proposition B.2.
+Since $|f_1|=|f_2|= |F|$ holds on the unit circle we also get
+\[
+\ell(C)^2=
+\bigl[ \int_0^{2\pi}\, |f_1(e^{i\theta})|\, d\theta\bigr ]^2+
+\bigl[ \int_0^{2\pi}\, |f_2(e^{i\theta})|\, d\theta\bigr ]^2+
+2\cdot  \int_0^{2\pi}\, |f_1(e^{i\theta})|\, d\theta\cdot
+\int_0^{2\pi}\, |f_2(e^{i\theta})|\, d\theta\tag{ii}
+\]
+\medskip
+
+
+\noindent
+At this stage we shall need:
+
+\medskip
+
+\noindent
+{\bf {B.3 Lemma.}} \emph{For each pair of analytic functions $g,h$ in the unit disc
+one has}
+\[
+\iint_D\,\bigl[g(u)|\cdot |h(u)|\, d\xi d\eta\leq
+\frac{1}{4\pi}\cdot 
+\int_0^{2\pi}\, |g(e^{i\theta})|\, d\theta\cdot 
+\int_0^{2\pi}\, |h(e^{i\theta})|\, d\theta
+\]
+\medskip
+
+\noindent
+Let us first notice that  Lemma B.3 applied to the pairs $g=h=f_1$,
+$g=h=f_2$ and the pair $g=f_1$ and $h=f_2$
+together with (i-ii) give Theorem 1.
+So there remains  to prove Lemma B.3.
+We can write
+\[ 
+g=B_1\cdot g^*\quad\colon\quad h= B_2\cdot h^*
+\]
+
+
+\noindent
+where $B_1,B_2$ are Blaschke products and the analytic functions
+$g^*$ and $h^*$ are zero free in the unit disc.
+Since
+$|B_1|= |B_2|=1$ hold on the unit circle it suffices to prove
+Lemma B.3 for the pair $g^*,h^*$,  i.e. we may assume that both $g$ and $h$
+are zero-free.
+Then they posses square roots so we
+can find analytic functions $G,H$ in the unit disc where
+\[
+g=G^2\quad\colon\quad h=H^2
+\]
+Consider the Taylor series
+\[
+G(z)= \sum\, a_ku^k\quad\colon\quad H(z)= \sum\, b_ku^k
+\]
+Now $GH= \sum c_ku^k$
+where
+\[ 
+c_k= a_0b_k+\ldots+a_kb_0\tag{i}
+\]
+
+
+\noindent
+Using polar coordintes to perform double integrals it follows that
+
+\[
+\iint_D\,|G^2(u)|\cdot |H^2(u)|\, d\xi d\eta=
+\pi\cdot \sum_{k=0}^\infty\, \frac{|c_k|^2}{k+1}
+\]
+At the same time one has
+\[
+\int_0^{2\pi}\, |G^2(e^{i\theta})|\, d\theta= 2\pi\cdot
+\sum _{k=0}^\infty\, 
+|a_k|^2
+\]
+with a similar formula for the integral of $H^2$.
+Hence Lemma B.2 follows if we have proved the inequality
+\[
+\sum_{k=0}^\infty\, \frac{|c_k|^2}{k+1}\leq 
+\sum _{k=0}^\infty\, 
+|a_k|^2\cdot 
+\sum _{k=0}^\infty\, 
+|b_k|^2\tag{ii}
+\]
+To get (ii) we use (i) which for every $k$ gives:
+\[
+|c_k|^2\leq (|a_0||b_k|+\ldots+|a_k||b_0|)^2\leq
+(k+1)\cdot (|a_0|^2|b_k|^2+\ldots+|a_k|^2|b_0|^2)
+\]
+Finally, a  summation over $k$ entails (ii) and Lemma B.3 is proved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

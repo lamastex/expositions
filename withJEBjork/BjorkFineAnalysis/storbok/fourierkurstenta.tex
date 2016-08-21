@@ -1,0 +1,2665 @@
+
+
+
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+\noindent
+{\bf{0.4 Fekete's inequality.}}
+The interplay between Fourier series and
+analytic functions in the unit disc $D=\{|z|<1\}$
+leads to many interesting results.
+Consider as in (0.2) the sine series
+\[ 
+\phi(\theta)=\sum_{n=1}^\infty \,\frac{\sin n\theta}{n}
+\]
+In $D$ we have the analytic function
+\[ 
+f(z)=
+\sum_{n=1}^\infty\,\frac{z^n}{n}=-\log (1-z)
+\]
+Notice  that
+\[ 
+f(x)=-\log (1-x)
+\] 
+tends to $+|infty$ as $x\to 1$ along the real axis.
+The Taylor polynomials
+\[ 
+S_N(z)=\sum_{n=1}^{n=N}\,\frac{z^n}{n}
+\] 
+attain their  maximum norms on the closed unit disc
+when $z=1$ and here
+\[ 
+S_N(1)=\sum_{n=1}^{n=N}\,\frac{1}{n}\simeq \log N
+\]
+At the same time we have seen in (0.2) that
+$\mathfrak{Im}(f(z))$ is a bounded function in $D$.
+Fekete proved that the example above is 
+extremal in the following
+sense:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{There exists an absolute constant $C$ such that
+if
+$g(z)=\sum\, c_nz^n$ is an analytic function in
+$D$ for which the maximum norm of
+$\mathfrak{Im}(g(z))$ is $\leq 1$, then}
+\[
+\max_{\theta}\, \bigl|\mathfrak{Re}\,\sum_{n=0}^{n=N}
+\, c_n\cdot e^{in\theta}\bigr|\leq C\cdot \log N
+\quad\colon N\geq 2
+\]
+Fekete's result will
+be proved in § XX during a closer study about
+analytic functions in the unit disc and their associated Fourier series.
+\medskip
+
+
+
+
+
+\noindent
+{\bf{A  result by Carleman}}.
+Let $f(\theta)$
+be a $2\pi$-periodic and continuous function.
+If $\epsilon>0$ and $N\geq 1$ we 
+denote by $\rho(N;\epsilon)$
+the 
+number of integers $0\leq n\leq N$ for which the maximum norm
+\[
+\max_\theta\, |S_n(\theta)-f(\theta)|\geq \epsilon
+\]
+With these notations we prove in § x that
+\[
+\lim_{N\to\infty}\, \frac{\rho(N;\epsilon)}{N+1}=0\tag{i}
+\]
+hold for every $\epsilon>0$.
+It means that Gibb's phenomenon form a statistical point of view
+is exceptional, i.e. "failure of convergence" occurs
+only for a sparse subsequence of Fourier's partial sums.
+Actually (i) is a consequence of a more precise result
+whicgh goes as follows: The continuous function $f$ is uniformly continuos and we set
+\[
+\omega_f(\delta)=\max\, |f(\theta_1)-f(\theta_2)|\quad\colon
+|\theta_1-\theta_2|\leq \delta
+\]
+\medskip
+
+\noindent
+{\bf{0.3 Theorem.}}
+\emph{There exists an absolute constant $K$ such that the following hold for
+every $2\pi$-periodic continuous function $f$ whose maximum norm is $\leq 1$}
+\[
+ \frac{\rho(N;\epsilon)}{N}\leq \frac{K}{\epsilon^2}\cdot
+ (\frac{1}{N}+\omega_f(\frac{1}{N})^2)\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Since
+$\frac{1}{N}+\omega_f(\frac{1}{N})^2$ tends to zero as $N\to+\infty$
+ and (*) holds for each $\epsilon>0$ we
+ get (i).
+ 
+
+
+
+
+\noindent
+{\bf{Fejer's inequality.}}
+Several remarkable inequalities for trigonometric polynomials were  established by
+Fejer in [Fejer] where
+a central issue is to construct  trigonometric polynomials
+expressed by a sine series
+which are $\geq 0$ on the  interval $[0,\pi]$.
+Consider as
+an example is the sine\vvv series
+\[
+S\uuu n(\theta)=\sum\uuu{k=1}^{k=n}\, \frac{\sin k\theta}{k}
+\]
+Here $\{S_n(\theta)\}$
+are trigonometric polynomials which are odd
+functions of $\theta$. They are realted to the analytic function in
+the unit disc given by the series
+\[
+f(z)=\sum\uuu{k=1}^\infty\,\frac{z^k}{k}
+\]
+Notice that this series represents the  analytic function in $D$ given by 
+$\log \, (1-z)$.
+This complex log-function extends
+analytically across the unit circle $T$ outside $\{z=1\}$.
+If $0<\theta<\pi$ we notice that
+\[
+\mathfrak{Im}(f(e^{i\theta})=-\arg(1-e^{i\theta})=\frac{\pi-\theta}{2}
+\]
+At the same time
+$e^{ik\theta}= \sin\, k\theta$ and therefore
+\[
+\sum_{k=1}^\infty\,  \frac{\sin k\theta}{k}=\frac{\pi-\theta}{2}\quad\colon 0<\theta<\pi
+\]
+Moreover, there exist pointwise limits
+\[
+\lim_{n\to\infty}\, S_n(\theta)=\frac{\pi-\theta}{2}\quad\colon 0<\theta<\pi
+\]
+At the same time
+$S_n(0)=0$ for every $n$
+so one cannot expect that 
+the pointwise convergence for small positive $\theta$
+holds uniformly.
+In this connection  Fejer proved the following:
+\medskip
+
+
+
+
+
+
+\noindent
+{\bf{0.2 Theorem.}}
+\emph{For every $n\geq 1$ one has the inequality}
+\[
+0<S\uuu n(\theta)\leq 1+\frac{\pi}{2}\quad\colon\quad
+0<\theta<\pi
+\]
+The upper bound was proved by  in [Fej] and Fejer  conjectured that
+$S\uuu n(\theta)$ stays positive on $(0,\pi)$.
+This was later confirmed  by 
+Jackson in [xx] and
+Cronwall in [xx]. 
+Here is an occasion to use a computer and plot
+graphs of the functions $\{S_n(\theta)\}$ to 
+analyze the 
+rate of convergence when
+$\theta\simeq 0$ and also confirm
+the inequality in Fjher's theorem numerically ,i.e. plot
+graphs of $S-N(\theta)$ for large values of $n$
+and check the validity of the inequalities above
+numerically.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf\large{Fourier series}}
+\bigskip
+
+
+\noindent
+
+\centerline{\emph{Contents}}
+\bigskip
+
+
+\noindent
+\emph{A: The  kernels of Dini, Fejer and Jackson}
+
+\bigskip
+
+
+\noindent
+\emph{B: Legendre polynomials}
+
+
+
+\bigskip
+
+
+\noindent
+\emph{C. The space $\mathcal T_n$}
+
+
+\bigskip
+
+
+\noindent
+\emph{D. Tchebysheff  polynomials}
+\bigskip
+
+
+\noindent
+\emph{E. Fejer series and Gibbs phenomenon}
+
+\bigskip
+
+
+\noindent
+\emph{F. Partial Fourier sums and convergence in the mean}
+\bigskip
+
+\noindent
+\emph{G. Best approximation by trigonometric polynomials.}
+
+
+
+\bigskip
+
+
+\centerline {\bf{Introduction.}}
+\bigskip
+
+\noindent
+Fourier series 
+were invented by
+Fourier   to solve  heat and the wave equations.
+We expose results in the 1-dimensional case
+and  remark only that
+one also constructs Fourier series in several variables of
+functions $f(x_1,\ldots,x_n)$ which are $2\pi$-periodic with respect to
+each variable in ${\bf{R}}^n$.
+
+\bigskip
+
+\centerline {\bf{Outline of contents.}}
+\medskip
+
+\noindent
+Section A contains  basic material about  Fourier series
+where the kernels of Dini and Fejer are introduced.
+At the end of § A we  construct   the Jackson kernel which
+give     approximations of a given periodic function $f$ by 
+trigonometric polynomials 
+where the rate of approximation is
+controlled by the modulos of continuity of $f$.
+Sections B\vvv C are devoted to
+results about  extremal polynomials.
+A complex version appears  in § D where
+Theorem D.4 relates the transfinite diameter of compact subsets
+of ${\bf{C}}$ with Tchebysheff  polynomials.
+§ F is devoted to  a result by Carleman about
+convergence in the mean of partial Fourier sums.
+From a statistical point of view this result 
+confirms the convergence of Fourier's partial sums where
+Theorem F.2 gives an absolute constant $K$
+such that for every $2\pi$\vvv periodic and continuous function $f$ whose
+maximum norm is $\leq 1$, the following inequality holds for
+every positive integer $n$ and each
+$0<\delta<\pi$
+where $\{s_\nu\}$
+are Fourier's partial sums of $f$:
+\[
+\sqrt{ \frac{1}{n+1}\cdot \sum\uuu{\nu=0}^{\nu=n}\,
+||s\uuu \nu\vvv f||^2}\leq 
+\frac{1}{\sqrt{n+1}}\cdot
+[n^{1+1/2}\cdot \delta\cdot \omega_f(\delta)+2K\delta^{-1/2}+K]
+\]
+where $\{||s\uuu\nu\vvv f||\}$ denote  maximum norms over
+$[0,2\pi]$ and $\omega_f$ the modulos of continuity.
+If 
+$\epsilon>0$ we 
+take
+$\delta=\frac{1}{\epsilon n}$
+for large $n$,  
+the left hand side is  majorised by
+\[
+\frac{\omega_f(1/\epsilon n)}{\epsilon}+2K\sqrt{\epsilon}+
+\frac{1}{\sqrt{n+1}}\cdot K
+\]
+Keeping $\epsilon$ fixed while $n$ increases this tends to zero
+which entials that  "with high probability"
+the
+maximum norms
+of $|||s_\nu-f||$ are small as $\nu$ varies over large
+integer intervals.
+
+
+
+
+\medskip
+
+\noindent
+Section § H treats   results due to 
+de Vallé Poussin about  best approximations by
+trigonometric polynomials of prescribed degree where one
+starts with some real-valued and continuous $2\pi$-periodic
+function $f$. If $n\geq 1$ we denote by $\mathcal T_n$
+the $2n+1)$-dimensional real vector space
+of trigonometric polynomials of degree $\leq n$, i.e. functions of the form
+\[
+P(x)=\frac{a_0}{2}+ \sum_{\nu=1}^{\nu=n}\, a_\nu\cdot \cos \nu x+
+\sum_{\nu=1}^{\nu=n}\, b_\nu\cdot \sin \nu x
+\]
+The best approximation of degree $n$ is defined by:
+\[
+\rho_f(n)=\min_{P\in\mathcal T_n}\, ||f-P||\tag{*}
+\]
+
+
+\noindent
+Among the results in § H we mention the following  lower
+bound inequality expressed by the Fourier coefficients of $f$ defined
+by
+\[
+\widehat f(n)= \frac{1}{2\pi}\int_0^{2\pi}\, e^{-inx}\cdot f(x)\,dx
+\]
+
+
+\noindent
+{\bf{Theorem.}}
+\emph{For each $n\geq 1$ one has the inequality}
+\[ 
+\rho_f(n)\geq 
+|\widehat f(n+1)|-\sum_{j=1}^\infty |\widehat f((n+1)(2j+1))|
+\]
+\medskip
+
+\noindent
+We remark that this lower bound
+of the $\rho$-numbers are of special interest when
+the Fourier coefficients of $f$ have many gaps.
+
+
+\bigskip
+
+
+\centerline{\bf{Carleson's theorem.}}
+
+\bigskip
+
+\noindent
+The theory about Fourier series containes
+quite adavanced results.
+Among these is Carelaon's theorem sabout the almost everywhere
+convergence of Fourier's partial sums.
+Let $f(\theta)$
+be a complex-valued 
+and continuous function defined on the interval
+$\{0\leq \theta\leq 2\pi\}$ which satisfies
+$f(0)=f(2\pi)$. For every integer $n$ we set
+\[ 
+\widehat f(n)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\
+e^{-in\phi}f(\phi)\cdot d\phi
+\]
+One refers to $\{\widehat f(n)\}$ as the Fourier coefficients of $f$ and 
+Fourier's partial sum function of degree $N$ is defined by
+\[
+S_N(\theta)=\sum_{n=-N}^{n=N}\, \hat f(n)\cdot e^{in\theta}\tag{0.0}
+\]
+The question arises if
+\[
+\lim_{N\to\infty}\, \max_\theta\, |S_N(\theta)-f(\theta)|=0\tag{0.1}
+\]
+So (0.1) means that Fourier's partial sums convege uniformyly to $f$.
+Examples where (0.1) fails 
+were discovered at an early stage
+and lead to  Gibb's phenomenon. More precisely, there exists contionuous functions
+$f$ where the uniform not only fails, but
+for certain $\theta$-values the sequence
+$\{S_N(\theta)\}$  even fails to converge.
+A relaxed condition of (0.1) is to ask if the pointwise limit
+\[
+\lim_{N\to\infty}\, S_NN(\theta)=f(\theta)\tag{0.2}
+\] 
+exists  for all $\theta$ outside a null set in the sense of Lebesgue, i.e.
+is it true that Fourier's  partial sums converge almost everywhere to
+$f$.
+This question was open for more than a half century until
+the affirmative answer 
+was established  by Carleson in 1965.
+This result constitutes
+one of the greatest achievements ever in analysis, and the  proof goes beyond the
+level of these notes.
+The reader may consult Carleson's article [xxx]
+which includes  a
+remarkable inequality which goes as follows: Let
+$\ell^2$ be the Hilbert space of sequences of complex numbers
+$c_0,c_1,\ldots$ such that $\sum\,|c_n|^2<\infty$.
+To every such a sequence we introduce trigonometric polynomials
+\[ 
+S_N(\theta)= \sum_{n=0}^{n=N}\, c_ne^{in\theta}
+\]
+Define the maximal function by
+\[ 
+S^*(\theta)= \max_{N\geq 1}\, |S_N(e^{i\theta})|
+\]
+
+\noindent
+{\bf{Carleson's inequality.}} \emph{There exists a constant $C$ such that
+the following hold when $\{c_n\}\in\ell^2$:}
+\[
+\int_0^{2\pi}\, S^*(\theta)^2\, d\theta\leq C\cdot\sum_{n=1}^\infty\,|c_n|^2
+\] 
+\bigskip
+
+
+
+
+\centerline{\bf{Bernstein's example.}}
+\medskip
+
+
+\noindent
+A remarkable construction was given by S. Bernstein 
+in the article [Comptes
+Rendus 1914].
+Let $p$ be a prime number of the form $4\mu+1$ where $\mu$ is a positive
+integer.
+For each integer $n\geq 1$ we have the Legendre symbol
+$L(n;p)$ which is +1 is $ k$ has a quadratic remainder modolu $p$ and
+otherwise $L(n;p)=-1$.
+Define the trigonometric polynomial
+\[
+\mathcal B_p(\theta)=\frac{2}{p^{\frac{3}{2}}}\cdot 
+\sum_{n=1}^{n=p-1}\, (p-n)\cdot L(n;p)\cdot
+\cos n\theta
+\]
+Then Bernstein  proved that
+\[
+\max_\theta\, |\mathcal B_p(\theta)|\leq 1\tag{i}
+\]
+At the same time we notice that
+\[
+\frac{2}{p^{\frac{3}{2}}}\cdot\sum_{n=1}^{p-1}\, |(p-n)\cdot L(n;p)|=\frac{p-1}{\sqrt{p}}\simeq \sqrt{p}\tag{ii}
+\]
+Bernstein's trigonometric polynomials have extremal properties.
+For 
+consider an arbitrary cosine series
+\[
+u(\theta)=\sum_{n=1}^{n=N}\, a_n\cdot \cos\theta
+\]
+Now the $L^2$-integral
+\[
+\frac{1}{\pi} \int_0^{2\pi}\, u^2(\theta)\, 
+d\theta=\sum_{n=1}^{n=N} \, a^2_n
+\]
+If the maximum norm of $u$ is one 
+the $L^2$ integral is majorized by 2 and the Cauchy-Schwarz inequality gives
+\[
+\sum\,|a_n|\leq \sqrt{2\cdot N}
+\]
+Bernstein's example shows that this inequality is essentially sharp.
+Another notable phenomenon in
+Bernstein's example
+ is the following: We have
+\[
+\int_0^{2\pi}\mathcal B^2_p(\theta)\,d\theta=
+ \frac{4}{p^3}\cdot \pi\cdot \sum_{n=1}^{n=p-1}\, n^2 
+ \]
+The right hand side is bounded by an absolute constant $C$.
+Hence 
+the maximum norm and the $L^2$-norm of $\mathcal B_p$
+are comparable , i.e.
+there is a fixed constant $0<c<1$ such that
+\[
+\frac{c}{\pi}\leq \frac{||\mathcal B_p||_\infty}{||\mathcal B_p||_2}
+\leq\frac{1}{\pi c}
+\]
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Bernstein's construction was based upon arithmetic.
+Later Salem proved that
+the Bernstein's example
+is generic in the sense that
+by random choice of signs in a given sequence
+$\{a_k\}$ with prescribed $L^2$-norm  equal to one,  the corresponding maximum
+norms of the partial sums are
+not so large
+with "high probabilities".
+To give an example: Let $N\geq 2$ and consider the family 
+$\mathcal F_N$ of cosine series
+\[
+f(\theta)=\frac{1}{\sqrt{N}}\cdot
+\sum_{n=1}^{n=N}\, 
+\epsilon_n\cdot \cos n\theta
+\]
+Here$\{\epsilon_n\}$ is random sequence where each
+$\epsilon_n$ is +1 or -1.
+Notice that the $L^2$-integrals
+\[
+\int_0^\pi\, f(\theta)^2\, d\theta=\frac{\pi}{2}
+\]
+Above one has a sample space 
+where each choice of a siugn-sequence
+$\{\epsilon_n\}$ produces a function in
+$\mathcal F_N$. To be precise, we
+get $2^N$ many functions in this family.
+The evaluation at $\theta=0$ corerssponds to
+a Bernoulli trial, i.e,. tossing a coin $N$ times
+and measure the difference of heads and tails, divided by
+$\sqrt{N}$.
+Here the centeral limit theorem applies, i.e by de Moivre's
+discovery from 1733, the
+random  outcome of
+the numbers
+$\{f(0)\,\colon F\in \mathcal F\}$
+is expressed by a discrete random variable whose densities
+converge to the normal distribution as $N\to\infty$.
+\medskip
+
+\noindent
+A more involved study arises when one regards
+vakues of the $f$-functions over the whole
+interval $[0,\pi]$. Fir example, one can consider the
+random variabke on the sampåle space
+above defined by
+\[
+f\mapsto \max_{0\leq\theta\leq\pi}\, |f(\theta)|
+\]
+Results about the asymptotic behaviour  of
+the distributions of these random variables 
+as $N$ increases  have been obtained by Salem
+and inspired much later work. The reader may consult [Salem] and 
+[Kahane] for an account about Fourier series with
+random coefficients.
+It goes without saying that this leads to
+a quite involved theory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline
+{\bf{A: The kernels of Dini, Fejer and Jackson}} 
+\bigskip
+
+\noindent
+Denote by $C_\text{per}^0[0,2\pi]$
+the family of complex-valued continuous
+functions
+$f(\theta)$
+on 
+$[0,2\pi]$ which satisfy
+$f(0)=f(2\pi)$. 
+The Fourier coefficients of such a function $f$
+are defined by:
+\[ 
+\widehat f(n)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\
+e^{-in\phi}f(\phi)\cdot d\phi
+\]
+where $n$ are integers.
+Fourier's partial sum  of degree $N$ is defined by
+\[
+S^f_N(\theta)=\sum_{n=-N}^{n=N}\, \hat f(n)\cdot e^{in\theta}\tag{A.0}
+\]
+
+\noindent
+{\bf{Exercise.}} 
+Show that if 
+$f$ is real-valued and $N$ is a positive integer, then 
+the Fourier series  takes the form
+\[
+S_N^f(\theta)= \frac{a\uuu 0}{2}+
+\sum\uuu {k=1}^N \,a_k\cdot \cos k\theta+
+\sum\uuu {k=1}^N\,b_k\cdot \sin k\theta
+\]
+where  $a\uuu 0=\frac{1}{\pi}\int\uuu 0^{2\pi}\, f(x)\cdot dx$
+and when $k\geq 1$:
+\[
+a\uuu k=\frac{1}{\pi}\int\uuu 0^{2\pi}\, f(x)\cdot \cos kx\cdot dx
+\quad\colon\quad
+b\uuu k=\frac{1}{\pi}\int\uuu 0^{2\pi}\, f(x)\cdot \sin kx\cdot dx
+\] 
+
+\bigskip
+
+
+
+\noindent
+{\bf A.1.The Dini kernel.}
+If $N\geq 0$ we set
+\[ 
+D_N(\theta)=
+\frac{1}{2\pi}\sum_{n=-N}^{n=N}\, e^{in\theta}
+\]
+
+\medskip
+
+
+\noindent
+{\bf A.2 Proposition.} \emph{One has the formula}
+\[
+D_N(\theta)=\frac{1}{2\pi}\cdot \frac{\text{sin}((N+\frac{1}{2})\theta)}{\text{sin}\,\frac{\theta}{2}}
+\tag{*}
+\]
+\medskip
+\noindent
+\emph{Proof.}
+We have
+\[
+\sum_{n=-N}^{n=N}\, e^{in\theta}
+=e^{-iN\theta}
+\cdot \sum_{n=0}^{n=2N}\, e^{in\theta}
+=e^{-iN\theta}\cdot
+\frac{
+e^{i(2N+1)\theta}-1}{e^{i\theta}-1}=
+\]
+\[
+e^{-iN\theta-i\theta/2}\cdot\frac{
+e^{i(2N+1)\theta}-1}{2i\cdot \sin \theta/2}=
+\frac{2i\cdot\text{sin}((N+1/2)\theta)}{2i\cdot \sin \theta/2}
+\]
+and (*) follows after division with $2i$.
+\medskip
+
+
+\noindent
+{\bf A.3 Exercise.}
+Show that the folloeing hold for each $N\geq 0$:
+\[ 
+S^f_N(\theta)=\int_0^{2\pi}\, D_N(\theta-\phi)\cdot f(\phi)\cdot d\phi=
+\int_0^{2\pi}\, D_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\]
+\bigskip
+
+
+
+
+\noindent
+{\bf A.4 The Fejer kernel.}
+For each $N\geq0$ we set
+\[
+\mathcal F_N(\theta)=\frac{D_0(\theta)+\ldots+D_N(\theta)}{2\pi(N+1)}
+\]
+
+\noindent
+{\bf A.5 Proposition} \emph{One has the formula} 
+\[
+ \mathcal F_N(\theta)=\frac{1}{2\pi(N+1)}\cdot
+ \frac{1-\text{cos}((N+1)\theta)}{2\cdot \text{sin}^2(\frac{\theta}{2})}\tag{**}
+ \]
+
+ 
+ \noindent
+ \emph{Proof.}
+To each $\nu\geq 0$ we have
+$\text{sin}((\nu+1/2)\theta)=
+\mathfrak{Im} \bigl [e^{i(\nu+1/2)\theta)}\bigr]$.
+Hence
+$F_N(\theta)$ is the imaginary part of
+\[
+\frac{1}{2\pi(N+1)}\cdot \frac{e^{i\theta/2}}{\text{sin}(\theta/2)}\cdot
+\sum_{\nu=0}^{\nu=N}\, e^{i\nu\theta}
+\]
+Next, we have
+\[
+e^{i\theta/2}\cdot\sum_{\nu=0}^{\nu=N}\, e^{i\nu\theta}=
+e^{i\theta/2}\cdot\frac{e^{i(N+1)\theta}-1}{e^{i\theta-1}}
+=
+\frac{e^{i(N+1)\theta}-1}{2i\cdot \text{sin}(\theta/2)}
+\]
+Since $i^2=-1$ we see that the imaginary part of the last
+term is equal to
+\[
+ \frac{1-\text{cos}((N+1)\theta)}{2\cdot \text{sin}(\frac{\theta}{2})}
+\]
+and then (**) follows.
+
+
+ \bigskip
+ 
+ \noindent
+ {\bf{A.6 Fejer sums.}}
+ For each $f$ and every $N\geq 0$ we set
+\[
+F^f_N(\theta)=\int_0^{2\pi}\,\mathcal F_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\]
+
+ \noindent
+{\bf A.7 An inequality.}
+If $a>0$ and $a\leq\theta\leq 2\pi-a$ we have  the inequality
+\[
+\text{sin}^2(\theta/2)\geq \text{sin}^2(a/2)\tag{i}
+\]
+Let $f$ be given and
+denote by $M(f)$
+the maximum norm of
+$|f(\theta)|$ over $[0,2\pi]$. Then (i) gives
+\[
+ \int_a^{2\pi-a}\, \mathcal F_N(\phi)\cdot f(\theta+\phi)\cdot d\phi
+\leq
+\] 
+\[
+\frac{M}{2\pi(N+1)\cdot \text{sin}^2(a/2)}
+ \int_a^{2\pi-a}\, (1-\text{cos}(N\phi))\cdot d\phi
+\leq\frac{2M}{(N+1)\cdot \text{sin}^2(a/2)}\tag{A.7.1}
+\]
+\medskip
+
+\noindent
+{\bf A.8 Exercise.}
+Given some $\theta_0$ and $0<a<\pi$ we set
+\[
+\omega_f(a)=\max_{|\theta-\theta_0|\leq a}\, |f(\theta)-f(\theta_0)|
+\]
+Use (A.7.1) to prove that
+\[
+|F^f_N(\theta_0)-f(\theta_0)|
+\leq\frac{2M}{(N+1)\cdot \text{sin}^2(a/2)}+\omega_f(a)
+\]
+Conclude that  the \emph{uniform continuity}
+of the function $f$ on $[0,2\pi]$ implies that
+the sequence $\{F^f_N\}$ converges uniformly to $f$ over
+the interval $[0,2\pi]$.
+\medskip
+
+
+\noindent
+{\bf{A.9 Exercise.}}
+Use (A.7-8) to show that  there exists an absolute constant $C$ such that
+\[
+||f\vvv \mathcal F\uuu n(f)||\leq C\cdot \omega\uuu f(\frac{1}{n})
+\cdot \bigl(1+\log^+\,\frac{1}
+{\omega\uuu f(\frac{1}{n})}\bigr)\tag{A.9.1}
+\]
+hold for all continuous $2\pi$\vvv periodic functions $f$.
+\medskip
+
+
+\bigskip
+
+
+\centerline{\bf{A. 10 The Jackson kernel}}.
+\medskip
+
+\noindent
+One may
+ask if (A.9.1) can be improved in the sense that
+there exists a constant $C$ which is independent of both $f$ and of $n$
+such that
+\[
+\max_\theta\, ||f(\theta)-F^f\uuu n(\theta)|\leq C\cdot \omega\uuu f(\frac{1}{n})\tag{*}
+\]
+
+
+\noindent 
+Examples show that no such uniform bound expressed
+by a constant $C$ exists.
+To obtain an inequality such as (*),
+D. Jackson introduced a new kernel
+in his
+thesis \emph{Über die Genauigkeit der Annährerung stegiger funktionen
+durch ganze rationala funktionen} from Göttingen in 1911.
+To each $2\pi$\vvv periodic and continuous function
+$f(x)$ on the real line and every $n\geq 1$ we set
+\[
+\mathcal J^f\uuu n(x)= \frac{3}{2\pi}\cdot \int\uuu{\vvv \infty}^\infty
+\, f(x+\frac{2t}{n})\cdot \bigl(\frac{\sin t}{ t}\bigr )^4\cdot dt
+\]
+\medskip
+
+\noindent
+{\bf{A.11 Theorem.}} \emph{The function
+$\mathcal J^f\uuu n(x)$ is a trigonometric polynomial of
+degree $2n\vvv 1$ at most and  one has the inequality}
+\[
+\max\uuu x\, |f(x)\vvv\mathcal J^f\uuu n(x)|\leq 
+(1+\frac{6}{\pi})\cdot \omega\uuu f(\frac{1}{n})
+\]
+
+
+\noindent
+\emph{Proof.}
+The variable  substitution $t\to nt$ gives
+\[ 
+\mathcal J^f\uuu n(x)=
+\frac{3}{2\pi n^3}\cdot \int\uuu{\vvv \infty}^\infty
+\, f(x+2t)\cdot \bigl(\frac{\sin nt}{ t}\bigr )^4\cdot dt\tag{1}
+\]
+Since 
+$t\mapsto f(x+2t)\cdot sin^4\, nt$
+is  $\pi$\vvv periodic it follows that (1) is equal to
+\[
+\frac{3}{2\pi n^3}\cdot 
+\int\uuu 0^\pi\, f(x+2t)\cdot \sum\uuu {k=\vvv \infty}^\infty
+\,\frac{\sin^4 (nt)}{(k\pi +t)^4}\cdot dt\tag{2}
+\]
+Next,  recall from § XX that
+\[
+\frac{1}{\sin^2 z}=
+ \sum\uuu {k=\vvv \infty}^\infty
+\frac{1}{(z+k\pi)^2}
+\] 
+Taking a second derivative when  $z=t$ is real it follows that
+\[
+\partial\uuu t^2(\frac{1}{\sin^2 t})=
+\frac{1}{6}\cdot \sum\uuu {k=\vvv \infty}^\infty
+\frac{1}{(t+k\pi)^4}\tag{3}
+\]
+Hence we obtain
+\[
+\mathcal J^f\uuu n(x)=\frac{1}{4\pi n^3}\cdot
+\int\uuu 0^\pi\, f(x+2t)\cdot
+\sin^4 (nt)
+\cdot\partial\uuu t^2(\frac{1}{\sin^2 t})\,dt\tag{*}
+\]
+\medskip
+
+\noindent
+Next, the function
+\[
+\sin^4 (nz)
+\cdot\partial\uuu z^2(\frac{1}{\sin^2 z})
+\] 
+is entire and even and the reader may verify that it is
+ a finite sum of  entire cosine\vvv functions which implies
+that the Jackson kernel is expressed by
+a finite sum of integrals:
+\[
+\mathcal J\uuu f^n(x)=\sum\uuu{k=0}^{2n\vvv 1}\, c\uuu k\int\uuu 0^{2\pi}\,
+f(u)\cdot \cos\,k(x\vvv  u))\, du\tag{4}
+\]
+In particular 
+$\mathcal J\uuu f^n(x)$ is a trigonometric polynomial of degree
+$2n\vvv 1$ a most.
+Integration by parts give the equality
+\[
+\int\uuu {\vvv\infty}^\infty\, 
+(\frac{\sin nt}{ t}\bigr )^4\,dt=
+\frac{1}{6}\int\uuu 0^\pi\, 
+\sin^4 t\cdot \partial\uuu t^2(\frac{1}{\sin^2 t})\, dt=
+\frac{4}{3}\int\uuu 0^\pi\, \cos^2 t\, dt=
+\frac{2\pi}{3}\tag{5}
+\]
+Next, we leave it to the reader to verify
+the inequality
+\[
+\frac{3}{2\pi}\int\uuu{\vvv \infty}^\infty\,
+(1+2|t|)\cdot \bigl(\frac{\sin t}{t}\bigr )^4\cdot dt\leq 1+\frac{6}{\pi}\tag{6}
+\]
+\medskip
+
+
+
+
+\noindent
+From the above where we 
+use (1) and (*) 
+it follows that
+\[
+\mathcal J\uuu n^f(x)\vvv f(x)=
+\frac{3}{2\pi}\cdot \int\uuu{\vvv \infty}^\infty
+\, [f(x+\frac{2t}{n})\vvv f(x)]\cdot \bigl(\frac{\sin t}{t}\bigr )^4\cdot dt\tag{7}
+\]
+Now
+\[
+|f(x+\frac{2t}{n})\vvv f(x)|\leq \omega\uuu f(\frac{2t}{n})\leq
+(2|t|+1)\cdot \omega\uuu f(\frac{1}{n})
+\] 
+where the last equality follows from Lemma XX.
+Hence (7)
+gives
+\[
+\max\uuu x\, 
+|\mathcal J\uuu n^f(x)\vvv f(x)|\leq \omega\uuu f(\frac{1}{n})\cdot
+ \frac{3}{2\pi}\cdot \int\uuu{\vvv \infty}^\infty
+(2|t|+1)\cdot \bigl(\frac{\sin t}{t}\bigr )^4\cdot dt
+\]
+Finally, by (6) 
+the last factor is majorized by $1+\frac{6}{\pi}$
+and Jackson's inequality follows.
+
+
+
+\bigskip
+
+
+delaydelay 
+
+\centerline {\bf{A.12 A lower bound for polynomial approximation.}}
+\bigskip
+
+\noindent
+Denote by $\mathcal T\uuu n$ the linear space of trigonometric polynomials of
+degree $\leq n$.
+For a  $2\pi$-periodic and continuous function $f$ we put
+\[ 
+\rho\uuu f(n)=
+\min\uuu{T\in\mathcal T\uuu n}\, ||f\vvv T||
+\] 
+where $||\cdot ||$
+denotes the maximum norm over $[0,2\pi]$.
+We shall establish a lower bound
+for the $\rho$\vvv numbers when certain sign\vvv conditions hold for
+Fourier coefficients.
+In general, let $f$ be a periodic function and for each positive integer
+$n$ we find $T\in \mathcal T\uuu n$ such that 
+$||f\vvv T||= \rho\uuu f(n)$.
+Since Fejer kernels do not  increase maximum norms one has
+\[
+||F^f\uuu k\vvv F^T\uuu k||\leq\rho_f(n)\tag{i}
+\]
+for every positive integer $k$. 
+Apply this with $k=n$ and $k=n+p$
+where $p$ is another  positive integer.
+If $T\in\mathcal T_n$
+the equation from Exercise XX gives
+\[
+T=\frac{(n+p)\cdot \mathcal F\uuu {n+p}(T)\vvv n\cdot \mathcal F\uuu n(T)}{p}\tag{ii}
+\]
+Since (i) hold for $n$, $n+p$ and 
+$||f\vvv T||\leq \rho_f(n)$, the triangle inequality gives
+\[
+||f\vvv \frac{(n+p)\cdot \mathcal F\uuu {n+p}(f)\vvv n\cdot \mathcal F\uuu n(f)}{p}||
+\leq 2\cdot \frac{n+p}{p}\cdot\rho\uuu f(n)\tag{iii}
+\]
+Next, by the formula (§ xx) it follows that (iii) gives
+
+
+\[
+||f\vvv \frac{S\uuu n(f)+\cdots S\uuu {n+p\vvv 1}(f)}{p}||
+\leq 2\cdot \frac{n+p}{p}\cdot \rho\uuu f(n)
+\]
+In particular we take $p=n$ and get the inequality
+\[
+||f\vvv \frac{S\uuu n(f)+\cdots S\uuu {2n\vvv 1}(f)}{n}||
+\leq \frac{4}{n}\cdot \rho\uuu f(n)\tag{*}
+\]
+
+
+\noindent
+{\bf{A.12 A special case.}}
+Assume that $f(x)$ is an even function on
+$[\vvv \pi,\pi]$ which gives a Fourier series:
+\[
+f(x)=\frac{a\uuu 0}{2}+ \sum\uuu {k=1}^\infty\, a\uuu k\cdot
+\cos\,kx
+\]
+\medskip
+
+\noindent
+{\bf{A.12 Proposition}} \emph{Let $f$ be even as above and assume that
+$a\uuu k\leq 0$ for every $k\geq 1$. Then the following inequality holds for
+every $n\geq 1$:}
+\[
+f(0)\vvv \frac{S\uuu n(f)(0)+\cdots S\uuu {2n\vvv 1}(f)(0)}{n}
+\leq \vvv \sum\uuu {k=2n}^\infty\, a\uuu k
+\]
+
+
+
+\noindent
+The easy verification is left to the reader.
+Taking the maximum norm over $[\vvv \pi,\pi]$
+it follows from (*) that 
+\[
+\rho\uuu f(n)\geq
+\frac{n}{4}\cdot \sum\uuu {k=2n}^\infty\, |a\uuu k|\tag{**}
+\]
+holds when  the sign conditions on
+the Fourier coefficients above are satisfied.
+Notice that (**) means that
+one has a lower bound for polynomial approximations
+of $f$.
+
+\medskip
+
+\noindent
+{\bf{A.13 The function $f(x)=\sin |x|$}}
+It is obvious that
+\[
+\omega\uuu f(\frac{1}{n})=\frac{1}{n}
+\]
+
+\noindent
+Next, the periodic function $f(x($ is even
+and hence we only get a cosine\vvv series. For each positive integer $m$
+we have:
+\[
+a\uuu k=\frac{2}{\pi}\int\uuu 0^\pi\, \sin x\cdot \cos kx \cdot dx
+\]
+To evaluate these integrals we use the trigonometric formula
+\[
+sin \,(k+1)x\vvv \sin(k\vvv 1)x =2\sin x\cdot \cos kx
+\]
+Now the reader can verify that $a\uuu\nu=0$ when $\nu$ is odd while
+\[
+a\uuu{2k}=\vvv \frac{4}{\pi}\cdot \frac{1}{2k^2\vvv 1}
+\]
+Hence the requested
+sign conditions hold
+and
+(**) entails that
+
+\[
+\rho\uuu f(n)\geq \frac{n}{\pi}\cdot  \sum\uuu {k=n}^\infty
+\frac{1}{2k^2\vvv 1}
+\]
+Here the right hand side is $\geq \frac{C}{n}$ for a
+constant $C$ which is independent of $n$.
+So this  example shows that the inequality (*) in § A.11
+is sharp up to a multiple with a fixed constant.
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{B. Legendre polynomials.}}
+\bigskip
+
+
+\noindent
+If $n\geq 1$ we denote by $\mathcal P_n$ the linear space of real-valued
+polynomials of degree $\leq n$. An inner product is defined by
+is defined by
+\[
+\langle q,p\rangle=
+\int_{-1}^1\, q(x)p(x)\cdot dx
+\]
+Since 
+$1,x,\ldots,x^{n-1}$ generate a subspace of  co-dimension  one
+in $\mathcal P\uuu n$ we get:
+
+\medskip
+
+\noindent
+{\bf {B.1 Proposition.}}
+\emph{There exists a unique 
+$Q_n(x)= x^n+q_{n-1}x^{n-1}+\ldots+q_0$
+such that}
+\[
+\int_{-1}^1\, x^\nu\cdot Q_n(x)\cdot dx=0\leq  \nu\leq n-1
+\]
+\medskip
+
+\noindent
+To find $Q_n(x)$.
+we consider the polynomial $(1-x^2)^n$ which vanishes up to order
+$n$ at the  end-points 1 and -1. 
+Its the derivative of order $n$ gives a polynomial of  degree $n$
+and partial integrations show that
+\[
+\int_{-1}^1\, x^\nu\cdot \partial^n((x^2-1)^n))\cdot dx=0\leq  \nu\leq n-1
+\]
+The leading coefficient of $x^n$ 
+in $\partial^n((x^2-1)^n))$
+becomes
+\[
+c_n=2n(2n-1)\cdots (n+1)
+\]
+Hence we have
+\[ Q_n(x)=\frac{1}{c_n}\cdot \partial ^n((x^2-1)^n)
+\]
+\medskip
+
+\noindent
+{\bf B.2 Definition.}
+\emph{The Legendre polynomial of degree
+$n$ is  given by}
+\[
+P_n(x)=k_n\cdot\partial ^n((x^2-1)^n)
+\]
+\emph{where the constant $k\uuu n$ is determined so that
+$P\uuu n(1)=1$.}
+
+\medskip
+
+\noindent
+Since $P_n$ is equal to $Q_n$ up to a constant we still have
+\[
+\int_{-1}^1\, x^\nu\cdot P_n(x)\cdot dx=0\leq  \nu\leq n-1
+\]
+From this we conclude that 
+\[
+\int_{-1}^1\, P_n(x)\cdot P_mx)dx=0\quad  n\neq m
+\]
+Thus, $\{P_n\}$ is an orthogonal family
+with respect to the inner product defined above.
+\medskip
+
+\noindent
+{\bf B.3 A generating function.}
+Let $w$ be a new variable and set
+\[
+\phi(x,w)=1-2xw+w^2
+\]
+Notice that $\phi\neq 0$ when
+$-1\leq x\leq 1$ and $|w|<1$.
+Keeping $-1\leq x\leq 1$ fixed
+we have the function
+\[ 
+w\mapsto
+\frac{1}{\sqrt{1-2xw+w^2}}
+\]
+Next, as   $|\zeta|<1$ one has the Newton series
+\[
+\frac{1}{\sqrt{1-\zeta}}=\sum\, g_n\cdot \zeta^n\quad
+\text{where}\quad g_n=\frac{3\cdot5\cdots(2n-1)}{2^n}
+\]
+It follows that
+\[
+\frac{1}{\sqrt{1-2xw+w^2}}=\sum\, g_n(2xw-w^2)^2
+\]
+With $x$ kept fixed the series is expanded into $w$-powers, i.e.  set
+\[
+\frac{1}{\sqrt{1-2xw+w^2}}=\sum\, \rho_n(x)\cdot w^n
+\]
+It is easily seen that as $x$ varies then
+$\rho_n(x)$ is a polynomial of degree
+$n$. Moreover, we notice that the coefficient of
+$x^n$ in $\rho_n(x)$ is equal to
+\[
+g_n\cdot 2^n
+\]
+Next, if $x=1$ we have
+\[
+\frac{1}{\sqrt{1-2w+w^2}}= \frac{1}{1-w}= \sum\, w^n
+\]
+From this we conclude that
+\[ 
+\rho_n(1)=1\quad\text{for all}\quad n\geq 0
+\]
+\medskip
+
+\noindent
+{\bf B.4 Theorem.} \emph{One has the equality $\rho_n(x)=P_n(x)$ for each $n$, i.e.} 
+\[
+\frac{1}{\sqrt{1-2xw+w^2}}=\sum\, P_n(x)\cdot w^n
+\quad 
+\text{holds when}\quad  \vvv1\leq x\leq 1\,\colon\, |w|<1
+\]
+
+
+
+\bigskip
+
+\noindent
+{\bf{B.5 Exercise.}} Prove this result.
+\bigskip
+
+\noindent {{\bf{B.6 The series for $P_n(\text{cos}\,\theta)$}}.
+With $x$ replaed by $\cos\,\theta$ we notice that
+\[
+1-2\cos\,\theta\cdot w+w^2=
+(1-e^{i\theta}w)(1-e^{-i\theta}w)
+\]
+It follows that
+\[
+\frac{1}{\sqrt{1-2\text{cos}(\theta)w+w^2}}=
+\frac{1}{\sqrt{1-1-e^{i\theta}w)}}\cdot 
+\frac{1}{\sqrt{1-e^{-i\theta}w)}}
+\]
+The last product becomes
+\[ \sum\sum\, g_m e^{im\theta}w^m\cdot g_\nu e^{-i\nu\theta}w^\nu
+\]
+Collecting $w$ powers the double sum becomes
+\[
+\sum\, \gamma_n(\theta)\cdot w^n
+\quad\gamma_n(\theta)=\sum_{m+\nu=n}\, g_mg_\nu e^{i(m-\nu)\theta}
+\]
+
+\noindent
+By Theorem B.4 the last sum represents $P_n(\text{cos}(\theta))$.
+One has for example
+\[ 
+P_3(\text{cos}(\theta)=
+2g_3\cdot\text{cos}(3\theta)+
+2g_2g_1\cdot \text{cos}(\theta)
+\]
+where we used that $g_0=1$.
+\medskip
+
+\noindent
+{\bf{B.7 An inequality  for $|P(x)|$.}}
+Since the $g$-numbers are  $\geq 0$
+we obtain
+\[
+|P_n(\text{cos}(\theta)|\leq
+g_ng_0+
+g_{n-1}g_1+\ldots+
+g_1g_{n-1}+
+g_0g_n=P_n(1)\quad\colon\,\,0\leq\theta\leq 2\pi
+\]
+
+\noindent
+Hence we have proved
+\medskip
+
+\noindent
+{\bf B.8 Theorem.}\emph{ For each $n$ one has}
+\[ 
+|P_n(x)|\leq 1\quad\colon\,\, -1\leq x\leq 1
+\]
+
+
+\noindent
+Next, we study the values when $x>1$. Here one has
+\medskip
+
+\noindent
+{\bf B.9 Theorem.} \emph{For each $x>1$ one has}
+\[
+1<P_1(x)<P_2(x)<\ldots
+\]
+
+
+\noindent
+\emph{Proof.}
+Let us put
+\[
+\psi(x.w)= 1+ \sum_{n=1}^\infty\, [P_n(x)-P_{n-1}(x)]\cdot w^n
+\]
+By Theorem B.4 this is equal to
+\[
+\frac{1-w}{\sqrt{1-2xw+w^2}}\tag{*}
+\]
+With $x>1$ we set $x=1+\xi$ and notice that
+\[
+1-2xw+w^2=(1-w)^2-2\xi w
+\]
+Hence (*) becomes
+\[
+\frac{1}{\sqrt{1-\frac{2\xi w}{1-w^2}}}=\sum\, g_n\cdot \frac
+{(2\xi w)^n} {(1-w^2)^n}=\sum\, g_n\cdot (2\xi)^n\cdot
+\frac{w^n}{(1-w^2)^n}\tag{**}
+\]
+Next, for each $n\geq 1$ we notice that the power series
+of 
+$\frac{w^n}{(1-w^2)^n}$ has positive coefficients. Since
+$g_n(2\xi)^n>0$ also hold we conclude that
+(**) is of the form
+\[
+1+ \sum_{n=1}^\infty\, q_n(\xi)\cdot w^n\quad\text{where}\quad q_n(\xi)>0
+\]
+Finally, Theorem B.9 follows since
+\[ 
+P_n(1+\xi)-P_{n-1}(1+\xi)=q_n(\xi)
+\]
+
+\bigskip
+
+\centerline {\bf {B.10 An $L^2$-inequality.}}
+\medskip
+
+\noindent
+Let $n\geq 1$ and denote by $\mathcal P_n[1]$ the space of
+real-valued polynomials $Q(x)$ of degree $\leq n$ for which
+$\int_{-1}^1\, Q(x)^2\cdot dx=1$ and set
+\[ 
+\rho(n)=\max_{Q\in\mathcal P-n[1]}\,
+|Q|_\infty
+\] 
+where $|Q|_\infty$ is the maximum norm over
+$[-1,1]$.
+To find  $\rho(n)$ we use the orthonormal basis $\{P_k^*\}$
+and write
+\[
+Q(x)=t_0\cdot P_0^*(x)+\ldots+t_n\cdot P_n^*(x)
+\]
+Since $Q\in\mathcal P_n[1]$ we have
+$t_0^2+\ldots+t_n^2=1$. Recall also that
+\[
+P_\nu^*(x)=\sqrt{\frac{2\nu+1}{2}}\cdot P_\nu(x)
+\]
+Given $-1\leq x_0\leq 1$ the Cauchy-Schwarz inequality gives
+\[
+Q(x_0)^2\leq \sum_{\nu=0}^{\nu=n}\,
+\frac{2\nu+1}{2}\cdot |P_\nu(x_0)|\leq 
+\sum_{\nu=0}^{\nu=n}\,\frac{2\nu+1}{2}
+\]
+where the last inequality follows since the maximum norm of
+each $P_\nu$ is $\leq 1$.
+Finally, we notice that
+\[
+\sum_{\nu=0}^{\nu=n}\,\frac{2\nu+1}{2}
+=\frac{(1-n)^2}{2}
+\]
+We conclude that
+\[
+|Q(x_0)|\leq \frac{n+1}{\sqrt{2}}
+\]
+\medskip
+
+\noindent
+{\bf B.11 The case of equality.}
+To have equality above we take  $x_0=1$ and 
+\[
+ t_\nu=\alpha\cdot P^*_\nu(1)\quad\colon\quad \nu\geq 0
+\]
+
+
+\newpage
+
+\centerline{\bf {C. The space $\mathcal T_n$}}
+\bigskip
+
+\noindent
+Let $n\geq 1$ be a positive integer.
+A real-valued trigonometric polynomial of degree
+$\leq n$ is given by
+\[
+g(\theta)=a_0+
+a_1\text{cos}\,\theta+\ldots
++
+a_n\text{cos}\,n\theta+
+b_1\text{sin}\,\theta+\ldots
+b_n\text{sin}\,n\theta
+\]
+Here $a_0,\ldots,a_n,b_1,\ldots,b_n$ are real numbers.
+The space of such functions is denoted by
+$\mathcal T_n$ which  is a vector space over
+${\bf{R}}$ of dimension $2n+1$.
+We can write
+\[
+\text{cos}\,kx=\frac{1}{2}[e^{ikx}+e^{-ikx}]\quad\text{and}\quad
+\text{sin}\,kx=\frac{1}{2i}[e^{ikx}-e^{-ikx}]\quad\colon\, k\geq 1
+\]
+It follows that there exist complex numbers
+$c_0,\ldots,c_{2n}$ such that
+\[
+g(\theta)=e^{-in\theta}\cdot[c_0+c_1e^{i\theta}+\ldots+c_{2n}e^{i2n\theta}]
+\]
+
+
+\noindent
+{\bf Exercise.}
+Show that
+\[
+c_\nu+c_{2n-\nu}=2a_\nu\quad \text{and}\quad c_{\nu}-c_{2n-\nu}=2 b_\nu\implies
+\]
+\[
+c_{2n-\nu}=\bar c_\nu\quad 0\leq\nu\leq n
+\]
+
+
+\noindent
+{\bf C.1 The polynomial $G(z)$.}
+Given $g(\theta)$ as above we set
+\[ 
+G(z)= c_0+c_1z+\ldots+c_{2n}z^{2n}\implies
+e^{-in\theta}\cdot G(e^{i\theta})= g(\theta)
+\]
+
+
+\noindent
+{\bf C.2 Exercise.}  Set
+\[ 
+\bar G(z)= \bar c_0+c\uuu 1z+\ldots+\bar c_{2n}z^{2n}
+\]
+and show that
+\[ z^{2n}G(1/z)= \bar G(z)\tag{*}
+\]
+Use this to show that if
+$0\neq z_0$ is a zero of $G(z)$ then
+$\frac{1}{\bar z_0}$ is also a zero of $G(z)$.
+\medskip
+
+\noindent
+{\bf{C.3 The case when $g\geq 0$}}. Assume that the $g$-function is non-negative.
+Let
+\[ 
+0\leq \theta_1<\ldots<\theta_\mu<2\pi
+\]
+be the zeros on the half-open interval $[0,2\pi)$.
+Since $g\geq 0$ every such zero has a multiplicity given by
+an \emph{even} integer.
+Consider also the polynomial $G(z)$. Exercise C.2    shows that
+$\{e^{i\theta_\nu}\}$ are complex zeros of $G(z)$
+whose multiplicities are even integers.
+Next, if $\zeta$ is a zero where
+$\zeta\neq 0$ and $|\zeta|\neq 1$, then (*) in C.2
+implies that
+$\frac{1}{\bar\zeta}$ also is  a zero and hence
+$G(z)$ has a factorisation
+\[
+G(z)= c_{2n}
+\cdot \prod_{\nu=1}^{\nu=\mu}\,
+(z-e^{i\theta_\nu})^{2k_\nu}\cdot \prod_{j=1}^{j=m}\,
+(z-\zeta_j)(z-\frac{1}{\bar\zeta_j})\cdot z^{2r}
+\quad\text{where}\quad 2\mu+2m+2r=2n
+\]
+Here $0<|\zeta_j|<1$ hold for each $j$ and it may occur that
+multiple zeros appear,  i.e. the
+$\zeta$-roots need not be distinct and  the integer $r$ may be zero
+or positive.
+\medskip
+
+\noindent
+{\bf {C.4 The $h$-polynomial}}. Let
+$\delta=\sqrt{|\zeta_1|\cdots|\zeta_m|}$ and put
+\[
+h(z)=c_{2n}\dot \delta\cdot \prod_{\nu=1}^{\nu=\mu}\,
+(z-e^{i\theta_\nu})^{k_\nu}\cdot \prod_{j=1}^{j=m}\,
+(z-\zeta_j)\cdot z^{r}
+\]
+
+
+\noindent
+{\bf C.5 Proposition.} \emph{One has the equality}
+\[
+|h(e^{i\theta})|^2=g(\theta)
+\]
+
+
+\noindent
+\emph{Proof.}
+With $z=e^{i\theta}$ and $0<|\zeta|<1$ one has
+\[
+(e^{i\theta}-\zeta)
+(e^{i\theta}-\frac{1}{\bar \zeta})=
+(e^{i\theta}-\zeta)\cdot (\bar\zeta -e^{-i\theta})\cdot
+e^{i\theta}\cdot\frac{1}{\bar \zeta}
+\]
+Passing to absolute values it follows that
+\[
+\bigl|(e^{i\theta}-\zeta)
+(e^{i\theta}-\frac{1}{\bar \zeta})\bigr|=
+\bigl|e^{i\theta}-\zeta\bigr|^2\cdot 
+\frac{1}{|\zeta|}
+\]
+Apply this to every root $\zeta_\nu$ and take the 
+product which
+gives 
+Proposition C.5.
+
+
+\newpage
+
+\noindent
+{\bf C.6 Application.}
+Let $g\geq 0$ be as above 
+and assume that the constant coefficient $a_0=1$.
+This means that
+\[
+1=\frac{1}{2\pi}\cdot 
+\int_0^{2\pi}\, g(\theta)\cdot d\theta
+\]
+With
+$h(z)=d_0+d_1z+\ldots+d_nz^n$
+we get
+\[
+1 =\frac{1}{2\pi}\cdot 
+\int_0^{2\pi}\,h(e^{i\theta})|^2\cdot d\theta
+=|d_0|^2+\ldots+|d_n|^2
+\]
+Notice that
+\[ |d_n|^2=|c_{2n}|\cdot\delta\quad\text{and}\quad
+|d_0|^2= |c_{2n}\cdot \delta|\cdot\prod\,|\zeta_j|^2=|c_{2n}|\cdot \frac{1}{\delta}\tag{i}
+\]
+From this we see that
+\[
+|c_{2n}|\cdot(\delta+\frac{1}{\delta})= |d_0|^2+d_n|^2\leq 1\tag{iii}
+\]
+Here $0<\delta<1$ and therefore
+$\delta+\frac{1}{\delta}\geq 2$ which together with
+(iii) gives
+\[
+|c_{2n}|\leq \frac{1}{2}
+\]
+At the same time we recall  that
+\[
+c_{2n}=\frac{a_n+ib_n}{2}\implies |a_n+ib_n|\leq 1\tag{*}
+\]
+
+
+\noindent
+\emph{Summing up} we have proved the following:
+\medskip
+
+\noindent
+{\bf {C.7 Theorem.}}
+\emph{Let $g(\theta)$
+be non-negative in $\mathcal T_n$ with constant term
+$a_0=1$. Then}
+\[
+|a_n+ib_n|\leq 1
+\]
+
+
+\noindent
+{\bf {C.8 An application}}.
+Let $n\geq 1$ and consider the space of all monic polynomials 
+\[
+P(x)=x^n+c_{n-1}x^{n-1}+\ldots+c_0
+\]
+where $\{c_\nu\}$ are real-
+To each such polynomial we can consider the maximum norm
+over the interval $[-1,1]$.
+Then one has
+\medskip
+
+\noindent
+{\bf {C.9 Theorem.}}
+\emph{For each $P\in\mathcal P_n^*$ one has the inequality}
+\[
+\max_{-1\leq x\leq 1}\, |P(x)|\geq 2^{-n+1}
+ \]
+
+
+\noindent
+\emph{Proof}. 
+Consider some $P\in\mathcal P_n^*$ and
+define the trigonometric polynomial
+\[ 
+g(\theta)= (\text{cos}\,\theta)^n
++c_{n-1}(\text{cos}\,\theta)^{n-1}+\ldots+c_0
+\]
+So here
+$P(\text{cos}\,\theta)= g(\theta)$ and 
+Theorem C.9 follows if we have proved that
+\[
+2^{-n+1}\geq 
+\max_{0\leq \theta\leq 2\pi}\, |g(\theta))|\tag{1}
+\]
+To prove this we set
+$M=\max_{0\leq \theta\leq 2\pi}\, |g(\theta))|$.
+Next, we can write
+\[ 
+g(\theta)= a_0+a_1\text{cos}\,\theta\ldots+
+a_n\text{cos}\,n\theta
+\]
+Moreover, since
+\[
+(\text{cos}\,\theta)^n=2^{-n}\cdot[e^{i\theta}+e^{-\theta}]^n
+\]
+we get
+\[ 
+a_n=2^n
+\]
+Now we shall apply Theorem C.8. For this purpose we construct
+non-negative trigonometric polynomials. First we define
+\[
+g^*(\theta)= \frac{M-g(\theta)}{M-a_0}
+\]
+Then $g^*\geq 0$ and its constant term is 1.
+We have also
+\[ 
+g^*(\theta)= 1-\frac{1}{M-a_0}\cdot \sum_{\nu=1}^{\nu=n}a_\nu\text{cos}\,\nu\theta
+\]
+Hence Theorem C.7 gives
+\[
+\frac{1}{|M-a_0|}\cdot |a_n|\leq 1\implies
+|M-a_0|\geq 2^{-n+1}\tag{1}
+\]
+Next, we have also the function
+\[
+g_*(\theta)= \frac{M+g(\theta)}{M+a_0}
+\]
+In the same way as above we obtain:
+\[ 
+|M+a_0|\geq 2^{-n+1}\tag{2}
+\]
+Finally, (1) and (2) give
+\[
+M\geq 2^{-n+1}
+\]
+which proves Theorem C.9
+
+
+\newpage
+
+\centerline{\bf{D. Tchebysheff polynomials.}}
+\medskip
+
+\noindent
+The inequality in Theorem C.9 is sharp. To see this
+we shall construct a special polynomial $T_n(x)$ of degree $n$.
+Namely, with $n\geq 1$ we can write
+\[
+\text{cos}\,n\theta=
+2^{n-1}\cdot 
+(\text{cos}\,\theta)^n+
+c_{n-1}\cdot 
+(\text{cos}\,\theta)^{n-1}+
+\ldots+c_0
+\]
+Set
+\[ T_n(x) =2^{n-1}x^n+
+c_{n-1}\cdot x^{n-1}+\ldots+c_0
+\]
+Hence
+\[ 
+T_n(\text{cos}\,\theta)= \text{cos}\, n\theta
+\]
+We conclude that the polynomial
+\[ 
+p_n(x)=2^{-n+1}\cdot T_n(x)
+\]
+belongs to $\mathcal P_n^*$ and its maximum norm
+is $2^{-n+1}$ which  proves that the inequality in Theorem C.9 is sharp.
+\medskip
+
+\noindent
+{\bf D.1 Zeros of $T_n$}.
+Set
+\[ 
+\theta_\nu=\frac{\nu\pi}{n}+\frac{\pi}{2n}
+\]
+It is clear that
+$\theta_1,\dots,\theta_n$ are zeros of
+$\text{cos}\, n\theta$.
+Hence the  zeros of $T_n(x)$ are:
+\[
+x_\nu= \text{cos}\, \theta_\nu
+\]
+Notice that
+\[
+-1<x_n<\ldots<x_1<1
+\]
+Since $T_n(x)$ is a polynomial of degree
+$n$ it follows that $\{x_\nu\}$ give all zeros and we have
+\[
+T_n(x)=2^{n-1}\cdot \prod\,(x-x_\nu)
+\]
+
+
+\noindent
+{\bf{D.2 Exercise}}.
+Show that
+\[ 
+T'_n(x_\nu)\cdot\sqrt{1-x_\nu^2}=n
+\] 
+hold for every zero of $T_n(x)$.
+
+\medskip
+
+\noindent
+{\bf{D.3 An interpolation formula.}}
+Since $x_1,\ldots,x_n$ are distinct it follows 
+that if $p(x)\in\mathcal P_{n-1}$ is a polynomial of degree
+$\leq n-1$ then
+\[
+ p(x)=
+\sum_{\nu01}^{\nu=n}\, p(x_\nu)\cdot
+\frac{1}{T'(x_\nu)}\cdot \frac{T(x)}{x-x_\nu}
+\]
+By the exercise above we get
+\[
+ p(x)=
+\frac{1}{n}\cdot \sum_{\nu=1}^{\nu=n}\, (-1)^{\nu-1}p(x_\nu)\cdot
+\sqrt{1-x_\nu^2}\cdot \frac{T(x)}{x-x_\nu}
+\]
+\medskip
+\noindent
+We shall use the interpolation formula above to prove
+\medskip
+
+\noindent
+{\bf {D.4 Theorem}}
+\emph{Let $p(x)\in\mathcal P_{n-1}$ satisfy}
+\[
+\max_{-1\leq x\leq 1}\,
+\sqrt{1-x^2}\cdot |p(x)|\leq 1\tag{1}
+\]
+\emph{Then it follows that}
+\[
+\max_{-1\leq x\leq 1}\,
+|p(x)|\leq n\tag{2}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+First, consider the case when 
+\[
+-\text{cos}\frac{\pi}{2n}\leq
+x\leq \text{cos}\,\frac{\pi}{2n}\tag{*}
+\]
+Then we have
+\[
+\sqrt{1-x^2}\geq 
+\sqrt{1-\text{cos}^2\frac{\pi}{2n}}=
+\text{sin}\,\frac{\pi}{2n}
+\]
+Next,  recall the inequality
+$\text{sin}\, x\geq \frac{2}{\pi}\cdot x$.
+It follows that
+\[
+\sqrt{1-x^2}\geq \frac{1}{n}
+\]
+So when (1) holds in the theorem we have
+\[ 
+|p(x)|=\frac{1}{\sqrt{1-x^2}}\cdot
+\sqrt{1-x^2}\cdot |p(x)|\leq
+\frac{1}{\sqrt{1-x^2}}\leq n
+\]
+Hence the required inequality in Theorem D.4  holds when
+$x$ satisfies (*) above.
+Next, suppose that
+\[
+x_1\leq x\leq 1\tag{**}
+\]
+On this interval $T_n(x)\geq 0$ and from the interpolation formula
+xx and the triangle  inequality we have
+\[
+|p(x)\leq\frac{1}{n}
+\sum_{\nu=1}^{\nu=n}\,
+\sqrt{1-x_\nu^2}\cdot |p(x_\nu)|\cdot
+\frac{T(x)}{x-x_\nu}\leq\frac{1}{n}
+\sum_{\nu=1}^{nu=n}\,
+\frac{T(x)}{x-x_\nu}
+\]
+Next, the sum
+\[
+\frac{T(x)}{x-x_\nu}=T'_n(x)=n\cdot U_{n-1}(x)
+\]
+So when (**) holds we have
+\[
+|p(x)|\leq |U_{n-1}(x)|\tag{***}
+\]
+By xx the maximum norm of $U_{n-1}$ over $[-1,1]$ is $n$ and hence
+(***) gives
+\[
+ |p(x)|\leq n
+\]
+In the same way one proves htat
+\[
+-1\leq x\leq x_n\implies 
+ |p(x)|\leq n
+\] 
+Together with the upper bound in the case (xx) we get Theorem D.4.
+
+\bigskip
+
+\centerline{\bf{D.5 Bernstein's inequality.}}
+\medskip
+
+\noindent 
+Let $g(\theta)\in\mathcal T_n$.
+The derivative $g'(\theta)$ is another trigonometric polynomial and we have
+\medskip
+
+\noindent
+{\bf Theorem.} \emph{For each $g\in\mathcal T_n$ one has}
+\[
+\max_{0\leq \theta\leq 2\pi}\,
+|g'(\theta)|\leq n\cdot 
+\max_{0\leq \theta\leq 2\pi}\,|g(\theta)|
+\]
+\medskip
+\noindent
+Before we prove this result
+we establish an inequality for certain trigonometric polynomials.
+Namely, consider a real-valued sine-polynomial
+\[
+S(\theta)= 
+c_1\text{sin}(\theta)+ \ldots+
+c_n\text{sin}(n\theta)
+\]
+Now $\theta\mapsto \frac{ S(\theta)}{\text{sin}\,\theta}$
+is an even function of $\theta$ and therefore
+one has
+\[
+\frac{ S(\theta)}{\text{sin}\,\theta}= 
+a_0+a_1\text{cos}\,\theta+
+\ldots+a_{n-1}(\text{cos}\,\theta)^{-n-1}
+\]
+Consider the polynomial
+\[
+p(x)= a_0+a_1x+\ldots+a_{n-1}x^{n-1}
+\]
+Then e see that:
+\[
+|p(\text{cos}\,\theta)|=
+\frac{|S(\theta)|}{\sqrt{1-\text{cos}^2\,\theta}}
+\]
+Using this we apply Theorem D.4 to the polynomial $p(x)$ and conclude
+\medskip
+
+\noindent
+{\bf{D.6 Theorem.}}
+\emph{Let $S(\theta)= 
+c_1\text{sin}(\theta)+ 
+c_n\text{sin}(n\theta)$ be a sine-polynomial as above.
+Then}
+\[
+\max_{0\leq\theta\leq 2\pi}\,
+\frac{|S(\theta)|}{\text{sin}\,\theta}\leq n\cdot
+\max_{0\leq\theta\leq 2\pi}\,
+|S(\theta)|
+\]
+\bigskip
+
+\noindent
+{\bf D.7 Proof of Bernstein's theorem.}
+Fix an arbitrary $0\leq\theta-0<2\pi$.
+Set
+\[
+S(\theta)=g(\theta_0+\theta)-g(\theta_0-\theta)
+\]
+We notice that $S(\theta$is an odd polynomial of
+$\theta$ and
+$S(0)=0$, It follows that
+$S(\theta)$ is a sine-polynomial as above of degree
+$\leq n$. Notice also that
+\[
+\max_{0\leq\theta\leq 2\pi}\,|S(\theta)|\leq 2\cdot
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|
+\]
+Theorem D.6 applied to $S(\theta)$ gives
+\[
+\bigl|\frac{g(\theta_0+\theta)-g(\theta_0-\theta)}{\text{sin}\,\theta}
+\bigr|\leq 2n\cdot 
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|\tag{i}
+\]
+Next, in the left hand side we can take the limit as $\theta|\to 0$ and notice that
+\[
+2\cdot  g'(\theta_0)=
+\lim_{\theta\to 0}\, 
+\frac{g(\theta_0+\theta)-g(\theta_0-\theta)}{\text{sin}\,\theta}
+\]
+Hence (i) gives
+\[
+|g'(\theta_0)|\leq n\cdot 
+\max_{0\leq\theta\leq 2\pi}\,|g(\theta)|
+\]
+Finally, since $\theta_0$ was arbitrary we get Bernstein's theorem.
+
+
+
+\bigskip
+
+\centerline{\bf{E. Fejers sine series and Gibb's phenomenon.}}
+\bigskip
+
+\noindent
+Several remarkable inequalities for trigonometric polynomials were  established by
+Fejer in [Fejer] where
+a central issue is to find trigonometric polynomials
+expressed by a sine series
+which are $\geq 0$ on the  interval $[0,\pi]$.
+Consider as
+an example is the sine\vvv series
+\[
+S\uuu n(\theta)=\sum\uuu{k=1}^{k=n}\, \frac{\sin k\theta}{k}
+\]
+
+
+
+\noindent
+{\bf{E.1 Theorem.}}
+\emph{For every $n\geq 1$ one has the inequality}
+\[
+0<S\uuu n(\theta)\leq 1+\frac{\pi}{2}\quad\colon\quad
+0<\theta<\pi
+\]
+The upper bound was proved by  in [Fej] and Fejer  conjectured that
+$S\uuu n(\theta)$ stays positive on $(0,\pi)$.
+This was confirmed in articles by 
+Jackson in [xx] and
+Cronwall in [xx]. The series (*) has a connection with
+Gibb's phenomenon and Theorem E.1 can be illustrated by drawing graphs
+of the $S$\vvv polynomials where the
+situation when $\theta=\pi\vvv \delta$ for small positive
+$\delta$ has special interest. Since $\cos\,\pi=\vvv 1$
+the positivity entails that
+\[
+\sum\uuu {k=2}^n\,(\vvv 1)^k\cdot  \frac{\sin k\delta}{k}\geq \sin\delta \quad
+\text{hold for every}\quad n\geq 2\quad  \text{and small}\quad
+\delta>0\tag{*}
+\]
+
+\medskip
+
+
+\noindent
+{\bf{ Exercise.}}
+Prove Theorem E.1 or consult the literature.
+It is also  instructive
+to confirm (*) by numerical experiments with a computer.
+\medskip
+
+\noindent
+{\bf{E.2 Mehler's integral formula.}}
+In XX we introduced the Legendre polynomials. It turns out that
+\[
+\mathcal P\uuu n(x)= \sum\uuu{\nu=1}^{\nu=n}\, P\uuu \nu(x)>0
+\quad\colon\quad -1<x<1 \tag{*}
+\]
+is strictly positive for each $\vvv 1<x<1$.
+
+\noindent
+{\bf{Exercise.}} Prove (*) using Theorem E.1 and
+Mehler's  integral formula
+\[ 
+\mathcal P\uuu n(\cos \theta)=
+\frac{2}{\pi}\cdot \int\uuu 0^\pi\,
+\frac{\sin(n+\frac{1}{2})\phi \cdot d\phi}
+{\sqrt{2\cos \theta\vvv 2\cos \phi}}\tag{*}
+\]
+
+
+\newpage
+
+\centerline{\bf{F. Convergence of arithmetical means}}
+\bigskip
+
+\noindent
+Let $f(x)$ be a real\vvv valued and square integrable function
+on $(\vvv \pi,\pi)$, i.e.
+\[
+\int\uuu{\vvv\pi}^\pi\, |f(x)|^2\, dx<\infty
+\]
+We say that
+$f$ has a determined value $A=f(0)$ at $x=0$ if the following two conditions hold:
+\[
+\lim\uuu{\delta\to 0}
+\frac{1}{\delta}\cdot \,\int\uuu 0^\delta\,
+|f(x)+f(\vvv x)\vvv 2A|\, dx=0\tag{i}
+\]
+\[
+\int\uuu 0^\delta\,
+|f(x)+f(\vvv x)\vvv 2A|^2\, dx\leq C\cdot \delta
+\quad
+\text{holds for some constant} \quad C\tag{ii}
+\]
+
+
+\noindent
+{\bf{Remark.}}
+In the same way we can impose this  condition at  every point
+$\vvv \pi<x\uuu 0<\pi$. To simplify the subsequent notations
+we take $x=0$. 
+If  $x=0$ is a Lebesgue point for $f$
+and $A$  the  Lebesgue value we have (i).
+Hence Lebesgue's Theorem entails  that (i)
+holds almost everywhere when 
+$x=0$ is replaced by other points $x\uuu 0$.
+We leave it to the reader to show
+that the second condition also is valid almost everywhere
+when $f$ is square integrable but
+in general there appears a  null set $\mathcal N$
+where (ii) fails to hold while $\mathcal N$ 
+contains some Lebegue points.
+Next,  expand $f$ in a Fourier series
+\[ 
+f(x)=\frac{a\uuu 0}{2}+ \sum\, a\uuu k\cdot \cos kx+\sum\, b\uuu k\cdot \sin kx
+\]
+and with $x=0$ we consider the partial sums
+\[ 
+s\uuu n(0)= \frac{a\uuu 0}{2}+ a\uuu 1 +\ldots+a\uuu n+
+b\uuu 1+\ldots+b\uuu n
+\]
+The result below is proved 
+in [Carleman] and shows  that
+$\{s\uuu n\}$ are  close to the determined value  for many $n$\vvv values.
+
+
+\medskip
+
+\noindent
+{\bf{F.1 Theorem.}}
+\emph{Assume that $f$ has a determined value $A$ at $x=0$.
+Then the following hold for every positive integer $k$}
+\[
+\lim\uuu{n\to\infty}\, 
+\frac{1}{n+1}\cdot
+\sum\uuu{\nu=0}^{\nu=n}\, |s\uuu\nu\vvv A|^k=0\tag{*}
+\]
+
+\bigskip
+
+\noindent
+{\bf{Remark.}}
+Carleson's  theorem 
+asserts that $\{s\uuu n(x)\}$ converge to
+$f(x)$ almost everywhere when $f\in L^2$.
+When   a pointwise convergence holds 
+the limit formula (*)  is  obvious.
+However, it is in general not true that
+the  pointwise convergence exists  at \emph{every point}
+where  $f$ has a determined value.
+So  "ugly points"  may appear in a null\vvv set
+where pointwise convergence fails and here
+Carleman's result offers a substitute.
+
+\medskip
+
+\noindent
+{\bf{The case when $f\in \text{BMO}(T)$}}.
+If $f$ has bounded mean oscillation the results from
+§ XX in  Special Topics show that
+the  conditions (i\vvv ii) hold at every Lebesgue point of 
+$f$.
+So here one has  a      control for  averaged Fourier series of
+$f$ expressed via its set of Lebesgue points.
+
+\medskip
+
+
+\noindent
+{\bf{The case when $f$ is continuous.}}
+Here (i-ii) hold everywhere so the averaged limit formulas hold
+at every point.
+We can say more
+since $f$ is uniformly continuous.
+Let $\omega_f(\delta)$ be the modulos of continuity
+function and for each $n\geq 1$,
+$||s_n-f||$ is the maximum norm of $s_n-f$
+over
+$[0,2\pi]$. Set
+
+\[
+\mathcal D_n(f)= \sqrt{\frac{1}{n+1}\cdot
+\sum\uuu{\nu=0}^{\nu=n}\, ||s\uuu\nu\vvv f||^2}
+\]
+
+
+\medskip
+
+
+
+
+\noindent
+{\bf{F.2 Theorem}}. \emph{There exists an absolute constant $K$
+such that the following hold for every
+continuous function $f$ with maximum norm
+$\leq 1$:}
+
+
+\[ 
+\mathcal D_n(f)\leq K\cdot \bigl[ \frac{1}{\sqrt{n}}+\omega_f(\frac{1}{n})\bigr]
+\]
+
+
+
+
+
+\newpage
+
+\noindent
+\centerline {\emph{Proof of Theorem F.1}}
+\medskip
+
+
+\noindent
+Set $A=f(0)$ and $s_n=s_n(0)$. Introduce the function:
+\[ 
+\phi(x)= f(x)+f(\vvv x)\vvv 2A
+\]
+Applying Dini's kernel we have
+\[
+s\uuu n\vvv A=
+\int\uuu 0^\pi\, \frac{\sin (n+1/2)x}{\sin\, x/2}\cdot \phi(x)\cdot dx
+\]
+By
+trigonometric formulas   the  integral is  expressed by 
+three terms for each
+$0<\delta<\pi$:
+\[
+\alpha\uuu n=\frac{1}{\pi}\cdot \int\uuu 0^\delta\, 
+\sin nx\cdot\cot x/2\cdot
+\phi(x)\cdot dx
+\]
+\[ 
+\beta\uuu n= 
+\frac{1}{\pi}\cdot\int\uuu \delta ^\pi\, \sin nx\cdot\cot x/2\cdot
+\phi(x)\cdot dx
+\]
+\[
+\gamma\uuu n=\frac{1}{\pi}\cdot\int\uuu 0^\pi\, \cos nx\cdot \phi(x)\cdot dx
+\]
+\medskip
+
+\noindent
+By Hölder's inequality it suffices to show Theorem F.1 if
+$k=2p$ is an even integer. Minkowski's inequality gives
+
+\[
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n} |s\uuu\nu\vvv A|^{2p}\,\bigr]^{1/2p}\leq
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n}|\alpha\uuu \nu|^{2p}\,\bigr]^{1/2p}+
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n}|\beta\uuu \nu|^{2p}\,\bigr]^{1/2p}+
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n}|\gamma\uuu \nu|^{2p}\,\bigr]^{1/2p}\tag{1}
+\]
+\medskip
+
+\noindent
+Denote by $o(\delta)$ small ordo and $O(\delta)$ is big ordo.
+When $\delta\to 0$
+we shall establish the following:
+\[
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n}|\alpha\uuu \nu|^{2p}\,\bigr]^{1/2p}=
+n^{1+1/2p)}\cdot o(\delta)\tag{i}
+\]
+\[
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n}|\beta\uuu \nu|^{2p}\,\bigr]^{1/2p}\leq K\cdot p\cdot
+\delta^{\vvv 1/2p}\tag{ii}
+\]
+\[
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n}|\gamma\uuu \nu|^{2p}\,\bigr]^{1/2p}\leq K
+\tag{iii}
+\]
+\medskip
+
+\noindent
+In (ii-iii) $K$ is an absolute constant which is independent of
+$p,n$ and $\delta$.
+Let us first see why (i\vvv iii) give Theorem F.1.
+Write $o(\delta)= \epsilon(\delta)\cdot \delta$
+where $\epsilon(\delta)\to 0$.
+With these notations (1) gives:
+\[
+\bigl[\,\sum\uuu{\nu=0}^{\nu=n} |s\uuu\nu\vvv A|^{2p}\,\bigr]^{1/2p}\leq
+n^{1+1/2p} \cdot \delta\cdot \epsilon(\delta)
++Kp\cdot \delta^{\vvv 1/2p}+K\tag{*}
+\]
+
+
+\noindent
+Next, let  $\rho >0$ and choose $b$ so large that
+\[
+pKb^{\vvv 1/2p}<\rho/3
+\]
+Take $\delta=b/n$ and with $n$ large it follows that
+$\epsilon(\delta)$ is so small that
+\[ 
+b\cdot \epsilon(b/n)<\rho/3
+\]
+Then right hand side in (*) is majorized by
+\[
+\frac{2\rho}{3}\cdot n^{1/2p}+ K
+\]
+When $n$ is large we also have
+\[
+K\leq \frac{\rho}{3}\cdot n^{1/2p}
+\]
+
+
+
+\noindent 
+Hence the left hand side in (*) is majorized by
+$\rho\cdot n^{1/2p}$ for all sufficiently large $n$.
+Since $\rho>0$ was arbitrary we get Theorem F.1 when  the power 
+is raised by $2p$.
+
+
+\bigskip
+
+\centerline{\emph{Proof of (i\vvv iii)}}
+\bigskip
+
+\noindent
+To obtain (i) we use the triangle inequality
+which gives the following for every integer $\nu\geq 1$:
+\[ 
+|a_\nu|\leq \frac{2}{\pi}\cdot \max_{0\leq x\leq\delta} 
+|\sin \nu x\cdot\cot x/2|\cdot\int_0^\delta\, |\phi(x)|\, dx
+=\nu\cdot o(\delta)\tag{1}
+\]
+where the small ordo  $\delta$-term comes from the hypothesis expressed by (*)
+in the introduction. Hence
+the left hand side in (i) is majorized by
+\[
+\bigl[\sum_{\nu=1}^{\nu=n}\, \nu^{2p}\,\bigr]^{\frac{1}{2p}}
+ \cdot o(\delta)=
+n^{1+1/2p}\cdot o(\delta)
+\]
+which was requested to get  (i).
+To prove (iii) we  notice  that
+\[
+\gamma_0^2+2\cdot \sum _{\nu=1}^\infty
+\gamma_\nu^2=\frac{1}{\pi}\int_0^\pi\, |\phi(x)|^2\, dx
+\]
+Next, we have
+\[
+\sum_{\nu=1}^\infty \, |\gamma_\nu|^{2p}\leq
+\bigl[\, \sum_{\nu=1}^\infty \, |\gamma_\nu|^2\, \bigr ]^{1/2p}\leq K
+\]
+where $K$
+exists since
+$\phi$ is square-intergable on $[0,\pi]$.
+\medskip
+
+
+\noindent
+\emph{Proof of (ii)}.
+Here several steps are required.
+For each $0<s<\pi$
+we define the  function $\phi\uuu s(x)$
+by
+\[
+\phi\uuu s(x)=\phi(x)\quad\colon\quad 0<x<s
+\] 
+and extend it to an odd function, i.e. $\phi\uuu s(\vvv x)=\vvv \phi\uuu s(x)$
+while  $\phi\uuu s(x)=0$ when $|x|>s$.
+This odd function has a sine series
+\[
+\phi\uuu s(x)=\sum\uuu{\nu=1}^\infty
+c\uuu\nu(s)\cdot \sin x\tag{1}
+\]
+Let us also introduce the functions
+\[
+\rho(s)=\int\uuu 0^s\, |\phi(x)|\cdot dx\quad\text{and}\quad
+\Theta (s)=\int\uuu 0^s\, |\phi(x)|^2\cdot dx\tag{2}
+\]
+
+
+\noindent
+The crucial step   towards the proof of (ii)
+is the following:
+\medskip
+
+\noindent
+{\bf{Lemma.}} \emph{One has the inequality}
+\[
+\sum\uuu{|nu=1}^\infty\, |c\uuu\nu(s)|^{2p}\leq
+(\frac{2}{\pi})^{2p\vvv 1}\cdot \Theta(s)\cdot \rho(s)^{2p\vvv 2}
+\]
+
+
+\noindent
+\emph{Proof.}
+We  employ convolutions and define inductively a sequence
+of functions $\{\phi\uuu{n,s}(x)\}$
+where
+$\phi\uuu{1,s}(x)= \phi\uuu s(x)$ and 
+\[ 
+\phi\uuu{n+1,s}(x)=\frac{1}{\pi}
+\int\uuu {\vvv \pi}^\pi\, 
+\phi\uuu{n,s}(y)\phi\uuu s(x+y)\cdot dy
+\]
+Since convolution yield products of the Fourier coefficients
+and $2p$ is an even integer we  have the
+standard formula:
+\[
+\sum\uuu{\nu=1}^\infty \, c\uuu n(s)^{2p}
+=\phi\uuu{2p,s}(0)\tag{1}
+\]
+Next, using the Cauchy\vvv Schwarz inequality the reader may verify that
+
+\[
+|\phi\uuu{2,s}(x)|\leq \frac{2}{\pi}\cdot \Theta(x)
+\]
+This entails that
+\[
+\phi\uuu{3,s}(x)\leq
+\frac{1}{\pi}
+\int\uuu{\vvv \pi}^\pi\,
+|\phi\uuu{2,s}(y)|\cdot |\phi\uuu s(x+y)|\cdot dy
+\leq 
+\frac{2}{\pi^2}\cdot \Theta(s)\cdot 
+\int\uuu{\vvv \pi}^\pi\,
+|\phi\uuu s(x+y)|\cdot dy=(\frac{2}{\pi})^2\cdot
+ \Theta(s)\cdot \rho(s)
+\]
+Proceeding in this way it follows by an induction that
+\[
+\phi\uuu{2p,s}(x)\leq (\frac{2}{\pi})^{2p\vvv 1}
+ \cdot \Theta(s)\cdot (\rho(s))^{2p\vvv 2}
+\]
+This holds in particular when $x=0$ and then (1) above gives Lemma 1.
+\bigskip
+
+\noindent
+{\bf{A formula for the $\beta$\vvv numbers.}}
+We have by definition
+
+\[
+\beta\uuu\nu=\frac{2}{\pi}\int\uuu{\delta}^\pi\,\sin\,\nu x\cdot
+\frac{1}{2}\cot (\frac{x}{2})\cdot \phi(x)\cdot dx
+\]
+An  integration by parts and the construction of the Fourier coefficients
+$\{c\uuu\nu(s)\}$ which applies with $s=\delta$
+give:
+\[
+\beta\uuu\nu=
+\vvv \frac{1}{2}
+\cdot \,\cot \delta/2\cdot c\uuu\nu(\delta)+
++\frac{1}{4}
+\int \uuu\delta^\pi\, 
+c\uuu\nu(x)\cdot
+\text{cosec}^2 (\frac{x}{2})\cdot dx\tag{*}
+\]
+Now we  profit upon Minkowski's inequality.
+Let $q$ be the conjugate of $2p$, i.e $\frac{1}{q}+\frac{1}{2p}=1$
+and choose  $\{\xi\uuu\nu\}$ to be the   sequence in $\ell^q$
+of unit norm such that
+\[
+|\sum \xi\uuu\nu\cdot \beta\uuu\nu|=||\beta\uuu\bullet||\uuu{2p}
+\]
+where the last term is the left hand side in (ii).
+At the same time (*) above and the triangle inequality give
+\[
+||\beta\uuu\bullet||\uuu{2p}\leq 
+\vvv \frac{1}{2}
+\cdot \,\cot (\delta/2)\cdot \sum\, |c\uuu\nu(\delta)|\cdot |\xi\uuu\nu|+
+\frac{1}{4}\int \uuu\delta^\pi\, 
+\text{cosec}^2 (\frac{x}{2})\cdot \sum\,|
+c\uuu\nu(x)\cdot\xi\uuu\nu|\cdot dx\leq
+\]
+\[
+ \frac{1}{2}
+\cdot \,\cot (\delta/2)\cdot ||c\uuu\bullet(\delta)||\uuu{2p}
++\frac{1}{4}\int \uuu\delta^\pi\, 
+\text{cosec}^2 (\frac{x}{2})\cdot 
+||c\uuu\bullet(x)||\uuu{2p}\cdot dx\tag{**}
+\]
+\medskip
+
+\noindent
+At this stage we apply Lemma 1 and the assumption which 
+give a constant $K$ such that
+\[
+\Theta(s)\leq K\quad\text{and}\quad \rho(s)\leq K\cdot s
+\]
+
+\medskip
+
+\noindent
+The last estimate actually is weaker than the hypothesis
+but it will be  sufficient to get the requested
+estimate of the $\ell^{2p}$\vvv norm  in (ii).
+Lemma 1 gives a constant $K\uuu 1$ such that
+\[
+||c\uuu\bullet(\delta)||\uuu{2p}\leq K\uuu 1\cdot \delta^{1\vvv 1/p}
+\]
+At the same time we have a constant
+$K\uuu 2$ such that
+\[
+\cot (\delta/2)\leq \frac{K\uuu 2}{\delta}
+\]
+The product in the first term from (**) is therefore majorized by
+$K\uuu 1K\uuu 2\cdot \delta^{\vvv 1/2p}$ as requested in (ii).
+For the second term we use Lemma 1 which first gives
+\[
+||c\uuu\bullet(x)||\uuu p\leq K\cdot x^{\vvv 1/2p}
+\]
+At this stage we leave it to the reader to verify that
+we get a constant $K$ so that
+\[
+\int \uuu\delta^\pi\, 
+x^{\vvv 1/2p}\cdot 
+\text{cosec}^2 (\frac{x}{2})\cdot dx\leq K\cdot \delta^{\vvv 1/2p}
+\] 
+which finishes the proof of (ii).
+\bigskip
+
+\centerline{\bf{The case when
+$f$ is continuous.}}
+
+\medskip
+
+\noindent
+Under the normalisation that
+the $L^2$-integral of $f$ is $\leq 1$
+the inequalities (ii-iii) hold for an absolute constant $K$.
+In (i) we notice that
+the construction of
+$\phi$ and the definition of $\omega_f$
+give the estimates
+\[ 
+|a_\nu|\leq \nu\cdot \delta\cdot \omega_f(\delta)
+\]
+With $p=2$ this entails 
+that (i) from the proof of Theorem F.1 is majorised by
+\[
+n^{1+1/2}\cdot \delta\cdot \omega_f(\delta)
+\]
+This holds for every $0\leq x\leq 2\pi$ and from the previous proof we conclude that
+the following hold for each
+$n\geq 2$ and every $0<\delta<\pi$:
+\[ 
+\mathcal D_n(f)\leq\frac{1}{\sqrt{n+1}}\cdot
+[n^{1+1/2}\cdot \delta\cdot \omega_f(\delta)+2K\delta^{-1/2}+K]\tag{i}
+\]
+With $n\geq 2$ we take $\delta=n^{-1}$ and see that
+(i) gives a requested constnt in Theorem F.2.
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf{G. Best approximation by trigonometric polynomials.}}
+\bigskip
+
+\noindent
+The results below are due  to de Vallé Poussin
+and we follow  Chapter VIII in his text-book [V-P].
+Consider
+the $2n+2$-tuple 
+\[ 
+x_j=\frac{2\pi j}{(2n+2)}\quad\colon\quad 1\leq j\leq 2n+2
+\]
+Let $P(x)$ be a   trigonometric polynomial
+in $\mathcal T_n$:
+\[ 
+P(x)=\sum_{\nu=-n}^{\nu=n}\, 
+a_\nu\cdot e^{i\nu x}
+\]
+Let $f$ be a  $2\pi$-periodic and continuous function and put
+\[
+\rho_P(f)=\max_j\, |P(x_j)-f(x_j)|
+\]
+
+\noindent
+Assume that $\rho_P(f)>0$ which gives
+a unique $(2n+2)$-tuple of complex numbers
+$\{u_j\}$ where every $u_j$ has absolute value $\leq 1$
+and
+\[ 
+f(x_j)= \rho_P(f)\cdot u_j+ 
+\sum_{\nu=-n}^{\nu=n}\, 
+a_\nu\cdot e^{i\nu x_j}\quad\colon\quad 1\leq j\leq 2n+2\tag{1}
+\]
+
+
+\noindent
+{\bf{G.1 Proposition.}} \emph{One has the equality}
+\[
+\rho_P(f)=
+\bigl|\frac{f(x_1)-f(x_2)+\ldots+f(x_{2n+1}-
+f(x_{2n})}
+{u_1+u_2+ \ldots+u_{2n+1}+
+u_{2n+2}}\,\bigr|\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof.} 
+Consider  the $(2n+2)\times(2n+1)$-matrix
+\[
+\begin{pmatrix} 
+e^{-inx_1}&\ldots& e^{inx_1}\\
+e^{-inx_2}&\ldots& e^{inx_2}\\
+\ldots&\ldots&\ldots \\
+\ldots&\ldots&\ldots \\
+e^{-inx_{2n+2}}&\ldots& e^{inx_{2n+2}}\\
+\end{pmatrix}\tag{i}
+\]
+To each $1\leq k\leq 2n+2$
+we denote by $\mathcal A_k$ the
+$(2n+1)\times(2n+1)$-matrix which arises when the $k$:th row
+is deleted. Using van der Monde formulas 
+the reader can verify that
+\[ 
+A_k=\det(\mathcal A_k)=\prod^{(k)}_{1\leq i\leq j\leq 2n+2}\,
+\sin\, \frac{x_j-x_i}{2}\tag{ii}
+\]
+where $(k)$ above the product sign indicates that
+$i$ and $j$ both are $\neq 0$ in the product. We  leave it to the reader to show that
+there exists a positive constant $A_*$ such that
+\[ 
+\det A_k=A_*\quad\colon\quad 1\leq k\leq 2n+2\tag{iii}
+\]
+Now 
+(1) is  a system of linear equations where
+$\rho_*(P),a_{-n},\ldots,a_n$ are the indeterminate variables. By
+Cramér's rule 
+we can solve out $\rho_*(P)$ via 
+the $2n+2$-matrix and (iii) gives
+\
+\[
+\rho_P(f)=
+\frac{A_1f(x_1)-A_2f(x_2)+\ldots+A_{2n+1}f(x_{2n+1}-
+A_{2n}f(x_{2n})}
+{A_1 u_1+A_2 u_2+ \ldots+A_{2n+1}u_{2n+1}+
+A_{2n}u_{2n}}\tag{iv}
+\]
+Together with (iii) the requested equation (*) in Proposition  G.1 follows.
+
+
+\medskip
+
+\noindent
+{\bf{G.2 Conclusion.}}
+To find
+\[ 
+\rho_n(f)= \min_{P\in\mathcal T_n}\, \rho_P(f)
+\]
+we should  choose $P$
+so that all the $u$-numbers are +1 or -1. This determines the $a$-numbers in the system (1), i.e. we find 
+a unique polynomial $P_*\in\mathcal T_n$
+for which
+\[
+\rho_n(f)= \max_{1\leq j\leq 2n+2}\, |P_*(x_j)-f(x_j]|
+\]
+Moreover,
+the deviation
+numbers
+$|P_*(x_j)-f(x_j)|$ are all equal to 
+\[
+\frac{\bigl|f(x_1)-f(x_2)+\ldots+f(x_{2n+1}-
+f(x_{2n})\,\bigr|}{2n+2}
+\tag{**}
+\]
+
+\medskip
+
+
+\noindent
+{\bf{G.3 Exercise.}}
+Let $f$ be given with a   Fourier series expansion:
+\[ 
+f(x)=\frac{1}{2}\cdot a_0+
+\cdot \sum_{k=1}^\infty\,( \alpha_k\cdot \cos\,kx+\beta_k\cdot \sin\, kx)
+\]
+Use the formula (ii) from the proof above to
+show that
+\[
+\frac{1}{2n+2}\cdot \sum_{\nu=1}^{\nu=2n+2}\, (-1)^\nu\cdot f(x_\nu)=
+\sum_{j=0}^\infty\, a_{(2j+1)(n+1)}\tag{***}
+\]
+\medskip
+
+\noindent
+Together (**) and  (***)  give:
+
+\medskip
+
+\noindent
+{\bf{G.4 Theorem.}}
+\emph{For each integer $n$ and every $2\pi$-periodic 
+function $f(\theta)$ one has the equality}
+\[
+\rho_n(f)= \bigl|a_{n+1}+ a_{3(n+1)}+ a_{5(n+1)}+\ldots\,\bigr|
+\]
+
+
+\noindent
+{\bf{G.5 Remark.}}
+Since the maximum norm taken over the whole interval $[0,2\pi]$
+majorizes the maximum norm over
+the $2n+2$-tuple above, we get
+the  inequality:
+
+\[
+\min_{P\in\mathcal T_n}\, ||f-P||\geq\,\bigl|a_{n+1}+ a_{3(n+1)}+ a_{5(n+1)}+\ldots\,\bigr|
+\]
+where $||f-P||$ is the maximum norm over
+$[0,2\pi]$. This gives the result announced in 
+§ 0.X from the introduction.
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

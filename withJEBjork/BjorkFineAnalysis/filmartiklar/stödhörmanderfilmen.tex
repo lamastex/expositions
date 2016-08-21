@@ -1,0 +1,697 @@
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+\centerline
+{\bf{The support function of conves sets in locally context
+spaces}}
+
+
+\bigskip
+
+\noindent
+We  expose a theorem due to Lars Hšrmander from the  article
+\emph{Sur la fonction d'appui des ensembles convexes dans un espaces
+localementt convexe} [Arkiv fšr mat. Vol 3: 1954].
+As pointed out by Hšrmander in his cited article, Theorem 2 from ¤ 2 below
+is related to  earlier studies by
+Fenchel in the article \emph{On conjugate convex functions}
+Canadian Journ. of math. Vol 1 p. 73-77) 
+where  Legendre transforms are
+studied in infinite dimensional topological vector spaces.
+The novelty in Theorem 2   is the generality  and we
+remark that various separation theorems 
+in text-books dealing with notions of convexity
+are easy consequences of Hšrmander's result.
+In ¤ 1 we collect preliminary facts about locally convex vector spaces over the real numbers
+which are used in ¤ 2. The material in ¤1 has independent interest and teaches the beginner  
+basic facts about locally convex vector spaces
+which give  a starting point for further study in 
+functional analysis.
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+\centerline {\bf {Topological vector  spaces}}
+\bigskip
+
+
+
+\noindent
+Throughout $E$ denotes a vector space over the real numbers.
+
+
+
+\medskip
+
+\noindent {\bf{0.1 Convex sets and their $\rho$-functions.}}
+A convex  set $U$ in $E$ which contains the origin is said to be
+absorbing if there for  
+each vector
+$x\in E$  exists some
+real $s>0$ such that
+$s\cdot x \in U$.
+The  vector  is fully absorbed by $U$ if we have the inclusion
+\[
+{\bf{R}}^+\cdot x\subset U
+\]
+{\bf{The function
+$\rho_U$.}} 
+If $x$ is  a  vector which is not fully absorbed we put
+\[
+\mu(x)=\max\{ s\,\colon sx\in U\}\quad\&\quad
+\rho_U(x)=\frac{1}{\mu(x)}
+\]
+If $x$ is fully absorbed we put $\mu(x)=+\infty$ so that $\rho_U(x)=0$.
+Notice that
+\[
+x\in U\implies \mu(x)\geq 1\implies \rho_U(x)\leq 1
+\]
+\medskip
+
+
+
+\noindent
+{\bf{Exercise.}}
+Show that the convexity of $U$ entails that
+$\rho_U$ satisfies the triangle inequality
+\[
+\rho_U(x_1+x_2)\leq \rho_U(x_1)+\rho_U(x_2)\tag{0.1.1}
+\]
+for all pairs of vectors in $E$,
+and that $\rho_U$ is positively homogeneous, i.e.
+\[
+\rho_U(sx)= s\rho_U(x)\quad\colon s>0\tag{0.1.2}
+\]
+Conversely,, let $\rho\colon E\to {\bf{R}}^+$
+satisfy (0.1.1) and (0.1.2).
+Put
+\[ 
+U=\{\rho\leq 1\}
+\]
+and show that $\rho_U=\rho$.
+\medskip
+
+
+\noindent
+A $\rho$-map as above is called
+a subadditive and  positively homogeneous function on $E$.
+So every
+absorbing convex set $U$ gives such a map $\rho_U$.
+If  $\rho$ is given we get
+the convex and absorbing sets
+\[ 
+U_*=\{\rho<1\}\quad\&\quad U^*=\{\rho\leq 1\}
+\]
+The reader can check that
+$\rho_{U^*}= \rho_{U_*}$.
+Moreover, for every convex set $U$ such that $\rho_U=\rho$ one has
+\[ 
+U_*\subset U\subset U^*
+\]
+One refers to $U_*$ as the minimal absorbing convex set of $\rho$, and $U^*$ is the maximal  associated
+convex set.
+So $U\mapsto \rho_U$ is surjective from the family of absorbing
+convex sets but not injective. The
+failure is exiled via the two associated minimal and maximal convex sets for a given $\rho$.
+
+
+\newpage
+
+
+
+
+\centerline{\bf{The Hahn-Banach theorem.}}
+\bigskip
+
+
+\noindent
+Let $\rho$ be subadditive and positively homogeneous.
+An ${\bf{R}}$-linear map
+$\lambda$ from $E$ to the 1-dimensional real line
+is majorised by $\rho$ if
+\[
+\lambda(x)\leq \rho(x)\tag{*}
+\]
+hold for every vector $x$.
+Let $E_0$ be a subspace of $E$ and
+$\lambda_0\colon E_0\to {\bf{R}}$ a linear map such that
+(*) hold for vectors in $E_0$.
+Then there exists a linear map
+$\lambda\colon E\to {\bf{R}}$ which extends 
+$\lambda_0$ and is  majorised by $\rho$. 
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Prove  the Hahn-Banach Theorem using the following hint.
+Zorn's Lemma gives a maximal subspace $E^*$ which contains $E_0$  such that
+$\lambda_0$ can be extend to a linear map $\lambda^*$
+on $E^*$ which is majored by $\rho$.
+There remains to show that $E^*=E$.
+Assume the contrary and pick a non-zero vector
+$\xi\in E\setminus E^*$.
+For every real number
+$\alpha$ we get an extension of $\lambda^*$ to a linear
+functional on $E^*+{\bf{R}}\xi$
+by
+\[
+\Lambda(x+s\xi)= \lambda^*(x)+ s\alpha
+\]
+when  $x\in E^*$ and $s$  is a real number.
+Since $\rho$ is positively homogeneous we see that
+it majorises $\Lambda$ if and only if
+\[
+\Lambda(x+\xi)\leq \rho(x+\xi)\,\&\, \Lambda(x-\xi)\leq \rho(x-\xi)
+\]
+hold for all $x\in E^*$.
+It means that
+\[ 
+\alpha\leq \rho(x+\xi)-\lambda^*(x)\,\&\,
+\alpha\geq \lambda^*(x)-\rho(x-\xi)
+\]
+The existence of $\alpha$ follows  if
+\[
+\rho(x_1+\xi)-\lambda^*(x_1)\geq \lambda^*(x_2)-\rho(x_2-\xi)\tag{i}
+\]
+hold for all pairs $x_1,x_2$ in $E^*$.
+Now (i) means that 
+\[
+\rho(x_1+\xi)+\rho(x_2-\xi)\geq \lambda^*(x_2)+\lambda^*(x_1)= \lambda^*(x_1+x_2)\tag{ii}
+\]
+Finally, (ii) holds since
+$\lambda^*(x_1+x_2)\leq \rho^*(x_1+x_2)$ and because  $\rho$ is subadditive we have
+\[
+\rho(x_1+x_2)\leq
+\rho(x_1+\xi)+\rho(x_2-\xi)
+\]
+
+
+
+
+
+\medskip
+
+
+\centerline{\bf{Pseudo-norms.}}
+\medskip
+
+
+\noindent
+Denote by $\mathcal C_E$ the family of absorbing convex sets $U$
+which  in addition are symmetric, i.e.
+\[ 
+x\in U\implies -x\in U
+\]
+The symmetry entails that $\rho_U(-x)= \rho_U(x)$ and in general
+\[
+\rho_U(sx)= |s|\cdot \rho_U(x)\tag{i}
+\] 
+hold for every real $s$.
+If $\rho\colon E\to {\bf{R}}^+$ is a sub additive and (i)  holds we say that it is a pseudo-norm.
+The Hahn-Banach theorem for pseudo-norms asserts that if $\rho$ is
+a given pseudo-norm and $\lambda$ a linear map on a subspace $E_0$  for which
+\[
+ |\lambda(x)|\leq \rho(x)\quad\colon\,\, x\in E_0
+\]
+then it can be extended to a linear map $\Lambda$ 
+ for which 
+\[
+ |\Lambda(x)|\leq \rho(x)\quad\colon\,\, x\in E
+\]
+The proof of this symmetric version of the Hahn-Banach theorem is left as an exercise to the reader.
+
+
+
+\newpage
+
+
+
+
+\centerline {\bf{1.  Locally convex topologies.}}
+\bigskip
+
+
+\noindent
+Denote by $\mathcal C_E$ the family of symmetric and absorbing convex sets $U$.
+Let
+$\mathfrak{U}= \{U_\alpha\}$ be a family in  $\mathcal C_E$ such that
+\[
+\bigcap\,\mathcal L(U_\alpha)=\{0\}\tag{1.1}
+\]
+Now there exists a topology on $E$
+where a base for open neighborhoods of the origin
+consists of sets:
+\[
+\cap\, \{\rho_{U_{\alpha_i}}(x)<\epsilon\}
+\] 
+where $\epsilon>0$ and $\{\alpha_1,\ldots,\alpha_k\}$ is a finite set
+of indices from  the  $\mathfrak{U}$-family.
+If $x_0$ is a vector in $E$, then
+a basis for its open neighborhoods
+are given by
+sets of the for $x_0+U$ where $U$ is a set from (1).
+In general, a subset $\Omega$ in $E$ is open if
+there to each $x_0\in\Omega$ exists some
+$U$ from (1.2) such that
+$x_0+U\subset \Omega$.
+This gives a topology and (1.1) entails that it is  a Hausdorff topology.
+The sets  in (1.2) are  convex and therefore one 
+refers to a locally convex
+topology on $E$.
+\medskip
+ 
+ \noindent
+ {\bf{Remark.}}
+ The locally convex topology above depends upon the chosen family
+ $\mathfrak{U}$. It is unchanged if we enlarge 
+ the family to consist of all finite intersection of its
+ sets. When this has been done
+ we notice that if $U_1,\ldots, U_n$ is a finite family in
+ $\mathfrak{U}$ then the norm defined by
+ $U=U_1\cap\ldots\,\cap U_n$ is stronger than
+ the individual $\rho_{U_i}$-norms. Hence
+ a fundamental system of neighborhoods 
+ consists of single $\rho$-balls:
+  \[
+\{\rho_U<\epsilon \}    \quad\colon U\in\mathfrak {U}
+ \]
+ 
+
+
+ 
+ 
+ 
+ 
+ \bigskip
+ 
+ 
+ \noindent{\bf{1.2. The dual space $E^*$}}.
+Let $E$ be equipped with a locally convex $\mathfrak{U}$-topology where
+$\mathfrak{U}$ has been enlarged so that
+the balls above  give a basis for neighborhoods of the origin.
+A linear functional  $\phi$ on $E$
+is $\mathfrak{U}$-continuous if  there
+exists some
+$U\in\mathfrak{U}$ and a
+constant $C$ such that
+\[
+|\phi(x)|\leq C\cdot \rho_U(x)
+\]
+The family of such $\phi$-maps give vectors in a vector space denoted by $E^*$ and 
+called the dual space of $E$.
+
+\medskip
+
+
+\noindent
+{\bf{1.3 The weak topology on $E$.}}
+It is by definition the coarsest topology for which
+the funcleons
+\[
+x\mapsto \phi(x)
+\]
+become continuous functions on $E$ for every fixed $\phi\in E^*$.
+A fundamental system of open neighborhood of the origin in the
+weak topology consist of sets
+\[
+\cap\, \{|\phi_k(x)|<\epsilon\}
+\] 
+where $\epsilon>0$ and $\{\phi_k\}$ is a finite family in $E^*$.
+It is clear that every weakly open set in $E$ is open with respect to the given locally convex topology.
+
+\medskip
+
+\noindent
+{\bf{1.3 The weak-star topology on $E^*$.}}
+This is the locally  convex topology on the vector space $E^*$
+where a base for open neighborhoods of the
+zero-vectors consist of sets defined as finite intersections of
+sets defined by
+\[
+\{\phi\,\colon\, -\delta<\phi(x)<\delta\}\quad\colon\quad x\in X\quad\&\quad \delta>0
+\]
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{1.4 The separation  theorem.}}
+To each pair 
+$\phi\in E^*$ and a real number $a$ one assigns the
+set
+\[
+H=\{x\in X\,\colon\, \phi(x)\leq a\}
+\]
+Notice that $a<0$ can occur in which case
+$H$ does not contain the origin.
+\medskip
+
+\noindent
+{\bf{1.5 Theorem}}. \emph{Each closed convex set $K$ in $E$ is the intersection of closed half-spaces.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+Assume  first that $K$ contains the origin and 
+consider a vector $x_0\in E\setminus K$. Since $K$  is closed we find
+a pseudo-norm $\rho_U$ with $U$ in the defining family $\mathfrak{U}$ such that
+\[
+(\{x_0\}+\{\rho_U<\epsilon\})\cap K=\emptyset
+\]
+Put
+\[ 
+V= K+\{\rho_U<\epsilon\}
+\]
+This yields an open a convex set
+in $E$ and we construct  $\rho_V$.
+If $s>0$ and
+$x_0\in sV$ we have $k\in K$ and a vector $\xi$ with $\rho(\xi)<\epsilon$ such that 
+\[ 
+x_0=sk+s\xi\implies x_0+\{\rho_U<s\epsilon\}\in sK
+\]
+Since $K$ is convex and contains the origin this 
+implies that $s\geq 1$.
+Hence 
+\[
+\rho_V(x_0)\geq 1
+\]
+Now we apply the Hahn-Banch Therem to the absorbing convex set $V$ and find
+a linear functional $\lambda$ such that
+\[ 
+\lambda(x_0)=\rho_V(x_0)\geq 1
+\]
+and at the the same time the range 
+\[ 
+\lambda(x)\leq \rho_V(x)\leq 1 \quad\colon\quad x\in V\tag{i}
+\]
+Here  $\lambda$ belongs to $E^*$ and is not
+identically zero and therefore its restriction to the open
+ball $\{\rho_U<\epsilon\}$ cannot vanish identically.
+Choose 
+\[
+\xi\in \{\rho<\epsilon\}\quad \,\&\,  \quad \lambda(\xi)>0
+\]
+Now $k+\xi\in V$ hold for every $k\in K$ and (i) gives 
+\[ 
+\lambda(k)+\lambda(\xi)\leq 1\implies \lambda(k)\leq 1-\lambda(\xi)
+\]
+So the half-space
+\[ 
+H= \{x\colon \lambda(x)\leq 1-\lambda(\xi)\}
+\]
+contains $K$ while $x_0$ is outside since $\lambda(x_0)\geq 1$.
+
+
+
+
+
+
+
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+\noindent
+{\bf{Remark.}}
+The half-spaces in Theorem 1.5 are closed in the weak topology.
+Hence every 
+a closed convex set in the original topology   is also closed in the weak topology.
+
+\medskip
+
+
+ 
+ \noindent
+{\bf{1.6 Normed spaces.}}
+A pseudo-norm $\rho$ on a vector space
+$E$  is called a norm
+of
+\[ x\neq 0\implies \rho(x)>0
+\]
+This gives the $\rho$-topology on $E$  where the open balls
+$\{\rho(x)<\epsilon\}$
+ is a fundamental system of open neighborhoods of the origin.
+One often uses the notation
+\[
+||x||= \rho(x)
+\]
+and refer to $E$ as a normed space.
+
+
+
+
+\newpage
+
+
+\centerline {\bf{2. Support functions of convex sets.}}
+\medskip
+
+
+\noindent
+Let $E$ be a locally convex space.
+Vectors in $E$ are denoted by  $x$, while $y$ denote  vectors in $E^*$.
+To each closed and convex subset $K$ of $E$
+we define a function $\mathcal H_K$ on  $E^*$ by:
+\[ 
+\mathcal H_K(y)=\sup_{x\in K}\,y(x)
+\]
+
+
+\noindent
+Notice that  $\mathcal H_K$
+take values in $(-\infty,+\infty]$, i.e. it may be $+\infty$ 
+for some vectors $y\in E^*$.
+For example, let $K={\bf{R}}^+x_0$ be a half-line.
+Then $\mathcal H_K(y)=+\infty$ when
+$y(x_0)>0$
+and otherwise zero.
+It is clear that
+\[
+\mathcal H_K(sy)= s\mathcal H_K(y)\tag{i}
+\] 
+hold when $s$ is a positive real number, i.e
+$\mathcal H_K$ is positively homogeneous.
+
+
+
+\medskip
+
+\noindent
+{\bf{2.0 Exercise.}}
+Show that the convexity of $K$ entails that
+\[
+\mathcal H_K(y_1+y_2)\leq 
+\mathcal H_K(y_1)+
+\mathcal H_K(y_2)\tag{ii}
+\]
+for each pair of vectors in $E^*$.
+Show also that if 
+$K$ and $K_1$ is  a pair of closed convex sets such that
+$\mathcal H_K=\mathcal H_{K_1}$ then  $K=K_1$.
+\medskip
+
+
+
+
+
+
+\noindent
+{\bf{2.1 Upper semi-continuity.}}
+For each fixed vector $x\in E$
+the function 
+\[ 
+y\mapsto y(x)
+\]
+is weak-star continuous on $E^*$.
+Since
+the supremum function attached to
+an arbitrary family of weak-star continuoes functions is upper
+semi-continuous, it follows that $\mathcal H_K$ is upper semi-continuous.
+\medskip
+
+
+\noindent
+{\bf{2.3   The class $\mathcal S(E)$}}.
+It consists of all  
+all upper semi-continuous functions
+$G$ on $E^*$ with values in $(-\infty,+\infty]$
+which satisfy (i) and (ii).
+The next result 
+was proved by   Hšrmander 
+in the article
+\emph{Sur la fonction d'appui des ensembles convexes dans un espaces
+localementt convexe} [Arkiv fšr mat. Vol 3: 1954].
+
+\medskip
+
+\noindent
+{\bf{2.4 Theorem.}}
+\emph{Each $G\in\mathcal S(E)$ is of the form
+$\mathcal H_K$ for a unique closed convex subset $K$ in $E$.}
+\medskip
+
+
+
+\noindent
+\emph{Proof}
+Put $F=E\oplus{\bf{R}}$ which is a new vector space where
+the 1-dimensional real line is added. It dual space
+$F^*=E^*\oplus{\bf{R}}$.
+We are given $G\in\mathcal S(E)$ and 
+put
+\[
+G_*=\{(y,\eta)\in E^*\oplus {\bf{R}}\quad\colon\, G(y)\leq \eta\}\tag{i}
+\]
+here  $G_*$ is a convex cone
+in $F^*$ and the semi-continuous hypothesis on $G$
+implies that  $G_*$ is closed with respect to the weak-star toplogy on $F^*$.
+Next, in $F$ we define the set
+\[ 
+G_{**}=\{(x,t)\in E\oplus{\bf{R}}^+\,\colon\, y(x)\leq \eta t\,\colon\, (y,\eta)\in G_*\}\tag{ii}
+\]
+This gives a set
+$\widehat C$ in 
+$F^*$ which consists of vectors  $(y,\eta)$ such that
+\[
+\max_{(x,t)\in 
+G_{**}}\,y(x)- \eta t\leq 0
+\]
+It is clear that
+$G_*\subset \widehat C$. Now we prove the equality
+\[
+G_*= \widehat C\tag{*}
+\]
+To get (*) we use that
+the two sets in (*)  are weak-star closed. Hence  a strict inequality
+gives a separating
+vector $(x_*,t_*)\in F$, i.e.  there exists $(y_*,\eta_*)\in \widehat C$
+and a real number $\alpha$ such that 
+\[
+y_*(x_*)-\eta _* t_*>\alpha
+\quad\text{and}\quad (y,\eta)\in G_*\implies y(x_*)-\eta t_*\leq \alpha\tag{iii}
+\]
+Since $G_*$ contains $(0,0$ we  have $\alpha\leq 0$.
+and since it also is a cone the last implication  gives
+$(x_*,t_*)\in G_{**}$. Now
+the construction of $\widehat{C}$  contradicts the strict inequality in
+the left hand side of (iii).
+Hence there cannot exist
+a separating vector and  (*) follows.
+\medskip
+
+\noindent
+Next, in  $E$ we consider  the convex set
+\[
+K=\{ x\,\colon (x,1)\in G_{**}\}
+\]
+Using (*) the reader can check that
+\[
+\mathcal H_K(y)=G(y)
+\]
+ for all $y\in E^*$ which proves that $G$ has the requested form.
+ The uniqueness of $K$ follows from Exercise B.4.0.
+ 
+ 
+
+\medskip
+
+
+\noindent
+{\bf{ 2.5 The case of normed spaces.}}
+If $X$ is a normed vector space Theorem 2.4 
+leads to a certain isomorphism of two families.
+Denote by $\mathcal K$ the family of all convex
+subsets of $E$ which are closed with respect to the norm topology.
+A topology on $\mathcal K$ is defined
+when we for each $K_0\in\mathcal K$ and $\epsilon>0$
+declare an open neighborhood
+\[ 
+U_\epsilon(K_0)=\{ K\in\mathcal K\,\colon\,
+\text{dist}(K,K_0)<\epsilon\}
+\] 
+where the norm defines the distance between
+$K$ and $K_0$ in the usual way.
+Denote by $\mathfrak{H}$ the family of all
+functions $G$ on $E^*$ which satisfy (*) in 5.B.1 and are continuous
+with respect to the norm topology on $E^*$.
+A subset $M$ of $\mathfrak{H}$ is equi-continuous if there
+to
+each $\epsilon>0$ exists $\delta>0$ such that
+\[
+||y_2-y_1||<\delta \implies ||G(y_2)-G(y_1)||<\epsilon
+\] 
+for every $G\in M$ and 
+all pairs $y_1,y_2$ in $E^*$.
+The topology on $\mathfrak{H}$ is  defined
+by  uniform convergence on equi-continuous subsets.
+
+\medskip
+
+
+
+
+\noindent
+{\bf{2.5.1 Theorem.}}
+\emph{If $E$ is a normed vector space
+the set-theoretic bijective map $K\to \mathcal H_K$ is
+a homeomorphism when
+$\mathcal K$ and
+$\mathfrak {H}$ are equipped with the described topologies.}
+\medskip
+
+\noindent
+{\bf{Exercise.}} Deduce this  result 
+from     Theorem 2.4. If necessary, consult Hšrmander's cited article.
+
+
+
+
+
+\end{document}
+
+
+
+
+

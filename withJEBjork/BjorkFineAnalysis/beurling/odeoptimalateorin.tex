@@ -1,0 +1,1474 @@
+
+
+
+
+
+\documentclass{amsart}
+
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+
+
+
+
+
+
+\centerline {\bf{Special chapter: ODE-equations.}}
+\medskip
+
+\noindent
+On the real $x$-line the space of distributions is denoted by
+$\mathfrak{Db}({\bf{R}})$. Notice that we do not insist that
+the distriobutions are tempered, i.e.
+$\mathcal S^*$ appears as a proper subspace.
+As a first  example we take  the first order differential operator
+\[
+\nabla=x\cdot \frac{\partial}{\partial x}
+\]
+When $x\neq 0$ the equation $\nabla(f)=0$ has
+solutions given by constant functions.
+To pass beyond $x=0$ we take  the Heaviside densities
+$H^+$ and $H_-$, where $H^+(x)=1$ when $x>0$ and  zero if $x<0$, while
+$H_-=1-H^+$. It turns out that
+these two linearly independent distributions on the $x$-line
+generate the vector space of all distribution solutions to
+the equation $\nabla(\mu)=0$. See § xx below for details.
+On the other hand, if $f(x)$ is a $C^1$-function, i.e. continuously
+differentiable which  satisfies $\nabla(f)=0$, then it is
+clear  that $f$ must be a constant.
+So  the set of distribution solutions is more extensive.
+Next, let $s$ be a complex number which is not an integer.
+If  $\mathfrak{s}>-1$ then $x^s$ is  integrable 
+on intervals $(0,a)$ with $a>0$ and there exists a distribution denoted
+by $x_+^s$ acting as a linear functional on test-functions
+$\phi(x)$ by
+\[ 
+x_+^s(\phi)= \int_0^\infty x^s\cdot \phi(x)\, dx
+\]
+On the open interval $(0,+\infty)$
+we notice that
+\[ 
+(\nabla-s)(x^s)=0\quad\colon x>0
+\]
+It we apply 
+$\nabla-s$ to the distribution $x_+^s$
+the construction of distribution derivatives means that
+$(\nabla-s)(x_+^s)$ acts on test-functions $\phi$ by
+\[
+\phi\mapsto \int_0^\infty x^s \cdot (-\partial(x\phi)-s\phi)\, dx\tag{i}
+\]
+When $\mathfrak{Re}\, s>-1$
+a partial integration shows that
+(i) is zero.
+Hence $(\nabla-s)(x_+^s)=0$.
+It turns out that there exist more distributions $\mu$ such that
+$(\nabla-s)(\mu)=0$. Namely, there exists
+the boundary
+value distribution 
+$\mu=(x+i0)^s$ which also satisfies the equation $(\nabla-s)(\mu)=0$.
+Here we recall that $\mu$ is defined on test-functions $\phi(x)$ by
+\[
+\mu(\phi)= \lim_{\epsilon\to 0}\,
+\int\, (x+i\epsilon)^s\cdot \phi(x)\, dx\tag{ii}
+\]
+Hence we have found two linearly independent 
+distribution solutions to the equation $\nabla-s(\mu)=0$.
+It turns out that they give a basis for the null solutions which gives the dimension
+formula:
+\[ 
+\dim_{{\bf{C}}}\, 
+(\text{Ker}_{\nabla-s}(
+\mathfrak{Db}))=2
+\]
+\medskip
+
+\noindent
+{\bf{A special example.}}
+Take $Q= \nabla+1$. Here
+two boundary value distributions
+$(x+i0)^{-1}$ and $(x-i0)^{-1}$ are null solutions.
+Let us also recall that
+the difference
+\[
+(x-i0)^{-1}-(x+i0)^{-1}=\pi i\cdot \delta_0
+\]
+So the Dirac measure at $x=0$ is also a null solution
+which of course could have been verified directly.
+By the general result in § xx the space of null solutions is
+2-dimensional so above we have found a basis.
+\medskip
+
+\noindent
+In § xx we consider general
+differential operators with polynomial coefficients
+\[ 
+P(x,\partial)=p_m(x)\partial^m+\ldots+p_0(x)
+\]
+Under the assumption that the real zeros of the
+leading polynomial $p_m(x)$
+are simple and consists of some $k$-tuple
+$\{a_1<\ldots a_k\}$ we show in § xx 
+that the
+$P$-kernel on
+$\mathfrak{Db}$ has dimension $k+m$.
+\medskip
+
+
+
+\noindent
+{\bf{0.1 A first order ODE-equation.}}
+Let $p$ and $q$ be a pair of polynomials and set
+\[
+Q=q(x)\cdot \partial -p(x)
+\] 
+Assume that 
+$q$ is a monic polynomial of some  degree $k\geq 2$ whose  zeros are real and simple and
+arranged in strictly increasing order
+$\{ a_1<a_2<\ldots <a_k\}$. The polynomial $p$ is such that
+$p(a_\nu)\neq 0$  for every $\nu$ and in general it has complex coefficients and
+no condition is imposed upon its degree.
+Now we seek distributions $\mu$ on the $x$-line such that
+$Q(\mu)=0$.
+One such solution is found
+as the boundary value of the analytic function
+defined in the upper half-plane by
+\[
+f(z)= e^{\int_i^z\, \frac{p(\zeta)}{q(\zeta)}\, d\zeta}
+\]
+Tos see this we notice
+that
+when $\mathfrak{Im} z>0$ it is evident that
+the complex derivative
+\[
+\frac{\partial f}{\partial z}=\frac{p(z)}{q(z)}\tag{i}
+\]
+Since
+the passage to boundary value distributions commute
+with
+derivations it follows that
+the boundary value distribution
+ $f(x+i0)$ is a null solution to $Q$. Less obvious is that
+ each simple and real zero 
+$a_\nu$  of $q$ yields a null solution
+$\mu_\nu$ supported by the half-line 
+$[a_\nu.+\infty)$.This is a consequence of general results in § xx.
+Let us remark 
+that
+without using boundary values of analytic functions it is not
+easy to discover all this.
+
+
+
+\bigskip
+
+
+
+
+
+
+\noindent
+{\bf{0.2 The equation $\nabla^2(\mu)=0$}}.
+The Fuchsian operator is defined by
+$\nabla =x\partial$.
+It turns out that the space of distributions
+$\mu$ satisfying $\nabla^2(\mu)$ is a 4-dimensional vector space.
+One solution is the Heavisde function $H_+$
+defined by the density 1 if $x>0$ and zero if
+$x\leq 0$.
+Here
+\[ 
+\partial(H_+)(g)=
+-\int_0^\infty g'(x)\, dx= g(0)\quad\colon g\in C_0^\infty({\bf{R}})
+\] 
+This means that the distribution derivative
+$\partial(H_+)=\delta_0$ and since
+$x\cdot \delta_0=0$ we have 
+$\nabla(H_+)=0$. 
+Next, on $\{x>0\}$
+we see that the density $\log x$ satisfies
+$\nabla^2(\log x)=0$.
+It is tempting to extend the locally integrable function
+$\log x$ on the positive half-line to
+${\bf{R}}$ by setting the value zero if $x\leq 0$.
+Denote the resulting distribution by
+$\log_+x$. Now
+\[
+\nabla(\log_+x)(g)=
+-\int_0^\infty\, -\partial(xg)\cdot \log x\, dx=
+\int_0^\infty\,xg\cdot \frac{1}{x}\, dx=
+\int_0^\infty\,g dx
+\]
+Hence $\nabla(\log_+x)= H_+$
+Since $\nabla(H_+)=0$
+we get
+$\nabla^2(\log_+ x)=0$.
+Hence we have found two  linearly independent null solutions
+given by the pair $(H_+,\log_+ x)$ which are supported by
+$x\geq 0$.
+In addition we find two other null solutions.
+The first is the constant density 1, The second is
+the boundary v alue distribution
+$\log (x+i0)$.
+By the gneral resu,t in § xx the space of null solutions is
+4-dimensional so above we have found a basis for these.
+
+\medskip
+
+
+\noindent
+{\bf{0.3. Higher order Fuchsian  equations.}}
+Let $m\geq 2$ and consider an operator of the form
+\[
+Q= \nabla^m+q_{m-1}(x)\nabla^{m-1}+\ldots+q_1(x)\nabla+q_0(x)
+\]
+where $\{q_\nu(x)\}$ are polynomials.
+With $\{c_\nu=q_\nu(0)\}$
+we associate the polynomial
+\[
+Q^*(s)= s^m+c_{m-1}s^{m-1}+\ldots+ c_1s+c_0
+\]
+Under the assumption that
+$Q^*(k)\neq 0$
+for all non-negative integers
+the solution space
+$\mathcal S=\{\mu\colon\, Q(\mu)=0\}$
+has dimension $2m$ and a basis is found as follows:
+In
+the upper half-plane 
+the Picard-Fuchs theory about holomorphic differential equations
+entails that 
+there exists
+an $m$-tuple of linearly independent analytic functions
+$\{\phi_\nu(z)\}$ which solve $Q(z,\partial_z)(\phi_\nu)=0$.
+Similarly one finds an $m$-tuple $\{\psi_\nu\}$ 
+of linearly independent analytic functions in  the lower half-plane.
+The boundary
+value distributions
+$\{\phi_\nu(x+i0)\}$ and
+$\{\psi_\nu(x-i0)\}$
+belong to $\mathcal S$ and  are linearly indepedent.
+For if 
+$\sum\, c_\nu\phi_\nu(x+i0)+ \sum d_\nu\psi_\nu(x-i0)=0$
+where at least some
+$c_\nu$ or $d_\nu$ is $\neq 0$
+then \[
+\phi_*(x+i0)=\psi_*(x-i0)=0\tag{i}
+\]
+where
+$\phi_*=\sum\, c_\nu\phi(x+i0)\neq 0$ and
+$\psi_*=-\sum\, d_\nu\psi(x-i0)\neq 0$.
+Now (i) cannot hold. The reason is that 
+the assumption about
+$Q^*(s)$  entails that
+the equation $Q(z,\partial_z)(f)=0$ has no holomorphic solutions
+at $z=0$. This fact stems from local
+$\mathcal D$-module theory and is exposed in § xx.
+Now  the  reflection principle  for analytic functions entails
+that the analytic wave front
+sets of the distributions $\phi_*$ 
+ and $\psi_*$ both are non-empty.
+ On the other hand the material in § xx shows 
+ that these non-empty wave fronts  have opposed directions and hence the 
+ equality (i) cannot hold. This proves that 
+ $\mathcal S$ is at least $2m$-dimensional
+ and by the general results in § xx
+ we have equality. So above we have constrcuted a basis for the null solutions.
+ 
+
+\bigskip
+
+
+
+
+\centerline{\bf{§ 1. Fundamental solutions to ODE-equations with constant coefficients}}
+
+\bigskip
+
+\noindent
+We  consider differential operators  with constant coefficients
+acting on the real $x$-line. To
+simplify the passage to Fourier transform we introduce the first
+order operator
+\[ 
+D=\frac{1}{i}\cdot \frac{d}{dx}
+\]
+If $P(\xi)$ is a polynomial of the
+$\xi$-variable and $\mu$ is a tempered distributionon
+the $x$-line this gives  the equality:
+\[
+\widehat{P(D)\mu}(\xi)= P(\xi)\cdot \widehat\mu(\xi)\tag{*}
+\]
+By a tempered fundamental solution to
+$P(D)$ we mean a distribution $\mu\in\mathcal S^*$ such that
+\[
+P(D)\mu=\delta_0
+\] 
+where $\delta_0$ is the Dirac measure at $x=0$.
+Since
+the Fourier transform
+of $\delta_0$ is the identity on the $\xi$-line 
+the Fourier transform
+of a fundamental solution satisfies
+\[
+P(\xi)\cdot \widehat\mu(\xi)=1
+\]
+When
+$P(\xi)$ has no zero on the
+real $\xi$-line  there
+exists a  fundamental
+solution
+given as the inverse Fourier transform of
+the smooth density $P(\xi)^{-1}$.
+If $P(\xi)$ has some real zeros we can write 
+\[
+P(\xi)=Q(\xi)\cdot R(\xi)
+\]
+where
+$R$ has real zeros and the zeros of
+$Q$ are all non-real.
+The factorisation is unique when we
+choose constants so that
+$Q(\xi)$ is a monic polynomial.
+The case $\deg Q=0$ is not excluded, i.e. this 
+holds  when 
+all zeros of $P(\xi)$ are real.
+But in general one has a mixed case where
+$n=\deg P$ and $1\leq \deg Q\leq n-1$.
+\medskip
+
+\noindent
+{\bf{1. The case $\deg Q=0$}}.
+When all zeros of $P(\xi)$  real there exists the boundary
+value distribution on the $\xi$-line defined
+by
+\[
+\gamma= \frac{1}{P(\xi-i0)}\tag{1.1}
+\]
+By the general results from § XX its inverse Fourier transform is supported by 
+the half-line $\{x\geq 0\}$. Let $\mu_+$ denote this distribution.
+Then
+\[
+\widehat{P(D)\mu_+}= P\xi)\cdot\gamma=1
+\]
+and hence $\mu_+$ is a fundamental
+solution.
+\medskip
+
+\noindent
+{\bf{2. The mixed case}}.
+If $P=Q\cdot R$ where
+$1\leq \deg Q\leq n-1$
+we proceed as follows.
+First
+one has a bijective map on
+the space of tempeted distributions on
+the $\xi$-line defined by
+\[
+\gamma\mapsto
+Q(\xi)^{-1}\cdot \gamma
+\]
+Fourier's inversion fomrula gives
+a bijective linear operator
+$T_Q$ on the space of tempered distribtutions on the $x$-line such that
+\[
+\widehat{ T_Q(\mu)}= Q(\xi)^{-1}\cdot\widehat\mu
+\]
+So if 
+$\mu$ is a temepred distribution we get
+\[
+P(D)(T_Q(\mu))= R(D)(\mu)\tag{2.1}
+\]
+The zeros of $R(\xi)$ are real which gives
+the
+fundamental solution $\nu_+$  to $R(D)$
+and now
+\[ 
+\mu=T_Q(\nu_+)\tag{2.2}
+\] 
+yields a fundamental solution to $P(D)$.
+In this way we have constructed  a fundamental
+solution in a canonical fashion.
+In contrast to the real case where
+$\deg Q=0$ the distribution $\mu$ above is in general not supported by
+the half-line $\{x\geq 0\}$. We give  examples in § XX below.
+
+\bigskip
+
+\noindent
+{\bf{3. The determination of $\mu_+$}}.
+Consider the case when $\deg Q=0$ so that
+the fundamental solution $\mu_+$ is
+the inverse Fourier transform of (xx) above.
+Let us for the moment assume that
+the real zeros of $P(\xi)$ are all simple
+and given by an $n$-tuple $\{\alpha_k\}$.
+Define the distribution
+$\rho$ on the real $x$-line by  the density
+\[
+\rho(x)= \sum\, \frac{1}{P'(\alpha_k)}\cdot e^{i\alpha_kx}\quad\colon x\geq
+0
+\] 
+while $\rho(x)=0$ when $x<0$.
+It is clear that the distribution 
+$P(D)\rho$ vanishes when $x\neq 0$, i.e. 
+supported by the singleton set $\{x=0\}$.
+Newton's  formula from  § xx gives
+\[ 
+\sum_{k=1}^n\, \frac{1}{P'(\alpha_k)}\cdot \alpha_k^m=0\quad\colon\,\,
+0\leq m\leq n-2
+\]
+
+\medskip
+
+\noindent
+This entails that
+the derivatives up to order
+$n-2$
+of $\rho$ vanish at $x=0$.
+Using this
+we  show that $\rho$ up to a  constant gives a fundamental solution to $P(D)$.
+For consider a test-function $f(x)$
+and
+let $P^*(D)$ be the adjoint of $P(D)$. 
+The vanishing of the derivatives of $\rho$ at $x=0$ above 
+gives after partial integration
+\[
+\int\, \rho(x)\cdot P^*(D)(f)(x)\, dx=(-1)^{xx}\cdot \rho^{(n-1)}(0)\cdot f(0)
+\]
+\medskip
+
+
+\noindent
+{\bf{4. Conclusion.}}
+The fundamental solution $\mu_+$ supported by  $x\geq 0$ 
+is given by the density
+\[ 
+\mu_+(x)=\frac{n}{xx}\cdot
+\rho(x)= \sum\, \frac{1}{P'(\alpha_k)}\cdot e^{i\alpha_kx}
+\]
+
+
+\noindent
+{\bf{5. Example.}}
+Consider $P(D)= D^2-1$ so that $P(\xi)= \xi^2-1$.
+Here 1 and $-1$ are the simple zeros and (xx) gives
+\[ 
+\mu_+(x)=XXX\cdot \sum\, \frac{1}{-2}\cdot e^{-ix}+\frac{1}{2}\cdot e^{ix}
+=-\sin x\quad\colon\, x\geq 0
+\]
+
+
+
+\noindent
+{\bf{6. An example in the mixed case.}}
+Let $P(D)= (D^2+1)(D-a)$ 
+where $a$ is some real number
+$\neq 0$.
+So here $Q(\xi)= \xi^2+1$
+and the fundamental solution from § 2  becomes
+\[
+\mu=T_Q(\nu_+)\tag{6.1}
+\]
+where $\nu_+$ is the inverse Fourier transform
+derived from the linear polynomial. $R(\xi)=\xi-a$.
+This gives
+\[
+ \nu_+(x)= -e^{iax}\quad\colon x\geq 0\tag{6.2}
+\]
+
+
+
+\noindent
+{\bf{7. The expression of $\mu$.}}
+By the above $\mu$ 
+is  the convolution of $\nu_+$ and
+the continuous density 
+\[ 
+\phi(x)= \frac{1}{2\pi}\int\, \frac{e^{ix\xi}}{1+\xi^2}\, d\xi
+\]
+We leave it to the reader to verify that
+\[ 
+\phi(x)=
+\frac{1}{2}\cdot e^{-|x|}
+\]
+Hence 
+\[
+\mu(x)=-\frac{1}{2}\cdot \int_0^\infty\ e^{-[x-y|}\cdot e^{-aiy}\, dy
+\]
+The reader is invited to analyze this function 
+using
+a computer to
+plot  this function with different choice of $a$.
+
+
+\newpage
+
+
+
+\centerline {\bf{2.0. ODE-equations on the real line}}
+
+\medskip
+
+\noindent
+To grasp the notion of distributions
+it is natural to  
+start  with a  study of distribution solutions to ordinary differential
+operators which
+leads to  more systematic results as compared to 
+studies before  distribution theory was
+established.
+An example is the confluent hypergeometric function which
+arises as a solution to a differential operator of the form
+\[
+P=x\partial^2+(\gamma -x)\partial -a
+\]
+where $\gamma$ is a non-zero complex number while
+$a$ is arbitrary.
+In the classic literature one solves this equation via the
+Laplace method which involves a rather cumbersome
+use of residue calculus.
+More  information about the operator
+$P$ arises when one determines its kernel on the  space
+of distributions on the real $x$-line.
+The  result in Theorem 0.0.1 below shows that
+this $P$-kernel is a 3-dimensional subspace of 
+$\mathfrak{Db}$. Moreover, there exists a fundamental 
+solution supported by the 
+half-line $\{x\geq 0\}$.
+\medskip
+
+\noindent
+Let us now regard
+a differential operator with
+polynomial  coefficients
+\[
+P(x,\partial)=q_m(x)\cdot 
+\partial^m+q_{m-1}(x)\partial^{m-1}+
+\ldots+q_0(x)\tag{*}
+\]
+where $m\geq1 $ and  $q_0(x),\dots,q_m(x)$
+are polynomials which in general  have complex coefficients.
+Let $\mathfrak{Db}$ be the space of distributions on the real
+$x$-line.
+A first question is to determine the
+$P$-kernel, i.e. one seeks all distributions $\mu$ such that
+$P(\mu)=0$.
+Following material from the thesis by Ismael (xxx - University of
+xxx) we 
+expose some general facts about null solutions to general operators
+as above.
+\bigskip
+
+\noindent
+{\bf{The local  Fuchsian condition.}}
+We shall restrict the study to operators $P$
+which are  \emph{locally Fuchsian} at every real zero of the leading polynomial
+$q_m(x)$. This 
+means the following:
+Let $a$ be a real zero of
+$q_m(x)$ with some multiplicity $e\geq 1$
+so that $q_m(x)=q(x)(x-a)^e$ where the polynomial $q$ is
+$\neq 0$ at $a$.
+Then we can
+write
+\[
+P(x,\partial)=q(x)\cdot 
+[(x-a)^e\partial^m+r_{m-1}(x)\partial^{m-1}+
+\ldots+r_0(x)]
+\] 
+where $\{ r_\nu=\frac{p_\nu}{q}\}$ are rational functions with
+no pole at $a$ and therefore define analytic functions in a neighbrohood of $a$.
+Hence
+\[
+ P_*(x,\partial)=(x-a)^e\partial^m+r_{m-1}(x)\partial^{m-1}+
+\ldots+r_0(x)
+\] 
+can be identified with a germ of
+a differential operator with coefficients in the local ring
+$\mathcal O(a)$ of germs of analytic functions
+at $a$.
+The ring
+$\mathcal D$ of such germs of differential operators
+is
+studied in § x where we  define the subfamily of
+Fuchsian operators.
+For example, if $a=0$ then
+a Fuchsian operator in
+$\mathcal D$ can be expressed as
+\[
+\rho(x)\cdot [\nabla^m+g_{m-1}(x)\nabla^{m-1}+\ldots+g_0(x)]
+\] 
+where $g_{m-1},\ldots,g_0$ belong to $\mathcal O$
+and
+$\nabla=x\partial$, while $\rho$ in general is a meromorphic
+function, i.e. it may have a pole of some order at $x=0$.
+A local study of null solutions to fuchsian operators in
+$\mathcal D$ is carried out in § xx.
+From this one can derive the
+following conclusive result:
+\medskip
+
+\noindent
+{\bf{0.1 Theorem }}
+\emph{Let  $P(x,\partial)$ in (*) above be  locally Fuchsian
+at the real zeros of $p_m$.
+Then $\text{Ker}_P(\mathfrak{Db})$  is a complex vector space
+of dimension 
+$m+e_1+\ldots+e_k$,
+where $\{e_\nu\}$ are the multiplicities
+at
+the real zeros of $p_m$. Moreover, for each real zero of
+$p_m$ there exists a  fundamental solution $\mu$ supported by
+$\{x\geq a\}$  such that
+$P(\mu)= \delta_a$.}
+\bigskip
+
+
+
+\noindent
+
+
+\noindent
+{\bf{Remark.}}
+In addition to this   the following supplement to Theorem 0.1 hold.
+For   each real zero $a$ of $p_m(x)$ with some multiplicity
+$e$ there exists
+a distinguished $e$-dimensional subspace
+$V_a$
+of
+$\text{Ker}_P(\mathfrak{Db})$  which consists of distributions
+$\mu$ supported by  
+the closed half-line $[a,+\infty]$ whose analytic wave front
+sets satisfy the following: First, 
+they contain  the whole fiber above $a$ and the remaining part
+of the analytic wave front set
+is either empty or a  union of half-lines
+above some of the 
+real zeros 
+of $p_m$ which are $>a$.
+Moreover, one has a direct sum decomposition 
+\[
+\text{Ker}_P(\mathfrak{Db})=\mathcal F_+
+ \oplus\, V_{a_\nu}\tag{**}
+\] 
+where the last  direct sum is taken over the real zeros of $p_m$, and
+$\mathcal F_+$ is an  $m$-dimensional subspace of
+$\mathfrak{Db}$ with a basis given by
+an $m$-tuple of     boundary value distributions
+$\{\phi_k(x+i0)\}$.
+Here  
+$\{\phi_k(z)\}$ are analytic functions in
+a strip domain 
+$U=\{-\infty < x<+\infty\}\times \{0<y<A\}$
+with $A>0$ chosen so that
+the complex polynomial $p_m(z)$ is zero-free in this domain
+and each  $\phi_k(z)$ satisfies the homogeneous equation
+$P(z,\partial)(\phi)=0$ in $U$.
+\medskip
+
+
+\noindent
+{\bf{Example.}}
+Consider the first order differential operator 
+\[ 
+P=x\partial+1
+\]
+Outside $x=0$ the density $x^{-1}$ is a solution.
+Now the Euler distribution $x_+^{-1}$
+is suppored by $[0,+\infty)$.
+The 1-dimensional
+$\mathcal F_+$-space in (**)
+is generated by the boundary value distribution
+$(x+i0)^{-1}$ and in $V_0$ we find the Dirac measure $\delta_0$
+which together with
+$(x+i0)^{-1}$ is a basis for the null solutions. Next, 
+an easy computation gives
+\[
+P(x_+^{-1})=\delta_0
+\] 
+and hence the Euler distribution $x_+^{-1}$ yields a fundamental solution.
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.0.2 Tempered  solutions.}}
+The $P$-kernel in  Theorem 0.0.1 need not consust of 
+tempered distributions. 
+The reason  is that we have not imposed
+the condition that $P$ is locally Fuchsian at
+infinity.
+So if $\mathcal S^*$ denotes the space of tempered distributions, then
+$\text{Ker}_P(\mathcal S^*)$ can have strictly smaller dimension than
+$m+k$ and the   determination of the tempered solution space
+leads to a more involved analysis.
+Already the case $P=\partial-1$ illustrates the situation. Here
+the $P$-kernel on
+$\mathfrak{Db}$ is the 1-dimensional space given by the exponential density
+$e^x$ which is not
+tempered so the
+$P$-kernel on $\mathcal S^*$ is reduced to zero.
+During the search for tempered  fundamental  solutions  to $P$
+supported by half-lines $\{x\geq a\}$
+one can   use a  result due to Poincaré  under the extra assumption that 
+$\deg p_k\leq \deg p_m$ hold for every $0\leq k<m$.
+For in  this case there are 
+series expansions when $x$ is large and positive:
+\[
+\frac{p_k(x)}{p_m(x)}=c_k+\sum_{\nu=1}^\infty\, c_{k\nu}x^{-\nu}
+\quad\colon 0\leq k\leq m-1
+\]
+The leading coeficients $c_0,\ldots,c_{m-1}$
+give a monic
+polynomial
+\[
+ \phi(\alpha)=\alpha^m+c_{m-1}\alpha^{m-1}+\ldots c_0
+ \] 
+Let us also chose 
+$A>0$  so  large that the leading polynomial $p_m$ has no
+real zeros on
+$[A,+\infty]$. This  gives an
+$m$-dimensional  space of null solutions where a basis consists
+of real-analytic densities $u_1(x),\ldots,u_m(x))$
+on this interval.
+ 
+\medskip
+
+\noindent {\bf{0.0.3 Poincaré's theorem.}}
+\emph{Suppose that  $\phi$ has  simple
+simple zeros 
+$\alpha_1,\ldots,\alpha_m$. 
+Then, with $A$ as above
+one can arrange the $u$-basis so that}
+\[
+u_k(x)=e^{\alpha_k x}\cdot g_k(x)
+\]
+\emph{and  there exists a non-negative integer $w$ and a constant $C$ such that}
+\[ 
+|g_k(x)\leq C\cdot (1+x)^w\,\colon 1\leq k\leq m
+\]
+\emph{hold for all $x\geq A$.}
+
+
+\medskip
+
+\noindent
+So for 
+indices $k$ such that
+$\mathfrak{Re}\,\alpha_k\leq 0$, it follows that
+$u_k(x)$ has tempered
+growth as $x\to +\infty$.
+In particular Poincaré's result entails
+that if the real parts are all $\leq 0$, then the
+fundamental solutions from Theorem 0.0.1 
+are all tempered.
+
+
+\medskip
+
+\noindent
+{\bf{0.0.4 Example.}}
+Consider the operator
+\[
+ P=x\partial^2-x\partial-B
+ \] 
+ where  $B> 0$.
+ In this case
+ \[
+ \phi(\alpha)=\alpha^2-\alpha=\alpha(\alpha-1)
+\]
+so one of the $u$-solutions above increse exponentially
+while the other has tempered growth as $x\to +\infty$.
+It is easily seen that
+ the there exists   an entire solution
+ \[ 
+ f(x)= x+c_2x^2+\ldots\tag{i}
+ \]
+such that $P(f)=0$, whose
+coefficients are found by the recursive formulas
+\[ 
+k(k-1)c_k= (k-1+B(c_{k-1}\quad \colon k\geq 2
+\]
+Hence $\{c_k\}$ are positive and it is clear that
+$f$ has exponential growth as $x\to +\infty$.
+In addition we have a solution on
+$x>0$ of the form
+\[ 
+g(x)=  f(x)\cdot \log x+a(x)
+\]
+In  §§ we explain that  $P(g_+)= a\cdot \delta_0$
+hold for a non-zero constant
+while $P(f_+)=0$.
+Next, let et $u_1$ be the tempered solution and $u_2$ the non-tempered solution in
+Poincaré's theorem on the half-line $x>0$.
+There are  constants $c_1,c_2$ such that
+\[
+f(x)= c_1u_1(x)+c_2u_2(x)
+\]
+Here   $c_2\neq 0$ because $f$ increases exponentially on $(0,+\infty)$.
+At the same time
+\[
+g(x)= d_1u_1(x)+d_2u_2(x)
+\]
+hold for some constants $d_1,d_2$. Set
+\[ 
+\gamma=g_+-\frac{d_2}{c_2}\cdot f_+
+\]
+From the above $\gamma$ has tempered growth as
+$x\to+\infty$ and 
+$P(\gamma)= a\cdot \delta_0$
+with $a\neq 0$. Hence $\mu= a^{-1}\cdot \gamma$ yields 
+a tempered fundamental  solution supported by
+$\{x\geq 0\}$.
+\medskip
+
+\noindent
+In § xx we give further examples
+of tempered fundamental solutions.
+
+\medskip
+
+
+
+\noindent{\bf{0.5 Another  example.}}
+Here we take 
+\[
+P= \nabla^2+q(x)\tag{0.3.1}
+\] 
+where $q(x)$ is a polynomial  such that $q(0)=-1$ and $q'(0)=0$.
+For example, if $q(x)=x^2-1$ we encounter 
+a wellknown Bessel operator.
+It is easily  seen that there exists a unique entire solution
+$f(x)$  which satisfies $P(f)=0$ with 
+a series expansion
+\[ 
+f(x)= x+c_3x^3+\ldots
+\]
+Moreover, one verifies easily that there exists another entire
+function $g(x)$ with $g(0)=0$ such that
+the multi-valued function
+\[
+\phi(z)= f(z)\cdot \log z+ g(z)\tag{i}
+\]
+satisfies $P(\phi)=0$.
+Theorem 0.0.1 predics that the $P$-kernel on
+$\mathfrak{Db}$ is 4-dimensional. To begin with
+$f$ restricts to a real analytic densitiy on the
+$x$-line and gives a null solution.
+A second  solution is obtained by the boundary value distribution
+\[
+\gamma=\phi(x+i0)= f(x)\cdot \log (x+i0)+ g(x)
+\]
+Together they give a basis in the 2-dimensional space
+$\mathcal F_+$ from (*) in the remark 
+after Theorem 0.0.1.
+There remains to find two linearly independent distributions in
+$V_0$ since the leading polynomial of $P$ has a double zero at $x=0$.
+To attain such a pair 
+we first consider the boundary value distribution
+\[
+\gamma_*= f(x)\cdot \log (x-i0)+ g(x)
+\]
+which also is a null solution.
+Here the multi-valuedness of the complex log-function entails that
+\[
+\gamma-\gamma_*=2\pi i\cdot f(x)\cdot H_-(x)
+\]
+where
+$H_-(x)$ is the Heaviside distribution supported by
+the negative half-line. Then
+\[
+\gamma^*= \gamma-\gamma_*-2\pi i\cdot f(x)
+\]
+is a null solution supportec by
+the half-line $x\geq 0$ and hence belongs to 
+the 2-dimensional space 
+$V_0$. A second null solution in
+$V_0$ is given by the 
+ Dirac measure   $\delta_0$.
+To see that $\delta_0$.
+ is a null solution for $P$
+we recall  that
+in the non-commutative ring of differential operators one has the equality
+$\nabla=\partial x\circ x-1$.
+Since $x\cdot \delta_0=0$ we get 
+the distribution equation
+\[
+\nabla(\delta_0)=-\delta_0\implies
+\nabla^2(\delta_0)=\delta_0
+\] 
+Since $q(0)=-1$ is assumed in (0.3.1)
+it follows that   $P(\delta_0)=0$.
+Hence we have found four linearly independent null solutions
+$f_+.f_-,\gamma^*,\delta_0$ in accordance with
+Theolrem 0.0.1.
+\medskip
+
+
+\noindent
+\emph{The fundamental solution.} 
+A fundamental
+solution $\mu$ supported by $x\geq 0$ is found as follows: From
+(i) we have  the real-analytic density $\phi(x)$ on 
+the open half-line $\{x>0\}$ which gives 
+the  distribution
+$\phi_+$  supported by $\{x\geq 0\}$ defined by
+\[
+\phi_+= f(x)\cdot (\log x)\cdot H_+ g(x)\cdot H_+
+\]
+In § xx we shall explain that
+\[ 
+\nabla(\log x\cdot H_+)=\delta_0
+\]
+and from this  deduce that
+\[
+P(\phi_+)=-\delta_0
+\] 
+Hence $\mu=-\phi_+$ gives the requested fundamental  solution.
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+ 
+
+
+\centerline
+{\bf{0.2 PDE-equations with constant coefficients.}}
+\medskip
+
+
+\noindent
+The study of PDE-equations with contant coefficients in
+${\bf{R}}^n$ for arbitrary $n\geq 2$
+is a rich subject.
+The interested reader may consult Chapter xx in
+[Hörmander:Vol 2] for
+an extensive study
+of $PDE$-equations with constant coefficients.
+Here we shall give 
+a
+construction from Hörmander's article [xxx]
+which  
+illustrates how analytic function theory can be used  with 
+PDE-theory.
+Fourier's inversion formula
+for an arbitrary $n\geq 1$ asserts the following:
+Let $f(x)= f(x_1,\ldots,x_n)$
+be  a $C^\infty$-function which 
+is rapidly decreasing as
+$|x|= \sqrt{x_1^2+\ldots+x_n^2}$ tends to $+\infty$. Then
+\[ 
+f(x)= 
+\frac{1}{(2\pi)^n}\cdot
+\int\, e^{i\langle x,\xi\rangle}\cdot \widehat{f}(\xi)\, d\xi
+\quad\,\text{where}\quad 
+\widehat{f}(\xi)=\int\, e^{-i\langle x,\xi\rangle}\cdot f(x)\, dx\tag{*}
+\] 
+The inversion 
+inversion formula (*) entails that the Fourier transform of
+the partial derivative
+$\frac{\partial f}{\partial x_j}(x)$ is equal to $i\xi_j\cdot
+\widehat{f}(\xi)$.
+In PDE-theory one  introduces the first order differential operators
+\[ 
+D_j=-i\cdot \frac{\partial}{\partial x_j}\quad\colon 1\leq j\leq n
+\]
+When $\alpha=(\alpha_1,\ldots,\alpha_n)$
+is a multi-index we get the higher order differential operator
+\[ 
+D^\alpha=D_1^{\alpha_1}\cdots 
+D_1^{\alpha_n}
+\]
+We can  take polynomials of these and get differential operatators with
+constant coefficients
+\[
+ P(D)= \sum\, c_\alpha\cdot D^\alpha
+\]
+Fourier's inversion formula gives
+\[ 
+P(D)(f)(x)=
+\frac{1}{2\pi^n}\cdot
+\int\, e^{i\langle x,\xi\rangle}\cdot P(\xi)\cdot \widehat{f}(\xi)\, d\xi\tag{**}
+\]
+Thus, applying a differential operator with constant coefficients to $f$
+corresponds to the product of
+its Fourier transform with the polynomial $P(\xi)$
+and 
+(**) can be used to
+construct solutions of the homogeneous equation $P(D)(f)=0$.
+Following [Hörmander]
+we  construct distributions
+$\mu$ such that
+$P(D)(\mu)=0$
+for a suitable class of PDE-operators.
+Let 
+$\phi_1(s),\ldots,\phi_n(s)$ be some  $n$-tuple of analytic functions
+of the complex variable $s$
+which extend to continuous functions on the boundary of the domain
+\[ 
+\Omega=
+\{\mathfrak{Im}(s)<0\}\cap \{|s|>M\}
+\]
+ where $M$ is some positive
+number.
+Assume that the $\phi$-functions satisfy
+the growth conditions
+\[
+|\phi_k(s)|\leq C{|s|^a}\tag{i}
+\] 
+for a constant $C$ and some $0<a<1$.
+If $a<\rho<1$ there exists
+the analytic function in $\Omega$ defined by
+\[
+\psi(s)=e^{-(is)^\rho}
+\]
+As explained in § xx one has the estimate
+\[
+|\psi(s)|\leq e^{-\cos\frac {\pi\rho}{2}\cdot |s|^\rho }
+\quad\colon \mathfrak{Im}\, s\leq 0
+\]
+The inequality $a<\rho$
+and (i) entail that
+the functions
+\[ 
+s\mapsto e^{ a_1\cdot \phi_1(s)+\dots+a_n\phi_n(s)}\cdot \psi(s)
+\]
+decrease like 
+$e^{-\cos\frac {\pi\rho}{2}\cdot |s|^\rho }$ in $\Omega$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Verify 
+that the complex line integrals
+ below converge absolutely for every $s$-polynomial $Q(s)$ and
+ every $n$-tuple of real numbers
+ $x_1,\dots,x_n$:
+ \[
+ \frac{1}{(2\pi)^n}\cdot \int_{\partial\Omega}\,
+ e^{x_1\phi_1(s)+\ldots+x_n\phi_n(s)}\cdot e^{ix_n s}\cdot
+ Q(s)\cdot \psi(s)\, ds\tag{ii}
+ \]
+ and show  that when $x$ varies in ${\bf{R}}^n$
+ this gives a $C^\infty$-function $f(x)$. If $1\leq j\leq n-1$
+ one has for example
+ \[
+\frac{ \partial f}{\partial x_j}=
+ \frac{1}{(2\pi)^n}\cdot \int_{\partial\Omega}\,\phi_j(s)\cdot 
+ e^{x_1\phi_1(s)+\ldots+x_n\phi_n(s)}\cdot e^{ix_n s}\cdot
+ Q(s)\cdot \psi(s)\, ds
+\]
+Less obvious  is that the
+$C^\infty$-function $f(x)$ is supported by the half-space
+$\{x_n\geq 0\}$.
+To prove it one uses the analyticity of the integrand as a function of
+$s$
+which enable us to shift the contour of integration so that
+(ii) is unchanged while we integrate on a horisontal line
+$\mathfrak{Im}\, s=-N$ for every $N>M$.
+With $s=u-iN$ we have
+\[ 
+|e^{ix_n\cdot s}|= e^{N\cdot x_n}
+\]
+If $x_n<0$ this term tends to zero as $N\to +\infty$
+and from this the resder should confirm that
+the $C^\infty$-function $f(x)$ is identically zero in
+$\{x_n<0\}$.
+\medskip
+
+\noindent
+Suppose now that we are given a PDE-operator $P(D)$
+and  the $\phi$-functions  are chosen so
+that
+\[ 
+s\mapsto P(\phi_1(s)\ldots \phi_{n-1}(s),\phi_n(s)+s)=0
+\quad \colon s\in \Omega
+\]
+Then it is clear that
+\[
+P(D)( e^{x_1\phi_1(s)+\ldots+x_n\phi_n(s)}\cdot e^{ix_n s})=0
+\]
+hold for all $x\in{\bf{R}}^n$ and  $s\in\Omega$.
+Hence 
+$P(D)(f)=0$ where $f$ is a $C^\infty$-function supported by the half-space
+$\{x_n\geq 0\}$.
+In § xx we will show that the construction of solutions 
+as above is not so special for
+PDE-operators $P$
+such that the hyperplane $\{x_n=0\}$ is non-characteristic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline {\bf{0.1 The distributions $x_+^s$}}
+\medskip
+
+\noindent
+If $s$ is a complex number where
+$\mathfrak{Re} s>-1$
+the function defined by $x^s$ for $x>0$ and zero on
+the half-line $x\leq 0$ is locally integrable and defines
+a distribution denoted by $x_+^s$ acting on test-functions $g$ by
+\[
+x_+^s(g)= \int_0^\infty\, x^s\cdot g(x)\, dx
+\]
+The distribution-valued function
+$s\mapsto x_+^s$ is analytic in
+$\mathfrak{Re} s>-1$. Indeed
+ if $x<0$ we have
+ $\frac{d}{ds}(x^s=\log x\cdot x^s$
+ which entails that
+ the complex derivative
+ of $x_+^s$ is the distribution defined by
+ \[
+ g\mapsto 
+  \int_0^\infty\, \log x\cdot x^s\cdot g(x)\, dx
+ \]
+It turns out that $x_+^s$ extends to a meromorphic distribution-valued
+function in the whole $s$-plane.
+To prove this we perform a partial integration which
+gives
+\[
+x_+^{s+1}(g')=
+\int_0^\infty\, x^{s+1}\cdot g(x)\, dx=-(s+1)\cdot
+ \int_0^\infty\, x^s\cdot g(x)\, dx\tag{0.0.1}
+\]
+ By the construction of distribution derivatives this means that
+ \[
+ \frac{d}{dx}(x_+^s+1)=(s+1)\cdot x_+^s
+ \]
+
+
+\noindent
+{\bf{Euler's functional equation.}}
+Set $\partial=\frac{d}{dx}$. We can iterate
+(0.0.1) which  for every positive integer $m$ gives
+\[
+(s+1)\cdots(s+m)x_+^s=
+\partial^m(x_+^{s+m})\tag{0.0.2}
+\]
+We refer to (0.0.2) as Euler's functional equation. It entails that
+the distribution-valued function
+$x_+^s$ extends to a meromorphic function with
+at most simple poles at
+negative integers.
+Let us investigate the situation close to 
+a
+negative integer. With $s=-m+t$ and $t$ small one has
+\[
+t(t-1)\cdot (t-m+1)x_+^{-m+t}=\partial^m(x_+^t)
+\]
+When $x>0$ one has the expansion
+\[ 
+x^t=1+t\log x+\frac{t^2}{2}\cdot (\log x)^2+
+\frac{t^3}{3 !}\cdot (\log x)^3+\ldots
+\]
+From this we obtain a series expansion
+\[
+x_+^{-m+t}=t^{-1}\cdot \rho_m+ \gamma_0+t\gamma_1+\ldots
+\]
+where $\rho_m$ and $\{\gamma_\nu\}$ are distributions.
+In particular the reader may verify that
+\[
+(-1)^{m-1}(m-1)!\cdot \rho_m=\partial^m(H_+)
+\]
+Let us then consider the constant term $\gamma_0$.
+The linear $t$-term in the expansion of
+$t(t-1)\cdot (t-m+1)x_+^{-m+t}$
+becomes
+\[
+(-1)^{m-1}(m-1)!\cdot \gamma_0+\frac{m(m-1)}{2}\cdot \rho_m
+\]
+If $x>0$ we notice that
+\[
+\partial^m(\log x)=(-1)^{m-1}\cdot (m-1)! \cdot x^{-m}
+\]
+From the above  $\gamma_0$ restricts to the density $x^{-m}$ when $x>0$.
+At the same time $\gamma_0$ is a distribution defined
+on the whole $x$--line supported by $\{x\geq 0\}$.
+We set
+\[ 
+x_+^{-m}=\gamma_0\tag{*}
+\]
+and refer to this as Euler's extension of the density $x^{-m}$ which 
+from the start is defined on
+$\{x>0\}$.
+So in (*) we have found
+distributions for every positive integer $m$.
+\medskip
+
+
+\noindent
+{\bf{0.1.2 Further formulas.}}
+With $s=-1+z$ where $z$ is a small non-zero complex number
+one has
+\[
+z\cdot x_+^{-1+z}=\partial(x_+^z)\tag{i}
+\]
+Next, if $x>0$ we have
+\[
+x^z= e^{z\log x}=
+1+
+\sum_{k=1}^\infty\, \frac{(\log x)^k}{k!}\cdot z^k
+\]
+Introducing the Heaviside distribution $H_+$ which is 1 on $x\geq 0$ and
+zero on $x<0$
+this means that
+\[
+\partial(x_+^z)=\partial(H_+)+
+\sum_{k=1}^\infty\,
+\partial(\frac{(\log x)^k}{k!}\cdot H_+(x))z^k\tag{ii}
+\]
+From this we get a Laurent expansion of
+$x_+^s$ at $s=-1$. The crucial point
+is that the distribution derivative
+\[
+\partial(H_+)=\delta_0\tag{iii}
+\] 
+where $\delta_0$ is the Dirac distribution at $x=0$.
+It follows that
+\[
+x_+^{-1+z}= z^{-1}\cdot \delta_0+
+\sum_{k=1}^\infty\,
+\partial(\frac{(\log x)^k}{k!}\cdot H_+(x))z^{k-1}\tag{iv}
+\]
+In particular the constant term becomes
+\[
+\partial(\log x\cdot H_+(x))\tag{v}
+\]
+To find this distribution we take a test-function $g$
+and  a partial integration gives
+\[
+-\int_0^\infty (\log x\cdot g'(x)\, dx
+=\int_0^1\,\frac{g(x)-g(0)}{x}\, dx+
+\int_1^\infty \,\frac{g(x)}{x}\, dx
+\]
+From this we conclude that
+the  distribution $x_+^{-1}$ is defined on test-functions by
+the formula:
+\[
+x_+^{-1}(g)=\frac{(-1)^{m-1}}{(m-1)!}\cdot
+\int_0^1\,\frac{g(x)- g(0)}{x}\, dx+
+\int_1^\infty \,\frac{g(x)}{x}\, dx
+\]
+
+\medskip
+
+\noindent
+{\bf{0.1.3 Exercise.}}
+For each test-function $g$ and integer $m\geq 2$ we set
+\[
+T_{m-1}(g)(x)= g(0)+ g'(0)x\ldots \frac{g^{(m-1)}(0)}{(m-1)!}\cdot x^{m-1}
+\]
+Show from the above via  partial integrations
+that 
+\[
+x_+^{-m}(g)=\frac{(-1)^{m-1}}{(m-1)!}\cdot
+\int_0^1\,\frac{g(x)- T_{m-1}(g)(x)}{x^m}\, dx+
+\int_1^\infty \,\frac{g(x)}{x^m}\, dx
+\]
+\medskip
+
+\noindent
+{\bf{0.1.4 The distributions $(x+i0)^\lambda$ and
+$(x-i0)^\lambda$.}}
+In the upper half plane there exists the single valued branch of
+$\log z$ whose argument stays in $(0,\pi)$
+and for every complex number $\lambda$ we have
+\[ 
+z^\lambda= e^{\lambda\cdot \log z}
+\]
+In § 3 we shall learn how to contruct boundary value
+distributions  of analytic
+functions defined in strip domains above or below the real $x$-line.
+In particular there exists
+the distribution  $(x+i0)^\lambda$
+defined on test-functions $g(x)$ by the limit formula
+\[
+\lim_{\epsilon\to 0}\,
+\int\, (x+i\epsilon)^\lambda\cdot g(x)\, dx
+\]
+Notice   that
+this limit  exists for all complex $\lambda$,  i.e even when
+the real part becomes very negative.
+In the same way we have the single valued branch of $\log z$ in
+the lower half-plane whose argument stays in
+$(-\pi,0)$
+and construct the distribution $(x-i0)^\lambda$
+defined by 
+\[
+(x-i0)^\lambda(g)=
+\lim_{\epsilon\to 0}\,
+\int\, (x-i\epsilon)^\lambda\cdot g(x)\, dx
+\]
+Since $\lambda\mapsto e^{\lambda\cdot \log z}$
+are entire in
+$\lambda$, we get two entire distribution valued functions
+by 
+$(x-i0)^\lambda$ and $(x-i0)^\lambda$.
+Regarding the choice of branches for the log-functions
+we see that 
+\[
+(x-i0)^\lambda= e^{-2\pi i\lambda}\cdot (x+i0)^\lambda
+\quad\colon x<0
+\]
+At the   same time
+\[
+(x+i0)^\lambda=(x-i0)^\lambda=x^\lambda
+\quad\colon x>0
+\]
+From this we see that the distribution
+\[
+(x+i0)^\lambda-e^{2\pi i\lambda}\cdot (x-i0)^\lambda
+\]
+is supported by $x\geq 0$
+and expressed by the density
+$(1-e^{2\pi i\lambda})\cdot x^\lambda$.
+The conclusion is that one has the equation
+\[
+\mu_\lambda=
+\frac{(x+i0)^\lambda-e^{2\pi i\lambda}\cdot (x-i0)^\lambda}
+{1-e^{2\pi i\lambda}}
+\]
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The equation (xx) is  more involved compared to the previous
+description of the meromorphic $\mu$-function
+found via Euler's functional equation.
+But (xx) has the merit that
+the denominator is an entire distribution valued function and
+when one passes to Fourier transforms it turns out that
+(xx) is quite useful.
+\medskip
+
+\noindent
+{\bf{Principal value integrals.}}
+If $g(x)$ is a test-function there exists a limit
+\[
+\lim_{\epsilon\to 0}
+\int_{|x|>\epsilon}\, \frac{g(x)}{x}\, dx
+\]
+This yields a distribution denoted by $\text{VP}(x^{-1})$.
+Outside $\{x=0\}$ it is given bt the density
+$x^{-1}$
+where it agrees with $(x+i0)^{-1}$ and
+hence the difference
+ \[ 
+ \mu=
+ \text{VP}(x^{-1})-(x+i0)^{.-1}
+ \]
+ is supported by $\{x=0\}$.
+\medskip
+
+\noindent
+{\bf{Exercise.}} Notoice that
+\[
+\lim_{\epsilon\to 0}
+\int_{|x|>\epsilon}\, \frac{1}{x+i\epsilon}\, dx
+=\log (1+i\epsilon)-\log(-1+i\epsilon)=-\pi i
+\]
+and use this to show that
+\[ 
+\mu=-\pi i\cdot \delta_0
+\]
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+

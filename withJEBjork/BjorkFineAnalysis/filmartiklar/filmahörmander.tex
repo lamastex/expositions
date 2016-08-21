@@ -1,0 +1,432 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+ 
+\begin{document}
+
+\centerline{\bf{II. Null solutions of PDE:s
+with constant coefficients.}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We  expose material from
+the  article 
+\emph{Null solutions to partial differential operators}
+[Arkiv fšr matematik. 1959] by Lars Hšrmander.
+The Main  Theorem to be  announced below
+contains  an instructive proof where
+complex line integrals taken over contours 
+adapted to the complex zeros of the polynomial  $P(\zeta)$
+of
+$n$ independent complex variables which corresponds  to
+a PDE-operator $P(D)$ are used in order to  get an ample family of null solutions, i.e. functions $u(x)$ for which $P(D)u=0$.
+Hšrmander 
+employs  Puiseux series constructed via embedded curves in the
+zeros of $P(\zeta)$ to get such $u$-functions
+supported by the half-space $\{x_n\geq 0\}$
+in the case when the hyperplane $\{x_n=0\}$ is characterstic to the
+differential operator $P(D)$.
+The remaining part of the proof  of the Main Theorem 
+is based upon
+the Paley-Wiener theorem
+and  duality results  from  general distribution theory.
+Here one crucial   point appears. Namely, thanks to
+constructions due to   Gevrey, there exists test-functions 
+whose higher order derivatives have 
+a good control which entail that their Fourier transforms enjoy certain decay conditions.
+So the subsequent material offers  an instructive mixture of algebra and analysis.
+For example, one ingredient employs
+a
+density
+result which goes back to
+Pusieeux which can be considered  as a sharp version of the standard Nullstellen Satz.
+Namely.
+for 
+every  algebraic hypersurface
+$S=\{P(\zeta)=0\}$ in the $n$-dimensional complex $\zeta$-space there exists
+an ample family of   curves of two independent complex
+ contained in
+$S$ with the property
+that if $g(\zeta)$ is an entire function which vanishes on all these curves then
+is is identically zero on $S$. This entails 
+that
+\[
+g(\zeta)= P(\zeta)h(\zeta)
+\] 
+for another entire function $h$.
+Moreover,  when
+$g$Êis the Fourier-Laplace transform of a distribution $\mu$
+with compact support, the  Paley-Wiener theorem entails that
+$h=\widehat{\gamma}$ for another distribution whose compact support is
+contained in the convex hull of $\mu$
+which is used during the final step in the proof of the Main Theorem.
+\bigskip
+
+\noindent
+Before we  announce our Main Theorem 
+we need some notations.
+Let $n\geq 2$ and in ${\bf{R}}^n$ we consider the hyperplane
+$H=\{x_n=0\}$. Let $P(D)$ be a differential operator with
+constant coefficients. Here $D_k=-i\cdot \partial/\partial x_k$
+and by Fourier's inversion formula 
+\[
+P(D)f(x)= (2\pi )^{-n}\cdot \int\, e^{i\langle x,\xi\rangle}\, \widehat{f}(\xi)\, d\xi
+\]
+for test-functions $f(x)$. Let $m$ be the order of $P(D)$ which means that
+\[
+P(D)=\sum\, c_\alpha\cdot D^\alpha
+\] 
+where the sum is taken over multi-indices $\alpha$ for which
+$|\alpha |= \alpha_1+\ldots+\alpha_n\leq m$.
+The leading form is defined by
+\[
+P_m(D)=\sum_{|\alpha |=m}\, c_\alpha\cdot D^\alpha
+\]
+The hyperplane $H$ is characteristic  if $P_m(N)=0$ where
+$N=(0,\ldots,1)$, i.e. the term $D_n^m$ does not appear in 
+$P_m(D)$ with a non-zero coefficient.
+Put $H_+=\{x_n>0\}$ and 
+\[
+\mathcal N_+=\{ g\in C^\infty(H_+)\,\colon\, P(D)(g)=0
+\]
+Thus, we consider $C^\infty$-functions in the open half-plane $H_+$ which are
+null solutions to $P(D)$ in this open half-plane.
+A smaller space is given by
+\[
+\mathcal N_*=\{ g\in C^\infty({\bf{R}}^n)\,\colon\, P(D)(g)=0\,\,\text{and}\,\,
+\text{Supp}(g)\subset \overline{H_+}\}
+\]
+Denote by
+$\mathcal N_*^\perp$  the family of  distributions $\mu$ with compact support in
+$H_+$ which are zero on $\mathcal N_*$.
+\medskip
+
+\noindent
+{\bf{Main Theorem.}} \emph{Every distribution $\mu$ in
+$\mathcal N_*^\perp$  is zero on $\mathcal N_+$}
+\medskip
+
+\noindent
+The proof requires several steps.
+The crucial step is to 
+construct functions in $\mathcal N_*$ and after prove that they 
+give a dense subspace of $\mathcal N_+$.
+So we begin with:
+\bigskip
+
+
+\centerline {\bf{1. A construction of null solutions.}}
+\medskip
+
+\noindent
+Let $\xi_0$ be a real $n$-vector such that $P_m(\xi_0)\neq 0$ and
+$\zeta_0$ some complex $n$-vector.
+Let $s$ and $t$ be independent complex variables and set
+\[
+p(s,t)= P(s\cdot N+t\xi_0+\zeta_0)
+\]
+This gives a polynomial  where the term $t^m$ appears since
+$P_m(\xi_0)\neq 0$. At the same time $s^m$ does not appear because
+$P_m(N)=$ is assumed.
+A classic result due to Pusieux from 1852 shows that
+there exists a positive  integer $p$ and a series
+\[
+t(s)=s^{k/p}\cdot \sum_{j=0}^\infty\, c_j\cdot s^{-j/p}\tag{1.1}
+\]
+where $0\leq k<p$ which converges when $|s|$ is large, i.e. there
+exists some $M>0$ such that
+\[
+ \sum_{j=0}^\infty\, |c_j|\cdot M^{-j/p}<\infty
+\]
+Moreover,
+\[
+P(s\cdot N+t(s)\xi_0+\zeta_0)=0\quad\colon\, |s|\geq M\tag{1.2}
+\]
+In the lower half-plane $\mathfrak{Im}(s)<0$ 
+we
+choose a single valued branch of $s^{1/p}$ where
+\[
+s= |s|\cdot e^{i\phi}\implies s^{1/p}= |s|^{1/p}\cdot e^{i\phi/p}\quad
+\colon\quad -\pi<\phi<0
+\]
+Next, choose a number
+\[
+1-1/p<\rho<1
+\]
+Now $(is)^\rho$ has a single valued branch for which 
+\[
+\mathfrak{Re}((is)^\rho)= \cos\,\frac{\rho\pi}{2}\cdot |s|^\rho\cdot \cos(\rho\cdot(\pi/2+ \phi))\tag{1.3}
+\] 
+So if $\epsilon>0$ we have
+\[
+|e^{-\epsilon(is)^\rho}|=
+e^{-\epsilon\cdot \mathfrak{Re}(is)^\rho}=
+e^{-\epsilon \cdot |s|^\rho\cdot \cos\,(\rho(\pi/2+\phi))}\tag{1.4}
+\]
+Since $\rho<1$ we notice that
+\[
+\cos\,(\rho(\pi/2+\phi))\geq \cos\, \rho\pi/2= a
+\]
+for all $-\pi<\phi<0$Êwhere  a is positive constant $a$.
+It  follows that
+\[
+|e^{-\epsilon(is)^\rho}|\leq e^{-a\epsilon\cdot |s|^\rho}\tag{1.5}
+\]
+for all $s$ in the lower half-plane, arm also when $s$ is real.
+\medskip
+
+
+\noindent
+Let  $M$ be as above and denote by $C_*$ the
+circle in the lower half-pane which consists of the two 
+real intervals
+$(-\infty,-M)$ and $(M,+\infty)$ and the lower
+half-circle 
+where $|s|=M$. For each $x\in{\bf{R}}^n$ and every non-negative integer $\nu$
+we get the complex line integral
+\[
+\int_{C_*}\, e^{i\langle x,sN+t(s)\xi_0+\zeta_0\rangle}
+\cdot s^{\nu/p}\cdot e^{-\epsilon(is)^\rho}\, ds\tag{*}
+\]
+This integral is absolutely convergent. Namely,
+during the integration on the real intervalÊ$(-\infty,-M)$ or the real interval $[M,+\infty)$
+we see that (1.5) gives  estimates the absolute value of the integrand by
+\[
+|s|^{\nu/p}\cdot \cdot
+|e^{it(s)\langle x,\xi_0\rangle}|\cdot
+e^{-a\epsilon\cdot |s|^\rho}\tag{1.6}
+\]
+Next, the Puiseux expansion for $t(s)$ entails that
+\[
+ |t(s)\leq A|s|^{1-1/p}
+ \]
+hold for some constant $A$. Since $\rho>1-1/p$
+It follows that (.6) is majorised by
+\[
+|s|^{\nu/p}\cdot 
+e^{A\cdot |\langle x,\xi_0\rangle|\cdot |s|^{1-1/p}}\cdot
+e^{-a\epsilon\cdot |s|^\rho}\tag{1.6}
+\]
+Since $\rho>1-1/p$
+we conclude that
+the line integral (*) converges absolutely
+for each  positive integersÊ$\nu$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show by Cauchy's theorem in analytic function theory that
+the line integral  (*) does not depend on $M$ as soon as it has been
+chosen so that
+the Puiseux series definiing $t(s)$ exists. The resulting value of (*) is 
+therefore a function of $x$ and $\epsilon$ and gives a function $u_\epsilon(x)$
+defined for all $x$ in ${\bf{R}}^n$.
+Moreover, the reader should check
+that when  $\epsilon>0$ kept fixed this yields a $C^\infty$-function of
+$x$.
+In particular
+
+\[
+P(D)(u_\epsilon)(x)=
+\int_{C_*}\, P(sN+t(s)\xi_0+\zeta_0)\cdot
+e^{i\langle x,sN+t(s)\xi_0+\zeta_0\rangle}
+\cdot s^{\nu/p}\cdot e^{-\epsilon(is)^\rho}\, ds\tag{**}
+\]
+Since $P(sN+t(s)\xi_0+\zeta_0)=0$ when $|s|\geq M$ we conclude that
+$P(D)(u_\epsilon)=0$, i.e. $u_\epsilon$ is a null solution.
+\medskip
+
+\noindent
+{\bf{The inclusion $\text{Supp}(u)\subset \overline{H}_+$.}}
+In (*) we perform a line integral whose integrand is an analytic function in
+the lower half-plane.
+Using Cauchy's theorem the reader can check that for any
+$M^*>M$ we have
+\[
+u_\epsilon(x)=\int_{\mathfrak{Im}(s)=-M^*}\,
+e^{i\langle x,sN+t(s)\xi_0+\zeta_0\rangle}
+\cdot s^{\nu/p}\cdot e^{-\epsilon(is)^\rho}\, ds\tag{**}
+\]
+With $s=t-iM^*$ we have
+\[
+|e^{i\langle x,sN\rangle}|= e^{M^*\langle x,N\rangle}
+\]
+If
+$\langle x,N\rangle<0$ this decreases exponentially to zero as
+$M^*\to+\infty$ and then the reader can  check that the limit of (**)  as
+$M^*\to+\infty$ is zero.
+This proves that the null solution $u_\epsilon$ is supported by
+the half-plane $\overline{H}_+$
+and hence belongs to $\mathcal N_*$.
+
+
+\newpage
+
+
+\centerline{\bf{¤ 2. A study of $\mathcal N_*^\perp$.}}
+\medskip
+
+\noindent
+Consider a test-function
+$\phi $ with a compact support in $H_+$ such that
+$\phi(\mathcal N_*)=0$. It gives the
+entire function in the $n$-dimensional complex $\zeta$-space:
+\[
+\Phi(\zeta)=\int\, e^{i\langle x,\zeta\rangle}\, \phi(x)\, dx\tag{2.0}
+\]
+Using the convergence of the line integrals in (*) the reader
+should verify that  Fubini's theorem gives 
+the equation
+\[
+\int\, u_\epsilon(x)\phi(x)\, dx=
+\int_{C_*}\,
+\Phi(sN+t(s)\xi_0+\zeta_0)
+\cdot s^{\nu/p}\cdot e^{-\epsilon(is)^\rho}\, ds\tag{2.1}
+\]
+Since $\phi(\mathcal N_*)=0$ is assumed it follows that the last integral is zero
+for all non-negative integers $\nu$ and each $\epsilon>0$.
+\medskip
+
+\noindent
+{\bf{2.2 Another vanishing integral.}}
+In the upper half-plane $\mathfrak{Im}(s)>0$
+we can also choose single-valued branches of $s^{1/p}$ and 
+$(-is)^\rho$, where the last branch is chosen so that
+the value is $a^\rho>0$ when $s=ai$ for $a>0$.
+Then  we construct the contour $C^*$ given by the  real intervals $(\infty,-M)$ and 
+$(M,+\infty)$ together with
+the upper half circle of radius $M$, which  for each non-negative integer $\nu$
+gives  the function
+\[
+v_\epsilon(x)=
+\int_{C^*}\, e^{i\langle x,sN+t(s)\xi_0+\zeta_0\rangle}
+\cdot s^{\nu/p}\cdot e^{-\epsilon(-is)^\rho}\, ds\tag{*}
+\]
+Exactly as in ¤ 1  one verifies that this gives a $C^\infty$-function of $x$ 
+supported by the right half space $\{x_n\leq 0\}$.
+Since $\phi$ has compact support in
+$H_+$ it follows that
+\[
+0=\int\, v_\epsilon(x)\phi(x)\, dx=
+\int_{C^*}\,
+\Phi(sN+t(s)\xi_0+\zeta_0)
+\cdot s^{\nu/p}\cdot e^{-\epsilon(-is)^\rho}\, ds\tag{2.2.1}
+\]
+\medskip
+
+\noindent
+{\bf{2.3 The limit as $\epsilon\to 0$}}.
+In (2.2.1) we have vanshing integrals for each  $\epsilon>0$.
+If the test-function $\phi(x)$
+belongs to a suitable Gevrey class with more regularity than
+an arbitrary test-function, then
+the entire function $\Phi(\zeta)$ enjoys a decay condition which enable us to pass
+to the limit as $\epsilon\to 0$ in   (2.2.1).
+To find a sufficient decay condition 
+we set $\zeta=\xi+i\eta$, and 
+with $M$ kept fixed
+we study the function
+\[ 
+s\mapsto \Phi(sN+t(s)\xi_0+\zeta_0)
+\]
+We already know that there is a constant $C$ such that
+$|t(s)|\leq C|s|^{1-1/p}$ when $|s|\geq M$.
+Since $\xi_0$ and $\zeta_0$ are fixed this gives a constant $C_1$ such that
+\[
+|\mathfrak{Im}(sN+t(s)\xi_0+\zeta_0)|\leq C_1(1+|s|)^{1-1/p}\tag{2.3.1}
+\]
+At the same time we have the unit vector $N$ and get a positive  constant 
+$C_2$ such that
+\[
+|\mathfrak{Re}(sN+t(s)\xi_0+\zeta_0)|\geq C_1(1+|s|)\tag{2.3.2}
+\]
+when $|s|$ is large. Suppose now that
+the test-function $\phi$ has been chosen so that
+\[
+|\Phi(\xi+i\eta)\leq C\cdot e^{A|\eta|)-B|\xi|^{b}}\tag{2.3.3}
+\]
+hold for some constants $C,A,B,a$ where $b<1$.
+From (2.3.1-2.3.2) this gives with other positive constants
+\[
+|\Phi(sN+t(s)\xi_0+\zeta_0)\leq C_1e^{A_1|s|^{1-1/p}-B_1|s|^{b}}\tag{2.3.4}
+\]
+With $\rho$ chosen as in ¤ 1 where the equality (1.3) is used,
+it follows that as sson as
+\[
+a>\rho
+\]
+then
+we get absolutely convergent integrals 
+\[
+\int_{|s|\geq M}\,|\Phi(sN+t(s)\xi_0+\zeta_0)\cdot |s|^w|\, ds<\infty
+\]
+for every positive integer $w$.
+This enable us to pass to the limit in (2.2) and conclude that
+\[
+\int_{C^*}\,
+\Phi(sN+t(s)\xi_0+\zeta_0)
+\cdot s^{\nu/p}\, ds=0\tag{2.3.5}
+\]
+for every non-negative  integer $\nu$.
+In the same fashion we find vanishing integrals with
+$C^*$ replaced by $C_*$.
+The vanishing of these integrals for all $\nu\geq 0$ entails
+by the classic result  due to Puiseux
+that
+that
+$\frac{\Phi}{P}$ is an entire function.
+Then a  division theorem with bounds due to Lindelšf, together with the
+Paley-Wiener theorem imply  that
+the entire quotient
+\[
+\frac{\Phi}{P}=\Psi\tag{i}
+\]
+where $\Psi$ is given as in (2.0) for some test-function
+$\psi$ supported by the convex hull of the support of
+$\phi$.
+Moreover, (i) entails that
+\[
+P(-D)(\psi)=\phi
+\]
+and then it is obvious that $\phi$ annihilates
+$\mathcal N_+$.
+Hence we have proved the implication in Theorem 0 for distributions
+which
+are defined by test-functions $\phi$ whose  associated
+entire $\Phi$-function satisfies (2.3.3) with some
+$a>1-1/p$.
+But this finishes the proof of  the Main Theorem.
+Namely, fix
+$a$ as above and put
+\[
+\delta=1/a
+\]
+Now $\delta>1$ which by a classic construction due to Gevrey
+enable us to construct an ample family of test-functions
+$\phi$ for which (2.3.3) hold and at the same time
+this family is weak-star dense in the space of distributions
+with compact support in $H_+$ which gives the Main Theorem.
+For details about this density the reader can consult Hšrmander's article
+or his text-book [Hš:xx] if necessary.
+See also the article [Bj] by Gšran Bjšrck which offers a very detailed
+study of distributions arising from Gevrey classes.
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

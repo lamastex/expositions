@@ -1,0 +1,585 @@
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\def\bbb{{\bf{R}}}
+
+\def\bbc{{\bf{C}}}
+
+\def\bbi{\int_{xxx}}
+
+
+\begin{document}
+
+
+
+
+
+\centerline{\bf{Taylor series and real-analytic functions.}}
+\bigskip
+
+
+\noindent
+The study of Taylor series of differentiable functions on
+the real line
+were investigated  by Borel and Denjoy who 
+established several results during the years 1910-1922.
+Among these we recall the following result.
+Consider a real-valued $C^\infty$-function $f$
+on
+a bounded open interval $(a,b)$ whose derivatives  have
+have finite maximum norms. For each non-negative integer $k$
+we put
+\[
+C_k(f)=\bigl(|f^{(k)}|\bigr)^{\frac{1}{k}}\tag{*}
+\]
+where $|f^{(k)}|$ is the  maximum of the 
+$k$:th order derivative of $f$ taken over $(a,b)$.
+The question posed by Borel and Denjoy was to find
+conditions expressed  by  estimates on the
+sequence $\{C_k(f)\}$ which 
+impliy that $f$ cannot be flat at a point
+$x_0\in(a,b)$ , unless it is identically zero.
+To say that $f$ is flat at $x_0$ means that
+\[
+f^{(k)}(x_0)=0\quad\colon\quad k=0,1,2,\ldots
+ \]
+Denjoy 
+proved that if
+\[
+\sum_{k=0}^\infty\, \frac{1}{C_k(f)}=+\infty\tag{**}
+\]
+then $f$ cannot be flat at a point $x_0\in (a,b)$
+unless it is identically zero.
+In 1923 Carleman established necessary and sufficient conditions
+for quasi.analyticity in his lectures at Sorbonnen which goes as follows:
+
+\bigskip
+
+\noindent
+Let $\mathcal A=\{\alpha_\nu\}$
+be a non-decreasing sequence
+of positive real numbers.
+Denote by $\mathcal C_\mathcal A$ the family of
+all
+$f\in C^\infty[0,1]$
+for which there exists a constants $ M$ and $k$ which may depend on
+$f$  such that
+\[
+\max\uuu {0\leq x\leq 1}\, |f^{(\nu)}(x)|\leq M\cdot k^\nu\cdot \alpha\uuu\nu^\nu
+\quad\colon\quad \nu=0,1,\ldots\tag{0.4.1}
+\]
+One says that $\mathcal C_\mathcal A$ is a quasi-analytic class
+if every $f\in C_ \mathcal A$ whose Taylor series is identically
+zero at $x=0$ vanishes identically on $[0,1]$.
+The following 
+was proved by Carleman in 1922:
+  \medskip
+ 
+\noindent
+{\bf{Theorem.}}
+\emph{
+The class  $C_\mathcal A$ is quasi-analytic if and only if}
+\[
+ \int\uuu 1^\infty\, \log\,\bigl[\,\sum_{\nu=1}^\infty\,
+\frac{r^{2\nu}}{a_ \nu^{2\nu}} \,\bigr] \cdot \frac{dr}{r^2}=+\infty
+\]
+\medskip
+
+
+\noindent
+We shall expose material from Carelan's wok
+where the major results appear in [Ca:xx.].
+First we shall derive the result above by
+Denjoy via a remarkable 
+theorem from Carleman's article [xxx].
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{An inequality for differentiable functions.}}
+\bigskip
+
+
+\noindent
+Let $n$ be a positive integer and denote by
+$\mathcal F_n$ the family of
+$n$  times continuously differentiable and real-valued functions
+$f$ on the closed unit interval such that
+\[
+f^{(k)}(0)=
+f^{(k)}(1)=0\quad\colon 0\leq k\leq n-1\tag{0.1}
+\]
+with a normalized  $L^2$-integral:
+\[
+\int_0^1\, f(t)^2\, dt=1\tag{0.2}
+\]
+Next, for each $1\leq k\leq n$
+we can consider the $L^2$-norm of the $k$:th order derivative, i.e. set
+\[
+||f^{(k)}||_2)= \sqrt{\int_0^1\, f^{(k)}(t)^2\, dt}
+\]
+
+
+
+\noindent
+{\bf{Main Theorem}}.
+\emph{For each $n\geq 1$ and every $f\in \mathcal F_n$ one has
+the inequality}
+\[
+\sum_{k=1}^{k=n}\, \frac{1}{||f^{(k)}||_2)^{\frac{2}{k}}}
+\leq \pi\cdot e
+\]
+\emph{where $e$ is Neper's constant.}
+
+
+\bigskip
+
+\noindent
+We shall first establish a general inequality of
+independent interest.
+Let $0<b_1<\ldots<b_n$ be a strictly increasing sequence of 
+positive real numbers where $n\geq 1$ is some integer.
+Let $\phi(z)$ be an analytic function
+in the right half-plane $\mathfrak{Re} z>0$ which in addition extends to a 
+continuous function on the imaginary axis.
+Assume that its maximun norm over the right half-plane is
+$\leq 1$  and in addition satisfies
+\[
+|z|^k\cdot \phi(z)\leq b^k_k\quad \colon k=1,\ldots,n\tag{1.1}
+\]
+\[
+\phi(a)\geq e^{-a}\quad\colon\quad a>0\tag{1.2}
+\]
+\medskip
+
+\noindent
+Here (1.2) means that the restriction of $\phi$ to the non-negative real axis is
+real-valued and satisfies the inequalities expressed by (1.2).
+\medskip
+
+
+\noindent
+{\bf{1.3 Theorem.}} \emph{For each $\phi$ as above one has 
+the inequality}
+\[
+\sum_{k=1}^{k=n}\,\frac{1}{b_k}\leq  \frac{e\pi}{2}\tag{1.3.1}
+\]
+
+
+
+\medskip
+
+\noindent
+We prove Theorem 1.3 in § 2 and proceed to show how it gives the Main Theorem.
+We are given $f\in\mathcal F_n$ and put
+\[
+\phi(z)=\int_0^1\, e^{-zt}\cdot f(t)^2\, dt
+\]
+When $\mathfrak{Re} \,z\geq 0$ the absolute value $|e^{-zt}|\leq 1$
+for all $t$ on the unit interval and hence (0.2) 
+implies that the maximum norm of $\phi$ is $\leq 1$.
+Next, if $1\leq k\leq n$
+the vanishing in (0.1) and partial integration give
+\[
+z^k\cdot \phi(z)=
+\sum_{\nu=0}^{\nu=k}\, \binom{k}{\nu}\,\int_0^1\, f^{(\nu)}(t)
+\cdot f^{(k-\nu)}(t)(t)\, dt\tag{i}
+\]
+The Cauchy-Schwarz inequality estimates  the absolute value of the right hand side by
+\[
+\sum_{\nu=0}^{\nu=k}\, \binom{k}{\nu}\cdot ||f^{(\nu)}||_2\cdot 
+||f^{(k-\nu)}||_2\tag{ii}
+\]
+At this stage we use a wellknown resut from calculus  which
+entails that
+\[
+||f^{(\nu)}||_2\leq ||f^{(k)}||_k\quad\colon 0\leq \nu\leq k
+\]
+and from this the reader can check that (ii) is majorised by
+$2^k\cdot ||f^{(\nu)}||^2_k$.
+Hence 
+\[
+|z|^k\cdot |\phi(z)|\leq 2^k\cdot (||f^{(k)}||_2)^2\quad\colon\, k=1,2,\ldots\tag{iii}
+\]
+Put
+\[
+b_k= 2\cdot (||f^{(k)}||_2)^{\frac{2}{k}}\implies
+|z|^k\cdot |\phi(z)|\leq b_k^k\tag{iv}
+\]
+Next, if $a>0$ we have
+\[
+\phi(a)= 
+\int_0^1\, e^{-at}\cdot f(t)^2\, dt\geq e^{-a}\cdot 
+\int_0^1\, f(t)^2\, dt=e^{-a}
+\]
+where the last equality holds by (0.2).
+Hence we can apply Theorem 1.3 to $\phi$ and conclude that
+\[
+\sum_{k=1}^{k=n}\,\frac{1}{b_k}\leq \frac{e\pi}{2}\tag{v}
+\]
+Here  the $b$-numbers are given by (iv) which gives the Main Theorem.
+
+
+\bigskip
+\centerline{\bf{Proof of Theorem1.2}}
+
+\medskip
+
+\noindent
+First we establish an inequality where condition (1.2) does not appear.
+
+\medskip
+
+
+\noindent
+{\bf{2 Theorem.}} \emph{For each $\phi(z)$ which satisfies (1.1) and 
+every real $a>0$ one has
+the inequality}
+\[
+\frac{2a}{e\pi\cdot (1+\frac{a^2}{e^2b_1^2})}\cdot
+\sum_{k=1}^{k=n}\,\frac{1}{b_k}\leq \log\, \frac{1}{\phi(a)}\tag{2.1}
+\]
+
+\medskip
+
+\noindent
+\emph{Proof.}
+On the imaginary axis we consider the intervals
+\[
+\ell_k=[e\cdot  b_k,e\cdot eb_{k+1}]\quad\colon \, k=1,\ldots,n-1
+\quad\& \quad\, \ell_n=[eb_n,+\infty)\tag{i}
+\]
+Since $\log e^{-1}=-1$ it is clear that
+(1.1) gives the following for each $1\leq k\leq n$:
+\[
+\log|\phi(iy)|\leq -k\quad\colon \quad y\in \ell_k \tag{ii}
+\]
+Taking the negative intervals
+$-\ell_k=[-e\cdot  b_{k+1},-e\cdot b_k]$ and
+$-\ell_n=(-\infty, -eb_n$ we also have
+\[
+\log|\phi(iy)|\leq -k\quad\colon y\in -\ell_k \tag{iii}
+\]
+Moreover, since the maximum norm of $\phi$ is $\leq 1$ one has
+\[
+\log|\phi(iy)|\leq  0\quad\colon -b_1\leq y\leq b_1\tag{iv}
+\]
+Next, solving the Dirichlet problem we find the harmonic function $u$ in the open right
+half-plane whose boundary values on
+$(-b_1,b_1)$ is zero ,while
+$u=-k$ in the the open intervals $\ell_k$ and $-\ell_k$ for every $k$.
+The principle of harmonic majorisation applied to the subharmonic function 
+$\log\,|\phi(z)|$ entails that
+\[
+\log\,|\phi(a)\leq u(a)\tag{v}
+\]
+Now we  evaluate $u(a)$ using Poisson's formula to represent
+harmonic functions in the right half-plane.
+For each $1\leq k\leq n-1$ we denote by $\theta_a(k)$ the
+angle between the two vectors which join $a$ to the end-points
+$ieb_k$ and $ieb_{k+1}$.
+Computing
+the area of the triangle with corner points
+at $a,ieb_k,ieb_{k+1}$ the reader may check that
+\[
+\sqrt{a^2+e^2b_k^2}\cdot 
+\sqrt{a^2+e^2b_{k+1}^2}\cdot \sin \theta_a(k)=
+a\cdot e\cdot (b_{k+1}-b_k)\tag{vi}
+\]
+Finally, let $\theta_a(n)$ be the angle between the vector which joins $a$ with $ieb_n$ and
+the vertical line $\{x=a{}$. The reader may check  with the aid of a figure that
+\[
+\sin \theta_a(n)=\frac{a}{\sqrt{a^2+e^2b_n^2}}\tag{vii}
+\]
+\medskip
+
+\noindent
+Poisson's formula gives
+\[
+u(a)=-\frac{2}{\pi}\cdot \sum_{k=1}^{k=n}\,k\cdot \theta_a(k)
+\]
+
+\noindent
+Together with (v) it follows that
+\[
+\frac{2}{\pi}\cdot \sum_{k=1}^{k=n}\,k\cdot \theta_a(k)\leq 
+\log\,\frac{1}{\phi(a)|}\tag{viii}
+\]
+The inequality $\sin t\leq t$ for every $t>0$ implies that
+\[
+\frac{2}{\pi}\cdot \sum_{k=1}^{k=n}\,k\cdot \sin \,\theta_a(k)\leq 
+\log\,\frac{1}{\phi(a)|}\tag{ix}
+\]
+Next we use (vi-vii) to
+estimate 
+$\{ \sin \,\theta_a(k)\}$.
+When $1\leq k\leq n-1$ we have from (vi)
+
+\[
+e^2\cdot  b_k\cdot b_{k+1}\cdot \sqrt{1+\frac{a^2}{e^2b_k^2}}
+\cdot 
+\sqrt{1+\frac{a^2}{e^2b_{k+1}^2}}\cdot \sin \theta_a(k)=
+a\cdot e\cdot (b_{k+1}-b_k)\implies
+\]
+\[
+e\cdot (1+\frac{a^2}{e^2b_1^2})\cdot \sin\,\theta_a(k)\leq a\cdot (\frac{1}{b_k}-\frac{1}{b_{k+1}})
+\]
+where the last inequality follows since $b_k\geq b_1$ for every $k$.
+We conclude that the left hand side in (ix) majorizes
+\[
+\frac{2a}{e\pi\cdot (1+\frac{a^2}{e^2b_1^2})}\cdot
+\sum_{k=1}^{k=n-1}\, k\cdot (\frac{1}{b_k}-\frac{1}{b_{k+1}})
++\frac{2}{\pi}\cdot n\cdot \sin \theta_a(n)
+\]
+Finally, (vii) gives
+\[
+\sin \theta_a(n)=\frac{a}{eb_n}\cdot \frac{1}{\sqrt{1+\frac{a^2}{e^2b_n^2}}}
+\geq\frac{a}{eb_n}\cdot \frac{1}{1+\frac{a^2}{e^2b_1^2}}
+\]
+From this we conclude  that the left hand side in (ix) majorizes
+\[
+\frac{2a}{e\pi\cdot (1+\frac{a^2}{e^2b_1^2})}\cdot
+\bigl(\sum_{k=1}^{k=n-1}\, k\cdot (\frac{1}{b_k}-\frac{1}{b_{k+1}})+
+n\cdot \frac{1}{b_n}\bigr)
+\]
+Abel's summation formula identifies the last term with
+$\sum_{k=1}^{k=n}\,\frac{1}{b_k}$.
+Hence we have proved the requested inequality
+\[
+\frac{2a}{e\pi\cdot (1+\frac{a^2}{e^2b_1^2})}\cdot
+\sum_{k=1}^{k=n}\,\frac{1}{b_k}\leq \log\, \frac{1}{\phi(a)}\tag{x}
+\]
+\bigskip
+
+\noindent
+{\bf{2.3 A special case.}}
+Assume in addition to (1.1) that (1.2) holds.
+\[
+\phi(a)\geq e^{-a}\implies
+\log\, \frac{1}{\phi(a)}\leq a\quad\colon a>0
+\]
+So after division with $a$ we see that  Theorem 1.2  gives
+\[
+\frac{2}{e\pi\cdot (1+\frac{a^2}{e^2b_1^2})}\cdot
+\sum_{k=1}^{k=n}\,\frac{1}{b_k}\leq 1\tag{2.3.1}
+\]
+Passing to the limit as $a\to 0$ it follows that
+\[
+\sum_{k=1}^{k=n}\,\frac{1}{b_k}\leq \frac{e\pi}{2}\tag{2.3.2}
+\]
+which proves Theorem 1.3.
+
+
+\newpage
+
+
+
+\centerline{\bf{Carleman's reconstruction theorem for
+real-analytic functions.}}
+\medskip
+
+\noindent
+A  real-valued $C^\infty$-function $f$ on 
+the closed unit interval is real analytic if and only if there
+exist constant $C$ and $M$ such that
+\[
+\max_{0\leq x\leq 1}
+|f^{(k)}(x)|\leq M\cdot k !\cdot C^k
+\quad\colon k=1,2,\ldots\tag{0.1}
+\]
+The analyticity implies that
+$f$ is determined by its derivatives at the origin.
+However, the Taylor series
+\[
+\sum_{k\geq 0}\, f^{(k)}(0)\cdot \frac{x^k}{k !}
+\] 
+is in general only convergent for
+in a small interval $[0\leq x<\delta$.
+In 1921 Borel posed the question how on
+determines $f(x)$ on the whole interval from
+the sequence $\{ f^{(k)}(0)\}$.
+An affirmative answer was given by Carleman in 1923
+via solutions to a family of variational problems
+which 
+goes as follows:
+Put $\alpha_k=f^{(k)}(0)$ for each $k\geq 0$.
+If $N$ is a positive integer 
+we denote by $\mathcal H_N$ the Hilbert space 
+whose elements are $N-1$-times
+continuous differentiable functions $g$ on
+$[0,1]$, and in addition
+$g^{(N)}$ is square integrable, i.e. it belongs to
+$L^2[0,1]$.
+In "contemporary mathematics" this  means that $H_N$ is a Sobolev space. But of course the notion of weak $L^2$-derivatives was perfectly well understood long
+before and for example used extensively in work by
+Weyl before 1910.
+Inside $\mathcal H_N$ we have the subspace
+$\mathcal H_N(f)$ which  consists of functions
+$g$ such that
+\[ 
+g^{(k)}(0)=
+f^{(k)}(0)\quad\colon k=0,\ldots,N-1\tag{0.2}
+\]
+With these notations one regards the variational problem
+\[
+\min_{g\in \mathcal H_N(f)}\,
+J_N(g)= \sum_{k=0}^{k=N}\, (\log (k+2))^{-2k}\cdot (k !)^{-2k}
+\cdot \int_0^1\, g^{(k)}(x)^2\, dx\tag{0.3}
+\]
+Elementary  Hilbert space methods
+yield a unique minimzing function
+denoted by $f_N$.
+These  successive solutions give
+a sequence $\{f_N\} $ where each 
+$f_N$ has at least $N-1$ continuous derivatives.
+Less obvious is the following:
+
+\medskip
+
+\noindent
+{\bf{Main Theorem.}} \emph{For each real-analytic function $f$
+the sequence 
+$\{f_N\}$ converges uniformly together with all derivatives
+to $f$, i.e. for every $m\geq 0$ it holds that}
+\[
+\lim_{N\to \infty}\,|f_N^{(m)}-f^{(m)}|_{0,1}=0
+\] 
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+Since every
+$f_N$ is determined by derivative of $f$ up to order $N-1$
+at $x=0$ it means that
+one has  a reconstruction of the real-analytic
+function $f$
+via these derivatives.
+
+
+\medskip
+
+\centerline{\bf{Proof of the Main Theorem}}
+
+
+\bigskip
+
+\noindent
+For each $N$ we denote by $J_*(N)$ the minimum in the variational problem (0.3).
+Among the competing functions we can choose
+$f$  and hence
+\[
+J_*(N)\leq J_N(f)
+\]
+Now there exist constants $C$ and $M$ from (0.1)
+which entails that
+\[
+ J_N(f)\leq M\cdot \sum_{k=0}^N\, (\log (k+2))^{-k} C^{2k}
+\]
+Since
+$\log (k+2)$ tends to $+\infty$, it is clear that the series
+\[
+\sum_{k=0}^\infty\, (\log (k+2))^{-k} \cdot C^{2k}<\infty
+\]
+We conclude that there exists a constant
+$J_*$ such that
+\[
+J_*(N)\leq J_*\quad\colon\, N=1,2,\ldots\tag{i}
+\]
+So if $m$ is some positive integer and $N\geq m$ we have
+\[
+\sum_{k=0}^{k=m}\, (\log (k+2))^{-2}\int_0^1\, f_N^{(k)}(x)^2\, dx
+\leq J_*\tag{ii}
+\]
+Now we recall the classic resut due to Arzela-Ascoli
+which implies that bounded sets in $H_m$
+give relatively compact subsets of
+$C^{m-1}[0,1]$.
+Since (ii) hold for each $m$, it follows
+by a standard diagonal procedure which is left to the reader 
+that we can find a subsequence $\{g_\nu=f_{N_\nu}\}$
+such that
+the sequence of derivatives
+$\{g_\nu^{(m)}\}$ converge uniformly for every $m$, i.e
+$g_\nu\to g_*$ holds in the space $C^\infty[0,1]$.
+Next, by (0.2) we have for each fixed integer $k\geq 0$:
+\[
+f^{(k)}(0)=f_N^{(k)}(0)\quad\colon N\geq k+1
+\]
+From this it follows that
+\[
+f^{(k)}(0)=g_*^{(k}(0)\quad\colon k=0,1,2\dots\tag{iii}
+\]
+Hence the $C^\infty$-function
+\[
+\phi=f-g_*
+\]
+ is flat at $x=0$.
+Next, for a fixed integer $k$
+the uniform bound in
+(ii) gives
+\[
+\int_0^1\, \phi^{(k)}(x)^2\, dx\leq
+ J_*\cdot (\log (k+2))^{2k}\cdot (k !)^2\tag{iv}
+\]
+Moreover, for each $0<x\leq 1$ the Cauchy-Schwartz inequality gives
+\[
+\phi^{(k)}(x)= \int_0^x\, \phi^{(k+1)}(t)\,dt\leq
+\sqrt{\int_0^1\, \phi^{(k)}(x)^2\, dx}
+\]
+and since (iv) hold for every $k$ it follows that
+\[
+\max_x\, |\phi^{(k)}(x)|\leq  J_*\cdot (\log (k+2))^k\cdot k !
+\]
+Since $k !\leq k^k$
+this entails that
+\[ 
+\mathcal C_k(\phi)\leq J_*^{\frac{1}{k}}\cdot  k\cdot (\log (k+2))
+\]
+Since the series $\sum_{k=1}^\infty\, \frac{1}{k\log k}$
+is divergent we conclude that
+\[
+\sum_{k=1}^\infty\, \frac{1}{\mathcal C_k(\phi)}=+\infty
+\]
+Hence Denjoy's result in xxx proves that $\phi$ is identically zero.
+which means that
+
+\[
+\lim _{k\to\infty}\, f_{N_k}=f\tag{*}
+\]
+where the convergence holds in the space
+$C^\infty[0,1]$.
+Finally, the reader may check that (*)
+holds for 
+an arbitrary convergent subsequence which by the previous compactness
+by Arzela-Ascoli entails  that
+the whole sequence $\{f_N\}$ converges to $f$. This
+finishes the proof of the Main Theorem.
+
+
+
+
+
+
+
+
+
+
+\end{document}

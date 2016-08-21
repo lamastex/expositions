@@ -1,0 +1,4558 @@
+
+
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\def\bbb{{\bf{R}}}
+
+\def\bbc{{\bf{C}}}
+
+\def\bbi{\int_{xxx}}
+
+
+
+
+
+\begin{document}
+
+
+
+
+
+
+
+
+
+
+\centerline {\bf{§ xx. Fundamental solutions to second order
+Elliptic operators.}}
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+We shall expose material from Carleman's  
+article \emph{xxx}.
+Elliptic partial differential operators appear frequently and in order to solve 
+inhomogeneous equations one often employs a fundamental  solution.
+It  is therefore  of interest to contruct fundamental solutions with
+"best possible regularity" conditions.
+For PDE-operators with constant coefficients one 
+employs Fouriers' inversion fourmula
+and we  refer to Chapter X in vol.2 in Hörmander's text-book series on linear 
+partial differential operators for a detailed account
+about constructions of fundamental  solutions with optimal regularity
+in the case of constant coefficients.
+Passing to the case of variable coefficients one profits upon the constant case and
+following Carleman we will show that
+one can obtain fundamental  solutions to second order elliptic operators in
+a canonical fashion.
+In contrast to the csae of constant coefficients  the subsequent constructions do not 
+use the Fourier transform. Insetad one finds fundemental 
+solutions by solving integral equations of the Neumann-Fredholm type.
+Let us  remark that one  does not need any concepts from distribution
+theory since we will find
+fundamental solutions are locally integrable and 
+in such situations
+the
+notion of fundamental solutions were well understood at an early stage after pioneering work by
+Weyl and Zeilon prior to 1925. In his article Carleman refers to
+\emph{Grundlösungen} 
+and their requested properties are derived via Green's formula.
+
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+For students interested in PDE-theory the material below offers 
+an instructive lesson and  suggests further investigations.
+We restrict the study to ${\bf{R}}^3$ and  remark only that
+similar constructions can be performed when $n\geq 4$ starting from
+Newton's potential 
+$|x-\xi|^{-n+2}$. Here it would be  interesting to clarify the
+precise estimates  when $n\geq 4$ and
+establish similar inequalities as in the Main Theorem
+One can also try to extend the whole condtructions to elliptic operators of
+order $\geq 3$.
+In the case of even order $2m$
+the method would be to emply the canonical fundamental solutions for
+elliptic operators of even order with constant coefficents which
+were given by F. John. So here  replaces Newton's fundamental
+solutions which appear in § 1 below by those of John and after 
+it is tempting to perform  
+similar constructions as those by 
+Carleman. This appears to be a "profitable research problem" for 
+ph.d-students.
+Let us also remark that
+one does not assume that the elliptic operators are symmetric, i.e.
+both the constructions as well as estimates for the fundamental solutions do
+not rely upon symmetry conditions.
+Recall finally  that fundamental solutions are used to construct various Greens' functions
+and here a priori estiamates are valuable 
+We illustrate  this in § xx where we expose some further results by Carleman concerned with
+asymptotic distributions of eigenvalues to elliptic boundary value problems
+which we describe below.
+
+\medskip
+
+
+\noindent
+{\bf{An asymptotic formula for the spectrum.}}
+Let $n=3$ and consider a second order PDE-operator
+\[
+L=
+\sum_{p=1}^{p=3}\sum_{q=1}^{q=3}\, a_{pq}(x)\cdot \frac{\partial ^2}{\partial x_p\partial x_q}+
+\sum_{p=1}^{p=3}\, a_p(x)
+\frac{\partial }{\partial x_p}+a_0(x)
+\]
+The $a$-functions are real-valued and
+defined in a neighborhood of the closure of a bounded
+domain
+$\Omega$ in ${\bf{R}}^3$
+with a $C^1$-boundary.
+Here one has the symmetry $a_{pq}=a_{qp}$, and 
+$\{a_{pq}\}$ are
+of class $C^2$, $\{a_p\}$  of class $C^1$ and $a_0$ is continuous.
+The elliptic property of
+ $L$ means that
+for
+every $x\in\Omega$ the eigenvalues of the symmetric
+matrix
+$A(x)$ with elements $\{a_{pq}(x)\}$
+are positive.
+Under these conditions, a  result which goes back to work by 
+Neumann and Poincaré,
+gives
+a positive constant
+$\kappa_0$ such that
+if $\kappa\geq \kappa_0$ then
+the inhomogeneous equation
+\[
+L(u)-\kappa^2\cdot u=f\quad\colon f\in L^2(\Omega)
+\]
+has a unique solution $u$ which is a $C^2$-function 
+in
+$\Omega$ and  extends to the closure where it is zero on
+$\partial\Omega$.
+Moreover, there exists some $\kappa_0$
+and for each $\kappa\geq \kappa_0$ a
+Green's function
+$G(x,y;\kappa)$ such that
+\[
+(L-\kappa^2)(\frac{1}{4\pi}\cdot \int_\Omega\, 
+G(x,y;\kappa)\, f(y)\, dy )= -f(x)\quad\colon f\in L^2(\Omega)\tag{i}
+\]
+This  means  that the bounded linear operator on
+$L^2(\Omega$ defined by
+\[
+f\mapsto 
+-\frac{1}{4\pi}\cdot \int_\Omega\, 
+G(x,y;\kappa)\, f(y)\, dy\tag{ii}
+\]
+is Neumann's resolvent
+to the densely defined operator
+$L-\kappa^2$ on the 
+Hilbert space $L^2(\Omega)$. 
+Next, one seeks pairs $(u_n,\lambda_n)$
+where $u_n$ are $L2$-functions in $\Omega$ which 
+extend to be zero on
+$\partial\Omega$ and satisfy
+\[ 
+L(u_n)+\lambda_n\cdot u_n=0
+\]
+It turns out that the set of eigenvalues is discrete and
+moreover their real parts tend to $+\infty$.
+They are arranged with non-decreasing absolute values and in § xx we prove
+that there exist positive constants
+$C$ and $c$ such that
+\[
+|\mathfrak{Im}(\lambda_n)|\leq
+C\cdot(\mathfrak{Re}(\lambda_n)+c)
+\] 
+hold for every $n$.
+Next, the elliptic
+hypothesis means that
+the determinant function
+\[
+D(x)=\det(a_{p,q}(x))
+\]
+is positive in $\Omega$. With these notations one has
+
+
+\medskip
+
+
+
+\noindent
+{\bf{ Theorem.}}
+\emph{The following limit formula holds:}
+\[
+\lim_{n\to\infty}\, \frac{\mathfrak{Re}(\lambda_n)}{n^{\frac{2}{3}}}
+=\frac{1}{6\pi^2}\cdot \int_\Omega\, 
+\frac{1}{\sqrt{D(x)}}\, dx\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The formula above is due to Courant and Weyl  when
+$P$ is symmetric and  extended to
+non-symmetric operators during 
+Carleman 's lectures at Institute Mittag-Leffler in  1935.
+Weyl and Courant used calculus of variation
+in the symmetric case 
+while Carleman employed  different methods which
+have the merit that the passage to the non-symmetric case
+does not cause any  trouble. 
+A crucial step during the  proof of the theorem above
+is to
+construct a fundamental solution $\Phi(x,\xi;\kappa)$
+to the PDE-operators
+$L-\kappa^2$ which done in § 1 while § 2 treats the asymptotic formula above.
+As pointed out by
+Carleman the methods in the  proof  
+give similar asymptotic formulas 
+in   other boundary value problems such as
+those considered by Neumann where one imposes boundary value conditions on
+outer normals.
+As an example we consider an elliptic
+operator
+of the form
+\[
+L=\Delta+
+\sum_{p=1}^{p=3}\, a_p(x)
+\frac{\partial }{\partial x_p}+a_0(x)
+\]
+where $\Delta$ is the Laplace operator.
+Given a positive real-valued continuous function
+$\rho(x)$ on $\partial\Omega$
+we obtain the Neumann-Poincaré operator
+$\mathcal{NP}$ which sends each $u\in C^0(\partial\Omega)$ to
+\[
+\mathcal{NP}(u)=
+\frac{\partial u^*}{\partial{\bf{n}}_i}-\rho\cdot u
+\]
+Here $u^*$ is the Dirichlet extension of $u$ to $\Omega$ which
+is equal to $u$ on $\partial\Omega$ and satisfies $L(u)=0$ in
+$\Omega$, while
+$\frac{\partial u^*}{\partial{\bf{n}}_i}$ is the inner normal along the boundary.
+In the special case when
+$L=\Delta$ this  boundary value problem has unique solutions, i.e.
+for every
+$f\in C^0(\partial\Omega)$ there exists a unique $u$ such that
+\[
+\mathcal{NP}(u)=f
+\]
+This was proved
+by Poincaré in 1897 for
+domains in ${\bf{R}}^3$ whose boundaries are of class
+$C^2$ and the extension to domains with a $C^1$-boundary
+is also classic.
+Passing to general operators $L$ as above which are not neccesarily symmetric
+one encounters spectral problems, i.e. above
+$\mathcal{NP}$ regared as a linear operator on the
+Banach space $C^0(\partial\Omega)$ is densely defined and
+one seeks its spectrum, i.e,  compex numbers
+$\lambda$ for which there exists a non-zero
+$u$ such that
+\[
+\mathcal{NP}(u)+\lambda\cdot u=0
+\]
+I do not
+know if there exists
+an  analytic formula for these eigenvalues. Notice that a new feauture is that
+the $\rho$-function affects the spectrum.
+
+
+
+
+
+
+
+
+
+
+\newpage 
+
+
+
+\centerline{\bf{Fundamental solutions.}}
+\bigskip
+
+\noindent
+In
+${\bf{R}}^3$ with coordinates $x=(x_1,x_2,x_3)$ we consider 
+ a second order PDE-operator
+\[
+L=
+\sum_{p=1}^{p=3}\sum_{q=1}^{q=3}\, a_{pq}(x)\cdot \frac{\partial ^2}{\partial x_p\partial x_q}+
+\sum_{p=1}^{p=3}\, a_p(x)
+\frac{\partial }{\partial x_p}+a_0(x)
+\]
+where 
+$a$-functions are real-valued and
+one has the symmetry $a_{pq}=a_{qp}$.
+To ensure existence of a globally defined fundamental solutions we
+suppose the the following limit formulas hold
+as $(x,y,z)\to \infty$:
+\[
+\lim a_\nu(x,y,z)=0 \colon 0\leq p\leq 3\quad\colon\,
+\lim a_{pq}(x,y,z)= \text{Kronecker's delta function}
+\]
+Thus, $L$ approaches the Laplace operator as $(x,y,z)$ tends to
+infinity. Moreover
+$L$ is elliptic which means that
+the eigenvalues of the symmetric
+matrix with elements $\{a_{pq}(x)\}$
+are positive for every $x$.
+Recall the  notion of  fundamental solutions.
+Consider
+the adjoint
+operator:
+\[ 
+L^*(x,\partial _x)=P-2\cdot \bigl(
+\sum_{p=1}^{p=3}\, \bigl(\sum_{q=1}^{q=3}\, 
+\frac{\partial a_{pq}}{\partial x_q}\bigr)\cdot \frac{\partial}{\partial x\uuu p}
+-\sum_{p=1}^{p=3}\, \frac{\partial a_p}{\partial x_p}
++2\cdot \sum\sum\, \frac{\partial^2 a_{pq}}{\partial x_p\partial x_q}\tag{0.1}
+\]
+Partial integration gives  the equation  below for every pair of
+$C^2$-functions $\phi,\psi $ in ${\bf{R}}^3$ with compact support:
+\[
+\int\, L(\phi)\cdot \psi\, dx=
+\int\, \phi\cdot L^*(\psi)\, dx\tag{0.2}
+\] 
+where
+the volume integrals are taken over
+${\bf{R}}^3$.
+A locally integrable function $\Phi(x)$ in ${\bf{R}}^3$
+is  a fundamental solution to $L(x,\partial _x)$
+if
+\[
+\psi(0)=\int\, \Phi\cdot L^*(\psi)\, dx\tag{0.3}
+\] 
+hold for every $C^2$-function  $\psi$ with compact support.
+Next, to each 
+positive number
+$\kappa$ we  get  the PDE-operator $L-\kappa^2$ and a
+function $x\mapsto \Phi(x;\kappa)$ is a fundamental solution to $L-\kappa^2$
+if
+\[
+\psi(0)=\int\, \Phi(x:\kappa)\cdot (L^*-\kappa^2)(\psi(x))\, dx\tag{0.4}
+\] 
+hold for compactly supported $C^2$-functions $\psi$.
+Next, the  origin can  replaced by a variable point $\xi$ in
+${\bf{R}}^3$ and then one seeks
+a function
+$\Phi^*(x,\xi;\kappa)$ with the property that
+\[
+\psi(\xi)=\int\, \Phi(x,\xi;\kappa)\cdot (L^*(x,\partial_x)-\kappa^2)(\psi(x))\, dx\tag{*}
+\] 
+hold for all  $\xi\in{\bf{R}}^3$
+and every $C^2$-function $\psi$ with compact support.
+Keeping $\kappa$ fixed this means that  
+$\Phi(x,\xi;\kappa)$ is a function of six variables  defined in 
+${\bf{R}}^3\times {\bf{R}}^3$.
+With these notations we announce the main result:
+
+
+\bigskip
+
+\noindent
+{\bf{Main Theorem.}} \emph{There exists a  constant
+$\kappa_*$ such that for every $\kappa\geq\kappa_*$ one can find a fundaemtal
+solution
+$\Phi(x,\xi;\kappa)$ which is locally integrable
+in the 6-dimensional $(x,\xi)$-space.
+Moreover,
+there exist positive constants $C$ and $k$ and
+for each $0<\gamma\leq 2$ a constant $C_\gamma$ such that}
+\[
+|\Phi(x,\xi;\kappa)|\leq
+C\cdot \frac{e^{-k\kappa|x-\xi|}}{|x-\xi|}+
+ \frac{C_\gamma}{(\kappa|x-\xi|)^{\gamma}}
+\]
+\emph{hold for all pairs $(x,\xi)$ in ${\bf{R}}^3$ and every
+where the constants $k$ and $C$ do not depend upon $\kappa$.}
+
+\bigskip
+
+
+
+\centerline {\bf{1. The construction of $\Phi(x,\xi;\kappa)$.}}
+\medskip
+
+
+
+\noindent
+The subsequent constructions 
+are 
+based upon a
+classic formula due to Newton and  specific solutions to
+integral equations
+found by a convergent Neumann series.
+When $L$ has
+constant coefficients 
+the construction of   fundamental solutions was (at least essentially)
+given by
+Newton in his famous
+text-books from 1666 and goes as follows:
+Consider a 
+positive  and symmetric $3\times 3$-matrix
+$A= \{a_{pq}\}$. Let
+$\{b_{pq}\}$ be the elements of the inverse matrix which gives 
+the quadratic form
+
+\[ 
+ B(x)= \sum_{p,q}\, b_{pq} a_px_q
+\]
+Put
+\[
+\alpha=\sqrt{\kappa^2+\frac{1}{2}\, \sum_{p,q}\, b_{pq} a_pa_q
+-a_0}
+\]
+where $\kappa$ is chosen so large that
+the term under the square-root is $>0$. Finally, put
+\[
+\Delta=\det(A)
+\]
+With these notations we get a function:
+\[
+H(x;\kappa)= \frac{1}{4\pi\cdot \sqrt{\Delta\cdot B(x)}}
+\cdot e^{-\alpha \sqrt{B(x)}-
+\frac{1}{2}\sum_{p,q}b_{pq} a_p\cdot x_q}\tag{1.1} 
+\]
+
+
+\medskip
+
+
+
+
+\noindent
+{\bf{Exercise.}} Verify by Stokes  formula
+that $H(x;\kappa)$  yields  a fundamental solution
+to the PDE-operator $L(\partial_x)-\kappa^2$.
+
+
+
+\bigskip
+
+
+
+\noindent
+{\bf{1.2 The case with variable coefficients.}}
+Now $L$ has variable coefficients.
+For each $\xi\in{\bf{R}}^3$ the elements of the inverse matrix
+to $\{a_{pq}(\xi)$
+are denoted by $\{b_{pq}(\xi)\}$.
+Choose $\kappa_0>0$ such that
+\[
+\kappa_0^2+\frac{1}{2}\, \sum_{p,q}\, b_{pq}(\xi) a_p(\xi)a_q(\xi)
+-b(\xi)>0\quad\text{hold for all}\quad  \xi\in{\bf{R}}^3
+\] 
+and for every $\kappa\geq \kappa_0$ we set
+\[
+\alpha_\kappa(\xi)=
+\sqrt{\kappa^2+\frac{1}{2}\, \sum_{p,q}\, b_{pq}(\xi) a_p(\xi)a_q(\xi)
+-b(\xi)}\tag{i}
+\]
+Following Newton's construction in (1.1) we
+put:
+\[
+H(x,\xi;\kappa)=\frac{1}{4\pi}\cdot
+ \frac{\sqrt{\Delta(\xi)}^{-\frac{1}{2}}}{
+\sqrt{ \sum_{p,q}\, b_{pq}(\xi)\cdot x_px_q}}
+\cdot e^{-\alpha_\kappa(\xi) \sqrt{B(x)}-
+\frac{1}{2}\sum_{p,q}b_{pq}(\xi) a_p(\xi)\cdot x_q} \tag{ii}
+\]
+
+\noindent
+When $\xi$ is kept fixed this  function of
+$x$ is real analytic  outside the origin and 
+$x\to H(x,\xi;\kappa)$ is locally integrable
+as a function of $x$ in a neighborhood of the origin.
+We are going to construct  a fundamental solution
+which takes the form
+\[
+\Phi(x,\xi;\kappa)=
+H(x-\xi,\xi;\kappa)+\int_{{\bf{R}}^3}\, 
+H(x-y,\xi;\kappa)\cdot\Psi(y,\xi;\kappa)\, dy\tag{iii}
+\]
+where the $\Psi$-function is the solution to an integral equation
+which we construct in (1.5). But first we need another construction.
+
+\medskip
+
+\noindent
+{\bf{1.3 The function $F(x,\xi;\kappa)$.}}
+For every fixed $\xi$ we get  the  differential operator in the
+$x$-space:
+\[ 
+L_*(x,\partial_x,\xi;\kappa)=
+\]
+\[\sum_{p=1}^{p=3}\sum_{q=1}^{q=3}\, (a\uuu{pq}(x)-
+(a\uuu{pq}(\xi))\cdot 
+\frac{\partial^2}{\partial x_p\partial x_q}+
+\sum_{p=1}^{p=3}\,
+(a_p(x)-a_p(\xi))\frac{\partial}{\partial x_p}+ (b(x)-b(\xi))
+\]
+
+\medskip
+
+\noindent
+Apply $L_*$ to the function
+$x\mapsto H(x-\xi,\xi;\kappa)$
+and put
+\[ 
+F(x,\xi;\kappa)=\frac{1}{4\pi}\cdot L_*(x,\partial_x,\xi;\kappa)(H(x-\xi,\xi,\kappa)) \tag{1.3.1}
+\]
+
+\medskip
+
+\noindent
+{\bf{1.4 Two  estimates.}}
+The limit conditions  in (0.0)     give  positive constants
+$C,C_1$ and $k$ such that the following hold when $\kappa\geq\kappa_0$:
+\[
+|H(x-\xi,\xi;\kappa)|\leq C\cdot \frac{e^{-k\kappa|x-\xi|}}{|x-\xi|}
+\quad\colon\,
+[F(x,\xi;\kappa)|\leq C_1\cdot 
+\frac{e^{-k\kappa|x-\xi|}}{|x-\xi|^2}
+\tag{1.4.1}
+\]
+
+
+\noindent
+The verification of (1.4.1) is left as an exercise.
+
+
+
+\bigskip
+
+
+
+
+
+\noindent
+{\bf{1.5 An integral equation.}}
+We  seek
+$\Psi(x,\xi;\kappa)$ which satisfies the equation:
+\[ 
+\Psi(x,\xi;\kappa)= \int_{{\bf{R}}^3}\,  F(x,y;\kappa)\cdot \Psi(y,\xi;\kappa)\,dy+F(x,\xi;\kappa)\tag{1.5.1}
+\]
+To solve (1.5.1 )
+we construct the Neumann series of $F$.
+Thus, starting with $F^{(1)}=F$ we set
+\[
+F^{(k)}(x,\xi;\kappa)=\int_{{\bf{R}}^3}\, F(x,y;\kappa)\cdot
+F^{(k-1)}(y,\xi;\kappa)\, dy\quad\colon\quad k\geq 2\tag{1.5.2}
+\]
+Then (1.4.1 ) gives  the inequality
+\[
+|F^{(2)}(x,\xi;\kappa)|
+\leq C_1^2\iiint
+\frac{e^{-k\kappa|\xi-y|}}{|x-y|^2\cdot |\xi-y|^2}\cdot dy\tag{i}
+\]
+
+
+\noindent
+To estimate (i) we  notice that the triple integral after
+the substitution $y-\xi\to u$
+becomes
+\[
+C_1^2\iiint
+\frac{e^{-k\kappa|u|^2}}{|x-u-\xi|^2\cdot |u|^2}\cdot du\tag{ii}
+\]
+
+
+\noindent
+In  (ii)  the volume integral can be integrated in polar
+coordinates
+and becomes
+\[
+C_1^2\cdot \int_0^\infty\int_{S^2}\, 
+\frac{e^{-k\kappa r^2}}{|x-r\cdot w-\xi|^2}\cdot dwdr\tag{iii}
+\]
+where $S^2$ is the unit sphere and $dw$ the area measure on
+$S^2$. It follows that
+(iii) becomes
+\[
+2\pi C_1^2\cdot
+\int_0^\infty\int_0^\pi\, 
+\frac{e^{-k\kappa r}}{(x-\xi)^2+r^2-
+2r\cdot |x-\xi|\cdot \sin\theta}\cdot d\theta dr=
+\]
+\[
+\frac{2\pi C_1^2}{|x-\xi|}\cdot\int_0^\infty\, e^{-k\kappa |x-\xi|t}\cdot
+\log\, |\frac{1+t}{1-t}|\cdot \frac{dt}{t}\tag{iv}
+\]
+where the last equality follows by a straightforward computation.
+
+\medskip
+
+
+\noindent
+{\bf{1.6 Exercise.}}
+Show that (iv) gives the estimate
+\[
+|F^{(2)}(x,\xi;\kappa)|\leq \frac{2\pi\cdot  C_1^2\cdot C_1^*}{\kappa\cdot |x-\xi|^2}
+\]
+where $C_1^*$ is a fixed positive constant
+which is independent of $x$ and $\xi$ and 
+show by an induction over $n$
+that one has:
+\[
+|F^{(n)}(x,\xi;\kappa)|\leq\frac{C_1}{|x-\xi|^2}\cdot 
+\bigl[\frac{2\pi C_1^2\cdot C_1^*}{\kappa}\bigr]^{n-1}
+\quad\text{for every}\quad  n\geq 2\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{1.6 Conclusion.}}
+Choose  $\kappa_0^*$ so large that
+\[
+2\pi C_1^2\cdot C_1^*<\kappa_0^*\tag{1.6.1}
+\]
+Then (*) implies that 
+the Neumann series
+\[
+\sum_{n=1}^\infty F^{(n)}(x,\xi;\kappa)
+\]
+converges when 
+$\kappa\geq \kappa_0^*$ 
+and
+gives the requested solution $\Psi(x,\xi;\kappa)$ in (1.5.1).
+\bigskip
+
+
+\noindent
+{\bf{1.7 Exercise.}}
+We  have found 
+$\Psi$ which satisfies the integral equation in § 1.5.1.
+Next, since the $H$-function in (ii) from § 1.2 is everywhere positive
+the integral equation (iii)in § 1.2 has a unique solution
+$\Phi(x,\xi;\kappa)$. Using Green's formula the reader can check that
+$\Phi(x,\xi;\kappa)$ yields   a fundamental solution
+of $L(x,\partial_x)-\kappa^2$.
+
+\medskip
+
+
+\noindent{\bf {1.8 Some estimates.}}
+The  constructions above show that
+the  functions
+\[
+x\mapsto \Phi(x,\xi;\kappa)\quad\text{and}\quad 
+x\mapsto H(x-\xi,\xi;\kappa)
+\]
+
+
+\noindent
+have the same  singularities at $x=\xi$.
+Consider the difference
+\[
+Q(x,\xi;\kappa)=\Phi(x,\xi;\kappa)-
+H(x-\xi,\xi;\kappa)\tag{1.8.1}
+\]
+\medskip
+
+
+\noindent
+{\bf{1.8.2 Exercise.}}
+Use the previous constructions to show
+that for every $0<\gamma\leq 2$
+there is a constant $C_\gamma$
+such that
+\[
+\bigl |Q(x,\xi;\kappa)\,\bigr|\leq \frac{C_\gamma}{(\kappa|x-\xi|)^{\gamma}}
+\]
+hold for every pair $(x,\xi)$ and every $\kappa\geq \kappa_0$.
+Finally, the reader can apply 
+the inequality for the
+$H$-function in (1.4.1) to conclude the results in the Main Theorem.
+
+
+
+\newpage
+
+\centerline {\bf{§ 2. Green's functions.}}
+\bigskip
+
+
+\noindent
+Let $\Omega$ be a bounded domain in
+${\bf{R}}^3$, and $L$ an elliptic differential operator as in § xx.
+Let $\kappa>0$ and suppose we have found a function
+$G(x,y;\kappa)$ defined when $(x,y)\in \Omega\times\Omega$
+with the property that
+$G(x,y)=0$   if $x\in\partial\Omega$ and  $y\in\Omega$.
+Moreover
+\[
+(L(x,\partial_x)-\kappa^2)(G(x,y;\kappa))=\delta(x-y)
+\]
+With $G$ as  kernel we get the integral operator
+\[
+\mathcal G(f)(x)=
+\int_\Omega\, 
+G(x,y;\kappa)\, f(y)\, dy 
+\]
+Then $\mathcal G(f)(x)=0$ on $\partial\Omega$
+and the composed operator 
+\[
+(L(x,\partial_x)-\kappa^2)\circ \mathcal G=E
+\]
+To construct $G$ we use the fundamental solution
+$\Phi(x,y;\kappa)$ from § xx which satisfies
+\[
+(L(x,\partial_x)-\kappa^2)(\Phi(x,y;\kappa))=\delta(x-y)
+\]
+Next, with $y\in\Omega$ kept fixed we have the 
+continuous boundsry functon
+\[
+x\mapsto \Phi(x,y;\kappa)
+\]
+Solving the Dirchlet problem we find
+$w(x)$ such that
+$w(x)= \Phi(x,y;\kappa)$ on the boundary while
+$ (L(x,\partial_x)-\kappa^2)(w)=0$ holds in $\Omega$.
+Then we can take
+\[
+G(x,y;\kappa)=\Phi(x,y;\kappa)-w(x)
+\]
+
+
+\noindent
+Using the estimates for the $\Phi$-function from § 1
+we get
+estimates for the $G$-function above.
+We choose    a sufficiently large
+$\kappa_0$ so  that 
+$\Phi(x,\xi;\kappa_0)$ is a positive function of
+$(x,\xi)$. Then the following hold:
+\medskip
+
+
+\noindent
+{\bf{2.1 Theorem.}}
+\emph{One has}
+\[ 
+G(x,\xi;\kappa_0)=
+\frac{1}{\sqrt{\Delta(x)}\cdot\sqrt{\Phi(x,\xi;\kappa_0)}}
++R(x,\xi)
+\]
+
+\noindent
+\emph{where the remainder function satisfies the following for all pairs
+$(x,\xi)$ in $\Omega$:}
+\[ 
+|R(x,\xi)|\leq C\cdot |x-\xi|^{-\frac{1}{4}}
+\]
+
+
+\noindent
+\emph{and the   constant $C$ only  depends on the  domain 
+$\Omega$ and
+the PDE-operator $L$.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Above the negative power  of 
+$|x-\xi|$ is  a fourth-root which means that  the remainder term $R$ 
+is more regular  compared
+to the first term which behaves like $|x-\xi|^{-1}$ on the diagonal $x=\xi$.
+
+\bigskip
+
+\noindent
+{\bf{2.2 Exercise.}} Prove Theorem 2.1 
+If necessary, consult [Carleman: page xx-xx9 for details.
+
+\bigskip
+
+\medskip
+
+\noindent
+\centerline {\bf{2.3. Almost reality of eigenvalues.}}
+\medskip
+
+\noindent
+Consider the set of eigenvalues $\lambda$ for which there exists a function $u$
+in $\Omega$ which is zero on
+$\partial\Omega$ while
+\[
+L(u)+\lambda\cdot u=0
+\]
+holds in $\Omega$.
+
+
+\medskip
+
+\noindent
+{\bf{2.3.1  Proposition.}}
+\emph{There exist positive constants $C_*$ and $c_*$ such that
+every eigenvalue  $\lambda$ above   satisfies}
+\[
+|\mathfrak{Im}\,\lambda|^2\leq C_*(\mathfrak{Re}\,\lambda)+c_*)
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $u$ be an eigenfunction where
+$L(u)+\lambda\cdot u=0$.
+Stokes theorem and the vanishing of $u|\partial\Omega$
+give:
+\[
+0=\int_\Omega\, \bar u\cdot (L+\lambda)(u)\,dx
+=-\int_\Omega \, \sum_{p,q}\, a_{pq}(x)\cdot \frac{\partial u}{\partial x_p}
+\frac {\partial \bar u}{\partial x_q}\, dx+
+\int_\Omega\, \bar u\cdot( \sum \, a_p(x)
+\frac{\partial u}{\partial x_p}\,)\, dx+
+\] 
+\[
+\int_\Omega\, |u(x)|^2\cdot b(x)\, dx+
+\lambda\cdot \int\, |u(x)|^2\, dx
+\]
+\medskip
+
+
+\noindent
+Write $\lambda=\xi+i\eta$.
+Separating real and imaginary parts we find the two equations:
+\[
+\xi\int\, |u|^2\, dx=
+\int\, \sum_{p,q} a_{p,q}(x)\,\frac{\partial u}{\partial x_p}\cdot 
+\frac{\partial \bar u}{\partial x_q}\, dx+
+\int\, \bigl(\frac{1}{2}\cdot \sum\, \frac{\partial a_p}{\partial x_p}- b\,\bigr )
+\cdot |u|^2\, dx\tag{i}
+\]
+\[
+\eta\int\, |u|^2\, dx=\frac{1}{2i}\int \sum\, a_p\bigl(
+u\frac{\partial \bar u}{\partial x_p}-
+\bar u \frac{\partial u}{\partial x_p}\,\bigl )\, dx\tag{ii}
+\]
+
+
+\noindent
+Set
+\[ A= \int\, |u|^2\,dx\quad\colon\quad
+B= \int\, |\nabla(u)|^2\,dx
+\]
+Since $L$ is elliptic there exists a positive constant $k$ such that
+\[
+\sum_{p,q} a_{p,q}(x)\,\frac{\partial u}{\partial x_p}>
+k\cdot |\nabla(u)|^2
+\]
+From this we see that (i-ii) gives positive constants $c_1,c_2,c_3$ such that
+\[
+A\xi>c_1B-c_2B\quad\colon\quad A|\eta|<c_3\cdot \sqrt{AB}\tag{iii}
+\]
+\medskip
+
+\noindent
+Here (iii) implies that $\xi>-c_2$ and the reader can also confirm that
+\[ 
+B<\frac{A}{c-1}(\xi+c-2)\quad\colon\quad
+A|\eta|< A\cdot c_2\cdot \sqrt{\frac{\xi+c_2}{c_1}}\quad\colon\quad
+|\eta|< c_3\cdot \sqrt{\frac{\xi+c_2}{c_1}}\tag{iv}
+\]
+
+
+\noindent Finally it is obvious that (iv) above gives the requested
+inequality in Proposition 2.3.1.
+
+\bigskip
+
+\centerline{\bf{2.4. Asymptotic  formula for eigenvalues}}
+\bigskip
+
+
+\noindent
+Consider a function $f$ which satisfies
+\[
+\mathcal G(f)=-\frac{1}{\lambda}\cdot f
+\]
+for some non-zero complex number $\lambda$.
+With $u=\mathcal G(f)$ it follows from (xx) that
+\[
+(L-\kappa^2)(u)=f=-\lambda\cdot u
+\]
+Hence
+\[
+L(u)+(\lambda-\kappa^2)u=0
+\]
+\medskip
+
+
+\noindent
+{\bf{About the proof of Theorem xx.}}
+From  the above the asymptotic formula in Theorem xx 
+can be derived from asymptotic properties of eigenvalues to
+the integral operator $|mathcal G$.
+Using Theorem 2.1 and the estimates for the fundsemtnal solution
+$\Phi$ in § 1, one can proceed as in the
+the next section where a Tauberian theorem is employed to
+finish the proof of Theorem xx.
+The  reader may try to supply details or  consult 
+[Carleman: page xx-xx] for details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{§ 3. A study of $\Delta(\phi)+\lambda\cdot \phi$.}}
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+We expose material from Carleman's article \emph{xxx}
+whose contents were presented at the Scandinavian Congress in Stockholm 1934.
+In
+${\bf{R}}^2$ we 
+consider a bounded Dirichlet regular domain
+$\Omega$, i.e. every $f\in C^0(\partial\Omega)$
+has a harmonic extension to $\Omega$.
+A wellknown  
+fact
+established by
+G. Neumann and H. Poincaré
+during the years 1879-1895
+gives the following: First there
+exists the Greens' function
+\[
+G(p,q)= \log\,\frac{1}{|p-q|}+H(p,q)
+\]
+where $H(p,q)= H(q,p)$ is continuous in
+the product set
+$\overline{\Omega}\times\overline{\Omega}$ with the property that
+the operator $\mathcal G$ defined on $L^2(\Omega)$ by
+\[
+f\mapsto \mathcal G_f(p)= \frac{1}{2\pi}\dot \iint\, G(p,q)f(q)\,dq
+\]
+satisfies
+\[ 
+\Delta\circ \mathcal G_f=-f\quad\colon f\in L^2(\Omega)
+\]
+Moreover,  $\mathcal G$ is a compact operator on
+the Hilbert space $L^2(\Omega)$ and there 
+exists a sequence $\{f_n\}$ in $L^2(\Omega$ such that
+$\{\phi_n=\mathcal G_{f_n}\}$
+is an orthonormal basis in $L^2(\Omega$ and
+\[ 
+\Delta(\phi_n)=-\lambda_n\cdot \phi_n\quad\colon\, n=1,2,\ldots
+\] 
+where
+$0<\lambda_1\leq \lambda_2\leq \ldots\}$.
+When  eigenspaces have  dimension $\geq 2$, the 
+eigenvalues are repeated by their multiplicity.
+\medskip
+
+\noindent
+{\bf{Main Theorem. }}\emph{For every Dirichlet regular domain
+$\Omega$ and each $p\in\Omega$ one has the limit formula}
+\[ 
+\lim_{N\to\infty}\, \lambda_N^{-1}\cdot \sum_{n=1}^{n=N}\, \phi_n(p)^2= \frac{1}{4\pi}
+\]
+\medskip
+
+\noindent
+The strategy in the proof is to consider the function of a complex variable $s$
+defined by
+\[
+\Phi(s)=\sum_{n=1}^\infty \frac{\phi_n(p)^2}{\lambda_n^s}
+\]
+and show that it
+is a meromorphic function in the whole complex $s$-plane with
+a simple pole at $s=1$ whose residue is $\frac{1}{4\pi}$.
+More precisely we shall prove:
+\medskip
+
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{There exists an entire function
+$\Psi_p(s)$ such that}
+\[
+\Phi_p(s)=\Psi_p(s)+\frac{1}{4\pi(s-1)}
+\]
+\medskip
+
+\noindent
+Let us first remark that Theorem 0.1   gives ther main theorem 
+by a result  due to Wiener in the article
+\emph{Tauberian theorem} [Annals of Math.1932].
+Wiener's theorem 
+asserts that if $\{\lambda_n\}$ is a non-decreasing sequence of
+positive numbers which tends to infinity and
+$\{a_n\}$ are non-negative real numbers such that
+there exists the limit
+\[ 
+\lim_{s\to 1}\,(s-1)\cdot \sum\, \frac{a_n}{\lambda_n^s}=A
+\] 
+then it follows that
+\[
+\lim_{n\to \infty}\,\lambda_n^{-1}\cdot
+\sum_{k=1}^{k=n}\, a_k=A
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Derive the main theorem from Wiener's result and Theorem 0.1.
+\medskip
+
+\noindent
+{\bf{About Wiener's result.}}
+It is a version of
+an famous  Tauberian  theorem proved by
+Hardy and Littlewood in 1913 which goes as follows:
+\medskip
+
+\noindent
+{\bf{0.2 The Hardy-Littelwood theorem.}}
+\emph{Let $\{a_n\}$ be a sequence of non-negative real numbers
+such that}
+\[ 
+A=
+\lim_{r\to 1}\, (1-r)\cdot \sum\,a_nr^n\tag{*}
+\]
+\emph{exists. Then  there also exists the limit}
+\[
+A=\lim_{N\to \infty}\, \frac{a_1+\ldots+a_N}{N}\tag{**}
+\]
+\medskip
+
+\noindent
+Notice that no growth condition is imposed on  the sequence 
+$\{a_n\}$, i.e. the sole assumption
+is the existing limit (*). The proof is quite demanding and does not follow by
+"abstract nonsense"from functional analysis.
+For the reader's convenience we include details of the proof in a 
+separate appendix since
+courses devoted to series rarely appear in contemporary
+education.
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+\centerline{\bf{§ 1. Proof of Theorem 0.}}
+\bigskip
+
+\noindent
+Let
+$\Omega$ be a bounded and Dirichlet regular domain.
+For ech fixed point  $p\in\Omega$
+we 
+get  the continuous function on
+$\partial\Omega$ defined by
+\[ 
+q\mapsto  \log \frac{1}{|p-q|}
+\]
+We find the harmonic function
+$u_p(q)$ in $\Omega$ such that
+$u_p(q)=\log \frac{1}{|p-q|}\,\colon\, q\in\partial\Omega$.
+Green's function is defined for pairs $p\neq q$ in
+$\Omega\times\Omega$ 
+by
+\[ 
+G(p,q)= \log\,\frac{1}{|p-q|}-u_p(q)\tag{1}
+\]
+Keeping
+if $p\in\Omega$  fixed, the function
+$q\mapsto G(p,q)$ extends to the 
+closure of $\Omega$ where it vanishes if
+$q\in\partial\Omega$.
+If  $f\in L^2(\Omega$
+we set
+\[ 
+\mathcal G_f(p)=\frac{1}{2\pi}\cdot \int_\Omega\, G(p,q)\cdot f(q)\, dq\tag{2}
+\]
+where $q=(x,y)$ so that $dq=dxdy$ when the double integral is evaluated.
+From (1) we see that
+\[
+ \iint_{\Omega\times \Omega}\, |G(p,q)|^2\, dpdq<\infty
+\]
+Hence
+$\mathcal G$ is of the Hilbert-Schmidt type and
+therefore a compact operator on 
+$L^2(\Omega)$.
+Next,  recall that
+$\frac{1}{2\pi}\cdot \log\sqrt{x^2+y^2}$ is
+a fundamental solution to the Laplace operator.
+From this the reader can   deduce the following:
+
+\medskip
+
+\noindent{\bf{1.1 Theorem.}}
+\emph{For each $f\in L^2(\Omega)$
+the Lapacian of $\mathcal G_f$
+taken in the distribution sense belongs to
+$L^2(\Omega)$ and one has the equality}
+\[ 
+\Delta(\mathcal G_f)=-f\tag{*}
+\] 
+\medskip
+
+
+\noindent
+The equation (*) means that
+the composed operator
+$\Delta\circ \mathcal G$ is minus the identity on
+$L^2(\Omega)$.
+We are  led
+to introduce the 
+linear operator $S$ on $L^2(\Omega)$ 
+defined by $\Delta$, where  
+$\mathcal D(S)$ is
+the range of $\mathcal G$.
+If $g\in C^2_0(\Omega)$, i.e. twice differentiable and with
+compact support, it follows via Greens' formula that
+\[
+\frac{1}{2\pi}\cdot \int_\Omega\, G(p,q)\cdot \Delta(g)(q)\, dq=-g(p)
+\]
+In particular $C_0^2(\Omega)\subset\mathcal D(S)$
+which  implies that
+$S$ is densely defined and we  leave it to the reader to verify that
+\[
+\mathcal G(\Delta(f))=-f\quad\colon f\in\mathcal D(S)
+\]
+
+
+\medskip
+\noindent
+{\bf{Remark.}}
+By Carl Neumann's classic construction of
+resolvent operators from 1879, the result above   means that
+$-\mathcal G$ is Neumann's inverse  of 
+$S$. Since
+$-\mathcal G$ is compact it follows by Neumann's formula for spectra that
+$S$ has a discrete spectrum,and we recall the following wellknown fact which
+goes back to work by Poincaré: 
+\medskip
+
+\noindent
+{\bf{1.2 Proposition.}}\emph{
+There exists an orthonormal basis $\{\phi_n\}$ in $L^2(\Omega)$
+where each $\phi_n\in\mathcal D(S)$ is an eigenfunction, and
+a non-decreasing sequence of positive real numbers
+$\{\lambda_n\}$ such that}
+\[ 
+\Delta(\phi_n)+\lambda_n\cdot \phi_n=0\quad\colon n=1,2,\ldots\tag{1.2.1}
+\]
+\medskip
+
+\noindent
+{\bf{Remark. }} Above (1.2.1) means 
+that
+\[
+\mathcal G(\phi_n)= \frac{1}{\lambda_n}\, \cdot \phi_n
+\]
+This, 
+$\{\lambda_n^{-1}\}$
+are  eigenvalues of the compact operator $\mathcal G$ whose sole cluster
+point is $\lambda=0$.
+As usual eigenvalues whose eigenspaces have
+dimension $e>1$ are repeated $e$ times.
+
+
+
+\medskip
+
+\noindent
+After these preliminaries we embark upon the proof
+of Theorem 0.1. 
+First, since $\mathcal G$ is a Hilbert-Schmidt operator a wellknown result due to Schur
+gives
+\[
+\sum\, \lambda_n^{-2}<\infty \tag{i}
+\]
+This convergence entails that various constructions below are defined.
+For each complex number $\lambda$ outside $\{\lambda_n\}$ we set
+\[
+G(p,q;\lambda)=
+G(p,q)+
+2\pi\lambda\cdot \sum_{n=1}^\infty\,
+\frac{\phi_n(p)\phi_n(q)}{\lambda_n(\lambda-\lambda_n)}\tag{ii}
+\]
+This gives the integral operator
+$\mathcal G_\lambda$ defined on $L^2(\Omega)$ by
+ \[ 
+ \mathcal G_\lambda(f)(p)
+ =\frac{1}{2\pi}\cdot \iint_\Omega\, G(p,q;\lambda )\cdot f(q)\, dq\tag{iii}
+\]
+
+\medskip
+
+\noindent
+{\bf{A. Exercise.}} Use that the eigenfunctions $\{\phi_n\}$ is an orthonormal basis in
+$L^2(\Omega)$ to show that
+\[
+(\Delta+\lambda)\cdot \mathcal G_\lambda=-E
+\]
+
+
+\noindent{\bf{B. The function $F(p,\lambda)$}}.
+Set
+\[ 
+F(p,q,\lambda)= G(p,q;\lambda)- G(p,q)
+\]
+Keeping $p$ fixed we see that (ii) gives
+\[
+\lim_{q\to p}\, F(p,q,\lambda)=
+2\pi\lambda\cdot \sum_{n=1}^\infty\,
+\frac{\phi_n(p)^2}{\lambda_n(\lambda-\lambda_n)}\tag{B.1}
+\]
+Set
+\[
+F(p,\lambda)=
+\lim_{q\to p}\, F(p,q,\lambda)
+\]
+From (i) and (B.1) it follows that it is a meromorphic function in
+the complex $\lambda$-plane with at most simple poles
+at $\{\lambda_n\}$.
+\medskip
+
+\noindent{\bf{C. Exercise.}}
+Let $0<a<\lambda_1$. Show via residue calculus that
+one has the equality below in a half-space
+$\mathfrak{Re}\, s>2$:
+\[ 
+\Phi(s)=
+\frac{1}{4\pi^2 \cdot i}\cdot \int_{a-i\infty}^{a+i\infty}\, 
+F(p,\lambda)\cdot \lambda^{-s}\, d\lambda\tag{C.1}
+\]
+where the line integral  is taken on the vertical  line
+$\mathfrak{Re}\,\lambda=a$.
+
+\medskip
+
+\noindent
+{\bf{D. Change of contour integrals.}}
+At this stage we employ a device which goes to
+Riemann and
+move the integration into the half-space
+$\mathfrak{Re}(\lambda)<a$.
+Consider  the curve $\gamma_+$
+defined as the union of the
+negative real interval $(-\infty,a]$ followed by
+the upper
+half-circle $\{\lambda= ae^{i\theta}\,\colon 0\leq\theta\leq \pi \}$
+and the 
+half-line $\{\lambda= a+it\,\colon t\geq 0\}$.
+Cauchy's theorem entails that 
+\[ 
+\int_{\gamma_+}\, F(p,\lambda)\cdot \lambda^{-s}\, d\lambda=0
+\]
+We leave it to the reader to contruct the
+similar
+curve
+$\gamma_-=\bar \gamma_+$. Using 
+the vanishing of these line integrals and taking the branches of the 
+multi-valued function
+$\lambda^s$ into the account the reader should verify the following:
+
+\medskip
+
+
+\noindent
+{\bf{E. Lemma.}}
+\emph{One has the equality}
+\[ 
+\Phi(s)=\frac{a^{s-1}}{4\pi}\cdot \int_{-\pi}^\pi\,
+F(ae^{i\theta})\cdot e^{(i(1-s)\theta}\,d\theta
++
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\, F(p,-x)\cdot x^{-s}\,dx\tag{E.1}
+\]
+\medskip
+
+\noindent
+The first term in the sum of the right hand side of (E.1)
+is obviously an entire function of $s$. So there remains to
+prove that
+\[
+ s\mapsto  \frac{\sin \pi s}{2\pi^2}\cdot \
+ \int_a^\infty\, F(p,-x)\cdot x^{-s}\,dx\tag{E.2}
+\]
+is meromorphic with
+a single pole at $s=1$ whose residue is $\frac{1}{4\pi}$.
+To attain this we  express $F(p,-x)$ when $x$ are real and positive in another way.
+\medskip
+
+\noindent
+{\bf{F.  The $K$-function.}}
+In the half-space $\mathfrak{Re}\,z>0$ there exists the analytic function
+\[
+K(z)= \int_1^\infty\, \frac{e^{-zt}}{\sqrt{t^2-1}}\,dt
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $K$ extends to a multi-valued analytic function outside
+$\{z=0\}$ given by
+\[
+K(z)=-I_0(z)\cdot \log z+ I_1(z)\tag{F.1}
+\] 
+where $I_0$ and $I_1$ are entire functions
+with series expansions
+\[
+I_0(z)=\sum_{m=0}^\infty\, \frac{2^{-2m}}{(m!)^2}\cdot
+z^{2m}\tag{i}
+\]
+\[ 
+I_1(z)= \sum_{m=0}^\infty\, \rho(m)\cdot
+\frac{2^{-2m}} {(m!)^2} \cdot z^{2m}\quad
+\colon \rho(m)=1+\frac{1}{2}+\ldots+\frac{1}{m}-\gamma\tag{ii}
+\]
+where $\gamma$ is the usual Euler constant.
+
+\bigskip
+
+
+\noindent
+With  $p$ kept fixed and $\kappa>0$ 
+we solve the Dirichlet problem and find
+a  function $q\mapsto H(p,q;\kappa)$ which satisfies  the
+equation
+\[
+ \Delta(H)-\kappa\cdot H=0\tag{F.2}
+\] 
+in $\Omega$ with boundary values
+\[ 
+H(p,q;\kappa)=K(\sqrt{\kappa}|p-q|)\quad\colon q\in \partial\Omega
+\]
+
+
+\noindent
+{\bf{G. Exercise.}}
+Verify the equation
+\[ 
+G(p,q;-\kappa)=K(\sqrt{\kappa}\cdot |p-q|)- H(q;\kappa)\quad\colon \kappa>0
+\]
+
+
+
+\noindent
+Next,   the construction of $G(p,q)$ gives
+\[
+ F(p,-\kappa)=
+ \lim_{q\to p}\,
+ [K(\sqrt{\kappa}\cdot |p-q|)+\log\,|p-q|]+
+ \lim_{q\to p}\,[u_p(q)+ H(p,q,\kappa)]\tag{G.1}
+\]
+The last term above has the  "nice limit" 
+$u_p(p)+H(p,p,\kappa)$ and from  (F.1)  the reader can  verify the limit formula:
+\[
+ \lim_{q\to p}\,
+ [K(\sqrt{\kappa}\cdot |p-q|)+\log\,|p-q|]=
+ -\frac{1}{2}\cdot \log \kappa +\log 2-\gamma\tag{G.2}
+\]
+where $\gamma$ is  Euler's constant.
+
+\bigskip
+
+\noindent
+{\bf{H. Final part of the proof.}}.
+Set $A=  +\log 2-\gamma+u_p(p)$. Then (G.1) and (G.2)
+give
+\[
+F(p,-\kappa)= -\frac{1}{2}\cdot \log \kappa +A+H(p,p;-\kappa)
+\]
+With $x=\kappa$ in (E.2 ) we  proceed  as follows.
+To  begin with it is clear that
+\[
+s\mapsto A\cdot 
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\,  x^{-s}\,dx
+\]
+is an entire function of $s$.
+Next,  consider the function
+\[ 
+\rho(s)=
+ -\frac{1}{2}\cdot 
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\,  \log x\cdot x^{-s}\,dx
+\]
+Notice that the complex derivative
+\[
+\frac{d}{ds}\,  \int_a^\infty\,  x^{-s}\,dx=
+- \int_a^\infty\,  \log x\cdot x^{-s}\,dx
+\]
+
+\medskip
+\noindent
+{\bf{H.1 Exercise.}}
+Use the  above to show that
+\[
+\rho(s)-\frac{1}{4\pi(s-1)}
+ \]
+is an entire function.
+\medskip
+
+
+\noindent
+From the above we see that Theorem 0.1  follows if we have proved
+\medskip
+
+\noindent
+ {\bf{H.2 Lemma.}}
+\emph{The following function  is entire}:
+\[
+s\mapsto \frac{\sin\,\pi s}{2\pi^2}\cdot
+\int_a^\infty\, H(p,p,\kappa)\cdot  \kappa^{-s}\,d\kappa
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+When $\kappa>0$
+the equation (F.1) shows that $q\mapsto H(p,q;\kappa)$
+is subharmonic  in $\Omega$ and the maximum principle gives
+\[
+0\leq  H(p,q;\kappa)\leq \max_{q\in\partial\Omega}\,K(\kappa|p-q|)\tag{i}
+\]
+With  $p\in\Omega$ fixed there is 
+a positive number
+$\delta$ such that
+$|p-q|\geq\delta\,\colon q\in \partial\Omega$ which  
+gives
+positive constants
+$B$ and  $\alpha$  such that
+\[
+H(p,p;\kappa)\leq e^{-\alpha\kappa}\quad\colon \kappa>0\tag{ii}
+\]
+The reader may now check that this
+exponential decay gives Lemma H.2.
+
+\newpage
+
+
+
+\centerline{\bf {Appendix. Theorems by Abel, Tauber, Hardy and Littlewood}}
+\bigskip
+
+
+\noindent
+{\bf Introduction.}
+Consider a power series
+$f(z)=\sum\, a_nz^n$ whose radius of convergence is one.
+If $r<1$ and $0\leq\theta\leq 2\pi$
+we are sure that the series
+\[ 
+f(re^{i\theta})= 
+\sum\, a_nr^ne^{in\theta}
+\]
+is convergent. In fact, it is even absolutely convergent since
+the assumption implies that
+\[\sum\, |a_n|\cdot r^n<\infty\quad\text{for all}\quad r<1
+\]
+Passing to $r=1$ it is in general not true that the series
+$\sum\, a_ne^{in\theta}$ is convergent. An example arises if we consider
+the geometric series
+\[ 
+\frac{1}{1-z}= 1+z+z^2+\ldots
+\] 
+This leads to the following  problem where we without loss of
+generality can take 
+$\theta=0$.
+Consider as above a
+convergent power series and assume that there exists the limit
+\[
+\lim_{r\to 1}\, \sum\, a_nr^n\tag{*}
+\]
+When can we conclude that the series
+$\sum\, a_n$ also is convergent and that
+one has the equality
+\[
+ \sum\, a_n=
+\lim_{r\to 1}\, \sum\, a_n r^n\tag{**}
+\]
+The first result in this direction was established by Abel in a work from 1823:
+\medskip
+
+\noindent
+{\bf{A. Theorem}} \emph{Let $\{a_n\}$ be a sequence such that
+$\frac{a_n}{n}\to 0$
+as $n\to \infty$
+and there exists}
+\[
+A=\lim_{r\to 1}\, \sum\, a_nr^n
+\] 
+\emph{Then  
+$\sum\, a_n$ is convergent and the  sum is $A$.}
+
+\medskip
+
+\noindent
+An extension of Abel's result was
+established by  Tauber in 
+1897. 
+\medskip
+
+\noindent
+{\bf B. Theorem.}
+\emph{Let $\{a_n\}$ be a sequence of real numbers such that
+there exists the limit}
+\[
+A=\lim_{r\to 1}\, \sum\, a_nr^n
+\]
+Set
+\[ 
+\omega_n=a_1+2a_2+\ldots+na_n\quad\colon\, n\geq 1
+\]
+\emph{If $\lim_{n\to\infty}\,\omega_n=0$ it follows that
+the series $\sum\, a_n$ is convergent and the sum is $A$.}
+
+
+\bigskip
+
+\noindent
+{\bf C. Results by 
+Hardy and Littlewood.}
+In their joint article \emph{xxx} from 1913
+the following extension of Abel's  result was proved by Hardy and Littlewood:
+
+\medskip
+
+\noindent
+{\bf {C. Theorem.}}
+\emph{Let $\{a_n\}$ be a sequence of real numbers such that there 
+exists a constant $C$ so that
+$\frac{a_n}{n}\leq C$ for all $n\geq 1$. Assume also that the
+power series $\sum\, a_nz^n$ converges when
+$|z|<1$. Then the same conclusion as in Abel's theorem holds.}
+\medskip
+
+\noindent
+{\bf {Remark.}}
+In addition to this they proved
+a result about
+positive series from the cited article which has independent interest.
+
+\medskip
+
+\noindent
+{\bf {D. Theorem.}}
+\emph{Assume that
+each $a_n\geq 0$ and that there exists the limit:}
+\[ 
+A=
+\lim_{r\to 1}\, (1-r)\cdot \sum\,a_nr^n\tag{*}
+\]
+\emph{Then  there exists the limit}
+\[
+A=\lim_{N\to \infty}\, \frac{a_1+\ldots+a_N}{N}\tag{**}
+\]
+\medskip
+
+\medskip
+
+\noindent
+{\bf{Remark.}} The proofs of Abel's and Tauber's results are  easy
+while C and D require more effort and rely upon 
+results from calculus in one variable.
+So before we enter the proofs of the  theorems above insert
+some  preliminaries.
+\newpage
+
+\centerline{\bf{1. Results from calculus}}
+
+\medskip
+
+\noindent
+Below $g(x)$ is a real-valued function defined on $(0,1)$ and
+of class $C^2$ at least.
+\medskip
+
+
+\noindent
+{\bf 1.1 Lemma } \emph{Assume that there exists a constant $C>0$ such that}
+\[
+g''(x)\leq C(1-x)^{-2}\quad\colon\, 0<x<1\quad\text{and}\quad
+\lim_{x\to 1}\, g(x)=0
+\] 
+\emph{Then one  has the limit formula}:
+\[
+\lim_{x\to 1}\, (1-x)\cdot g'(x)=0
+\]
+
+\medskip
+
+\noindent
+{\bf 1.2 Lemma } \emph{Assume that the second order derivative
+$g''(x)>0$.
+Then the following implication holds for each $\alpha>0$:}
+
+\[
+\lim_{x\to 1}\, (1-x)^\alpha\cdot g(x)=1\implies
+\lim_{x\to 1}\, (1-x)^{\alpha+1}\cdot g'(x)=\alpha
+\]
+
+
+
+
+\noindent
+{\bf{Remark.}}
+If $g(x)$ has higher order derivatives
+which all are
+$>0$ on $(0,1)$
+we can iterate the conclusion in Lemma 1.2 where 
+we take $\alpha$ to be positive integers.
+More precisely, by an induction over
+$\nu$ the reader may verify that if
+\[
+\lim_{x\to 1}\, (1-x)\cdot g(x)=1
+\]
+exists and  if 
+$\{g^{(\nu)}(x)>0\}$ for all 
+every $\nu\geq 2$ then 
+\[
+\lim_{x\to 1}\, (1-x)^{\nu+1}\cdot g^{(\nu)}(x)=\nu\,!
+\quad\colon\, \nu\geq 2\tag{*}
+\]
+
+
+
+\bigskip
+
+\noindent
+Next, to each integer $\nu\geq 1$ we denote by $[\nu-\nu^{2/3}]$
+the largest integer $\leq\,(\nu-\nu^{2/3}).$ Set
+\[
+J_*(\nu)=\sum_{n\leq [\nu-\nu^{2/3}]}\,
+n^\nu e^{-\nu}
+\quad\colon\quad J^*(\nu)=\sum_{n\geq [\nu+\nu^{2/3}]}\,
+n^\nu e^{-\nu}
+\]
+
+\medskip
+
+\noindent
+{\bf 1.3 Lemma }
+\emph{There exists a constant $C$
+such that}
+\[
+\frac{J^*(\nu)+J_*(\nu)}{\nu\,!}\leq \delta(\nu)\quad\colon\quad
+\delta(\nu)=C\cdot \text{exp}\, \bigl(-\frac{1}{2}\cdot \nu^{\frac{1}{{3}}}\bigr )
+\quad\colon\,\nu=1,2,\ldots
+\]
+
+\medskip
+
+\centerline{\emph{Proofs}}
+
+\bigskip
+
+\noindent
+We prove only  Lemma 1.1 which is a bit tricky 
+while the proofs of Lemma 1.2 and 1.3 are
+left as  exercises to the reader.
+Fix $0<\theta<1$. Let
+$0<x<1$ and set
+\[
+x_1=x+(1-x)\theta
+\]
+The mean-value theorem in calculus gives
+\[ 
+g(x_1)-g(x)=\theta(1-x)g'(x)+\frac{\theta^2}{2}(1-x)^2\cdot g''(\xi)\quad
+\text{for some}\quad \, x<\xi<x_1\tag{i}
+\]
+By the hypothesis
+\[
+g''(\xi)\leq C(1-\xi)^{-2}\leq C)1-x_1)^{-2}
+\]
+Hence (i) gives
+\[
+(1-x)g'(x)\geq
+\frac{1}{\theta}(g(x_1)-g(x))-
+C\cdot \frac{\theta}{2}\frac{(1-x)^2}{1-x_1)^2}=
+\]
+\[
+\frac{1}{\theta}(g(x_1)-g(x))-
+\frac{C\cdot \theta}{2(1-\theta)^2}
+\]
+Keeping $\theta$ fixed we have by assumption
+\[
+\lim_{x\to 1}\, g(x)=0
+\]
+Notice also that $x\to 1\implies x_1\to 1$. It follows that
+
+
+
+\[
+\liminf_{x\to 1}\,\,
+(1-x)g'(x)\geq -\frac{C\cdot \theta}{2(1-\theta)^2}
+\]
+Above  $0<\theta<1$ is arbitrary, i.e. we can choose 
+small $\theta>0$ and hence we have proved that
+\[
+\liminf_{x\to 1}\,
+(1-x)g'(x)\geq 0\tag{*}
+\]
+\medskip
+
+\noindent
+Next we  prove the opposed inequality
+
+\[
+\limsup_{x\to 1}\,
+(1-x)g'(x)\leq 0\tag{**}
+\]
+To get (**) we apply the mean value theorem in the form
+\[
+g(x_1)-g(x)=\theta(1-x)g'(x_1)-\frac{\theta^2}{2}(1-x)^2\cdot g''(\eta)\quad
+\colon\, x<\eta<x_1\tag{ii}
+\]
+Since $(1-x_1)=\theta(1-x)(1-\theta)$ we get
+\[ 
+(1-x_1)g'(x_1)=\frac{1-\theta}{\theta}\cdot (g(x_1)-g(x))+
+\frac{(1-\theta)\theta}{2}\cdot(1-x)^2g''(\eta)\tag{iii}
+\]
+Now $g''(\eta)\leq C(1-\eta)^{-2}\leq C(1-x_1)^{-2}$ so
+the right hand side in (iii) is majorized by
+\[
+\frac{1-\theta}{\theta}\cdot (g(x_1)-g(x))+
+C\cdot \frac{(1-\theta)\theta}{2}\cdot(1-x)^2(1-x_1)^2=
+\]
+ \[
+\frac{1-\theta}{\theta}\cdot (g(x_1)-g(x))+
+C\cdot \frac{\theta}{2(1-\theta}\tag{iv}
+\]
+Keeping $\theta$ fixed while $x\to 1$ we obtain:
+\[
+\liminf_{x\to 1}\, (1-x)g'(x)\leq 
+C\cdot \frac{\theta}{2(1-\theta}
+\]
+Again we can choose arbitrary small $\theta$ and hence (**) 
+holds which finishes the proof of 
+Lemma 1.1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{2. Proof of Abel's theorem.}}
+
+\medskip
+
+\noindent
+Without loss of generality we can assume that
+$a_0=0$ and set  $S_N=a_1+\ldots+a_N$.
+Given $0<r<1$ we let $f(r)=\sum\, a_nr^n$. For every positive integer $N$
+the triangle inequality gives:
+\[
+\bigl| S_N-f(r)\bigr|\leq
+\sum_{n=1}^{n=N}\, |a_n|(1-r^n)+
+\sum_{n\geq N+1}\, |a_n|r^n
+\]
+Set $\delta(N)=\max_{n\geq N}\,\frac{|a_n|}{n}$.
+Since  $1-r^n)=(1-r)(1+\ldots+r^{n-1}\leq (1-r)n$
+the last sum is majorised by
+\[
+(1-r)\cdot \sum_{n=1}^{n=N}\, n\cdot |a_n|
++
+\delta(N+1)\cdot
+ \sum_{n\geq N+1}\, \frac{r^n}{n}
+\]
+Next, the obvious inequality 
+$\sum_{n\geq N+1}\, \frac{r^n}{n}\leq\frac{1}{N+1}\cdot \frac{1}{1-r}$
+gives the new majorisation
+\[
+(1-r)\cdot \sum_{n=1}^{n=N}\, \frac{|a_n|}{n}
++\frac{\delta(N+1)}{N+1}\cdot  \frac{1}{1-r}\tag{1}
+\]
+This hold for all pairs $N$ and $r$.
+To each $N\geq 2$ we take $r=1-\frac{1}{N}$
+and hence the right hand side in (1)
+is majorised by
+
+\[
+\frac{1}{N}\cdot \sum_{n=1}^{n=N}\, \frac{|a_n|}{n}
++\delta(N+1)\cdot \frac{N}{N+1}
+\]
+Here both terms tend to zero as $N\to\infty$. Indeed, Abel's condition 
+$\frac{a_n}{n}\to 0$   implies that
+$\frac{1}{N}\cdot \sum_{n=1}^{n=N}\, \frac{|a_n|}{n}$ 
+tends to zero as $N\to \infty$. Hence
+we have proved the limit formula:
+\[ 
+\lim_{N\to\infty}\,\bigl |s_N-f(1-\frac{1}{N})\bigr|=0\tag{*}
+\]
+Finally it is clear that (*)  gives Abel's result.
+
+\bigskip
+
+\centerline{\bf{3. Proof of Tauber's theorem.}}
+\medskip
+
+\noindent
+We may assume that $a_0=0$. Notice that
+\[
+a_n=\frac{\omega_n-\omega_{n-1}}{n}\quad\colon\, n\geq 1
+\]
+It follows that
+\[ 
+f(r)=\sum\, \frac{\omega_n-\omega_{n-1}}{n}\cdot r^n
+=\sum\,\omega_n\bigl(\frac{r^n}{n}-\frac{r^{n+1}}{n+1}\bigr )
+\]
+Using  the equality
+$\frac{1}{n}=
+\frac{1}{n+1}=
+\frac{1}{n(n+1)}$ we can  rewrite the right hand side as follows:
+\[
+\sum\,\omega_n\bigl(\frac{r^n-r^{n+1}}{n+1}+\frac{r^n}{n(n+1)}\bigr )
+\]
+Set
+\[ g_1(r)=\sum\,\omega_n\cdot\frac{r^n-r^{n+1}}{n+1}
+=(1-r)\cdot \sum\, \frac{\omega_n}{n+1}\cdot r^n
+\]
+By the hypothesis 
+$\lim_{n\to\infty}\,  \frac{\omega_n}{n+1}=0$ and then it is
+clear that we get
+\[
+\lim_{r\to 1}\, g_1(r)=0
+\]
+Since we also have $f(r)\to 0$ as $r\to 1$ we conclude that
+\[
+\lim_{r\to 1} \sum\, \frac{\omega_n}{n(n+1)}\cdot r^n=0\tag{1}
+\]
+Next, with
+$b_n= \frac{\omega_n}{n(n+1)}$ we have
+$nb_n= \frac{\omega_n}{n+1}\to 0$.
+Hence Abel's theorem applies so (1) gives  convergent series
+\[
+\sum\, \frac{\omega_n}{n(n+1)}=0\tag{2}
+\]
+If $N\geq 1$ we have the partial sum
+\[
+S_N=\sum_{n=1}^{n=N} 
+\, \frac{\omega_n}{n(n+1)}=
+\sum_{n=1}^{n=N}, \omega_n\cdot\bigl(\frac{1}{n}-\frac{1}{n+1}\bigr)
+\]
+The last term becomes
+\[
+\sum_{n=1}^{n=N}\,\frac{1}{n}(\omega_n-\omega_{n-1})-
+\frac{\omega_N}{N+1}=
+\sum_{n=1}^{n=N}\,a_n-\frac{\omega_N}{N+1}
+\]
+Again, since
+$\frac{\omega_N}{N+1}\to 0$ as $N\to\infty$ we conclude that the convergent series
+from (2) implies that the series
+$\sum\, a_n$ also is converges and has sum equal to zero.
+This finishes the proof of Tauber's result.
+\bigskip
+
+\centerline{\bf{4. Proof of Theorem D. }}
+\medskip
+
+\noindent
+Set $f(x)=\sum\, a_nx^n$ which is defined when $0<x<1$.
+Notice that 
+\[
+(1-x)f(x)=\sum\, s_nx^n\quad\text{where}\quad s_n=a_1+\ldots+a_n
+\]
+Set $g(x)= \sum\, s_nx^n$ which is defined when
+$0<x<1$.
+Since $s_n\geq 0$ for all $n$  all the higher order derivatives
+\[
+g^{(p)}(x)= \sum_{n=p}^\infty\, n(n-1)\cdots (n-p+1)a_nx^{n-p}>0
+\]
+when $0<x<1$.
+The hypothesis that
+$\lim_{x\to 1}\, g(x)=A$ and Lemma 1.1 and the inductive result in the
+remark after Lemma 1.2 give:
+\[
+\lim_{x\to 1}\, (1-x)^{\nu+2}\cdot
+\sum\, s_n\cdot n^\nu x^n=(\nu+1)!\quad\colon\,\nu\geq 1\tag{1}
+\]
+We shall use the substitution $e^{-t}=x$ where $t>0$.
+Since $t\simeq 1-x$ when
+$x\to 1$ we see that
+(1) gives
+\[
+\lim_{t\to 0}\, t^{\nu+2}\cdot 
+\sum\, s_n\cdot n^\nu e^{-nt}=(\nu+1)!\quad\colon\,\nu\geq 1\tag{2}
+\]
+Let us put
+\[ J_*(\nu,t)=\frac{t^{\nu+2}}{(\nu+1)!}\cdot 
+\sum_{n=1}^\infty\, s_n\cdot n^\nu e^{-nt}
+\]
+So for each fixed $\nu$ one has 
+\[
+\lim_{t\to 0}\, J_*(\nu,t)=1\tag{3}
+\]
+
+\medskip
+
+\noindent
+Next, for each pair $\nu\geq 2$ and $0<t<1$ we define the integer
+\[ 
+N=\bigl[\frac{\nu-\nu^{2/3}}{t}\bigr]\tag{*}
+\]
+Since the sequence $\{s_n\}$ is non-decreasing we get
+\[
+s_N\cdot\sum_{n\geq N}\, n^\nu e^{-nt}\leq
+\sum_{n\geq N}\, s_n\cdot n^\nu e^{-nt}\leq\frac{(\nu+1)!\cdot J_*(\nu,t)}{t^{\nu+2}}
+\tag{i}
+\]
+Next,  the construction of $N$ and Lemma 1.3 give:
+
+\[
+\sum_{n\geq N}\, n^\nu e^{-nt}\geq \frac{\nu !}{t^{\nu+1}}\cdot (1-\delta(\nu))\tag{ii}
+\]
+where the $\delta$ function is independent of $\nu$ and
+tends to zero as $\nu\to\infty$. Hence (i-ii) give
+\[
+s_N\leq \frac{(\nu+1)}{t}\cdot \frac{1}{1-\delta(\nu)}\cdot
+J_*(\nu,t)\tag{iii}
+\]
+Next, by the construction of $N$ one has
+\[ 
+N+1\geq \frac{\nu-\nu^{2/3}}{t}=\frac{\nu}{t}\cdot(1-\nu^{-1/3})
+\]
+It follows that (iii) gives
+\[
+\frac{s_N}{N+1}\leq 
+\frac{\nu+1}{\nu}
+\cdot\frac{1}{1-\nu^{-1/3}}\cdot\frac{1}{1-\delta(\nu)}\cdot 
+J_*(\nu,t)\tag{iv}
+\]
+Since $\delta(\nu)\to 0$
+it follows that for any $\epsilon>0$ there exists some
+$\nu_*$ such that
+\[
+\frac{\nu_*+1}{\nu_*}
+\cdot\frac{1}{1-\nu_*^{-1/3}}\cdot\frac{1}{1-\delta(\nu_*)}<1+\epsilon \tag{v}
+\]
+\medskip
+
+\noindent
+Keeping $\nu_*$ fixed we now consider pairs $t_n,N$ such that
+(*) above hold with $\nu=\nu_*$.
+Notice that
+\[
+ N\to+\infty\implies t_N\to 0\tag{vi}
+\]
+
+\medskip
+\noindent
+It follows from (iv) and (v) that we have:
+\[
+\frac{s_N}{N+1}<(1+\epsilon)\cdot J_*(\nu_*,t_N)\quad\colon\, N\geq 2\tag{vii}
+\]
+Now (vi) and the limit in (3) which applies with
+$\nu_*$ while $t_N\to 0$
+entail that
+\[
+\lim_{N\to \infty}\, J(\nu_*,t_N)=1
+\]
+We have also that
+$\frac{N}{N+1}\to 1$ and since $\epsilon>0$ was arbitrary
+we see that (vii) proves  the inequality
+\[ 
+\limsup_{N\to\infty}\, 
+\frac{s_N}{N}\leq 1\tag{1}
+\]
+So Theorem 2 follows if we also prove that
+\[
+\liminf_{N\to\infty}\, 
+\frac{s_N}{N}\geq 1\tag{2}
+\]
+The proof of (II) is similar where we now define the integers $N$ by:
+\[ 
+N=\bigl[\frac{\nu+\nu^{2/3}}{t}\bigr]
+\]
+Then we have
+\[ 
+S_N\cdot\sum_{n\leq N}\, n^\nu e^{-nt}\geq
+\frac{(\nu+1)!\cdot J_*(\nu,t)}{t^{\nu+2}}-
+\sum_{n> N}\,s_n\cdot n^\nu e^{-nt}
+\]
+Here the last term can be estimated above since the Lim.sup
+inequality (I) gives a constant $C$ such that
+$s_n\leq Cn$ for all $n$ and then
+\[
+\sum_{n> N}\,s_n\cdot n^\nu e^{-nt}
+\leq C\cdot \sum_{n> N}\,n^{\nu+1} e^{-nt}
+\leq C\cdot \delta^*(\nu)\cdot 
+\frac{(\nu+1)!}{t^{\nu+2}}
+\]
+where Lemma 1.3  entails that
+$\delta^*(\nu)\to 0$ as $\nu$ increases. At the same time Lemma 1.3 also gives
+\[
+\sum_{n\leq N}\, n^\nu \cdot e^{-nt}=
+\frac{\nu !}{t^{\nu+1}}\cdot (1-\delta_*(\nu)
+\] 
+where $\delta(\nu_*)\to 0$. At this stage the reader can verify that (2) 
+by  similar methods as in the proof of (I).
+
+
+\bigskip
+\centerline{\bf{5. Proof of Theorem C}}
+\medskip
+
+\noindent
+Set $f(x)=\sum\, a_nx^n$. Notice that it suffices to prove
+Theorem C when
+the limit value
+\[
+\lim_{x\to 1}\, \sum\,a_nx^n=0
+\]
+Next,
+the assumption that $a_n\leq\frac{c}{n}$ for a constant $c$ gives
+\[
+f''(x)=\sum\, n(n-1)a_nx^{n-2}\leq c\sum\, (n-1)x^{n-2}=\frac{c}{1-x)^2}
+\]
+The hypothesis $\lim_{x\to 1}\, f(x)=0$ and Lemma xx therefore gives
+\[
+\lim_{x\to 1}\, (1-x)f'(x)=0\tag{i}
+\]
+Next, notice the equality
+\[
+\sum_{n=1}^\infty\, \frac{na_n}{c} x^n=
+\frac{x}{c}\cdot f'(x)\tag{ii}
+\]
+At the same time
+$\sum_{n=1}^\infty\,x^n=\frac{x}{1-x}$
+and hence (i-ii)  together give:
+
+\[
+\lim_{x\to 1}\, (1-x)\cdot\sum\, (1-\frac{na_n}{c} )\cdot x^n=1
+\]
+Here $1-\frac{na-n}{c}\geq 0$ so Theorem 2 gives
+\[
+\lim_{N\to \infty}\,
+\frac{1}{N} \sum_{n=1}^{n=N}\, (1-\frac{na_n}{c})=1
+\]
+It follows that
+\[
+\lim_{N\to \infty}\,\frac{1}{N} \cdot \sum_{n=1}^{n=N}\, na_n=0
+\]
+This means precisely that the condition in Tauber's Theorem holds and hence 
+$\sum\, a_n$ converges and has series sum
+equal to 0 which finishes the proof of Theorem C.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+BRA
+
+
+\bigskip
+
+
+\centerline{\bf{A Non-Linear PDE-equation}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+In the  article
+\emph{Über eine nichtlineare Randwertaufgabe bei der Gleichung $\Delta u=0$}
+(Mathematisches Zeitschrift vol. 9 (1921),
+Carleman considered
+the following 
+equation: Let
+$\Omega$ be a bounded domain in ${\bf{R}}^3$
+with $C^1$-boundary and
+${\bf{R}}^+$ the non-negative real line where  $t$ is the coordinate.
+Let $F(t,p)$
+be a real-valued and continuous function
+defined on  ${\bf{R}}^+\times\partial\Omega$.
+Assume that 
+\[
+t\mapsto F(t,p)\tag{0.1}
+\]
+is strictly increasing  for every $p\in\partial\Omega$
+and that $F(0,p)\geq 0$. Moreover,  
+\[
+\lim_{u\to\infty} F(t,p)=+\infty\tag{0.2}
+\] 
+holds uniformly with respect to $p$.
+For a given point $q_*\in\Omega$ we seek a function $u(x)$
+which is harmonic in $\Omega\setminus\{q_*\}$
+and at $q_*$ it is locally $\frac{1}{|x-q_*|}$ plus a harmonic function.
+Moreover, it is requested that
+$u$
+extends to a continuous function on
+$\partial\Omega$ and that $u\geq 0$ in $\overline{\Omega}$.
+Finally, along  the boundary
+the  inner normal derivative $\partial u/\partial n$ satisfies the 
+equation
+\[
+\frac{\partial u}{\partial n}(p)= F(u(p),p)\quad \colon p\in\partial\Omega\tag{*}
+\]
+
+\medskip
+
+\noindent 
+{\bf{Remark.}}
+The case when $F(t,p)= kt^4$ for some positive constant $k$
+means that we regard the Stefan-Boltzmann equation whose
+physical 
+interpretation 
+ensures that
+(*) has a unique non-negative solution $u$.
+
+
+\medskip
+
+\noindent {\bf {Theorem.}}
+\emph{For each $F$  satisfying (0.1-0.2)
+ the boundary value problem has a unique solution $u$.}
+\medskip
+
+\noindent
+The strategy in the  proof is to consider
+a family of boundary value problems where 
+one for each
+$0\leq h\leq 1$ seeks $u\uuu h$ to satisfy
+\[
+\frac{\partial u\uuu h}{\partial n}(p)=(1\vvv h)u\uuu h+ h\cdot  F(u\uuu h(p),p)\quad \colon p\in\partial\Omega\tag{*}
+\]
+and $u\uuu h$ has the same pole as $u$ above.
+Let us begin  with
+\medskip
+
+\noindent
+{\bf{0.1 The case $h=0$}}.
+Here we seek $u_0$ so that
+\[
+\frac{\partial u_0}{\partial n}(p)=u_0\tag{i}
+\]
+If $G(p)$ is  the Greens' function with a pole at
+$q_*$ we seek a harmonic
+function $h$ in
+$\Omega$ such that
+\[ 
+u_0=G-h\tag{ii}
+\] 
+Since $G(p)=0$ on  $\partial\Omega$, the equation (i) holds if
+\[
+\frac{\partial h}{\partial n}(p)=h(p)+
+\frac{\partial G}{\partial n}(p)\quad\colon\, p\in \partial\Omega\tag{iii}
+\]
+This is a classic linear boundary value problem which
+has a unique solution $h$. See § xx for further details.
+\medskip
+
+
+\noindent
+{\bf{0.2 Properties of $u_0$.}}
+The construction in (ii) entails
+that  $u_0$ is superharmonic in $\Omega$ and therefore attains its
+minimum on the boundary.
+Say that
+\[ 
+u_0(p_*)=\min_{p\in\overline{\Omega}}\, u_0(p)
+\]
+It follows that
+$\frac{\partial u_0}{\partial n}(p_*)\geq 0$
+and the equation
+(i) gives
+\[
+u_0(p_*)\geq 0
+\]
+Hnece our  unique  solution $u_0$ is non-negative.
+We can say more. For consider the harmonic function
+$h$ in (ii) which takes a maxium  at some $p^*\in\partial\Omega$.
+Then
+$\frac{\partial h}{\partial n}(p^*)\leq 0$ so that (iii) gives
+\[
+h(p^*)+\frac{\partial G}{\partial n}(p^*)\leq 0
+\]
+Hence
+\[ 
+\max_{p\in\partial\Omega}\, h(p)\leq
+-\frac{\partial G}{\partial n}(p^*)
+\]
+which entails that
+\[
+\min_{p\in\partial \Omega}\, u(p)=
+-\max_{p\in\partial\Omega}\, h(p)\geq
+\frac{\partial G}{\partial n}(p^*)\tag{0.2.1}
+\]
+Here the function
+\[
+p\mapsto \frac{\partial G}{\partial n}(p)
+\] 
+is continuous and positive on
+$\partial\Omega$ and if $\gamma_*$ is the minimum value we conclude that
+\[
+\min_{p\in\partial \Omega}\, u(p)\geq \gamma_*\tag{0.2.2}
+\]
+Next, let $h$ attain its minimum at some $p_*\in\partial\Omega$
+which entails that
+$\frac{\partial h}{\partial n}(p_*)\geq 0$ and then (iii) gives
+\[
+h(p_*)+\frac{\partial G}{\partial n}(p^*)\geq 0
+\]
+It follows that
+\[
+\max_{p\in\partial \Omega}\, u_0(p)=
+\min_{p\in\partial \Omega}\, h(p)=-h(p_*)\leq 
+\frac{\partial G}{\partial n}(p^*)\leq\gamma^*\tag{0.2.3}
+\]
+where
+\[
+\gamma^*=\max_{p\in\partial \Omega}\,
+\frac{\partial G}{\partial n}(p)\tag{0.2.4}
+\]
+So the unique solution $u_0$ in (i) satisfies
+\[
+\gamma_*\leq u(p)\leq \gamma^*
+\quad\colon p\in\partial\Omega\tag{0.2.5}
+\]
+where the  positive constants $\gamma_*$ and $\gamma^*$ depend on
+the  point $q_*\in\Omega$ and the given domain $\Omega$.
+
+
+\bigskip
+
+
+\noindent
+{\bf{The homotopy method.}}
+To proceed from $h=0$ to $h=1$
+the idea is to use a "homotopy argument"
+which can be   handled via 
+precise estimates of solutions to Neumann's linear
+boundary value problem
+which are presented in § B.
+Thanks to this and some uniquness properties in § A below, 
+the reduction to the case when
+$F$ is real-analytic
+is relatively easy. The ciucial steps during the  proof appear
+in § C where we
+carry out a  "homotoy method" to
+get solutions in (*) as $h$ increases from zero to one.
+
+
+
+\bigskip
+
+
+\centerline {\bf{A.0. Proof of uniqueness.}}
+\medskip
+
+\noindent
+Suppose that $u_1$ and $u_2$ are two solutions to the equation in the main theorem.
+Notice that  $u_2-u_1$.
+is harmonic in
+$\Omega$.
+If $u\uuu 1\neq u\uuu 2$ we may
+without loss of generality we may assume that
+the maximum of $u\uuu 2\vvv u\uuu 1$ is $>0$.
+The maximum is attained at some $p\uuu *\in\partial\Omega$
+and  the strict maximum principle for harmonic functions gives:
+\[
+u\uuu 2(x)\vvv u\uuu 1(x)<
+u\uuu 2(p\uuu *)\vvv u\uuu 1(p\uuu *)\tag{i}
+\] 
+for all $x\in\Omega$.With $v=u\uuu 2\vvv u\uuu 1$
+we have
+\[
+\frac{\partial v}{\partial n}(p)=F(u_2(p),p)-F(u_1(p),p)
+\]
+Here (0.1) entails that
+$\frac{\partial v}{\partial n}(p\uuu *)>0$
+and since we have an inner normal derivative this violates
+(i) which proves the uniqueness.
+
+
+\medskip
+
+
+
+\centerline {\bf{A.1 Montonic properties.}}
+\medskip
+
+
+\noindent
+Let $F_1$ and $F_2$ be two functions which both satisfy
+(0.1) and (0.2) where  
+\[ 
+F_1(u,p)\leq F_2(u,p)
+\]
+hold for all $(u,p)\in{\bf{R}}^+\times\partial\Omega$.
+If $u_1$, respectively $u_2$ solve (*) for $F_1$ and $F_2$
+it follows that
+$u_2(q)\leq u_1(q)$ for all $q\in\Omega$.
+To see this we set $v=u_2-u_1$ which is harmonic in
+$\Omega$.
+If $p\in\partial\Omega$ we get
+\[
+\frac{\partial v}{\partial n}(p)=F_2(u_2(p),p)-F_1(u_1(p),p)\geq 0\tag{i}
+\]
+Suppose that the maximum of $v$ is $>0$ and let the maximum be attained at some 
+point $p_*$. Since (i) is an inner normal it follows that we must have
+$0=\frac{\partial v}{\partial n}(p)$ which would entail that
+
+\[ 
+F_2(u_2(p_*)p_*)>F_2(u_1(p_*),p_*)\geq F_1(u_1(p_*),p_*)\implies
+\]
+and this contradicts the strict inequality
+$u\uuu 2(p\uuu *)>
+u\uuu 1(p\uuu *)$
+since we have an increasing function in (0.1).
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{A.2. A bound for the maximum norm.}}
+Let $G$ be the Green's function which has a pole
+at $q_*$ while $G=0$ on $\partial\Omega$. Then
+\[ 
+p\mapsto
+\frac{\partial G}{\partial n}(p)
+\]
+is a continuous and positive function on
+$\partial\Omega$.
+Set
+\[
+m_*=\min_{p\in\partial\Omega}\, \frac{\partial G}{\partial n}(p)
+\quad\colon
+m^*=\max_{p\in\partial\Omega}\, \frac{\partial G}{\partial n}(p)
+\]
+Next, let $0\leq h\leq 1$ and suppose that
+$u_h$ is  a solution to (*). Put
+
+\[
+m(h)= \min_{p\in\partial\Omega} u_h(p)
+\quad\colon
+M(h)= \max_{p\in\partial\Omega} u_h(p)\tag{*}
+\]
+To estimate these numbers
+we proceed as follows.
+Choose
+$p^*\in\partial\Omega$
+such that
+\[
+ u_h(p^*)=M(h)\tag{1}
+\]
+Now the function 
+\[
+H=u-G-M(h)
+\] 
+is  harmonic function in
+$\Omega$ and non-negative on the boundary.
+Hence $H$ is positive in $\Omega$ and since $H(p^*)=0$
+we have
+\[ 
+\frac{\partial H}{\partial n}(p^*)\leq 0\implies
+\] 
+which via the equation (*) give
+\[
+(1-h)M(h)+h\cdot F(M(h),p^*)\leq
+\frac{\partial G}{\partial n}(p^*)\leq \gamma^*\tag{2}
+\]
+Next, the hypothesis on $F$ entails that
+\[
+t\mapsto (1-h)t+h\cdot F(t,p^*)\tag{3}
+\]
+is a strictly increasing function for each
+fixed $0\leq h\leq 1$
+and the hypothesis (0.2) together with the
+inequality (2) above, give
+a positive constant
+$A^*$ which is independent of $h$ such that
+\[
+M(h)\leq A^*\quad\colon 0\leq h\leq 1\tag{3}
+\]
+
+\medskip
+
+
+\noindent
+Next, let $m(h)$ be the minimum of $u_h$ on $\partial\Omega$ and
+this time we consider the harmonic function
+\[
+H=u-m(h)-G
+\]
+Here $H\geq 0$ on $\partial\Omega$
+and if $u_h(p_*)=m(h)$ we have $H(p_*)=0$
+$p_*$ is a minimum for $H$.
+It follows that
+\[ 
+\frac{\partial H}{\partial n}(p_*)\geq 0\implies
+F(u(p_*),p)=\frac{\partial u}{\partial n}(p_*)\geq 
+\frac{\partial G}{\partial n}(p_*)
+\]
+So with
+\[
+\gamma_*=\min_{p\in\partial\Omega}\,\, \frac{\partial G}{\partial n}(p)
+\]
+one has the inequality
+\[
+F(m(h),p^*)\geq \gamma_*\tag{4}
+\]
+Above $\gamma^*$ is the constant from (xx) and the properties of $F$
+give a positive constant $A_*$ such that
+\[
+m(h)\geq A_*
+\]
+
+
+
+
+
+\noindent
+{\bf{Conclusion.}} Above $0<A_*<A^*$ are  constants which are independent of $h$.
+Hence the maxima and the minima of
+$u_h$ stay in a fixed interval $[A_*,A^*]$ as soon as 
+$u_h$ exists.
+
+
+
+\bigskip
+
+
+\noindent
+\centerline {\bf{B. The  linear equation.}}
+
+\medskip
+
+
+\noindent
+Let $f(p)$ and $W(p)$
+be a pair of continuous functions on the boundary
+$\partial \Omega$ where  $W$ is positive, i.e. $W(p)>0$ for every
+boundary point.
+Set
+\[
+w_*=\min_p \, W(p)
+\]
+So by the assumption on  $W$ we have
+$w_*>0$. 
+The classical Neumann
+theorem
+asserts  that there exists a unique function $U$ which is harmonic in
+$\Omega$, extends to a continuous function on
+the closed domain and its inner normal  derivative satisfies:
+\[ 
+\partial U/\partial n(p)=
+W(p)\cdot U(p)+f(p)\quad p\in\partial\Omega\tag{1}
+\] 
+For the unique   solution in (1)  some  estimates hold.
+Namely, set 
+\[
+M^*=\max_p\, U(p)\quad\text{and}\quad
+m_*=\min_p\, U(p)
+\] 
+
+\medskip
+
+\noindent
+Since $U$ is harmonic in $\Omega$ 
+the  maximum and the minimum are both taken on the boundary.
+If $U(p^*)= M^*$ for some $p^*\in\partial \Omega$
+we have $\partial U/\partial n(p^*)\leq 0$ which together with
+(1) entails that
+\[
+M^*\cdot W(p^*)+f(p^*)\leq 0\implies
+M^*\leq  \frac{|f|_{\partial\Omega}}{w_*}
+\]
+where
+$|f|_{\partial\Omega}$ is the maximum norm of $f$ on the boundary.
+In the same way one verifies that
+\[
+m_U\geq -\frac{|f|_{\partial\Omega}}{w_*}
+\]
+Hence  the following inequality holds for the
+ the maximum norm  $|U|_{\partial\Omega}$ :
+\[
+|U|_{\partial\Omega}\leq
+\frac{|f|_{\partial\Omega}}{w_*}\tag{B.0}
+\]
+Notoice that
+(B.0) and the equation (1)
+entails that
+Suppose that $W\in C^0(\partial\Omega)$ satisfies
+\[ 
+w_*\leq W(p)\leq w^*
+\]
+for a pair of positive constants.
+If $|f|_{\partial\Omega}$ is the maximum norm of
+$f$ it follows from (B.0) that
+\[
+\bigl|W(p)\cdot U(p)+f(p)\bigr|\leq (1+\frac{w^*}{w_*})\cdot
+|f|_{\partial\Omega}
+\]
+Hence the equation (1) gives
+\[ 
+\max_{p\in\partial\Omega}\,|\frac{\partial U}{\partial n}(p)|
+\leq (1+\frac{w^*}{w_*})\cdot |f|_{\partial\Omega}
+\tag{B.1}
+\]
+
+
+\noindent
+{\bf{B.2 An estimate for first order derivatives.}}
+Let $p\in\partial \Omega$ and denote by $N$
+the inner normal at $p$. Since $\partial\Omega$ is of class $C^1$
+a sufficiently small line segment from $p$ along
+$N$ stays in $\Omega$. So for small positive $\ell$ we have
+points $q=p+\ell \cdot N$ in $\Omega$ and 
+take the directional derivative of $U$ along $N_p$.
+This gives  a function
+\[
+ \ell\mapsto \partial U/\partial N(p+\ell\cdot N)
+\]
+Since the boundary is $C^1$
+these functions are defined on a fixed interval $0\leq\ell\leq \ell^*$ for all 
+boundsry points $p$.
+A classic result which appears in 
+\emph{Der zweite 
+Randwertaufgabe}  gives  a constant
+$B$ such
+that 
+\[
+\bigl|\partial U/\partial N(p+\ell\cdot N)\bigr|\leq B\cdot 
+\max_{p\in\partial\Omega}\,|\frac{\partial U}{\partial n}(p)|
+\]
+hold for all
+$p\in\partial\Omega$ and
+$0\leq \ell\leq \ell^*$.
+
+\bigskip
+
+
+\centerline {\bf{C. Proof of Theorem when $t\mapsto F(t,p)$ is analytic.}} 
+
+\medskip
+
+\noindent
+Assume that $t\mapsto F(t,p)$ is a real-analytic function on
+the positive real axis for each $p\in\partial\Omega$
+where local power series converge uniformly with respect to $p$.
+In this situation we shall  prove
+the
+\emph{existence} of  a solution $u$ in the Theorem.
+To attain this
+we  proceed as follows.
+To each real number $0\leq h\leq 1$ we seek a solution $u_h$ where
+\[
+ \frac{\partial u_h}{\partial n}(p)= h\cdot F(u_h,p)+(1-h)\cdot u_h(p)\tag{1}
+\]
+When  $h=0$ we found the solution $u_0$ in § xx.
+Next, suppose that $0\leq h_0<1$ and that we have found the 
+solution $u_{h_0}$ to (1).
+By
+the result in § B there exists
+ a pair of positive constants $A_*<A^*$ such that
+\[
+ A_*\leq u_{h_0}(p)\leq A^*\tag{*}
+ \]
+ which are independent of $h_0$ and of $p$.
+\medskip
+
+\noindent
+Set $u_0=u_{h_0}$
+and
+with $h=h_0+\alpha$ for some small $\alpha>0$
+we shall find  $u_h$ by a series
+\[
+u_h= u_{h_0}+\sum_{\nu=1}^\infty\, \alpha^\nu\cdot u_\nu\tag{2}
+ \]
+
+ 
+\noindent
+The pole at $q_*$  occurs already in $u_0$. So 
+$u_1,u_2,\ldots$ is   a sequence of 
+harmonic functions in  $\Omega$ and  there remains to find them
+so that
+$u_h$  solves (1). We will  show that this can
+be achieved when $\alpha $ is sufficiently small.
+Keeping $h_0$ fixed we set
+\[
+ u_0=u_{h_0}
+\]
+The analyticity of $F$ with respect to $t$ gives 
+for every $p\in\partial\Omega$ a series expansion
+\[
+ F(u_0(p)+\alpha,p)=
+F(u_0(p),p)+\sum_{k=1}^\infty\, c_k(p)\cdot \alpha^\nu
+ \tag{3}
+ \]
+
+
+\noindent
+where $\{c_k(p)\}$ are continuous functions on
+ $\partial\Omega$.
+Here (*) and  
+the hypothesis on $F$ entail that
+the radius of convergence has a uniform bound below, i.e.
+there exists $\rho>0$ which is independent of $p\in\partial\Omega$
+and a constant $K$ such that
+\[
+\sum_{k=1}^\infty\, |c_k(p)|\cdot \rho^k\leq K\tag{4}
+\] 
+Now
+the equation (1) can be  solved 
+via a system of equations where the  harmonic functions
+$\{u_\nu\}$ are determined inductively
+while $\alpha$-powers are identified.
+The linear
+$\alpha$-term gives  the equation
+\[
+\frac{\partial u_1}{\partial n}=F(u_0(p),p)-u_0(p)+
+(1-h_0)u_1+h_0\cdot c_1(p)\cdot u_1(p)\tag{i}
+\]
+\medskip
+
+
+\noindent
+For $u_2$ we find that
+\[
+\frac{\partial u_2}{\partial n}=(1-h_0)u_2-u_1+h_0c_1(p)u_2+
+c_1(p)u_1+c_2(p)u_1^2\tag{ii}
+\]
+\medskip
+
+\noindent
+In general we have
+\[
+\frac{\partial u_\nu}{\partial n}=(1-h_0+h_0\cdot c_1(p))\cdot u_\nu+
+R_\nu(u_0,\ldots,u_{\nu-1},p)\quad\colon\, \nu\geq 1
+\tag{iii}
+\] 
+where $\{R_\nu\}$ are polynomials in the preeceding $u$-functions
+whose coefficients are
+continuous functions obtained from
+the
+$c$-functions.
+The function $c_1(p)$ is given by
+
+\[ 
+c_1(p)= \frac{\partial F}{\partial t}(u_0(p),p)
+\]
+which by  the hypothesis on $F$ is a
+positive continuous function on $\partial\Omega$.
+It follows that the function
+\[ 
+W(p)= (1-h_0)+h_0\cdot c_1(p)\tag{iv}
+\] 
+also is positive on $\partial\Omega$ and 
+in the recursion above we have
+\[
+\frac{\partial u_\nu}{\partial n}=W(p)\cdot
+u_\nu(p)+
+R_\nu(u_0,\ldots,u_{\nu-1},p)\quad\colon\, \nu=1,2,\ldots
+\tag{v}
+\]
+
+\medskip
+
+\noindent
+Above we encounter linear equations exactly as in (B.0) where the
+the $f$-functions are  the $R$-polynomials.
+Put
+
+\[ 
+w_*=\min_{p\in\partial\Omega}\, W(p)
+\]
+From § B.XX we get
+
+\[
+|u_\nu|_{\partial\Omega}\leq w_*^{-1}\cdot 
+|R_\nu(u_0,\ldots,u_{\nu-1},p)|_{\partial\Omega}\tag{vi}
+\]
+\medskip
+
+\noindent
+Finally,   (vi) and a majorising  positive
+series expressing maximum norms imply 
+that if $\alpha$ is sufficiently small then the
+series (2)  converges and gives the requested solution for
+(1). Moreover,   $\alpha$ 
+can be taken  \emph{independently} of $h_0$.
+Together with the established
+uniqueness of solutions $u_h$ whenever they exist, it follows
+that we can move from $h=0$ until $h=1$ and arrive
+at the requested solution 
+in Theorem 1.
+
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+The reader may consult page 106 in [Carleman]
+where the existence of a uniform constant $\alpha>0$ for which the series
+(2) converge for every $h$ is
+demonstrated by an
+explicit majorant series.
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{9. Neumann-Poincaré  boundary value problems}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+Several fundamental  results were
+achieved by Carl  Neumann in the article
+emph{xxx} from 1877 which in particular 
+solved  boundary
+valued problems where  double-layer potentials occur.
+The results were carried out in dimension 3 which for
+physical reasons is the most relevant part. Here we 
+are content to expose 
+Neumann's  theory in dimension two.
+The crucial steategy is to use Neumann's
+analytic series expansions which reduces 
+the proof of existence to show
+ that
+certain poles are absent while
+meromorphic extensions of  Neumann series are constructed.
+We remark that Neumann's existence results were confined to convex
+domains
+where
+certain majorizations become straighforward since this gives rise to
+positive integral kernels. The
+extension of Neumann's results to general domains was
+achieved by Poincaré in the article \emph{xxx} from 1897
+where some ingenoius new methods were introduced to overcome
+the failure of positivity for the
+non-symmetric kernel defining the double-layer potential.
+\medskip
+
+\noindent
+The smoothness of boundaries
+was  relaxed in later work.
+Existence results for planar domains where
+isolated corner points are allowed were 
+established by Zarmela in 1904.
+Further studies 
+of Neumann's  problem for planar domains with non-regular boundary
+appear 
+in Carleman's thesis from 1916.
+A novelty in this work is that solutions to the Neumann's
+boundary value problem also are exhibited for functions which only 
+are  integrable on the boundary.
+This leads to new phenomena for the spectrum of
+ïntegral operators, i.e the spectrum 
+is not always  confined to discrete subsets of the
+complex $\lambda$-plane.  It will take us too far to
+go into  details, especially in the delicate analysis from Part 3 in
+[ibid]. The interested reader can also consult  the expositary
+article
+\emph{xxxx} by Holmgen which describes how non-discrete spectral can occur 
+for integral kernels associated to the Neumann problem
+which in those days  was a  new phenomenon in operator theory.
+Let us now expose the methods introduced by Neumann and Poincaré.
+
+\bigskip
+
+\noindent
+{\bf{Preliminaries.}}
+Let $\mathcal C$ be a closed Jordan curve of class $C^2$ whose 
+arc-lengt measure is denoted by $\sigma$.
+If  $g$ is a continuous function on
+$\mathcal C$ the logarithmic  potential
+\[
+U_g(z)=
+\frac{1}{\pi}\int_{\mathcal C}\, \log\,\frac{1}{|z-q|} \cdot g(q)\, d\sigma(q)
+\]
+yields a harmonic function
+in open the complement of  $\mathcal C$. 
+Since $\log\,|z|$ is locally integrable in
+${\bf{C}}$ and  $U_g(z)$  the convolution of
+this log-function and the compactly supported Riesz measure
+$g\cdot \sigma$. By elementary measure theory
+this implies
+that $U_g$ extends to a continuous function.
+In particular  the pair of harmonic functions in the 
+inner respectively outer component of $\mathcal C$ are equal
+on $\mathcal C$.
+Moreover,  
+the  Laplacian of $U_g$ taken in the distribution sense is equal to
+the measure $g\cdot\sigma$.
+Now we consider partial derivatives of $U$
+and  study the inner normal derivative as $z$ approaches points
+$p\in\mathcal C$ from the inside.
+Let ${\bf{n}}_*$ denote the inner normal derivative
+along $\mathcal C$ which gives
+the function  on $\mathcal C$ defined by:
+\[
+p\mapsto \frac{\partial U_g}{\partial {\bf{n}}_*}(p)
+\]
+This function
+is recaptured via an integral kernel
+function $K(p,q)$ defined on
+the product $\mathcal C\times\mathcal C$.
+With  $p\neq q$
+we consider the vector $p-q$ and  the unit vector
+${\bf{n}}_*(q)$ and constructing  an inner product we
+set
+\[ 
+K(p,q)=
+\frac{\langle p-q,{\bf{n}}_*(q)}{|p-q|^2}\tag{*}
+\]
+\medskip
+
+
+\noindent
+Let  analyze the behaviour of $K$ close to a point on
+the diagonal.
+Working in local coordinates we can take $p=q=(0,0)$ and close 
+the this boundary point 
+the $C^2$-curve $\mathcal C$ is locally defined by a function
+\[ 
+y=f(x)
+\] 
+where $\phi(x)$ is a $C^1$-function and 
+the $(x,y)$ belong to the bounded Jordan domain when
+$y>f(x)$.
+By drawing a figure the reader can verify that
+\[
+{\bf{n}}_*(x,f(x))\cdot d\sigma=(-f'(x), 1)\dot dx
+\]
+So with $p=(t,f(t))$ and $q=(x,f(x))$ we have
+
+\[
+K(p,q)\cdot d\sigma(q)=
+\frac{f(t)-f(x)- f'(x)(t-x)}{(t-x)^2+(f(t)-f(x))^2}\cdot dx
+\]
+By hypothesis $f$ is of class $C^2$ which implies that
+the right hand side stays bounded as $y$ and $x$ independently
+of each other approach zero.
+This eanble us to construct
+integrals and  Green's formula yields:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For each $p\in\mathcal C$ one has }
+
+\[
+\frac{\partial U_g}{\partial {\bf{n}}_*}(p)=
+ g(p)+\int_{\mathcal C}\, K(p,q)\cdot g(q)\,d\sigma(q)
+ \]
+ \medskip
+ 
+ \noindent
+ {\bf{Exercise.}} Prove this equality.
+A hint is by additivity it suffices to take $g$-functions with 
+supports confined to small sub-intervals of $\mathcal C$ and profit upon
+local coordinates and  parametrizations as above for 
+$\mathcal C$ close to the support of $g$.
+
+
+\bigskip
+
+
+\centerline {\bf{1. Neumann's boundary value problem.}}
+\bigskip
+
+\noindent
+Let $\Omega$ be a bounded domain
+where $\partial\Omega$ consists of a finite set of closed Jordan
+curves of class $C^2$. 
+Let $h$ and $f$
+be a pair of real-valued continuous functions on
+$\partial\Omega$ where  $h$ is positive.
+We seek a function $U$ which is harmonic in $\Omega$
+and on the boundary satisfies
+\[
+\frac{\partial U}{\partial {\bf{n}}_*}(p)=
+ h(p)U(p)+ f(p)
+\]
+\medskip
+
+\noindent
+{\bf{1.1 Theorem.}}
+\emph{The boundary value problem
+above has a unique solution $U$.}
+
+\medskip
+
+\noindent
+The uniquenss amonuts to show that if $V$ is harmonic in $\Omega$ and
+\[
+\frac{\partial V}{\partial {\bf{n}}_*}(p)=
+ h(p)V(p)
+ \] 
+ holds on $\partial\Omega$, then $V=0$.
+Since 
+$h$ is  positive 
+this follows from  § XX: Chapter V.
+\medskip
+
+\noindent 
+\emph{Proof of existence.}
+For each $g\in C^0(\partial \Omega)$ we construct 
+$U_g$
+which by Theorem 0.1 solves the Neumann problem if
+the $g$-function satisfies the integral equation
+\[
+g(p)+\int_{\mathcal C}\, K(p,q)\cdot g(q)\,d\sigma(q)=
+h(p)\cdot \frac{1}{\pi}\cdot\int_{\partial\Omega}\, \log\,\frac{1}{|p-q|}\cdot g(q)\,d\sigma(q)
++f(p)\tag{1}
+\]
+With $h$ kept fixed we introduce the kernel
+\[ 
+K_h(p,q)=h(p)\cdot \frac{1}{\pi}\cdot\log\, \frac{1}{|p-q|}- K(p.q)
+\]
+and  (1) reduces to the equation
+\[
+g(p)-\int_{\partial\Omega}\,K_h(p,q) g(q)\,d\sigma(q)= f(p)\tag{2}
+\]
+\medskip
+Next, introduce the linear operator on
+the Banach space $C^0(\partial\Omega)$
+defined by
+\[ 
+\mathcal K_h(f)=\int_{\partial\Omega}\,K_h(p,q) f(q)\,d\sigma(q)
+\quad\colon\quad
+f\in C^0(\partial\Omega)\tag{3}
+\]
+With this notation a $g$-function satisfies (2) if
+\[
+(E-\mathcal K_h)(g)=f\tag{4}
+\] 
+where $E$ is the identity operator on
+$C^0(\partial\Omega)$.
+Next, from the general result in §§ 
+$\mathcal K_h$ is a compact linear operator and this entails by
+another general result from § xx that each
+$f\in C^0(\partial\Omega)$
+yields a meromorphic function of the complex parameter
+$\lambda$ given  by
+\[ 
+N_f(\lambda)=
+f+\sum_{n=1}^\infty\, \lambda^n\cdot \mathcal K_h^n(f)
+\]
+If $\delta>0$ is so small that
+$||\mathcal K_h||<\delta^{-1}$ it is clear that
+\[
+(E-\lambda \mathcal K_h)(N_f(\lambda)=f
+\]
+If $N_f(\lambda)$ has no pole at $\lambda=1$ it follows by analyticity that
+\[
+(E-\mathcal K_h)(N_f(1)=f
+\] 
+which means that $g=N_f(1)$
+solves (4) and the existence part  follows.
+So there remains only to show:
+\medskip
+
+\noindent
+\emph {The absence of a pole at $\lambda=1$.}
+Suppose that $N_f(\lambda)$ has a pole at $\lambda=1$
+which entails that there is a positive integer $m$ such that 
+\[ 
+N_f(\lambda)=
+\sum_{k=1} ^{k=m}\, \frac{a_k}{(1-\lambda)^k}+ b(\lambda)
+\] 
+hold when $|\lambda-1|$ is small where $a_m\neq 0$ in 
+$C^0(\partial\Omega)$
+and $b(\lambda$ is analytic in some disc centered at $\lambda=1$.
+It follows that
+\[
+(1-\lambda)^m N_f(\lambda)=a_m+(1-\lambda)\beta(\lambda)
+\] 
+where 
+$\beta(\lambda)$ again is an analytic $C^0(\partial\Omega)$-valued function
+close to 1.
+Apply $E-\mathcal K_h$ on both sides which gives
+\[
+(1-\lambda)^m (E- \mathcal K_h)(N_f(\lambda))
+=(E-\mathcal K_h)(a_m)+(1-\lambda)
++(E-\mathcal K_h)(\beta(\lambda))
+\]
+Now  $\lambda=1$  gives
+\[
+(E-\mathcal K_h)(a_m)=0\implies
+a_m=\mathcal K_h(a_m)
+\]
+This  contradicts  the uniqueness part which already has been proved.
+
+
+
+\bigskip
+
+\centerline{\bf{2. The case when
+$\mathcal C$ has corner points.}}
+
+\bigskip
+
+
+\noindent
+In the preceeding section we  found a unique solution to 
+Neumann's boundary problem where
+the inner normal derivative of $U$
+along $\partial\Omega$ is a continuous function.
+If corner points appear 
+this will no longer be true. But 
+stated in an appropriate way we can extend
+Theorem 1.1.
+Let us analyze the specific case when
+the boundary curves are piecewise linear, i.e. each
+closed Jordan curve in
+$\partial\Omega$
+is a simple polygon with a finite number of corner points.
+Given one of these we begin to study the
+$K$-function.
+Let $\xi_1,\ldots,\xi_N$ be the corner points on
+$\mathcal C$.
+On the linear interval $\ell_i$ which joints two succescive
+corner
+points $\xi_i$ and $\xi_{i+1}$ we notice that
+${\bf{n}}_*$ is constant and it is even true that
+\[ 
+K(p,q)=0\quad\colon\quad p,q\in \ell_i
+\]
+Indeed, this is obvious for if $p$ and $q$ both belong to$\ell_i$ then
+the vector $p-q$ is parallell to $\ell_i$ and hence $\perp$ to
+the normal of this line.
+Next, keeping $q$ fixed on the open interval $\ell_i$
+while $p$ varies on $\mathcal C\setminus \ell_i$
+the behaviour of the function
+\[ 
+p\mapsto \langle p-q,{\bf{n}}_*(q)\rangle
+\] 
+is can be understood via a picture and it is
+clear that (x) is a continuous function.
+By a picture the reader should discover the different behaviour in the case
+when $\mathcal C$ is convex or not.
+For example, in the non-convex case it is in general not true 
+that $\mathcal C\setminus \ell_i$
+stays in the half-space bordered by the line passing $\ell_i$ and then
+(*) can change sign, i.e. take both positive and negative values.
+In the special case when
+$\mathcal C$ is a convex polygon the reader should confirm that
+(x) is a positive function of $p$ because we have taken the
+\emph{inner} normal 
+${\bf{n}}_*(q)$.
+\medskip
+
+
+\noindent
+{\bf{2.1 Local behaviour at a corner point.}}
+After a linear change of coordinates
+we take a corner point $\xi_*$ placed at the origin
+and one $\ell$-line is defined by
+the equation $\{y=0\}$ to the left of $\xi_*$ where
+$x<0$ while $y=Ax$ hold to the right for some $A\neq 0$.
+If $A>0$ it means that
+the angle $\alpha$ at the corner point is detemined by
+\[ 
+\alpha=\pi-\text{arctg}(A)
+\]
+If $A<0$ the inner angle is between 0 and $\pi/2$
+which the reader should illustrate by a picture.
+Next, consider
+a pair of points $p=(-x,0)$ and $q=(t,At)$
+where $x,t>0$. So $p$ and $q$ belong to opposite sides of the
+corner point.
+To be specific, suppose that $A>0$ which entails that
+\[ 
+{\bf{n}}_*(q)=\frac{(-A,1)}{\sqrt{1+A^2}}\implies
+\]
+\[
+K(p,q)\cdot d\sigma(q)=  \frac{Ax+t}{(x+t)^2+A^2t^2}
+\]
+When $x$ and $t$ decrease to the origin the order of magnitude 
+is
+$\frac{1}{x+t}$ so the kernel function is unbounded
+and the order of magnitude is $\frac{1}{x+t}$.
+If $\ell_+$ denotes the boundsry interval to the right of the origin
+where $q$ are placed we conclude that
+\[
+\int_{\ell_+}\, K(p,q)\cdot d\sigma(p)\simeq
+\int_0^1\, \frac{dt}{x+t}\simeq \log\,\frac{1}{x}
+\]
+The last function is integrable with respect to $x$. This local computation shows
+that the kernel function $K$ is not too large in 
+the average. In particular
+\[
+\iint_{\mathcal C\times\mathcal C}\,
+|K(p,q)|\cdot d\sigma(p)d\sigma(q)<\infty
+\]
+But
+the
+growth of $K$ near corner points prevail 
+a finite $L^2$-integral, i.e. the reader may verify that
+\[
+\iint_{\mathcal C\times\mathcal C}\,
+|K(p,q)|^2\cdot d\sigma(p)d\sigma(q)=+\infty
+\]
+\medskip
+
+
+\noindent
+{\bf{2.2 The integral operator $\mathcal K_h$}}.
+Let $h$ be a positive continuous function on
+$\partial\Omega$.
+Now we define the kernel function $K_h(p,q)$ exactly as in
+§ xx and obtain the corresponding
+linear operator
+\[ 
+g\mapsto\int_{\partial\Omega}\, K_h(p,q)g(q)d\sigma(q)
+\]
+It has a natural domain of definition.
+Namely,  introduce the space
+$L^1_*$ which consists of functions on $g$
+on $\partial\Omega$ for which
+\[
+\iint\, \log\frac {R}{|p-q|}\cdot |g(p)|\cdot d\sigma(q)d\sigma(p)<\infty\tag{*}
+\] 
+where  $R>0$ is so large that
+$\frac{R}{|p-q|}>1$  hold for  pairs $p,q$ on $\partial\Omega$.
+Return to the local situation in
+(xx) and consider a $g$-function in  $L^1_*$. Locally 
+we encounter an integral of the form
+\[
+\iint_{\square_+}\, \frac{1}{x+t}\cdot |g(t,At))|\, dt
+\]
+where $0\leq x,t\leq 1$ hold in
+$\square_+$.
+In this double integral we first perform integration with respect to $x$
+which is finite since the inclusion $g\in L^1_*$ entails that
+\[
+\int_0^1\,\log\,\frac{1}{t}\cdot |g(t,At)|\, dt<\infty
+\]
+
+
+\noindent
+From the above we obtain the following:
+
+\medskip
+
+\noindent
+{\bf{2.3 Theorem.}}
+\emph{The kernel function $K_h$ yields a continuous linear operator from
+$L^1_*$ into $L^1(\partial\Omega)$, i.e. there exists a constant
+$C$ such that}
+\[
+\int_{\partial \Omega} |\mathcal K_h(g)|\cdot d\sigma
+\leq C\cdot 
+\iint
+_{\partial \Omega\times \partial \Omega} 
+\, \log\frac {R}{|p-q|}\cdot |g(p)|\cdot d\sigma(q)d\sigma(p)
+\]
+\bigskip
+
+\noindent
+Armed with Theorem 2.3 
+we can solve Neumann's boundary value problem for domains 
+whose boundary curves are polygons.
+
+\medskip
+\noindent
+{\bf{2.4 Theorem.}}
+\emph{For each $f\in L^1(\partial\Omega$
+there exists
+a unique harmonic function $U$ in $\Omega$ such that}
+\[
+\frac{\partial U}{\partial {\bf{n}}_*}(p)=
+ h(p)U(p)+ f(p)
+\]
+holds on $\partial \Omega$. Moreover, $U=U_g$ where
+$g\in L^1_*$ solves the integral equation
+\[
+g-\mathcal K_h(g)=f
+\]
+
+
+
+\noindent
+\emph{The uniquenss part.}
+At corner points the inner normal of $U$ has no limit and
+to establish the uniqueness part we use  instead
+an integral formula:
+
+
+\medskip
+
+\noindent{\bf{2.5 Proposition.}}
+\emph{For each $g\in L^1_*$ the potential function $U=U_g$ satisfies}
+
+\[
+\iint_\Omega\ [
+(\frac{\partial U}{\partial x})^2
++(\frac{\partial U}{\partial y})^2]\, dxdy+
+\int_{\partial\Omega}\, U\cdot 
+\frac{\partial U}{\partial {\bf{n}}_*}\,
+d\sigma=0
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}} Prove this result.
+
+\medskip 
+
+\noindent
+The requested uniqueness follows. For if
+$\frac{\partial U}{\partial {\bf{n}}_*}= h\cdot U$
+holds on the boundary we get 
+
+\[
+0=\iint_\Omega\ [
+(\frac{\partial U}{\partial x})^2
++(\frac{\partial U}{\partial y})^2]\, dxdy=\int_{\partial\Omega}\, 
+h\cdot U^2\,
+d\sigma\implies g=0
+\] 
+\medskip
+
+\centerline
+{\emph{2.6 Proof of existence.}}
+\medskip
+
+\noindent
+It  is carried out by the same mehod as in
+§ X. The crucial  point is  that
+the kernel function $K_h$ is sufficiently well-behaved in order that
+every $f\in L^1(\Omega)$
+yields a meromorphic function $N_f(\lambda$
+where $\mathcal K_h$-powers are applied to $f$ exactly as in XX.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}} Supply details which prove that
+$N_f(\lambda)$ is meromorphic.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+In [Carleman: Part 3] it is proved that
+the unique solution $g$ to the integral equation
+is represented in a canonical fashion using a certain orthonormal family of functions with 
+respect to the $L^2$-function $\log\,\frac{1}{|p-q|}$ 
+wtih respect to the product measure $\sigma\times\sigma$. Moreover, there exists
+a representation formula expressed by convergent series for the inhomogenous
+equation
+\[ 
+g+\lambda\cdot \mathcal K_h(g)=f
+\] 
+where poles of $N_f(\lambda)$ are taken into the account.
+
+\newpage
+
+
+
+\centerline{\bf { A uniqueness theorem for 
+an elliptic boundary value problem}}
+
+\bigskip
+
+\noindent
+{\bf Introduction.}
+We shall work in  ${\bf{R}}^2$ with  coordinates
+$(x,y)$.
+Let
+$n=2m$ be an even positive integer and consider two $n\times n$-matrices
+$\mathcal A=\{A_{pq}\}$ and $\mathcal B=\{B_{pq}\}$
+whose elements are real-valued functions of $x$ and $y$
+where
+the $B$-functions are continuous and the
+$A$-functions  of class $C^2$. 
+Eigenvalues of the
+$\mathcal A$-matrix 
+when $(x,y)$-varies give an
+$n$-tuple of  roots
+$\lambda_1(x,y),\ldots,\lambda_n(x,y)$ which solve
+\[
+\text{det}\,\bigl(\lambda\cdot E_n-\mathcal A(x,y)\bigr)=0\tag{1}
+\]
+
+
+
+\noindent
+Next, we have
+a system of first order
+PDE-equations whose solutions are 
+vector valued functions $(f_1,\ldots,f_n)$
+defined in a half-disc
+\[
+D_+(\rho)=\{ x^2+y^2<\rho^2\quad\colon\, x>0\}
+\]
+where the $f$-functions satisfy the system:
+\[ 
+\frac{\partial f_p}{\partial x}+
+\sum_{q=1}^{q=n}\,
+A_{pq}(x,y)\cdot
+\frac {\partial f_p}{\partial y}+
+\sum_{q=1}^{q=n}\,
+B_{pq}(x,y)\cdot f_q(x,y)=0\tag{*}
+\]
+
+
+\noindent
+together with the boundary conditions:
+\[
+f_p(0,y)=0\quad\text{for all}\quad 1\leq p\leq n\tag{**}
+\]
+
+\medskip
+
+
+\noindent
+If the $\lambda$-roots are non-real in (1)
+we say that (*)  is an elliptic system. When this holds
+one exocets that the vanishing Cauchy data in  (**) entails
+that the   solution
+$f$  is identically zero.
+This uniqueness  was proved by
+Erik Holmgren in the  article [Holmgren]
+under the assumption that the $A$-functions and the
+$B$-functions are real analytic.
+The question remained if the uniqueness still holds under less
+regularity on the coefficient functions. 
+An affirmative answer was proved
+by  Carleman in the article \emph{xxx}.
+\bigskip 
+
+\noindent
+{\bf 1. Theorem.} \emph{Assume that the
+$\lambda$-roots are all simple and non-real as 
+$(x,y)$ varies in the open half-disc. Then every solution $f$ to (**) 
+with vanishing Cauchy-data  is identically zero}.
+\medskip
+
+\noindent
+The proof requires several steps and 
+the methods which occur below
+have inspired more recent work where   Carleman estimates 
+are used to handle  boundary value problems
+in PDE-theory.
+\bigskip
+
+
+
+\centerline {\bf {A. First part of the proof}}
+\medskip
+
+\noindent
+The system  in (*) is equivalent to a system of
+$m$-many equations where one  seeks
+complex-valued functions
+$g_1,\ldots,g_m$   satisfying:
+\[ 
+\frac{\partial g_p}{\partial x}+
+\sum_{q=1}^{q=m}\,
+\lambda_p(x,y)\cdot
+\frac {\partial g_p}{\partial y}=
+\]
+\[
+\sum_{q=1}^{q=m}\,
+a_{pq}(x,y)\cdot g_q(x,y)+
+b_{pq}(x,y)\cdot \bar g_q(x,y)=0\,\,\colon\,1\leq p\leq m\tag{**}
+\]
+Above $\{a\uuu{pq}\}$ and $\{b\uuu{pq}\}$
+are complex\vvv valued,and by the elliptic hyptheis the
+complex-valued $\lambda$-functions can be chosen so that
+their  imaginary parts are  positive functions of $(x,y)$.
+The  reduction  of the originalsystem to
+to this complex family of equations
+is left to the reader. From  now
+on we study the system (**) and Theorem 1 amounts
+to prove that
+if the $g$-functions satisfy (**) 
+in a half-disc
+$D_+(\rho)$
+and
+\[
+g_p(0,y)=0\quad\colon\quad 1\leq p\leq m
+\]
+then there exists some $0<\rho_*\leq \rho$ such that the $g$-functions
+are identically zero in 
+$D_+(\rho_*)$. To attain this we
+introduce domains as follows:
+For a pair  $\alpha>0$ and 
+$\ell>0$ we put
+\[ 
+D_\ell(\alpha)=\{
+x+y^2-\alpha x^2<\ell^2\}\cap\{ x>0\}\tag{1}
+\]
+
+
+\noindent
+Notice that the boundary
+\[ 
+\partial D_\ell(\alpha)=\{0\}
+\times[-\ell,\ell]\,\cup \,
+\{x+y^2-\alpha x^2=\ell^2\}
+\]
+
+
+
+
+\noindent
+Above $\alpha$ and $\ell$ are small so the the $g$-functions satisfy (**)
+in $D_\ell(\alpha)$.
+For  each  $t>0$
+we define  the  $m$-tuple of functions
+by
+\[
+\phi_p(x,y)= g_p(x,y)\cdot e^{-t(x+y^2-\alpha x^2)}\tag{2}
+\]
+Since the $g$-functions satisfy   (**)
+one verifies easily that
+the $\phi$-functions
+satisfy the system
+\[
+\frac{\partial \phi_p}{\partial x}+
+\frac {\partial}{\partial y}\bigl(\lambda_p\cdot\phi_p)+
+t(1-2\alpha x+2y\lambda_p\bigl)\cdot\phi_p=H_p(\phi)\tag{3}
+\]
+where 
+\[
+H_p(\phi)=\sum_{q=1}^{q=n}\,
+a_{pq}(x,y)\cdot \phi_q(x,y)+
+b_{pq}(x,y)\cdot \bar \phi_q(x,y)=0\,\,\colon\,1\leq p\leq m
+\]
+
+\noindent
+Next, we set
+\[ 
+\Phi(x,y)=\sum_{p=1}^{p=m}\, |\phi_p(x,y)|\tag{4}
+\]
+
+
+\noindent
+The crucial step in the proof
+of Theorem 1
+is to establish the following inequality.
+\medskip
+
+\noindent
+{\bf A.1 Proposition.} \emph{Provided that $\alpha$ from the start is sufficiently large
+there exists some $0<\ell_*\leq\ell$ and a constant $C$
+which is independent of $t$  such that}
+\[
+\iint_{D_{\ell_*}}\, \Phi(x,y)\cdot dxdy \leq
+C\cdot \int_{T_{\ell_*}}\, \sum_{p=1}^{p=n}\,|\phi_p|\cdot
+ |dy-\lambda_p\cdot dx|
+\]
+\medskip
+
+\noindent
+\emph{How to deduce  Theorem 1.}
+Let us show why Proposition A.1 gives Teorem 1.
+In addition to
+$\ell_*$ we fix some
+$0<\ell_{**}<\ell_*$.
+In  (2) above we have used the function
+\[
+w(x,y)= e^{-t(x+y^2-\alpha x^2)}\implies
+\]
+\[ w(x,y)= e^{-t\ell_*^2}\quad\colon\quad \{x+y^2-\alpha x^2=\ell_*^2\}
+\quad\colon\quad
+w(x,y)\geq e^{-t\ell_{**}^2}\quad\colon\quad (x,y)\in D_{\ell_{**}}\tag{i}
+\]
+
+\medskip
+
+\noindent
+Next, we have
+$|\phi_p|= |g_p|\cdot w$ for each $p$. Replacing the left hand side in Proposition
+A.1 by the area integral over the smaller
+domain
+$D_{\ell_{**}}$
+we obtain the inequality;
+\[
+\iint_{D_{\ell_{**}}}\,
+\sum_{p=1}^{p=m}\,| g_p(x,y)|\cdot dxdy\leq
+C\cdot  e^{t(\ell_{**}^2-\ell_*^2)}\cdot 
+\int_{T_{\ell_*}}\, \sum_{p=1}^{p=n}\,|g_p|\cdot
+ |dy-\lambda_p\cdot dx|\tag{ii}
+\]
+\medskip
+
+\noindent
+Here (ii)  holds for every $t>0$. When
+$t\to+\infty$ we have 
+$ e^{t(\ell_{**}^2-\ell_*^2)}\to 0$
+and  conclude that
+\[
+\iint_{D_{\ell_{**}}}\,
+\sum_{p=1}^{p=m}\,| g_p(x,y)|\cdot dxdy=0
+\]
+
+\noindent
+This means  that the $g$-functions are all zero in
+$D_{\ell_{**}}$ and Theorem 1 follows.
+
+
+\bigskip
+
+\centerline{\bf B. Proof of Proposition A.1}
+\medskip
+
+\noindent
+The proof  relies upon the
+construction of certain $\psi$-functions.
+More precisely, when
+$t>0$ and  a point $(x_*,y_*)\in D_\ell$ are given we shall construct
+an $m$-tuple of $\psi$-functions satisfying
+the following:
+
+ \bigskip
+
+\noindent
+{\bf Condition 1.} Each
+$\psi_p$ is defined in
+the punctured domain
+$D_\ell\setminus\{(x_*,y_*)\}$
+where $\psi_p$ for a given $1\leq p\leq m$
+satisfies the equation
+\[
+\frac{\partial\psi}{\partial x}+
+\lambda_p\cdot\frac{\partial\psi}{\partial y}-
+t(1-2\alpha x+2y\lambda_p)\psi_p=0\tag{i}
+\]
+
+
+
+
+
+\noindent
+{\bf Condition 2}. For each $p$ the
+singularity of $\psi_p$ at $(x_*,y_*)$
+is such that the line integrals below have a limit:
+\[
+\lim_{\epsilon\to 0}\,
+\int_{[z-z_*|=\epsilon}\,\psi_p\cdot (dx-\lambda_p\cdot dy)=2\pi\tag{ii}
+\]
+
+
+\noindent
+{\bf Condition 3.} There exists a constant $K$
+which is independent both of
+$(x_*,y_*)$ and of $t$ such that
+\[
+|\psi_p(z)|\leq\frac{K}{|z-z_*|}\tag{iii}
+\]
+Notice that the $\psi$-functions depend on the parameter
+$t$, i.e. they are found for each $t$ but the constant $K$ in (3) is independent of
+$t$.
+\bigskip
+
+\centerline {\emph{ The deduction of Proposition A.1}}
+\bigskip
+
+\noindent
+Before the $\psi$-functions are  constructed in Section C
+we show how  they  give
+Proposition A.1.
+Consider a point  $z_*\in D_+(\ell)$.
+We get the associated $\psi$-functions from § B
+at this particular point.
+Remove a small disc
+$\gamma_\epsilon$ centered at $z_*$ and
+consider some fixed
+$1\leq p\leq m$.
+Now $\phi_p$ satisfies the differential equation (3) from section A and 
+$\psi_p$ satisfies (i) in Condition 1 above.
+Stokes theorem gives:
+\[
+\int_{T_\ell}\phi_p\cdot\psi_p\cdot \bigl(dy-\lambda_p\cdot dx\bigr)
+=\iint_{D_\ell\setminus\gamma_\epsilon}\,
+H_p(\phi)\cdot \psi_p\cdot dxdy+
+\int_{|z-z_*|=\epsilon}
+\, \phi_p\cdot\psi_p\cdot \bigl(dy-\lambda_p\cdot dx\bigr)
+\]
+\medskip
+
+
+\noindent
+Passing to the limit as $\epsilon\to 0$, Condition 2 gives
+\[
+\phi_p(x_*,y_*)=\frac{1}{2\pi}
+\int_{T_\ell}\phi_p\cdot\psi_p\cdot \bigl(dy-\lambda_p\cdot dx\bigr)
+-\frac{1}{2\pi}\cdot \iint_{D_\ell}\,
+H_p(\phi)\cdot \psi_p\cdot dxdy\tag{1}
+\]
+
+
+\noindent
+Let $L$ be the maximum over $D_\ell$ of the 
+coefficient functions  of $\phi$ and $\bar\phi$
+which appear in  $H_p(\phi)$
+from (3) i § A. We have also the constant $K$ from
+Condition 3 for $\psi_p$. The
+triangle inequality gives:
+
+
+\[
+\bigl|\phi_p(x_*,y_*)\bigr|\leq
+\frac{K}{2\pi}
+\int_{T_\ell}\frac{|\phi_p|\cdot |dy-\lambda_p\cdot dx|}{z-z_*|}
++\frac{LK}{\pi}\cdot \sum_{q=1}^{q=m}\,
+\iint_{D_\ell}\,
+\frac{|\phi_q|}{|z-z_*|}\cdot dxdy\tag{*}
+\]
+\medskip
+
+\noindent
+Next, we use the elementary  inequality
+
+\[ \iint_\Omega\, \frac{dxdy}{\sqrt{x-a)^2+(y-b)^2}}
+\leq 2\cdot\sqrt{\pi}\cdot \sqrt{\text{Area}(\Omega)}\tag{**}
+\]
+where $\Omega$ is an arbitrary  bounded domain
+and $(a,b)\in\Omega$.
+Apply (**)  with
+$\Omega=D_\ell$ and set
+$S=\text{area}(D_\ell)$.
+Integrating both sides in (*) over $D_\ell$
+for every
+$p$ and taking the sum we get
+\[
+\iiint_{D_\ell}\, \Phi\cdot dxdy\leq
+\]
+\[
+K\cdot\sqrt{\frac{S}{\pi}}\cdot \int_{T_\ell}\,
+\sum_{p=1}^{p=m}\, |\phi_p|\cdot |dy-\lambda_p\cdot dx|
++2\pi m LK\cdot \sqrt{\frac{S}{\pi}}\iint_{D_\ell}\,
+\Phi\cdot dxdy
+\]
+\medskip
+
+\noindent
+This inequality hold for all small $\ell$.  Choose
+$\ell$ so small that
+\[
+2\pi m LK\cdot \sqrt{\frac{S}{\pi}}\leq\frac{1}{2}
+\]
+Then the inequality above gives
+\[
+\iiint_{D_\ell}\, \Phi\cdot dxdy\leq
+2\cdot 
+K\cdot\sqrt{\frac{S}{\pi}}\cdot \int_{T_\ell}\,
+\sum_{p=1}^{p=m}\, |\phi_p|\cdot |dy-\lambda_p\cdot dx|\tag{***}
+\]
+
+
+\noindent
+Finally, consider some relatively compact
+domain
+$\Delta$ in $D_\ell$. Then there exists
+$0<\ell_*<\ell$ such that
+\[
+\Delta\subset D_{\ell_*}
+\]
+Now we notice that
+
+\[ 
+|\phi_p(z)|\geq e^{-t\ell_*^2}\cdot |u_p(z)|
+\quad\colon\quad z\in \Delta\quad\colon\quad
+|\phi_p(z)|\geq e^{-t\ell^2}\cdot |u_p(z)|
+\quad\colon\quad z\in T_\ell
+\]
+
+
+\noindent
+We conclude that
+\[
+e^{-t\ell_*^2}
+\,\iiint_\Delta\, \sum_{p=1}^{p=m}\, |u_p(z)|\cdot dxdy\leq
+e^{-t\ell^2}\cdot 2\cdot 
+K\cdot\sqrt{\frac{S}{\pi}}\cdot \int_{T_\ell}\,
+\sum_{p=1}^{p=m}\, |u_p|\cdot |dy-\lambda_p\cdot dx|\tag{****}
+\]
+\medskip
+
+\noindent Here (****) hold for every $t>0$. Passing to the limit
+as
+$t\to+\infty$ it follows that
+
+\[
+\cdot \iiint_\Delta\, \sum_{p=1}^{p=m}\, |u_p(z)|\cdot dxdy\leq
+\]
+Since $\Delta$ was any relatively compact subset of
+$D_\ell$, we conclude  that the $u$-functions are zero in
+$D_\ell$ and Theorem 1   follows.
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf {C. Construction of the $\psi$-functions.}}
+
+\bigskip
+
+
+\noindent
+Before we embark upon specific constructions
+we investigate the whole family of solutions to
+a first order differential operators  of the form
+\[
+Q=\partial_x+\lambda(x,y)\cdot\partial_y\tag{*}
+\] 
+where $\lambda(x,y)$ is a complex 
+valued $C^2$-function whose
+imaginary part is $>0$. 
+Set
+\[ 
+\lambda(x,y)=\mu(x,y)+i\cdot\tau(x,y)\quad\colon\, \tau(x,y)>0
+\]
+
+
+\noindent
+Now we look for
+solutions 
+$h(x,y)$ to the equation $Q(h)=0$.
+With
+$h(x,y)=\xi(x,y)+i\cdot\eta(x,y)$
+where $\xi$ and $\eta$ are real-valued $C^2$-functions this gives
+the differential system:
+\[
+\frac{\partial\xi}{\partial x}+\mu_p\cdot
+\frac{\partial\xi}{\partial y}-
+\tau_p\cdot \frac{\partial\eta}{\partial y}=0
+\]
+\[
+\frac{\partial\eta}{\partial x}+\mu_p\cdot
+\frac{\partial\eta}{\partial y}+
+\tau_p\cdot \frac{\partial\xi}{\partial y}=0
+\]
+
+\medskip
+
+\noindent
+Suppose we have found one solution 
+ $h=\xi+i\cdot\eta$ where the 
+Jacobian 
+$\xi_x\eta_y-\xi_y\eta_x$
+is $\neq 0$ at the origin. 
+Then $(x,y)\mapsto (\xi,\eta)$ is a local $C^2$-diffeomorphism.
+With  $\zeta=\xi+i\eta$ 
+we have the usual Cauchy\vvv Riemann operator.
+\[ 
+\frac{1}{2}(\frac{\partial}{\partial\xi}+
+i\cdot \frac{\partial}{\partial\eta})
+\]
+
+\noindent
+Let $g(\xi+i\eta)$ be  a holomorphic function
+in the complex $\zeta$-space with $\zeta=\xi+i\eta$ and put
+\[ 
+g_*(x,y)=g(\xi(x,y)+i\eta(x,y))
+\] 
+Then one easily verifies that $Q(g\uuu*)=0$
+and conversely, every solution
+to this equation is expressed by 
+a $g\vvv*$function derived from an
+analytic function in the complex $\zeta$space.satisfies  $Q(g_*)$.
+\medskip
+
+\noindent
+{\bf{Conclusion.}} \emph{If a non-degenerate solution $h=\xi+i\eta$ has been found
+then the homogenous solutions to $Q$ is in a 1-1 correspondence to
+analytic functions in the $\zeta$-variable.}
+\medskip
+
+\noindent
+{\bf{Remark.}} The effect
+of a coordinate transformation
+as above is that
+the $Q$-operator 
+is transported to the
+Cauchy-Riemann operator in
+the complex $\zeta$-space where $\zeta=\xi+i\eta$.
+Later we   employ such  $(\xi,\eta)$-transformations
+to
+construct  
+solutions to an inhomogeneous equation of the form
+\[ 
+Q(\psi)=(t-\alpha x+2y\lambda(x,y))\cdot \psi(t,x,y)
+\]
+where $t$ is a positive parameter and the
+$\psi$-functions 
+will have certain specified properties.
+Notice that it suffices to construct
+the
+$\psi$-functions separately, 
+i.e. we no longer have to bother about
+a differential system. With a fixed
+$p$ fixed   $\lambda_p(x,y)=\mu_p+\tau_p$ and
+from now on we may drop the index $p$ and explain how to obain
+$\psi$-functions satisfying
+the three conditions from § B.
+So we consider
+the first order differential operator
+\[
+Q=\frac{\partial}{\partial x}+(\mu(x,y)+i\tau(x,y))\cdot
+\frac{\partial}{\partial y}\tag{1}
+\]
+where 
+$\tau(x,y)>0$.
+\bigskip
+
+
+
+\noindent
+{\bf C.1 A class of $(\xi,\eta)$-functions.}
+Let $V(x,y)$ and $W(x,y)$
+be two quadratic forms, i.e. both are homogeneous polynomials of
+degree two. Given a point $(x_*,y_*)$ 
+and with $z=x+iy$
+we seek  a coordinate transformation $(x,y)\mapsto(\xi,\eta)$
+of the form:
+
+\[ 
+\xi(z)= \tau_p(z_*)\cdot (x-x_*)+V(x-x_*,y-y_*)+\gamma_1(z)
+\cdot|z-z_*|^2
+\]
+\medskip
+\[ 
+\eta(z)= (y-y_*)-\mu_p(z_*)\cdot (x-x_*)+W(x-x_*,y-y_*)+
+\gamma_2(z)\cdot|z-z_*|^2
+\]
+\medskip
+
+\noindent{\bf Lemma.}
+\emph{There exists  a pair of quadratic forms
+$V$ and $W$ whose coefficients depend on
+$(x_*,y_*)$ and a pair of
+$\gamma$-functions which both vanish at
+$(x_*,y_*)$ up to order one such that the complex\vvv valued function
+$\xi+i\eta$ solves the homogeneous equation $Q(\xi+i\eta)=0$.}
+\medskip
+
+\noindent
+A solution above
+gives
+a change of variables
+so that
+$Q$ is expressed in new real coordinates
+$(\xi,\eta)$ by the operator
+\[
+\frac{\partial}{\partial \xi}+i\cdot \frac{\partial}{\partial\eta}\tag{2}
+\]
+There exist many coordinate transforms
+$(x,y)\to(\xi,\eta)$
+which change $Q$ into (2).
+This \emph{flexible choice} of coordinate transforms
+is used to  construct  the required
+$\psi$-functions. Notice  that
+Condition (2) in § B is of a pointwise character, i.e. 
+it suffices to find a $\psi$-function for a given point
+$z_*=x_*+iy_*$. With this in mind
+the required construction in § B boils down to perform
+a suitable coordinate transformation
+adapated to $z_*$,
+and after use the existence of
+a $\psi$-function which to begin with  is expressed in the
+$(\xi,\eta)$-variables where  the $Q$-operator is replaced by
+the Cauchy-Riemann operator. In this special case
+the required $\psi$-function is easy to find, i.e. see 
+the remark in § B.0.
+So all that remains is to exhibit suitable coordinate transformations
+which send $Q$ to the $\bar\partial$-operator. We leave it to the reader to
+carry out such coordinate transformations. If
+necessary, consult
+Carleman's article where
+a very detailed construction appears.
+
+
+\bigskip
+
+
+
+\newpage
+
+\centerline{\bf{The Schrödinger equation.}}
+
+\bigskip
+
+
+\noindent
+We work in ${\bf{R}}^3$ with the coordinates
+$(x,y,z)$. Let $c(x,y,z)$ be a real-valued function in 
+$L^2_{\text{loc}}({\bf{R}}^3$.
+In order that the subsequent
+formulas can be stated in a precise manner we also assume that
+$c$is almost everywhere continuous which of course is a rather weak condition and
+in any case satisfied in applications.
+Next, let $\Delta$ be the Laplace operator and
+define the operator $L$ by
+
+\[ 
+L(u)=\Delta(u)+c\cdot u\tag{*}
+\]
+Denote by $E_L({\bf{R}}^3)$
+the set of functions $u$ such that both
+$u$ and $L(u)$ belong to $L^2({\bf{R}}^3)$. Given a
+pair $(f,\lambda)$ where
+$f\in L^2({\bf{R}}^3$
+and $\lambda$ is a complex number
+we seek solutions $u\in E_L({\bf{R}}^3)$ such that
+
+\[ 
+L(u)+\lambda\cdot u=f\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf{The case $\mathfrak{Im}(\lambda\neq 0$.}}
+By
+a classic result about solutions to the Neumann
+boundary value problem  in
+open balls in ${\bf{R}}^3$ one proves that
+(1) has at least one solution $u$ whenever $\lambda$ is not real.
+The remains to investigate the uniqueness, i.e, when one has the implication
+
+
+\[
+\mathfrak{Im}(\lambda\neq 0\quad\text{and}\quad 
+L(u)+\lambda\cdot u=0\implies u=0\tag{***}
+\]
+\medskip
+
+
+\noindent
+This uniqueness property depends on the $c$-function.
+A sufficient  condition is the following:
+
+
+\medskip
+
+\
+\medskip
+
+\noindent
+{\bf{Theorem.}} \emph{Assume that there exists a constant $M$
+and some $r_*>0$ such that}
+\[ 
+c(x,y,z)\leq M
+\quad\text{when}\quad x^2+y^2+z^2\geq r_*^2
+\]
+Then (***) above holds.
+
+
+\bigskip
+
+
+\noindent
+{\bf{The spectral $\theta$-function.}}
+When (***)  holds it was proved in
+[Carleman] that
+classical solutions to the Neumanns boundary value problem in
+open balls yield a $\theta$-function
+which enable us to describe  solutions to 
+(*) for real $\lambda$-values.
+More precisely, there exists two increasing sequence of positive real numbers
+$\{\lambda^*(\nu)\}$ and $\lambda_*(\nu)\}$
+and two sequence of pairwise orthogonal functions
+$\{\phi_\nu(p))\}$ and $\{\psi_\nu(p)\}$ in $L^({\bf{R}})^3$
+where all these functions have $L^2$-norm equal to one such that
+the following hold. First, set 
+
+
+\[
+\theta(p.q,\lambda)= \sum_{0<\lambda^*(\nu)\leq\lambda}\, \phi_\nu(p)\cdot\phi_\nu(q)
+\quad\colon\quad \lambda>0
+\]
+
+\[
+\theta(p.q,\lambda)= -\sum_{\lambda\leq \lambda_*(\nu)\leq<0}
+\, \psi_\nu(p)\cdot\psi_\nu(q)
+\quad\colon\quad \lambda<0
+\]
+such that the following hold:
+\bigskip
+
+\[
+v(p)=\lim_{R\to \infty}\, \sum_{[\lambda_\nu<R}\, 
+\theta(p,q,\lambda)\cdot v(q)\cdot dq\quad\text{for all}
+\quad v\in L^2({\bf{R}}^3)\tag{1}
+\]
+
+\[
+v\in E_L({\bf{R})^3}\quad\text{if and only if}\quad
+xxxx\tag{2}
+\]
+
+\[
+L(v)(p)=
+\lim_{R\to \infty}\, \sum_{[\lambda_\nu<R}\, 
+\lambda\cdot [
+\int_{{\bf{R}}^3}
+\theta(p,q,\lambda)\cdot v(q)\cdot dq]\cdot d\lambda\quad\text{for all}\quad
+v\in E_L({\bf{R}}^3)\tag{3}
+\]
+Here the equaliy holds in $L^2$, i.e, in the sense of a Plancherel's limit.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+Here the equaliy holds in $L^2$, i.e, in the sense of a Plancherel's limit.
+
+
+\medskip
+
+\noindent
+{\bf{Construction of the $\phi$-functions. }}
+For each finite $r$ we have the ball $B_r$ and consider the space $E_L(B_r)$ of 
+functions 
+$u$ in $B_r$ such that both $u$
+and $L(u)$ also belong to $L^2(B_r)$.
+By a classical result in the Fredholm theory that
+exist discrete sequences of real numbers
+$\{\lambda*(\nu)$ and $\lambda_*(\nu)$ as above
+and two families of orthonormal functions
+$\{\phi^{(r)}_\nu\}$ and $\{\psi^{(r)}_\nu\}$
+satisfying (xx) 
+
+and here a classical result shows that the real eigenvalues 
+to the equation $L(u)+\lambda\cdot u=0$
+xxx
+
+\[ 
+xxx
+\]
+
+
+\noindent
+The proofs of the assertions above rely on a systematic use of Green's formula.
+To begin with we recall how to
+express solutions to an inhomogeneous
+the Laplace equation by an integral formula.
+\medskip
+
+
+\noindent
+{\bf{A. The equation $\Delta(u)=\phi$}}.
+let $D$ be a domain in
+${\bf{R}}^3$ and $\phi$
+a function in $L^2(D)$.
+Then a function $u$ for which both $u$ and $\Delta(u)$ belong to
+$L^2(D)$ gives $\Delta(u)=\phi$ if and only if
+the following hold for every $p\in D$ and every 
+$\rho<\text{dist}(p,\partial D)$:
+
+\[
+u(p)=
+\frac{1}{2\pi \rho^2}\cdot \int_{B_p(\rho)}\,
+\frac{1}{|p-q|}\cdot u(q)\cdot dq+
+\frac{1}{4\pi \rho^2}\cdot \int_{B_p(\rho)}\,
+A(p,q)\cdot \phi(q)\cdot dq\tag{i}
+\]
+where we have put
+
+\[ 
+A(p,q)= \frac{2}{\rho}-\frac{1}{|p-q|}-\frac{|p-q|}{\rho^2}\tag{ii}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this result.The hint is to apply Green's formula
+while $\phi$ is replaced by $\Delta(u)$ in the last integral.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Let us also recall
+also that when $\Delta(u)$ is in $L^2$, then $u$ is automatically
+a continuous function in $D$.
+\medskip
+
+
+\noindent
+{\bf{The class $\mathfrak{Neu}(B_r)$}}.
+Let $B_r$ be the open ball of radius $r$ centered at the origin.
+The class of functions $u$  which are continuous on the closed ball
+and whose interior normal derivative
+$\frac{\partial u}{\partial{\bf{n}}}$ is continuous on the boundary
+$S^2[r]$ is denoted by
+$\mathfrak{Neu}(B_r)$. 
+\medskip
+
+
+\noindent
+{\bf{The Neumann equation.}}
+Let $c(x,y,z)$ be a function in $L^2({\bf{R}}$
+and consider also a pair $a,H$ where
+$a$ be a continuous function on
+$S^2[r]$ and 
+$H(p,q)$ a continuous hermitian function on
+$S^2[r]\times S^2[r]$, i.e.  $H(q,p)=\bar H(p,q)$ hold for all pairs 
+of point $p,q$ on
+the sphere $S^2[r]$.
+With these notations the following hold:
+
+
+\bigskip
+
+
+\noindent
+{\bf{Theorem}} For each $f\in L^2(B_r)$ and every
+non-real complex number $\lambda$ there exists a unique $u\in 
+\mathfrak{Neu}(B_r)$
+such that $u$ satisfies the two equations:
+
+
+\[ 
+L(u+\lambda\cdot u=f\quad\text{holds in}\quad B_r
+\] 
+
+\[
+\partial u/\partial {\bf{n}}(p)=xx
+\]
+Moreover, one has the $L^2$-estimate
+
+\[
+\int_{B_r}\, |u|^2\cdot dxdydz\leq
+\bigl|\frac{1}{\mathfrak{Im}(\lambda)}\bigr|\leq
+\int_{B_r}\, |f|^2\cdot dxdydz
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+Classic result: $R>0$ we have unit ball $B_R$ and unit sphere $S_R$.
+Let $\mathfrak{Neu}(R)$
+set uf $u$ -functions where $\Delta(u)$ in $L^2$, continuous on closed ball
+and limit of interior derivative as a continuous funtion.
+Given $c\in L^2(B_R)$ define
+
+\[
+L(u)= \delta(u)+c\cdot u
+\]
+\medskip
+
+
+\noindent
+{\bf{Theorem}} For each pair $(a,H)$ in (*) there exists a unique
+$u\in \mathfrak{Neu}(R)$ such that
+\[ 
+L(u+\lambda\cdot u=f\quad\text{holds in}\quad B_R
+\] 
+and $u$ saisfies th boundsry condition
+
+\[
+\partial u/\partial {\bf{n}}(p)=xx
+\]
+
+from that $L^2$-esteimate as well.
+
+\bigskip
+
+Do if for $R=m$ running over positive integers.
+Catch up sequence with $L^2$-convergence bounded uniformly.
+$u_m\to u_*$ weak sense and see tha $u_*$ is a solution to (*) on al over space.
+
+Second point about eventual uniquenss. Class I type. Euquialent condition-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In an article from 1920 Carleman constructed an "ugly  example" of a doubly
+indexed sequence
+$\{c_{pq}\}$ of real  numbers
+satisfying (1) and the symmetry condition
+$c_{pq}=c_{qp}$, and yet there exists a non-zero complex vector
+$\{x_p=a_p+ib_p\}$ in $\ell^2$ such that
+\[ 
+S(x)= ix\tag{4}
+\]
+This should be compared with
+the finite dimensional case where
+the spectral theorem due to Cauchy and Weierstrass asserts that
+if
+$A$ is a real and symmetric $N\times N$-matrix for some
+positive integer $N$, then there exists an orthogonal
+$N\times N$-matrix $U$ such that
+$UAU^*$ is a diagonal matrix with real elements.
+Carleman  extended this finite dimensional result 
+to infinite Hermitian matrices 
+for which the densely defined linear operator $S$ has no eigenvectors with
+eigenvalue $i$ or $-i$.
+More precisely, one says that
+the densely defined operator $S$ is of Class  I
+if the equations
+\[
+S(z)= iz\quad\colon S(\zeta)= -i\zeta\tag{*}
+ \] 
+ do not have non-zero solutions with complex vectors
+ $z$ or $\zeta$ in $\ell^2$.
+ The major result in the cited monograph is as follows:
+ \medskip
+ 
+ 
+ \noindent
+ {\bf{0.0.1 Theorem.}}
+\emph{Each densely Hermitian operator $S$ of Class I has  a unique
+adapted resolution of the identity.}
+\medskip
+
+
+
+\noindent 
+{\bf{0.0.2 Resolutions of the identity.}}
+In order to digest Theorem 0.0.1
+we recall the notion of spectral resolutions.
+To begin with, a resolution  of the identity on
+$\ell^2$ consists of a 
+family $\{E(\lambda)\}$
+of self-adjoint projections, indexed by real numbers
+$\lambda$  which satisfies  (A-C) below.
+
+\medskip
+
+\noindent
+{\bf{A}}. Each $E(\lambda)$ 
+is an orthogonal projection from
+$\ell^2$ onto the range $E(\lambda)(\ell^2)$ and 
+these operators commute pairwise, i.e.
+\[
+E(\lambda)\cdot E(\mu)=
+E(\mu)\cdot E(\lambda)\tag{i}
+\]
+hold for pairs of real numbers. 
+
+\noindent {\bf{B}}.
+To each pair of real numbers
+$a<b$ we set
+\[ 
+E_{a,b}= E(b)-E(a)
+\]
+Then
+\[
+E_{a,b}\cdot
+E_{c,d}=0\tag{iii}
+\] 
+for each pair of disjoint interval
+$[a,b]$ and $[b,c]$.
+
+\medskip
+
+\noindent {\bf{C}}.
+For each $x\in\ell^2$  the real-valued function 
+\[ 
+\lambda\mapsto\langle E(\lambda)(x),x\rangle\tag{c}
+\] 
+is  a non-decreasing and 
+right continuous function.
+\medskip
+
+
+
+\noindent{\bf{0.0.3 $S$-adapted resolutions.}}
+Let $S$ be a densely defined and hermitian linear operator on
+$\ell^2$.
+A spectral resolution  $\{E(\lambda)\}$ of the identity
+is $S$-adapted if the following  three conditions hold:
+\medskip
+
+\noindent
+{\bf{A.1}} For each interval bounded $[a,b]$ the range of
+$E_{a,b}$ from (B) above
+is contained in $\mathcal D(S)$
+ and 
+\[
+E_{a,b}(Sx)=S\circ E_{a,b}(x)
+\quad\colon x\in\mathcal D(S)
+\]
+\medskip
+
+\noindent
+{\bf{B.1 }} By (C)  each  $x\in\ell^2$
+gives the non-decreasing function
+$\lambda\mapsto\langle E(\lambda)(x),x\rangle$ on the  real line.
+Together with the right continuity in (c) there exist
+Stieltjes' integrals
+\[
+\int_a^b\, \lambda\cdot \langle dE(\lambda)(x),x\rangle
+\] 
+for each bounded interval.
+Carleman's  second condition for 
+$\{E(\lambda)\}$  to be $S$-adapted is that
+a vector $x$ belongs to $\mathcal D(S)$ if and only if
+\[
+\int_{-\infty}^\infty \, |\lambda|\cdot \langle dE(\lambda)(x),x\rangle<\infty\tag{b.1}
+\] 
+
+
+\noindent
+{\bf{C.1}} The last  condition is that
+\[
+\langle Sx,y\rangle=
+\int_{-\infty}^\infty \, \lambda\cdot \langle dE(\lambda)(x),y\rangle
+\quad\colon x,y\in\mathcal D(S)\tag{c.1}
+\]
+where (b.1) and the Cauchy-Schwarz inequality
+entail that the Stieltjes' integral in (c.1) is absolutely convergent.
+\bigskip
+
+
+
+
+
+\centerline{\bf{2. An example from PDE-theory.}}
+
+\medskip
+
+
+\noindent
+{\bf{2.1. Propagation of sound}}.
+With $(x,y,z)$ as space variables in
+${\bf{R}}^3$ and a time variable $t$, the 
+propagation of sound
+in the infinite  open complement $U={\bf{R}}^3\setminus \overline{\Omega}$
+of a bounded open subset $\Omega$ is governed by
+ solutions $u(x,y,z,t)$ to the wave equation
+ \[ 
+ \frac{\partial^2 u}{\partial t^2}= \Delta u\tag{1}
+ \] 
+ where 
+ $\Delta$ is the Laplace operator in $x,y,z$.
+So here (1) holds when
+$p=(x,y,z)\in U$
+and $t\geq  0$. We  assume that
+$\partial\Omega$ is of class $C^1$, i.e. given as  a union of pairwise disjoint
+closed surfaces of class $C^1$ along which normal vectors are defined.
+A boundary value problem
+arises when we seek solutions 
+such that
+$p\mapsto u(p,t)$ belong to $L^2(U)$ for each $t$,
+and the outer normal derivatives
+taken along $\partial\Omega$ are zero,  i.e. for every $t$ 
+\[
+\frac{\partial u}{\partial n}(p,t)=0\quad\colon p\in \partial \Omega\tag{2}
+\]
+Initial conditions are expressed by  a pair of $C^2$-functions
+$f_1x,y,z)$ and $f_2(x,y,z)$ defined in $U$ such that
+$f_1,f_2$  together with
+$\Delta(f_1$ and $\Delta(f_2)$ belong to $L^2(U)$,
+and their outer normal derivatives along $\partial\Omega$ are zero.
+So here
+$u(p,0)= f_0(p)$ and $\frac{\partial u}{\partial t}(p,0)= f_1(p)$
+hold for each $p\in U$.
+\medskip
+
+\noindent
+That this  boundary value problem 
+has a unique solution $u$ can be established via variational methods.
+In the cited monograph, Carleman gave a proof using
+the spectral function $\theta$ attached to a Class I operator
+$A$ constructed via solutions to the Dirichlet problem
+where no time variable appears.
+A merit of thisproof is that
+it confirms 
+the physically expected result expressed by:
+\[
+\lim_{t\to \infty}\, (\frac{\partial u}{\partial x})^2(p,t)+
+(\frac{\partial u}{\partial y})^2(p,t)+(\frac{\partial u}{\partial z})^2(p,t)=0\tag{*}
+\]
+with uniform convergence when $p$ stays in a relatively compact subset of
+$U$.
+More precisely, Carleman proved (*) by proving
+that the  spectral function of $A$ 
+is \emph{absolutely continuous} with respect to
+the $\lambda$-parameter. 
+In §§ we expose how Carelan derived this 
+from  a
+general result which goes as follows:
+
+\medskip
+
+\noindent
+Let $\{a\leq s\leq b\}$ be a 
+compact interval on the real $s$-line and
+$s\mapsto G_s$ is  a function with values in the Hilbert space
+$L^2(U)$ which  is 
+continuous in the sense that 
+\[
+\lim_{s\to s_0}\, ||G_s-G_{s_0}||_2=0
+\]
+hold for each $s_0$, where we  introduced the $L^2$-norms.
+The function has a finite total variation if 
+there exists a constant $M$ such that
+\[
+\sum\, ||G_{s_{\nu+1}}-G_{s_\nu}||_2\leq M
+\] 
+hold for every partition $a=s_0<s_1<\ldots<s_M=b$.
+When this holds one  construct Stieltjes integrals
+and 
+for every subinterval $[\alpha,\beta]$
+there exists
+the $L^2$-function in $U$ 
+\[
+\Phi_{[\alpha,\beta]}= \int_\alpha^\beta\, s\cdot \frac{dG_s}{ds}
+\]
+Impose the extra conditions that the normal deriviatives
+$ \frac{\partial G_s}{\partial n}$ exist  and vanish 
+$\partial\Omega$ for every $a\leq s\leq b$
+and the following differential equation
+holds for
+every sub-interval $[\alpha,\beta]$ of $[a,b]$:
+\[
+\Delta(G_\beta-G_\alpha)+\Phi_{[\alpha,\beta]}=0
+\] 
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{The equations  above imply that
+$s\mapsto G_s$ is absolutely continuous which means that 
+whenever $\{\ell_1,\ldots,\ell_M\}$ a finite family of disjoint
+intervals in $[a,b]$ where the sum of their lengths is $<\delta$,
+then the sum of
+the total variations over these intervals is
+bounded by $\rho(\delta)$ where
+$\rho$ is a function of $\delta$ which tends to zero as $\delta\to 0$.}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

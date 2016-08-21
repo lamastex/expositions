@@ -1,0 +1,1306 @@
+
+
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+
+ \begin{document}
+
+
+\newcounter{chapter}
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{B. The Kovalevsky gyroscope}}
+
+\bigskip
+
+\noindent
+The article \emph{Sur le probleme de la rotatiation
+d'un corps solide autotur d'un point fixe} 
+was printed in Acta Mathematica
+1889.
+A work for which Kovalevsky  received the \emph{Bordin Prize} on Christmas Eve 1888
+in Paris.
+Here follows  the first section of the article 
+in English translation.
+\bigskip
+
+\noindent 
+\emph{The problem of the rotation of a rigid body around a  fixed point
+with gravity force $g$ reduces, as is wellknown, to solve the following system of
+differential equations}:
+
+\begin{align*}
+&A\frac{dp}{dt}=(B-C)qr+Mg(y_0\gamma''-z_0\gamma')
+\quad\colon\quad
+\frac{d\gamma}{dt}= r\gamma'-q\gamma''
+\\
+&
+B\frac{dq}{dt}=(C-A)rp+Mg(z_0\gamma-x_0\gamma'')\quad\colon\quad
+\frac{d\gamma'}{dt}= p\gamma''-r\gamma\\
+&
+C\frac{dr}{dt}=(A-B)rpq+Mg(x_0\gamma'-y_0\gamma)
+\quad\colon\quad
+\frac{d\gamma''}{dt}= q\gamma-p\gamma'
+\\
+\end{align*}
+\medskip
+
+\noindent
+\emph{The constants $A,B,C,M,g,x_0,y_0,z_0$ denote the following: 
+$A,B,C$ are the
+positive eigenvalues of the intertia operator of the body, i.e. they correspond to lengths of the principal axis when the body is regarded as an ellipsoid.
+$M$ is the mass of the body, $g$ the force of gravity and 
+$x_0,y_0,z_0$
+the coordinates of the center of mass in the coordinate system 
+whose origin is the fixed point with 
+principal axis  determined as above.
+Fuinally, the six quantities $p,q,r,\gamma,\gamma',\gamma''$ are time-dependent
+functions 
+where $\omega=(p,q,r)$ is Euler's angular velocity
+and $(\gamma,\gamma',\gamma'')$
+are the coordinates of the
+vector $e_z$ taken in the body space.
+which extend to complex analytic functions whose
+singularities are at most poles.}
+\medskip
+
+\noindent
+\emph{Until now one has only found two cases where the equations of motion
+can be integrated and thus solved by quadrature}:
+\bigskip
+
+\noindent
+\emph{The case of Poisson (or Euler):}  $\quad x_0=y_0=y_0$.
+\bigskip
+
+\noindent
+\emph{The case of Lagrange:}  $\, A=B\colon\quad x_0=y_0=0$.
+\bigskip
+
+\noindent 
+\emph{In these two cases the solution is found after integration by 
+theta functions where the
+six quantities $p,q,r,\gamma,\gamma',\gamma''$ are time-dependent
+functions 
+which extend to analytic   functions whose
+singularities are at most poles.}
+
+\bigskip
+
+
+\noindent
+Kovalevsky studied the power series solutions to the 
+differential system above 
+and found constraints on their complex Laurent series expansions which
+led  to the conclusion that the constants $A,B,C$ and the position of
+the center of mass, must be special  in order find a fourth integral as 
+as in the two special  cases above.
+\medskip
+
+
+\noindent
+After five pages of   calculations
+an  example occurs in  section 2  from [ibid]
+which gives  a rigid body whose equations of motion can be solved by quadrature for every
+initial position.
+More precisely, in the  Kovalevsky gyroscope one has:
+\medskip
+\[ 
+A=B=2\quad C=1\quad\, x_0=1\quad y_0=z_0=0\tag{*}
+\]
+
+\noindent 
+The equality $A=B$ means that the body has a plane of symmetry
+and the center of mass is placed in this plane.
+But this center of mass  does not belong to a principal axis so the gyroscope fails to satisfy
+the assumption which had been treated   earlier  by Lagrange.
+When (*) holds
+Kovalevsky found a \emph{fourth integral} of the 
+differential system  
+expressed by a polynomial of the 4:th degree of 
+the variables $p,q,r,\gamma,\gamma',\gamma''$.
+Once this is achieved there remains  a considerable
+work to express  the solution.
+In [ibid] more than ten  pages are devoted to the study of 
+\emph{ultra-elliptic functions} which appear in the 
+time-dependents solutions using the fourth integral.
+
+
+\medskip
+
+\noindent
+{\bf{The use of complex analysis.}}
+To find the fourth integral of the system 
+when (*) holds Kovalevsky employed analytic function theory.
+Let us describe how one derives the fourth integral.
+We prefer to use other notations for $p,q,r$, i.e. Euler's angular velocities are
+denoted by
+\[ 
+\omega\uuu 1=p\quad\colon\quad
+\omega\uuu 2=q\quad\colon\quad
+\omega\uuu 3=r
+\]
+Similarly, lower indices are used for the $\gamma$\vvv functions:
+\[ 
+\gamma\uuu 1=\gamma\quad\colon\quad 
+\gamma\uuu 2=\gamma'\quad\colon \quad
+\gamma\uuu 3=\gamma''
+\]
+When $A,B,C$ satisfy (*) and $gM=1$
+we obtain a system of six differential equations:
+
+
+
+
+
+\begin{align*}
+&2\dot \omega_1=\omega_2\omega_3
+\\
+&2\dot \omega_2=\vvv \omega_1\omega_3-\gamma_3
+\\
+&\dot \omega_3=\gamma_2
+\end{align*}
+
+\medskip
+
+\begin{align*}
+&\dot \gamma_1=\gamma_2\omega_3-\gamma_3\omega_2
+\\
+&\dot \gamma_2=-\gamma_1\omega_3+\gamma_3\omega_1
+\\
+&\dot \gamma_3=-\gamma_1\omega_2-\gamma_2\omega_1
+\end{align*}
+\medskip
+\noindent {\bf Invariant integrals.} 
+Since $\gamma$ is a unit vector one has
+\[
+\gamma_1^2+\gamma_2^2+\gamma_3^2=1\tag{1}
+\]
+Next, since the sum of kinetic and potential energy is constant one has:
+\[
+\omega_1^2+\omega_2^2+\frac{\omega_3^3}{2}+
+\gamma_1=E\tag{2}
+\]
+Finally, the time derivative of the angular momentum
+$\mathfrak M$ is $\perp$ to $e_z$ which
+gives the third algebraic
+equation:
+\[
+2\omega_1\gamma_1+2\omega_2\gamma_2+\omega_3\gamma_3=F\tag{3}
+\]
+where $F$ is a constant.
+
+\bigskip
+
+\noindent
+{\bf Kovalevsky's fourth integral.} There exists one more integral to the 
+ODE-system. To obtain it we introduce the imaginary unit. The first two
+equations for the $\omega$-system give:
+\[
+2(\dot \omega_1+i\dot\omega_2)=
+\vvv i\omega_3(\omega_1+i\omega_2)-i\gamma_3\tag{i}
+\]
+Next,  the first two equations for the $\gamma$-system
+give:
+\[
+\dot\gamma_1+i\dot\gamma_2=
+i\gamma_3(\omega_1+i\omega_2)-i\omega_3(\gamma_1+i\gamma_2)\tag{ii}
+\]
+Put 
+\[
+\phi=(\omega_1+i\omega_2)^2+(\gamma_1+i\gamma_2)
+\]
+
+
+\noindent
+It follows from (i-ii) that
+\[ 
+\dot\phi=\vvv (\omega_1+i\omega_2)\cdot [i\omega_3(\omega_1+i\omega_2)+i\gamma_3]
++i\gamma_3(\omega_1+i\omega_2)-i\omega_3(\gamma_1+i\gamma_2)
+\]
+A  computation shows that the right hand side becomes
+$\vvv i\omega\uuu 3\cdot \phi$ and hence $\phi$ satisfies the differential equation
+\[
+\dot\phi=\vvv i\omega\uuu 3\cdot \phi\tag{iii}
+\]
+\medskip
+
+\noindent
+Since the function  $\omega_3(t) $ is real-valued
+this differential equation implies that
+the $t$-derivative of $\text{log}(\phi(t))$ is purely imaginary. The equality
+\[
+\mathfrak{Re}\,\log(\phi(t))= \log\,|\phi(t)|
+\]
+implies that the  \emph{absolute value} of $\phi$ is constant.  Hence there exists
+a real constant $k$ such that
+\[
+k^2=|(\omega_1+i\omega_2)^2+\gamma_1+i\gamma_2|^2=
+(\omega_1^2-\omega_2^2+\gamma_1)^2+(2\omega\uuu 1\omega\uuu 2+\gamma\uuu 2)^2
+\tag{4}
+\]
+\medskip
+
+\noindent
+{\bf Remark} Above
+(4)
+gives the
+fourth integral which is used to solve
+the equations of motion  by quadrature.
+In contrast to the  case treated  by Euler where
+the solution by quadrature
+is achieved by an elliptic integral of the first kind, the
+solution 
+of  the Kovalesvky gyroscope involves 
+\emph{hyper-elliptic integrals}.
+For details we refer to Kovalevsky's original article which in addition to
+the example of a special gyroscope contains 
+very interesting
+calculations.
+Personally I think that every student   should try to 
+study
+original work. 
+The material about hyperelliptic functions and their integrals
+ in Kovalevsky's article offers an 
+account
+which I personally find  more transparent than  more recent  publications on these
+topics.
+The invariant integrals (1\vvv 3)  will
+be established in the section devoted to
+rigid bodies.
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+Two years after Kovalevsky's disease,
+Liapounov proved that the example (*)
+is 
+\emph{unique}, i.e. it gives the sole example except the classical, where the equations
+of motion can be solved by quadrature.
+In an article published in Acta Mathematica 1892, Kšnigsberg
+expressed the motion of Kovalevsky's gyroscope in Eulerian angles where
+the  solution   consists of 
+generalised theta-functions. Kšnigsberg's formula
+together with a computer provide a  picture of
+the motion of the Kovalevsky gyroscope under arbitrary  initial conditions.
+To avoid  confusions we remark that there exist  examples where
+the differential system for the motion can be integrated
+\emph{provided} that special initial conditions are given.
+But these specific  examples  were not  at stake in the 
+far more difficult problem treated by  Kovalesvky.
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf Another remark.}
+Kovalevsky gave courses 
+on many different subjects during her years in Stockholm.
+The interplay  between
+equations derived from the "real world" of mechanics and
+complex integrals which  lead to elliptic functions
+was  put forward in these lectures.
+Let us illustrate this by an
+example
+which normally belongs to a
+course devoted to analytic function theory.
+Consider  Weierstrass' 
+$\mathfrak{p}$-function which
+is doubly meromorphic with
+respect to some lattice in
+${\bf{C}}$ generated by two
+${\bf{R}}$-linearly independent complex vectors
+$\omega_1$ and $\omega_2$. 
+Set
+\[ 
+e_1=\frac{\omega_1}{2}\,,\quad
+e_2=\frac{\omega_1}{2}\,,\quad
+e_3=\frac{\omega_1+\omega_2}{2}\,.
+\]
+Now there exists Jacobi's elliptic function
+\[
+\mathfrak{sn}(z)=
+\frac{\sqrt{e_1-e_2}}{\sqrt{\mathfrak{p}(z)-e_3}}
+\]
+Jacobi's inversion formula asserts that
+\[
+z=\frac{1}{\sqrt{e_2-e_3}}\cdot 
+\int_0^{\mathfrak{sn}(z)}\, \frac{dz}{\sqrt{(1-z^2)(1-\chi^2z^2)}}
+\]
+This inversion formula is a
+consequence of  conservation laws
+applied to a two-particle system describing
+the motion of two mass-points which
+both perform a periodic motion in a simple pendelum.
+The addition formula for the
+$\mathfrak{p}$-function, and more generally for any
+elliptic  function can also be derived via laws of classical mechanics.
+So students 
+interested in analytic function theory
+or algebraic geometry
+devoted to 
+projective curves
+in characteristic zero, should keep in mind that   results
+which express  properties of rational functions on such
+curves
+have a  natural interpretation  via classical mechanics and may  therefore
+be considered as a  Law of Nature rather than
+a mathematical discovery. 
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf\large 2. Rigid Bodies}
+
+\bigskip
+
+\noindent
+In a rigid body $K$ distances between points remain constant under motion, even
+when a sudden force acts on $K$ by an  impact.
+This implies that 
+when $K$ is placed in $\bf R^3$,   the position of an arbitrary point
+$q\in K$ can be determined
+via six cordinates.
+To see this we choose a point $p\in K$
+and three other points $q\uuu 1,q\uuu 2,q\uuu 3$ in $K$
+such that  the euclidian distances satisfy
+\[
+|q\uuu \nu\vvv p|=1\quad\text{and}\quad
+|q\uuu \nu\vvv q\uuu j|=\sqrt{2}\quad\colon\quad
+\nu\neq j
+\tag{1}
+\] 
+If necessary we adjoin  such points withous mass  and rigid bars without
+mass connecting them to $p$.
+Pythagoras' theorem implies this  that the three
+unit vectors
+$\{q\uuu \nu\vvv  p\}$ are pairwise orthogonal
+and we get the body space where $p$ is the origin and
+these three vectors is an orthonormal basis.
+Denote this orthonormal space by
+$\mathcal V_K$.
+Next, when $K$ is placed in the euclidian space
+${\bf{R}}^3$ the postions of $p$ and
+$\{q\uuu \nu\}$ give four points denoted by
+$p^*,q\uuu 1^*,
+q\uuu 2^*,q\uuu 3^*$. Since distances are preserved 
+(1) hold for the (*)-marked points, and Pythagoras's theorem entails that
+the vectors $\{\xi^*_\nu=q^*_\nu-p^*\}$
+are pairwise orthogonal unit vectors.
+Next, let $q\in K$ be an arbitrary
+point. In the body space we get coordinates
+$a\uuu 1,a\uuu 2,a\uuu 3$
+such that
+\[
+q=\vvv p=a\uuu 1(q\uuu 1\vvv p)+
+a\uuu 2(q\uuu 2\vvv  p)+a\uuu 3(q\uuu 3\vvv p)\tag{1}
+\]
+Put $\xi\uuu k= q\uuu k^*\vvv p^*$ for each $k$.
+Passing to the (*) marked points we write
+\[
+q^*\vvv p^*=b\uuu 1\cdot \xi\uuu 1^*+
+b\uuu 2\cdot \xi\uuu 2^*+
+b\uuu 3\cdot \xi\uuu 3^*\tag{2}
+\]
+Now the reader can verify that
+the $b$-coordinates are equal to the $a$-coordinates, i.e.
+\[ 
+b_k= a_k\tag{3}
+\] 
+hold for each $k$.
+\medskip
+
+\noindent
+{\bf{Conclusion.}}
+For each $q\in K$ the position of   $q^*$
+in ${\bf{R}}^3$ is  determined by
+the positions of 
+$p^*$ and the three orthogonal unit vectors $\{q_\nu^*-p^*\}$.
+Together with (3) it follows that there exists an orthogonal $3\times 3$\vvv matrix $S$
+such that
+\[ 
+q^*\vvv p^*= S(q\vvv p)\tag{*}
+\] 
+hold for every $q\in K$ where
+$S$ is regarded as a linear map from the orthogonal  body space into the euclidian 
+space ${\bf{R}}^3$.
+Recall that the determinant of an orthogonal matrix is +1 or -1. The set of
+orthogonal matrices with determinant +1 is a group denoted by
+$\text{S0}(3)$.
+Under a continuous motion of $K$ in ${\bf{R}}^3$
+the sign of the $S$matrix is unchanged and one
+can always start with the orthonormal basis in the body space so that
+the $S$-matrix in (*) has determinant +1 which means that it
+preserves orientation.
+At the same time
+$p$ can be placed at an arbitrary point $p^*$ in
+${\bf{R}}^3$. It follows that the \emph{configuration space}  for $K$
+is given  by the product space ${\bf{R}}^3\times \text{SO}(3)$.
+We conclude  that a rigid body has \emph{six degrees of freedom}  when it moves
+in ${\bf{R}}^3$.
+Let us now consider a time\vvv dependent  motion of $K$.
+So when $t$ is the time variable the vector valued function $p^*(t)$
+describes the motion of $p$ and we also have
+the $\text{SO}(3)$\vvv valued function
+$t\mapsto S\uuu t$ where
+
+\[
+q^*(t)=p^*(t)+S_t(q\vvv p)
+\quad\,1\leq\nu\leq 3\quad\colon\quad q\in K\tag{**}
+\]
+\medskip
+
+
+\medskip
+
+\noindent
+{\bf 2.1 Remark.} 
+Above the construction started from a chosen point $p\in K$.
+Consider another point $\rho\in K$ which gives
+\[
+q^*(t)=\rho^*(t)+
+(p^*(t)\vvv \rho^*(t))+S\uuu t(q\vvv p)=
+\rho^*(t)\vvv S\uuu t(\rho\vvv p)+S\uuu t(q\vvv p)=\rho^*(t)+S\uuu t(q\vvv \rho)
+\]
+
+\medskip
+
+\noindent
+This shows that the rotation matrix $S\uuu t$
+is the same when the body space is centered at $\rho$.
+
+
+\newpage
+
+
+\centerline {\bf 2.2 Euler's Angular velocity}
+\medskip
+
+\noindent
+Consider a motion
+of the rigid body whose time dependent
+functions are of class $C^2$ at least.
+We can take time derivatives of the nine elements 
+in the matrix $S_t$. 
+This yields for each $t$ 
+the $3\times 3$-matrix $\dot S_t$
+which again is a linear map from $\mathcal V_K$
+into $\bf R^3$.
+Let us also regard the \emph{inverse} linear map $S_t^{-1}$. Since $S_t$
+is orthogonal this inverse
+is the adjoint matrix $S_t^*$.
+Now $S_t^*\circ \dot S_t$ is a linear map from $\mathcal V_K$ into itself.
+\medskip
+
+\noindent 
+{\bf 2.2.1 Proposition.} \emph{The matrices $S_t^*\circ\dot S_t$ are anti-symmetric for allÊ
+$t$}.
+
+\bigskip
+
+\noindent 
+{\bf Proof.} 
+Since $S_t$ is orthogonal 
+$t\mapsto \langle S_t(q),S_t(p)\rangle$ is a constant function of $t$
+for all pairs $p,q$ in
+$\mathcal V_K$.
+Hence the time derivative is zero which gives
+\[
+0=
+\langle \dot S_t(q),S_t(p)\rangle+\langle S_t(q),\dot S_t(p)\rangle
+=
+\langle S_t^*\circ \dot S_t(q),p\rangle+
+\langle q,S_t^*\circ\dot S_t(p)\rangle
+\] 
+and 
+the requested   anti-symmetry follows.
+\bigskip
+
+\noindent
+Recall from linear algebra 
+that 
+every anti-symmetric matrix is 
+expressed by a vector product.
+Thus, for each $t$ there exists a unique vector $\omega(t)\in\mathcal V_K$
+such that
+\[
+S_t^*\circ \dot S_t(q)=\omega(t)\times q\,\quad\colon \,q\in\mathcal V_K
+\]
+
+
+\noindent
+From (**) above Remark 2.1 it follows that
+the time derivatives of points $q\in K$ satisfy:
+\[
+\dot q^*(t)=\dot p^*(t)+\dot S_t(q)\tag{2.2.2}
+\]
+Since $S_t\circ S_t^*$ is the identity we obtain
+\[
+\dot q^*(t)=\dot p^*(t)+S_t\circ S_t^*\circ \dot S_t(q)=
+\dot p^*(t)+S_t(\omega(t)\times q)\tag{2.2.3}
+\]
+
+\medskip
+
+\noindent
+One refers to $\omega(t)$ as \emph{Euler's angular velocity} which 
+by the constructions above is a vector-valued on  the body space.
+
+\bigskip
+ 
+
+
+\noindent
+\centerline {\bf 2.3 Kinetic energy and momentum}
+\medskip
+
+\noindent
+Let $K$ be a rigid body
+which consists of a finite set of mass points
+$p_1,\ldots,p_N$. One can imagine
+that they  are joined by rigid bars with zero mass. Put
+\[ 
+\mathfrak {o}=\frac{1}{M}\sum_{\nu=1}^{\nu=N}\,
+m_\nu\cdot p_\nu\quad\text{where}\quad \,M=\sum\,m_\nu
+\,\,\text{is the total mass} 
+\]
+\bigskip
+
+\noindent
+One refers to $\mathfrak {o}$ as the
+the center of mass, or simply the mass-point of $K$.
+When $K$ moves in $\bf R^3$ the velocities 
+varies between  individual 
+points because of rotation. Therefore it is no sufficient to regard a single point,
+such as the center of mass to obtain the kinetic energy.
+Let us choose  $\mathfrak o$ as the origin in the   body space
+$\mathcal V_K$. Under a motion we get  time dependent  rotation matrices $S_t$ 
+and for every mass point $p_\nu\in K$ one has
+
+\[
+\dot p\uuu\nu^*(t)=\dot  o^*(t)+S_t(\omega_t\times p_\nu)\tag{2.3.1}
+\]
+
+\noindent
+It follows that the kinetic energy becomes
+\[
+T=\frac{1}{2}\cdot \sum\, m_\nu\cdot \langle \dot p_\nu^*,\dot p_\nu^*\rangle=
+\]
+\[
+\frac{1}{2}\cdot \sum\, m_\nu\langle \dot p_\nu^*, \mathfrak o^*\rangle+
+\frac{1}{2}\cdot \sum\, m_\nu\cdot \langle \dot p_\nu^*,S_t(\omega_t\times p_\nu)\rangle\tag{2.3.2}
+\]
+\medskip
+
+\noindent
+The first sum above is equal to 
+$\frac{1}{2}\cdot \, M\cdot \langle \dot  o^*,\dot o^*\rangle$.
+Expanding the second term the reader can verify that it becomes:
+\[
+\frac{1}{2}\cdot \sum
+m_\nu\cdot \langle S_t(\omega_t\times p_\nu),
+S_t(\omega_t\times p_\nu)\rangle\tag{2.3.3}
+\]
+
+\noindent
+Since the orthogonal matrix  $S_t$ preserves   inner products
+it follows that (2.3.3) is equal to
+\[
+\frac{1}{2}\cdot \sum
+m_\nu\cdot \langle \omega_t\times p_\nu,
+\omega_t\times p_\nu\rangle\tag{2.3.4}
+\]
+This suggests that we introduce a linear operator on $\mathcal V_K$.
+\bigskip
+
+\noindent 
+{\bf 2.3.5 Definition} \emph{The central operator of inertia
+is the linear operator defined on $\mathcal V_K$ by
+\[
+q\mapsto \sum m_\nu\cdot p_\nu\times
+(q\times p_\nu)
+\]
+It is denoted by $\mathcal M_{\mathfrak {o}}$.}
+\bigskip
+
+\noindent
+Recall that the vector product 
+satisfies the following for each pair of 
+vectors
+$u,v$ in  the orthonormal space $\mathcal V_K$:
+\[
+\langle u,(u\times v)\times u\rangle=
+||u\times v||^2
+\]
+\medskip
+
+\noindent
+Applied to (2.3.4) above we 
+get:
+\bigskip
+
+\noindent 
+{\bf 2.3.6  Theorem} \emph{The kinetic energy is expressed by the equation}
+\[ 
+T=\frac{1}{2}M\cdot|\dot o^*|^2+
+\frac{1}{2}\langle \omega_t,\mathcal M_\frak o(\omega_t)\rangle
+\]
+\emph{One refers to
+$\frac{1}{2}\langle \omega_t,\mathcal M_\frak o(\omega_t)\rangle$
+as the rotational kinetic energy  and it is denoted by $T_{\text{rot}}$.}
+\bigskip
+
+\noindent
+{\bf {Change of center.}} It is sometimes 
+easier to pursue the motion 
+with respect to  another point in $K$ than the mass point. For this purpose we give
+\medskip
+
+\noindent 
+{\bf 2.3.7 Definition} \emph{
+The inertia operator in a body space centered at a
+point  $p\in K$
+is defined by}
+\[
+q\mapsto \sum m_\nu\cdot (p_\nu-p)\times
+[(q-p)\times (p_\nu-p)]
+\]
+\emph{It is denoted by
+$\mathcal M_p$.}
+
+\bigskip
+
+\noindent
+{\bf{Exercise.}}
+Show the equality below for each pair of points $p,q$ in $K$:
+\[
+\mathcal M_p(q)=\mathcal M_\mathfrak o(q-p)
++M\cdot (p\times(q\times p))\tag{2.3.8}
+\]
+and conclude that ine has
+the equation
+
+\[
+T=\frac{1}{2}M\cdot||\dot p^*||^2+
+\frac{1}{2}\langle \omega_t,\mathcal M_p(\omega_t)\rangle\tag{2.3.9}
+\]
+
+
+\newpage
+
+
+\centerline {\bf 2.4  Angular momentum}
+\bigskip
+
+\noindent
+When $K$ is in motion  we define for each time value $t$
+the vector
+
+\[
+\frak M_\frak o(t)=\sum\, m_\nu\cdot (p^*_\nu(t)-\frak o^*(t))\times
+\dot p_\nu^*\tag{2.4.1}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show the equality
+\[
+\frak M_\frak o(t)=S_t(\mathcal M_o(\omega_t))\tag{2.4.2}
+\]
+\medskip
+
+
+\noindent
+Show also that the time derivative of the vector valued 
+function $\frak M_\frak o$ becomes:
+\[
+\frac{d}{dt}(\frak M_\frak o)
+=S_t\,[\,
+\mathcal M_o(\dot \omega_t))+
+\omega_t \times\mathcal M_o(\omega_t)\,]\tag{2.4.3}
+\]
+
+
+\noindent
+One refers to (**) as
+Euler's identity for the time
+derivative of angular momentum.
+
+\bigskip
+
+
+\noindent
+{\bf{The time derivative of $\frak{M}_\frak 0$.}}
+Since the vector product
+is anti-commutative the reader can check that
+(2.4.1) gives
+the equation
+\[
+\frac{d}{dt}(\frak M_\frak o)\,=
+\sum\, m_\nu\cdot (p_\nu^*(t)-\frak o^*(t))\times
+\ddot p_\nu^*\tag{2.4.4}
+\]
+\bigskip
+
+
+
+\centerline
+{\bf 2.5  Equations of motion}
+\bigskip
+
+\noindent
+Now we  study the effect of fores acting on a rigid body during its motion.
+At a given time monent we suppose that
+force vectors  $\{F_\nu\}$
+act on the mass-points  $\{p_\nu\}$.
+Then (2.4.4 ) and Newtons formula give:
+
+\[
+\frac{d}{dt}(\frak M_\frak o)\,=
+\sum\, (p_\nu^*(t)-\frak o^*(t))\times
+F_\nu\tag{2.5.1}
+\]
+\medskip
+
+
+\noindent {\bf {External and inner forces}}.
+During a motion inner forces keep the body rigid. They appear in
+pairs $f_{ij}$ and $-f_{ij}$ where $f_{ij}$ acts on 
+the mass-point $p_j$
+while the opposed force vector $-f_{ij}=f_{ji}$ acts on $p_i$.
+Apart from these there exist \emph{external forces} 
+denoted by $F_\nu^{\text{ext}}$.
+Since the vector product is anti-commutative, the 
+reader can check that the total effect
+of inner forces disappears in (2.5.1) 
+and hence one has:
+
+\[
+\frac{d}{dt}(\frak M_\frak o)\,=
+\sum\, (p_\nu^*(t)-\frak o^*(t))\times
+F_\nu^{\text{ext}}\tag{2.5.2}
+\]
+\medskip
+
+
+
+\noindent
+{\bf Example} In $\bf R^3$ we denote the vertical direction by $z$. 
+So here gravity yields an external force whose strength is $g$.
+At every  mass-point $p_\nu$ we  have
+\[
+F_\nu^{\text{ext}}=-m_\nu\cdot  g\cdot e_z
+\]
+So when gravity is the sole external force acting on the rigid body one has:
+\[
+\frac{d}{dt}(\mathfrak M_\frak o)\,=-g\cdot
+\sum\, m_\nu\cdot (p_\nu^*(t)-\mathfrak o^*(t))\times
+e_z=0\tag{2.5.3}
+\]
+
+
+\noindent
+Notice that the vector in the right hand side
+is $\perp$ to $e_z$. It follows that the function
+\[
+t\mapsto 
+\langle \mathfrak M_\mathfrak o(t),e_z\rangle
+\]
+is constant.
+Notice also that (2.4.x) gives
+\[
+\langle \mathfrak M_\mathfrak o(t),e\uuu z\rangle
+=\langle S\uuu t(\mathcal  M_o)(\omega\uuu t),e\uuu z\rangle
+=
+\langle \mathcal  M_o)(\omega\uuu t),S\uuu t^*(e\uuu z)\rangle
+\]
+
+
+
+\medskip
+
+\noindent
+Hence we have proved the following:
+\medskip
+
+\noindent{\bf{2.5.4 Theorem.}}
+\emph{When gravity is the sole external force on a body
+there exists a constant $C$ such that}
+\[
+\langle \mathcal  M_\frak o(\omega\uuu t),S\uuu t^*(e\uuu z)\rangle
+=C
+\]
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf 2.6. Rotation around the mass-point}
+\bigskip
+
+\noindent
+We shall   study a rigid body $K$ whose  mass-point  
+remains fixed during the motion. 
+Recall that the  motion
+is described by 
+matrices  $\{S_t\}$ which map a body space $\mathcal V_K$
+centered at $\mathfrak o$ into  $\bf R^3$. 
+In $\bf R^3$ the $z$-axis is vertical where  gravity acts in 
+the negative $z$-direction and we  assume that this is the sole 
+external force acting on $K$.
+Since the mass-point is fixed
+it means that no external forces appear during the rotation.
+Now we shall describe  the equations of motion.
+For this purpose we consider the central angular momentum 
+which from previous results becomes:
+\[
+\mathfrak M_\frak o(t)=S_t(\mathcal M(\omega(t))
+\]
+By 2.5.2  the time-derivative is zero and applied to the right
+hand side Leibniz' rule gives
+
+\[
+\dot S_t(\mathcal M_\frak o(\omega(t))+
+S\uuu t(\mathcal M_\frak o(\dot \omega(t))=0
+\]
+Applying $S_t^*$ on both sides it follows that
+
+\[
+\omega(t)\times\mathcal M_\frak o(\omega(t))+
+\mathcal M_\frak o(\dot \omega(t))=0\tag{*}
+\]
+ 
+\medskip
+
+\noindent
+The system (*) are called the  the \emph{Euler-Lagrange equations} for the body.
+To solve (*)
+we will choose a suitable \emph{orthonormal basis}
+in $\mathcal V_K$   adapted to the linear operator
+$\mathcal M$.
+\bigskip
+
+\noindent
+{\bf 2.6.1  Principal axes.} Recall from ¤ xx  that $\mathcal M_\frak o$ is a
+symmetric linear operator on $\mathcal V_K$. The 
+spectral theorem for symmetric matrices gives an orthogonal basis 
+$e_1,e_2,e_3$ which diagonalizes $\mathcal M_\frak o$ and there exist
+constants
+$A_1,A_2,A_3$ such that
+
+
+\[
+\mathcal M(e_i)=A_ie_i\quad\,1\leq i\leq 3
+\]
+
+
+\noindent 
+Above each $A_i>0$ unless $K$ is a linear body, i.e. where all the mass is concentrated
+to a single line.
+We 
+ignore to discuss this special case and
+express the vectors $\omega(t)$  in this basis:
+
+\[
+\omega(t)=\omega_1(t)e_1+
+\omega_2(t)e_2+
+\omega_3(t)e_3
+\]
+\medskip
+
+\noindent 
+The $e-$basis is chosen so that $e_1\times e_2=e_3$ and so on,
+i.e. it is positively oriented with respect to the vector product.
+Rules for vector products  show that the system (*) becomes:
+
+\medskip
+
+\begin{align*}
+&A_1\cdot \dot \omega_1+(A_3-A_2)\omega_2\omega_3=0
+\\
+&A_2\cdot \dot \omega_2+(A_1-A_3)\omega_1\omega_3=0
+\\
+&A_3\cdot \dot \omega_3+(A_2-A_1)\omega_1\omega_2=0
+\end{align*}
+\medskip
+
+\noindent This first order system  
+of differential equations
+has a unique vector-valued solution $\omega(t)$ when
+initial values are   given a time $t=0$.
+\medskip
+
+\noindent
+{\bf{2.6.2. Exercise}}.
+Show  that the differential system above
+give positive constants $T$ and $E$ such that
+
+\[
+A_1\cdot \dot \omega^2_1+
+A_2\cdot \dot \omega_2^2+A_3\cdot \dot \omega_3^2=2T\tag{i}
+\]
+\[
+A^ 2_1\cdot \dot \omega^2_1+
+A^2_2\cdot \dot \omega_2^2+A^3_3\cdot \dot \omega_3^2=E\tag{ii}
+\]
+
+\medskip
+
+\noindent
+{\bf{2.6.3 Solution by quadrature.}}
+Consider the case when $A_3<A_2<A_1$.
+From (i-ii) we can eliminate $\omega_2^2$ and $\omega_3^2$
+and from this the reader can  deduce that
+$\omega_1$ satisfies a differential equation of the form
+
+\[
+\dot \omega_1=+\,\text{or}\,-\, 
+C\cdot 
+\sqrt{\alpha^2\vvv\omega\uuu 1^2}\cdot
+\sqrt{\beta^2\vvv \omega\uuu 1^2}
+\]
+where $C,\alpha,\beta$ are constants which in addition to the
+body\vvv constants $A\uuu 1,A\uuu 2,A\uuu3$  depend upon $T$ and $E$.
+Except for very special case one has $\alpha\neq \beta$
+and with $0<\alpha<\beta$ it follows that 
+$\omega_1(t)$
+is a periodic function of $t$ which oscillates
+between $- \alpha$ and $\alpha$.
+The time intervals for a full oscillation
+is expressed by an elliptic integral.
+More precisely, if $T_1$ is the full period
+one has the equation
+
+\[
+T_1= 4C\cdot \int\uuu 0^\alpha\,
+\frac{dw}{\sqrt{\alpha^2\vvv\omega\uuu 1^2}\cdot
+\sqrt{\beta^2\vvv \omega\uuu 1^2}}
+\]
+The  functions $\omega\uuu 3(t)$ and $\omega\uuu 3(t)$
+are also periodic with certain periods $T\uuu 2$ and $T\uuu 3$.
+Except for special cases the three periods are different
+and the whole rotation around the mass-point
+ is "chaotic".
+
+
+\bigskip
+
+
+\centerline {\bf{2.6.4  Rotation outside the mass-point}}.
+\bigskip
+
+\noindent
+Consider the case when $K$ rotates around a point $p\neq\mathfrak o$
+while gravity is the sole external force.
+Herte we let the body space be  centered at $p$.
+The linear operator $\mathcal M_p$.
+is  symmetric so by the spectral theorem we can choose an orthonormal
+basis in
+$\mathcal V_K$ where
+$\mathcal M_p$ is diagonal. Consider 
+the angular momentum
+
+\[ 
+\mathfrak M_p(t)=S_t(\mathcal M_p(\omega(t))
+\]
+\medskip
+
+\noindent
+{\bf{2.6.5 Exercise.}}
+Show that the time derivative
+
+\[
+\frac{d}{dt}(\mathfrak M\uuu p(t)=
+M\cdot g\cdot o^*(t)\times e\uuu z\implies \tag{1}
+\]
+\[
+S\uuu t\bigl [
+\omega(t)\times\mathcal M(\omega(t))+
+\mathcal M(\dot \omega(t))\bigr ]=\vvv M\cdot g\cdot
+o^*(t)\times e\uuu z
+\]
+Applying  $S\uuu t^*$ to both sides one gets
+
+\[
+\omega(t)\times\mathcal M_p(\omega(t))+
+\mathcal M_p(\dot \omega(t))=-M\cdot g\cdot
+\mathfrak o\times S\uuu t^*(e\uuu z)\tag{2}
+\]
+
+\medskip
+
+\noindent
+In a  basis where $\mathcal M_p(e\uuu 1)=A$,
+$\mathcal M_p(e\uuu 2)=B$
+and $\mathcal M_p(e\uuu 3)=C$ we
+get a system of differential equations which was 
+presented in the introduction from Kovalevsky's article.
+Notice that the Euler's equations 
+no longer are homogenous since
+the  function
+\[
+t\mapsto
+S\uuu t^*(e\uuu z)
+\] 
+with values in the body space 
+appears above. 
+So here one
+encounters a system with six time-dependent functions,
+where three of them express
+time derivatives of the components of 
+the vectors $S_t^*(e_z)$.
+
+
+\newpage
+
+
+\centerline{\bf\large 3. Eulerian  angles}
+\bigskip
+
+\noindent
+Given two angles $0<\theta<\pi$ and $0\leq\phi\leq 2\pi$
+we put
+\medskip
+\[
+e_3=\text{cos}\,\theta\cdot e_z+
+\text{sin}\,\theta(\text{cos}\,\phi\cdot e_x+
+\text{sin}\,\phi\cdot e_y)
+\]
+To this vector we associate the unit vectors
+\medskip
+\[
+\xi_2=-\text{sin}\,\theta\cdot e_z+\text{cos}\,\theta\,[\text{cos}\,\phi\cdot e_x+
+\text{sin}\,\phi\cdot e_y]\quad\colon\quad
+\xi_1=\text{sin}\,\phi\cdot e_x-
+\text{cos}\,\phi\cdot e_y
+\]
+\medskip
+
+\noindent
+Notice that $\xi_1\times \xi_2=e_3$ and hence 
+the  triple $\xi_1,\xi_2,e_3$
+is a positively oriented orthonormal frame.
+A general ON-frame $(e_1,e_2,e_3)$ arises  when we introduce 
+another angular variable $\psi$ and set:
+\medskip
+\[
+e_1=\text{cos}\,\psi\,\xi_1+\text{sin}\,\psi\,\xi_2\quad
+\colon\quad e_2=\text{sin}\,\psi\,\xi_1+\text{cos}\,\psi\,\xi_2
+\]
+\medskip
+
+\noindent
+We refer to $\theta,\phi,\psi$ as the Euler angles defining this ON-frame.
+Let us now consider a  rigid body
+which rotates around the origin and let $e_1,e_2,e_3$ be some 
+postively oriented
+ON-frame in the body space. We get the time dependent vectors in $\bf R^3$:
+\[
+e_\nu^*(t)=S_t(e_\nu)
+\]
+For each $t$ they give an  ON-frame in $\bf R^3$. We assume that 
+$e_3^*(t)$ is not parallell to the $z$-axis. Then there exist time dependent functions 
+$\theta(t)$ and $\phi(t)$ such that
+\[
+e^*_3(t)=\text{cos}\,\theta(t)\cdot e_z+
+\text{sin}\,\theta(t)(\text{cos}\,\phi(t)\cdot e_x+
+\text{sin}\,\phi(t)\cdot e_x)
+\]
+
+\noindent
+The remaining vectors $e_1^*(t)$ and $e_2^*(t)$
+are  determined by the two angular functions
+$\theta(t),\phi(t)$ and a $\psi$-function which corresponds to
+a rotation of $K$  around $e_3^*$.
+The result is that the time dependent rotation matrix $S_t$
+is a function of the three angular variables.
+Now we can take time derivatives and in this way express 
+Euler's angular velocity by the three angle functions and their time derivatives.
+A straightforward calculation which is left to the reader gives:
+
+
+\[
+\omega_1=
+\dot\phi\cdot
+\text{sin}\,\theta\,\text{sin}\,\psi+\dot\theta\,\text{cos}\,\psi
+\]
+\[
+\omega_2=\dot\phi\cdot
+\text{sin}\,\theta\,\text{cos}\,\psi-\dot\theta\,\text{sin}\,\psi
+\]
+\[
+\omega_3=\dot\phi\cdot\text{cos}\,\theta+\dot\psi
+\]
+\medskip
+
+\noindent
+{\bf The kinetic energy.} Suppose that $e_1,e_2,e_3$
+yield principal axes for the operator of inertia.
+Hence
+\[ T=\frac{1}{2}[A_1\omega_1^2+A_2\omega_2^2+A_3\omega_3^2]
+\]
+Inserting the equations above we express $T$ as a function 
+of the angle functions and their time derivatives.
+\medskip
+
+\noindent
+{\bf 3.1 The symmetric case.} Assume that $A_1=A_2$. Then a simple reduction yields:
+\[
+T=
+\frac{1}{2}A_3(\dot\psi+\dot\phi\,\text{cos}\,\theta)^2+
+\frac{1}{2}A_1(\dot\theta^2+\dot\phi^2\,\text{sin}^2\,\theta)
+\]
+
+
+\bigskip
+
+\noindent
+Above the $\psi$-function only enters via its time derivative.
+Using this, Lagrange reduced   the system to a single differential equation for $\theta$.
+One refers to the symmetric case above as Lagrange's top.
+
+
+\newpage
+
+
+\centerline{\bf 3.2 The Kovalevsky's gyroscope in Eulerian angles}
+\medskip
+
+\noindent
+Here $A_1=A_2=2$ and $A_3=1$
+and the  center of mass $\mathfrak{o}$ is placed at $ae_1$
+for some $a>0$.
+The kinetic energy becomes
+\bigskip
+\[
+T=
+\frac{1}{2}(\dot\psi+\dot\phi\,\text{cos}\,\theta)^2+
+(\dot\theta^2+\dot\phi^2\,\text{sin}^2\,\theta)
+\]
+\medskip
+
+\noindent
+To study the effect of the external gravity force we express
+the inner product
+
+\[
+\langle e_1^*(t),e_z\rangle=
+-\text{cos}\,\psi
+\langle \xi_1,e_z\rangle+
+\text{sin}\,\psi
+\langle \xi_2,e_z\rangle=-\text{sin}\,\psi\cdot \text{sin}\,\theta
+\]
+\medskip
+
+\noindent
+Preservation of energy gives a constant $E$ such that
+
+\[
+\frac{1}{2}(\dot\psi+\dot\phi\,\text{cos}\,\theta)^2+
+(\dot\theta^2+\dot\phi^2\,\text{sin}^2\,\theta)-
+ag\cdot \text{sin}\,\psi\cdot \text{sin}\,\theta=E\tag{1}
+\]
+\medskip
+
+\noindent 
+Next, we consider the D'Alembert \vvv Lagrange equations. Here 
+$\phi$ is a cyclic variable which gives   a constant $C$ such that
+\bigskip
+\[
+\text{cos}\,\theta\cdot
+(\dot\psi+\dot\phi\,\text{cos}\,\theta)+2\dot\phi\cdot \text{sin}^2\,\theta=C\tag{2}
+\]
+From this equation we can eliminate $\dot\phi$
+so that the constant energy integral is a function of
+$\psi,\theta$  and its time derivatives.
+We have also the Lagrangean equation for the
+$\psi$-variable which yields
+\[
+\frac{d}{dt}(\dot\psi+\dot\phi\,\text{cos}\,\theta)=
+-ag\cdot \text{cos}\,\psi\cdot \text{sin}\,\theta\tag{3}
+\]
+\bigskip
+
+\noindent
+Above (1-3) is  a system of ODE-equations which has a unique solution for any
+given initial condition. 
+In the article [Acta 1892]
+Kšnigsberg 
+implemented Kovalevsky's fourth integral
+to express the solutions via
+integrals of hyperelliptic functions which means that one encounters
+generalised theta-functions which appear in the rich and beautiful theory
+which foremost is due to Abel, Jacobi, Hermite and Weierstrass.
+So at this point a "pure mathematical study is needed.
+Apart from this it is of course valuable to 
+find  numerical solutions
+to the system above which 
+describes the motion of Kovalevsky's gyroscope in
+${\bf{R}}^3$.
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+\newpage

@@ -1,0 +1,787 @@
+%\documentclass{amsart}
+
+%\usepackage[applemac]{inputenc}
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+%\def\vvv{-}
+
+%\begin{document}
+
+\centerline{\bf\large {V. Uniqueness theorems for analytic functions.}}
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+\emph{0. Introduction.}
+\bigskip
+
+\noindent
+\emph{A. A sharp version of the Phragmén-Lindelöf theorem}
+
+\bigskip
+
+\noindent
+\emph{B. Asymptotic series.}
+
+\bigskip
+
+\noindent
+\emph {C. A uniqueness theorem for aymptotic series}
+
+\bigskip
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+\noindent
+\centerline {\bf Introduction.}
+\medskip
+
+
+
+
+\noindent
+A  sharp
+version of the Phragmén-Lindelöf theorem is proved in 
+Theorem A.2. It is preceeded by a differential inequality where
+Carleman's result in
+Theorem A.1 was inspired 
+by earlier constructions due to Lindelöf.
+Asymptotic series are studied in section B
+where
+earlier work by Borel  led Carleman to the  general 
+construction in Theorem B.1. 
+The   question of 
+uniqueness is expressed via
+Theorem B.6 and is settled via
+solutions to a  variational problem  in
+Section C.
+
+
+
+\bigskip
+
+\centerline{\bf{A. The Phragmén-Lindelöf theorem.}}
+\medskip
+
+\noindent
+Let $f(z)$ be an entire function.
+To each $0\leq\phi\leq 2\pi$ we set
+\[
+\rho_f(\phi)=
+\max_r\,|f(re^{i\phi})|\tag{*}
+\]
+
+\noindent
+The text-book \emph{Le calcus des residues} by Ernst Lindelöf
+contains examples of entire functions
+$f$ where
+$\rho_f(\phi)$ is finite for all $\phi$
+with the exception 
+$\phi=0$, i.e. only along  the positive real axis
+the $\rho$-number fails to be  bounded.
+An example is the entire function
+\[ 
+f(z)=
+\frac{1}{z^2}\cdot \sum_{\nu=2}^\infty
+\frac{z^\nu}{\bigl (\log\,\nu \bigr )^\nu}
+\]
+Here one verifies that that there exists a constant $k$ such that:
+\[
+|f(re^{i\phi})|\leq \text{exp}(e^{\frac{k}{|\phi|\cdot |2\pi-\phi|}}\,)\tag{**}
+\]
+
+
+\noindent
+It turns out that the example above is essentially sharp. Namely, 
+assume that
+the $\rho$-number in (*) is finite for almost every
+$\phi$. Then the $\rho_f$-function
+cannot be too small, unless $f$ is reduced to
+a constant. 
+Before  Theorem A.1 is announced
+we introduce
+the non-negative function
+\[ 
+\omega(\phi)=\log^+\bigl[\,\log^+\rho_f(\phi)\,\bigr]\tag{***}
+\]
+
+
+
+\noindent
+Since we have taken a two-fold logarithm 
+$\omega(\phi)$ is considerably smaller  compared
+to the $\rho$-function.
+\medskip
+
+\noindent
+{\bf {A.1.Theorem.}}
+\emph{For every non-constant entire function $f(z)$ one has}
+\[
+ \int_0^{2\pi}\,\omega(\phi)\cdot d\phi=+\infty
+\]
+\medskip
+
+\noindent
+\emph{Proof.} Assume that $f$ is not a constant.
+Consider the maximum modulus function
+\[
+M(r)=\max_{|z|=r}\,|f(z)|
+\]
+By the ordinary Liouville theorem the $M$-function
+increases to infinity. So we may assume that
+$M(r)\geq 1$ when $r\geq r_*$ for some $r_*$.
+Put
+\[ v(r)=\log\, M(r)\quad\colon\quad
+U(z)=\log\,|f(z)|\tag{i}
+\]
+Given $r\geq r_*$ we consider the domain
+\[
+\Omega_r=\{ U>\frac{v(r)}{2}\}\,\cap\, \{|z|<r\}\tag{ii}
+\]
+Next,  let $\zeta_r$ be some point on the circle
+$|z|=r$ where
+$|f(\zeta_r)|=M(r)$ where $\zeta_r$ always can be chosen
+so that there exist
+arbitrary small $\delta$
+where $|f(\zeta_{r-\delta})|=M(r\vvv \delta)$
+and $\lim_{\delta\to  0}\, \zeta_{r-\delta}=\zeta\uuu r$.
+
+
+
+\noindent
+Next,
+in $\Omega$ we get the  connected component
+$\Omega_*$
+whose boundary contains
+$\zeta_r$. Put
+\[ \gamma=\partial\Omega_*\cap\,\{ |z|=r\}\tag{iii}
+\]
+Notice  that
+\[ 
+U(z)\leq\frac{v(r)}{2}\quad\colon\quad
+z\in\partial \Omega_*\cap \{|z|<r\}\tag{iv}
+\]
+So if $W$ is the harmonic function in the disc $D_r$
+with boundary values 1 on $\gamma$ and 0 on
+$\{|z|= 1\}\setminus\gamma$ we have:
+\[ 
+U(z)-\frac{v(r)}{2}-
+\frac{v(r)}{2}\cdot W(z)\leq 0\quad\colon\quad z\in\partial\Omega_*\tag{v}
+\]
+
+
+\noindent 
+The maximum principle entails that (v) also holds in
+$\Omega_*$. 
+Hence there exist arbitrary small $\delta>0$ such that
+\[
+v(r-\delta)-\frac{v(r)}{2}-\frac{v(r)}{2}\cdot W(\zeta_{r-\delta})\leq 0\tag{vi}
+\]
+
+
+\noindent
+Let $2 r\cdot\ell$ be the total 
+length of the intervals which belong
+to $\gamma$.
+By the general inequality from XX we have
+\[
+W(\zeta_{r-\delta})\leq 
+\frac{1}{2\pi}\int_{-\ell}^\ell\, \frac{r^2-(r-\delta)^2}
+{r^2-2r(r-\delta)\text{cos}\,\theta+(r-\delta)^2}\tag{vii}
+d\theta
+\]
+Let $h(r-\delta)$ denote the right hand side in (vii) which by (vi)
+gives us  arbitrary small $\delta>0$ such that
+\[
+v(r-\delta)-\frac{v(r)}{2}-\frac{v(r)}{2}\cdot h(r-\delta)\leq 0\tag{viii}
+\]
+Rewriting this inequality we obtain
+\[
+\frac{v(r)-v(r-\delta)}{\delta}\geq
+\frac{v(r)}{2}\cdot \frac{1-h(r-\delta)}{\delta}\tag{*}
+\]
+Next, from the definition of the $h$-function one has the limit formula
+
+\[
+\lim_{\delta\to 0}\frac{1-h(r-\delta)}{\delta}=
+\frac{1}{2\pi}\cdot \frac{\text{cos}\,\ell}{\text{sin}\,\ell}\tag{ix}
+\] 
+Passing to the limit as $\delta\to 0$ in (vii) we get the differential inequality:
+\[ 
+v'(r)\geq 
+\frac{v(r)}{2\pi r}\cdot 
+\frac{\text{cos}\,\ell}{\text{sin}\,\ell}\tag{**}
+\]
+
+
+\noindent
+Next, put
+\[ \log\, r=s\quad\text{and}\quad 
+ \log\,\frac{v(r)}{2}=g(s)
+\]
+
+
+\noindent
+By derivation rules we see that (**) gives
+\[
+\frac{dg}{ds}\geq\frac{1}{2\pi}\cdot  
+\frac{\text{cos}\,\ell}{\text{sin}\,\ell}\tag{***}
+\]
+
+
+\noindent
+Next, identifying $\gamma$ with a subset of the periodic
+interval $0\leq\phi\leq 2\pi$ it is clear that
+the definition of the
+$\omega$-function gives the inclusion
+
+\[ 
+\gamma\subset\{\omega(\phi)\geq g(s)\}\tag{x}
+\]
+So if $\lambda(s)$ is the Lebesgue measure of the
+set 
+$\{\omega(\phi)\geq g(s)\}$ then $\ell\leq\lambda(s)$
+and  (***) gives
+\[
+\frac{dg}{ds}\geq\frac{1}{2\pi}\cdot  
+\frac{\text{cos}\,\lambda(s)}{\text{sin}\,\lambda(s)}\tag{****}
+\]
+
+
+\noindent
+Next, the inequality $\text{sin}(t)\geq \frac{2}{\pi}\cdot t$
+gives a positive constant $k$ 
+which is independent of $s$ such that
+the following hold for sufficiently large $s$, i.e.
+to ensure that
+the corresponding $r$-value satisfies
+$M(r)\geq 1$:
+\[
+\frac{dg}{ds}\geq \frac{k}{\lambda(s)}\tag{xi}
+\]
+Hence, starting from some sufficiently large
+$s_0$ one has
+\[ 
+\int_{s_0}^s\,
+\lambda(s)\cdot dg(s)\geq k(s-s_0)\tag{xii}
+\]
+\medskip
+
+\noindent This inequality implies in particular  that
+one has a divergent integral:
+\[
+\int_{s_0}^\infty\, 
+\lambda(s)\cdot dg(s)=+\infty\tag{xiii}
+\]
+Finally,  the general equality for distribution functions 
+from XXX gives:
+\[
+\int_0^{2\pi}\,\omega(\phi)\cdot d\phi=
+\int_0^\infty\, 
+\lambda(s)\cdot dg(s)\tag{xiiii}
+\]
+The last integral is $+\infty$ by (xiii) and  the requested
+divergence  for the intergal of the $\omega$-function follows.
+
+\bigskip
+
+\noindent
+{\bf Remark.}
+At the end of the article [XXX]  Carleman  points
+out  that the proof above  gives a sharp version of the Phragmén-
+Lindelöf theorem. More precisely one has  the following:
+Let $f(z)$ be analytic in a sector
+\[ 
+S_\alpha=\{ z= re^{i\phi}\quad\colon\quad -\alpha<\phi<\alpha\}
+\]
+Define $\omega(\phi)$ as above when
+when $-\alpha<\phi<\phi$. With these notations one has:
+\medskip
+
+\noindent
+{\bf {A.2. Theorem.}}
+\emph{Let  $f$ be bounded on the 
+half-lines $\text{arg}(z)=\alpha$ and
+$\text{arg}(z)=-\alpha$ and assume also that}
+\[
+\int_{-\alpha}^\alpha\,\omega(\phi)\cdot d\phi<\infty
+\]
+\emph{Then $f(z)$ is bounded in the whole sector.}
+
+\medskip
+
+\noindent
+{\bf {A.3. Exercise.}}
+Deduce Theorem A.2 from the preceeding results.
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+\centerline{\bf B. Asymptotic series.}
+
+\bigskip
+
+\noindent
+{\bf Introduction.}
+The  notion of asymptotic series was expressed 
+as follows by Poincaré:
+\medskip
+
+\noindent
+\emph{Let $f(z)$ be  complex-valued function
+defined in some
+subset $E$ of ${\bf{C}}$ and $z_0$ is a boundary point.
+We say that $f$ has an asymptotic
+series expansion at $z_0$ if there exists a sequence of complex numbers
+$c_0,c_1,\ldots$ such that $\lim_{z\to z_0}\, f(z)=c_0$ and for each
+$n\geq 0$ one has:}
+\[
+\lim_{z\to z_0}\,
+(z-z_0)^{-n-1}\,\bigl[ f(z)-(c_0+c_1+\ldots+c_n z^n)\bigr ]=c_{n+1}\tag{*}
+\]
+
+
+\noindent
+\emph{where the limit is   taken as $z$ stay in 
+$E$.}
+\medskip
+
+\noindent
+It is obvious that if
+$f$ has an asymptotic expansion at $z_0$ then
+the sequence $\{c_n\}$ is unique.
+Constructions of functions which admit asymptotic expansions
+appear in   Emile Borel's  thesis
+\emph{Sur quelques points de la théorie des fonctions} from 1895
+and 
+he  proved for example that for every 
+sequence of real numbers
+$\{c_n\}$ there exists a $C^\infty$-function $f(x)$ on the real line
+whose Taylor expansion at $x=0$ is given
+by
+the sequence, i.e.
+\[ 
+\frac{f^{(n)}(0)}{n\,!}= c_n\quad\colon\quad n=0,1,\ldots
+\]
+Following
+[Car: xx, page 29-31]
+we prove a complex version of
+Borel's result where
+$D_+$ denotes  the open half-disc 
+$\{\mathfrak{Re}(z)> 0\cap\{ |z|<1\}$.
+
+\medskip
+
+\noindent
+{\bf B.1. Theorem.} \emph{To each sequence
+$\{c_n\}$ of complex numbers there exists
+a bounded analytic function $F(z)$ in $D_+$ which has an asymptotic
+series expansion at $z=0$ given by $\{c_n\}$.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+It suffices  to prove this when
+$c_0=0$.
+Let $a_1,a_2,\ldots$ be a sequence of positive real numbers
+such that
+$\sum\, a_\nu<\infty$.
+Given $\{c_n\}$ we construct a sequence of 
+functions $P_1(z),P_2(z),\ldots$ which are analytic in
+the half plane
+$\mathfrak{Re}(z)>0$ as follows: First
+\[
+P_1(z)=c_1z(1-\frac{z}{z+\epsilon_1})
+\quad\colon\,
+\epsilon_1=\frac{\alpha_1}{|c_1|}\implies
+\tag{i}
+\]
+\[
+|P_1(z)|=|c_1|\cdot \epsilon_1\cdot \frac{|z|}{|z+\epsilon_1}\leq
+\alpha_1\quad\colon\quad\mathfrak{Re}(z)\geq 0\tag{ii}
+\]
+Now $P_1(z)$ has a series expansion at $z=0$:
+\[ 
+P_1(z)= \sum_{\nu=1}^\infty\, c_\nu^{(1)}\cdot z^\nu\tag{ii}
+\]
+Notice that the series converges in the disc
+$|z|<\epsilon_1$. Set
+\[ 
+P_2(z)= \bigl[ c_2-c_2^{(1)}\bigr ]\cdot z^2\cdot \bigl(
+1-\frac{z}{z+\epsilon_2}\bigr)\quad\colon\, |c_2-c_2^{(1)}|\cdot \epsilon_2\leq
+a_2\tag{iii}
+\]
+With such a careful choice of a small positive $\epsilon_2$ we see that
+\[
+|P_2(z)|\leq a_2\cdot |z|\quad\colon\quad \mathfrak{Re}(z)\geq 0\tag{iii}
+\]
+Again we obtain a convergent series
+at $z=0$:
+\[
+P_2(z)=P_1(z)= \sum_{\nu=2}^\infty\, c_\nu^{(2)}\cdot z^\nu\tag{iv}
+\]
+\medskip
+
+\noindent
+{\bf The inductive construction.}
+Let $n\geq 3$ and suppose that
+$P_1,\ldots,P_{n-1}$ have been constructed where we for each
+$1\leq k\leq n-1$ have a series expansion
+\[
+P_k(z)= 
+\sum_{\nu=k}^\infty\, c_\nu^{(k)}\cdot z^\nu\tag{v}
+\]
+Then we define
+\[
+P_n(z)=\bigl[ c_n-(c_n^{(1)}+\ldots+c_n^{(n-1)}\bigr]\cdot 
+z^n\cdot \bigl(1-\frac{z}{z+\epsilon_n}\bigr)\quad\colon\quad
+\bigl |\,c_n-(c_n^{(1)}+\ldots+c_n^{(n-1)}\,\bigr |\,\cdot \,\epsilon_n\leq\alpha_n
+\]
+\medskip
+
+\noindent
+So we obtain a new series at $z=0$:
+\[ 
+P_n(z)=\sum_{\nu=n}^\infty\, c_\nu^{(n)}\cdot z^\nu\tag{vi}
+\]
+Staying in the half-disc $D_+$, the inductive construction gives
+\[ 
+\max_{z\in D_+}\, |P_n(z)|\leq\alpha_n\quad\colon\quad n=1,2,\ldots
+\]
+Hence there exists  a bounded analytic function in $D_+$ defined by
+\[ 
+F(z)=P_1(z)+P_2(z)+\ldots
+\]
+At this stage we leave as an exercise to the reader to verify that
+\[
+\lim_{z\to 0}\,z^{-n-1}\cdot 
+\bigl[\,  F(z)-(c_1z+\ldots+c_n z^n)\bigr ]\, = c_{n+1}
+\]
+
+
+\newpage
+
+
+\centerline {\bf B.2. Uniqueness of asymptotic expansions.}
+\medskip
+
+\noindent
+There exist functions whose asymptotic series is identically zero.
+Here is an  example:
+\[ 
+f(z)= e^{-\frac{1}{z^2}}
+\]
+If $z= re^{i\theta}$ with
+$-\pi/8\leq\theta\leq \pi/8$ we see that
+\[
+|f(re^{i\theta})|= \text{exp}\,
+(-\frac{\text{cos}\,2\theta}{r^2})
+\leq\text{exp}
+(-\frac{1}{\sqrt{2}\cdot r^2})
+\]
+It follows that the asymptotic series at $z=0$ is
+identically zero.
+Via a conformal map from the half-disc $D_+$ 
+to the unit circle we are led to the
+following problem: Let $f(z)$ be analytic in the open unit disc
+$D$. Suppose that
+\[ 
+\lim_{z\to 1}\, \frac{f(z)}{(1-z)^n}=0
+\quad\colon\quad n=1,2,\ldots\tag{*}
+\]
+We seek growth conditions on $f$ in order that
+(*) implies that $f$ is identically zero.
+An answer to this uniqueness problem
+was proved by Carleman in [Car].
+Namely. consider a sequence of real positive numbers
+$A_1,A_2,\ldots$.
+To each $n\geq 1$ we put
+\[ 
+I_n=\text{exp}\bigl(\, \frac{1}{\pi}\int_1^\infty\, \log\,
+\bigr[\,\sum_{\nu=1}^{\nu=n}\,
+\frac{r^{2\nu}}{A_\nu^2}\,\bigr]\, \cdot dr\,\bigr)\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf B.3. Definition.} \emph{Denote by
+$\mathfrak{B}$
+the set of all sequences
+$\{A_n\}$ such that 
+$\{I_n\}$ is bounded, i.e. there exists some $K$ such that}
+\[
+ I_n\leq K\quad\colon\quad n=1,2\ldots
+\]
+
+
+\noindent
+In [Car: page  7-52 ] the following 
+existence result is proved:
+\medskip
+
+\noindent
+{\bf B.4. Theorem.}
+\emph{To each sequence $\{A_n\}\in\mathfrak{B}$
+there exists an analytic function
+$f(z)$ in $D$ which is not identically zero and satisfies:}
+\[
+\frac{|f(z)|}{|1-z|^n} \leq A_n \quad\colon\quad n=1,2,\ldots\tag{1}
+\]
+\emph{while (*) holds.}
+\medskip
+
+\noindent
+{A converse result.}
+In [loc.cit ] appears  the converse to the
+result which ensures uniqueness of the asymoptotic expansion at $z=1$.
+
+\medskip
+
+\noindent
+{\bf B.5. Theorem.}
+\emph{Let $\{A_n\}$ be a sequence of positive numbers
+such that
+there exists an analytic
+function $f(z)$ in $D$ which is not  reduced to a constant and
+satisfies (*) and (1) in Theorem B.4. Then 
+$\{ A_n\}\in\mathfrak{B}$.}
+\bigskip
+
+\noindent
+{\bf{Remark.}}
+The results above show that if
+$\{A_n\}$ is a sequence for which
+$\{I_n\}$ is unbounded then
+the asymptotic expansion at $z=1$ is unique for
+every analytic function $f(z)$ satisfying (1) in Theorem B.4.
+The proofs  of the two results above rely upon
+a varational
+problem which
+is presented below 
+while the
+deduction after of the two cited results above are left to the reader who  may find
+details in  [Carleman].
+\bigskip
+
+
+
+
+
+
+\centerline{\bf{C. A variational problem.}}
+
+
+
+
+
+\bigskip
+
+\noindent
+Let 
+$n\geq 1$ and $a_0,a_1,\ldots,a_n$ some $n$-tuple of 
+non-negative real numbers where  $a_0>0$ is assumed.
+Let $\mathcal O(*)$ denote the family of analytic functions
+$f(z)$ in the unit disc satisfying
+$f(0)=1$. Put
+\[
+I(f)=
+\frac{1}{2\pi}\cdot \sum_{\nu=0}^{\nu=n}\, 
+a_\nu^2\cdot \int_0^{2\pi}\, \frac{|f(e^{i\theta})|^2}{ |e^{i\theta}-1|^{2\nu}}
+\cdot d\theta\quad\colon\quad I_*=\min_{f\in\mathcal O(*)}\,I(f)
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+Above we have a variational problem. It turns out that
+there exists a unique function $f_*(z)$
+which yields a minimum. To find $f_*$ we shall use
+the rational function:
+\[
+\Omega(z)=\sum_{\nu=0}^{\nu=n}\, a_\nu^2\bigl[ (1-z)(1-\frac{1}{z})\bigr]^{n-\nu}
+\]
+Notice that
+\[
+ \Omega(e^{i\theta})=a_0^2+
+\sum_{\nu=1}^{\nu=n}\, a_\nu^2\cdot|e^{i\theta}-1|^{2n-2\nu}\tag{i}
+\]
+In particular $\Omega$ is real and positive on the unit circle
+and by symmetry  it has
+$n$ zeros $\rho_1,\ldots,\rho_n$
+in the unit disc and $\frac{1}{\rho_1},\ldots,\frac{1}{\rho_n}$
+are the zeros in the exterior disc which gives the factorization
+\[ 
+\Omega(z)=z^{-n}\cdot (-1)^n\cdot a_0^2\cdot
+p_n(z)\cdot\prod\,
+(z-\frac{1}{\rho_\nu})\quad\colon\,
+p_n(z)=(z-\rho_1)\cdots (z-\rho_n) \tag{*}
+\]
+
+
+\noindent
+Next, for every $f\in\mathcal O(D)$ with $f(0)=1$ we put
+\[
+\phi(z)=\frac{f(z)}{(1-z)^n}\tag{ii}
+\]
+Then (i) gives the equality:
+\[ 
+I(f)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\Omega(e^{i\theta})\cdot |\phi(e^{i\theta})|^2\cdot d\theta\tag{iii}
+\]
+
+
+\noindent
+We will use the last expression to prove
+\medskip
+
+\noindent
+{\bf C.1 Theorem.}\emph{
+The variational problem has a unique solution whose
+minimum $I_*(n)$ is achieved by the function}
+\[ 
+f_*(z)=\frac{(1-z)^n}{\prod\, 1-\rho_\nu\cdot z)}\tag{i}
+\]
+Moreover, 
+\[ 
+I_*(n)= I(f_*)=
+\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\text{Log}\, \bigl[ \sum_{\nu=0}^{\nu=n}\, a_\nu^2\cdot\frac{1}{
+(2\cdot\text{sin}\,\frac{\theta}{2})^{2\nu}}\bigr ]\cdot d\theta\tag{ii}
+\]
+\medskip
+
+\noindent
+\emph{Proof} 
+By (iii) the variational problem
+is equivalent to seek the minimum of
+\[ 
+\min_\phi\, I(\phi)=\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\Omega(e^{i\theta})\cdot |\phi(e^{i\theta})|^2\cdot d\theta\quad\colon
+\phi(0)=1\tag{1}
+\]
+With $f_*$ as in (i) from  Theorem C.1 one has
+\[
+\phi_*(z)=  \frac{1}{\prod\, 1-\rho_\nu\cdot z)}\tag{2}
+\]
+
+
+\noindent
+Now $f_*$ is a unique minimizing function in Theorem C.1
+if we have proved the strict 
+inequality
+\[
+I(\phi_*+h)<I(\phi_*)\tag{3}
+\] 
+for every analytic function $h(z)$ in $D$ such that  $h(0)=0$.
+To show (3) we  
+notice that (1) can be replaced by a complex line integral over
+$|z|=1$ which gives
+\[
+I(\phi_*+h)=
+\frac{1}{2\pi i}\cdot\int_{|z|=1}\,
+\Omega(z)\cdot |\phi_*(z)+h(z)|^2\cdot \frac{dz}{z}=
+\]
+\[
+I(\phi_*)+I(h)+
+\frac{1}{2\pi i}
+\cdot\int_{|z|=1}\,
+\Omega(z)\cdot [\bar \phi_*(z)\cdot h(z)+ \phi_*(z)\cdot \bar h(z)]
+\cdot \frac{dz}{z}\tag{4}
+\]
+\medskip
+
+\noindent
+Since $I(h)>0$ whenever $h\neq 0$ the requested strict inequality follows if
+we show that the last integral is zero.
+To prove this we notice that the construction of $\phi_*$ gives the equation
+
+\[
+\Omega(e^{i\theta})\cdot \bar \phi(e^{i\theta})=
+(-1)^n \cdot a_0^2\cdot \frac{1}{\prod\, (e^{i\theta}-\bar \rho_\nu)}\tag{5}
+\]
+
+
+
+\noindent
+Now
+\[ 
+k(z)= \frac{1}{\prod\, (z-\bar \rho_\nu)}
+\] 
+\medskip
+
+\noindent
+is analytic in $D$ and since
+$h(0)=0$ it follows that
+
+\[
+\int_{|z|=1}\, k(z) h(z)\cdot \frac{dz}{z}= 0
+\]
+This proves that the first term in the integral from (5) vanishes and the second
+is its complex conjugate since
+$\Omega$ was real on $T$.
+Hence $f_*$ yields the unique minimizing function of the variational problem.
+The equality (ii) for  $I(f_*)$
+follows by a computation which is left to the reader.
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+%\end{document}

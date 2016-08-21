@@ -1,0 +1,1310 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+ 
+\begin{document}
+
+\centerline{\bf\large{Homogeneous distributions and the Mellin transform}}
+
+\bigskip
+
+\centerline{\emph{Contents}}
+
+\bigskip
+
+\noindent
+\emph {A. Polar distributions}
+\bigskip
+
+\noindent
+\emph {B. Homogeneous distributions}
+\bigskip
+
+
+\noindent
+\emph{C. The Radon transform}
+
+
+
+\bigskip
+
+\noindent
+\emph{D. The Mellin transform}
+
+\bigskip
+
+\noindent
+\emph {E. The family $P_+(x,y)^\lambda$}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We establish some results where analytic function theory
+is used in connection with distributions and
+asymptotic expansions.
+Special attention in the first sections is given to
+homogeneous distributions in
+${\bf{R}}^2$.
+while the last section exposes a famous result due to Mellin in [Mellin]
+which has a wide range of applications.
+A separate section is devoted to the Radon transform where
+the inversion formula has a wide range of applications but we shall not pursue
+the discussion any further. The reader may consult Helgason's
+text-book [Helgason] for the theory about radon transforms
+which include the case of higher dimension.
+In ¤ 4 we 
+establish an important result due to Mellin in [Mellin]
+and ¤ 5 contains more advanced material which relies upon
+$\mathcal D$-modue theory. So  the  presentation is
+expositary in this section.
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf  {A. Polar distributions}}
+
+\bigskip
+
+\noindent
+In the $(x,y)$-plane we can take polar coordinates where
+$x=r\cdot\text{cos}\,\theta$ and
+$y=r\cdot\text{sin}\,\theta$.
+If $\phi(x,y)$ belongs to the Schwartz space $\mathcal S$
+of rapidly decreasing $C^\infty$-functions  we  restrict $\phi$ to the
+circle of radius $r$ which after a dilation is identified
+with  unit circle $T$ and
+obtain the $\theta$-periodic function
+\[ 
+\theta\mapsto \phi_r(\theta)= \phi(r\cdot\text{cos}\,\theta,r\cdot\text{sin}\,\theta)\tag{0.1}
+\]
+
+
+\noindent
+Let $\nu$ be a distribution on $T$.
+For each $r>0$ we
+can evaluate $\nu$ on the
+$C^\infty(T)$-function $\phi_r$ which yields a function:
+\[ 
+r\mapsto \nu(\phi_r)\quad\colon\, r>0\tag{0.2}
+\]
+
+\medskip
+
+\noindent
+{\bf{A.0 Exercise.}}
+Show that (2) gives a $C^\infty$-function defined on
+$\{r>0\}$. More precisely,verify that the first order derivative becomes:
+
+
+\[
+\frac{d}{dr}(\nu(\phi_r))=
+\nu(\text{cos}\,\theta\cdot\partial_x(\phi)(r\cdot\text{cos}\,\theta,r\cdot\text{sin}\,\theta)+
+\text{sin}\,\theta\cdot\partial_y(\phi)(r\cdot\text{cos}\,\theta,r\cdot\text{sin}\,\theta))
+\]
+\medskip
+
+\noindent
+More generally, show that for each $m\geq 2$ the derivative of order $m$ becomes:
+\[
+\frac{d^m}{dr^m}(\nu(\phi_r))=\sum_{j=0}^{j=m}\,
+\binom{m}{j}\,
+\nu\bigl(\text{cos}^j\,\theta\cdot \text{sin}^{m-j}\,\theta\cdot
+\partial^j_x\partial_y^{m-j}(\phi)_r\bigr)\tag{*}
+\]
+\medskip
+
+
+\noindent
+Show also that the function in (0.2) decreases 
+rapidly as $r\to+\infty$. More precisely, for
+each positive integer $N$ one has
+\[
+\lim_{r\to\infty} r^N\cdot\nu(\phi_r)=0\tag{**}
+ \]
+ 
+\medskip
+
+
+
+\noindent
+{\bf{A.1 The function $V_\lambda$.}}
+Using (**) above it follows that
+if $\lambda$ is a complex number with
+$\mathfrak{Re}(\lambda)>-2$, then  there exists  the absolutely convergent integral
+\[ 
+V_\lambda(\phi)=
+\int_0^\infty\,
+r^{\lambda+1}\cdot \nu(\phi_r)\cdot dr\tag{1}
+\]
+
+
+\medskip
+
+\noindent
+{\bf{A.2 Exercise }}
+Show that $V_\lambda$
+is an analytic function of
+$\lambda$ in the open half-plane
+$\mathfrak{Re}(\lambda)>-2$ and
+use a partial integration with respect to $r$ to show that:
+\[
+(\lambda+2)V_\lambda(\phi)=-\int_0^\infty
+r^{\lambda+2}\cdot \frac{d}{dr}[\nu(\phi_r)]\cdot dr
+\]
+Continue this procedure and show that for every
+$N\geq 1$ one has:
+\[
+(\lambda+2)\cdots(\lambda+2+N)\cdot V_\lambda(\phi)=
+(-1)^{N+1}\int_0^\infty
+r^{\lambda+2+N}\cdot \frac{d^N}{dr^N}[\nu(\phi_r)]\cdot dr\tag{*}
+\]
+
+
+
+
+\noindent
+Together with  (*) in Exercis A.0 
+we can conclude that following:
+
+
+\medskip
+
+\noindent
+{\bf{A.3 Proposition.}} \emph{For each
+$\phi\in \mathcal S$
+it follows that   $V_\lambda(\phi)$ 
+extends to a meromorphic
+function in the whole complex
+$\lambda$-plane with at most simple poles at
+the integers $-2,-3,\ldots$.}
+
+
+
+\bigskip
+
+
+\noindent{\bf{A.4 Polar distributions.}}
+As $\phi$ varies in $\mathcal S$ 
+we obtain a
+distribution-valued function
+$V_\lambda$.
+If $\delta>0$ and 
+$\phi(x,y)\in\mathcal S$ is identically zero in the
+disc $\{x^2+y^2<\delta^2\}$, then we only integrate
+(1) in A.1 when $r\geq\delta$ and we notice that the function
+\[
+ \lambda\mapsto \int_\delta^\infty\,
+r^{\lambda+1}\cdot \nu(\phi_r)\cdot dr
+\]
+is an entire function of $\lambda$ whose complex derivative is given by
+\[
+ \lambda\mapsto \int_\delta^\infty\,
+\log r\cdot r^{\lambda+1}\cdot \nu(\phi_r)\cdot dr
+\]
+
+\medskip
+
+\noindent
+Regarding the distribution-valued function $V_\lambda$
+this means that 
+eventual poles  consist of Dirac distributions at the origin.
+Let us first study if   a pole can occur  at $-2$.
+With $\lambda=-2+\zeta$ we have
+\[
+\zeta\cdot V_{-2+\zeta}(\phi)=-
+\int_0^\infty\, r^\zeta\cdot 
+\frac{d}{dr}[\nu(\phi_r)]\cdot dr\tag{i}
+\]
+Since $r^\zeta\to 1$ holds for each $r>0$ as
+$\zeta\to 0$, the right hand side has the limit
+\[
+\int_0^\infty\, 
+\frac{d}{dr}[\nu(\phi_r)]\cdot dr=\nu(\phi_0)=
+\nu(1_T)\cdot \phi(0)\tag{ii}
+\]
+where $1_T$ is the identity function on $T$ on which $\nu$ is evaluated.
+Hence $V_\lambda$ has a pole at $\lambda=-2$ if and only if
+$\nu(1_T)\neq 0$ and in this case the polar distribution is
+$\nu(1_T)$ times the Dirac distribution $\delta_0$.
+
+\medskip
+
+\noindent
+{\bf{A.5 Exercise}}
+Use the functional equation formula (*)
+in A.2 to show the following:
+
+\bigskip
+
+
+\noindent
+{\bf{A.6 Proposition }}
+\emph{For each $N\geq 1$ the polar distribution at
+$\lambda=-N-2$ is zero if and only if }
+
+\[ 
+\nu(\text{cos}^j\,\theta\cdot \text{sin}^k\,\theta)=0
+\]
+\emph{hold for all pairs of non-negative integers $j,k$ with
+$j+k=N$.}
+\medskip
+
+\noindent
+{\bf{Remark.}} Thus, no pole occurs 
+at $\lambda=-N-2$
+if and only if $\nu$ vanishes on the
+$N+1$-dimensional subspace of $C^\infty(T)$
+spanned by
+$\{\text{cos}^j\,\theta\cdot \text{sin}^{N-j}\,\theta)\quad\colon
+0\leq j\leq N\}$.
+Next, if a pole occurs we have a Laurent series:
+\[
+V_{-N-2+z}=
+\frac{\gamma_N}{\zeta}+ V_{-N-2}+\sum_{n=1}^\infty
+\rho_j\cdot \zeta^j
+\]
+where $\gamma_N$ is the polar distribution.
+\medskip
+
+\noindent
+{\bf{A.7 Exercise,}}
+Show that if a pole occurs then
+$\gamma_N$ is the Dirac distribution given by:
+\[ 
+\gamma_N(\phi)=\frac{1}{N\,!}\cdot
+\sum_{j=0}^{N}\,
+\nu((\text{cos}^j\,\theta\cdot \text{sin}^{N-j}\,\theta)\cdot
+\partial_x^j\partial_y^{N-j}(\phi)(0)\tag{*}
+\]
+\newpage
+
+
+
+
+
+
+
+\centerline
+{\bf{B. Homogeneous distributions.}}
+\medskip
+
+
+\noindent
+A distribution $\mu$ defined outside the origin in
+${\bf{R}}^2$ is homogeneous of degree $\lambda$ if
+\[ 
+\mathcal E(\mu)=\lambda\cdot \mu\tag{*}
+\] 
+where $\mathcal E=x\partial_x+y\partial_y$ is the radial vector field.
+Denote by $\mathcal S^*(\lambda)$ the family of all
+$\lambda$-homogeneous distribution in
+${\bf{R}}^2\setminus\{0\}$.
+\bigskip
+
+\noindent
+{\bf{B.1 Proposition.}}
+\emph{$\mathcal S^*(\lambda)$ is in a 1-1 correspondence with
+$\mathfrak{Db}(T)$ when  we for every distribution $\nu$ on $T$
+consider the restriction of $V_\lambda$ to
+${\bf{R}}^2\setminus\{0\}$.}
+\medskip
+
+\noindent
+{\bf{B.2 Exercise.}}
+Prove this result. The hint is to verify that
+one has the equality
+
+\[ 
+\mathcal E(V_\lambda)=\lambda\cdot V_\lambda
+\] 
+when one  starts from an arbitrary distribution $\nu$ on $T$.
+\bigskip
+
+
+\noindent
+{\bf{B.3 The space $\mathcal S^*[\lambda]$}}.
+This the space of tempered distributions on
+${\bf{R}}^2$ which are everywhere homogeneous. So a tempered
+distribution $\mu$ belongs to
+$ \mathcal S^*[\lambda]$ 
+if and only if
+\[ 
+\mathcal E(\mu)=\lambda\cdot\mu
+\]
+where the equality holds in $\mathcal S^*$.
+\medskip
+
+
+\noindent
+{\bf{B.4 Example of distributions in
+$\mathcal S^*[\lambda]$}}.
+Let $\nu$ be  a distribution on $T$ and
+construct the meromorphic function $V_\lambda$. It is clear that
+
+\[
+ \mathcal E(V_\lambda)=\lambda\cdot V_\lambda
+ \quad\text{holds when}\quad \,\mathfrak{Re}(\lambda)>-2\tag{i}
+ \]
+ 
+ \medskip
+ 
+\noindent
+Let 
+$\lambda_*$ be a complex number such that
+$V_\lambda$ has no pole at 
+$\lambda_*$. By analyticity it follows from (i) that the constant term
+$V_{\lambda_*}$ satisfies
+\[
+\mathcal E(V_{\lambda_*})=\lambda_*\cdot V_{\lambda_*}\tag{ii}
+\]
+Hence $V_{\lambda_*}$ belongs to $\mathcal S^*[\lambda_*]$.
+By Proposition A.3 no poles occur 
+when
+$\lambda_*$ is outside the set
+$\{-2,-3,\ldots\}$ which  gives the following:
+
+
+\medskip
+
+\noindent
+{\bf{B.5 Proposition.}}
+\emph{For each $\lambda_*$ outside
+the set $\{-2,-3,\ldots\}$ there exists a bijective map}
+\[
+\nu\mapsto V_{\lambda_*}
+\] 
+\emph{from $\mathfrak{Db}(T)$ into $\mathcal S^*[\lambda_*]$.}
+\bigskip
+
+
+
+
+
+\noindent
+{\bf{B.6 The action  by $\mathcal E$
+on
+Dirac distributions.}}
+Using Dirac distributions at the origin we shall construct
+homogeneous distributions which do not arises
+via distributions from $T$ as above.
+To begin with
+the complex vector space of all Dirac distributions
+is a direct sum of the subspaces
+\[
+\text{Dirac}[m]=
+\oplus\,{\bf{C}}\cdot \partial_x^k\partial_y^j(\delta_0)
+\quad\colon\, j+k=m\tag{1}
+\]
+where $m$ are non-negative integers.
+Next, in the ring
+$\mathcal D$ of differential operators we
+have the identity
+\[ 
+\mathcal E=\partial_x\cdot x+\partial_y\cdot y-2
+\]
+Since $x\cdot \delta_0=y\cdot \delta_0=0$ it follows that
+\[ 
+\mathcal E(\delta_0)=-2\cdot \delta_0
+\]
+
+
+\medskip
+
+\noindent
+In general the reader may verify by an induction over $m$ that
+
+\[ 
+\mathcal E(\gamma)= -(m+2)\cdot\gamma
+\quad\text{hold for all}\quad \gamma\in\text{Dirac}[m]\tag{2}
+\]
+\medskip
+
+\noindent
+Hence $\text{Dirac}[-m-2]$ is a subspace of
+$S^*[-m-2]$ which has dimension $m+1$. In particular
+$S^*[-2]$ contains  the 1-dimensional vector space generated
+by $\delta_0$.
+
+
+
+
+\bigskip
+
+
+\centerline {\bf{B.7 The description of $\mathcal S^*[-2-N]$}}.
+\medskip
+
+\noindent
+Let $m$ be a non-negative integer. 
+Denote by $\mathfrak{Db}(T)[m+2]$
+the set of distributions
+$\nu$  on
+$T$ such that $V_\lambda$ has no pole at
+$-2-m$. From B.4 it follows that one has an injective map
+
+\[
+\mathfrak{Db}(T)[m+2]\mapsto S^*[-2-m]\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{B.8 Exercise.}}
+Show that
+\[
+S^*[-2-m]=\mathfrak{Db}(T)[m+2]\oplus \text{Dirac}[m]
+\] 
+hold for every integer $m\geq 0$.
+
+\medskip
+
+
+\noindent
+{\bf{B.9 A converse to (*)}}.
+Let $m$ be a non-negative integer and
+consider a distribution $\nu$ on $T$.
+At $\lambda=-m-2$ we have the constant term $V_{-m-2}$ of the Laurent expansion of $V_\lambda$. We have seen
+that the distribution $V_{-m-2}$ is homogeneous of order
+$-m-2$ if no pole occurs.
+It turns out that the absence of a pole also is necessary in order
+that
+$V_{-2-m}$ belongs to $S^*[-2-m]$.
+To show this 
+we suppose that a pole is present which gives the Laurent series
+
+\[ 
+V_{-2-m+\zeta}= \frac{\gamma}{\zeta}+ V_{-2-m}+
+\sum_{j=1}^\infty \gamma_j\cdot \zeta^j
+\]
+where $\gamma$ now is a non-zero Dirac distribution
+which belongs to $\text{Dirac}[-2-m]$. Now we have
+
+
+\[
+\mathcal E(\frac{\gamma}{\zeta}+V_{-m-2}+\sum\rho_j\zeta^j)=
+(-m-2+\zeta)\cdot V_{-m-2+\zeta}=
+\]
+\[ 
+(-m-2)\cdot\frac{\gamma}{\zeta}+
+\gamma+(-m-2)V_{-m-2}+\zeta\cdot V_{-2-m}+(-m-2+\zeta)\cdot \sum\rho_j\zeta^j
+\] 
+Identifying the constant term we get
+
+\[
+\mathcal E(V_{-m-2})=\gamma-(m+2)V_{-2-m}\tag{2}
+\]
+Hence the distribution $V_{-m-2}$ fails to be homogeneous.
+
+\bigskip
+
+\noindent
+{\bf{B.10 Example.}}
+Let $\nu=1_T$ be the  identity density on $T$.
+So here
+\[ 
+V_\lambda(\phi)=\int_0^\infty\, [\int_0^{2\pi}\, \phi(r,\theta)\, d\theta\,]\, 
+r^{\lambda+1}dr
+\]
+Outside the origin we see that the distribution $V_{-2}$
+is given by the density function
+\[ 
+f=\frac{1}{x^2+y^2}
+\]
+Moreover, it is clear that
+$V_\lambda$ has a pole when
+$\lambda=-2$ and whose polar distribution is $\delta_0$.
+The conclusion is that the distribution $V_{-2}$ is not homogeneous.
+Notice that we encounter another obstacle since
+the function $f$ above is not locally integrable at
+the origin so it is not clear how
+to define the distribution $V_{-2}$.
+If a test-function $\phi$ is zero at the origin, then
+the integral
+\[
+\iint _{{\bf{R^2}}}\, \frac{\phi(x,y)}{x^2+y^2} \cdot dxdy
+\] 
+is defined.
+So the action by $V_{-2}$
+is determined on a the hyperplane of all test-functions which
+are zero at the origin.
+There remains to evaluate $V_{-2}(\phi)$ when
+$\phi(0,0)\neq 0$.
+
+
+
+
+
+
+\newpage
+
+\centerline {\bf{B.12 Fourier transforms.}}
+\medskip
+
+\noindent
+The Fourier transform maps tempered distributions in the $(x,y)$-space 
+to tempered distribution the $(\xi,\eta)$-space.
+By the laws from XX we 
+the radial field $\mathcal E=x\partial_x+y\partial_y$
+is sent into the first order differential operator 
+
+\[
+(i\partial_\xi)\cdot i\xi+(i\partial_\eta)\cdot i\eta=
+-\partial_\xi\cdot \xi-\partial_\eta\cdot \eta=-\xi\partial_\xi-1-
+-\eta\partial_\eta-1=-\mathcal E^*-2
+\]
+
+\noindent
+where $\mathcal E^*$ is the Euler field in the 
+$(\xi,\eta)$-space. So if $\mu\in S^*[\lambda]$ is a
+homogeneous distribution in
+the $(x,y)$-space the
+equality $\mathcal E(\mu)= \lambda\cdot \mu$
+entails that
+\[
+-(\mathcal E^*+2)(\widehat\mu)= \lambda\cdot \widehat\mu\implies
+\mathcal E^(\widehat\mu)=-(2+\lambda)\widehat\mu
+\]
+Hence the Fourier transform gives a bijective map between
+$S^*[\lambda]$ and the space
+šf hiomogeneous distributions in the
+$(\xi,\eta)$-space of degree $-2-\lambda$.
+\medskip
+
+
+\noindent
+{\bf{Example.}}
+The Dirac measure
+$\delta_0$ is homogenoues of degree $-2$ so here
+$\widehat\delta_0$ should be in $S^*[0]$ and this is indeed the
+fact since
+it is given by the constant density in the $(x,\xi)$-space.
+Notice also that the Fourier transform sends
+$S^*[-1]$ into itself.
+\bigskip
+
+\noindent
+{\bf{B.13 The $\lambda$-maps on $\mathfrak{Db}(T)$.}}
+Let $\lambda$ be a complex umber outside the set
+$\{-2,-3,\ldots\}$. 
+To each $\nu\in\mathfrak{Db}(T)$
+we get the distribution $V_\lambda$ which belongs to
+$S^*[\lambda)$.
+It follows that the Fourier transform
+$\widehat V_\lambda$ belongs to $S^*[-\lambda-2]$ and
+this gives a unique distribution
+$\nu^*$ on $T$
+such that
+\[
+\widehat V_\lambda=V^*_{-\lambda-2}\tag{*}
+\]
+Keeping $\lambda$ fixed this means that we get a bijective map from
+$\mathfrak{Db}(T)$ to itself defined by
+\[ 
+\nu\mapsto \nu^*
+\]
+where the rule is that (*) holds.
+We denote this map by
+$\mathcal H_\lambda$ and refer to this as Fourier's
+$\lambda$-map on $\mathfrak{Db}(T)$.
+\bigskip
+
+
+\noindent
+{\bf{Exercise.}}
+Assume that $\lambda$ is outside
+$\{-2,-3,\ldots\}$.
+Let $m$ be a posiotove integer and $P_m(\xi,\eta)$
+is a homogenous polynomial of degree $m$.
+Now we get a homogenous distribution
+in the $(x,\xi)$-space
+of degree $m+\lambda$ defined outside the origin by the density 
+\[
+P_m(\xi,\eta)\cdot (\xi^2+\eta^2)^{\frac{\lambda}{2}}\tag{1}
+\]
+
+
+\noindent
+We seek a homogeneous distribution $\mu_\lambda$ in the $(x,y)$-space
+such that $\widehat\mu_\lambda$ is equal to (1).
+In the $(x,y)$-space we first consider the distribution
+\[ 
+\gamma= (x^2+y^2)^{-\frac{\lambda}{2}-1}
+\] 
+and notice that $\widehat\gamma$ is equal to the
+distribution 
+$(\xi^2+\eta^2)^{\frac{\lambda}{2}}$.
+Fourier's inversion formula entails that
+(1) is equal to
+\[
+i^{-m}\cdot P_m(\partial_x,\partial_y)(\gamma)\tag{2}
+\]
+\medskip
+
+\noindent
+{\bf{Example.}}
+Take $m=1$ and $P_1(\xi,\eta)=\xi$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf  C. The Radon transform}
+
+\bigskip
+
+\noindent
+In the article  [Radon] from 1917
+Johann Radon 
+established  an inversion formula which recaptures 
+a  test-function $f(x,y)$ in ${\bf{R}}^2$
+via   integrals over  affine lines
+in the
+$(x,y)$-plane. This family 
+is parametrized by pairs $(p,\alpha)$,
+where  $p\in{\bf{R}}$ and $0\leq \alpha<\pi$
+give  the line
+$\ell(p,\alpha)$:
+\[
+ t\mapsto 
+ \bigl(p\cdot \text{cos}\,\alpha-
+ t\cdot \text{sin}\,\alpha\, , \,p\cdot \text{sin}\,\alpha+
+ t\cdot \text{cos}\,\alpha\bigr)
+ \]
+
+
+\noindent
+The Radon  transform of $f$ is a function of the pairs $(\alpha,p)$
+defined by:
+\[
+R_\alpha(p)=\int_{\ell(p,\alpha)}\,f\cdot dt=
+\int_{-\infty}^\infty\, 
+f\bigl(p\cdot \text{cos}\,\alpha-
+t\cdot \text{sin}\,\alpha\, , \,p\cdot \text{sin}\,\alpha+
+ t\cdot \text{cos}\,\alpha\bigr)
+\cdot dt\tag{*}
+ \]
+Thus, for a given $\alpha$ we  take the mean value of $f$ over an affine line
+which is $\perp$ to the vector $(\cos\alpha,\sin\alpha)$ and 
+whose distance to the origin is $|p|$.
+We give
+an inversion formula which recaptures $f$ from the Radon transform.
+To achieve this
+we construct the partial  Fourier transform
+of $R$ with respect to $p$, i.e. set
+\[
+ \widehat R_\alpha( \tau)=\int e^{-i\tau p}\cdot R_\alpha(p)\cdot dp\tag{1}
+ \]
+Consider the linear map
+$(p,\tau)\mapsto (x,y)$ where
+\[
+x= p\cdot \text{cos}\,\alpha-
+t\cdot  \text{sin}\,\alpha\quad\text{and}\quad
+y=p\cdot \text{sin}\,\alpha+t\cdot \text{cos}\,\alpha\implies
+\]
+\[
+p=\text{cos}(\alpha)\cdot x+
+\text{sin}(\alpha)\cdot y\tag{2}
+\]
+Since  
+$ \text{cos}^2\,\alpha+\text{sin}^2\,\alpha=1$ this substitution gives
+$dpdt=dxdy$ and hence
+(2) entails that
+\[
+ \widehat R_\alpha(\tau)=
+\int\, e^{-i\tau(x\cdot \text{cos}\,\alpha+
+y\cdot \text{sin}\,\alpha)}
+\cdot f(x,y)\cdot dxdy=
+\widehat f(\tau\cdot \text{cos}\,\alpha\,,\,
+\tau\cdot \text{sin}\,\alpha)\tag{3}
+\]
+
+\noindent
+Next, Fourier's inversion formula applied to $f$ gives:
+\[
+f(x,y)=\frac{1}{(2\pi)^2}\cdot
+\int\, e^{i(x\xi+y\eta)}\cdot
+\widehat f(\xi,\eta)\cdot d\xi d\eta
+\]
+Now we use the substitution
+$(\tau,\alpha)\mapsto (\xi,\eta)$ where
+\[ 
+\xi=\text{cos}(\alpha)\cdot \tau\quad\text{and}\quad
+\eta=\text{sin}(\alpha)\cdot \tau
+\]
+Here $d\xi d\eta=|\tau|\cdot d\tau d\alpha$ and then
+(3) gives
+the equality
+\[
+f(x,y)=
+\frac{1}{(2\pi)^2}\int_0^\pi\,\bigl[
+\int_{-\infty}^\infty\,
+e^{i\tau(x\cdot \text{cos}\,\alpha+
+y\cdot \text{sin}\,\alpha)}
+\cdot \widehat R_\alpha(\tau)\cdot |\tau|\cdot d\tau\bigr]\cdot d\alpha\tag{*}
+\]
+
+
+\noindent
+To get an inversion formula  where 
+the partial Fourier transform
+$\widehat R_f(\alpha,\tau)$
+does not appear we  apply the Fouriers inversion formula in
+dimension one. Namely, for each $A>0$ we set
+\[ 
+K_A(u)=
+\frac{1}{2\pi}
+\int_{-A}^A\,
+e^{i\tau u}\cdot |\tau|\cdot d\tau\tag{4}
+\]
+This function admits a alternative
+description since we have
+\[
+K_A(u)=
+\frac{1}{\pi}
+\int_0^A\,
+\tau\cdot \text{cos}(\tau u)\cdot d\tau=
+\frac{1}{\pi}\cdot \frac{d}{du}\bigl(
+\int_0^A\,
+\text{sin}(\tau u) \cdot d\tau\bigr)=
+\]
+\[
+\frac{1}{\pi}\cdot \frac{d}{du}\bigl(
+\frac{1-\text{cos}(Au)}{u}\bigr)=
+\frac{1}{\pi}\cdot [A\cdot \frac{\sin Au}{u}-\frac{1-\text{cos}(Au)}{u^2}]\tag{5}
+\]
+
+
+\noindent
+Next, 
+by the convolution formula for Fourier transforms
+the right hand side in (*) becomes
+\[
+\lim_{A\to\infty}\,
+\frac{1}{2\pi}\int_0^\pi\,\bigl[
+\int_{-\infty}^\infty\,
+R_\alpha(
+x\cdot \text{cos}\,\alpha+
+y\cdot \text{sin}\,\alpha-u)\cdot K_A(u) du\,\bigr]
+\cdot d\alpha\tag{6}
+\]
+
+
+
+
+
+
+\noindent
+After the substitution
+$u\to \frac{s}{A}$ and applying (5) 
+the limit in (*) becomes
+\[ 
+\lim_{A\to\infty}\,
+\int_0^\pi\,\bigl[\int_{-\infty}^\infty\, R_\alpha(
+x\cdot \text{cos}\,\alpha+
+y\cdot \text{sin}\,\alpha-\frac{s}{A})
+\cdot \bigl(
+A\cdot \frac{\sin s}{s}-
+A\cdot \frac{1-\cos s}{s^2}\bigr)\cdot ds\,\bigr ] \cdot d\alpha\tag{**}
+\]
+
+
+\newpage
+
+
+\centerline{\bf  D. The Mellin transform}
+
+\bigskip
+
+\noindent
+In many situations one encounters a
+function $J(\epsilon)$ which is defined for $\epsilon>0$
+and has an asymptotic expansion as $\epsilon\to 0$ by
+fractional powers which  means  that there
+exists a strictly increasing sequence of real numbers
+$0<q_1<q_2\ldots$with $q_N\to +\infty$
+and constants $c_1,c_2,\ldots$
+such that for every $N$ there exists some $\delta>0$ 
+which in general depends upon $N$ and:
+\[
+\lim_{\epsilon\to 0}\,
+\frac{J(\epsilon)-(c_1e^{q_1}+\ldots +c_Ne^{q_N})}
+{\epsilon^{q_N+\delta}}= 0\tag{*}
+\] 
+
+\noindent
+It is clear that the constants $\{c_k\}$ are uniquely determined 
+by $J$ and the $q$-numbers if (*) holds.
+We are only concerned with the behavior of $J$ for small $\epsilon$
+and may therefore assume that $J(\epsilon)=0$ when $\epsilon>1$.
+
+\medskip
+
+\noindent{\bf{The Mellin transform.}}
+Let  $J(\epsilon)$ be some bounded and continuous function on
+$[0,1]$  and zero if $\epsilon\geq 1$ and  the integral
+\[ 
+\int_0^1\, |J(\epsilon)|\cdot \frac{d\epsilon}{\epsilon}<\infty\tag{1}
+\]
+When $\mathfrak{Re}(\lambda)>0$ we set
+\[
+ M(\lambda)=\lambda\cdot \int_0^1\, J(\epsilon)\cdot \epsilon^{\lambda-1}\cdot d\epsilon\tag{2}
+\]
+
+\noindent
+It is clear that $M(\lambda)$ is an analytic function in the right
+half-plane $\mathfrak{Re}(\lambda)>0$ which by (1) extends to a continuous function
+on the closed half\vvv plane. Moreover, if we assume that
+$j$ has an asymptotic expansion (*) it follows
+that
+$ M(\lambda)$ extends to a meromorphic function in the whole complex
+$\lambda$-plane whose  poles are contained in the set
+$\{-q_k\}$. In fact, this follows easily via (*) since
+\[
+\lambda\int_0^1\, \epsilon^q\cdot  \epsilon^{\lambda-1}\epsilon=
+\frac{1}{\lambda+q}\quad\text{for every}\quad q>0
+\] \medskip
+
+\noindent
+Along the imaginary axis  we have
+\[
+M(is)=is\int_0^1\, J(\epsilon)\cdot \epsilon^{is}\cdot 
+\frac{d\epsilon}{\epsilon}\tag{3}
+\]
+Apart from the factor $i$ this is the Fourier transform of 
+$J$ on  the multiplicative line ${\bf{R}}^+$.
+So by XXX one has  the inversion formula
+\[ 
+J(\epsilon)=\lim_{R\to\infty}\, J_R(\epsilon)=
+\,\int_R^R\epsilon^{-is}\cdot
+\frac{ M(is)}{is}\cdot ds\tag{4}
+\]
+\medskip
+
+
+
+
+\noindent
+Mellin discovered
+a reverse process  where one from the start  only assumes that
+(1) holds after   an asymptotic expansion (*) is derived when
+$M(\lambda)$ extends to a meromorphic function with simple poles confined to a set
+$\{\vvv q\uuu k\}$ of strictly negative real numbers
+which in addition satisfies certain growth conditions which
+we give below.
+
+\medskip
+
+\noindent
+{\bf{The Mellin conditions.}}
+Let $M(\lambda)$
+be a meromorphic function
+in the complex $\lambda$-plane with simple poles at a
+strictly decreasing sequence of negative  numbers
+$\{-q_\nu\}$ where
+$0<q_1<q_2<\ldots$.
+We say that the meromorphic function satisfies
+the Mellin conditions when the following hold:
+
+\medskip
+\noindent
+\emph{For every
+positive integer $N$ there exists some  $q_N<A<q_{N+1}$
+such that the follwing two limit formulas hold:}
+\[
+\lim_{R\to\infty}\,
+\frac{1}{R}\cdot
+\int_{-R}^R\,  \bigl|M(-A+is)\bigr|\cdot ds=0\tag{i}
+\]
+\[
+\lim_{R\to\infty}\,\int_0^{-A}\, 
+\bigl[\epsilon^{-t-iR}\cdot \frac{M(t+iR)}{t+iR}-
+[\epsilon^{-t+iR}\cdot \frac{M(t-iR}{t-iR}\bigr]\cdot dt=0\tag{ii}
+\]
+\medskip
+
+
+
+\noindent
+{\bf{3. Theorem.}}\emph{If the meromorphic function
+$M(\lambda)$ satisfies the Mellin conditions it follows that
+the $J$-function defined by}
+\[
+J(\epsilon) =\lim_{R\to\infty}\, \int_{-R}^R\,
+\epsilon^{-is}\cdot \frac{M(is)}{is}\, ds
+\]
+has an asymptotic expansion where the constants
+$\{c_k\}$ whis appear in (*) are given by:
+\[ 
+c_k=\mathfrak{res}(M:q_k)\quad\colon\quad k=1,2,\ldots
+\]
+
+
+
+\noindent
+\emph{Proof.}
+With $\lambda=t+is$ we consider  line integrals over rectangles
+\[
+\square_{R,A}=\{-A<t<0\}\cap\, \{-R<s<R\}\tag{5}
+\]
+where one for  an  arbitrary positive integer $N$  choose
+$A$ so that 
+\[
+q_N<A<q_{N+1} \tag{6}
+\]
+With $\epsilon>0$
+kept fixed we have the analytic function in
+$\square_{R,A}$  defined by
+\[ 
+\lambda\mapsto \epsilon^{-\lambda}\cdot \frac{M(\lambda)}{\lambda}\tag{6}
+\]
+
+
+
+
+
+\noindent
+Cauchy's residue formula gives the equality:
+\[
+2\pi i\cdot J_R(\epsilon)=
+2\pi i\cdot \sum_{k=1}^{k=N}\,q_k^{-1}\cdot 
+\mathfrak{res}(M(\lambda):q_k)\cdot \epsilon^{q_k}
++I_1(R,A)+I_2(R,A)\tag{i}
+\]
+where 
+\[
+I_1(R)=\int_0^{-A}\, 
+\bigl[\epsilon^{-t-iR}\cdot \frac{M(t+iR)}{t+iR}-
+[\epsilon^{-t+iR}\cdot \frac{M(t-iR}{t-iR}\bigr]\cdot dt\tag{ii}
+\]
+\[
+I_2(R)=-\int_{-R}^R\,  \epsilon^{A-is}\cdot 
+\frac{M(-A+is)}{-A+is}\cdot ds\tag{iii}
+\]
+
+
+\noindent
+The triangle inequality gives
+
+\[
+|I_2(R)|\leq  \epsilon^A\cdot 
+\int_{-R}^R\,  \bigl|\frac{M(-A+is)}{-A+iRs}\bigr|\cdot ds
+\leq\epsilon^A\cdot\frac{1}{R}\cdot
+\int_{-R}^R\,  \bigl|M(-A+is)\bigr|\cdot ds\tag{3.1}
+\]
+
+
+
+
+
+\noindent
+Above we have  $A>q_N$ and hence $\epsilon^A$
+gives an admissable error for an asymptotic expansion
+up to order $N$
+and Theorem ¤ XX follows.
+
+
+
+
+
+\bigskip
+
+\noindent
+{\bf{4. The case of
+multiple roots.}}
+Keeping Meelin's   conditions one
+can relax the hypothesis that the poles of
+$M(\lambda)$ are simple and obtain
+an asymptotic expansion of the $J$-function where 
+the terms $\{c_k\epsilon^{q_k}\}$ in  (*)
+are replaced by finite sums of the form
+\[ 
+\sum_{\nu=0}^{m_k-1}\, c_{k,\nu}\cdot (\log \epsilon)^\nu\cdot \epsilon^{q_k}\tag{1}
+\]
+where $m_k$ is the multiplicity of the pole of $M(\lambda)$ at $q_k$.
+To see this we notice that while 
+Cauchy's residue formula was applied during the proof above
+the terms
+$2\pi i\cdot q_k^{-1}\mathfrak{res}(M(\lambda):q_k)$
+are replaced by
+\[
+2\pi i\cdot \mathfrak{res}(\epsilon^{-\lambda}M(\lambda):q_k)\tag{2}
+\]
+For a given $k$ we set $\lambda=-q_k+\zeta$
+and here  the residue is found via  
+the expansion
+\[
+\epsilon ^{q_k+\zeta}=\epsilon^{q_k}\cdot
+\bigl [1+\sum_{\nu=1}^\infty
+\,(\log \epsilon)^\nu\cdot\zeta^\nu\bigr]
+\]
+
+\newpage
+
+
+\noindent
+{\bf{Example.}}
+Suppose that $M(\lambda)$ has a double pole at $-q_k$
+with a local Laurent expansion
+\[
+M(-q_k+\zeta)= \frac{c_k}{\zeta^2}+a_0+a_1\zeta+\ldots
+\]
+In this case the residue in (2) becomes
+\[
+\mathfrak{res}(\epsilon^{-\lambda}M(\lambda):q_k)=
+c_k\cdot \epsilon ^{q_k}\cdot \log\epsilon\tag{3}
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+To appreciate Mellin's result one should consider various examples where
+the point is that other kind of methods to begin with prove that
+the $M$\vvv function has a "nice" meromorphic extension as above.
+Quite extensive classes of situations where this applies are derived via
+$\mathcal D$\vvv module theory.
+The reader may also consult the  article [Barlet\vvv Maire]
+where Mellin's result is extended to give complex
+expansions, i.e here a $J$\vvv function is defined in a punctured complex disc
+where asymptotic expansions appear
+when a complex variable $\zeta$ tends to zero instead of 
+taking limits as in (*) over positive real $\epsilon$.
+\medskip
+
+\noindent
+Let us also point out that
+one can consider aymptotic expansions of
+distribution-valued functions.
+Consider for example a real-valued polynomial $P(x,y)$ of two variables.
+By Sard's  Lemma there exists some $s_*>0$ such that
+$P$ has non-critical  values in $(0,s_*)$, i.e.
+for every
+$0<s<s_*$ the real hypersurface
+$\{P=s\}$ is a non-singular.
+It consists in general of a union of a (possibly empty) finite 
+family of closed
+bounded curves and   some union of simple curves which
+are unbounded. The reader should contemplate upon 
+examples such as $P(y,x)= y^2-x^3-2x$.
+In addition to "naive  geometric pictures"
+one can study distribution-valued functions.
+Namely, for each $\phi(x,y)$ in the Schwartz class
+we set
+\[
+J_\phi(s)= \int_{\{P=s\}}\, \phi\cdot dx
+\]
+where one has taken a sum of line integrals over
+the family of  curves which constitute
+$\{P=s\}$ and they  have been  oriented in a natural fashion.
+Now one attains an asymptotic expnasion which
+gives a far more
+detailed description of the "naive geometric pictures".
+Namely, one finds that
+the $\mathcal S^*$-valued $J$-function has an asymptoptic expansion
+(*) whose  coefficients  are
+tempered distributions.
+That such asymptotic expansions exist
+was shown  
+by Marcel Ruesz in special cases and used to construct fundamenntal solutions.
+See also
+the text-book series [Gelfand-et.al].
+In a more general set-up where
+$P(x,y)$ is an arbitrary polynomial and
+even can depend upon more than two variables, the
+existence of an aymptotic expnbasion was
+established by Nils Nilsson in the impressive article [Nilsson].
+Later work has employed Hironka's desingularisation which
+and far-rechaing studies of asymptotic expansions as above
+occur in
+$\mathcal D$-module theory where one foremost should mention
+contributions by Barlet.
+Here it would bring us to far to
+expose this theory in detail. For a general account about
+$\mathcal D$-module theory and how it is used to
+construct asymptotic expansions I refer to my  article [Bjšrk] in [Abel Legacy].
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+\bigskip
+
+\centerline{\bf  {E. The family $\int\,P_+^{2\lambda}$}}
+
+\bigskip
+
+\noindent
+Let $P(x,y)$ be a real-valued polynomial 
+in ${\bf{R}}^2$.
+When $\mathfrak{Re}(\lambda)>0$
+it is clear that we obtain a tempered distribution defined by
+\[
+\phi\mapsto \int_{\{P>0\}}\, P(x,y)^{2\lambda}\cdot\phi(x,y)\cdot dxdy\tag{*}
+\]
+Moreover,  this gives a distribution-valued holomorphic
+function in the right half-plane.
+More generally we can
+consider 
+a connected component $\Omega$ of the set $\{P>0\}$
+and obtain the $\mathcal S^*$-valued function defined by:
+\[
+\phi\mapsto \int_\Omega\, P(x,y)^{2\lambda}\cdot\phi(x,y)\cdot dxdy\tag{**}
+\]
+\medskip
+
+\noindent
+It turns out that both (*) and (**) extend to meromorphic
+distribution valued functions in the whole complex
+$\lambda$-plane and there exists a 
+finite set of positive rational numbers
+$\{ q_\nu\}$
+such that the poles are contained in the set
+\[ 
+\cup_{k=1}^m\, \mathcal A_k=\{-q_k-n\quad\colon n=0,1,2\ldots\}
+\]
+\medskip
+
+
+\noindent
+Moreover, these meromorphic extensions satisfy the 
+Mellin condtiions which
+can be used to recover the asymptotic expansions which were
+described in ¤ XX.
+\bigskip
+
+
+\noindent
+{\bf{The  functional equation.}}
+Using algebraic properties of  the Weyl algebra 
+of differential operators with polynomial coefficients, Joseph Bernstein gave
+a  remarble simple proof 
+of the mere existence of the meromorphic
+extension of the  distribution-valued function
+in (*) above which we denote
+by $\mathcal P_+^\lambda$.
+More precisely,  
+the meromorphic
+extension is   achieved by a functional equation. Namely, 
+the meromorphic extension in
+(*) follows from the existence of a non-zero polynomial $b(\lambda)$ in
+${\bf{C}}[\lambda]$ such that
+
+\[
+b(\lambda)\cdot\int_{\{P>0\}}\,P(x,y)^{2\lambda}\cdot\phi(x,y)\cdot dxdy
+=
+\] 
+\[
+\sum\,\lambda^k
+\cdot\int _{\{P>0\}}\, P(x,y)^{2\lambda+1}\cdot Q_k(\phi)(x,y)\cdot dxdy\tag{*}
+\]
+hold for every $\phi$ in $\mathcal S({\bf{R}}^2)$
+where $\{Q_k\}$ is a finite set of differential operators 
+indexed by non-negative integers
+which  belong 
+to the Weyl algebra $A_2$, i.e., they are globally definied
+differential operators wirh polynomial coefficients.
+Above one can choose $b(\lambda)$ of smallest possible degree and it is then
+referred
+to as the \emph{Bernstein-Sato polynomial} of $P$.
+We remark that the tribute to M. Sato stems from his early
+discoveries of  functional equations as above.
+The fact that the 
+roots of the $b$-function always are strictly negative rational numbers was
+established by Masaki Kashiwarin in the article [Kashiwara] from 1975.
+In addition to (*), Kashiwara also estalnished a second functional equation
+which implies that Mellin's two conditions are valid.
+More precisely, given the polynomial $P$ as above, it is proved in
+[loc.cit] that there exists a positive integer $m$ and
+a finite set
+$\{Q_0,\ldots,Q_{m-1}\}$ in
+$A_2$ such that
+\[
+\lambda^m\cdot \mathcal P_\lambda(\phi)=
+\sum_{k=0}^{m-1}\, \,\lambda^k
+\cdot\int _{\{P>0\}}\, P(x,y)^{2\lambda}\cdot Q_k(\phi)(x,y)\cdot dxdy\tag{**}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+

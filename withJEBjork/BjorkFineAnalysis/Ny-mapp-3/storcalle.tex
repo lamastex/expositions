@@ -1,0 +1,557 @@
+%\documentclass{amsart}
+
+
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+
+%\begin{document}
+
+\centerline{\bf\large{20. A Non-Linear PDE-equation}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We expose  Carleman's article
+\emph{†ber eine nichtlineare Randwertaufgabe bei der Gleichung $\Delta u=0$}
+(Mathematisches Zeitschrift vol. 9 (1921). 
+Here is the equation to be considered: Let
+$\Omega$ be a bounded domain in ${\bf{R}}^3$
+with $C^1$-boundary and
+${\bf{R}}^+$ the non-negative real line where  $u$ is the coordinate.
+Let $F(u,p)$
+be a real-valued and continuous function
+defined on  ${\bf{R}}^+\times\partial\Omega$.
+Assume that 
+\[
+u\mapsto F(u),p)\tag{0,1}
+\]
+is strictly increasing  for every $p\in\partial\Omega$
+and that $F(0,p)\geq 0$. Moreover,  
+\[
+\lim_{u\to\infty} F(u,p)=+\infty\tag{0.2}
+\] 
+holds uniformly with respect to $p$.
+For a given point $Q_*\in\Omega$ we seek a function $u(x)$
+which is harmonic in $\Omega\setminus\{Q_*\}$
+and at $Q_*$ it is locally $\frac{1}{|x-Q_*|}$ plus a harmonic function
+and on $\partial\Omega$
+the  inner normal derivative $\partial u/\partial n$ satisfies the 
+equation
+\[
+\frac{\partial u}{\partial n}(p)= F(u(p),p)\quad \colon p\in\partial\Omega\tag{*}
+\]
+
+\medskip
+
+\noindent 
+Finally it is also assumed that $u$
+extends to a continuous function on
+$\partial\Omega$.
+\medskip
+
+\noindent {\bf {Theorem.}}
+\emph{For each $F$ as above the boundary value problem has a unique solution.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Apart from the general result the subsequent proof is interesting since
+it teaches how to
+handle a class of non\vvv linear
+boundary value problems.
+The strategy in Carleman's proof is to consider
+the family of boundary value problems where we for each
+$0\leq h\leq 1$ seek $u\uuu h$ to satisfy
+
+\[
+\frac{\partial u\uuu h}{\partial n}(p)=(1\vvv h)u\uuu h+ h\cdot  F(u\uuu h(p),p)\quad \colon p\in\partial\Omega\tag{*}
+\]
+where $u\uuu h$ has the same pole as $u$ above.
+Starting with $h=0$ one has a classical linear Neumann problem
+where a unique solution exists.
+To proceed from $h=0$ to $h=1$
+the idea is to use a "homotopy argument" where
+one first easily reduces the proof to the case when $F$ is a real\vvv analytic function
+of $u$. Then  the subsequent proof will show that if
+we have found a solution $u\uuu {h\uuu 0}$ for some
+$0\leq h\uuu 0<1$, we obtain solutions
+$u\uuu h$ when $h\uuu 0<h<h\uuu 0+\epsilon$ for sufficiently 
+small $\epsilon$ by solving an infinite system of linear boundary value problems.
+It goes without saying that this method is restricted to favorable cases
+as above where the uniqueness and robust properties of these solutions
+are present as we show below.
+But it is instructive to see how one can employ
+analytic series to handle such cases.
+\medskip
+
+\noindent
+Now we turn to the proof of the theorem and begin
+with preliminary results concerned with uniqueness and
+the reduction to the case when $F$ is real\vvv analytic.
+
+
+
+\medskip
+
+\noindent
+{\bf{A.0. Proof of uniqueness.}}
+Suppose that $u_1$ and $u_2$ are two solutions and 
+notice that  $u_2-u_1$.
+is harmonic in
+$\Omega$.
+If $u\uuu 1\neq u\uuu 2$ we may
+without loss of generality we may assume that
+the maximum of $u\uuu 2\vvv u\uuu 1$ is $>0$.
+The maximum is attained at some $p\uuu *\in\partial\Omega$
+and by the strict maximum principle for harmonic functions we have
+
+\[
+u\uuu 2(x)\vvv u\uuu 1(x)<
+u\uuu 2(p\uuu *)\vvv u\uuu 1(p\uuu *)\tag{i}
+\] 
+for all $x\in\Omega$.With $v=u\uuu 2\vvv u\uuu 1$
+we have
+\[
+\frac{\partial v}{\partial n}(p)=F(u_2(p),p)-F(u_1(p),p)
+\]
+Here (0.1) entails that
+$\frac{\partial v}{\partial n}(p\uuu *)>0$
+and since we have an inner normal derivative this violates
+(i) which proves the uniqueness.
+
+
+\medskip
+
+
+\noindent
+{\bf{A.1 Montonic properties.}}
+Let $F_1$ and $F_2$ be two functions which both satisfy
+(0.1) and (0.2) where  
+\[ 
+F_1(u,p)\leq F_2(u,p)
+\]
+hold for all $(u,p)\in{\bf{R}}^+\times\partial\Omega$.
+If $u_1$, respectively $u_2$ solve (*) for $F_1$ and $F_2$
+it follows that
+$u_2(q)\leq u_1(q)$ for all $q\in\Omega$.
+To see this we set $v=u_2-u_1$ which is harmonic in
+$\Omega$.
+If $p\in\partial\Omega$ we get
+\[
+\frac{\partial v}{\partial n}(p)=F_2(u_2(p),p)-F_1(u_1(p),p)\geq 0\tag{i}
+\]
+Suppose that the maximum of $v$ is $>0$ and let the maximum be attained at some 
+point $p_*$. Since (i) is an inner normal it follows that we must have
+$0=\frac{\partial v}{\partial n}(p)$ which would entail that
+
+\[ 
+F_2(u_2(p_*)p_*)>F_2(u_1(p_*),p_*)\geq F_1(u_1(p_*),p_*)\implies
+\]
+and this contradicts the strict inequality
+$u\uuu 2(p\uuu *)>
+u\uuu 1(p\uuu *)$
+since we have an increasing function in (0.1).
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{A.2. A bound for the maximum norm.}}
+Let $u$ be a solution to (*) and $M_u$ denotes
+the maximum norm of its restriction to
+$\partial\Omega$. Choose
+$p^*\in\partial\Omega$
+such that
+\[
+ u(p^*)=M_u\tag{1}
+\]
+Let $G$ be the Green's function which has a pole
+at $Q_*$ while $G=0$ on $\partial\Omega$. Now
+\[
+h=u-M_u-G
+\] 
+is a harmonic function in
+$\Omega$.
+On the boundary we have $h\leq 0$
+and $h(p^*)=0$. So $p^*$ is a maximum point for this harmonic function
+in the whole closed domain $\bar\Omega$.
+It follows that
+\[ 
+\frac{\partial h}{\partial n}(p^*)\leq 0\implies
+\] 
+\[
+F(u(p^*),p^*)=\frac{\partial u}{\partial n}(p^*)\leq
+\frac{\partial G}{\partial n}(p^*)
+\]
+Set
+\[ 
+A^*=\max_{p\in\partial\Omega}\, \frac{\partial G}{\partial n}(p)
+\]
+Then we have
+\[ 
+F(M_u,p^*)\leq A^*\tag{*}
+\]
+Hence the assumption (0.2) for $F$ this gives a robust   estimate for the 
+maximum norm $M_u$.
+Next, let $m_u$ be the minimum of $u$ on $\partial\Omega$ and
+consider the harmonic function
+\[
+h=u-m_u-G
+\]
+This time $h\geq 0$ on $\partial\Omega$
+and if $u(p_*)=m_u$ we have $h(p_*)=0$
+so here $p_*$ is a minimum for $h$.
+It follows that
+\[ 
+\frac{\partial h}{\partial n}(p_*)\geq 0\implies
+F(u(p_*),p)=\frac{\partial u}{\partial n}(p_*)\geq 
+\frac{\partial G}{\partial n}(p_*)
+\]
+So with
+\[
+A_*=\min_{p\in\partial\Omega}\,\, \frac{\partial G}{\partial n}(p)
+\]
+one has the inequality
+\[
+F(m_u,p^*)\geq A_*\tag{**}
+\]
+
+
+
+\noindent
+{\bf{Remark.}} Above $0<A_*<A^*$ are  constants which are independent of $F$.
+Hence the maximum norms of 
+solutions $u=u_F$ are controlled if the $F$-functions stay
+in a family where  (0.2) holds  uniformly.
+
+
+\medskip
+
+
+\noindent
+\centerline {\bf{B. The  linear equation.}}
+
+\medskip
+
+
+\noindent
+Let $f(p)$ and $W(p)$
+be a pair of continuous functions on the boundary
+$\partial \Omega$ where  $W$ is positive, i.e. $W(p)>0$ for every
+boundary point.
+The classical Neumann
+theorem
+asserts  that there exists a unique function $U$ which is harmonic in
+$\Omega$, extends to a continuous function on
+the closed domain and its inner normal  derivative satisfies:
+
+
+
+
+\[ 
+\partial U/\partial n(p)=W(p)\cdot U(p)+f(p)\quad p\in\partial\Omega\tag{1}
+\] 
+The uniqueness  is a consequence of Green's formula.
+For suppose that $U_1$ and $U_2$ are two solutions to (1) and set $v=U_1-U_2$.
+Since $v$ is harmonic in $\Omega$ it follows that:
+\[ 
+\iiint_\Omega\, |\nabla(v)|^2 dxdydz+
+\iint_{\partial\Omega}\, v\cdot \partial v/\partial n\cdot dS=0
+\]
+Here $\partial v/\partial n= W(p)v$ and since $W(p)>0$ holds on $\partial\Omega$
+we conclude that
+$v$ must be identically zero.
+For the unique   solution to (1)  some  estimates hold.
+Namely, set 
+\[
+M_U=\max_p\, U(p)\quad\text{and}\quad
+m_U=\min_p\, U(p)
+\] 
+
+\medskip
+
+\noindent
+Since $U$ is harmonic in $\Omega$ the
+the  maximum and the minimum are taken on the boundary.
+If $U(p^*)= M_U$ for some $p^*\in\partial \Omega$
+we have $\partial U/\partial n(p^*)\leq 0$.
+Set
+
+\[
+W_*=\min_p \, W(p)
+\]
+By assumption $W_*>0$
+and we get 
+\[
+M_U\cdot W(p^*)+f(p^*)=\partial U/\partial n(p^*)\leq 0\implies
+M_U\leq  \frac{|f|_{\partial\Omega}}{W_*}
+\]
+where
+$|f|_{\partial\Omega}$ is the maximum norm of $f$ on the boundary.
+In the same way one verifies that
+\[
+m_U\geq -\frac{|f|_{\partial\Omega}}{W_*}
+\]
+Hence  the following inequality holds for the
+ the maximum norm  $|U|_{\partial\Omega}$ :
+\[
+|U|_{\partial\Omega}\leq
+\frac{|f|_{\partial\Omega}}{W_*}\tag{*}
+\]
+
+
+\noindent
+{\bf{B.1 Estimates for first order derivatives.}}
+Let $p\in\partial \Omega$ and denote by $N$
+the inner normal at $p$. Since $\partial\Omega$ is of class $C^1$
+a sufficiently small line segment from $p$ along
+$N$ stays in $\Omega$. So at points $q=p+\ell \cdot N$
+we can take the directional derivative of $U$ along $N_p$
+This gives  a function
+
+\[
+ \ell\mapsto \partial U/\partial N(p+\ell\cdot N)
+\]
+Since the boundary is $C^1$
+these functions are defined on a fixed interval $0\leq\ell\leq \ell^*$ for all $p$.
+With these notations there exists a constant $B$ such
+that 
+\[
+\bigl|\partial U/\partial N(p+\ell\cdot N)\bigr|\leq B\cdot 
+||\partial U/\partial n||_{\partial\Omega}\quad
+\colon\, p\in\partial\Omega\,\, \colon\,\, 0\leq \ell\leq \ell^*\tag{**}
+\]
+
+
+\noindent
+where the size of $B$ is controlled by the maximum norm of $f$
+on $\partial\Omega$ and the positive constant $W_*$ above.
+
+\bigskip
+
+
+\centerline {\bf{C. Proof of Theorem}} 
+
+\bigskip
+
+\noindent
+Armed with the results above we can
+begin the proof of the Theorem.
+To begin with it suffices to prove
+the theorem
+when
+$F(u,p)$ is an analytic function with respect to $u$.
+For if we then take an arbitrary
+$F$-function 
+satisfying  (0.1) and (0.2), then $F$ is uniformly
+approximated by a sequence 
+$\{F_n\}$ of analytic
+functions and if $\{u_n\}$ are the 
+unique solutions  to $\{F_n\}$
+then the  estimates in (B)  show
+that there exists a limit
+function $\lim_{n\to\infty}  u_n=u$ where  $u$ solves (*) for the given
+$F$-function.
+So let us now assume that $u\mapsto F(u,p)$ is a real-analytic function on
+the positive real axis for each $p\in\partial\Omega$
+where local power series converge uniformly with respect to $p$.
+In this situation there remains to prove
+the
+\emph{existence} of  a solution $u$ to the PDE in (*) above Theorem 1.
+To attain this
+we  proceed as follows.
+
+
+\medskip
+
+\noindent
+{\bf{C.1  The succesive solutions $\{u_h\}$.}}
+To each real number $0\leq h\leq 1$ we seek a solution $u_h$ where
+
+\[
+ \frac{\partial u_h}{\partial n}(p)= h\cdot F(u_h,p)+(1-h)\cdot u_h(p)\tag{1}
+\]
+With $h=0$
+we have a linear equation
+\[
+ \frac{\partial u}{\partial n}(p)=u(p)\tag{2}
+\]
+
+\noindent
+which is solved by the Green's function 
+with a pole at $Q_*$.
+Next, suppose that $0\leq h_0<1$ and that we have found the 
+solution $u_{h_0}$ in (1) above. Set $u_0=u_{h_0}$
+and
+with $h=h_0+\alpha$ for some small $\alpha>0$
+we shall find  $u_h$ by a series
+\[
+u_h= u_0+\sum_{\nu=1}^\infty\, \alpha^\nu\cdot u_\nu\tag{3}
+ \]
+
+ 
+\noindent
+The pole at $p_*$  occurs already in $u_0$. So 
+$u_1,u_2,\ldots$ will be   a sequence of 
+harmonic functions in  $\Omega$. There remains to find
+this sequence so that
+$u_h$ yields  a solution to (1). We will  show that this can
+be achieved when $h-h_0=\alpha $ is sufficiently small.
+To begin with the results from
+(B) give  positive constants $0<c_1<c_2$
+such that
+\[
+0<c_1\leq u_0(p)\leq c_2\quad\colon p\in\partial\Omega\tag{4}
+\]
+
+
+
+\noindent
+Now we  use the analyticity of $F$ with respect to $u$
+which enable us to write:
+\[
+ F(u_h(p),p)=
+F(u_0(p)+\sum_{k=1}^\infty\, c_k(p)\cdot \bigl[\sum_{\nu=1}^\infty \alpha^\nu u_\nu(p)
+ \bigr ]^k\tag{5}
+ \]
+
+
+\noindent
+where $\{c_k(p)\}$ are continuous functions on
+ $\partial\Omega$ which appear in an expansion
+ \[ 
+ F(u_0(p)+\xi,p)=F(u_0(p),p)+
+ \sum_{k=1}^\infty\, c_k(p)\cdot \xi^k\tag{6}
+ \]
+ 
+ 
+\noindent
+In the last series expansion we notice that
+(4) and the hypothesis on $F$ entail that
+the radius of convergence has a uniform bound below, i.e.
+there exists $\rho>0$ which is independent of $p\in\partial\Omega$
+and a constant $K$ such that
+\[
+\sum_{k=1}^\infty\, |c_k(p)|\cdot \rho^k\leq K\tag{7}
+\] 
+hold for all $p\in\partial\Omega$. Now
+the equation (1) is solved 
+via a system of equations for the harmonic functions
+$\{u_\nu\}$ which are determined inductively
+while $\alpha$-powers are identified.
+The linear
+$\alpha$-term gives  the equation
+\[
+\frac{\partial u_1}{\partial n}=F(u_0(p),p)-u_0(p)+
+(1-h_0)u_1+h_0\cdot c_1(p)\cdot u_1(p)\tag{i}
+\]
+\medskip
+
+
+\noindent
+For $u_2$ we find that
+\[
+\frac{\partial u_2}{\partial n}=(1-h_0)u_2-u_1+h_0c_1(p)u_2+
+c_1(p)u_1+c_2(p)u_1^2\tag{ii}
+\]
+\medskip
+
+
+\noindent
+In general, for $\nu\geq 3$ one has
+
+
+\[
+\frac{\partial u_\nu}{\partial n}=(1-h_0+h_0\cdot c_1(p))\cdot u_\nu+
+R_\nu(u_0,\ldots,u_{\nu-1},p)\tag{iii}
+\] 
+where $\{R_\nu\}$ are polynomials in the preeceding $u$-functions
+whose coefficients are
+continuous functions derived via the
+$c$-functions above.
+Here the function $c_1(p)$ is given by
+
+\[ 
+c_1(p)= \frac{\partial F(u_0(p),p)}{\partial u}
+\]
+which by the hypothesis on $F$ is positive on $\partial\Omega$.
+Next,
+since $u_0$ is a solution we also have
+a pair of  positive constants $0<c_*<c^*$ such that
+
+\[
+c_*<c_1(p)\leq c^*\quad\colon\quad
+p\in\partial\Omega\tag{iv}
+\]
+Hence the function
+\[ 
+W(p)= (1-h_0)+h_0\cdot c_1(p)
+\] 
+is positive on $\partial\Omega$.
+Now  estimates for the linear inhomogeneous  equations in
+(B) can be applied where the $f$-functions are the $R$-polynomials.
+Then  (7) and a majorising  positive
+series expressing maximum norms show 
+that if $\alpha$ is sufficiently small then the
+series (3)  converges and gives the requested solution for
+(1). Moreover, the positive  $\alpha$ 
+can be taken  \emph{independently} of $h_0$.
+So  together with the uniqueness of solutions $u_h$ whenever they exist, it follows
+that we can move from $h=0$ until $h=1$ where we get the requested solution 
+$u$ to the
+PDE in Theorem 1.
+
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+The reader may consult page 106 in [Carleman]
+where the existence of a uniform constant $\alpha>0$ for which the series
+(3) converge for every $h$ is
+demonstrated by an
+explicit majorant series.
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{document}

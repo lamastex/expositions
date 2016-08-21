@@ -1,0 +1,1309 @@
+%\documentclass{amsart}
+
+
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+
+
+\centerline{\bf \large{XVI.. Beurling-Wiener  algebras}}
+
+\bigskip
+
+\noindent
+\centerline{\emph{Contents}}
+\bigskip
+
+\noindent
+
+
+\medskip
+
+\noindent
+\emph{A: Beurling-Wiener algebras on the real line.}
+
+\medskip
+
+\noindent
+\emph{B: A Tauberian theorem}
+
+
+\medskip
+
+\noindent
+\emph{C: Ikehara's theorem}
+
+\medskip
+\noindent
+\emph{D: The Gelfand space of $L^1({\bf{R}}^+)$.}
+
+\bigskip
+
+\centerline {\bf{Introduction.}}
+
+\bigskip
+
+\noindent
+The cornerstone in this section is Wiener's general Tauberian Theorem
+which we are going to apply
+to the   class of 
+Beurling\vvv Wiener algebras where the ordinary convolution algebra
+$L^1({\bf{R}}) $ is replaced by various weight algebras
+which were introduced by Beurling in the article [Beurling: 1938].
+The subsequent material relies upon [ibid] and  on
+chapter XX in [Paley\vvv Wiener].
+Here follows the set\vvv up in this section.
+Consider
+the Banach space $L^1({\bf{R}})$
+of 
+Lebesgue measurable and absolutely integrable functions whose
+product is defined by  convolutions:
+\[ 
+f*g(x)=\int\, f(x-y)g(y)dy
+\]
+
+\medskip
+
+
+
+
+\noindent {\bf A.1 The space $\mathcal F_0^\infty$.}
+On the $\xi$-line we have the space $C_0^\infty$ 
+of infintely differentiable functions with compact support.
+Each $g(\xi)\in C_0^\infty$ yields an $L^1$-function on the real 
+$x$-line defined by
+\[ 
+\mathcal F(g)(x)=\frac{1}{2\pi}\int\, e^{ix\xi}\, g(\xi)\cdot d\xi\tag{*}
+\]
+The resulting subspace of $L^1$ is denoted by
+$\mathcal F_0^\infty$.
+
+\medskip
+
+
+\noindent {\bf A.2  Beurling-Wiener algebras.}
+A subalgebra B of $L^1$
+is called a Beurling-Wiener algebra - for short a 
+$\mathcal B\mathcal W$-algebra - if the
+following two conditions hold:
+\medskip
+
+\noindent
+\emph{Condition 1.}
+$B$ is
+equipped with a complete norm
+denoted by $||\cdot  ||_B$ such that 
+\[
+||f*g||_B\leq ||f||_B\cdot ||g||_B\quad\colon\quad f,g\in B\quad\text{and}\quad
+||f||_1\leq ||f||_B
+\]
+\medskip
+
+\noindent
+\emph{ Condition 2.}
+$\mathcal F_0^\infty$ is  a dense subalgebra of
+$B$. 
+\bigskip
+
+
+\noindent {\bf A.3 Theorem} \emph{Let $B$ be a $\mathcal B\mathcal W$-algebra.
+For each multiplicative and continuous functional $\lambda$ on $B$ 
+which is not identically zero
+there exists a unique $\xi\in\bf R$ such that}
+\[
+ \lambda(f)=\widehat f(\xi)\quad\colon\quad f\in B
+\]
+
+\medskip
+
+\noindent 
+\emph{Proof.}
+Suppose that there exists some $\xi$ such that
+\[
+\lambda(f)=0
+ \implies  \widehat f(\xi)=0\tag{i}
+\]
+This means that the linear
+form $f\mapsto \widehat f(\xi)$
+has the same kernel as $\lambda$ and hence there exists some
+constant $c$ such that
+\[
+\lambda(f)=c\cdot \hat f(\xi)\quad\text{for all}\,\, f\in B\,.\tag{ii}
+\]
+Since  $\lambda$  is multiplicative it follows that
+$c=c^n$ for every positive integer $n$ and then
+$c=1$.
+Next, since
+$B$ contains $\mathcal F_0^\infty$ and test-functions on
+the $\xi$-line separate points, it is clear that
+$\xi$  is uniquely determined.
+There remains to prove the existence
+of some $\xi$ for which (i) holds.
+\medskip
+
+\noindent
+To prove this we use the
+density of $\mathcal F_0^\infty$ in $B$ which by the continuity of
+$\lambda$ gives
+some
+$g\in\mathcal F_0^\infty$ such  that $\lambda(g)\neq 0$.
+Let $K$ be the compact support of
+the test-function $\widehat g(\xi)$ and
+suppose that  
+(i)  fails for each point  $\xi\in K$.
+The density of
+$\mathcal F_0^\infty$ gives
+some $f_\xi \in\mathcal F_0^\infty$ such that
+\[ 
+ \widehat f(\xi)\neq 0\,\quad \text{and}\,\, \lambda(f)=0\tag{iii}
+\]
+
+\noindent
+Heine-Borel's Lemma yields
+a finite set of points $\xi_1,\ldots,\xi_N$ in $K$ such
+that
+family $\{ \widehat f_{\xi_k}\}$ have no common zero on $K$.
+To simplify notations we set
+$f_k=f_{\xi_k}$.
+The complex conjugates 
+of $\{\widehat f_k\}$ are again  test-functions. So for each $k$
+we find
+$h_k\in B$ such that $\widehat h_k$ is the s complex conjugate
+of  $\widehat f_k$.
+Set
+\[ 
+\phi (\xi)=
+\sum_{k=1}^{k=N}\,\widehat h_k(\xi)\cdot \widehat f_k(\xi)
+\]
+
+
+\noindent
+This test-function is $>0$ on the support of $\widehat g$ and hence there exists
+the test-function
+\[
+Q(\xi)=\frac{\widehat g}{\phi}\tag{iv}
+\]
+By Condition 2, Q is  the Fourier transform of some $B$-element
+$q$. Since $L^1({\bf{R}})$-functions are uniquely determined by their
+Fourier transforms, it follows from (iv) that 
+\[
+\sum_{k=1}^{k=N}\, q*h_k*f_k=g\tag{v}
+\]
+
+\noindent
+Now we get a contradiction since $\lambda(f_k)=0$ for each  $k$
+while $\lambda(g)\neq 0$. 
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline {\bf  A.4 The algebra $B_a$.}
+\medskip
+
+
+\noindent 
+Let $a>0$ be a positive real number.
+Given a Beurling-Wiener algebra $ B$
+we set
+\[ 
+J_a=\{ f\in B\quad\colon\, \widehat f(\xi)=0\,\,\text{for all}\,\,
+-a\leq \xi\leq a\}
+\]
+
+
+\noindent
+Condition 1 and the continuity of the Fourier transform on
+$L^1$-functions imply
+that $J_a$ is a closed ideal in $ B$. 
+Hence we get the Banach algebra $\frac{B}{J_a}$ which we denote by
+$B_a$. Let   $g\in \mathcal F_0^\infty$ be such that
+$\widehat g(\xi)=1$ on $[-a,a]$. For every
+$f\in B$ it  follows that
+$g*f-f$ belongs to $J_a$ which  means that
+the image of $f$ in $B_a$ is equal to the image of $g*f$. We conclude that
+the $g$-image yields an identity in the algebra $B_a$ and  hence $B_a$
+is a Banach algebra with a unit element.
+\medskip
+
+\noindent
+{\bf A.5 Theorem.} \emph{The Gelfand space of
+$B_a$ is equal to the compact interval $[-a,a]$.}
+\medskip
+
+\noindent
+{\bf{A.6 Exercise.}} Prove this using Theorem A.3
+
+
+\bigskip
+
+\centerline{\bf {A.7. Examples of $\mathcal BW$-algebras}}
+\medskip
+
+\noindent
+Let $B$ be the space of all continuous functions $f(x)$ 
+on the real $x$-line such that the positive series below is convergent:
+\[
+\sum_{-\infty}^{\infty}\,||f||_{[\nu,\nu+1]}\tag{*}
+\]
+
+
+\noindent 
+where
+$||f||_{[\nu,\nu+1]}$ is the maximum norm of $f$ on the closed interval 
+$[\nu.\nu+1]$ and the sum extends over all integers. The norm on $B$-elements
+is defined by the sum of the series above.
+It is obvious that this norm dominates the $L^1$-norm.
+Moreover, one easily verifies that
+\[
+||f*g||_B\leq ||f|||\cdot ||g||_B\tag{i}
+\]
+for pairs in $B$.
+Hence $B$ satisfies Condition 1 from B.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that 
+the Schwartz space $\mathcal S$
+of rapidly decreasing functions
+on the real $x$-line
+is a dense subalgebra
+of $B$.
+
+\medskip
+
+\noindent
+Next, since  $\mathcal F_0^\infty\subset \mathcal S$ we have the inclusion
+\[ 
+\mathcal F_0^\infty\subset B\tag{ii}
+\]
+There remains to see why
+$\mathcal F_0^\infty$ is dense in
+$B$. To prove this we construct some special functions
+on the $x$-line whose Fourier transforms have compact support.
+If $b>0$
+we set
+\[ 
+f_b(x)=\frac{1}{2\pi}
+\int_{-b}^b\,e^{ix\xi}\cdot (1-\frac{|\xi|}{b})\cdot d\xi
+\]
+By Fourier's inversion formula this means that
+\[ 
+\widehat f_b(\xi)=1-\frac{|\xi|}{b}\quad\,-b\leq\xi\leq b\quad
+\text{and zero if}\,\,|\xi|>b
+\]
+A computation which is left to the reader gives
+\[
+f_b(x)=\frac{1}{\pi}\cdot \frac{1-\text{cos}\, bx}{bx^2}
+\]
+From this expression it is clear that
+$f_b(x)$ belongs to $B$ and we leave it to the reader to verify that
+\[ 
+\lim_{b\to+\infty}\, ||f_b*g-g||_B=0
+\quad\text{for all}\,\, g\in B\tag{iii}
+\]
+\medskip
+
+\noindent
+Next,  the functions
+$\widehat f_b(\xi)$ have compact support but they are not smooth, i.e.
+they do not belong to $\mathcal F_0^\infty$.
+However, we can perform a smoothing of these functions as follows:
+Let $\phi(\xi)$  be an even and non-negative
+$C_0^\infty$-function with support in
+$-1\leq\xi\leq 1$  such that the integral
+\[
+\int\, \phi(\xi)\cdot d\xi=1
+\]
+
+
+\noindent
+With $\delta>0$ we set
+$\phi_\delta(\xi)= \frac{1}{\delta}\cdot \phi(\xi/\delta)$ and 
+for each
+pair $\delta,b$ we get the test-function on the $\xi$-line
+defined by
+\[
+\psi_{\delta,b}(\xi)=
+\int_{-b}^b\, \phi_\delta(\xi-\eta)\cdot (1-\frac{|\eta|}{b})\cdot d\eta
+\]
+The inverse Fourier transforms
+\[ 
+f_{\delta,b}(x)=\frac{1}{2\pi}\int
+e^{ix\xi}\cdot \psi_{\delta,b}(\xi)\cdot d\xi
+\]
+yield functions in $\mathcal F_0^\infty$ for all pairs $\delta,b$.
+Next, if $g\in B$ then 
+the Fourier transform of the $B$-element $f_{\delta,b}*g$ is equal to the
+\emph{convolution} of
+$\phi_\delta(\xi)$ and the Fourier transform of
+$f_b*g$.
+This implies that
+\[ 
+f_{\delta,b}* g\in \mathcal F_0^\infty\,.
+\]
+At this stage we leave it to the reader to verify that
+\[
+\lim_{(\delta,b)\to (0,0)}\, f_{\delta,b}*g=g
+\]
+holds for every $g\in B$. Hence the required density of
+$\mathcal F_0^\infty$ is proved and $B$ is a Beurling-Winer algebra.
+
+
+
+\centerline{\bf A.8 Adding discrete measures}
+\medskip
+
+\noindent
+Let $M_d({\bf{R}})$ be the Banach algebra of discrete measures
+of finite total variation, i.e. measures of the form
+\[ 
+\mu=\sum\, c_\nu\cdot\delta_{x_\nu}\quad\colon\,
+||\mu||=\sum\,|c_\nu|<\infty
+\]
+\medskip
+
+\noindent
+As explained in XX the Gelfand 
+space is the compact
+Bohr group $\mathfrak{B}$, where the real $\xi$-line via the Fourier
+transform
+appears as a dense subset.
+Now we  adjoin some $\mathcal{BW}$\vvv algebra
+$B$ and 
+obtain a Banach algebra $B\uuu d$ which 
+consists of measures of the form
+\[ 
+f+\mu\quad\colon\quad f\in B \,\,\text{and}\,\, \mu\in
+M_d({\bf{R}})
+\]
+where the norm of $f+\mu$ is the sum of the $B$-norm of $f$
+and the total variation of  $\mu$. Since $B$ is a subspace of
+$L^1$ one easuly checks that this yields a complete norm.
+next, by condition (2) in A.2 it follows that if
+$f\in b$ and
+$\mu\in M_d({\bf{R}})$ then the convolution
+$f*\mu$ belongs to $B$.
+This means that
+$B$ appears as a closed ideal in $B\uuu d$.
+\medskip
+
+\noindent
+{\bf A.9 The Gelfand space
+$\mathcal M_{B\uuu d}$}.
+Let  $\lambda$ is a multiplicative functional on
+$B\uuu d$ which is not identically zero on
+$B$. Theorem A.3 gives
+a unique
+$\xi$ such that
+\[
+\lambda(f)= \widehat f(\xi)\quad\,\colon\quad 
+f\in B\tag{i}
+\]
+If $a$ is a real number then $\delta_a*f$ has the
+Fourier transform
+becomes $e^{ia\xi}\cdot \widehat f(\xi)$. It follows that
+\[
+\lambda(\delta_a)\cdot \widehat f(\xi)=
+\lambda(\delta_a*f)= e^{-ia\xi}\cdot \widehat f(\xi)\tag{ii}
+\]
+
+
+\noindent
+We conclude that $\lambda(\delta_a)=e^{-ia\xi}$ and hence  the restriction of
+$\lambda$ 
+is the evaluation of the Fourier transform  at $\xi$ on the whole algebra $B\uuu d$.
+In this way the real $\xi$-line is embedded in
+$\mathcal M_B$ where a point $\lambda\in\mathcal M_B$
+belongs to this subset if and only if
+$\lambda(f)\neq 0$ for some
+$f\in B$.
+The construction of the Gelfand 
+topology shows  that
+this copy of the real $\xi$-line appears as an \emph{open} subset of
+$\mathcal M_{B\uuu d}$  denoted by
+${\bf{R}}_\xi$.
+\medskip
+
+\noindent
+{\bf A.10 The set $\mathcal M_{B\uuu d}\setminus {\bf{R}}_\xi$}.
+If $\lambda$ belongs to this closed subset it is identically zero on
+the ideal $B$ and its restriction to 
+$M_d({\bf{R}})$ 
+corresponds to a point $\gamma$ 
+in the Bohr group
+$\mathfrak{B}$. 
+Conversely, every point in  $\mathfrak{B}$
+yields a $\lambda\in
+\mathcal M_{B\uuu d}\setminus {\bf{R}}_\xi$ 
+since the quotient algebra
+\[
+\frac{B\uuu d}{B}\simeq
+ M_d({\bf{R}})
+\]
+Hence we have the set\vvv theoretic equality
+\[
+\mathcal M\uuu{B\uuu d}= {\bf{R}}\uuu\xi
+\cup\,\mathfrak{B}\tag{*}
+\]
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf A.11  Proposition.} \emph{The open subset
+${\bf{R}}_\xi$ is dense in $\mathcal M_B$.}
+\medskip
+
+\noindent\emph{Proof.}
+Let $\lambda$ be a point in 
+$\mathcal M_{B\uuu d}\setminus {\bf{R}}_\xi$ which therefore
+corresponds to a point $\gamma\in\mathfrak{B}$.
+By the result in XX we know that
+for every finite set $\mu_1,\ldots,\mu_N$
+of discrete measures, there exists a sequence $\{\xi_\nu\}$
+such that
+\[
+\lim_{\nu\to\infty}
+\widehat \mu_i(\xi_\nu)=\gamma(\mu_i)\quad\text{and}\,\,
+|\xi_\nu|\to \infty
+\]
+
+\medskip
+
+\noindent
+At the same time
+the Riemann-Lebesgue Lemma entails that
+
+\[
+\lim_{\nu\to\infty}\, \widehat f(\xi_\nu)=0
+\]
+for every
+$f\in B$. Hence
+the construction of the Gelfand topology on
+$\mathcal M_{B\uuu d}$ gives the requested density
+in Proposition A.11
+
+
+
+\medskip
+
+\noindent
+{\bf A.12  An inversion formula.}
+Let $f\in B $  and $\mu$ is some discrete measure.
+Suppose that there exists $\delta>0$ such that
+the Fourier transform of $f+\mu$ has absolute value 
+$\geq\delta$ for all $\xi$.
+Proposition A.11  implies that its Gelfand transform has no zeros and hence
+this $B\uuu d$-element is invertible, i.e. there exist
+$g\in B$ and a discrete measure $\gamma$ such that
+\[
+\delta_0=(f+\mu)*(g+\gamma)\tag{i}
+\]
+Notice  that the right hand side becomes
+\[
+f*g+ f*\gamma+g*\mu+\mu*\gamma
+\]
+Here $f*g+ f*\gamma+g*\mu$ belongs to $B$
+while
+$\mu*\gamma$ is a discrete measure. So (i) implies that
+$\gamma$ must be the inverse of $\mu$ in
+$M_d({\bf{R}})$
+and hence (i) also gives the equality:
+\[
+f*g+f*\mu^{-1}+g*\mu=0\tag{ii}
+\]
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+\centerline {\bf B.  A Tauberian Theorem.}
+\medskip
+
+\noindent
+Consider the Banach algebra $B$ above.
+The dual space $B^*$ consists of  Riesz measures
+$\mu$ on the real line for which there exists a constant $A$ such that
+\[ 
+\int_\nu^{\nu+1}\, |d\mu(x)|\leq A\quad\text{for all integers}\,\,\nu\,.
+\] 
+
+\noindent
+The smallest $A$ above is  the norm of $\mu$ in $B^*$ and 
+duality is expressed by:
+\[ 
+\mu(f)=\int\, f(x)\cdot d\mu(x)\,\quad\colon\quad f\in B\,\,\text{and}\,\, \mu\in B^*
+\]
+\noindent 
+Let $f\in B$ be such that  $\widehat f(\xi)\neq 0$ for all
+$\xi$. For each $a>0$ it follows from
+Theorem A.5 that the $f$-image in $B_a$ generates the whole algebra.
+Since this hold for every $a>0$
+it follows that each
+$\phi\in\mathcal F_0^\infty$
+belongs to the principal ideal generated by $f$ in $B$, i.e. there exists some
+$g\in B$ such that
+\[
+ \phi=g*f\tag{*}
+\]
+Since $\mathcal F_0^\infty$ is dense in $B$ we conclude that
+$B\cdot f$ is dense in $B$.
+Using this density we have:
+
+
+\bigskip
+
+\noindent 
+{\bf B.1  Theorem} \emph{Let 
+$\mu\in B^*$ be such that}
+\[
+\lim_{y\to+\infty}\, \int\, f(y-x)\cdot d\mu(x)=A\,\,\, \text{exists}.
+\]
+\emph{Then, for each $g\in B$ it follows that}
+\[
+\lim_{y\to+\infty}\, \int\, g(y-x)\cdot d\mu(x)=B
+\quad\text{where}\quad B=A\cdot \frac{ \hat g(0)}{\hat f(0)}
+\]
+
+\medskip
+
+\noindent \emph{Proof.} 
+Let $g\in B$. If $\epsilon>0$ we find
+$h_\epsilon\in B$ such that 
+$||g-f*h_\epsilon||_B<\epsilon$. When  $y>0$ we get:
+\[
+\int\, (f*h_\epsilon)(y-x)\cdot d\mu(x)=\tag{i}
+\]
+\[
+\int\, \bigl[f(y-s-x)h_\epsilon(s)\cdot ds\,\bigr] \cdot  d\mu(x)=
+\int\, h_\epsilon(s)\cdot\bigl[\int \,f(y-s-x)\mu(x)\,\bigr]\cdot ds
+\]
+By the hypothesis the inner integral converges to $A$ when
+$y\to+\infty$
+every fixed $s$. Since
+$h$ belongs to $B$ it follows easily that
+the limit of (i) when $y\to+\infty$ is equal to
+\[ 
+A\cdot \int\, h_\epsilon(s)\cdot ds=A\cdot \widehat h_\epsilon(0)\tag{ii}
+\]
+
+
+\noindent
+Next, since the $B$-norm is stronger than the $L^1$-norm it follows that
+\[ 
+|\widehat g(0)-\hat h_\epsilon(0)\cdot \widehat f(0)|<\epsilon\tag{iii}
+\]
+Moreover, since the $B$-norm is invariant under translations
+we have
+\[
+\bigr |
+ \int\, g(y-x)d\mu(x)-\int\, (f*h_\epsilon)(y-x)\cdot d\mu(x)\bigl|\leq
+ \epsilon\cdot ||\mu||\quad\text{for all}\,\,y\tag{iv}
+\]
+where $||\mu||$ is the norm of $\mu$ in the dual space $B^*$.
+Notice also that   (iii) gives:
+
+\[
+\lim_{\epsilon\to }\, \hat h_\epsilon(0)=\frac{\hat g(0)}{\hat f(0)}
+\]
+Finally, since $\epsilon>0$ is arbitrary we see that the limit formula for (i) when
+$y\to+\infty$ expressed by
+(ii)  and (iv) above together imply that
+
+
+\[
+\lim_{y\to+\infty}\, 
+\int\, g(y-x)d\mu(x)=A\cdot \frac{\hat g(0)}{\hat f(0)}
+\]
+This finishes the proof of 
+Theorem A.9
+
+\bigskip
+
+
+
+
+\centerline
+{\bf B.2  The multiplicative version}
+\medskip
+
+
+
+\noindent 
+Let ${\bf{ R}}^+$ be the multiplicative group of positive real numbers.
+To each function $f(t)$ on ${\bf{R}}^+$
+we get the function $E_f(x)= f(e^x)$ on the real $x$-line.
+Since $dt=e^xdx$ under the exponential map we have
+\[
+\int_0^\infty\, f(t)\frac{dt}{t}=
+\int_{-\infty}^\infty\, E_f(x)dx
+\]
+provided that $f$ is integrable.
+On $\bf R^+$ we get the convolution algebra $L^1(\bf R^+)$ where
+\[ 
+f*g(t)=\int_0^\infty\, f(\frac{t}{s})\cdot g(s)\cdot \frac{ds}{s}
+\]
+This convolution commutes with the $E$ map from
+$L^1({\bf {R}}^+$ into $L^1({\bf {R}}^1)$, i.e. 
+\[
+E_{f*g}= E_f*E_g
+\]
+Next, recall that the Fourier transform on $L^1({\bf{ R}}^+)$
+is defined by
+\[ 
+\widehat f(\xi)=\int_0^\infty\,t^{-i\xi} \cdot f(t)\cdot \frac{dt}{t}
+\]
+\medskip
+
+
+
+
+
+
+
+
+
+\noindent
+{\bf B.3  The Banach algebra $B_m$.} The companion to $B$ on
+${\bf {R}}^+$ consists of continuous functions $f(t)$ for which
+\[ 
+\sum\, ||f||_{[2^\nu,2^{\nu+1}]}<\infty
+\]
+where the is taken over all integers. Notice  that
+with $\nu<0$ one takes small intervals approaching $t=0$.
+Just as in Theorem A.9  we obtain a Tauberian Theorem for functions
+$f\in B_m$ whose Fourier transform is everywhere $\neq 0$.
+Here we  the dual space $B\uuu m^*$
+consists of Riesz measures $\mu$ on ${\bf{R}}^+$
+for which there exists a constant $C$ such that
+
+\[
+\int\uuu{2^m}^{2^{m+1}}\, |d\mu(t)|\leq C
+\] 
+for all integers $m$.
+
+
+
+\bigskip
+
+
+
+\bigskip
+
+
+\centerline{\bf C. Ikehara's theorem.}
+\bigskip
+
+
+\noindent
+Let
+$\nu$ be a non-negative Riess measure supported on
+$[1,+\infty)$ and assume that
+\[
+\int_1^\infty x^{-1-\delta}\cdot d\nu(x)<\infty\quad
+\text{for all}\,\, \delta>0
+\]
+When this holds we obtain an analytic function
+$f(s)$ of the complex variable $s$ defined in
+the right half plane
+$\mathfrak{Re}(s)>1$ by
+\[ 
+f(s)=\int_1^\infty x^{-s}\cdot d\nu(x)
+\]
+\medskip
+
+\noindent
+{\bf D.1 Theorem.}
+\emph{Assume that there exists a constant
+$A$ and a continuous function
+$G(u)$ defined on the real $u$-line such that}
+\[
+\lim_{\epsilon\to 0}\, \bigl[f(1+\epsilon+iu)-\frac{A}{1+\epsilon+iu}\,\bigr]=G(u)\tag{*}
+\]
+\emph{where the limit holds uniformly   on  every
+bounded interval $-b\leq u\leq b$.
+Then}
+\[ 
+\lim_{x\to+\infty}\,\frac{1}{x}\int_1^x\,d\nu(t)=A\tag{**}
+\]
+\medskip
+
+\noindent
+We shall prove a sharper version 
+of
+Ikehara's result 
+where
+the assumption on $G(u)$ is relaxed.
+Namely, replace  (*)
+by the weaker assumption that there
+exists a locally integrable function $G(u)$ such that
+\[
+\lim_{\epsilon\to 0}\, \int_{-b}^b\, \bigl|
+f(1+\epsilon+iu)-\frac{A}{1+\epsilon+iu}-G(u)\bigr|\cdot du=0\quad
+\text{holds for each}\,\, b>0\tag{***}
+\]
+\medskip
+
+
+
+\noindent
+{\emph{Proof that (***) gives (**)}}.
+To show this implication
+we use  some variable substitutions.
+With $x\mapsto e^\xi$
+we can write 
+\[ 
+f(s)=\int_0^\infty\, e^{-\xi s}\cdot d\nu(e^\xi)
+\]
+
+
+
+\noindent
+Next, define the function measure $\mu$ on the non-negative real $\xi$-line by
+\[
+d\mu(\xi)= e^{-\xi}\cdot d\nu(e^\xi)-A\cdot d\xi\,\quad\colon\,\,\xi\geq 0\tag{1}
+\]
+Then we see that
+\[ 
+f(s)-\frac{A}{s-1}=\int_0^\infty e^{(1-s)\xi}d\mu(\xi)\tag{2}
+\]
+It is clear that  (**) holds if and only if
+\[
+ \lim_{\eta\to\infty}\int_0^\eta\, e^{-\eta+\xi}\cdot d\mu(\xi)=0\tag{3}
+\]
+\bigskip
+
+\noindent
+\emph{A reformulation of Ikehara's theorem.}
+From the observations above we
+can restate the sharp version of Ikehara's theorem.
+Let
+$\nu^*$ be a non-negative measure on $0\leq\xi<+\infty$
+such that 
+\[ \int_0^\infty\, e^{-\delta\cdot \xi}\cdot d\nu^*(\xi)<\infty
+\quad\text{for all}\,\,\delta>0\tag{1}
+\]
+Next, let $A>0$ be some positive constant
+and put $d\mu(\xi)=d\nu^*(\xi)-A\cdot d\xi$.
+Then (1) gives
+the analytic function
+$g(s)$ defined in $\mathfrak{Re}(s)>0$ by
+\[
+g(s)=\int_0^\infty\, e^{-s\cdot\xi}\cdot d\mu(\xi)
+\]
+\medskip
+
+\noindent
+{\bf D.2. Definition.}
+\emph{We say that the  measure $\mu$ is of the
+Ikehara type if there exists a locally integrable function
+$G(u)$ defined on the real $u$-line such that}
+\[
+\lim_{\epsilon\to 0}\, \int_{-b}^b\, \bigl|
+g(\epsilon+iu)-G(u)\bigr|\cdot du=0\,\quad
+\text{holds for each}\,\, b>0
+\]
+\medskip
+
+\noindent
+{\bf D.3. The space $\mathcal W$.}
+Let $\mathcal W$ be the space of continuous functions
+$\rho(\xi)$ defined on $\xi\geq 0$ which satisfy:
+\[
+\sum_{n\geq 0}\,||\rho||_n<\infty\,
+\quad\text{where}\,\,||\rho||_n=\max_{n\leq u\leq n+1}\, |\rho(u)|
+\]
+The dual space
+$\mathcal W^*$ consists of Riesz measures
+$\gamma$ on $[0,+\infty)$ such that
+\[ 
+\max_{n\geq 0}\,\int_n^{n+1}\, |d\gamma(\xi)|<\infty
+\]
+With these notations we have
+\bigskip
+
+\noindent
+{\bf D.4. Theorem.}
+\emph{Let $\nu^*$ be a non-negative meausure
+on $[0,+\infty)$ and $A\geq 0$ some constant
+such that the measure $\mu=\nu^*-A\cdot d\xi$
+is of Ikehara type.
+Then $\mu\in \mathcal W^*$
+and for every
+function $\rho\in\mathcal W$ one has}
+\[
+\lim_{\eta\to+\infty}\, \int_0^\eta
+\rho(\eta-\xi)\cdot d\mu(\xi)=0
+\]
+\medskip
+
+\noindent
+{\bf {Exercise.}} 
+Use the material above to show that
+Theorem D. 4 gives the sharp
+version of Ikehara's theorem.
+The  hint is to use the function $\rho(s)=e^{-s}$ above.
+
+\medskip
+
+\centerline {\emph{Proof of Theorem D.4.}}
+\bigskip
+
+\noindent
+Let $b>0$ and define the function $\omega(u)$ by
+\[
+\omega(u)= 1-\frac{|u|}{b}\,,\quad
+-b\leq u\leq b\,\,\quad\text{and}\,\,
+\omega(u)=0\,\,\text{outside this interval}\tag{i}
+\]
+
+
+\noindent
+Set
+\[ J_b(\epsilon,\eta)=
+\int_{-b}^b\, e^{i\eta u}\cdot g(\epsilon+iu)\cdot \omega(u)\cdot du\tag{ii}
+\]
+From Definition 2 we have the $L^1_{\text{loc}}$-function $G(u)$
+and since $\omega(u)$ is a continuous function on the compact
+interval $[-b,b]$
+we have
+\[ 
+\lim_{\epsilon\to 0}\, J_b(\epsilon,\eta)=J_b(0,\eta)=
+\int_{-b}^b\, e^{i\eta u}\cdot G(u)\cdot \omega(u)\cdot du\tag{iii}
+\]
+With $b$ kept fixed  the right
+hand side
+is a Fourier transform of an
+$L^1$-function. So  the Riemann-Lebesgue theorem gives:
+\[
+\lim_{\eta\to+\infty}\, J_b(0,\eta)=0\tag{iv}
+\]
+Moreover, the triangle inequality gives the inequality:
+\[
+|J_b(0,\eta)|\leq 
+\int_{-b}^b\,\bigl| G(u)\bigr|\cdot du\tag{v}
+\]
+\medskip
+
+
+\noindent{\bf Some integral formulas.}
+From the above
+it  is clear that
+\[ J_b(\epsilon,\eta)=
+\int_0^\infty\,
+\bigl[\int_{-b}^b\, e^{i\eta u-i\xi u}\cdot \omega(u)\cdot du\bigr]
+\cdot e^{-\epsilon\cdot\xi}\cdot d\mu(\xi)\tag{1}
+\]
+
+
+\noindent
+Next, notice that
+\[
+\int_{-b}^b\, e^{i\eta u-i\xi u}\cdot \omega(u)\cdot du=
+2\cdot\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}\tag{2}
+\]
+Hence we obtain
+\[ J_b(\epsilon,\eta)=
+2\cdot\int_0^\infty\, 
+\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}\cdot e^{-\epsilon\xi}
+\cdot d\mu(\xi)\tag{3}
+\]
+
+\noindent
+From (iii) above it follows that  (3)
+has a limit as $\epsilon\to 0$ which is equal to 
+the integral in the right hand side in (iii) which is
+denoted by $J_b(0,\eta)$. Next, it is 
+easily seen that there exists the limit
+
+\[
+\lim_{\epsilon\to 0}\, 
+2\cdot\int_0^\infty\, 
+\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}\cdot e^{-\epsilon\xi}
+\cdot Ad\xi=2\pi\cdot A\tag{4}
+\]
+\medskip
+
+\noindent
+Hence (3-4) imply that there exists the limit
+\[
+\lim_{\epsilon\to 0}\, 
+2\cdot\int_0^\infty\, 
+\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}\cdot e^{-\epsilon\xi}
+\cdot d\nu^*(\xi)=J_b(0,\eta)+2\pi\cdot A\tag{5}
+\]
+\medskip
+
+\noindent
+Next, the measure  $\nu^*\geq 0$ and the function
+$\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}\geq 0$
+for all $\xi$. So the existence of a finite limit in (5) entails that there exists
+the convergent integral 
+\[
+\int_0^\infty\, 
+\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}
+\cdot d\nu^*(\xi)=J_b(0,\eta)+2\pi\cdot A\tag{6}
+\]
+
+
+
+\medskip
+
+
+\noindent
+{\bf Proof that
+$\mu\in\mathcal W^*$.}
+Since $A\cdot d\xi$ obviously belongs to
+$\mathcal W^*$ it suffices to show that
+$\nu^*\in\mathcal W^*$.
+To prove this we consider some integer $n\geq 0$ and with $b=1$
+it is clear that
+(6) gives
+\[
+\bigl|\int_n^{n+1}\, 
+\frac{1-\text{cos}\,(\eta-\xi)}{(\eta-\xi)^2}
+\cdot d\nu^*(\xi)\bigr|\leq |J_1(0,\eta)|+2\pi=
+\int_{-1}^1\, |G(u)|\cdot du+2\pi\cdot A
+\]
+Apply this with
+$\eta=n+1+\pi/2$ and notice that
+
+\[
+\frac{1-\text{cos}\,(n+1+\pi/2-\xi)}{(n+1+\pi/2-\xi)^2}
+\geq a\quad\,\text{for all}\,\, n\leq\xi\leq n+1
+\]
+This gives a constant $K$ such that
+\[
+\int_n^{n+1}\, d\nu^*(\xi)\leq K\quad\, n=0,1,\ldots
+\]
+\medskip
+
+\noindent
+{\emph {Final part of the proof.}}
+We have proved that
+$\mu\in \mathcal W^*$. Moreover, from
+(iv) above and the integral formula (6) we get
+\[
+\lim_{\eta\to+\infty}\, \int_0^\infty
+\frac{1-\text{cos}\,b(\eta-\xi)}{b(\eta-\xi)^2}\cdot d\mu(\xi)=0
+\quad\,\text{for all}\,\, b>0\tag{*}
+\]
+Next, for each fixed 
+$b>0$ we notice that the function
+\[
+\rho_b(\xi)=2\cdot \frac{1-\text{cos}\,(b\xi)}{b\cdot \xi^2}
+\]
+belongs to $\mathcal W$ and its
+Fourier is  $\omega_b(u)$.
+Here $\omega_b(u)\neq 0$ when
+$-b<u<b$.
+So the family of these $\omega$-functions have no common
+zero on the real $u$-line. By the Remark in XX this means that
+the linear subspace of
+$\mathcal W$ generated by
+the translates of all $\rho_b$ -functions with
+arbitrary large
+$b$ is dense in $\mathcal W$. 
+Hence (*) above implies
+that
+we get a zero limit as $\eta\to+\infty$ for every function
+$\rho\in\mathcal W$. But this is precisely the
+assertion in
+Theorem 4.
+
+
+\bigskip
+
+
+\centerline{\bf E. The algebra $L^1({\bf{R}}^+)$}
+
+\bigskip
+
+\noindent
+Consider the  family
+of $L^1$-functions on the real $x$-line which are
+supported by the half-line $x\geq 0$.
+This yields a closed subalgebra of $L^1({\bf{R}})$
+denoted by
+$L^1({\bf{R}}^+)$. 
+Indeed, if $f(x)$Êand $g(x)$ are  two such functions
+in
+$L^1({\bf{R}}^+)$.
+the support of 
+the convolution
+$g*f$ stays in $[0,+\infty)$. 
+Adding the unit point mass $\delta_0$ we obtain a commutative
+Banach algebra
+\[ 
+B={\bf{C}}\cdot \delta_0+L^1({\bf{R}}^+)
+\]
+
+
+\noindent
+{\bf E. 1. The Gelfand space
+$\mathfrak{M}_B$}.
+To obtain this space we consider some
+$f(x)\in L^1({\bf{R}}^+)$
+and set:
+\[
+\widehat f(\zeta)=\int_0^\infty\, e^{i\zeta x}\cdot f(x)\cdot dx,\quad\text{where}
+\quad \mathfrak{Im}(\zeta)\geq 0
+\]
+With $\zeta=\xi+i\eta$ we get
+\[
+|\widehat f(\xi+i\eta)|\leq 
+\int_0^\infty\, |e^{i\xi x-\eta x} |\cdot|f(x)|\cdot dx=
+\int_0^\infty\, |e^{-\eta x}\cdot |f(x)|\cdot dx\leq ||f||_1
+\]
+We conclude that
+for every point $\zeta=\xi+i\eta$ in the closed upper half-plane 
+corresponds to a point
+in $\zeta^*\in \mathfrak{M}_B$
+defined by
+\[ 
+\zeta^*(f)=
+\widehat f(\zeta)\,\quad\text{and}\quad \,\zeta^*(\delta_0)=1
+\]
+In addition to this 
+ $L^1({\bf{R}}^+)$ is a maximal ideal in
+ $B$ and there is the special point
+ $\zeta^\infty\in \mathfrak{M}_B$ such that
+ \[ 
+ \zeta^\infty (f)=0\quad\text{for all}\,\, f\in
+L^1({\bf{R}}^+ )
+\]
+\medskip
+
+\noindent
+{\bf E.2. Theorem.} \emph{The Gelfand space
+$\mathfrak{M}_B$ can be identified with
+the union  of $\zeta^\infty $ and the closed upper half-plane.}
+\medskip
+
+\noindent
+{\bf Remark.}
+The theorem asserts that every multiplicative
+functional on $B$ is either
+$\zeta^\infty $ 
+or determined by a point
+$\zeta=\xi+i\eta$ where
+$\eta\geq 0$.
+Concerning the topological identification
+$\zeta^\infty $ corresponds to the 
+one point compactification of the closed
+upper half-plane. Thus, whenever
+$\{\zeta_\nu\}$ is a sequence in
+$\mathfrak{Im}(\zeta)\geq 0$ such that
+$|\zeta_\nu|\to\infty$ then $\{z_\nu^*\}$
+converges to $\zeta^*$ in
+$\mathfrak{M}_B$.
+In fact, this follows via the Riemann-Lebegue Lemma which gives
+\[ 
+\lim_{|\zeta|\to\infty}\, \widehat f(\zeta)=0
+\quad\text{for all}\,\, f\in L^1({\bf{R}}^+)
+\]
+\medskip
+
+\noindent
+By the general result in XX 
+Theorem 2 holds  if we have
+proved if   the following:
+
+\medskip
+
+\noindent
+{\bf E.3. Proposition.}
+\emph{Let $\{g_\nu=\alpha_\nu\cdot\delta_0+f_\nu\}_1^k$
+be a finite family in $B$ such that
+the $k$-tuple $\{\hat g_\nu\}$
+has no common zero in
+$\bar U_+\cup\{\infty\}$.
+Then the ideal in $B$ generated by this $k$-tuple is equal to
+$B$.}
+
+\medskip
+
+\noindent
+The proof requires some preliminary constructions.
+We  use the conformal map from
+the upper half-plane onto the unit disc defined by
+
+\[
+w=\frac{\zeta-i}{\zeta+i}
+\]
+So here $w$ is the complex coordinate in $D$.
+Next, consider the disc algebra $A(D)$.
+Via  the conformal map
+each transform $\widehat f(\zeta)$ of a
+function $f\in L^1(\bf{R}^+)$
+yields an element of $A(D)$ defined by:
+
+\[ 
+F(w)=\widehat f(\frac{i+iw}{1-w})
+\]
+It is clear that
+$F(w)\in A(D)$. Moreover, we notice that
+\[
+w\to 1\implies\, 
+|\frac{i+iw)}{1-w}|\to\infty
+\]
+It follows that the $A(D)$-function $F(w)$ is zero at
+$w=1$ and we can conlcude:
+\medskip
+
+\noindent
+{\bf E.4. Lemma.} \emph{By 
+$f\mapsto F$ we have an algebra homomorphism
+from $L^1({\bf{R}}^+)$ to functions in
+$A(D)$ which are
+zero at $w=1$.}
+\medskip
+
+\noindent
+Next, let  $\mathcal H$ denote the algebra homomorphism in Lemma 4
+and 
+consider the function $1-w$ in $A(D)$.
+We claim this it belongs to the image under $\mathcal H$.
+To see this we consider the function
+\[
+f(x)= e^{-x}\quad\,x\geq 0\,\quad\text{and}\,\, f(x)=0
+\quad\text{when}\,\, x<0
+\]
+Then we see that
+\[
+\hat f(\zeta)=\int_0^\infty \, e^{i\zeta x}\cdot e^{-x}\cdot dx=
+\frac{1}{1-i\zeta}
+\]
+It follows that
+\[ 
+F(w)=\frac{1}{1-i(\frac{iw+i}{1-w})}=\frac{1-w}{1-w+w+1}=
+\frac{1-w}{2}
+\]
+Using $2f$ we conclude that
+$1-w$ belongs to the $\mathcal H$-image.
+Next, the identity element $\delta_0$ is mapped to the constant function
+on $D$. So via $\mathcal H$ we have an algebra homomorphism
+from $B$ into a subalgebra of $A(D)$ which contains
+$1-w$ and the identity function and hence all $w$-polynomials.
+Returning to the special $B$-element $f$ we notice that the convolution
+
+\[ 
+f*f(x)= x\cdot e^{-x}
+\]
+We can continue and conclude that the subalgebra of $B$ 
+generated by $f$ and $\delta_0$ contains 
+$L^1$-functions of the form $p(x)\cdot e^{-x}$ where $p(x)$ are polynomials.
+\medskip
+
+
+\noindent
+{\bf{E.5. Exercise.}}
+Prove that the linear space ${\bf{C}}[x]\cdot e^{-x}$
+is a dense subspace of $L^1({\bf{R}}^+)$.
+\medskip
+
+\noindent
+From the result in  the exercise it follows that
+the polynomial algebra ${\bf{C}}[w]$ appears as a dense subalgebra
+of $\mathcal H(B)$ when it is equipped with the $B$-norm.
+At this stage we are prepared to give:
+
+\bigskip
+
+\noindent
+{\bf{Proof of Proposition E.3.}}
+In $A(D)$ we have the functions $\{G_\nu=\mathcal H(g_\nu)\}$.
+By assumption $\{G_\nu\}$ have no common zero in the closed disc $D$.
+Since $D$ is the maximal ideal space of the disc algebra and
+${\bf{C}}[w]$  a dense subalgebra, it follows that
+for every $\epsilon>0$ there exist
+polynomials $\{p_\nu(w)\}$ such that
+the maximum norm
+\[
+|p_1\cdot G_1+\ldots+p_k\cdot G_k-1|_D<\epsilon|\tag{1}
+\]
+where 1 is the identity function.
+Now $p_\nu=\mathcal H(\phi_\nu)$ for $B$-elements $\{\phi_\nu\}$.
+So in $B$ we get the element
+\[
+\psi=\phi_1g_1+\ldots+\phi_k\cdot g_k\tag{2}
+\] 
+Moreover we have $|\mathcal H(\psi)-1|_D<\epsilon$ and here we can choose
+$\epsilon<1/4$ and by the previous identifications it follows that
+\[ 
+|\widehat \psi(\xi)|\geq 1/4\quad\text{for all}\quad -\infty<\xi<\infty\tag{3}
+\]
+The proof of Proposition E.3 is finished if we can show that (3) entails that
+the $B$-element $\psi$ is invertible.
+Multiplying $\psi$ with a non-zero scalar we may assume that
+\[ 
+\psi=\delta_0-g\quad\colon\quad g\in L^1({\bf{R}}^+)
+\]
+and  the Fourier transform $\widehat\psi(\xi)$
+satisfies
+\[
+|\widehat\psi(\xi)-1|\leq 1/2
+\]
+for all $\xi$.
+It means that $|\widehat g(\xi)|\leq 1/2$.
+The spectral radius formula applied to $L^1$-functions shows that if
+$N$ is a sufficiently large integer then
+\[
+||g^{(N)}||_1\leq (3/4)^N\tag{4}
+\]
+where $g^{(N)}$ is the $N$-fold convolution of $g$.
+Now we have
+\[
+(1+g+\ldots+g^{N_1})\cdot \psi= 1-g^{(N)}\tag{5}
+\]
+By (4)  the norm of the $B$-element $g^{(N)}$ is strictly less than one
+and hence the right hand side is invertible where the inverse is given
+by a Neumann series, i.e. with $g_*=g^{(N)}$  the inverse is
+
+\[ 
+\delta_0+\sum_{\nu=1}^\infty\, g_*^\nu
+\]
+Since convolutions of $L^1({\bf{R}}^+)$-functions still are supported by
+$x\geq 0$, it follows from the above that $\psi$ is invertible in $B$ and
+Proposition E.3 is proved.
+
+
+\newpage
+
+%\end{document}
+

@@ -1,0 +1,137 @@
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+
+\bigskip
+
+\noindent
+Following constructions due to Cantor  we
+shall exhibit a family of closed subsets of the unit interval $[0.1]$.
+In the first step we remove an open interval $(a,b]$ where
+$0<a<b<1$ and the complement
+$[0,1]\setminus (a,b)$ becomes a union of disjoint closed interval $[0,a]$ and $[b,1]$.
+In the second steep we remove open intervals $(a-1,a_2)$ with
+$0<a_1<a_2<a$ and $(b_1,b_2)$ with $b<b_1<b_2<1$.
+Then there remains four disjoint closed intervals
+$[0,a_1), [a_2,a], [b.b_1], [b_2,1]$.
+We can continue in this way, and at step $N\geq 2$
+one has removed $2^N-1$  pairwise  disjoint open intervals, while three remain $2^N$ many disjoint closed intervals
+whose union is a compact set denoted by $\mathcal E_N$. These closed sets decrease with $N$ and the intersection
+\[
+\mathcal C= \cap \, E_N
+\] 
+is called  a Cantor  set.
+One is foremost interested in
+constructions as above where
+$\mathcal C$ is meager, i.e. without interior ppints.
+When this holds we can construct a non-decreasing and continuous function
+$L$ which is constant on each of the removed open intervals
+and the range is $[0.1]$.
+Namely, at step $N$
+we find a strictly increasing sequence
+\[
+0=a_0<a_1<\ldots <a_{2^N-1}<a_{2^N}=1
+\]
+where $\{[a_k.,a_{k+1}]\}$
+are the disjoint closed intervals whose union is $E_N$.
+For a fixed $n$ wwe find he
+piecewise linear function $f_N(x)$
+which  is constant on the removed open intervals at step $N$
+while
+\[ 
+f(a_{k+1})= f(a_k)+ 2^{-N}\quad\colon\quad 0\leq k\leq 2^N_1
+\]
+and $f_N(0)=0$ and $f_N(1)=1$.
+The reader may check that
+the maximum norms
+\[
+\max_x\, |f_{N+1}(x)-f_N(x)|\leq 2^{-N}
+\]
+hold for every $N$.
+It follows that there exists a continuous limit function
+\[
+L(x)= \lim_{n\to \infty}\, f_N(x)
+\]
+It is clear that $L$ is non-decreasing and by construction constant on
+the removed open intervals. In particular the derivative
+$f'(x)$ exists and is zero in the open complement
+$[0,1]\setminus\mathcal C$.
+The question arises at which points $x\in\mathcal C$  there  exists a derivative.
+Lebesgue considered the case when
+$\mathcal C$ is a null set which means that
+the sum of the lengths of removed open intervals is equal to one.
+In this case the $L$-function is quite remarkable since
+it is non-constant and yet its derivative is zero almost everywhere.
+One cannot therefore recapture $f$ via its derivative as in ordinary cal cues
+and the meaning of a differential $df$ is obscure.
+This led to general measure theory where
+the differential $dL$ has a meaning 
+as a  so called singular measure whose primitive  is $L$.
+\medskip
+
+\noindent
+A special  Cantor  set  arises when one removes triadic open intervals,  i.e first
+$(1/3,2/3)$and in the second step
+$(1/9,2/9)($ and $(7/9,8/9)$ and so on. Since
+\[
+1/3+\sum_{k=1}^{\infty}\, 2^k\cdot 3^{-k-1}=1
+\]
+it follows that $\mathcal C$ is a null set.
+\medskip
+
+
+\noindent{\bf{Remark.}}
+With the special $\mathcal C$ above we have the $L$-function. as far as I know one does not 
+know exactly at which points $x\in\mathcal C$ the $L$-function has a finite ordinary derivative.
+So in general measure theory one is content with
+the
+less precise assertion that $L$ has a vanishing derivative almost everywhere.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

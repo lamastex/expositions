@@ -1,0 +1,446 @@
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+\centerline{\bf Bochner's moment theorem}
+
+\bigskip
+
+\noindent
+In probability theory
+the distribution of a 
+stochastic variable is expressed
+by a probability measure
+$\mu$ on the real line where we take $t$
+as the coordinate. The characteristic function
+is by definition the Fourier transform
+of $\mu$ and we set
+\[ 
+f(x)=\int\, e^{-ixt}\cdot d\mu(t)\tag{*}
+\]
+Since $\mu$ has total mass one we get
+$f(0)=1$.
+Moreover, let
+$x_1,\ldots,x_N$ be some $N$-tuple of real numbers
+and $\alpha_1,\ldots,\alpha_N$ some $N$-tuple of complex numbers.
+Then 
+\medskip
+\[ 
+\sum\sum\, f(x_p-x_q)\alpha_p\cdot\bar\alpha_q=
+\int\,\bigl |\sum\, \alpha_p\cdot e^{-ix_p\cdot t}\bigr|^2d\mu(t)\tag{**}
+\]
+Since $\mu\geq 0$ the
+right hand side is $\geq 0$.
+It turns out that this inequality characterizes the family of
+bounded continuous functions $f(x)$ which are Fourier
+transforms of non-negative measures. To make it precise we give
+\medskip
+
+\noindent
+{\bf Definition.}
+\emph{Denote by $\mathcal{B}$ the class of
+continuous  functions $f(x)$ on the real $x$-line such that}
+\[
+\sum\sum\, f(x_p-x_q)\alpha_p\cdot\bar\alpha_q\geq 0\quad\colon\quad
+f(0)=1
+\]
+\emph{where the inequality holds for all pairs of $N$-tuples $x_\bullet$ and $\alpha_\bullet$
+as above.}
+\medskip
+
+\noindent
+{\bf Remark.}
+Given $x>0$ we take $N=2$ with $x_1=0$ and $x_2=x$
+and $\alpha_1=1$ while $\alpha-2=e^{i\theta}$.
+Then Bochner's condition gives
+\[
+2\cdot f(0)+ e^{i\theta}f(x)+e^{-it\theta}f(-x)\geq 0\tag{i}
+\]
+With  $\theta=\pi/2$ it  follows that
+$f(-x)=\bar f(x)$ and then the inequality (i)   gives
+\[ 
+|f(x)|\leq f(0)=1\tag{ii}
+\]
+So functions in $\mathcal B$ are automatically bounded.
+Now we announce Bochner's  result.
+\medskip
+
+\noindent
+{\bf 1. Theorem.} \emph{For each $f\in\mathcal{B}$ there exists
+a unique non-negative measure $\mu$ such that}
+\[
+f(x)=\int e^{-ixt}d\mu(t)
+\]
+
+
+
+\noindent
+{\bf Remark.} Theorem 1 
+appears in the book [Boch]
+\emph{Vorlesungen Ÿber Fouriersche Integrale} from 1932.
+The essential ingredient in the proof
+is a representation formula for positive harmonic functions
+in the upper half-plane.
+Prior to Bochner's
+result the periodic version of Theorem 1
+was established by
+G. Herglotz who proved the following
+in    [Herg] 
+from 1911:
+\medskip
+
+\noindent
+{\bf 2. Theorem.} \emph{Let $\{m_n\,\colon -\infty<n<\infty\}$
+be a sequence of complex numbers.
+In order that there exists a non-negative Riesz measure
+$\mu$ on the interval $[0,2\pi]$ such that}
+\[ m_n=\int_0^{2\pi}\, e^{in\theta}\cdot d\mu(\theta)
+\]
+\emph{it is necessary and sufficient that}
+\[
+\sum_{\nu=-N}^{\nu=N}\sum_{j=-N}^{j=N}\, m_{\nu-j}\cdot \alpha_\nu\cdot\bar\alpha_j\geq 0
+\]
+\emph{holds for and finite sequence of complex numbers}
+$\alpha_{-N}\ldots,\alpha_N$.
+
+
+\bigskip
+
+\noindent
+To prove Bochner's theorem we shall need
+the following result:
+\medskip
+
+\noindent
+{\bf 3. Proposition.}
+\emph{For each pair of real numbers
+$\xi,\eta$ with $\eta>0$
+there exists a function $\phi(x)$ in
+$L^1({\bf{R}})$
+such that}
+\[
+e^{-i\xi x-\eta|x|}= \int_{-\infty}^\infty\,
+\phi(x+y)\cdot\bar \phi(y)\cdot dy\quad\colon\, -\infty<x<\infty
+\]
+\medskip
+
+\noindent
+\emph {Proof}
+Set
+\[
+\phi(x)=\sqrt{\frac{1}{2\pi}}\cdot \int\, e^{itx}\cdot 
+\sqrt{\frac{1}{2\pi}}\cdot 
+\sqrt{\frac{\eta}{\eta^2+(\xi+t)^2}}
+\cdot dt\tag{ii}
+\]
+
+
+\noindent 
+The reader can verify that
+$\phi(x)\in L^1({\bf{R}})$
+and that
+the equality in Proposition 3 holds.
+\medskip
+
+\noindent
+{\emph{ Proof of Theorem 1.}}
+Let $f\in\mathcal B$ be given and put
+\[ 
+\Phi(\xi,\eta)=\int_{-\infty}^\infty\, 
+e^{-i\xi x-\eta|x|}\cdot
+f(x)\cdot dx\quad\colon\, \xi\in{\bf{R}}\quad\colon\eta>0\tag{1}
+\]
+
+
+
+\noindent
+Proposition 3 gives:
+\[
+\Phi(\xi,\eta)=
+\iint\,
+\phi(x+y)\cdot\bar \phi(y)\cdot f(x)\cdot dxdy=
+\]
+\[
+\iint\,
+\phi(x)\cdot\bar \phi(y)\cdot f(x-y)\cdot dxdy
+\]
+Since both $f$ and $\phi$ belong to $L^1$ we can approximate
+the last double integral by Riemann sums
+which  are of the form
+\[
+\sum\, f(x_p-x_q)\cdot\alpha_p\bar \alpha_q
+\]
+The hypotehsis that
+$f\in\mathcal B$ therefore
+implies that
+the $\Phi$-function is $\geq 0$.
+Next, for each fixed $x$ we consider the function
+\[ 
+(\xi,\eta)\mapsto e^{-i\xi x-\eta|x|}\tag{*}
+\]
+Since $i^2=-1$ we see that this function is harmonic. Approximating
+the integral (1) by Riemann sums we conclude that
+$\Phi(\xi,\eta)$ is a harmonic function in the
+upper half-plane
+$\eta>0$.
+Since $|f(x)|\leq 1$ for all $x$ and $|e^{-ix\xi}|=1$
+the
+the triangle inequality gives
+\[ |\Phi(\xi,\eta)|\leq
+\int_{-\infty}^\infty\, 
+e^{-\eta|x|}\cdot
+dx=
+\frac{2}{\eta}\tag{i}
+\]
+
+
+\noindent
+Now $\Phi$ is harmonic and $\geq 0$
+in the upper half-plane. Hence  the inequality (i) and
+the general result in ¤ XX
+gives a non-negative measure $\mu$ of finite total mass such that
+\[ 
+\Phi(\xi,\eta)=\frac{1}{\pi}\cdot
+\int_{-\infty}^\infty\, \frac{\eta}{\eta^2+(\xi-t)^2}\cdot d\mu(t)\tag{2}
+\]
+
+
+\noindent
+With $\eta>0$ kept fixed we notice that (1) means that the function
+$\xi\mapsto \Phi(\xi,\eta)$ is the Fourier transform of
+$e^{-\eta|x|}f(x)$. Hence  (2) and Fourier's inversion formula 
+yield:
+\[
+e^{-\eta|x|}f(x)=
+\frac{1}{2\pi^2}\cdot\int_{-\infty}^\infty\,\, 
+e^{ix\xi}\cdot \bigr[ \int_{-\infty}^\infty\, \frac{\eta}{\eta^2+(\xi-t)^2}\cdot d\mu(t)
+\bigl]\cdot d\xi=
+\]
+\[
+\frac{1}{2\pi^2}\cdot\int\,
+\bigr[ \int_{-\infty}^\infty\, \frac{\eta\cdot e^{ix\xi}}{\eta^2+(\xi-t)^2}\bigl]\,
+d\mu(t)\quad\colon\quad \eta>0
+\tag{iii}
+\]
+
+
+\noindent
+Next,  we have  the limit formulas
+\[
+\frac{1}{\pi}\cdot \lim_{\eta\to 0}
+\int_{-\infty}^ \infty e^{ix\xi}\cdot \frac{\eta}{\eta^2+(\xi-t)^2}\cdot d\xi=e^{ixt}
+\quad\colon\,-\infty<t<\infty \tag{iv}
+\]
+\[
+\lim_{\epsilon\to 0}\, e^{-\epsilon|x|}\cdot f(x)\to f(x)\tag{v}
+\]
+
+
+\noindent
+So after the passage to the limit as
+$\eta\to 0$ we  get the requested formula:
+\[ 
+f(x)=\frac{1}{2\pi}\cdot\, \int\, e^{ixt}\cdot d\mu(t)\tag{iv}
+\]
+\medskip
+
+
+\newpage
+
+
+
+\centerline{\bf Operational calculus on $L^1({\bf{R}})$}
+
+
+\bigskip
+
+
+
+
+
+\noindent
+Let $f(x)$ be in $L^1({\bf{R}})$ and denote its Fourier transform
+by $g(\xi)$, i.e.
+\[ 
+g(\xi)=\int\, e^{-ix\xi}f(x)dx\tag{*}
+\]
+Let $[a,b]$ be a closed interval on the real $\xi$-line.
+Write  $w=g(\xi)$ which gives the compact subset
+$g[a,b])$ of the complex $w$-plane.
+Let 
+$\Phi(w)$ be an analytic function
+defined in some open neighborhood of
+$g[a,b]$.
+With these notations one has
+\medskip
+
+\noindent
+{\bf Theorem.}
+\emph{There exists a function
+$\phi(x)\in L^1({\bf{R}})$ whose Fourier transform
+satisfies}
+\[ 
+\hat\phi(\xi)=\Phi(g(\xi))\quad\colon\quad a\leq\xi\leq b
+\]
+
+
+\noindent
+\emph{Proof.}
+Consider  a point $a\leq \xi_*\leq b$ and put $w_*=g(\xi_*)$.
+The analyticity of $\Phi$ gives
+a  series expansion
+\[ 
+\Phi(w)=\Phi(w_*)+\sum_{\nu=1}^\infty\, c_\nu(w-w_*)^\nu\tag{*}
+\]
+which is convergent in some open disc centered at $w_*$. Hence there exist 
+$\delta>0$ and a constant $M$
+such that
+\[
+|c_\nu|\leq M\cdot\delta^{-\nu}\quad\colon\quad \nu=0,1,\ldots\tag{i}
+\]
+Next,  consider the function
+\[
+W(\xi)=1\quad\colon\quad |\xi|\leq1 \quad\colon
+W(\xi)=2-|\xi|\quad\colon\quad 1\leq |\xi|\leq 2
+\]
+
+\noindent
+Recall from the example in ¤ XX that $W$ is the Fourier transform of an
+$L^1$-function $P(x)$. Fourier's inversion formula gives:
+\[ 
+P(x)=\frac{1}{2\pi}\int e^{ix\xi}\cdot W(\xi)d\xi\tag{ii}
+\]
+Next, when $|g(\xi)-g(\xi_*)|<\delta$
+it follows from (*) that
+\[ 
+\Phi(g(\xi))-\Phi(g(\xi_*))=\sum\, c_\nu(g(\xi)-g(\xi_*))^\nu\tag{iii}
+\]
+Let $k>0$ and put
+\[ 
+\psi_k(\xi)= W(k(\xi-\xi_*))\cdot \Phi(g(\xi_*))+
+\sum\, c_\nu\cdot\bigl[ W(k(\xi-\xi_*))\cdot (g(\xi)-g(\xi_*)\,\bigr]^\nu\tag{iii}
+\]
+
+
+\noindent
+Rules for dilation under the Fourier transform and (ii) give
+\[
+\frac{1}{k}\cdot e^{i\xi_*\cdot x}\cdot P(\frac{x}{k})=
+\text{inverse Fourier transform of }\,\, W(k(\xi-\xi_*))\tag{iv}
+\]
+
+
+\noindent
+More precisely, we have
+\[
+\frac{1}{k}\cdot e^{i\xi_*\cdot x}\cdot P(\frac{x}{k})=
+\frac{1}{2\pi}\cdot\int e^{ix\xi}\cdot W(k(\xi-\xi_*))\cdot d\xi\tag{**}
+\]
+
+
+\noindent
+Define the function $Q_k(x)$ by:
+\[
+Q_k(x)= \frac{1}{k}\int e^{i\xi_*(x-y)}\bigl [ P(\frac{x-y}{k}-P(\frac{x}{k})\,\bigr]
+f(y) dy\tag{v}
+\]
+Then (**) and Fourier's inversion formula give:
+\[
+W(k(\xi-\xi_*))\cdot (g(\xi)-g(\xi_*)=
+\int e^{-ix\xi} \cdot Q_k(x)dx\tag{vi}
+\]
+
+
+\noindent 
+Next, the triangle inequality applied to the
+right hand side in (vi) gives:
+\[ \int\,|Q_k(x)|\cdot dx\leq 
+\frac{1}{k} \iint
+| P(\frac{x-y}{k}-P(\frac{x}{k})|\cdot |f(y)|\cdot dxdy=
+||f||_1\cdot 
+\int\, \bigl |P(x-\frac{y}{k})-P(\frac{x}{k})\bigr |\cdot dx\tag{***}
+\]
+
+
+\noindent
+Since $P\in L^1({\bf{R}})$
+the Riemann-Lebesgue theorem gives
+\[ 
+\lim_{k\to 0}\, 
+\int\, \bigl |P(x-\frac{y}{k})-P(\frac{x}{k})\bigr |\cdot dx=0
+\]
+Together with the   inequality (***)
+we therefore obtain
+\[ 
+||Q_k||_1=\lambda(k)\quad\text{where}\quad\lim_{k\to 0}\,\lambda(k)=0
+\tag{****}
+\]
+
+
+\noindent
+Next, for each
+$\nu\geq 2$ we construct the $\nu$:th fold convolution of
+$Q_k$ which we denote by
+$Q_k^{(\nu)}$. The multiplicative inequality for
+$L^1$-norms and (****)
+give:
+\[ 
+||Q_k^{(\nu)}||_1\leq \lambda(k)^\nu\quad\colon\quad \nu=1,2,3,\ldots\tag{*****}
+\]
+
+\medskip
+
+\noindent
+Choose $k$ so large that
+$\lambda(k)<\delta$. Then (*****) entails that
+\[
+G(x)= 
+\sum_{\nu=1}^\infty\, c_\nu\cdot Q_k^{(\nu)}(x)\tag{vii}
+\]
+converges in the Banach space $L^1({\bf{R}})$.
+Hence we obtain the $L^1({\bf{R}})$-function defined by
+\[
+G^*(x)= \frac{1}{k}\cdot\Phi(g(\xi_*))\cdot e^{i\xi_*\cdot x}
+\cdot P\bigl(\frac{x}{k}\bigr)\tag{viii}
+\]
+
+
+\noindent
+From the  constructions above it is clear that the
+Fourier transform of $G^*(x)$ is equal to
+the function $\psi_k(\xi)$ in (iii).
+Moreover, 
+the construction of the $W$-function and the  series expansion of
+$\Phi$ in (*) give  the equality
+\[
+\psi_k(\xi)=\Phi(g(\xi))\quad\colon\quad
+|\xi-\xi_*|\leq\frac{1}{k}\tag{ix}
+\]
+\medskip
+
+\noindent
+{\emph Final part of the proof.}
+By (ix)
+we find
+$L^1$-functions whose Fourier transforms agrees with
+$\Phi(g(\xi))$ on small intervals around every point $a\leq\xi_*\leq b$.
+By  the Heine-Borel Lemma and a $C^\infty$-partition of the unit
+we  finish the proof of Theorem 1. To be precise,  use that
+if $h(\xi)$ is a test-functionon the real $\xi$-line then it is the
+Fourier transform of some $L^1$-function.
+
+
+\end{document}
+

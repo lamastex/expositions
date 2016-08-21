@@ -1,0 +1,586 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+ 
+\begin{document}
+
+
+\centerline{\bf{The heat equation and  Brownian motion}}
+\medskip
+
+\noindent
+{\bf{Introduction.}}
+The heat equation has a long history whose
+physical relevance has inspired mathematicians to develop
+tools to get  solutions.
+A major  step was introduced  by Fourier  which gives a recipe
+to solve  the heat equation
+with prescribed boundary values.
+We  restrict the discussion  to  the 2\vvv dimensional case 
+where the basic PDE\vvv equation is
+\[
+\frac{\partial u}{\partial t}(t,z)= \Delta(u)(z,t)\tag{*}
+\]
+Here $t$ is a time variable and $z=x+iy$ moves in a domain
+$\Omega$  of the complex plane
+and is of class $\mathcal D(C^1)$.
+The PDE\vvv equation corresponds to 
+a  Brownian motion which takes place in
+$\Omega$. Suppose that
+the density of particles observed at time $r=0$
+is observed and expressed  by a density function $g\uuu 0(z)$, i.e. $g$ is  
+real\vvv valued and non\vvv negative and its area integral over
+$\Omega$ is one.
+When $t>0$  classical laws in physics mean that the observed density at some time
+$t>0$ is expressed by 
+a density function $x\mapsto u(z,t)$ where  $u$ solves (*) and
+$u(0,z)= g\uuu 0(z)$ and  the following
+boundary condition hold for every $t>0$:
+\[ 
+\frac{\partial u}{\partial n}(z,t)=0\quad
+\colon \quad z\in\partial \Omega\tag{*}
+\]
+
+
+\medskip
+
+\noindent
+Above
+(*) is an example of a parabolic 
+equation for which  uniqueness and existence of solutions with
+prescribed initial conditions were proved by Gevrey, Hadamard and Holmgren 
+in work  around 1900.
+The heat equation can be rewritten as an
+integral equation and this   was   used
+in pioneering work by Ivar Fredholm which 
+leads to    existence theorems and
+estimates for associated eigenvalues and 
+eigenfunctions under various 
+boundary value conditions. 
+There also exists a close interplay betwee the heat equation and
+the Brownian motion. This was   pointed out by 
+Poincaré and   made explicit   by 
+Bachelier in the article
+\emph{La Bourse}  which contains the essential foundations for
+the subject which nowadays bears the popular name
+"mathematics of finance".
+For an  account and further historic comments
+about  the 
+Brownian motion we refer to § XX in  \emph{Appendix Measure}.
+\medskip
+
+
+\noindent
+Let us now discuss  the  heat
+equation in ${\bf{C}}$.
+Consider a domain $\Omega$ of class $\mathcal D(C^1)$
+whose boundary consists of $p$ many closed and disjoint differentiable Jordan curves.
+Here $p$ is some positive integer and  the case $p=1$ is not excluded.
+In §§ from Chapter V we constructed the Green's function $G(z,\zeta)$
+defined in the closed product $\bar \Omega\times\bar \Omega$.
+Denote by $C\uuu *(\Omega)$ the Banach space of continuous functions
+in $\bar\Omega$ which are zero on the boundary.
+There exists the linear operator from
+this Banach space into itself defined by
+\[
+Tu(z)=\iint\uuu\Omega\, G(z,\zeta) u(\zeta) \cdot d\xi d\eta\tag{1}
+\]
+Recall from §§ in Chapter V
+that if $\phi$ is a $C^2$\vvv function with compact
+support in
+$\Omega$ then
+\[
+\iint\uuu\Omega\, \Delta(\phi)(z) \cdot u(\zeta) dx dy=
+\iint\uuu\Omega\, \phi(z) \cdot Tu(\zeta) dx dy
+\]
+This  means that $Tu$ regarded as a distribution has a Laplacian expressed by
+the continuous density $u$, i.e. 
+\[
+\Delta(Tu)(z)=u(z)\quad\colon\quad z\in\Omega\tag{2}
+\]
+Let  $u\in C^0\uuu *(\Omega)$ be an eigenfunction
+where
+\[
+u(z)=\mu\cdot Tu(z)
+\] 
+holds for some non\vvv zero constant $\mu$.
+From (2) it follows that
+\[
+\Delta(u)=\frac{1}{\mu}\cdot u\tag{3}
+\] 
+which  entails that $u$ is of class $C^2$ in $\Omega$.
+Moreover, Green's formula gives:
+
+\[
+\mu\cdot \iint\uuu\Omega\, \Delta(u)(z) \cdot u(z) dx dy=
+\iint\uuu\Omega\, \nabla(u)^2(z) \cdot dx dy=0\tag{4}
+\]
+where
+$\nabla(u)^2= u\uuu x^2+u\uuu y^2$.
+Hence the eigenvalue $\mu$ is real and strictly negative.
+\medskip
+
+\noindent
+{\bf{1. The spectrum of $T$ and the function $\mathcal D(\lambda)$}}.
+Set $G^{(0)}= G$ and define inductively
+
+\[
+ G^{(m)}(z,\zeta)=
+\mu\cdot \iint\uuu\Omega\, G(z,\zeta) \cdot 
+ G^{(m\vvv 1)}(z,\zeta)\, d\xi d\eta
+\]
+Let $\lambda$ be a new complex parameter and put
+\[
+\mathcal D(\lambda)= \sum\uuu{m=0}^\infty\,
+\lambda^m\cdot G^{(m)}(z,\zeta)
+\]
+
+
+\noindent
+We  regard $\mathcal D(\lambda)$ as a function with values
+in the  Hilbert space of square integrable functions on 
+the product $\Omega\times\Omega$, i.e. we use that
+\[
+\iint\uuu {\Omega\times \Omega}\, 
+|G(z,\zeta)|^2\, d\xi d\eta dxdy<\infty
+ \]
+and similar finite double integrals occur for the functions
+$\{ G^{(m)}\}$.
+The general result in §§ gives
+
+\medskip
+
+\noindent
+{\bf{2. Theorem.}}
+\emph{The function $\mathcal D(\lambda)$ extends to a meromorphic function in
+the whole complex $\lambda$\vvv plane whose poles are confined
+to a sequence of strictly negative real numbers.}
+\bigskip
+
+\noindent
+{\bf{3. The heat equation.}}
+Let $\{\lambda\uuu k\}$ be the poles of $\mathcal D$. 
+If the pole has multiplicity $e\uuu k\geq 2$  the corresponding eigenspace
+is $e\uuu k$\vvv dimensional.
+Repeating eigenvalues with eventual multiplicities we obtain
+a sequence of eigenfunctions $\{u\uuu k\}$ with eigenvalues
+$\{\lambda\uuu k\}$ and for each $k$ the eigenfunction $u\uuu k$
+is normalised so that
+\[
+\iint u\uuu k^2(x,y)\cdot dxdy=1
+\]
+and  chosen so that
+they form an
+orthonormal set in the Hilbert space $L^2(\Omega$. Notice  that
+every $u$\vvv function is real\vvv valued.
+Next, let $t$ be a new real parameter which
+serves as a time variable.
+If $\{c\uuu k\}$ is a sequence of complex numbers
+we  set
+\[ 
+p(t,z)=
+\sum\uuu{k=1}^\infty\, c\uuu k\cdot e^{\vvv\lambda\uuu k t}\cdot
+u\uuu k(z)
+\]
+The series converges nicely when $t>0$
+if $\{c\uuu k\}$ do not increase too
+rapidly and
+the $p$\vvv function satisfies the PDE\vvv equation
+\[
+\frac{\partial p}{\partial t}=p\uuu {xx}+ p\uuu {yy}= \Delta(p)
+\] 
+when $t>0$ and $z\in\Omega$.
+Next, the sequence  $\{c\uuu k\}$
+determines an initial condition which usually is interpretated via
+a limit
+\[ 
+\lim\uuu{t\to 0}\, p(t,z)= p\uuu *(z)
+\] 
+where $p\uuu *(z)$ is a distribution.
+If $p\uuu *$ belongs to $L^2$ we have for example
+\[
+c\uuu k=\iint p\uuu *(z)u\uuu k(z)\, dxdy
+\]
+\bigskip
+
+
+\noindent {\bf{4. The Brownian  motion.}}
+Solutions to the heat equation
+correspond to probability densities for a particle whose 
+time-dependent change of position is 
+governed by a Brownian motion.
+If $z\in\Omega$ is given and the particle starts at $z$ at time zero then
+we consider the probability distribution:
+\[ 
+t\mapsto \text{prob}(z,t)
+\] 
+which gives the probability that the particle stays in $\Omega$ 
+up to time $t$.
+Since $\Omega$ is bounded the particle eventually hits the boundary where it
+is absorbed.
+It means that
+\[ 
+\lim\uuu {t\to\infty}\, \text{prob}(z,t)=0\tag{i}
+\]
+On the other hand the particle stays in $\Omega$ with high probability under
+short time intervals, i.e.
+\[
+\lim\uuu {t\to 0}\, \text{prob}(z,t)=1\tag{ii}
+\] 
+Above (i\vvv ii) hold for every $z\in\Omega$.
+The function
+\[ 
+p(t,z)=\text{prob}(z,t)
+\]
+satisfies the heat equation and by the results in § 3  
+given by the series
+\[
+p(t,z)= \sum\, c\uuu k\cdot 
+e^{\vvv\lambda\uuu k t}\cdot
+u\uuu k(z)
+\quad\text{where}\quad
+c\uuu k= \iint\uuu\Omega\, u\uuu k(z)\cdot dxdy\tag{4.0}
+\]
+\medskip
+
+\noindent
+{\bf{4.1 The $E$\vvv function.}}
+When the particle starts at a point $z$ we 
+consider the expected time before it hits the boundary
+which is expressed by the integral
+\[ 
+E(z)=
+\vvv \int\uuu 0^\infty\, t\cdot
+\frac{\partial p}{\partial t}(t,z)\cdot dt
+\]
+Since $p$ satsifies the heat equation and the differential operators
+$\partial\uuu t$ and the Laplacian of the  $z$\vvv variable commute
+it follows that
+\[
+\Delta(E)(z)=\vvv \int\uuu 0^\infty\, t\cdot
+\frac{\partial^2 p}{\partial t^2}(t,z)\cdot dt\tag{4.1.1}
+\]
+A partial integration gives
+\[
+\Delta(E)(z)=\vvv 1
+\]
+Hence the function
+\[ 
+E(z)+\frac{|z|^2}{2}
+\]
+is harmonic in $\Omega$ and since $E=0$ on the boundary
+we conclude that
+\[
+ E(z)=\int\uuu{\partial\Omega}\, P\uuu z(\zeta)\cdot \frac{|\zeta|^2}{2}
+ \,d\xi d\eta\vvv \frac{|z|^2}{2}
+\]
+where $P\uuu z(\zeta)$ is the Poisson kernel which exhibits solutions to
+the Dirichlet problem.
+\medskip
+
+\noindent
+{\bf{4.2 Example.}}
+Let $\Omega=\{|z|<R\}$ be a disc. Then
+\[
+E(z)= \frac{1}{2}(R^2\vvv |z|^2)
+\]
+Next, let $\Omega=\{ 1<|z|<R\}$ be an annulus.
+Then the reader may verify that
+
+\[ 
+E(z)=\frac{R^2\vvv 1}{2}\cdot \frac{\log|z|}{\log R}
++\frac{1\vvv |z|^2}{2}\tag{4.2.1}
+\]
+Notice that $E$ takes its maxium  over the circle of radius $r^ *$
+where
+\[
+r^*=\sqrt{\frac{R^2\vvv 1}{2\ddot \log R}}\tag{4.2.2}
+\]
+The reader is invited to interpretate
+(4.2.1-4.2.2) by  probabilistic considerations.
+\bigskip
+
+
+\noindent
+{\bf{4.3 Points of arrival.}}
+Let $\omega$ be a  finite union of subintervals of $\partial\Omega$.
+Starting the Brownian motion at a point $z\in\Omega$
+we  consider the paths which at the first arrival to the boundary
+hits points in $\omega$.
+Again we get a $p$-function  satisfying the heat equation
+and the initial condition depends
+upon $\omega$.
+More precisely, the probability that a Brownian path
+escapes for the first time at a point in $\omega$ is equal to  the value of the 
+harmonic measure
+function $\mathfrak{m}(\omega,z)$. Set
+\[
+p\uuu \omega(t,z)=
+\sum\, c\uuu k(\omega)\cdot e^{\vvv\lambda\uuu k\cdot t}\cdot u\uuu k(z)
+\]
+where $\{c\uuu k(\omega)\}$ are determined by
+\[
+c\uuu k(\omega)=\iint\uuu\Omega\,
+\mathfrak{m}(\omega,z)\cdot u\uuu k(z)\cdot dxdy
+\]
+\medskip
+
+\noindent
+{\bf{4.4 A joint probability distribution.}}
+Let $\omega\subset \partial\Omega$ be as above
+and $t>0$ some fixed time\vvv value. With  $\delta t$ small
+we seek the probability that the particle
+which starts at some  $z$,
+escapes at some point in
+$\omega$ 
+for the first time during the interval $[t,t+\delta t]$.
+From the above this probability up to small ordo of $\delta t$
+is given by:
+\[
+\bigl[\, \sum\, c\uuu k(\omega)\cdot \lambda\uuu k\cdot
+e^{\vvv\lambda\uuu k\cdot t}\cdot u\uuu k(z)\,\bigr]\cdot \delta t
+\]
+\medskip
+
+\noindent
+{\bf{4.5 Example.}}
+Suppose that the "open window" which  the particle 
+wants  to hit on the boundary changes with time.
+The probability that it will escape through the changing  window becomes
+\[
+\sum\, 
+[\int\uuu 0^\infty\, c\uuu k(\omega\uuu t) e^{\vvv \lambda\uuu k t}\cdot dt\,]
+\cdot
+\lambda\uuu k\cdot u\uuu k(z)\tag{*}
+\]
+\medskip
+
+
+\noindent
+{\bf{4.6 A special case.}}
+Let $\Omega$ be  the unit disc
+and $z=0$ the starting point.
+Let $0<a<\pi$ and suppose that the interval $\omega\uuu t$
+is $(\vvv a\cdot |\sin \gamma t|,a\cdot |\sin\gamma t|)$ where 
+$\gamma>0$ is a constant.
+So the window is closed when $t=0$ and has maximal width at time values when
+$|\sin\,\gamma t|=1$.
+Here we have:
+\[
+c\uuu k(\omega\uuu t)=\frac{a\cdot |\sin(\gamma t|}{\pi}
+\]
+\medskip
+
+\noindent
+{\bf{4.7 Remark.}}
+The reader may consult text\vvv books for the classic formulas which
+determine the sequence of eigenvalues $\{\lambda\uuu k\}$ and
+the sequence $\{u\uuu k(0)\}$ in a disc.
+So above
+we obtain a closed formula for the probability to escape the changing window
+but a computer should be used
+to obtain a numerical value.
+One can  employ Monte Carlo simulations
+to determine (*) above. More precisely,
+instruct the computer to change
+the size of the open window and now the computer
+provides  accurate
+approximations and there is not difficulty to extend the situation 
+when one starts from an
+arbitrary point in $D$. Of  course one can  replace the chosen 
+"opening function" $|a|\cdot |\sin \gamma t|$ by other time dependent functions
+and in  general cases one gets
+numerical solutions 
+via Monte Carlo simulations, i.e.  one finds
+numerical values for
+the probability to escape a moving window on the boundary of
+an arbitrary domain in
+$\mathcal D(C^1)$.
+
+
+
+\bigskip
+
+
+
+
+
+\noindent
+Passing to  dimension  $n=3$ is of special interest
+one can still employ Mone Carlo simulations and
+establish numerical values for many different expected values
+as well as higher moments and other 
+joint distributions.
+
+
+
+
+
+
+\medskip
+
+
+\centerline{\bf{Schrödinger's equation.}}
+\medskip
+
+\noindent
+Quantum mechanics
+raised new questions which
+give rise  to  non\vvv linear equations.
+A precise question was raised by Schrödinger in the  article
+\emph{Théorie relativiste de l'électron et l'interpretation de la
+mécanique quantique} from 1932.
+In the non\vvv classical case
+the previous solution $u(x,t)$   is no longer valid.
+Instead another density 
+$z\mapsto f\uuu 1(z)\neq u(t\uuu 1,z)$
+is observed at some time
+$t\uuu 1>0$.
+Thus, something highly improbable
+but nevertheless possible has occurred
+during the time interval $[0,t\uuu 1]$.
+Schrödinger's problem was to find the most likely density a time
+$t\uuu 1$ and 
+he concluded that  the requested 
+time\vvv dependent
+density $w(t,z)$ which substitutes $u(t,z)$ above, is found
+in a non\vvv linear class of functions
+$\mathcal W$ formed by products 
+\[ 
+u\uuu 0(t,z)\cdot u\uuu 1(z,t)
+\]
+where $u\uuu 0(z,t)$ is a solution to the same
+heat equation as in (*) while $u\uuu 1$ solves the adjoint equation
+\[ 
+\frac{\partial u\uuu 1}{\partial n}(z,t)=\vvv \Delta(u\uuu 1)(t,z)
+\quad\text{for time values}\quad t<t\uuu 1
+\]
+and satisfies the same boundary condition (1).
+Now one seeks a function $w(t,z)$ in the family $\mathcal W$
+which satisfies the two  boundary value conditions
+\[ 
+w(0,z)= f\uuu 0(z)\quad\colon\quad w(t\uuu 1,z)= f\uuu 1(z)
+\] 
+where $f\uuu 0,f\uuu 1$ is a pair of \emph{prescribed} density functions.
+The solution to this  problem  can be   transformed
+into a system of non\vvv linear integral equations.
+Namely,  for the given domain
+$\Omega$ there exists the Poisson\vvv Greens function $K(t,z,\zeta)$
+and we have
+
+\[
+u\uuu 0(t,z)= \iint\uuu\Omega\,
+K(t,z,\zeta)\cdot g\uuu 0(\zeta)\cdot d\xi d\eta
+\]
+\[
+u\uuu 1(t,z)= 
+\iint\uuu\Omega\,
+K(t\uuu 1\vvv t,z,\zeta)\cdot g\uuu 1(\zeta)\cdot d\xi d\eta
+\]
+Next, the boundary conditions for $w$ yield
+
+\[
+f\uuu 0(z)=
+g\uuu 0(z)\cdot 
+\iint\uuu\Omega\,
+K(\vvv t\uuu 1,z,\zeta)\cdot g\uuu 1(\zeta)\cdot d\xi d\eta
+\]
+\[
+f\uuu 1(z)=
+g\uuu 1(z)\cdot 
+\iint\uuu\Omega\,
+K(\vvv t\uuu 1,z,\zeta)\cdot g\uuu 1(\zeta)\cdot d\xi d\eta
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The solvability of the system above was left open by Schrödinger
+and  put forward to the mathematical community at the IMU\vvv
+congress in Zürich in 1932 by Serge Bernstein.
+The article \emph{Résolution d'un systeme d'équations de Schrödinger}
+by Fortet from 1940 gave a method for succesive approximations
+which led to solutions under some specific conditions imposed on the boundary data.
+A general method was  introduced by Beurling in the article [Beurling]
+which  is exposed in § XX from Special sections and gives
+existence of solutions to the system above for smooth domains above
+ad boundary data expressed by the   functions
+$f\uuu 0,f\uuu 1,g\uuu 0,g\uuu 1$.
+Beurling's  solution is
+established
+via a  non\vvv linear variational problem for product measures.
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

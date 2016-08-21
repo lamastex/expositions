@@ -1,0 +1,628 @@
+%\documentclass{amsart}
+
+
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+\centerline{\bf{XI. Radial limit of functions with  finite Dirichlet integral}}
+
+\bigskip
+
+
+
+\noindent
+We expose results from the article
+\emph{Ensembles exceptionnels}
+by Beurling in [Beur] devoted to
+the study of functions
+$f(\theta)$ on the unit circle $T$
+whose harmonic extensions $H\uuu f$
+to  $D$ have a finite Dirichlet integral.
+For such functions we shall prove that $H\uuu f$
+has radial limits outside a set whose capacitiy is zero.
+A real\vvv valued functions $f(\theta)$  on the unit circle $T$
+has a Fourier series:
+\[
+ f(\theta)=\frac{a\uuu 0}{2}+
+\sum\uuu {n=1}^\infty\,a\uuu n\cdot \cos\,n\theta+
+\sum\uuu {n=1}^\infty\,b\uuu n\cdot \sin\,n\theta
+\]
+We say that $f$ belongs to the class
+$\mathcal D$ if
+\[
+\sum\uuu {n=1}^\infty\,n(a^2\uuu n+b^2\uuu n)<\infty\tag{*}
+\]
+When the constant term $a\uuu 0=0$ the sum in (*) is denoted by $D(f)$
+and is called the Dirichlet norm.
+Denote by $\mathcal E\uuu f$ the set of all $\theta$ where the 
+partial sums of the Fourier series of $f$ does not converge.
+
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{For each $f\in \mathcal D$ 
+the outer capacity of $\mathcal E\uuu f$ is zero.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Recall from XXX that if $E\subset T$
+then its outer capacity is defined by
+\[ 
+\text{Cap}^*(E)=\inf\uuu {E\subset U}\, \text{Cap}(U)
+\]
+with the infimum taken over open neighborhoods of $E$.
+\medskip
+
+\noindent
+The proof of Theorem 0.1 has two essential ingredients.
+First, given some $f\in\mathcal D$ with constant term $a\uuu 0=0$
+we obtain the harmonic
+function
+$f(r,\theta)$ defined in the open disc by
+ \[
+ f(r,\theta)=
+\sum\uuu {n=1}^\infty\,r^n(a\uuu n\cdot \cos\,n\theta+
+b\uuu n\cdot \sin\,n\theta)
+\]
+We construct  partial derivatives with respect to $r$ and obtain:
+\[
+ f'\uuu r(r,\theta)=\sum\uuu {n=1}^\infty\,n\
+ \cdot r^{n\vvv 1}(a\uuu n\cdot \cos\,n\theta+
+b\uuu n\cdot \sin\,n\theta)\tag{1}
+\]
+Define the function $F(r,\theta)$ in $D$ by
+\[
+F(r,\theta)= \int\uuu 0^r\, |f'\uuu s(s,\theta)|\cdot ds\tag{2}
+\]
+Thus, for each $\theta$ we integrate
+the absolute value of  (1) along a ray from the origin.
+For every fixed $\theta$
+$r\mapsto F(r,\theta)$ is non\vvv decreasing 
+and hence
+there exists a limit
+\[
+\lim\uuu{r\to 1}\, F(r,\theta)=F^*(\theta)\tag{3}
+\]
+The limit value can be finite or $+\infty$.
+It is clear that if (3) is finite then there exists the radial limit
+\[
+\lim\uuu{r\to 1}\, f(r,\theta)=f^*(\theta)\tag{4}
+\]
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+For every $\theta$ such that the radial limit (4)
+exists, it follows
+that Fourier's partial sums converge to  $f^*(\theta)$.
+In fact, this follows from Abel's theorem in
+[Series] since the inclusion $f\in\mathcal D$
+entails that 
+$a\uuu n$ and $b\uuu n$ both are
+small ordo of $\frac{1}{n}$. Hence we have:
+
+\medskip
+
+\noindent
+{\bf{Lemma}}
+\emph{For every $\rho>0$ one has the inclusion}
+\[
+\mathcal E\uuu f\subset \{ F^*(\theta)>\rho\}
+\]
+\medskip
+
+\noindent
+We conclude that  
+Theorem 0.1 follows if 
+the capacity of $\{F^*>\rho\}$ tends to zero as $\rho\to+\infty$.
+This follows from the result below.
+
+
+\medskip
+
+\noindent
+{\bf{0.2 Theorem.}}
+\emph{Let $f\in\mathcal D$ where $a\uuu 0=0$
+and $D(f)=1$. Then}
+\[ 
+\text{Cap}(\{F^*>\rho\})\leq e^{\vvv \rho^2}
+\] 
+\emph{hold for every $\rho>0$.}
+\medskip
+
+
+\noindent
+The essential step to get
+Theorem 0.2 relies upon  the following
+inequality:
+
+\bigskip
+
+\noindent{\bf{0.3 Theorem.}}
+\emph{For each $f\in\mathcal D$ with $a\uuu 0=0$
+one has   $F^*\in\mathcal D$ and}
+\[ 
+D(F^*)\leq D(f)
+\]
+
+
+\noindent
+Once this is proved we can deduce 
+Theorem 0.2. This is done in ¤ 2 after we have proved Theorem 0.3 in ¤ 1.
+Before we proceed to ¤ 1 we shall
+need a result about logarithmic potentials.
+Let $\mu$ be a probability measure on $T$, i.e a
+non\vvv negative Riesz measure of total mass one and put:
+\[
+U\uuu \mu(z)=\int\ \log\,\frac{1}
+{|z\vvv\zeta|}\cdot d\mu(\zeta)
+\]
+This is a harmonic function in $\{|z|<1\}$
+and passing to its radial limits as $r\to 1$
+the energy integral is defined by:
+\[
+J(\mu)=\lim\uuu{r\to 1}\,\int\, U\uuu \mu(r,\theta)\cdot d\mu(\theta)=
+\int\, U\uuu \mu(\theta)\cdot d\mu(\theta)\tag{*}
+\]
+One says that $\mu$ has finite energy when (*) is finite.
+Assume that $\mu$ has finite energy.
+Using polar coordinates
+in $D$ we have a  series expansion: 
+
+\[ 
+U\uuu\mu(r,\theta)=\sum\, \frac{r^n}{n}(
+h\uuu n\cos\,n\theta+
+k\uuu n\sin\,n\theta)
+\]
+where $\{h\uuu n\}$ and $\{k\uuu n\}$ are real 
+numbers.
+The energy integral $J(\mu)$
+becomes the limit of the following expression as $r\to 1$:
+\[
+ \int \,U\uuu\mu(r,\phi)\cdot d\mu(\phi)
+=\iint\, \log\, \frac{1}{|1\vvv re^{i(\phi\vvv\theta)}|}
+d\mu(\phi)\cdot d\mu(\theta)\tag{1}
+\]
+To compute the right hand side we expand the
+complex Log\vvv function:
+\[
+\log\,\frac{1}{1\vvv re^{i(\phi\vvv\theta)}}
+=\sum\uuu {n=1}^\infty \, \frac{r^n}{n}\cdot
+e^{in(\phi\vvv\theta)}
+\]
+Taking real parts it follows that
+(1) is equal to
+\[
+\sum\uuu {n=1}^\infty \, \frac{r^n}{n}\cdot
+\cos\, n(\phi\vvv\theta)\cdot d\mu(\phi)\cdot d\mu(\theta)
+\]
+Now we use the trigonometric formula
+\[
+\cos\, n(\phi\vvv\theta)=\cos n\phi\cdot \cos n\theta+
+\sin n\phi\cdot \sin n\theta
+\]
+Put 
+\[ 
+h\uuu n=\int\, \cos\,n\theta\cdot d\mu(\theta)\quad\text{and}\quad
+k\uuu n=\int\, \sin\,n\theta\cdot d\mu(\theta)\tag{2}
+\]
+Then we obtain
+\[ 
+J(\mu)= \sum \frac{1}{n}(h^2\uuu n+k\uuu n^2)\tag{3}
+\]
+\medskip
+
+\noindent
+Next, let   $g(\theta)\in\mathcal D$
+with Fourier coefficients
+$\{a\uuu n\}$ and $\{b\uuu n\}$ where $a\uuu 0=0$.
+Then we have
+
+\[
+\int\, g\cdot d\mu=
+\sum\, a\uuu n\cdot h\uuu n+b\uuu n\cdot k\uuu n
+\]
+and Cauchy\vvv Schwarz inequality gives:
+\[
+[\int\, g\cdot d\mu]^2\leq S(g)\cdot J(\mu)\tag{4}
+\]
+
+\medskip
+
+\noindent
+From the above we obtain the following:
+\medskip
+
+
+\noindent
+{\bf{0.4 Theorem.}}
+\emph{For each probability measure $\mu$ with finite energy and every
+function $g(\theta)\in\mathcal D$  which is lower semi\vvv continuous
+one has the 
+inequality}
+
+\[
+\bigl[ \int\, g(\theta)\cdot d\mu(\theta)\bigr]^2\leq
+S(g)\cdot J(\mu)
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}} Above the lower semi\vvv continuity is imposed in order to
+ensure that the Borel integral of $g$ with respect to
+$\mu$ is defined.
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+\noindent
+\centerline{\bf{1. Proof of Theorem 0.3}}
+
+\medskip
+
+\noindent
+To begin with one has
+
+\medskip
+
+\noindent
+{\bf{1.1 Lemma.}} \emph{The function $F$ is subharmonic in $D$.}
+\medskip
+
+\noindent
+For each fixed $0<\alpha<1$
+we define the function $\phi\uuu\alpha$ in $d$ by
+\[
+\phi\uuu \alpha(x,y)= \frac{\partial}{\partial\alpha}\, f(\alpha x,\alpha y)
+=x\cdot f'\uuu x(\alpha x,\alpha y)+y\cdot f'\uuu y(\alpha x,\alpha y)
+\]
+Now we notice
+that the function $f\uuu\alpha(x,y)= f(\alpha x,\alpha y)$
+is harmonic and (1) means that 
+\[ 
+\phi\uuu \alpha=(x\partial\uuu x+y\partial \uuu y)(f\uuu \alpha)
+\] 
+where
+$\mathfrak{e}= x\partial\uuu x+y\partial \uuu y$ is the 
+Euler field. As explained in XX this first order operator
+satisfies the identity
+\[ 
+\Delta\circ \mathfrak{e}= \Delta+\mathfrak{e}\cdot \Delta
+\]
+in the ring of differential operators and then we conclude that
+$\phi\uuu\alpha$ is harmonic.
+Next, the absolute value of a harmonic function is subharmonic so
+$\{|\phi\uuu\alpha|\}$  yield subharmonic functions and
+a change of variables gives:
+\[ 
+F=\int\uuu 0^1\, |\phi\uuu\alpha|\cdot d\alpha
+\]
+This shows that $F$ is a Riemann integral of subharmonic functions
+which in compact subsets of $D$ is uniformly approximated by 
+finite sums 
+\[
+\frac{1}{N}\sum\uuu {k=1}^{k=N}  |\phi\uuu{k/N}|
+\]
+Lemma 1.1 follows since
+a convex sum of subharmonic
+functions again is subharmonic.
+\medskip
+
+\noindent
+{\bf{An inequality.}}
+Notice that the function $F(r,\theta)$
+is continuous and its derivative with respect to $r$
+exists and equals $|f'\uuu r(r,\theta)|$.
+But the partial derivative $\partial F/\partial\theta$ may have jump 
+discontinuities 
+along rays where the derivative  $f'\uuu r$ has a zero. However,
+this cannot occur too  often so when $0<r<1$ is fixed there exists the integral
+\[
+I(r)= \int\uuu 0^{2\pi}\, (\frac{\partial F}{\partial\theta}(r,\theta))^2 \cdot d\theta
+\]
+
+
+\noindent
+We have proved that $F$ is subharmonic and from its definition it is clear
+that
+the partial derivative
+$\partial F/\partial r$ is non\vvv negative.
+By the general result in Chapter V:B:xxx
+we obtain
+ 
+\medskip
+ 
+ \noindent
+{\bf{1.2 Lemma.}} \emph{The inequality below holds for each $0<r<1$:}
+\[ 
+I(r)\leq 
+r^2\cdot \int\uuu 0^{2\pi}\, 
+(\frac{\partial F}{\partial r}(r,\theta))^2 \cdot d\theta\tag{*}
+\]
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{1.3 Dirichlet integrals.}}
+Let $f\in \mathcal S$ with $a\uuu 0=0$.
+We  construct the Dirichlet integral 
+\[
+\text{Dir}(f)=\frac{1}{\pi}\cdot \iiint\uuu D\,  
+[(f'\uuu x)^2+(f'\uuu y)^2]\cdot dxdy
+\]
+Then one has the equality:
+\[
+\text{Dir}(f)=D(f)\tag{*}
+\]
+To see this we identify $f(r,\theta)$ with the real part of the analytic function
+
+\[
+G(z)=\sum\, (a\uuu n\vvv i\cdot b\uuu n)\cdot z^n
+\]
+The Cauchy\vvv Riemann equations give
+\[
+\text{Dir}(f)=\frac{1}{\pi}\cdot \iiint\uuu D\,  
+|G'(z)|^2\cdot dxdy
+\]
+Now the reader can verify that the double integral above is equal to $D(f)$.
+Notice that (*) identifies  $\mathcal D$ with the space
+of real\vvv valued functions on $T$ whose harmonic extensions toÊ$D$ have a finite Dirichlet
+integral.
+\medskip
+
+\noindent
+{\bf{1.4 Exercise.}}
+Show that the Dirichlet integral 
+of a function $g$ of class $C^2$ in $D$
+also is given by the double integral
+\[
+\frac{1}{\pi}\cdot 
+\int\uuu 0^1\int\uuu 0^{2\pi}\, 
+\bigl[\, r^2\cdot \bigl(\frac{\partial g}{\partial r}\bigr)^2+
+\frac{1}{r^2}\cdot\bigl(\frac{\partial g}{\partial \theta}\bigr)^2\,\bigr]
+\cdot r\cdot d\theta dr\tag{i}
+\]
+Show also that if $g$ is harmonic then
+\[
+ \text{Dir}(g)= \frac{2}{\pi}\cdot 
+\int\uuu 0^1\int\uuu 0^{2\pi}\, 
+\bigl(\frac{\partial g}{\partial r}\bigr)^2
+\cdot r\cdot d\theta dr\tag{ii}
+\]
+
+\bigskip
+
+
+\centerline{\emph{1.5 Proof of Theorem 0.3}}
+\bigskip
+
+\noindent 
+Apply (i) in 1.4 with $g=F$ where
+the inequality in Lemma 1.2 and
+an integration 
+with respect
+to $r$ give
+\[ 
+\text{Dir}(F)\leq \frac{2}{\pi}\cdot 
+\int\uuu 0^1\int\uuu 0^{2\pi}\, 
+\bigl(\frac{\partial F}{\partial r}\bigr)^2\cdot r\cdot d\theta dr\tag{1}
+\]
+
+\noindent
+Next,  the construction of $F$ gives the equality
+\[
+(\frac{\partial F}{\partial r}\bigr)^2=
+(\frac{\partial f}{\partial r}\bigr)^2
+\] 
+in the whole disc $D$.
+Then (1) and the equality (ii) applied to the harmonic function
+$f$ give:
+\[
+\text{Dir}(F)\leq \text{Dir}(f)=D(f)\tag{2}
+\]
+where the last equality used (*) in 1.3.
+Next, construct the harmonic extension of 
+the boundary function $F^*(\theta)$ which we denote by $H\uuu F$.
+Here we have the equations
+\[
+D(F^*)= D(H\uuu F)\tag{3}
+\]
+Next, recall  that the Dirchlet integral is minimized when we take
+a harmonic extension which entails that
+\[
+\text{Dir}(H\uuu F)\leq
+\text{Dir}(F)\tag{4}
+\]
+Hence (2\vvv 4) give the requested inequality
+\[
+D(F^*)\leq D(f)
+\]
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{2. Proof of Theorem 0.2}}
+
+\bigskip
+
+
+
+\noindent
+Let $\rho>0$ and
+apply  Theorem 0.4  to the function $g=F^*$ and the equilibrium 
+distribution $\mu$ assigned to the
+set $E=\{F^*>\rho\}$. This   gives
+\[ 
+\rho^2\leq \bigl[\int F^*\cdot d\mu\,\bigr]^2\leq S(F^*)\cdot J(\mu)\tag{4}
+\]
+Now $D(F^*)\leq D(f)=1$ holds by Theorem 0.3
+and hence we have:
+\[
+\rho^2\leq J(\mu)\tag{5}
+\]
+Next, recall from XX that $J(\mu)$ is 
+the the constant value $\gamma(E)$
+of the potential function 
+$U\uuu\mu$ restricted to $E$.
+Hence (5) gives
+\[
+e^{\vvv\gamma(E)}\leq e^{\vvv \rho^2}\tag{6}
+\]
+By definition the left hand side is the capacity of $E$
+which proves Theorem 0.2.
+
+
+
+\bigskip
+
+\centerline{\bf{An application}}
+\bigskip
+
+
+\noindent
+Let $\Omega$ be a simply connected domain which contains
+the origin in the complex $\zeta$\vvv plane and
+$\partial\Omega$ contains a relatively open set given
+by
+an interval $\ell$ situated on the line
+$\mathfrak{Re}\,\zeta=\rho$ for some $\rho>0$.
+Consider the harmonic measure
+$\mathfrak{m}\uuu 0^\Omega(\ell)$.
+In other words, the value at the origin of the harmonic function
+in $\Omega$ which is 1 on $\ell$ and zero on
+$\partial\Omega\setminus\ell$.
+We shall find an upper bound for (*) in the family of simply connected domains
+which contain the origin and $\ell$ and at the same time has area $\pi$.
+To attain this we
+consider the conformal map $\phi$ from the unit disc onto
+$\Omega$ with $\phi(0)=0$.
+The invariance of harmonic measures gives:
+\[
+\mathfrak{m}\uuu 0^\Omega(\ell)=
+\mathfrak{m}\uuu 0^D(\alpha)
+\] 
+where $\alpha$ is the interval on $T$ such that
+$\phi(\alpha)=\ell$.
+For an interval on the unit circle one has  the equality
+\[
+\text{Cap}(\alpha)= \sin\,\alpha/4
+\]
+At the same time
+$\mathfrak{m}\uuu 0^D(\alpha)=\frac{\alpha}{2\pi}$ which entails that
+\[
+\mathfrak{m}\uuu 0^\Omega(\ell)=
+\frac{2}{\pi}\,\arcsin\, \text{Cap}(\alpha)\tag{1}
+\]
+
+
+\noindent
+There remains to estimate  last term above.
+Put $u=\mathfrak{Re}\,\phi$.
+The inclusion $\ell\subset\mathfrak{Re}\zeta=\rho$
+means that $u=\rho$ on $\ell$.
+So when $\phi$ is considered in the class $\mathcal S$
+we have the inclusion
+\[
+\alpha\subset\{|\phi|>\rho\vvv \epsilon\}
+\]
+for each $\epsilon>0$.
+Next, since the area of $\phi(D)=\pi$
+we have $S(u)=1$
+and Theorem 0.2 gives 
+\[
+\text{Cap}(\alpha)\leq e^{\vvv\rho^2}
+\]
+Hence we have proved the general inequality
+\[
+\mathfrak{m}\uuu 0^\Omega(\ell)\leq \frac{2}{\pi}\cdot \arcsin\,
+e^{\vvv\rho^2}\tag{**}
+\]
+\bigskip
+
+\noindent
+{\bf{Remark.}}
+There exists
+a special simply connected domain $\Omega$ for which equality holds
+in (**).
+See [Frostman: p. 39] : Potential theory.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{document}

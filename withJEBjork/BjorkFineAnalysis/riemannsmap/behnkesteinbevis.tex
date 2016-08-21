@@ -1,0 +1,7101 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+
+\def\vvv{-}
+
+ 
+\begin{document}
+
+
+
+
+\centerline{\bf{I. Open Riemann surfaces}}
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+A Riemann surface is a 1-dimensional and connected complex manifold $X$.
+We  shall consider open  surfaces, i.e.  the topological space $X$ is non-compact.
+Proofs of the announced results below rely
+upon analytic function theory in one complex variable, i.e.
+complex analysis on open Riemann surfaces is based  upon
+the study of analytic functions on
+planar domains.
+For example, the complex analytic structure on
+an open Rieann surface $X$ yields  an intrinsic notion of
+harmonic, respectively subharmonic functions om
+$X$. This will
+be explained in ¤ xx and will be used to extend
+solutions to the Dirichlet prolelm for planar domains 
+to $X$ where one regards relatively  compact open sets $Y$
+for which the boundary $\partial Y$
+locally satisfies  similar conditions as in the planar case,  to ensure
+that evety
+continouos boundary function $f\in C^0(\partial Y)$ has a harmonic
+extension to $Y$.
+\medskip
+
+\noindent
+We shall use  sheaf-theory 
+without hesitation.
+Let us  remark that  original work
+by Riemann and Weierstrass
+gave the first exanples about sheaves. So
+various sheaves on Riemann surfaces provide
+excellent examples which illustrate and has motivated
+general sheaf theory.
+We also employ differential calculus.
+An open Rieann surface $X$ is in particular
+an oriented $C^\infty$-manifold 
+whose real dimension is two.
+The complex analytic structure yields a direct sum decompostiion
+\[
+\mathcal E^1(X)=
+\mathcal E^{1,0}(X)\oplus 
+\mathcal E^{0,1}(X)
+\]
+where the left hand siude is the space of globally defined
+differentia1-forms, while
+$\mathcal E^{1,0}(X)$ are 1-forms of bidegree $(1,0)$,
+and .... 
+If $(U,z)$ is a chart in $X$ then
+the restriction of a (1,0)-form to $U$ is
+given by
+$\phi(z)\cdot dz$ where
+$\phi\in C^\infty(U)$.
+Similarly a $(0.1)$-form restricts in the chart to
+$\psi(z)\cdot dz$ where
+$\psi\in C^\infty(U)$.
+The $\bar\partial$-operator sends
+$f\in C^\infty(X)$ to the $(1,0)$-form
+$\bar\partial(f)$.
+\medskip
+
+
+\noindent
+In analytic function theory  a classic result due to Ponpieu from 1810
+asserts that if $U$ is an open subset of
+${\bf{C}}$ and $w\in \mathcal E^{0,1}(U)$, then
+there exist $f\in \mathcal C^\infty(U)$ such that
+\[
+\bar\partial(f)=w\tag{*}
+\]
+Thus, the inhomogenous $\bar\partial$-equation is solvable on
+planar domains.
+It turns out that this $\bar\partial$-equation is solvable on
+every open Riemann surface !
+The proof   requires several steps and is given in ¤ xx.
+A first step is to establish the existence of
+non-constant meromorphic functions.
+Let us already in this introductiuon
+describe a special construction which
+is the starting point towards more general results.
+Conisder a poiunt $p\in X$ and choose a chart
+$\Delta$ arond $p$, i.e. $\Delta$ is biholomorphiuc with
+the open unit disc where $p$ corresponds to the origin.
+Now $X$ is covered by the open sets
+$U_0=\Delta$ and $U_1=X\setminus\{p\}$.
+Notice that the intersection
+$U_0\cap U_1$ is a punctured open disc where
+we let $z$ denote the complex coordinate.
+With $\mathfrak{U}= (U_0,U_1$ one construct 
+the Cech complex
+\[
+0\to C^0(\mathfrak U, \mathcal OX)
+\]
+By definition the Cech cohomology of order one is
+the quoitent
+\[
+\frac{C^1(\mathfrak U, \mathcal OX)}{\partial(C^0(\mathfrak U, \mathcal O_X)}
+\]
+and since the covering only consists of two sets we notice that
+\[
+C^1(\mathfrak U, \mathcal O_X=\mathcal O(\Delta^*)
+\]
+Next, let $Y$ be a relatively compact open subset of
+$X$.
+If $0<a<1$ we consider rhe disc $a\cdot \Delta$ of radius $a$
+centered at the origin.
+Put
+\[
+V_0=Y\cap a\cdot \Delta\,\quad\&\quad
+V_1=Y\setminus  a/2\cdot \overline{\Delta}
+\]
+Now $\mathfrak{V}=(V_0,V_1)$ is an open covering of $Y$
+and we get the ceh complex
+$C^\bullet(\mathfrak V, \mathcal OX)$.
+Since $\overline{V_i}$ is a compact subsrt of $U_i$ for
+evety $i$, it follows from
+\emph{Montels theorem} in analytic function theory that
+the resriction maps
+\[
+C^k(\mathfrak{U},\mathcal O_X)\to
+\]
+are compact for every $k$.
+Hence a wellkonown   result from the Fredholm theoryentails that
+the induced map
+\[
+\rho\colon\, H^1(\mathfrak{U}\to 
+\]
+has a finite dimensional range.
+Let $N$ be the dimenson of the $\rho$-image.
+Now we consider thr holomorphic functions $1,z^{-1},\ldots z^{-N}$
+in
+the punctured disc $\Delta^*$ and conclude that
+there exist complex numbers $c_0,c-1,\ldots c_{N-1}$ such that
+\[
+\rho(z^{-N}= 
+\]
+This menas that if
+\[
+g= z^{-N}- (c_0+c_1z+\ldots+c_{N-1}z^{N-1})
+\]
+then the restrcition of $g$ to $V_0\cap V_1$
+has a zero iimage in the cohomology space
+(xx) above, and hence there exist
+holomorphic funvtions $f_i\in\mathcal O(V_i)$ such that
+\[
+f_1-f_0= g
+\]
+holds in $V_0\cap V_1$.
+This impkies thst there exists
+a meromorphic function $\phi$ in $Y$ with a pole of
+order $N$ at $p$, while $\phi$ is holomorphic in
+$Y\setminus\{p\}$.
+
+
+
+\medskip
+
+
+
+\centerline{\bf{0.1 The Behnke.Stein theory.}}
+\medskip
+
+
+\noindent
+Major result about open Riemann surfaces
+were established by
+Behnke and Stein  in their 
+article \emph{Entwicklungen analytischer Funktionen
+auf Riemannschen FlŠchen} [Math. Ann. 120 (1948)].
+They proved that 
+if $\mathcal O_X$ is the sheaf of holomorphic 
+functions on an open Riemann surface, then
+the cohomology group
+\[
+H^1(X,\mathcal O_X)=0\tag{0.1.1}
+\]
+More generally, in [ibid] it is also proved that
+\[
+H^1(X,\mathcal L)=0\tag{0.1.2}
+\]
+hold for every holomorphic line bundle.
+We establish  this in ¤ xx, and
+also expose classic results 
+due to Riemann and Weierstrass.
+In ¤ xx we prove a theorem due to Weierstrass 
+which goes as follows:
+\medskip
+
+\noindent
+On an open Riemann surface $X$ the space   $\mathfrak{M}(X)$ of globally defined
+meromorphic functions is ample in the following sense.
+Let $\{p_k\}$ be a discrete set of points in $X$
+and to every $p_k$ we assign an non-zero integer $\mu_k$ which can be
+positive or negative.
+Then there exists $f\in\mathfrak{M}(X)$
+which is holomorphic and zero-free in $X\setminus \{p_k\}$, and
+for every $k$  it has a pole of order
+$-\mu_k$ if $\mu_k<0$, and a zero of multiplicity $\mu_k$ if
+$\mu_k>0$.
+\medskip
+
+
+\noindent
+{\bf{0.2 Additive representations of $\pi_1(X)$.}}
+An open Riemann surface
+$X$
+has  a fundamental group $\pi_1(X)$ and we consider the family 
+$\mathcal F$ of group homomorphisms
+\[
+\rho\colon \pi_1(X)\to {\bf{Z}}
+\]
+where ${\bf{Z}}$ is the abelian group of integers.
+Identify $\pi_1(X)$ with homotopy classes of closed curves
+which start and terminate at some point $p\in X$.
+Denote by $\mathcal O^*(X)$
+the family of globally defined and zero-free holomorphic functions on $X$.
+\medskip
+
+\noindent
+{\bf{0.2.1 Theorem.}}
+\emph{For each $\rho\in\mathcal F$ there
+exists $\phi\in \mathcal O^*(X)$
+such that}
+\[
+\rho(\{\gamma\})=\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}
+\quad\colon \, \{\gamma\}\in \pi_1(X)
+\]
+\emph{where $\{\gamma\}$ is the homotopy class of a closed curve.}
+\medskip
+
+\noindent
+The proof of Theorem 0.2.1   relies upon the exact sheaf sequence
+\[
+0\to {\bf{Z}}_X\to \mathcal O_X\overset{\text{exp}}\to \mathcal O_X^*\to 0
+\]
+where
+${\bf{Z}}_X$ is the sheaf whose sections are ocally constant integer-valued functions
+and 
+we have used the exponential map which 
+sends  holomorphic function $f$ defined in  open
+subsets $U$ of $X$  to  
+$e^{2\pi i f}$ which  are   sections of the multiplicative sheaf
+$\mathcal O^*$ of  zero-free holomorphic functions.
+Passing to the long exact sequence of cohomology one gets an exact sequence
+\[ 
+0\to {\bf{Z}}\to
+\mathcal O(X)\overset {\text{exp}}\to \mathcal O^*(X)\to
+H^1(X,{\bf{Z}})\to
+H^1(X,\mathcal O)\to\ldots 
+\]
+Admitting
+the vanishing theorem by
+Behnke and Stein in (0.1) this entails that
+\[
+H^1(X,{\bf{Z}})\simeq \frac{\mathcal O^*(X)}{
+\text{exp}(\mathcal O(X))}\tag{i}
+\]
+Next, we have the sheaf
+$\Omega_X$ whose sections are holomorphic 1-forms
+and an  exact sheaf sequence
+\[
+0\to {\bf{C}}_X\to \mathcal O_X
+\overset{\partial} \to \Omega_X\to 0
+\]
+where ${\bf{C}}_X$ is the sheaf whose sections are locally constant
+complex-valued functions.
+Here the Behnke-Stein theorem gives
+the isomorphism
+\[
+H^1(X,{\bf{C}})\simeq \frac{\Omega(X)}{\partial(\mathcal O(X))}\tag{ii}
+\]
+Next, if $g\in \mathcal O^*(X)$ one easily verifies that
+the holomorphic
+1-form
+$\frac{\partial g}{g}$ is $\partial$-exact if and only if
+$g= e^{2\pi if}$ for some $f\in\mathcal O(X)$.
+Hence  (i-ii)  give a canonically defined and injective map
+\[ 
+H^1(X,{\bf{Z}})\to H^1(X,{\bf{C}})\tag{iii}
+\]
+
+\noindent
+From this we shall deduce   Theorem 0.1.1
+via a  representation for the family 
+$\mathcal F_{{\bf{C}}}$
+of group homomorphisms from $\pi_1(X)$ into  the additive group
+of complex numbers.
+More precisely, to each $\rho\in \mathcal F_{{\bf{C}}}$
+we shall prove that there exists
+$\omega\in \Omega(X)$ such that
+\[
+\rho(\{\gamma\})=\frac{1}{2\pi i}\cdot \int_\gamma\, \omega\tag{iv}
+\]
+Here $\omega$ is unique up to a $\partial$-exact holomorphic 1-form
+and it turns out that
+$\omega$ can be represented as the logarithmic differential of a zero-free
+holomorphic function if and only if the
+$\rho$-function  is integer-valued.
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.3 The uniformisation theorem.}}
+In ¤ xx we construct the universal covering space
+$\widehat{X}$ of a given open Riemann surface
+and show first that this yields another open Riemann surface.
+It is special  since
+it is \emph{simply connected}
+which means that every closed curve on $\widehat{X}$
+is homotopic to a constant curve.
+In ¤ xx we prove that
+every simply connected open Riemann surface is
+bihololomorphic to the open unit disc $D$  or the complex plane
+${\bf{C}}$.
+\medskip
+
+\noindent
+{\bf{0.4 The Riemann-Schwarz  inequality for hyperbolic distances.}}
+The uniformisation theorem has
+several consequences.
+Let $X$ be an open Riemann surface.
+Conider a  hyperbolic metri $\sigma$ on $X$
+which means
+that
+$\sigma $ has  
+a negative curvature.
+An equivaent condition is that in each open chart
+$(U,z)$ of $X$
+where $U$ is identified with an open subset of
+the complex $z$-plane, there exists a subharmonic function $u(z)$ such that
+the $\sigma$-distance  in $U$ is defined by
+\[
+e^{u(z)}\cdot |dz|
+\]
+where
+$|dz|$ the ordinary euclidan length.
+Assume that $\sigma$ is hyperbolic and consider a
+pair of points $p,q$ in $X$. Denote by 
+$\mathcal C(p,q)$ the family of
+curves in $X$ with end-points at $p$ and $q$.
+\medskip
+
+\noindent
+{\bf{0.4.1 Theorem.}}
+\emph{For every pair
+$\gamma_1,\gamma_2$ in  $\mathcal C(p,q)$
+and
+each point $\xi\in\gamma_1$,
+there exist  a pair of curves $\alpha,\beta$, where
+$\alpha\in\mathcal C(p,q)$ while $\beta$ has end-points
+at $\xi$ and some point $\eta\in \gamma_2$ such that}
+\[
+\ell(\alpha)^2+\ell(\beta)^2\leq
+\frac{1}{2}\bigr (\ell(\gamma_1)^2+\ell(\gamma_2)^2\,\bigl )\tag{*}
+\]
+\emph{where $\ell(\gamma)$ denotes the $\sigma$-length of a curve in $X$.
+Moreover, the inequality (*) is strict with the exception for
+special rhombic configurations.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Theorem 0.4.1 gives in particular  existence of unique geodesic  curves
+on $X$ which join a pair of points.
+The proof relies upon the
+uniformisation theorem 
+which
+reduces the 
+proof to show the following: 
+\medskip
+
+\noindent
+ \emph{Let
+$D$ be the unit disc and $0<\theta<\pi/2$ and consider   the unique
+circle $C_\theta$ which
+contains
+$e^{i\theta}$
+and $e^{-i\theta}$ and intersects the unit circle at right angles at these points.
+Let $\alpha$ denote the circular subarc of $C_\theta$  contained in
+$D$.
+Then the following inequality holds for
+every subharmonic function $u$ in $D$:}
+\[
+\bigl(\int_{-1}^1\, e^{u(x)}\, dx\bigr)^2+
+\bigl(\int_\alpha\, e^{u(z)}\, |dz|\bigr)^2\leq
+\frac{1}{4}\cdot\bigl( \int_0^{2\pi}\, e^{u(e^{i\phi})}\,d\phi\bigr)^2\tag{0.4.2}
+\] 
+\bigskip
+
+\noindent
+We prove this result in ¤ xx and
+how one derives Theorem 0.4.1.
+
+
+\newpage
+
+
+delete .....
+
+
+
+
+
+
+
+
+
+Next, let ${\bf{C}}_X$ be the sheaf
+whose sections are locally constant complex-valued functions
+and consider
+the cohomology group
+$H^1(X,{\bf{C}}_X)$.
+If it vanishes we shall prove
+that the open Riemann surface is biholomorphic with
+the open unit disc $D$ or the complex plane
+${\bf{C}}$.
+One refers to this fact  as the \emph{Uniformisation Theorem} for open
+Riemann surfaces.
+The proof is given 
+in ¤ 5.
+\medskip
+
+\noindent
+A crucial result which is used to prove (*) is the Pompieu theorem which
+asserts thst the $\bar\partial$-operator is sirjhective on planar domains, i.e.
+if $\Omega$is an open subset of
+${\bf{C}}$ and $\phi$ is a complex-valued $C^\infty$-function on $\Omega$
+then
+there exists $g\in C^\infty(\Omega)$ such that
+\[
+\bar\partial g/\partial \bar z=\phi
+\]
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+The uniformisation theorem has
+several consequences.
+An example is 
+\emph{The Riemann-Schwarz inequality} when an open Riemann surface
+$X$ is equipped with a hyperbolic metric,
+This result goes
+as followss:
+Let $\sigma$
+be 
+a hyperbolic metric. This  means
+that
+$\sigma $ has  
+a negative curvature.
+An equivaent condition is that in each open chart
+$(U,z)$ of $X$
+where $U$ is identified with an open subset of
+the complex $z$-plane, there exists a subharmnic function $u(z)$ such that
+the $\sigma$-distance  in $U$ is defined by
+\[
+e^{u(z)}\cdot |dz|
+\]
+where
+$|dz|$ the ordinary euclidan length.
+Assume that $\sigma$ is hyperbolic and consider a
+pair of points $p,q$ in $X$. Denote by 
+$\mathcal C(p,q)$ the family of
+curves in $X$ with end-points at $p$ and $q$.
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{For every pair
+$\gamma_1,\gamma_2$ in  $\mathcal C(p,q)$
+and
+each point $\xi\in\gamma_1$,
+there exist  a pair of curves $\alpha,\beta$, where
+$\alpha\in\mathcal C(p,q)$ while $\beta$ has end-points
+at $\xi$ and some point $\eta\in \gamma_2$ such that}
+\[
+\ell(\alpha)^2+\ell(\beta)^2\leq
+\frac{1}{2}\bigr (\ell(\gamma_1)^2+\ell(\gamma_2)^2\,\bigl )\tag{*}
+\]
+\emph{where $\ell(\gamma)$ denotes the $\sigma$-length of a curve in $X$.
+Moreover, the inequality (*) is strict with the exception for
+special rhombic configurations.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The theorem gives in particular  existence of unique geodesic  curves
+on $X$ which join a pair of points.
+The proof relies upon the
+uniformisation theorem 
+which
+reduces the 
+proof to show the following: 
+\medskip
+
+\noindent
+{\bf{0.2}} \emph{Let
+$D$ be the unit disc and $0<\theta<\pi/2$ and consider   the unique
+circle $C_\theta$ which
+contains
+$e^{i\theta}$
+and $e^{-i\theta}$ and intersects the unit circle at right angles at these points.
+Let $\alpha$ denote the circular subarc of $C_\theta$  contained in
+$D$.
+Then the following inequality holds for
+every subharmonic function $u$ in $D$:}
+\[
+\bigl(\int_{-1}^1\, e^{u(x)}\, dx\bigr)^2+
+\bigl(\int_\alpha\, e^{u(z)}\, |dz|\bigr)^2\leq
+\frac{1}{4}\cdot\bigl( \int_0^{2\pi}\, e^{u(e^{i\phi})}\,d\phi\bigr)^2
+\] 
+\bigskip
+
+\noindent
+We prove this result in ¤ xx and
+how one derives Theorem 0.1 from (0.2).
+
+
+\medskip
+
+\noindent
+{\bf{A comment}}.
+Basic facts about sheaves and  calculus on 2-dimensional manifolds
+will
+be used without hesitation.
+Let us  remark that the study of open Riemann surfaces
+gives
+an excellent illustration to  general theory
+related to analysis on manifolds.
+For example, sheaf theory has emerged from Weierstrass' constructions of
+analytic continuations where the "total sheaf space" $\widehat{O}$ in
+¤ x below is an instructive example of a sheaf.
+During our whole study
+the $\bar\partial$-operator plays a crucial role. On
+a Riemann surface it assigns to every
+complex valued $C^\infty$-function $f$ the
+differential form
+$\bar\partial(f)$ of bi-degree $(0,1)$.
+The Cauchy-Riemann equations
+show that
+$\bar\partial(f)=0$ if and only if $f$ is holomorphic. 
+The \emph{Pompieu Theorem} for planar domains
+is crucial. This classic result asserts that if 
+$\Omega$ is an open subset of
+${\bf{C}}$ and $f\in C^\infty(\Omega)$ then
+there exists
+$g\in C^\infty(\Omega)$  such that
+\[
+\frac{\partial g}{\partial\bar z}=f\tag{0.3.1}
+\]
+Passing to an open Riemann surface
+$X$ we shall prove that 
+a similar result holds, i.e. if
+$\phi\in \mathcal E^{0,1}(X)$ is a 
+smooth differential form of bi-degree $(0,1)$, then
+there exists
+$f\in C^\infty(X)$  such that
+\[
+\bar\partial(f)= \phi\tag{0.3.2}
+\]
+One can express this by saying that every smooth
+differential form of bi-degree $(0,1)$ is
+$\bar\partial$-exact on an open Riemann surface.
+A result due to Dolbeault
+implies that the solvability in (0.3.2) for every $\phi$
+is equivalent to
+the Behnke-Stein Theorem in (*) from the introduction.
+A notsble factis that
+the inhomogeneus equation (0.3.2) can be solved for
+non-smooth $\phi$-froms of bi-degree $(0,1)$.
+For example, given a smooth form
+$\phi$ as in (0.3.2)  we also take a 
+bounded Lebesgue measurable function $\rho$ on $X$
+and get the current $\rho\cdot \phi$
+of bi-degree $(0,19$ on $X$.
+Then it turnd out that there exists
+a continuous function $f$ on $X$ such that
+\[
+\bar\partial(f)= \rho\cdot \phi\tag{0.3.4}
+\]
+where the left hand side is
+the
+$(0,1)$-current founf via charts where
+distribution derivatives of $f$ appear.
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.4 The Dirichlet problem.}}
+A   result due to Rado asserts that
+every open Riemann surface has a countable topology.
+The proof relies upon
+a theorem due to PoincarŽ and Volterra from the appendix about topology,
+ together with
+solutions to Dirichlet problems.
+Here one profits upon Perron's solution 
+for planar domains which has the merit that it extends verbatim
+to open Riemann surfaces, using the observation
+that the complex analytic structure on a
+Riemann surface $X$ leads to an intrinsic  notion of
+subharmonic functions.
+From this we shall describe how to
+solve the Dirichlet problem
+exactly  as in the planar case.
+More precisely, let $\Omega$ be a relatively compact
+ open set in
+$X$.
+A point  $p\in\partial\Omega$Êis regular in the sense of Perron if
+there exists
+some open chart $D$ in $X$ which contains $p$
+and a continuous subharmonic function $u$ in $D$ 
+such that 
+\[
+u(x)<0\,\colon\, x\in U\cap D\quad\colon u(p)=0
+\]
+\medskip
+
+\noindent
+{\bf{0.4.1 Theorem.}}
+\emph{If $\Omega$ is a  relatively compact open set
+and each boundary point is Perron regular, then
+the Dirchlet problem has a solution for
+every
+$g\in C^0(\partial \Omega)$, i.e. there exists 
+a harmonic function $G$ in $\Omega$ with 
+continuous boundary values equal to $g$.}
+\medskip
+
+\noindent
+Let us  finish this introduction by
+with some  preliminary considerations
+which illustrate the general theory.
+\medskip
+
+\noindent
+{\bf{0.5. Additive
+representations
+of fundamental groups in the planar case.}}
+Each open and connected set $U$ in ${\bf{C}}$ yields
+an open  Riemann surface.
+A special case is to take $U={ \bf{C}}\setminus (a_1,\ldots,a_k)$ where
+$a_1,\ldots,a_k$ is a finite set of points which have been
+removed
+from the complex plane. Residue calculus
+can be used to describe some topological
+properties of $U$.
+For each $1\leq\nu\leq k$
+the zero-free holomorphic function
+$\phi_\nu(z)= z-a_\nu$ in $U$ has a
+logarithmic differential 
+\[
+\frac{\partial\phi_\nu}{\phi_\nu}= \frac{dz}{z-a_\nu}
+\]
+This  yields a holomorphic 1-form on $U$  which is not
+$\partial$-exact, i.e. we cannot find
+$g\in\mathcal O(U)$ such that
+$\partial(g)= g'(z)dz= \frac{dz}{z-a_\nu}$.
+The obstruction stems from the multi-valued behaviour of
+$\log (z-a_\nu)$ and  can  also be seen by
+residue calculus. Namely, choose a closed
+Jordan curve $\gamma$ which surrounds $a_\nu$, i.e. its winding number
+is +1 as explained in ¤ xx. Then
+\[
+\int_\gamma\, \frac{dz}{z-a_\nu}=2\pi i
+\] 
+On the other hand the closedness of $\gamma$ implies that
+\[
+\int_\gamma\,\partial g=0\quad\colon g\in\mathcal O(U)
+\]
+Next,  the fundamental group $\pi_1(U)$
+can be identified with homotopy classes of closed curves
+with a common intial and terminal point $p\in U$.
+Topology teaches that
+$\pi_1(U)$ is a free group of rank $k$
+with
+generators
+$\gamma_1,\ldots,\gamma_k$ where
+each $\gamma_\nu$ is a closed Jordan curve whose winding
+number
+with respec to $a_\nu$ is +1 while its winding number
+with respect to other $a$-points
+are  zero.
+Consider
+the
+family of group homomorphisms
+\[
+ \rho\colon \pi_1(U)\to {\bf{Z}}\tag{1}
+\] 
+where
+${\bf{Z}}$ is the additive group of integers.
+Denote by $\mathcal O^*(U)$
+the family of zero-free holomorphic functions in $U$.
+If $\gamma$ is a closed curve
+at $p$
+and
+$\phi\in\mathcal O^*(U)$
+residue calculus entails that
+the line integral
+\[
+\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}
+\] 
+is an integer.
+Recall that elementary
+integration theory from
+Chapter II implies that this  line integral only depends upon the
+homotopy class of $\gamma$, i.e. 
+upon the image $\{\gamma\}$ in $\pi_1(X)$.
+Keeping $\phi$ fixed
+it follows that
+\[
+\{\gamma\}\mapsto 
+\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}\tag{2}
+\] 
+is a group homomorphism from
+$\pi_1(X)$ into ${\bf{Z}}$.
+It turns out that
+every such group  homomorphism is
+realised by a zero-free $\phi$.
+To see this we take the free
+basis
+$\{\gamma_1\},\ldots,\{\gamma_k\}$
+in $\pi_1(U)$
+and then every 
+$\rho$ in (1) is determined by
+a $k$-tuple of integers $e_\nu=\rho(\{\gamma_\nu\})$.
+With 
+\[ 
+\phi(z)= \prod\, (z-a_\nu)^{e_\nu}
+\]
+we see that $\rho$ is equal to the
+group homomorphis  given by (2).
+\medskip
+
+\noindent
+{\bf{0.6 Line integrals of multi-valued functions.}}
+Before  the passage to calculus on Reimann surfaces where one 
+contructs
+complex line integrals, an intermediate step is to
+evaluate complex line integrals of multi-valued functions.
+Consider as an example
+some complex number
+$\alpha$ which is not an integer and
+the function $f=z^\alpha$
+which is multi-valued in outside the origin.
+A local branch  at $z=1$ is chosen so that
+$f(1)=1$.
+If $g(z)$ is an analytic function defined in
+a neighbrhood of the closed unit disc
+$\{|z|\leq 1 \}$
+we seek the line integral
+\[
+\int_T\, g(z)\cdot z^\alpha\, dz\tag{1}
+\] 
+where $T$ is the unit circle oriented in the positive sense, i.e. integration moves 
+counter clockwise.
+It means that (1) is equal to
+\[
+i\cdot \int_0^{2\pi}\, g(e^{i\theta}) e^{i\alpha\theta}\, e^{i\theta}\, d\theta
+\]
+Here $g$ has a series expnasion $\sum\,c_nz^n$
+which converges when
+$|z|\leq 1$
+and for each non-negative integer one has
+\[
+i\cdot \int_0^{2\pi}\, e^{in\theta} e^{i\alpha\theta}\, e^{i\theta}\, d\theta
+=\frac{i}{n+1+\alpha}\cdot (e^{2\pi i\alpha}-1)
+\]
+Taking a sum over $n$ we evaluate (1).
+Wirh $g=1$ we have for example
+\[
+\int_T\,  z^\alpha\, dz=\frac{i}{1+\alpha}\cdot (e^{2\pi i\alpha}-1)\tag{2}
+\] 
+If $0<r<1$ and we instead integrate along
+the circle $T(r)= \{|z|=r\}$ in the counter clockwise sense,
+the reader can verify that
+\[
+\int_{T(r)}\,  z^\alpha\, dz=\frac{i\cdot r^{1+\alpha}}{1+\alpha}\cdot (e^{2\pi i\alpha}-1)\tag{3}
+\] 
+Notice that (2) and (3) differ even though the closed sucrves
+$T$ and $T(r)$ are homotopic in the punctured complex plane.
+So the usual invariance for line integrals of single-valued analytic functions
+fails.
+Following original contructions by Riemann one can
+explain this by regarding the universl covering space of
+$\widehat{X}= {\bf{C}}\setminus \{0\}$
+where $z^\alpha$ becomes a single valued holomorŒphic functions
+but when the closed curves
+$T$ and $T(r)$ are lifted to $\widehat{X}$ they are no longer
+closed and have different end-points on
+$\widehat{X}$ 
+where $z^\alpha$ takes distinict values and this
+explains why $(2)\neq (3)$.
+\medskip
+
+
+\noindent
+{\bf{0.7 An extension to Riemann surfaces.}}
+An open Riemann surface
+$X$
+has  a fundamental group $\pi_1(X)$ and we consider the family 
+$\mathcal F$ of group homomorphisms
+$\rho\colon \pi_1(X)\to {\bf{Z}}$.
+Identify $\pi_1(X)$ with homotopy classes of closed curves
+which start and terminate at some point $p\in X$.
+Denote by $\mathcal O^*(X)$
+the family of globally defined and zero-free holomorphic functions on $X$.
+\medskip
+
+\noindent
+{\bf{0.7.1 Theorem.}}
+\emph{For each $\rho\in\mathcal F$ there
+exists $\phi\in \mathcal O^*(X)$
+such that}
+\[
+\rho(\{\gamma\})=\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}
+\quad\colon \, \{\gamma\}\in \pi_1(X)\tag{*}
+\]
+\emph{where $\{\gamma\}$ is the homotopy class of a closed curve.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The proof of Theorem 0.7.1   relies upon the exact sheaf sequence
+\[
+0\to {\bf{Z}}_X\to \mathcal O\overset{\text{exp}}\to \mathcal O^*\to 0
+\]
+where
+${\bf{Z}}_X$ is the sheaf whose sections are ocally constant integer-valued functions
+and 
+we have used the exponential map which 
+sends  holomorphic function $f$ defined in  open
+subsets $U$ of $X$  to  
+$e^{2\pi i f}$ which  are   sections of the multiplicative sheaf
+$\mathcal O^*$ of  zero-free holomorphic functions.
+Passing to the long exact sequence of cohomology one gets an exact sequence
+\[ 
+0\to {\bf{Z}}\to
+\mathcal O(X)\overset {\text{exp}}\to \mathcal O^*(X)\to
+H^1(X,{\bf{Z}})\to
+H^1(X,\mathcal O)\to\ldots 
+\]
+Admitting
+the vanishing theorem by
+Behnke and Stein this entails that
+\[
+H^1(X,{\bf{Z}})\simeq \frac{\mathcal O^*(X)}{
+\text{exp}(\mathcal O(X))}\tag{i}
+\]
+Next, we have the sheaf
+$\Omega$ whose sections are holomorphic 1-forms
+and an  exact sheaf sequence
+\[
+0\to {\bf{C}}_X\to \mathcal O
+\overset{\partial} \to \Omega\to 0
+\]
+where ${\bf{C}}_X$ is the sheaf whose sections are locally constant
+complex-valued functions.
+Here the Behnke-Stein theorem gives
+the isomorphism
+\[
+H^1(X,{\bf{C}})\simeq \frac{\Omega(X)}{\partial(\mathcal O(X)}\tag{ii}
+\]
+Next, if $g\in \mathcal O^*(X)$ one easily verifies that
+the holomorphic
+1-form
+$\frac{\partial g}{g}$ is $\partial$-exact if and only if
+$g= e^{2\pi if}$ for some $f\in\mathcal O(X)$.
+Hence  (i-ii)  give a canonically defined and injective map
+\[ 
+H^1(X,{\bf{Z}})\to H^1(X,{\bf{C}})\tag{iii}
+\]
+
+\noindent
+From this one  gets  Theorem 0.7.1
+via a similar representation for the family 
+$\mathcal F_{{\bf{C}}}$
+of group homomorphisms from $\pi_1(X)$ into  the additive group
+of complex numbers.
+More precisely, to each $\rho\in \mathcal F_{{\bf{C}}}$
+we shall prove that there exists
+$\omega\in \Omega(X)$ such that
+\[
+\rho(\{\gamma\})=\frac{1}{2\pi i}\cdot \int_\gamma\, \omega
+\]
+Here $\omega$ is unique up to a $\partial$-exact holomorphic 1-form
+and it turns out that
+$\omega$ can be represented as the logarithmic differential of a zero-free
+holomorphic function if and only if the
+$\rho$-function in (*) is integer-valued.
+
+
+\newpage
+
+\centerline{\bf{¤ 1. Summary of some major constructions and results.}}
+
+\bigskip
+
+
+\noindent {\bf{1.1 The sheaf  $\widehat{\mathcal O}$.}}
+An  extensive family   of open Riemann surfaces
+arises via a construction due to Weierstrass.
+For each point $z\in{\bf{C}}$
+one has the 
+space $\mathcal O(z)$ of germs of analytic functions at $z$.
+Weierstrass total sheaf space is defined  by
+\[
+\widehat{\mathcal O} =\bigcup_{z\in {\bf{C}}} \,
+\mathcal O(z)
+\]
+One has the projection $\pi\colon \widehat{\mathcal O}\to  {\bf{C}}$
+with inverse fibers
+$\pi^{-1}(z)=\mathcal O(z)$.
+Now $\widehat{\mathcal O}$ becomes a complex manifold
+where $\pi$ is locally biholomorphic.
+Charts consist  of  pairs $(\Delta,f)$ where
+$\Delta$ is an open disc in
+${\bf{C}}$ and $f\in \mathcal O(\Delta)$
+whose corresponding
+open  set in
+$\widehat{\mathcal O}$ are the
+points $\{(z,f_z)\colon z\in \Delta\}$
+where $f_z\in\mathcal O(z)$ denotes the germ determined by $f$
+at a point $z\in\Delta$.
+\medskip
+
+\noindent
+Every
+open and connected subset of $\widehat{\mathcal O}$
+gives an open  Riemann surface.
+As an example one has the Riemann surface
+attached to the multi-valued function $\log z$.
+At $z=1$ we start with the local branch of $\log z$.
+whose value is zero.
+Now $\log z$ extends to a multi-valued function in
+${\bf{C}}\setminus \{0\}$
+and in $\widehat{\mathcal O}$ we get the connected
+open set
+$\mathcal L$ whose points are pairs $(p,f)$ where
+$p\in {\bf{C}}\setminus \{0\}$ and $f$ is a local branch of $\log z$
+at $p$.
+Here $\pi\colon \mathcal L\to {\bf{C}}\setminus \{0\}$
+is surjective where  each inverse fiber is a copy of the set of integers which reflects
+the property that
+local branches of the  log-function 
+differ by integer-multiples of $2\pi$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $\log z$ yields a single-valued holomorphic function
+$\widehat{\log}$ on the open Riemann surface
+$\mathcal L$ and the map
+\[
+p\to \widehat{\log}(p)
+\] 
+from $\mathcal L$ into the complex plane ${\bf{C}}$  is biholomorphic.
+In topology it means that $\mathcal L$ can be taken as the
+universal covering space of the punctured complex plane and
+(*) gives a first example
+of the uniformisation theorem applied to the simply connected
+Riemann surface $\mathcal L$.
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{1.1.1 The space $M_\Omega(z_0)$}}.
+Let $\Omega$ be a  open and connected
+subset of
+${\bf{C}}$ and consider a point $z_0\in \Omega$. In ¤ xx
+we introduced the family of germs 
+$M_\Omega(z_0)$ which can
+be extended in the sense of Weierstrass along every curve 
+$\gamma$ in $\Omega$
+with initial point at $z_0$ and some terminal point $z$.
+For a pair $(f,\gamma)$ with
+$f\in M_\Omega(z_0)$, the analytic continuation along
+$\gamma$ gives the germ
+the germ $T_\gamma(f)\in \mathcal O(z)$
+wihch by definition is a point in $\widehat{\mathcal O}$.
+The 
+union of these points 
+as $\gamma$ varies yields  a connected
+open subset of
+$\widehat{O}$ denoted by
+$\widehat{X}_f$ and called 
+the associated Riemann surface of $f$.
+Here $\pi\colon \widehat{X}_f\to \Omega$ is surjective
+and  the construction gives  a 
+\emph{single-valued} holomorphic function
+$\widehat{f}$ on $\widehat{X}_f$ where
+\[
+\widehat{f}(T_\gamma(f))=T_\gamma(f)(z)
+\]
+when $\gamma$ is a curve with terminal point at $z$.
+\medskip
+
+
+\noindent
+{\bf{Example}}.
+Remove 0 and 2 from the complex plane
+and in $\Omega={\bf{C}}\setminus \{0,2\}$ we have
+the multi-valued function
+\[
+f(z)= \sqrt{z}+ \sqrt{2-z}
+\] 
+where one starts with the germ at $z=1$ for which
+$\sqrt{1}= \sqrt{2-1}=1$.
+Under analytic continuation the
+germs of the square root functions can change sign
+and from this the reader may verify that
+$\pi\colon \widehat{X}_f\to \Omega$
+is a four-sheeted covering map, i.e. the inverse fibers consist of four points.
+\medskip
+
+\centerline{\bf{1.2 The $\bar\partial$-operator.}}
+\medskip
+
+
+\noindent
+The complex analytic structure
+on a Riemann surface  arises via charts
+$(\Delta,z)$ where
+$\Delta$ are open discs in a complex $z$-plane and 
+equips also 
+$X$ with a structure as an oriented $C^\infty$-manifold whose real dimension is two.
+Denote by $\mathcal E(X)$
+the space of complex-valued $C^\infty$-functions on $X$ and
+$\mathcal E^1(X)$ is the space of smooth differential 1-forms.
+The exterior differential
+$d\colon \mathcal E(X)\mapsto \mathcal E^1(X)$
+is a sum
+$\partial+\bar\partial$. More precisely, one has 
+a direct
+sum decomposition
+\[
+\mathcal E^1(X)=\mathcal E^{1,0}(X)\oplus \mathcal E^{0,1}(X)
+\]
+and the two differentials:
+\[
+ \partial \colon \mathcal E(X)\mapsto \mathcal E^{1,0}(X)
+\quad\colon\,
+ \bar \partial \colon \mathcal E(X)\mapsto \mathcal E^{0,1}(X)
+\]
+Here   a differential 1-form
+$\phi$ has bi-degree $(1,0)$ if its restriction
+to a chart
+$(\Delta,z)$ is  $a(z)dz$ with
+$a\in C^\infty(\Delta)$. Similarly, a 1-form
+$\psi$ has bi-degree $(0,1)$ if
+$\psi|\Delta= b(z) d\bar z$ with 
+$b\in C^\infty(\Delta)$. The
+Cauchy-Riemann equations entail that
+the $\bar\partial$-kernel on
+$\mathcal E(X)$ consists of holomorphic functions.
+If $U$ is an open subset of $X$ we denote by
+$\mathcal O(U)$ the set of holomorphic functions in
+$U$ and by
+$U\mapsto \mathcal O(U)$ one gets the sheaf 
+$\mathcal O$.
+As already announced in the introduction
+a  major result about non-compact Riemann surfaces
+is the following:
+
+\medskip
+
+\noindent
+{\bf{1.2.1 Theorem.}}
+\emph{Every $(0,1)$-form on $X$ is $\bar\partial$-exact.}
+\medskip
+
+
+\centerline {\bf{Runge's theorem.}}
+\medskip
+
+\noindent
+Let $Y$ be an open subset of $X$.
+For each compact subset
+$K$ of $Y$ we get  connected open components
+of $X\setminus K$ and put
+\[
+\mathcal C^*(K)= \cup\,\Omega_\alpha
+\] 
+where the union is taken over all components
+$\Omega_\alpha$
+which are not relatively compact, i.e. the closure $\overline{\Omega}_\alpha$
+is not a compact set in $X$.
+One says that $K$ is a compact   Runge set in $Y$
+if 
+\[
+\mathfrak{h}(K)=X\setminus \mathcal C^*(K)
+\] 
+is a compact subset of $Y$.
+\medskip
+
+\noindent
+{\bf{1.2.2 Theorem.}}
+\emph{For every pair $(Y,K)$ where
+$K$ is a compact Runge set in $Y$
+and each $f\in\mathcal O(Y)$ there exists a sequence
+$\{g_n\}$ in $\mathcal O(X)$ such that}
+\[
+\lim_{n\to \infty}|g_n-f|_K=0
+\]
+\emph{where we have taken maximum norms over $K$.}
+
+\medskip
+
+\noindent
+The two theorems above are proved in ¤ xx and   give rise to 
+further results
+which we describe below.
+\medskip
+
+\noindent
+{\bf{Weierstrass' Theorem.}}
+A divisor on $X$ consists of a discrete sequence
+of points $\{p_\nu\}$ to which one assigns
+integers $\{k_\nu\}$  which may be positive or negative.
+A globally defined and non-constant meromorphic function
+$g$ gives the  principal divisor $D(g)$ where
+one assigns
+a positive integer at each zero 
+of $g$ given  by its multiplicity. Similarly one assigns
+negative integers  at poles given by  their orders.
+\medskip
+
+\noindent
+{\bf{1.2.3  Theorem.}}
+\emph{Every divisor on a non-compact Riemann surface is principal.}
+
+\medskip
+
+
+\noindent
+{\bf{The Mittag-Leffler Theorem.}}
+On the Riemann surface
+$X$ one has the sheaf $\mathcal O$ of holomorphic functions and
+the sheaf $\mathfrak{M}$ whose sections are meromorphic functions.
+Now there exists the quotient sheaf
+\[
+\mathcal M= \frac{\mathfrak{M}}{\mathcal O}
+\]
+Sections in $\mathcal M$ are special since
+one only gets contributions at the set of poles of
+a meromorphic function which over an open subset in $X$
+is discrete.
+Theorem 0.2.1 and the long exact sequence of cohomology entails that
+one has an exact sequence
+\[
+0\to \mathcal O(X)\to \mathfrak{M}(X)\to
+\mathcal M(X)\to 0\tag{1.2.4}
+\]
+This  surjective maps means that one
+can assign a  Mittag-Leffler distribution
+in an arbitrary fashion on disrete subsets of $X$ which
+extends the classic result for planar domains.
+
+
+\bigskip
+
+
+
+\centerline{\bf{1.3 Harmonic functions and the Dirichlet problem.}}
+\bigskip
+
+
+\noindent
+A real-valued function $u$ on $X$ is harmonic if its restriction to
+every chart satisfies the Laplace equation.
+An equivalent condition is that
+the $(1,0)$-form
+$\partial(u)$ is $\bar\partial$-closed, i.e. a holomorphic 1-form.
+The space  of harmonic functions on $X$ 
+is denoted by $\mathfrak{h}(X)$.
+We have also the sheaf
+$\mathfrak{h}_X$ whose sections over
+open sets $U$ is
+$\mathfrak{h}(U)$.
+Let us then consider an   open
+subset $Y$ of $X$ whose  boundary
+$\partial Y$ is compact.
+For each $h\in C^0(\partial Y)$ one seeks 
+a continuous function $H$ on $\overline{Y}$ where
+$H$ is harmonic in $Y$ and equal to $h$ on
+the boundary.
+To find $H$ one proceeds exactly as in the planar case
+using Perron's method. This 
+gives a sufficiency for solutions to the Dirichlet problem
+for arbitrary continuous boundary value functions. More precisely, a point
+$p\in\partial Y$ satisfies the Perron condition if
+we can find a pair $(\Delta,u)$
+where
+$\Delta$ is a chart with the origin at $p$ and
+$u$ is a continuous function in
+$\overline{Y}\cap \Delta$ with the property that
+$u$ is subharmonic in
+$Y\cap \Delta$ where it takes strictly negative values, while $u(p)=0$.
+
+
+
+\medskip
+
+\noindent
+{\bf{1.3.1 Theorem.}}
+\emph{Let $Y$ be an open set in $X$ such that every $p\in\partial Y$
+is Perron regular. Then the Dirichlet problem has a solution for
+every
+$h\in C^0(\partial Y)$.}
+
+\medskip
+
+\noindent
+{\bf{1.3.2 Remark.}}
+For brevity we say that
+$Y$ is Dirichlet regular when  the Dirichlet problem has a solution.
+The proof of Theorem 1.3.1 is verbatim to the planer case  and
+left as an exercise to the reader.
+\bigskip
+
+
+\centerline{\bf{1.4 The uniformisation  theorem.}}
+\medskip
+
+\noindent
+Denote by $\Omega(X)$ the space of globally defined holomorphic 1-forms.
+We can impose the condition that
+\[ 
+\partial(\mathcal O(X))= \Omega(X)\tag{1.4.1}
+\]
+
+\medskip
+
+\noindent
+{\bf{1.4.2  Theorem.}}
+\emph{Let $X$ be a non-compact Riemann surface for which (1.4.1) holds.
+Then $X$
+is biholomorphic with the unit disc $D$ or the complex plane
+${\bf{C}}$.}
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+In the special case when
+$X$ is a planar domain the result above is
+Riemann's ordinary mapping theorem for simply connected
+domains.
+The extension to an arbitrary
+open Riemann surface 
+requires extra work which is given  in ¤ 5.
+
+\bigskip
+
+
+
+
+
+
+\centerline{\bf{1.5 Further results.}}
+\medskip
+
+\noindent
+The Behnke-Stein theorem
+extends to the case when
+$\mathcal O$ is replaced by
+a holomorphic line bundle $\mathcal L$ which by definition
+is a locally free sheaf of $\mathcal O$-modules with rank one.
+Thus
+\[ 
+H^1(X,\mathcal L)=0\tag{1.5.1}
+\]
+There also  exists  the multiplicative sheaf
+$\mathcal O^*$ whose sectios are zero-free holomorphic functions.
+The exponential map yields an exact sequence of sheaves
+\[
+0\to {\bf{Z}}_X\to \mathcal O\overset{\text{exp}}\to  \mathcal O^*\to 0
+\]
+In ¤ x we prove that
+$H^1(X,\mathcal O^*)=0$ 
+and  the long exact sequence of cohomology  gives
+\[ 
+H^2(X,{\bf{Z}}_X)=0\tag{1.5.2}
+\]
+
+
+\noindent
+Next, let $\Omega $ be the sheaf of holomorphic 1-forms
+which gives the exact sheaf sequence
+\[
+0\to {\bf{C}}_X\to \mathcal O\overset{\partial }\to  \Omega\to 0
+\]
+The vanishing of $H^1(X,\mathcal O)$
+gives the exact sequence
+\[
+0\to {\bf{C}}_X
+\to \mathcal O(X)\overset{\partial }\to  \Omega(X)\to 
+H^1(X,{\bf{C}}_X)\to 0\tag{1.5.3}
+\]
+Hence one has the isomorphism
+\[
+H^1(X,{\bf{C}}_X)\simeq\frac  {\Omega(X)}{\partial(\mathcal O(X)}\tag{*}
+\]
+When (1.4.1) fails 
+one is led to analyze when a  globally defined holomorphic
+1-form
+$\omega$ is $\partial$-exact, i.e. equal to
+ $\partial(f)$ for some
+$f\in\mathcal O(X)$.
+To analyze   when this holds we fix a point $x_0\in X$ and denote by
+$\mathcal F$ the family of closed and differentiable curves
+$\gamma$ with common start and terminal points at $x_0$.
+If $\omega=\partial(f)$ it is clear that
+\[
+\int_\gamma\,\omega=0\quad\colon
+\gamma\in\mathcal F\tag{i}
+\]
+Conversely, assume that
+(i) holds for some
+ $\omega\in\Omega(X)$.
+ If $x$ is a point in $X$ we find a differentiable curve
+ $\gamma(x)$ which starts at $x_0$ and has $x$ as terminal point.
+ Now (i) entails that
+ \[
+ \int_{\gamma(x)}\,\omega\tag{ii}
+ \] 
+ only depends on $x$ and not on the specific choice of 
+ $\gamma(x)$. This gives
+ $f\in\mathcal O(X)$ such that
+$f(x)$ equals (ii) for every $x$ and 
+$\omega=\partial(f)$.
+So the vanishing in (i) is a necessary and sufficient condition in order
+that
+$\omega$ is $\partial$-exact.
+\medskip
+
+\noindent {\bf{1.5.4 Additive representations of $\pi_1(X)$.}}
+Recall that the fundamental group of the manifold $X$ can be identified with
+homotopy classes of closed curves in the family $\mathcal F$.
+Exactly as in the planar case one verifies that
+the integrals in (i)  only depend upon the homotopy
+classes.
+So if $\omega$ is kept fixed we get a group homomorphism
+from $\pi_1(X)$ into the abelian group 
+${\bf{C}}$ defined by
+\[
+\{\gamma\}\mapsto \int_\gamma\,\omega\tag{i}
+\]
+Conversely one applies (1.5.3)  to show that
+\emph{every} group homomorphism
+$\rho\colon \pi_1(X)\to {\bf{C}}$
+is given by (i) for some
+holomorphic 1-form $\omega$.
+
+\bigskip
+
+\centerline
+{\bf{¤ 1.6. About the proofs.}}
+\medskip
+
+\noindent
+Theorem 1.3.1 plays a crucial role where  Perron's solution  for planar domains
+can be carried out directly on a manifold by repeating the proof for planar domains.
+To begin with  Theorem 1.3.1 is used to prove that
+the topology of $X$ is 
+countable which means that 
+there exists  denumerable increasing sequence of compact subsets
+$\{K_n\}$ where
+$K_n$ is contained in the interior of $K_{n+1}$ for every $n$.
+The proof is given
+in
+tbe Appendix  where the  crucial  point 
+is to apply Theorem 1.3.1  when
+$Y$ is the open complement in $X$   when
+one has removed
+a pair of closed discs in separate charts.
+\medskip
+
+\noindent
+Another very useful fact
+is  Montel's theorem for planar domains.
+Namely, let 
+$V$ and $U$ be  two open sets in
+${\bf{C}}$ where
+$V$ is relatively compact in
+$U$, i.e $\overline{V}$ is a compact subset
+of $U$. Then the restriction operator from
+$\mathcal O(U)$ into $\mathcal O(V)$ is compact
+where both are Frechet spaces under uniform convergence over compact subsets of 
+$V$ and $U$
+respectively.
+In ¤ xx we show that this 
+compactness and Pompieu's theorem for planar domains
+give:
+
+\medskip
+
+\noindent
+{\bf{1.6.1 Dolbeault's Lemma.}}
+\emph{Let $Y$
+be a relatively compact open subset of $X$.
+Then, for every open set $Y^*$ which contains $\overline{Y}$
+and
+each $\phi\in\mathcal E^{0,1}(Y^*)$, the restriction of
+$\phi$ to $Y$ is  $\bar\partial$-exact, i.e. one has the inclusion}
+\[
+ \phi|Y\in \bar\partial(\mathcal E(Y))
+\]
+
+\noindent
+{\bf{Remark.}}
+We shall see that this result
+constitutes the
+essential step to get   the Behnke-Stein theorem where
+the relative compactness is relaxed.
+\medskip
+
+
+\noindent
+{\bf{1.6.2 The elliptic
+property
+of $\bar\partial$.}}
+Recall that if $\mu$ is a distribution   in some open
+subset $U$ of ${\bf{C}}$ such that
+$\partial(\mu)=0$ then it
+is a holomorphic density.
+Passing to a Riemann surface $X$
+we consider a current $S$ of bi-degree
+$(1,0)$, i.e  a continuous linear form on
+test-forms of bi-degree $(0,1)$.
+The current $S$ is $\bar\partial$-closed in an open subset
+$U$ of $X$ if
+\[
+S(\bar\partial(g))=0\quad \colon g\in C_0^\infty(U)\tag{i}
+\]
+The planar result entails that (i) gives
+a holomorphic 1-form
+$\sigma$ in $U$ such that
+\[
+S(\phi^{0,1})=\int\, \phi\wedge \sigma\tag{ii}
+\]
+for every $\phi\in \mathcal E^{0,1}(X)$ having compact support in
+$U$.
+That $(i)\implies (ii)$ plays a crucial role in
+the proof of Theorem 1.2.2.
+
+
+\medskip
+
+
+\noindent
+{\bf{1.6.3 Counting zeros.}}
+A substitute for the argument principle in
+the complex plane to count zeros of analytic functions
+exists on Riemann surfaces.
+Let $f$ be holomorphic in an open subset $Y$ of $X$
+and suppose that the   zeros in $Y$ is a finite set
+$p_1,\ldots,p_k$, where each $p_\nu $ is  zero of some multiplicity
+$e_\nu$.
+Now $\log |f|^2$ is locally integrable in 
+$Y$
+which gives a current
+defined on test-forms
+$\omega$ of bi-degree $(1,1)$ with compact support in $Y$
+which is defined by 
+\[
+\int_Y\, \log|f|^2\cdot \omega^{1,1}\tag{i}
+\]
+To evaluate (i)
+we apply the calculus with currents.
+To begin with
+we get the current
+\[
+\partial(\log |f|^2)= \frac{\partial  f}{f}\tag{ii}
+\]
+whiuch  is a holomorphic density outside the zeros and if
+$(|Delta,z)$ is a chart around a zero $p_\nu$ of multiplicity
+$e_\nu$ then the 
+current in (ii) restricted to this chart
+is
+$e_\nu\cdot \frac{dz}{z}$.
+Now we can apply $\bar\partial$  and residue calculus shows that
+the (1,1)-current
+\[
+\bar\partial \partial(\log |f|^2)= 2\pi i\cdot \sum\, e_\nu\cdot \delta(p_\nu)
+\]
+where $\{\delta(p_\nu)\}$
+are Dirac measures. 
+More precisely, for every test-function $g\in C_0^\infty(Y)$
+one has the equality
+\[
+2\pi i\cdot \sum\, e_\nu\cdot g(p_\nu)
+\int_Y\, \log |f|^2\cdot  \bar\partial\partial (g)\tag{iii}
+\]
+\medskip
+
+\noindent
+{\bf{1.6.4 A continuity principle.}}
+Let $f\in\mathcal O(Y)$
+and suppose  it extends to a continuous function on
+$\overline{Y}$ and  there is some $\delta>0$ such that 
+$|f(p)|\geq \delta$ hold for each $p\in\partial Y$.
+For each complex number
+$a$ with $|a|<\delta$ it follows
+that $f-a$ has a finite number of zeros in $Y$. Denote by 
+$e_f(a)$ be the number of zeros counted with multiplicity.
+Exactly as above we get
+\[
+ 2\pi i\cdot e(a)=\int\,  \log |f-a|^2\cdot \bar\partial\partial(g)\tag{1}
+\]
+when $g$ is a test-function in $Y$ which take values one at
+the zeros of $f-a$.
+Let $0<\delta_0<\delta$ so that
+the set
+$\{|f|\leq \delta_0\}$ is compact in $Y$
+and fix $g\in C_0^\infty(Y)$ so that
+$g=1$ over this compact set.
+Now we get ther integer-valued function $a\mapsto e(a)$
+which for each $a$ is evaluated via (1).
+At the same time we have the $L^1$-functions
+$\{\log\, |f-a|\}$ and elementary measure theory
+shows that
+$a\mapsto \log |f-a|$
+is continuous with values in $L^1(Y)$.
+Passing to their distribution derivatives
+give a weak-star  continuous
+current-valued function
+$a\mapsto\bar\partial\partial(\log |f-a|)$
+which entails that
+(1) is a continuous integer-valued function defined in the disc
+$\{|a|<\delta\}$.
+Hence this function is constant, i.e. the number of
+$a$-values taken by $f$ and counted with multiplicities is
+constant.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+It is possible to prove
+the result above by regarding
+proper maps with
+finite fibers from one manifold into another. However, the proof given above
+has the merit that it can be extended to
+considerably  more general situations
+since we only used the fact that passage to higher order derivatives of distributions is a
+weak-star continuous process.
+
+
+
+\newpage
+
+
+\centerline{\bf{Appendix: Topological results.}}
+\bigskip
+
+
+\noindent
+We restrict the attention to topological spaces
+$X$ which are Hausdorff.
+A Hausdorff space $X$ is arc-wise connected
+if there to every pair of points $p,q$ in $X$ exists a continuous map
+$\gamma\colon [0,1]\to X$
+such that $\gamma(0)=p$ and $\gamma(1)= q$.
+Next, one says that
+the Hausdorff space $X$ has a countable topology if there
+exista a denumerable family $\mathfrak{U}$
+of open subsets
+$\{U_n\}$ such that every
+open set in $X$ is the union of 
+sets from $\mathfrak{U}$.
+The following remarkable result is due to PoincarŽ and Volterra:
+
+
+\medskip
+
+\noindent
+{\bf{A.1 Theorem.}} \emph{Let 
+$X$ be arc-wise  connected and Hausdorff which in addition is locally compact.
+Suppose there exists a continuous map
+$f\colon X\to Y$
+where
+$Y$ is a Hausdorff  space with countable topology
+and the fibers
+$f^{-1}(y)$ are discrete subsets of $X$ for every $y\in Y$. Then
+$X$ has countable topology.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Denote by $\mathfrak{B}$ the family of open sets
+$V$ in $X$ which satisfy the following:
+\[
+\text{$V$ has a countable topology}\tag {i} 
+\]
+\[
+\text{$V$ is a connected component of $f^{-1}(U)$ for some
+open set $U$ in $Y$}\tag{ii}
+\]
+Theorem A.1 follows if we prove that
+$\mathfrak{B}$ is a countable family and
+every open set in $X$ is a union of
+$\mathfrak{B}$-sets.
+\medskip
+
+\noindent
+\emph{Proof that $\mathfrak{B}$Êis countable.}
+Let $V_0$ be a set in $\mathfrak{B}$ and
+consider an open set $U$ in $Y$.
+The connected components of
+$f^{-1}(U)$ are disjoint by (i)
+$V_0$ has countable topology.
+It follows
+that
+at most countably many
+of the connected components of $f^{-1}(U)$
+have a non-empty
+intersection with $V$.
+Next, since every
+$V\in \mathfrak{B}$ is of the form $f^{-1}(U)$ for an open
+set in $Y$ and $Y$ has a countable topology we
+conclude that
+\[
+V_0\cap V\neq\emptyset\tag{iii}
+\]
+only  can hold for
+countably many $V$ in $\mathfrak{B}$.
+Next, fix $V_*\in\mathfrak{B}$ and set
+\[ 
+\mathfrak{B}_0=\{ V\colon V_*\cap V\neq\emptyset\}
+\]
+By (iii) this is a countable set in $\mathfrak{B}$.
+If $n\geq 1$ we define inductively
+\[
+\mathfrak{B}_n= \{V\colon \exists\, W\in\mathfrak{B}_{n-1}\, \colon
+ W\cap V\neq\emptyset\}
+\]
+An induction over $n$ entails
+that each
+$\mathfrak{B}_n$ is countable and since
+$X$ is connected it is clear that
+their union is equal to $\mathfrak{B}$
+which therefore is a countable family.
+\medskip
+
+\noindent
+\emph{Proof that
+$\mathfrak{B}$ is a basis of the topology.}
+Let $\Omega\subset X$ be open and take some
+$x\in\Omega$. We must prove that there exists
+$V\in\mathfrak{B}$ such that
+\[
+x\in V\subset\Omega
+\]
+To show this we consider the discrete fiber
+$f^{-1}(f(x))$. Since $X$ is Hausdorff and locally compact
+there exists 
+a small open and relatively compact neighborhood $W$ of $x$ such that 
+$W\subset \Omega$ and
+$\partial W\cap f^{-1}(f(x))=\emptyset$.
+Now $f(\partial W)$ is a compact set in $Y$
+which does not contain
+$f(x)$ which gives $U\in\mathfrak{U}$ such that
+\[
+f(x)\in U\quad\colon f(\partial W)\cap U= \emptyset
+\]
+Let $V$ be the connected component of $f^{-1}(U)$ which contains
+$x$.
+From the above $V\cap \partial W=\emptyset$ and
+we conclude that 
+\[
+x\in V\subset W\subset\Omega
+\]
+which finishes the proof.
+\bigskip
+
+\centerline {\bf{A.2  Covering spaces.}}
+\bigskip
+
+
+\noindent
+Let $X$ be arc-wise connected and Hausdorff.
+A pair $(Y,\rho)$ is a covering of $X$ 
+if $\rho\colon Y\to X$ is a continuous map and
+for each point $p\in X$ there exists some open neighborhood $U$
+such that
+\[ \rho^{-1}(U)= \cup \, V_\alpha
+\]
+where the right hand side is a disjoint union of open sets in
+$Y$ and $\rho\colon V_\alpha\to U$ are homeomorphisms for
+each $\alpha$.
+\medskip
+
+\noindent
+{\bf{A.2.1 Exercise.}}
+Let $\gamma\colon  [0,1]\to X$ be a continuous map
+and let $y_0\in Y$ be a point such that
+\[
+\rho(y_0)= x_0=\gamma(0)
+\]
+Show that there exists a unique continuous map
+$\gamma^*\colon  [0,1]\to Y$ such that
+$y_0=\gamma^*(0)$ and
+\[
+\rho(\gamma^*(t))= \gamma(t)\,\colon\, 0\leq t\leq 1\tag{i}
+\]
+which means that
+there exist unique liftings of curves. 
+\bigskip
+
+\noindent
+Next, let $\pi_1(X)$ be the fundamental  group of $X$.
+Since $X$ is arc-wise connected it can be identified with homotoy classes
+of closed curves $\gamma$ which have a given
+$x_0\in X$ as a common initial and terminal point.
+Let us also fix a point $y_0$Êin the fiber
+$\rho^{-1}(x_0)$.
+To each closed $\gamma$-curve as above the exercise gives
+a unique lifted curve
+$\gamma^*$  where  (i) entials that
+\[
+\rho(\gamma(1))\in
+\rho^{-1}(x_0)\tag{ii}
+\]
+
+\medskip
+
+\noindent
+{\bf{A.2.2 Exercise.}}
+Show that the end-point
+$\gamma(1)$ in  (ii)
+only  depends upon the homotopy class of
+$\gamma$ and conclude that
+one has a map
+\[
+\rho_*\colon \pi_1(X)\to \rho^{-1}(x_0)\tag{*}
+\]
+Show also that $\rho_*$ is surjective
+if $Y$ is connected.
+\medskip
+
+\noindent
+{\bf{A.2.3 The universal covering property.}}
+A covering $\phi \colon Z\to X$ has a universal property if the
+following holds: For every covering
+$\rho\colon Y\to X$
+and each pair of points $z_0\in \phi^{-1}(x_0)$ and
+$y_0\in \rho^{-1}(x_0)$ there exists a unique fiber preserving continuous map
+$f\colon Z\to Y$ with $f(z_0)=y_0$ and 
+\[ 
+\rho\circ f=\phi\tag{**}
+\]
+Notice that (**) means that $f$ is fiber preserving.
+\medskip
+
+\noindent
+{\bf{A.2.4 Exercise.}}
+Show that a covering with the universal property is unique in
+the sense that if $(Z_1,\phi_1)$ and $Z_2,\phi_2)$ is such a pair then
+there exists a homeomorphism $g\colon Z_1\to Z_2$
+with
+\[
+\phi_1= \phi_2\circ g
+\]
+\medskip
+
+\noindent
+{\bf{A.2.5 Existence.}}
+Show that an arc-wise connected  Hausdorff space
+$X$ has a universal covering $\widehat{X}$ and that
+the fundamental  group
+$\pi_1(\widehat{X})=0$.
+\medskip
+
+\noindent
+{\bf{A.2.6 The Galois property.}}
+A covering $\rho\colon Y\to X$
+where $Y$ is connected has the Galois property if there
+to each
+$p\in  X$ and every pair
+of points $y_1,y_2$ in $\rho^{-1}(p)$ exista a fiber presering
+homeomorphism $f\colon Y\to Y$
+with
+$f(y_1)= y_2$.
+\medskip
+
+\noindent
+{\bf{A.2.7 Exercise.}}
+Verify that the universal covering $\widehat{X}$
+has the Galois property.
+
+
+\bigskip
+\centerline {\bf{A.3 Runge sets on Riemann surfaces.}}
+
+\bigskip
+
+
+\noindent
+If $K$ is a compact subset of the Riemann surface $X$
+we get the conncted components $\{\Omega_\alpha\}$
+of the open complement $X\setminus K$.
+Since $X$ is connected we notice that
+\[ 
+\partial\Omega_\alpha\subset K\tag{i}
+\] 
+hold for every connected component in $X\setminus K$.
+Next,
+choose an open set $U$ which contains $K$ where $\overline{U}$
+is compact.
+This is of course possible since
+$K$  can be covered by a finite number of charts
+where each chart has a compact closure in $X$.
+If a component 
+$\Omega_\alpha$ is such that
+\[ 
+\partial U\cap \Omega_\alpha= \emptyset\tag {ii}
+\] 
+the connectivity
+of $X$ and (i) entail that
+\[
+\Omega_\alpha\subset U\tag{iii}
+\]
+Next,  the Heine-Borel Lemma
+a finite
+family of $\Omega_{\alpha_1},\ldots,\Omega_{\alpha_N}$
+whose union cover the compact set $\partial U$.
+Among these occur a finite family of non-compact
+sets, say
+$\Omega_{\alpha_1},\ldots,\Omega_{\alpha_k}$ where $1\leq k\leq N$.
+Set
+\[ 
+\mathfrak{h}(K)= K\, \cup\, \bigcup_*\, \Omega_\alpha\tag{iv}
+\]
+ where the *-marked union is taken over
+ all components for which (iii) hold together with  the finite family of relatively compact
+ components which intersect $\partial U$, or equivalently
+ \[
+ \mathfrak{h}(K)=X\setminus \Omega_{\alpha_1}\,\cup\ldotsÊ\cup\, \Omega_{\alpha_k}
+\]
+
+ 
+ \noindent
+ {\bf{A.3.1 Exercise.}}
+ Verify that $\mathfrak{h}(K)$ is compact and that
+ \[ 
+ \mathfrak{h}(\mathfrak{h}(K))=\mathfrak{h}(K)
+ \]
+ 
+ 
+ \noindent
+{\bf{A.3.2 Open Runge sets.}}
+An open subset $Y$ in $X$ is Runge if
+\[ 
+K\subset Y\implies \mathfrak{h}(K)\subset Y
+\]
+hold for every compact set $K$, i.e. the Runge hull of a compact
+subset of $Y$ stays in $Y$.
+ \medskip
+ 
+ \noindent
+{\bf{A.3.3 Proposition.}}
+\emph{Let $K$ be a compact Runge set
+in $X$ with a non-empty interior.
+Let $\Delta_1,\ldots,\Delta_N$
+be a finite number of open  discs whose union cover
+$\partial K$.  Then the open set below is Runge:}
+\[
+Y=K\setminus \,\cup\, \overline{\Delta}_\nu
+\]  
+
+ \noindent
+The easy proof is left as an exercise.
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{¤ 1. Proofs of the main results.}}
+\bigskip
+
+\noindent
+Preliminary results are established in ¤ 2
+where Dolbeaulit's Lemma from ¤ xx is crucial.
+Here the proof requires several steps which starts by a certain finiteness
+result in Propostion 2.3.2 and after one derives Dolbeault's Lemma via a 
+"tricky construction" which 
+is due to Cauchy and based upon 
+the general fact that if
+$A\colon V|to V$ is a linear operator on a finite dimensional vector space
+of some dimension $N$
+and
+\[ 
+\text{det}(\lambda\cdot E_V-A)=
+\lambda^N+
+c_{N-1}\lambda^{N-1}+\ldots +c_0
+\]
+then the linear operator
+\[
+A^N+
+c_{N--1}A^{N-1}+\ldots +c_0E_V
+\] 
+is identically zero.
+In ¤ 3 we first establish an approximation result
+where calculis with currents are used. The crucial point is the
+elliptic property of $\bar\partial$ 
+which implies that if $S$ is a current of bi-degree
+(1,0) in some open set $U$ of $X$
+which is $\bar\partial$-closed, then
+there exists a holomorphic 1-form $\sigma$ in $U$ such that
+\[
+S(\omega^{0,1})=\int_U\, \omega^{0,1}\wedge \sigma
+\]
+for every test-form $\omega^{0,1}$ of bi-degree 
+$(0,1)$ having compact support in $U$.
+At the end of ¤ 3 we deduce the Behnke-Stein theorem from the previous results.
+In ¤ 4 we derive further results  such as
+Weierstrass' theorem 
+which asserts that
+every divisor on an open Riemann surface is principal.
+Another crucial  fact is the existence of
+a globally defined holomorphic 1-form which never is zero.
+\medskip
+
+\noindent
+Armed with previous results we prove the uniformisation theorem in
+¤ 5 which is based upon repeated solutions to certain Dirchlet problems
+in an exhaustion of the simply connected Riemann surface
+$X$ by relatively compact Perron regular
+Runge domains.
+A crucial point during the proof  is that
+the hypothesis 
+\[
+\Omega(X)=\partial(\mathcal O(X))
+\]
+entails that the same holds for every
+open Runge set in $X$.
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{¤ 2. Dolbeault's Lemma.}}
+
+\bigskip
+
+
+\noindent
+Let $X$ be an open Riemann surface
+and $Y$  a
+relatively  compact open subset.
+Heine-Borel's Lemma gives a finite covering of
+$\overline{Y}$ by open charts
+$\{\Delta_\alpha\}$ and hence   a finite open covering 
+$\mathfrak{U}= \{U_\alpha\}$ 
+of $Y$ where
+\[
+U_\alpha=\Delta_\alpha\cap Y
+\]
+Construct  the Cech complex
+\[
+C^0(\mathfrak {U},\mathcal O)
+\overset{\delta}\to\,
+C^1(\mathfrak {U},\mathcal O)
+\overset{\delta}\to\,
+C^2(\mathfrak {U},\mathcal O)
+\overset{\delta}\to\ldots
+\]
+and consider  the cohomology group
+\[ 
+H^1(\mathfrak {U},\mathcal O)=
+\frac{Z^1(\mathfrak {U},\mathcal O)}{
+\delta(C^0(\mathfrak {U},\mathcal O)}\tag{2.1}
+\]
+Pompieu's  theorem and Leray's acyclicity theorem
+for sheaf cohomology entail that
+(2.1) is 
+independent of the chosen 
+covering  and equal to the cohomology group
+$H^1(Y;\mathcal O_X)$. Moreover,   the Dolbeault isomorphism from ¤ XX gives:
+\[
+H^1(\mathfrak {U},\mathcal O_X))\simeq
+\frac{\mathcal E^{0,1}(Y)}{\bar\partial(\mathcal E(Y))}\tag{2.2}
+\]
+
+\medskip
+
+\noindent
+{\bf{2.3 A finiteness result.}}
+Let $Y$ and $Y^*$ be a pair of relatively
+compact subsets of
+$X$ where  $\overline{Y}$ is a compact subset of
+$Y^*$.
+Let $\{\Delta_\alpha\}$ be a finite covering of 
+$\overline{Y^*}$
+by  charts and set
+$U_\alpha=\Delta_\alpha\cap Y^*$ so that
+$\mathfrak {U}^*=\{U_\alpha\}$
+is a finite 
+covering of 
+$Y^*$.
+Since $\overline{Y}$ is compact in
+$Y^*$ 
+there exists some
+$0<a<1$ such that
+$\{a\cdot \Delta_\alpha\}$ cover
+$\overline{Y}$ and  give a covering $\mathfrak{U}_*$
+of $Y$ where
+\[ 
+V_\alpha=
+a\cdot \Delta_\alpha\cap Y
+\]
+It is clear that
+$V_\alpha$ is a compact subset of $U_\alpha$ for every
+$\alpha$.
+Montel's theorem entails that the restriction operators
+\[
+C^p(\mathfrak{U},\mathcal O)\to 
+C^p(\mathfrak{U}_*,\mathcal O)
+\]
+are compact for each $p$.
+These restrictions  commute with the Cech coboundary mappings
+and give a  ${\bf{C}}$-linear operator
+\[
+H^1(\mathfrak U,\mathcal O)\to 
+H^1(\mathfrak{U}_*,\mathcal O)\tag{2.3.1}
+\]
+ A general result in functional analysis about
+ compact operators between Frechet spaces entails that the range of
+ (2.3.1) is finite dimensional.
+ By (2.2) it follows that 
+ the restriction map
+ \[
+ H^1(Y^*,\mathcal O)\to 
+  H^1(Y,\mathcal O)\tag{2.3.2}
+ \] 
+ has a finite dimensional range.
+Above $Y^*$ was relatively compact. More generally, let
+$U\subset X$ be open where
+$\overline{Y}$Êis a compact subset of $U$.
+We can find $Y^*$ as above where
+$Y\subset Y^*\subset U$.
+Let $N$ be the dimension of the range from (2.3.2). It means that
+there exists an $N$-tuple $\{\phi_\nu\}$ in $\mathcal E^{1,0}(Y^*)$
+and for every other $\phi\in \mathcal E^{1,0}(Y^*)$ there
+exist complex numbers $\{c_k\}$ such that
+\[
+\phi|Y-\sum\, c_k\cdot \phi_k|Y\in \bar\partial \mathcal E(Y)
+\]
+This applies  when we start from some
+$\psi\in \mathcal E^{1,0}(U)$
+and take the restriction $\phi=\psi |Y^*$. Hence
+the range of the map 
+\[ 
+H^1(U,\mathcal O)\to H^1(Y,\mathcal O)
+\] 
+is contained in the
+$N$-dimensional complex vector space
+generated
+by the images of $\{\phi_k|Y\}$ in
+Dolbeault's quotient space from (2.2) which defines
+$H^1(Y,\mathcal O)$. Summing up 
+we have proved
+
+\medskip
+
+\noindent
+{\bf{2.3.3 Proposition.}}
+\emph {Let $Y$ be a relatively compact open set in
+$X$. Then the range of}
+\[ 
+H^1(U,\mathcal O)\to H^1(Y,\mathcal O)
+\] 
+\emph{is finite dimensional for every open set
+$U$ which contains $\overline{Y}$.}
+\bigskip
+
+
+\noindent
+{\bf{2.4 Another finiteness result.}}
+Consider some finite open covering $\mathfrak{U}=\{U_\alpha\}$ of $X$.
+No assumption is imposed on the open sets $U_\alpha$.
+Let $Y$ be a relatively compact subset of $X$ and
+$\mathfrak{U}_*=\{V_\alpha\}$ a finite open covering of $Y$ such that
+$\overline{V}_\alpha$ is a compact subset of $U_\alpha$ for every
+$\alpha$.
+Restrictions give a 
+morphism from the Cech complex $C^\bullet(\mathfrak U,\mathcal O)$
+to
+$C^\bullet(\mathfrak{U}_* ,\mathcal O)$, and exactly as above  Montel's theorem implies that
+the  map
+\[
+H^1(\mathfrak U;\mathcal O)\to 
+H^1(\mathfrak{U}_*;\mathcal O)\tag{2.4.1}
+\] 
+has a finite dimensional range.
+\bigskip
+
+
+\noindent
+{\bf{2.4.2 A special case.}}
+Let $p$ be a point in $X$ and $Y$ a relatively compact subset.
+Here $p$ may or may not belong to $Y$.
+Choose a chart $\Delta$ centered at $p$.
+Now  $U_0=X\setminus\{p\}$ and $U_1=\Delta$ is an open covering 
+$X$.
+Let $0<a<1$ and put
+\[
+V_0=Y\setminus \frac{a}{2}\cdot \overline{\Delta}
+\quad\colon V_1=Y\cap a\cdot \Delta
+\]
+where
+$ \frac{a}{2}\cdot \overline{\Delta}$ is the closed disc of radius $a/2$.
+Here  $V_0,V_1$ cover $Y$
+and from the above the
+restriction map
+\[ 
+\rho\colon H^1(U_0,U_1;\mathcal O)\to
+H^1(V_0,V_1;\mathcal O)\tag{2.4.3}
+\] 
+has a finite dimensional range.
+Notice that
+\[ 
+C^1(U_0,U_1;\mathcal O)=\mathcal O(\Delta^*)
+\] 
+where $\Delta^*$ is the punctured
+disc wih $z=0$ removed.
+To each non-negative integer we have
+$z^{-j}\in \mathcal O(\Delta^*)$. Since 
+$C^2(U_0,U_1;\mathcal O)=0$  each
+of these holomorphic functions in
+the punctured disc yields a vector in
+$H^1(U_0,U_1;\mathcal O)$ and
+we apply $\rho$ to get
+\[ 
+\rho(z^{-j})\in  H^1(V_0,V_1;\mathcal O)
+\]
+If $N$ is the dimension of the range of $\rho$ we find
+complex numbers
+$c_0,\ldots,c_{N-1}$ such that
+\[
+\rho(z^{-N})= \sum\, c_j\cdot \rho (z^{-j})
+\]
+This means that there exists a pair $f_0\in\mathcal O(V_0)$ and
+$f_1\in\mathcal O(V_1)$ such that
+\[
+f_1=
+f_0+ \sum\, c_j\cdot z^{-j}-z^{-N}
+\quad\colon  z\in V_0\cap V_1\cap Y\tag{2.4.4}
+\]
+Hence $f_1$ and $g_0=f_0+ \sum\, c_j\cdot z^{-j}-z^{-N}$
+are glued in $V_0\cap V_1$ and give together a meromorphic function
+$g$ in $Y$ which is holomorphic in $Y\setminus \{p\}$ and has a pole of order
+$N$ at $p$  when
+$p\in Y$.
+
+\bigskip
+
+
+\noindent
+{\bf{2.5 Exercise.}}
+Use the above to show that
+when $Y$ is relatively  compact
+then there exists an open neighborhood $U$ of $\overline{Y}$ and some
+$f\in\mathcal O(U)$
+whose restriction to every connected component of $Y$ is
+non-constant.
+In particular the number of its zeros is finite
+and the reader should verify that
+the same holds if we take
+\[ F= f^N+c_{N-1}f^{N_1}+\ldots+c_1f+c_0
+\]
+where $N\geq 1$ and $\{c_k\}$ are complex numbers.
+
+
+
+\bigskip
+
+
+
+\centerline {\bf{2.6 Proof of Dolbeault's Lemma.}}
+\bigskip
+
+
+\noindent
+Let $Y\subset X$ be relatively compact and
+$Y^*$  another relatively compact set which contains
+$\overline{Y}$ as a compact subset. Choose coverings as in ¤ xx to
+get the restriction map
+\[
+\rho\colon H^1(Y^*,\mathcal O\to 
+ H^1(Y,\mathcal O)\tag{2.6.1}
+ \]
+We are going to prove that the $\rho$-image is zero.
+To get this we argue by a contradiction. If the image is $\neq 0$ we already know 
+that it has a finite dimension $N$.
+Choose
+$\xi_1,\ldots,\xi_N$ in $C^1(\mathfrak {U},\mathcal O)$
+such that $\{\rho(\xi_k)\}$ is a basis of the $\rho$-image.
+Here we employ Dolbeault's respresentation of
+cohomology so that each $\xi_k\in \mathcal E^{0,1}(Y^*)$.
+Next,  Exercise 2.5 applied with $Y^*$  gives
+$f\in \mathcal O(Y^*)$.
+Now  $f\cdot \xi_k$ belongs to
+$\mathcal E^{0,1}(Y^*)$ for each $k$
+and since   
+$\{\rho(\xi_k)\}$ was a basis
+we find  for each fixed $k$ complex numbers 
+$\{b_{kj}\}$
+such that
+\[
+f\cdot \xi_k-\sum_{j=1}^{j=N}\, b_{kj}\cdot \xi_k\, \bigl|Y\in
+\bar\partial (\mathcal E(Y))
+\tag{2.6.2 }
+\]
+Here $B=\{b_{kj}\}$ is an $N\times N$-matrix
+and we construct  the holomorphic function $F$ in $Y^*$
+\[
+F=\det(f\cdot E_N-B)
+\]
+The Cayley-Hamilton  theorem from  linear algebra gives
+\[
+F\cdot \xi_k|Y\in\bar\partial (\mathcal E(Y))
+\quad\colon k=1,\ldots,N\tag{2.6.3}
+\]
+Since $\{\rho(\xi_k)\}$ spans the $\rho$-image it follows that
+\[
+\rho(F\cdot \eta)=0\tag{2.6.4}
+\]
+for every cohomology class $\eta\in H^1(Y^*;\mathcal O)$.
+Next,  $f$ is non-constant
+on connected components in $Y^*$ and we notice  that 
+the same holds for $F$. Recall  also that $f$ even is holomorphic in
+a neighborhood of $Y^*$ which implies  that
+the zeros of $F$ in $Y^*$ is a finite set at most.
+Then   it is clear that there exists
+a finite covering
+$\mathfrak U$ via charts in $Y^*$ such
+that $F$ has no zeros in every non-empty intersection of $\mathfrak U$-sets.
+Let us now  consider an arbitrary
+cohomology class
+$\eta\in H^1(Y^*,\mathcal O)$
+represented by a Cech cocycle $\{\phi_{\alpha \beta}\}$.
+Since $F$ has no zeros in non-empty intersections 
+$U_\alpha\cap U_\beta$ we get another Cech cocycle
+\[ 
+\psi_{\alpha\beta}=\frac{\phi_{\alpha\beta}}{F}
+\]
+Let $\eta^*$ be its cohomology class. Now $\eta= F\cdot \eta^*$
+and (2.6.4) applied with
+$\eta^*$ entails  that
+$\rho(\eta)=0$. Since $\eta$ was arbitrary 
+the restriction map from 
+$H^1(Y^*;\mathcal O)$ into
+$H^1(Y;\mathcal O)$ is zero.
+\bigskip
+
+
+\centerline{\bf{¤ 3. Proofs of Theorem 0.2.1-0.2.2}}
+\bigskip
+
+
+\noindent
+Let us first consider
+a pair $(Y,K)$ from Theorem  0.2.2
+and  $Y^*$ is  another relatively compact subset of
+$X$ such that  $\overline{Y}$ is compact in $Y^*$.
+First we establish 
+a
+weaker variant of  Theorem
+0.2.2 where   the subsequent proof is attributed to Malgrange.
+
+\medskip
+
+\noindent
+{\bf{3.1 Proposition.}}
+\emph{When 
+ $f\in\mathcal O(Y)$ 
+there exists a sequence $\{g_n\}$ in $\mathcal O(Y^*)$ such that
+$|g_n-f|_K\to 0$.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $\mu$ be a Riesz measure
+supported by $K$ such that
+\[ 
+\int\, \phi\cdot d\mu=0\quad\colon \phi\in\mathcal O(Y^*)\tag{i}
+\]
+The Hahn-Banach  theorem gives Proposition 3.1 if we show that (i)
+entails that
+\[ 
+\int\, f\cdot d\mu=0\quad\colon f\in\mathcal O(Y)\tag{ii}
+\]
+To prove this
+we  construct a current
+$S$ on $X$ as follows: Apply Dolbeault's Lemma
+to the relatively compact set
+$Y^*$. It follows
+that  for each 
+$\omega^{0,1}\in \mathcal E^{0,1}(X)$ 
+there exists  
+$g\in \mathcal E(Y^*)$ such that
+\[
+\omega|Y^*= \bar\partial(g)\tag{iii}
+\]
+Here $g$ is unique up to $\mathcal O(Y^*)$ so by (i)
+the  integral 
+$\int\, g\cdot d\mu$
+only depends upon $\omega$. Hence there exists a
+current $S$ on $X$ 
+defined by
+\[ 
+S(\omega^{0,1})=\int\, g\cdot d\mu\tag{iv}
+\]
+with $g$ determined via (iii).
+Next, consider
+an 
+open chart $\Delta$ contained in $X\setminus K$.
+If $g\in C_0^\infty(X)$ has compact support in
+$\Delta$ we take $\omega^{0,1}= \bar\partial(g)$
+and since $g=0$ on $K$ one has 
+\[
+S(\bar\partial(g))=0
+\]
+Since this hold for every pair $(\Delta, g)$ as above,
+$S$ is $\bar\partial$-closed in $X\setminus K$ and
+the elliptic property of
+$\bar\partial$ gives a holomorphic 1-form
+$\sigma$ in $X\setminus K$ such that
+\[
+S(\omega^{0,1})=\int\, \omega^{0,1}\wedge \sigma\tag{v}
+\]
+holds when $\omega^{0,1}$ has compact support in
+$X\setminus K$.
+Let us now consider a point $p\in X\setminus \mathfrak{h}(K)$.
+By the construction of $\mathfrak{h}(K)$ this gives a non-compact
+open and connected subset $\Omega$ 
+of $X\setminus\mathfrak{h}(K)$
+which contains $p$. Since the current $S$ has compact support
+it follows that 
+\[
+\Omega\setminus \text{Supp}(S)\cup K)\neq \emptyset\tag{vi}
+\]
+Let $q$ be a point in this set and 
+choose a small open chart
+$\Delta$ centered
+at $q$
+which stays in $\Omega$ and is disjoint from
+the support of $S$. Then
+\[
+\int\, \omega^{0,1}\wedge \sigma=0
+\] 
+for every test-form
+$\omega^{0,1}$ with compact support in
+$\Delta$. Hence the restriction of $\sigma$
+to $\Delta$ is zero. Since
+$\sigma$ is a 
+holomorphic 1-form
+and  $\Omega$ is connected, 
+analyticity
+gives 
+$\sigma|\Omega=0$. In particular $\sigma=0$ holds in a neighborhood of
+$p$ which  proves the inclusion
+\[
+ \text{Supp}(S) \subset
+\mathfrak{h}(K)\tag{vii}
+\]
+Finally, by  assumption $\mathfrak{h}(K)$ is a compact subset of $Y$. 
+So if  $f\in\mathcal O(Y)$ we can find
+a test-function $g$ with compact support in
+$Y$ such that
+$g=f$ 
+holds in a neighborhood of $\mathfrak{h}(K)$.
+Then $\bar\partial(g)$ vanishes in a neighborhood of
+$\mathfrak{h}(K)$ so (vii) and the construction of $S$ entail that
+\[ 
+0=S(\bar\partial g)=\int_K\,g\cdot d\mu=
+\int_K\,f\cdot d\mu\tag{viii}
+\] 
+which proves Proposition 3.1.
+
+
+
+
+\bigskip
+
+
+
+
+
+\centerline{\bf{3.2 Proof of Theorem 0.2.1}}
+\medskip
+
+
+\noindent
+By  ¤ xx  we can  exhaust $X$ by an increasing sequence of Runge domains
+$\{Y_n\}$  where the closure of $Y_n$
+is a compact subset of $Y_{n+1}$ 
+for each $n$.
+Consider
+some $\phi\in \mathcal E^{0,1}(X)$.
+Dolbeault's Lemma applies to each pair
+$Y_n, Y_{n+1}$ and the restriction of
+$\phi$ to $Y_{n+1}$.
+Hence there exists
+$f_n\in \mathcal E(Y_n)$
+such that 
+\[
+ \bar\partial f_n=\phi|Y_n\tag{3.2.1}
+\]
+It follows that
+the restriction to $Y_n$ of $f_{n+1}-f_n$ is holomorphic
+and since $Y_n$ is Runge and $\overline{Y}_{n-1}$ is a compact subset,
+Proposition 2.4 entails that $f_{n+1}-f_n$
+can be uniformly approximated on
+$Y_{n-1}$ by functions from $\mathcal O(Y_{n+1})$.
+Hence there
+exists 
+$g_{n+1}\in \mathcal O(Y_{n+1})$
+such that the maximum norm
+\[
+||f_{n+1}+g_{n+1}-f_n||_{Y_{n-1}}<2^{-n}
+\]
+With $f^*_{n+1}= f_{n+1}+g_{n+1}$
+we still have
+\[
+\bar\partial f^*_{n+1}=\phi|Y_{n+1}
+\]
+Perfoming
+these modifications inductively with increasing $n$ we obtain a 
+sequence $\{f^*_n\}$ such that   (3.2.1) hold for every $n$
+and 
+\[
+||f^*_{n+1}-f^*_n||_{Y_{n-1}}<2^{-n}
+\quad\colon \, n=1,2,\ldots\tag{3.2.2}
+\]
+It follows that $\{f_n^*\}$ converge uniformly on $X$ to a continuous function
+$F$ which 
+entails that
+the distributions
+$\{\bar\partial f_n^*\}$ converge to the distribution derivative
+$\bar\partial (F)$. Moreover, since (3.2.1) hold for every
+$n$
+it is clear that
+\[ 
+\bar\partial(F)=\phi\tag{3.2.3}
+\]
+holds everywhere in $X$.
+Finally, $\phi$ is a smooth form so  the elliptic property of
+$\bar\partial$ implies that
+$F$ is a $C^\infty$-function. Hence the mapping
+$\bar\partial\colon \mathcal E(X)\to \mathcal E^{(0,1)}(X)$
+is surjective which proves Theorem 0.2.1.
+
+
+\bigskip
+
+
+
+
+
+\centerline{\bf{3.3 Proof of Theorem 0.2.2}}
+\medskip
+ TO BE GIVEN
+
+
+\newpage
+
+\centerline{\bf{¤ 4. Further results.}}
+\bigskip
+
+
+\noindent
+A locally free sheaf of $\mathcal O$-modules of rank one is called
+a
+holomorphic line bundle.
+Let $\mathcal L$ be such a sheaf.
+By definition it has local trivialisations, i.e. we can find
+a locally finite covering $\mathfrak{U}$
+by charts such that
+the restricted sheaf
+$\mathcal L|U_\alpha\simeq \mathcal O$.
+In each non-empty intersection
+$U_\alpha\cap U_\beta$ we find
+a zero free function 
+$g_{\alpha\beta}\in\mathcal O^*(U_\alpha\cap U_\beta)$
+so that the space $\mathcal L(V)$ of sections over
+an open subset $V$ in $X$
+consists of a family $\{\xi_\alpha\in \mathcal O(U_\alpha\cap V)\}$
+satisfying the glueing conditions
+\[
+\xi_\alpha|U_\alpha\cap U_\beta\cap V=
+g_{\alpha\beta}\cdot
+\xi_\beta|U_\alpha\cap U_\beta\cap V\tag{*}
+\]
+\medskip
+
+\noindent
+Repeating  the methods which were used to prove
+Theorem 0.2.1  one has the result below whose detailed verification is left
+as an exercise to the reader.
+
+\medskip
+
+\noindent
+{\bf{4.1 Theorem.}}
+\emph{For every holomorphic line bundle
+$\mathcal L$ one has $H^1(X,\mathcal L)=0$.}
+\bigskip
+
+
+\noindent
+{\bf{4.2 Example.}}
+The 
+sheaf $\Omega$ of holomorphic 1-forms is an example of a  holomorphic line bundle.
+Another example is the sheaf
+$\Theta_X$ whose sections are holomorphic vector fields.
+Notice that
+\[ 
+\Omega=Hom_{\mathcal O}(\Theta_X,\mathcal O)
+\]
+is the  dual line bundle.
+Theorem 4.1 entails that
+\[
+H^1(X, \Omega)=H^1(X,\Theta_X)=0\tag{4.2.1}
+\]
+
+
+
+ \medskip
+ 
+ 
+ \centerline{\bf{4.3 Proof of 
+Weierstrass'  Theorem}}
+
+\bigskip
+
+
+\noindent
+Let $D$ be a divisor on $X$
+which means that integers $\{k_\nu\}$ are assigned to
+a discrete sequence of points $\{p_\nu\}$.
+We must prove that there exists a globally deefined meromorphic function $\psi$
+whose principal divisor is $D$.
+To begin with one has:
+
+\medskip
+
+\noindent
+{\bf{4.3.1 Exercise.}}
+Use a
+$C^\infty$-partition of the unity
+to find a function $\phi$ which is zero-free and 
+$C^\infty$ in the open complement of
+the discrete set $\{p_\nu\}$, and for each
+$p_\nu$ there is a small open  chart
+$\Delta_\nu$ centered at $p_\nu$ with a local coordinate
+$z_\nu$ where 
+\[
+\phi|\Delta_\nu= z_\nu^{k_\nu}
+\]
+\medskip
+
+\noindent
+Next, we find a locally finite covering
+$\mathfrak{U}=\{U_\alpha\}$ of  charts in
+$X$ which contains
+the discs
+$\{\Delta_\nu\}$
+while each $U_\alpha$ which differs from these discs 
+does not contain points in $\{p_\nu\}$.
+For
+each
+$U_\alpha$ which does not contain any point in
+$\{p_\nu\}$ we take $f_\alpha=1$ while
+$f_\alpha= z_\nu^{k_\nu}$ when
+$U_\alpha=\Delta_\nu$.
+Then we can write 
+\[
+\phi|U_\alpha= f_\alpha\cdot \psi_\alpha
+\quad\colon\,\psi_\alpha\in C^\infty(U_\alpha)
+\tag{i}
+\] 
+Since $\phi$ is zero-free outside
+$\{p_\nu\}$ we see that
+every $\psi$-function is zero-free. Since  every chart
+$U_\alpha$ is simply connected there exist
+$\{\rho_\alpha\in C^\infty(U_\alpha)\}$ such that
+\[
+ \psi_\alpha= e^{\rho_\alpha}\tag{ii}
+\]
+In each non-empty intersection $U_\alpha\cap U_\beta$  
+it follows that
+\[
+e^{\rho_\alpha-\rho_\beta}=\frac{f_\beta}{f_\alpha}\tag{iii}
+\]
+Here 
+each quotient
+$\frac{f_\beta}{f_\alpha}\in \mathcal O^*(U_\alpha\cap U_\beta)$
+and 
+(iii) entails that
+the restricted differences
+\[
+\rho_\alpha-\rho_\beta|U_\alpha\cap U_\beta)\in 
+\mathcal O(U_\alpha\cap U_\beta)
+\]
+So with $g_{\alpha\beta}=\rho_\alpha-\rho_\beta|U_\alpha\cap U_\beta)$
+we get a Cech-cocycle in $H^1(\mathfrak{U},\mathcal O)$.
+The Behnke-Stein theorem entails that it is a $\delta$-coboundary. Hence
+there exist $\{g_\alpha\in \mathcal O(U_\alpha)\}$ such that
+\[
+\rho_\alpha-\rho_\beta|U_\alpha\cap U_\beta)=g_\alpha-g_\beta\tag{iv}
+\]
+Taking exponentials in (iv) and using (iii) it follows that
+\[
+e^{g_\alpha}\cdot f_\alpha=
+e^{g_\beta}\cdot f_\beta\tag{v}
+\] 
+hold in $U_\alpha\cap U_\beta$.
+This gives
+a globally defined meromorphic
+function
+$\psi $ such that
+\[ 
+\psi|U_\alpha=e^{g_\alpha}\cdot f_\alpha\tag{vi}
+\]
+Finally,  the construction of the $f$-functions  implies  that 
+the principal divisor $D(\psi)$ is equal to the given divisor $D$
+which finishes the proof of Weierstrass' theorem.
+\bigskip
+
+
+\noindent
+{\bf{4.4 The construction of a non-vanishing holomorphic form.}}
+By ¤ xx there exists a non-zero global section $\omega$ in $\Omega(X)$.
+If $(\Delta,z)$ is a chart we have
+\[
+\omega|\Delta=g(z)\cdot dz
+\]
+where $g\in\mathcal O(\Delta)$ is non-constant and hence has
+a discrete set of zeros.
+The locally defined divsors of these $g$-functions
+match each other and yield a globally defined
+divisor
+$D=\{(p_\nu;k_\nu)\}$ in $X$.
+Notice that
+$D$ is positive, i.e.
+ the integers $k_\nu>0$.
+Weierstrass's theoren gives
+$\psi\in\mathcal O(X)$ with $D(\psi)=D$.
+Then it is clear that
+\[ 
+\omega^*=\psi^{-1}\cdot \omega
+\]
+yields a holomorphic 1-form whose associated $g$-functions in local charts
+are zero-free.
+
+\bigskip
+
+
+\centerline{\bf{4.5 The Mittag-Leffler theorem.}}
+\bigskip
+
+
+\noindent
+Announce and Prove !
+ 
+\newpage
+
+
+
+
+\centerline{\bf{¤ 5. The uniformisation  theorem}}
+
+\bigskip
+
+
+\noindent
+Consider a  non-compact Riemann surface
+$X$ where  every holomorphic 1-form is $\partial$-exact.
+By ¤ xx there exists $\omega\in \Omega(X)$ which is everywhere 
+non-zero.
+So if $Y$ is an open set in $X$
+and $\mu\in\Omega(Y)$
+ there exists $g\in\mathcal O(Y)$ such that
+ \[ 
+ \mu= g\cdot \omega_Y\tag{i}
+\] 
+where $\omega_Y$ is the restriction of $\omega$ to $Y$.
+We use this to prove
+
+\medskip
+
+\noindent
+{\bf{5.1 Proposition.}} \emph{If 
+$Y$ is  an open Runge set in $X$ one has}
+\[
+\Omega(Y)=\partial(\mathcal O(Y))\tag{5.1.1}
+\]
+
+\noindent
+\emph{Proof.}
+Let  $\mu$ be as in (i).
+Consider a point $y_0\in Y$ and a closed curve
+$\gamma$ in $Y$ which has $y_0$ as initial 
+and terminal point.
+Since $Y$ is Runge, Theorem 0.2.2  gives  a sequence
+$\{g_n\}$ in $\mathcal O(X)$ and 
+the maximum norms $|g_n-g|_\gamma\to 0$.
+It follows that
+\[
+\int_\gamma\, \mu=\lim_{n\to\infty}\, \int_\gamma\, g_n\cdot \omega
+\]
+Here $\gamma$ is a closed curve in $X$ and since
+each $g_n\cdot \omega$ belong to $\Omega(X)$ the 
+hypothesis on $X$ implies
+that the integrals in
+the right hand side above are all zero. Hence
+the line integrals of $\mu$ are zero for all closed curves
+at $y_0$ and then  ¤ xx shows  that it is $\partial$-exact in $Y$
+which finishes the proof.
+
+\medskip
+
+\noindent
+{\bf{5.2 Semi-local conformal mappings.}}
+Let $Y$ be a relatively compact open subset of $X$ which is 
+Runge and Dirichlet regular.
+Let $y_0\in Y$ and by
+¤¤ there exists
+$g\in\mathcal O(X)$ with  a simple zero at $y_0$ and  zero-free
+in $X\setminus\{y_0\}$.
+Now $\mathfrak{Re}(g)$ restricts to a continuous function
+on $\partial Y$ and we find a harmonic function
+$u$ in $Y$ whose boundary value function is
+$\log |g|$.
+The equality (5.1.1) and the remark in ¤ xx  entail that
+$u$ has a harmonic conjugate $v$ in $Y$
+which gives $u+iv\in\mathcal O(Y)$. Set
+\[
+f=g\cdot e^{-(u+iv)}
+\]
+On $\partial Y$ it follows that
+\[ 
+|f|=|g|\cdot e^{-\log|g|}=1
+\]
+At the same time $f$ has a simple zero at $y_0$ and is zero-free in
+$Y\setminus \{y_0\}$.
+The result in ¤ xx shows  that
+$f\colon Y\to D$ is biholomorphic.
+Around $y_0$ we choose a small chart
+$(\Delta,z)$ and get the non-zero complex derivative 
+$f'(0)$
+of $f$ at $z=0$.
+With
+\[
+f^*=\frac{1}{f'(0)}\cdot f\tag{4.2.1}
+\] 
+we have a 
+biholomorphic mapping from $Y$ into the open disc of radius
+$|f'(0)|$
+and  the $f^*$-derivative at $z=0$ is one.
+
+
+
+
+\medskip
+
+\noindent
+{\bf{5.3 A global construction.}}
+By ¤ xx we can exhaust $X$ with an increasing sequence of
+relatively compact open subsets
+$\{Y_n\}$ which are Runge and Dirichlet regular.
+Fix a point $p\in Y_0$
+and a local chart $(\Delta,z)$ as above.
+For each $n\geq 0$  (5.2.1) gives some $r_n>0$ and a biholomorphic map
+\[
+f_n\colon Y_n\to D(r_n)
+\]
+where $f_n(p)=0$ and $f'_n(0)=1$.
+The inverse mapping $f_n^{-1}$
+is holomorphic in the open disc $D(r_n)$
+and we notice that the complex derivative
+\[
+(f_n^{-1})'(0)=1\tag{i}
+\]
+Next, to each $n\geq 0$ we have the  composed function
+\[
+h_n= f_{n+1}\circ f_n^{-1}
+\]
+which maps $D(r_n)$ into $D(r_{n+1})$
+where $h_n(0)=0$ and (i) gives
+$h'_n(0)=1$. Schwarz'  inequality implies that 
+\[
+r_n\leq r_{n+1}
+\]
+Set
+\[ 
+R= \lim_{n\to\infty}\, r_n
+\]
+We shall construct a biholomorphic map
+$f^*\colon X\to D(R)$  where the case $R=+\infty$ means that
+$D(+\infty)={\bf{C}}$.
+To find $f^*$ we shall pass to certain subsequences of 
+$\{f_n\}$.
+Consider first the composed functions
+\[
+g_n= \frac{1}{r_0}\cdot f_n\circ f_0^{-1}(r_0z)
+\]
+which by the choice of $r_0$ and the inclusion $Y_0\subset Y_n$ are
+holomorphic in the open unit disc $D$ of the complex $z$-plane.
+It is clear that
+we have
+\[
+g_n(0)=0\quad\colon g'_n(0)=1
+\]
+Moreover, $g_n$ is a biholomorphic map from
+$D$ onto the
+open set $r_0^{-1}\cdot f_n(Y_0)$.
+By the  result from ¤ xx  $\{g_n\}$ is a normal family in the sense lof
+Montel. Hence we can extract a subsequence
+$\{g_{n_k}\}$ which converges uniformly on compact subsets
+of $D$.
+\medskip
+
+\noindent
+{\bf{5.4 Exercise.}}
+Verify that
+the convergence of $\{g_{n_k}\}$  above entails that
+$\{f_{n_k}\}$  converges uniformly over compact subsets of $Y_0$
+to a limit function $f^*_0\in\mathcal O(Y)$.
+Moreover, since
+each restriction $f_{n_k}|Y_0$
+is biholomorphic and the derivatives
+$f'_{n_k}$ at $p$ all are equal to one, 
+it follows from
+the result in ¤ xx that
+$f^*_0\colon Y_0\to f_0^*(Y_0)$ is biholomorphic.
+\bigskip
+
+\noindent
+Next, starting with the sequence 
+\[
+g_k= r_1^{-1}\cdot f_{n_k}\circ f_1^{-1}
+\]
+we repeat the arguments above and find
+a subsequence $\{\phi_{k_j}\}$ which conveges uniformly  in the unit disc
+and
+returning  to the $f$-sequence,  its corresponding  subsequence
+converges uniformly on $Y_1$ to a limit function
+$f^*_1$ which yields a biholomorphic map from
+$Y_1$ onto $f^*_1(Y_1)$.
+We  continue  
+by an induction over $n$ and 
+obtain  biholomorphic maps $\{f^*_n\colon Y_n\to f^*_n(Y_n)\}$ 
+and after the passage to a  "diagonal subsequence" we find
+a subsequen ce $\{f_{n_k}\}$ which converges uniformly on compact subsets of
+$x$ to a limit function $f^*$ which gives the requested biholomorphic map
+from $X$ onto $D(R)$.
+
+ 
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sheaves and currents will be used in the subsequent proofs.
+The crucial result in this chapter are  the following vanishing theorems.
+
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{For every non-compact Remann surface one
+has
+ $H^1(X,\mathcal O)=0$.}
+\bigskip
+
+\noindent
+Next, let $\mathcal O^*$ be the multiplicative sheaf whose sections
+are zero-free holomorphic functions.
+
+\medskip
+
+
+\noindent
+{\bf{0.2 Theorem.}}
+\emph{The cohomology group $H^1(X,\mathcal O^*)=0$.}
+\medskip
+
+\noindent
+A locally free sheaf of $\mathcal O$-modules of rank one is called
+a holomorphic line bundle
+As explained in ¤ xx the family of holomorphic line bundles
+correspond to elements in
+$H^1(X,\mathcal O^*)=0$. So Theorem 0.2 means that
+every holomorphic line bundle $\mathcal L$
+is holomorphically trivial
+and as a sheaf  therefore isomorphic to
+$\mathcal O$ which by Theorem 0.1 entails that
+\[
+H^1(X;\mathcal L)=0\tag{*}
+\]
+
+
+\noindent
+However, to  prove Theorem 0.2 we shall  need 
+(*) and we shall later on explain how
+(*) can be established in a similar way as in the special case
+$\mathcal L=\mathcal O$.
+\medskip
+
+\noindent
+{\bf{0.3 Some  cohomology groups.}}
+The sheaf $\Omega$ is a locally free sheaf of $\mathcal O$-modules of rank one
+and there is  the exact sequence of sheaves:
+\[ 
+0\to {\bf{C}}_X\to \mathcal O\overset\partial\to \Omega\to 0
+\]
+Passing the the long exact sequence of cohomology
+the vanishing in
+(*)  entails that
+\[ 
+H^2(X,{\bf{C}}_X)=0
+\]
+From this
+it follows trivially - see ¤ xx - that
+if the complex field ${\bf{C}}$ is replaced by the field of rational numbers
+then
+\[
+H^2(X,Q_X)=0\tag{i}
+\]
+Next,   the exponential map
+which sends a holomorphic function $f$ to
+the zero-free function $e^{2\pi i f}$
+gives an exact sequence of sheaves:
+\[
+0\to {\bf{Z}}_X\to \mathcal O\overset{\text{exp}}\to \mathcal O^*\to 0
+\]
+Passing to the long exact sequence of cohomology  we get
+\[
+H^1(X,\mathcal O^*)\simeq
+H^2(X,{\bf{Z}}_X
+\]
+So Theorem 0.2 anounts to show that
+the last cohomology group is zero.
+We have already  (i) so 
+Theroem 0.2 is
+"almost" derived from 
+(*).
+However, extra arguments will be needed to 
+get Theorem 0.2 which we begin to explain.
+Let  $\mathcal L$
+ibea holomorphic line bundle.
+By definton it is trivial, i.e. isomorphic to $\mathcal O$ if and only if it
+has a global generating section.
+Suppose to begin with that one has found
+a non-constant global section $\xi\in \mathcal L$.
+The zeros of $\xi$ is some (possibly empty) discrete set in $xX$.
+Let $\{q_\nu\}$ be these zeros and $\xi$ vanishes of some
+order $k_\nu$ at $q_\nu$.
+Suppose we have
+found
+a meromorphic function $g$ in $X$
+with poles of order $k_\nu$ at every
+ $q_\nu$ while $g$ is a zero-free holomorphic function outside this
+ discrete set.
+ Then $g\cdot \xi\in\mathcal L(X)$ is 
+ a global section which gives the requested
+trivialisation so that
+ $\mathcal L\simeq \mathcal O$.
+ So in order to get Theorem 0.2 we need to 
+ prove the existence of globally defined meromorphic functions
+ with prescribed
+ poles on  discrete subsets  of  $X$.
+The whole discussion has shown that Theorem 0.2 follows if we in addition to
+Theorem 01 and its extension in  (*) have established the following:
+\medskip
+
+\noindent
+{\bf{0.4 Theorem.}}
+\emph{Every divisor $D$ on $X$ is principal, i.e.
+equal to $D(f)$ for some
+$f\in\mathfrak {M}(X)$.}
+
+ 
+ 
+\bigskip
+
+
+\noindent
+{\bf{0.5 Runge's theorem.}}
+Recall from ¤ xx that an open subset $Y$ in $X$ is a Runge domain if
+every connectd component of the closed complemnet $X\setminus y$
+is non-compact. The following result will
+be used to prove Theorem 0.1 and  has also independent interest:
+
+\medskip
+
+\noindent
+{\bf{0.6 Theorem.}}
+\emph{Let $Y\subset X$ be a Runge domain.
+Then
+the restriction map $\mathcal O(X)\to \mathcal O(Y)$ has a dense image.}
+\bigskip
+
+\noindent
+The results above constitute the
+major facts in this section.
+To prove Theorem 0.1  we first establish  seeemingly weaker results
+and after 
+finish the proofs of the the other  results.
+\medskip
+
+\centerline{\bf{¤ 1. A finiteness result.}}
+
+\medskip
+
+\noindent
+Consider
+an connected open subset $Y$ 
+which is relatively compact in
+$X$. The boundary
+$\partial Y$
+is  compact but in general it need not be connected.
+It can for example consist of a finite number of pairwise disjoint
+and closed Jordan curves
+together with some Jordan arcs and
+some isolated points, like an annulus where
+a finite set of points in the open annulus have been
+removed.
+If $\partial Y$
+is "nice", for example piecewise analytic
+then
+tthe cohomology group
+$H^1(Y,{\bf{C}})$ is a finite dimensional complex vector space.
+Recall also from ¤ xx that one has
+the isomorphism
+\[
+\frac{\mathcal E^1(Y)}{d(\mathcal E(Y))} \simeq
+H^1(Y,{\bf{C}})
+\]
+and
+as explained in ¤ xx there exists   an injective map
+\[
+\frac{\mathcal E^{0,1}Y)}{\bar\partial(\mathcal E(Y))}\to
+H^1(Y,{\bf{C}})
+\]
+Moreover, Dolbeault's Theorem   identifies
+right hand side with
+$H^1(Y,\mathcal O)$ and hence
+this cohomology group is finite dimensional
+for every $Y$ as above with a nice compact boundary.
+The finite-dimensionality
+enable us to construct non-constant meromorphic functions on
+$Y$.
+Namely, if $p\in Y$ is fixed we
+take a positive integer $N$ and
+the sheaf $\mathcal O_D$ where $D$ is the divisor
+$N\cdot p$ which means that one allows a pole of order
+$\leq N$ at $p$.
+Exactly as in the compact case from ¤ xx one has an exact sequence
+\[ 
+0\to \mathcal O(Y)\to \mathcal O_D(Y)
+\to {\bf{C}}^N\to H^1(Y,\mathcal O)\to H^1(Y,\mathcal O_D)\to
+0
+\]
+If $N$ is strictly larger than
+the dimension of
+$H^1(Y,\mathcal O)$ we  get a non-zero
+section of  $\mathcal O_D$, i.e. a meromorphic
+function
+in $Y$
+with a pole of order
+$\leq N$ at $p$ and otherwise  holomorphic.
+
+
+\bigskip
+
+
+\centerline{\bf{ ¤ 2. A vanishing lemma.}}
+\medskip
+
+\noindent
+Consider a pair  $Y\subset Y_1$ 
+where $Y$ is relatively compact in $Y_1$.
+As explained in ¤ xx one has  the restriction map
+
+\[
+\mathcal L\colon H^1(Y_1,\mathcal O)\to 
+H^1(Y,\mathcal O)\tag{2.1}
+\]
+\medskip
+
+\noindent
+{\bf{2.2 Proposition.}}
+\emph{If $H^1(Y;\mathcal O)$ is finite dimensional
+the $\mathcal L$-image in (2.1) is zero}
+\medskip
+
+\noindent
+\emph{Proof.}
+Choose $\xi_1,\ldots,\xi_K$ in  
+$H^1(Y_1,\mathcal O)$ such that
+$\{\mathcal L(\xi_k)\}$
+gives a basis for the  $\mathcal L$-image
+in the finite dimensional vector space
+$H^1(Y;\mathcal O)$.
+Next, we can find
+a 
+relatively compact set
+$Y_2$ in $X$ where $Y_1<< Y_2$
+and $\partial Y_2$ is "nice" so that
+$H^1(Y_2,\mathcal O)$ is finite dimensional.
+Fix a point $p\in Y_2\setminus Y_1$ and from ¤ 1 we 
+find
+a meromorphic function
+$f$
+in $Y_2$ 
+which restricts to a holomorphic funtion in
+$Y_1$
+which is not constant  on the connected components of this set.
+Now we get the vectors
+$\{f\cdot \xi_k\}$  in $H^1(Y_1,\mathcal O)$
+and take  their $\mathcal L$-images.
+Since we have chosen a basis above 
+there is an $N\times n$-matrix $B$ with complex
+elements such that
+
+\[ 
+\mathcal L(f\cdot \xi_k)=\sum_{j=1}^{j=N}\,
+b_{kj}\cdot \mathcal L(\xi_j)\tag{i}
+\]
+Let us now consider
+the holomorphic function in $Y_1$ defined by 
+\[ 
+F=\det(f\cdot E_N-B)
+\]
+Then (i) and Cramer's rule entail that
+\[
+\mathcal L(F\cdot \xi_k)=0\quad\colon\, 1\leq k\leq N\tag{ii}
+\] 
+Above $F$ is meromorphic in $Y_2$ with no poles
+in the relatively compact subset $Y_1$.
+We can therefore cover $Y_1$ with a finite number of charts
+$\mathfrak{U}= \{U_\alpha\}$
+such that
+$F$ has no zeros in
+non-empty intersections $U_\alpha\cap U_\beta$ when
+$\alpha\neq \beta$.
+Let us then take some $\eta\in H^1(Y_1,\mathcal O)$ which by 
+Lerays theorem is represented by a cocycle
+$\{\phi_{\alpha,\beta}\}$
+in $Z^1(\mathfrak{U},\mathcal O)$.
+Since $F\neq 0$ on each non-empty intersection we get  the cocycle
+$\{\psi_{\alpha,\beta}= F^{-1}\cdot \phi_{\alpha,\beta}\}$
+which represents a vector in $H^1(Y_1,\mathcal O)$ denoted by
+$\eta^*$.
+From  these  constructions we get
+\[ 
+\mathcal L(\eta)=\mathcal L(F\cdot \eta^*)
+\] 
+By (ii) the last term is zero and since
+$\eta\in H^1(Y_1,\mathcal O)$ was arbitrary Proposition 2.2 is proved.
+
+\medskip
+
+\noindent
+{\bf{2.3 A $\bar\partial$-equation.}}
+Consider a pair $Y<< Y_1$ as above.
+Dolbeault's theorem and Proposition 2.2  imply
+that every  $\phi\in \mathcal E^{0,1}(Y_1)$
+restricts to a $\bar\partial$-exact form on $Y$, i.e.
+there exsits $g\in \mathcal E(Y)$ such that
+\[ 
+\bar\partial g=\phi|Y\tag{2.3.1}
+\]
+\medskip
+
+\noindent
+Now we can establish  a density result:
+
+\medskip
+
+\noindent
+{\bf{2.4 Proposition.}}
+\emph{Let $Y$ be 
+a relatively compact
+Runge domain in $X$. Then, for every $Y_1$
+sich that $Y< Y_1$ and $H^1(Y_1,\mathcal O)$ is finite dimensional
+it follows that  the restriction map from 
+$\mathcal O(Y_1)$ to $\mathcal O(Y)$ has a dense image.}
+\bigskip
+
+
+\noindent
+\emph{Proof.}
+By the Hahn-Banach Theorem it suffices to show that 
+for every (1,1)-current $\gamma$ with  some compact support $K$  in $Y$
+one has the implication
+\[ 
+\gamma(f|Y)=0\quad\forall \,\, f\in \mathcal O(Y_1)\implies
+\gamma|\,\mathcal O(Y)=0\tag{i}
+\]
+Consider a current $\gamma$ as above which vanishes on
+each restricition of $f\in\mathcal O(Y_1)$
+to $Y$ and let  $k$ be its compact support in $Y$.
+Next,  choose an open set $Y_2$
+where $Y_1<< Y_2$ and (2.3.1)
+holds for this pair. So when
+$\phi\in \mathcal E^{0,1}(X)$
+there exists
+$g\in \mathcal E(Y_1)$ such that
+\[
+\bar\partial g=\phi|Y_1
+\]
+Above $g$ is unique up to a
+function in $\mathcal O(Y_1)$ and since
+$\gamma$  vanishes on
+$\mathcal O(Y_1)|Y$ 
+the evaluation $\gamma(g)$ only depends upon $\phi$.
+Hence there exists a current $S$ on $X$
+defined by
+the process above, i.e.
+\[
+S(\phi)= \gamma(g|Y)\quad\colon\,\bar\partial g=\phi|Y_1
+\]
+If $h\in C_0^\infty(X\setminus K)$
+we get the $(0,1)$-form
+$\bar\partial(h)$ and by the constructions above
+\[ 
+S(\bar\partial h)= \gamma(h|Y)=0
+\] 
+where the last equality follows since
+$\gamma$Êis supported by $K$.
+This means that the current $S$ is $\bar\partial$-closed in
+$X\setminus K$ and since $\bar\partial$ is elliptic
+the restricttion of $S$
+ to $X\setminus K$ is expressed by a holomorphic 1-form
+$\sigma\in \Omega(X\setminus K)$.
+So far we have not used the assumption that $Y$ is Runge.
+To profit upon this we consider
+the compact hull
+$\mathfrak{h}(K)$ from ¤ XX.
+If
+$y\in Y\setminus \mathfrak{H}(K)$  
+the connected component $V$
+in
+$X\setminus  K$ which contains $y$ is non-compact.
+Since the current $S$ has  compact support it follows that
+\[ 
+V\setminus \bigl(\text{Supp}(S)\cup K\bigr)\neq \emptyset\tag{ii}
+\]
+Now $\sigma$ respresents $S$ outside $K$
+and  therefore it must vanishes in
+the open set (ii).
+By analyticity $\sigma$ vanishes in the whole connected
+set $V$ and hence in a neighborhood of $y$.
+Since $y$ was arbitrary we conclude that 
+$\sigma$ vanishes identically in
+$Y\setminus \mathfrak{h}(K)$.
+Let us now consider some
+$f\in \mathcal O(Y)$ and 
+take
+$g\in C_0^\infty(Y)$ where
+$g=f$  in an open neighborhood of
+$\mathfrak{h}(K)$.
+It follows that
+\[ 
+S(\bar\partial(g))=\gamma(g|Y)= \gamma(f)
+\] 
+where the last equality holds since
+$K$ is the support of $\gamma$.
+Finally, since
+$f$ is holomorphic we have $\bar\partial g=0$ in a neighborhood of
+$\mathfrak{H}(k)$
+and since $\sigma$ is supported by $\mathfrak{h}(K)$ it follows that
+$S(\bar\partial(g))=0$. Hence 
+$\gamma(f)=0$ for every $f\in \mathcal O(Y)$
+which proves the requested implication (i)
+above and hence the density in
+Proposition 2.4.
+
+
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+ The
+ proof above
+ is attributed to Malgrange and  we  followed
+ the presentation in  [Forster: page xx-xx].
+ \bigskip
+ 
+\noindent
+{\bf{2.5 The case of locally free $\mathcal O$-modules.}}
+If $\mathcal L$ is 
+a locally free sheaf of $\mathcal O$-modules with rank one
+similar results as above hold. Theproofs are more or less verbatim.
+More precisely we first have some locally finite covering
+$\mathfrak{U}=\{U_\alpha\}$ by simply connected charts
+and $\mathcal L|U_\alpha$ are trvial for every $\alpha$, i.e.
+there exists a section $\rho_\alpha\in\mathcal L(U_\alpha)$
+such that the restricted sheaf
+$\mathcal L|U_\alpha$ is the free
+$\mathcal O_{U_\alpha}$-module 
+generated by $\rho_\alpha$.
+Shrinking $\mathfrak{U}$ if necessary we may assume that
+the transistion functions which give
+\[
+\rho_\beta= \phi_{\beta\alpha}\cdot \rho_\alpha
+\]
+ in each non-empty intersection $U_\beta\cap U_\alpha$ yiled bounded
+ holomrphic functions, i.e. the maximum norms
+ \[
+ || \phi_{\beta\alpha}||_{U_\beta\cap U_\alpha}<\infty
+\]
+When
+this holds it is meaningful to speak about convergence for $\mathcal L$-valued sections.
+More precisely, let 
+$Y<< Y_1$ and $\{\rho_\nu\in\mathcal (Y_1)\}$
+be given. If $\rho_*\in \mathcal L(Y)$ and $K$ is a compact subset
+of
+$Y$ we leave it to the reader to
+clarify the condition that $\{\rho_\nu|K$ converges in a uniform way to
+$\rho|K$, i.e. u
+Thus, in Propostion 22and 2.4 we can replace $\mathcal O$ by
+any $\mathcal L$. Concerning (2,3,1) we ntocie that
+there exists the sheaf
+\[
+ \mathcal E_\mathcal L= 
+ \mathcal O_\mathcal L\otimes_\mathcal O\,\mathcal E
+\]
+and
+a well  defined map
+\[
+\bar\partial\colon\mathcal E_\mathcal L\to \mathcal E^{(0,1)}_\mathcal L
+\]
+So now (2,3,1) means that if $\phi\in \mathcal E^{(0,1)}_\mathcal L(Y_1)$
+then there exists
+$g\in \mathcal E_\mathcal L(Y)$ such that
+\[
+\bar\partial(g)=\phi|Y
+\]
+
+
+
+
+
+\centerline{\bf{2.5 Proof of Theorem 0.1}}
+\medskip
+
+\noindent
+By  ¤ XX we  exhaust $X$ by an increasing sequence of Runge domains
+$\{Y_n\}$
+where $Y_n<<Y_{n+1}$ and $\{H^1(Y_n,\mathcal O)\}$ are finite dimensional.
+Consider
+some $\phi\in \mathcal E^{0,1}(X)$. Now (2.3.1) applies to each
+piar $Y_n<< Y_{n+1}$ and since $\phi$ restricts to 
+$\mathcal E^{(0,1)}(Y_{n+1}$
+there exists
+$f_n\in \mathcal E(Y_n)$
+such that 
+\[
+ \bar\partial f_n=\phi|Y_n
+\]
+It follows that
+the restriction to $Y_n$ of $f_{n+1}-f_n$ is holomorphic.
+Now $Y_{n-1}<< Y_n$ and
+Proposition 2.4 entails that
+this restricted holomorphic function can be uniformly approximated on
+$Y_{n-1}$ by functions from $\mathcal O(Y_{n+1}$.
+In particular we find
+$g_{n+1}\in \mathcal O(Y_{n+1})$
+such that the maximum norm
+\[
+||f_{n+1}+g_{n+1}-f_n||_{Y_{n-1}}<2^{-n}
+\]
+With $f^*_{n+1}= f_{n+1}+g_{n+1}$
+we still have
+\[
+\bar\partial f^*_{n+1}=\phi|Y_{n+1}
+\]
+Pwerforibng these modfifications inductively we get
+anew sequence $\{f^*_n\}$ where  (xx) hold for every $n$
+while
+\[
+||f^*_{n+1}-f^*_n||_{Y_{n-1}}<2^{-n}
+\quad\colon \, n=1,2,\ldots
+\]
+It follows that $\{f_n^*\}$ converge uniformly on $X$ to a continuous function
+$F$.
+This entials that
+the distributuons
+$\\bar\partial f_n^*\}$ converge to the distribution derivative
+$\bar\partial (F)$ and by (xx) it is clear that
+the following hold on the whole of $X$:
+\[ 
+\bar\partial(F)=\phi
+\]
+Now $\phi$ is a smooth form and the elliptic property of
+$\bar\partial$ implies that
+$F$ is a $C^\infty$-function. Hence the mapping
+\[ 
+\bar\partial\colon \mathcal E(X)\to \mathcal E^{(0,1)}(X)
+\]
+is surjective.
+Dolbeaualt's theorem gives  $H^1(X,\mathcal O)=0$
+and Theorem 0.1 is proved.
+\medskip
+
+\noindent
+{\bf{2.7 Exercise.}}
+Use the remarks from ¤ 25.5
+and repeat the methods above to show that
+\[
+H^1(X,\mathcal L)=0
+\] 
+for every locally free sheaf of $\mathcal O$-modules with rank one.
+
+
+
+\newpage
+
+
+
+
+\newpage
+
+
+
+
+
+Weierstrass product formula asserts that
+ every divisor on $X$ is principal-
+ 
+
+By a differentalble 1-chain in $X$ we mean a map 
+$t\to c(t)$ from the unit interval $[0,1]$ with values in $X$ which
+has a continuous derivative. The 1-chain is denoted by
+${\bf{c}}$. 
+The end points $q=c(0)$ and $p=c(1)$ can be either equal or
+different and it is not assumed that
+the map $t\to c(t)$ is 1-1, i.e. the  image curve
+can   have several "self-intersections".
+If $\omega$ belongs to $\mathcal E^1(X)$, i.e. a smoooth 
+differential 1-form, then  we take its pull-back to $[0,1]$ and
+obtain the integral
+\[ 
+\int_{{\bf{c}}}\, \omega\tag{1}
+\]
+Notice that
+(1) yields a 1- current of since
+$\omega\mapsto \int_{{\bf{c}}}\, \omega$ is a continuous linear form
+and the current is supported by the compact image under the $c$-map.
+We can construct other compactly supported 2-currents
+as follows:
+Let $p_1,\ldots,p_k$ be a finite set of points in $X$
+and $U$ some relalitively  compact open  subset which contains
+this $k$-tuple.
+Now we consider a global section $\psi$of the sheaf
+$\mathfrak {M}\otimes_\mathcal O\, \mathcal E$
+with the following properties:
+First $\psi$ is a zero-free $C^\infty$-function in
+$X\setminus \{p_1,\ldots,p_k\}$ and it is identically one
+in $X\setminus U_*$ where $\overline{U_*}$ is a compact subset of $U$.
+Finally, if $(\Delta,z)$ is a small chart centered at some $p_\nu$ then
+\[
+ \psi|\Delta= z^{e_\nu}\cdot \psi_\nu(z)
+\]
+where $e_\nu$ is
+some integer and $\psi_\nu$ a zero-free $C^\infty$-function in $\Delta$.
+Here $e_\nu$ can be positive or negative.
+Now there exists the current
+\[ 
+\gamma= \frac{\partial \psi}{\psi}
+\]
+Since $\psi=1$ in $X\setminus U$
+the support of this current is contained in the compact set
+$\overline{U_*}$. By defintion
+\[ 
+\gamma(\omega)=
+ \omega\wedge \frac{\partial \psi}{\psi}
+\] 
+for every smooth 1-foirm $\omega$.
+In the case when 
+there exists $g\in\mathcal E(U)$ such that 
+$\omega=d g$ holds in $U$ we have:
+\[
+\gamma(\omega)=\int \,dg\wedge \frac{\partial \psi}{\psi}=
+\int \,\bar\partial(g) \wedge \frac{\partial \psi}{\psi}
+\]
+where the last equality follows since
+$dg=\partial g+\bar\partial g$ and
+the exterior product
+$\partial(g) \wedge \frac{\partial \psi}{\psi}=0$.
+
+\medskip
+
+\noindent
+{\bf{0.6.7 Exercise.}} Apply Stokes Theorem and show that (x) is equal to
+\[ 
+-2\pi i\cdot \sum\, e_\nu\cdot g(p_\nu)
+\]
+So in the special case when
+the 1-current $\gamma$ satisfies
+\[
+\int_{\bf{c}}\, dg=
+\gamma(dg)\quad\colon g\in \mathcal E(X)\tag{0.6.7}
+\]
+it follows that
+$\{p_\nu\}$ is reduced to the pair $q,p$ where
+$e_q=1$ and $e_p=-1$.
+In ¤ xx w shall prove that
+when ${\bf{C}}$ is given as above then
+there existd
+a $\psi$-.function such that 
+(0.6.7) holds and this turns out to be the key point in  the
+proof of
+Weierstrass' result in (0.3).
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{I. Non-compact Riemann surfaces}}
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+A Riemann surface is a 1-dimensional and connected complex manifold $X$.
+Here we  shall consider open  surfaces, i.e.  the topological space $X$ is non-compact.
+The major result about open Riemann surfaces
+is a vanishing theorem due to Behnke and Stein 
+from their article in the article  \emph{Entwicklungen analytischer Funktionen
+auf Riemannschen FlŠchen} [Math. Ann. 120 (1948)].
+It asserts that
+if $\mathcal O_X$ is the sheaf of holomorphic 
+functions on an open Riemann surface, then
+the cohomology group
+\[
+H^1(X,\mathcal O_X)=0\tag{*}
+\]
+Next, let ${\bf{C}}_X$ be the sheaf
+whose sections are locally constant complex-valued functions
+and consider
+the cohomology group
+$H^1(X,{\bf{C}}_X)$.
+If it vanishes we shall prove
+that the open Riemann surface is biholomorphic with
+the open unit disc $D$ or the complex plane
+${\bf{C}}$.
+One refers to this fact  as the \emph{Uniformisation Theorem} for open
+Riemann surfaces.
+The proof is given 
+in ¤ 5.
+\medskip
+
+\noindent
+A crucial result which is used to prove (*) is the Pompieu theorem which
+asserts thst the $\bar\partial$-operator is sirjhective on planar domains, i.e.
+if $\Omega$is an open subset of
+${\bf{C}}$ and $\phi$ is a complex-valued $C^\infty$-function on $\Omega$
+then
+there exists $g\in C^\infty(\Omega)$ such that
+\[
+\bar\partial g/\partial \bar z=\phi
+\]
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+The uniformisation theorem has
+several consequences.
+An example is 
+\emph{The Riemann-Schwarz inequality} when an open Riemann surface
+$X$ is equipped with a hyperbolic metric,
+This result goes
+as followss:
+Let $\sigma$
+be 
+a hyperbolic metric. This  means
+that
+$\sigma $ has  
+a negative curvature.
+An equivaent condition is that in each open chart
+$(U,z)$ of $X$
+where $U$ is identified with an open subset of
+the complex $z$-plane, there exists a subharmnic function $u(z)$ such that
+the $\sigma$-distance  in $U$ is defined by
+\[
+e^{u(z)}\cdot |dz|
+\]
+where
+$|dz|$ the ordinary euclidan length.
+Assume that $\sigma$ is hyperbolic and consider a
+pair of points $p,q$ in $X$. Denote by 
+$\mathcal C(p,q)$ the family of
+curves in $X$ with end-points at $p$ and $q$.
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{For every pair
+$\gamma_1,\gamma_2$ in  $\mathcal C(p,q)$
+and
+each point $\xi\in\gamma_1$,
+there exist  a pair of curves $\alpha,\beta$, where
+$\alpha\in\mathcal C(p,q)$ while $\beta$ has end-points
+at $\xi$ and some point $\eta\in \gamma_2$ such that}
+\[
+\ell(\alpha)^2+\ell(\beta)^2\leq
+\frac{1}{2}\bigr (\ell(\gamma_1)^2+\ell(\gamma_2)^2\,\bigl )\tag{*}
+\]
+\emph{where $\ell(\gamma)$ denotes the $\sigma$-length of a curve in $X$.
+Moreover, the inequality (*) is strict with the exception for
+special rhombic configurations.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The theorem gives in particular  existence of unique geodesic  curves
+on $X$ which join a pair of points.
+The proof relies upon the
+uniformisation theorem 
+which
+reduces the 
+proof to show the following: 
+\medskip
+
+\noindent
+{\bf{0.2}} \emph{Let
+$D$ be the unit disc and $0<\theta<\pi/2$ and consider   the unique
+circle $C_\theta$ which
+contains
+$e^{i\theta}$
+and $e^{-i\theta}$ and intersects the unit circle at right angles at these points.
+Let $\alpha$ denote the circular subarc of $C_\theta$  contained in
+$D$.
+Then the following inequality holds for
+every subharmonic function $u$ in $D$:}
+\[
+\bigl(\int_{-1}^1\, e^{u(x)}\, dx\bigr)^2+
+\bigl(\int_\alpha\, e^{u(z)}\, |dz|\bigr)^2\leq
+\frac{1}{4}\cdot\bigl( \int_0^{2\pi}\, e^{u(e^{i\phi})}\,d\phi\bigr)^2
+\] 
+\bigskip
+
+\noindent
+We prove this result in ¤ xx and
+how one derives Theorem 0.1 from (0.2).
+
+
+\medskip
+
+\noindent
+{\bf{A comment}}.
+Basic facts about sheaves and  calculus on 2-dimensional manifolds
+will
+be used without hesitation.
+Let us  remark that the study of open Riemann surfaces
+gives
+an excellent illustration to  general theory
+related to analysis on manifolds.
+For example, sheaf theory has emerged from Weierstrass' constructions of
+analytic continuations where the "total sheaf space" $\widehat{O}$ in
+¤ x below is an instructive example of a sheaf.
+During our whole study
+the $\bar\partial$-operator plays a crucial role. On
+a Riemann surface it assigns to every
+complex valued $C^\infty$-function $f$ the
+differential form
+$\bar\partial(f)$ of bi-degree $(0,1)$.
+The Cauchy-Riemann equations
+show that
+$\bar\partial(f)=0$ if and only if $f$ is holomorphic. 
+The \emph{Pompieu Theorem} for planar domains
+is crucial. This classic result asserts that if 
+$\Omega$ is an open subset of
+${\bf{C}}$ and $f\in C^\infty(\Omega)$ then
+there exists
+$g\in C^\infty(\Omega)$  such that
+\[
+\frac{\partial g}{\partial\bar z}=f\tag{0.3.1}
+\]
+Passing to an open Riemann surface
+$X$ we shall prove that 
+a similar result holds, i.e. if
+$\phi\in \mathcal E^{0,1}(X)$ is a 
+smooth differential form of bi-degree $(0,1)$, then
+there exists
+$f\in C^\infty(X)$  such that
+\[
+\bar\partial(f)= \phi\tag{0.3.2}
+\]
+One can express this by saying that every smooth
+differential form of bi-degree $(0,1)$ is
+$\bar\partial$-exact on an open Riemann surface.
+A result due to Dolbeault
+implies that the solvability in (0.3.2) for every $\phi$
+is equivalent to
+the Behnke-Stein Theorem in (*) from the introduction.
+A notsble factis that
+the inhomogeneus equation (0.3.2) can be solved for
+non-smooth $\phi$-froms of bi-degree $(0,1)$.
+For example, given a smooth form
+$\phi$ as in (0.3.2)  we also take a 
+bounded Lebesgue measurable function $\rho$ on $X$
+and get the current $\rho\cdot \phi$
+of bi-degree $(0,19$ on $X$.
+Then it turnd out that there exists
+a continuous function $f$ on $X$ such that
+\[
+\bar\partial(f)= \rho\cdot \phi\tag{0.3.4}
+\]
+where the left hand side is
+the
+$(0,1)$-current founf via charts where
+distribution derivatives of $f$ appear.
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.4 The Dirichlet problem.}}
+A   result due to Rado asserts that
+every open Riemann surface has a countable topology.
+The proof relies upon
+a theorem due to PoincarŽ and Volterra from the appendix about topology,
+ together with
+solutions to Dirichlet problems.
+Here one profits upon Perron's solution 
+for planar domains which has the merit that it extends verbatim
+to open Riemann surfaces, using the observation
+that the complex analytic structure on a
+Riemann surface $X$ leads to an intrinsic  notion of
+subharmonic functions.
+From this we shall describe how to
+solve the Dirichlet problem
+exactly  as in the planar case.
+More precisely, let $\Omega$ be a relatively compact
+ open set in
+$X$.
+A point  $p\in\partial\Omega$Êis regular in the sense of Perron if
+there exists
+some open chart $D$ in $X$ which contains $p$
+and a continuous subharmonic function $u$ in $D$ 
+such that 
+\[
+u(x)<0\,\colon\, x\in U\cap D\quad\colon u(p)=0
+\]
+\medskip
+
+\noindent
+{\bf{0.4.1 Theorem.}}
+\emph{If $\Omega$ is a  relatively compact open set
+and each boundary point is Perron regular, then
+the Dirchlet problem has a solution for
+every
+$g\in C^0(\partial \Omega)$, i.e. there exists 
+a harmonic function $G$ in $\Omega$ with 
+continuous boundary values equal to $g$.}
+\medskip
+
+\noindent
+Let us  finish this introduction by
+with some  preliminary considerations
+which illustrate the general theory.
+\medskip
+
+\noindent
+{\bf{0.5. Additive
+representations
+of fundamental groups in the planar case.}}
+Each open and connected set $U$ in ${\bf{C}}$ yields
+an open  Riemann surface.
+A special case is to take $U={ \bf{C}}\setminus (a_1,\ldots,a_k)$ where
+$a_1,\ldots,a_k$ is a finite set of points which have been
+removed
+from the complex plane. Residue calculus
+can be used to describe some topological
+properties of $U$.
+For each $1\leq\nu\leq k$
+the zero-free holomorphic function
+$\phi_\nu(z)= z-a_\nu$ in $U$ has a
+logarithmic differential 
+\[
+\frac{\partial\phi_\nu}{\phi_\nu}= \frac{dz}{z-a_\nu}
+\]
+This  yields a holomorphic 1-form on $U$  which is not
+$\partial$-exact, i.e. we cannot find
+$g\in\mathcal O(U)$ such that
+$\partial(g)= g'(z)dz= \frac{dz}{z-a_\nu}$.
+The obstruction stems from the multi-valued behaviour of
+$\log (z-a_\nu)$ and  can  also be seen by
+residue calculus. Namely, choose a closed
+Jordan curve $\gamma$ which surrounds $a_\nu$, i.e. its winding number
+is +1 as explained in ¤ xx. Then
+\[
+\int_\gamma\, \frac{dz}{z-a_\nu}=2\pi i
+\] 
+On the other hand the closedness of $\gamma$ implies that
+\[
+\int_\gamma\,\partial g=0\quad\colon g\in\mathcal O(U)
+\]
+Next,  the fundamental group $\pi_1(U)$
+can be identified with homotopy classes of closed curves
+with a common intial and terminal point $p\in U$.
+Topology teaches that
+$\pi_1(U)$ is a free group of rank $k$
+with
+generators
+$\gamma_1,\ldots,\gamma_k$ where
+each $\gamma_\nu$ is a closed Jordan curve whose winding
+number
+with respec to $a_\nu$ is +1 while its winding number
+with respect to other $a$-points
+are  zero.
+Consider
+the
+family of group homomorphisms
+\[
+ \rho\colon \pi_1(U)\to {\bf{Z}}\tag{1}
+\] 
+where
+${\bf{Z}}$ is the additive group of integers.
+Denote by $\mathcal O^*(U)$
+the family of zero-free holomorphic functions in $U$.
+If $\gamma$ is a closed curve
+at $p$
+and
+$\phi\in\mathcal O^*(U)$
+residue calculus entails that
+the line integral
+\[
+\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}
+\] 
+is an integer.
+Recall that elementary
+integration theory from
+Chapter II implies that this  line integral only depends upon the
+homotopy class of $\gamma$, i.e. 
+upon the image $\{\gamma\}$ in $\pi_1(X)$.
+Keeping $\phi$ fixed
+it follows that
+\[
+\{\gamma\}\mapsto 
+\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}\tag{2}
+\] 
+is a group homomorphism from
+$\pi_1(X)$ into ${\bf{Z}}$.
+It turns out that
+every such group  homomorphism is
+realised by a zero-free $\phi$.
+To see this we take the free
+basis
+$\{\gamma_1\},\ldots,\{\gamma_k\}$
+in $\pi_1(U)$
+and then every 
+$\rho$ in (1) is determined by
+a $k$-tuple of integers $e_\nu=\rho(\{\gamma_\nu\})$.
+With 
+\[ 
+\phi(z)= \prod\, (z-a_\nu)^{e_\nu}
+\]
+we see that $\rho$ is equal to the
+group homomorphis  given by (2).
+\medskip
+
+\noindent
+{\bf{0.6 Line integrals of multi-valued functions.}}
+Before  the passage to calculus on Reimann surfaces where one 
+contructs
+complex line integrals, an intermediate step is to
+evaluate complex line integrals of multi-valued functions.
+Consider as an example
+some complex number
+$\alpha$ which is not an integer and
+the function $f=z^\alpha$
+which is multi-valued in outside the origin.
+A local branch  at $z=1$ is chosen so that
+$f(1)=1$.
+If $g(z)$ is an analytic function defined in
+a neighbrhood of the closed unit disc
+$\{|z|\leq 1 \}$
+we seek the line integral
+\[
+\int_T\, g(z)\cdot z^\alpha\, dz\tag{1}
+\] 
+where $T$ is the unit circle oriented in the positive sense, i.e. integration moves 
+counter clockwise.
+It means that (1) is equal to
+\[
+i\cdot \int_0^{2\pi}\, g(e^{i\theta}) e^{i\alpha\theta}\, e^{i\theta}\, d\theta
+\]
+Here $g$ has a series expnasion $\sum\,c_nz^n$
+which converges when
+$|z|\leq 1$
+and for each non-negative integer one has
+\[
+i\cdot \int_0^{2\pi}\, e^{in\theta} e^{i\alpha\theta}\, e^{i\theta}\, d\theta
+=\frac{i}{n+1+\alpha}\cdot (e^{2\pi i\alpha}-1)
+\]
+Taking a sum over $n$ we evaluate (1).
+Wirh $g=1$ we have for example
+\[
+\int_T\,  z^\alpha\, dz=\frac{i}{1+\alpha}\cdot (e^{2\pi i\alpha}-1)\tag{2}
+\] 
+If $0<r<1$ and we instead integrate along
+the circle $T(r)= \{|z|=r\}$ in the counter clockwise sense,
+the reader can verify that
+\[
+\int_{T(r)}\,  z^\alpha\, dz=\frac{i\cdot r^{1+\alpha}}{1+\alpha}\cdot (e^{2\pi i\alpha}-1)\tag{3}
+\] 
+Notice that (2) and (3) differ even though the closed sucrves
+$T$ and $T(r)$ are homotopic in the punctured complex plane.
+So the usual invariance for line integrals of single-valued analytic functions
+fails.
+Following original contructions by Riemann one can
+explain this by regarding the universl covering space of
+$\widehat{X}= {\bf{C}}\setminus \{0\}$
+where $z^\alpha$ becomes a single valued holomorŒphic functions
+but when the closed curves
+$T$ and $T(r)$ are lifted to $\widehat{X}$ they are no longer
+closed and have different end-points on
+$\widehat{X}$ 
+where $z^\alpha$ takes distinict values and this
+explains why $(2)\neq (3)$.
+\medskip
+
+
+\noindent
+{\bf{0.7 An extension to Riemann surfaces.}}
+An open Riemann surface
+$X$
+has  a fundamental group $\pi_1(X)$ and we consider the family 
+$\mathcal F$ of group homomorphisms
+$\rho\colon \pi_1(X)\to {\bf{Z}}$.
+Identify $\pi_1(X)$ with homotopy classes of closed curves
+which start and terminate at some point $p\in X$.
+Denote by $\mathcal O^*(X)$
+the family of globally defined and zero-free holomorphic functions on $X$.
+\medskip
+
+\noindent
+{\bf{0.7.1 Theorem.}}
+\emph{For each $\rho\in\mathcal F$ there
+exists $\phi\in \mathcal O^*(X)$
+such that}
+\[
+\rho(\{\gamma\})=\frac{1}{2\pi i}\cdot \int_\gamma\, \frac{\partial\phi}{\phi}
+\quad\colon \, \{\gamma\}\in \pi_1(X)\tag{*}
+\]
+\emph{where $\{\gamma\}$ is the homotopy class of a closed curve.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The proof of Theorem 0.7.1   relies upon the exact sheaf sequence
+\[
+0\to {\bf{Z}}_X\to \mathcal O\overset{\text{exp}}\to \mathcal O^*\to 0
+\]
+where
+${\bf{Z}}_X$ is the sheaf whose sections are ocally constant integer-valued functions
+and 
+we have used the exponential map which 
+sends  holomorphic function $f$ defined in  open
+subsets $U$ of $X$  to  
+$e^{2\pi i f}$ which  are   sections of the multiplicative sheaf
+$\mathcal O^*$ of  zero-free holomorphic functions.
+Passing to the long exact sequence of cohomology one gets an exact sequence
+\[ 
+0\to {\bf{Z}}\to
+\mathcal O(X)\overset {\text{exp}}\to \mathcal O^*(X)\to
+H^1(X,{\bf{Z}})\to
+H^1(X,\mathcal O)\to\ldots 
+\]
+Admitting
+the vanishing theorem by
+Behnke and Stein this entails that
+\[
+H^1(X,{\bf{Z}})\simeq \frac{\mathcal O^*(X)}{
+\text{exp}(\mathcal O(X))}\tag{i}
+\]
+Next, we have the sheaf
+$\Omega$ whose sections are holomorphic 1-forms
+and an  exact sheaf sequence
+\[
+0\to {\bf{C}}_X\to \mathcal O
+\overset{\partial} \to \Omega\to 0
+\]
+where ${\bf{C}}_X$ is the sheaf whose sections are locally constant
+complex-valued functions.
+Here the Behnke-Stein theorem gives
+the isomorphism
+\[
+H^1(X,{\bf{C}})\simeq \frac{\Omega(X)}{\partial(\mathcal O(X)}\tag{ii}
+\]
+Next, if $g\in \mathcal O^*(X)$ one easily verifies that
+the holomorphic
+1-form
+$\frac{\partial g}{g}$ is $\partial$-exact if and only if
+$g= e^{2\pi if}$ for some $f\in\mathcal O(X)$.
+Hence  (i-ii)  give a canonically defined and injective map
+\[ 
+H^1(X,{\bf{Z}})\to H^1(X,{\bf{C}})\tag{iii}
+\]
+
+\noindent
+From this one  gets  Theorem 0.7.1
+via a similar representation for the family 
+$\mathcal F_{{\bf{C}}}$
+of group homomorphisms from $\pi_1(X)$ into  the additive group
+of complex numbers.
+More precisely, to each $\rho\in \mathcal F_{{\bf{C}}}$
+we shall prove that there exists
+$\omega\in \Omega(X)$ such that
+\[
+\rho(\{\gamma\})=\frac{1}{2\pi i}\cdot \int_\gamma\, \omega
+\]
+Here $\omega$ is unique up to a $\partial$-exact holomorphic 1-form
+and it turns out that
+$\omega$ can be represented as the logarithmic differential of a zero-free
+holomorphic function if and only if the
+$\rho$-function in (*) is integer-valued.
+
+
+\newpage
+
+\centerline{\bf{¤ 1. Summary of some major constructions and results.}}
+
+\bigskip
+
+
+\noindent {\bf{1.1 The sheaf  $\widehat{\mathcal O}$.}}
+An  extensive family   of open Riemann surfaces
+arises via a construction due to Weierstrass.
+For each point $z\in{\bf{C}}$
+one has the 
+space $\mathcal O(z)$ of germs of analytic functions at $z$.
+Weierstrass total sheaf space is defined  by
+\[
+\widehat{\mathcal O} =\bigcup_{z\in {\bf{C}}} \,
+\mathcal O(z)
+\]
+One has the projection $\pi\colon \widehat{\mathcal O}\to  {\bf{C}}$
+with inverse fibers
+$\pi^{-1}(z)=\mathcal O(z)$.
+Now $\widehat{\mathcal O}$ becomes a complex manifold
+where $\pi$ is locally biholomorphic.
+Charts consist  of  pairs $(\Delta,f)$ where
+$\Delta$ is an open disc in
+${\bf{C}}$ and $f\in \mathcal O(\Delta)$
+whose corresponding
+open  set in
+$\widehat{\mathcal O}$ are the
+points $\{(z,f_z)\colon z\in \Delta\}$
+where $f_z\in\mathcal O(z)$ denotes the germ determined by $f$
+at a point $z\in\Delta$.
+\medskip
+
+\noindent
+Every
+open and connected subset of $\widehat{\mathcal O}$
+gives an open  Riemann surface.
+As an example one has the Riemann surface
+attached to the multi-valued function $\log z$.
+At $z=1$ we start with the local branch of $\log z$.
+whose value is zero.
+Now $\log z$ extends to a multi-valued function in
+${\bf{C}}\setminus \{0\}$
+and in $\widehat{\mathcal O}$ we get the connected
+open set
+$\mathcal L$ whose points are pairs $(p,f)$ where
+$p\in {\bf{C}}\setminus \{0\}$ and $f$ is a local branch of $\log z$
+at $p$.
+Here $\pi\colon \mathcal L\to {\bf{C}}\setminus \{0\}$
+is surjective where  each inverse fiber is a copy of the set of integers which reflects
+the property that
+local branches of the  log-function 
+differ by integer-multiples of $2\pi$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $\log z$ yields a single-valued holomorphic function
+$\widehat{\log}$ on the open Riemann surface
+$\mathcal L$ and the map
+\[
+p\to \widehat{\log}(p)
+\] 
+from $\mathcal L$ into the complex plane ${\bf{C}}$  is biholomorphic.
+In topology it means that $\mathcal L$ can be taken as the
+universal covering space of the punctured complex plane and
+(*) gives a first example
+of the uniformisation theorem applied to the simply connected
+Riemann surface $\mathcal L$.
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{1.1.1 The space $M_\Omega(z_0)$}}.
+Let $\Omega$ be a  open and connected
+subset of
+${\bf{C}}$ and consider a point $z_0\in \Omega$. In ¤ xx
+we introduced the family of germs 
+$M_\Omega(z_0)$ which can
+be extended in the sense of Weierstrass along every curve 
+$\gamma$ in $\Omega$
+with initial point at $z_0$ and some terminal point $z$.
+For a pair $(f,\gamma)$ with
+$f\in M_\Omega(z_0)$, the analytic continuation along
+$\gamma$ gives the germ
+the germ $T_\gamma(f)\in \mathcal O(z)$
+wihch by definition is a point in $\widehat{\mathcal O}$.
+The 
+union of these points 
+as $\gamma$ varies yields  a connected
+open subset of
+$\widehat{O}$ denoted by
+$\widehat{X}_f$ and called 
+the associated Riemann surface of $f$.
+Here $\pi\colon \widehat{X}_f\to \Omega$ is surjective
+and  the construction gives  a 
+\emph{single-valued} holomorphic function
+$\widehat{f}$ on $\widehat{X}_f$ where
+\[
+\widehat{f}(T_\gamma(f))=T_\gamma(f)(z)
+\]
+when $\gamma$ is a curve with terminal point at $z$.
+\medskip
+
+
+\noindent
+{\bf{Example}}.
+Remove 0 and 2 from the complex plane
+and in $\Omega={\bf{C}}\setminus \{0,2\}$ we have
+the multi-valued function
+\[
+f(z)= \sqrt{z}+ \sqrt{2-z}
+\] 
+where one starts with the germ at $z=1$ for which
+$\sqrt{1}= \sqrt{2-1}=1$.
+Under analytic continuation the
+germs of the square root functions can change sign
+and from this the reader may verify that
+$\pi\colon \widehat{X}_f\to \Omega$
+is a four-sheeted covering map, i.e. the inverse fibers consist of four points.
+\medskip
+
+\centerline{\bf{1.2 The $\bar\partial$-operator.}}
+\medskip
+
+
+\noindent
+The complex analytic structure
+on a Riemann surface  arises via charts
+$(\Delta,z)$ where
+$\Delta$ are open discs in a complex $z$-plane and 
+equips also 
+$X$ with a structure as an oriented $C^\infty$-manifold whose real dimension is two.
+Denote by $\mathcal E(X)$
+the space of complex-valued $C^\infty$-functions on $X$ and
+$\mathcal E^1(X)$ is the space of smooth differential 1-forms.
+The exterior differential
+$d\colon \mathcal E(X)\mapsto \mathcal E^1(X)$
+is a sum
+$\partial+\bar\partial$. More precisely, one has 
+a direct
+sum decomposition
+\[
+\mathcal E^1(X)=\mathcal E^{1,0}(X)\oplus \mathcal E^{0,1}(X)
+\]
+and the two differentials:
+\[
+ \partial \colon \mathcal E(X)\mapsto \mathcal E^{1,0}(X)
+\quad\colon\,
+ \bar \partial \colon \mathcal E(X)\mapsto \mathcal E^{0,1}(X)
+\]
+Here   a differential 1-form
+$\phi$ has bi-degree $(1,0)$ if its restriction
+to a chart
+$(\Delta,z)$ is  $a(z)dz$ with
+$a\in C^\infty(\Delta)$. Similarly, a 1-form
+$\psi$ has bi-degree $(0,1)$ if
+$\psi|\Delta= b(z) d\bar z$ with 
+$b\in C^\infty(\Delta)$. The
+Cauchy-Riemann equations entail that
+the $\bar\partial$-kernel on
+$\mathcal E(X)$ consists of holomorphic functions.
+If $U$ is an open subset of $X$ we denote by
+$\mathcal O(U)$ the set of holomorphic functions in
+$U$ and by
+$U\mapsto \mathcal O(U)$ one gets the sheaf 
+$\mathcal O$.
+As already announced in the introduction
+a  major result about non-compact Riemann surfaces
+is the following:
+
+\medskip
+
+\noindent
+{\bf{1.2.1 Theorem.}}
+\emph{Every $(0,1)$-form on $X$ is $\bar\partial$-exact.}
+\medskip
+
+
+\centerline {\bf{Runge's theorem.}}
+\medskip
+
+\noindent
+Let $Y$ be an open subset of $X$.
+For each compact subset
+$K$ of $Y$ we get  connected open components
+of $X\setminus K$ and put
+\[
+\mathcal C^*(K)= \cup\,\Omega_\alpha
+\] 
+where the union is taken over all components
+$\Omega_\alpha$
+which are not relatively compact, i.e. the closure $\overline{\Omega}_\alpha$
+is not a compact set in $X$.
+One says that $K$ is a compact   Runge set in $Y$
+if 
+\[
+\mathfrak{h}(K)=X\setminus \mathcal C^*(K)
+\] 
+is a compact subset of $Y$.
+\medskip
+
+\noindent
+{\bf{1.2.2 Theorem.}}
+\emph{For every pair $(Y,K)$ where
+$K$ is a compact Runge set in $Y$
+and each $f\in\mathcal O(Y)$ there exists a sequence
+$\{g_n\}$ in $\mathcal O(X)$ such that}
+\[
+\lim_{n\to \infty}|g_n-f|_K=0
+\]
+\emph{where we have taken maximum norms over $K$.}
+
+\medskip
+
+\noindent
+The two theorems above are proved in ¤ xx and   give rise to 
+further results
+which we describe below.
+\medskip
+
+\noindent
+{\bf{Weierstrass' Theorem.}}
+A divisor on $X$ consists of a discrete sequence
+of points $\{p_\nu\}$ to which one assigns
+integers $\{k_\nu\}$  which may be positive or negative.
+A globally defined and non-constant meromorphic function
+$g$ gives the  principal divisor $D(g)$ where
+one assigns
+a positive integer at each zero 
+of $g$ given  by its multiplicity. Similarly one assigns
+negative integers  at poles given by  their orders.
+\medskip
+
+\noindent
+{\bf{1.2.3  Theorem.}}
+\emph{Every divisor on a non-compact Riemann surface is principal.}
+
+\medskip
+
+
+\noindent
+{\bf{The Mittag-Leffler Theorem.}}
+On the Riemann surface
+$X$ one has the sheaf $\mathcal O$ of holomorphic functions and
+the sheaf $\mathfrak{M}$ whose sections are meromorphic functions.
+Now there exists the quotient sheaf
+\[
+\mathcal M= \frac{\mathfrak{M}}{\mathcal O}
+\]
+Sections in $\mathcal M$ are special since
+one only gets contributions at the set of poles of
+a meromorphic function which over an open subset in $X$
+is discrete.
+Theorem 0.2.1 and the long exact sequence of cohomology entails that
+one has an exact sequence
+\[
+0\to \mathcal O(X)\to \mathfrak{M}(X)\to
+\mathcal M(X)\to 0\tag{1.2.4}
+\]
+This  surjective maps means that one
+can assign a  Mittag-Leffler distribution
+in an arbitrary fashion on disrete subsets of $X$ which
+extends the classic result for planar domains.
+
+
+\bigskip
+
+
+
+\centerline{\bf{1.3 Harmonic functions and the Dirichlet problem.}}
+\bigskip
+
+
+\noindent
+A real-valued function $u$ on $X$ is harmonic if its restriction to
+every chart satisfies the Laplace equation.
+An equivalent condition is that
+the $(1,0)$-form
+$\partial(u)$ is $\bar\partial$-closed, i.e. a holomorphic 1-form.
+The space  of harmonic functions on $X$ 
+is denoted by $\mathfrak{h}(X)$.
+We have also the sheaf
+$\mathfrak{h}_X$ whose sections over
+open sets $U$ is
+$\mathfrak{h}(U)$.
+Let us then consider an   open
+subset $Y$ of $X$ whose  boundary
+$\partial Y$ is compact.
+For each $h\in C^0(\partial Y)$ one seeks 
+a continuous function $H$ on $\overline{Y}$ where
+$H$ is harmonic in $Y$ and equal to $h$ on
+the boundary.
+To find $H$ one proceeds exactly as in the planar case
+using Perron's method. This 
+gives a sufficiency for solutions to the Dirichlet problem
+for arbitrary continuous boundary value functions. More precisely, a point
+$p\in\partial Y$ satisfies the Perron condition if
+we can find a pair $(\Delta,u)$
+where
+$\Delta$ is a chart with the origin at $p$ and
+$u$ is a continuous function in
+$\overline{Y}\cap \Delta$ with the property that
+$u$ is subharmonic in
+$Y\cap \Delta$ where it takes strictly negative values, while $u(p)=0$.
+
+
+
+\medskip
+
+\noindent
+{\bf{1.3.1 Theorem.}}
+\emph{Let $Y$ be an open set in $X$ such that every $p\in\partial Y$
+is Perron regular. Then the Dirichlet problem has a solution for
+every
+$h\in C^0(\partial Y)$.}
+
+\medskip
+
+\noindent
+{\bf{1.3.2 Remark.}}
+For brevity we say that
+$Y$ is Dirichlet regular when  the Dirichlet problem has a solution.
+The proof of Theorem 1.3.1 is verbatim to the planer case  and
+left as an exercise to the reader.
+\bigskip
+
+
+\centerline{\bf{1.4 The uniformisation  theorem.}}
+\medskip
+
+\noindent
+Denote by $\Omega(X)$ the space of globally defined holomorphic 1-forms.
+We can impose the condition that
+\[ 
+\partial(\mathcal O(X))= \Omega(X)\tag{1.4.1}
+\]
+
+\medskip
+
+\noindent
+{\bf{1.4.2  Theorem.}}
+\emph{Let $X$ be a non-compact Riemann surface for which (1.4.1) holds.
+Then $X$
+is biholomorphic with the unit disc $D$ or the complex plane
+${\bf{C}}$.}
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+In the special case when
+$X$ is a planar domain the result above is
+Riemann's ordinary mapping theorem for simply connected
+domains.
+The extension to an arbitrary
+open Riemann surface 
+requires extra work which is given  in ¤ 5.
+
+\bigskip
+
+
+
+
+
+
+\centerline{\bf{1.5 Further results.}}
+\medskip
+
+\noindent
+The Behnke-Stein theorem
+extends to the case when
+$\mathcal O$ is replaced by
+a holomorphic line bundle $\mathcal L$ which by definition
+is a locally free sheaf of $\mathcal O$-modules with rank one.
+Thus
+\[ 
+H^1(X,\mathcal L)=0\tag{1.5.1}
+\]
+There also  exists  the multiplicative sheaf
+$\mathcal O^*$ whose sectios are zero-free holomorphic functions.
+The exponential map yields an exact sequence of sheaves
+\[
+0\to {\bf{Z}}_X\to \mathcal O\overset{\text{exp}}\to  \mathcal O^*\to 0
+\]
+In ¤ x we prove that
+$H^1(X,\mathcal O^*)=0$ 
+and  the long exact sequence of cohomology  gives
+\[ 
+H^2(X,{\bf{Z}}_X)=0\tag{1.5.2}
+\]
+
+
+\noindent
+Next, let $\Omega $ be the sheaf of holomorphic 1-forms
+which gives the exact sheaf sequence
+\[
+0\to {\bf{C}}_X\to \mathcal O\overset{\partial }\to  \Omega\to 0
+\]
+The vanishing of $H^1(X,\mathcal O)$
+gives the exact sequence
+\[
+0\to {\bf{C}}_X
+\to \mathcal O(X)\overset{\partial }\to  \Omega(X)\to 
+H^1(X,{\bf{C}}_X)\to 0\tag{1.5.3}
+\]
+Hence one has the isomorphism
+\[
+H^1(X,{\bf{C}}_X)\simeq\frac  {\Omega(X)}{\partial(\mathcal O(X)}\tag{*}
+\]
+When (1.4.1) fails 
+one is led to analyze when a  globally defined holomorphic
+1-form
+$\omega$ is $\partial$-exact, i.e. equal to
+ $\partial(f)$ for some
+$f\in\mathcal O(X)$.
+To analyze   when this holds we fix a point $x_0\in X$ and denote by
+$\mathcal F$ the family of closed and differentiable curves
+$\gamma$ with common start and terminal points at $x_0$.
+If $\omega=\partial(f)$ it is clear that
+\[
+\int_\gamma\,\omega=0\quad\colon
+\gamma\in\mathcal F\tag{i}
+\]
+Conversely, assume that
+(i) holds for some
+ $\omega\in\Omega(X)$.
+ If $x$ is a point in $X$ we find a differentiable curve
+ $\gamma(x)$ which starts at $x_0$ and has $x$ as terminal point.
+ Now (i) entails that
+ \[
+ \int_{\gamma(x)}\,\omega\tag{ii}
+ \] 
+ only depends on $x$ and not on the specific choice of 
+ $\gamma(x)$. This gives
+ $f\in\mathcal O(X)$ such that
+$f(x)$ equals (ii) for every $x$ and 
+$\omega=\partial(f)$.
+So the vanishing in (i) is a necessary and sufficient condition in order
+that
+$\omega$ is $\partial$-exact.
+\medskip
+
+\noindent {\bf{1.5.4 Additive representations of $\pi_1(X)$.}}
+Recall that the fundamental group of the manifold $X$ can be identified with
+homotopy classes of closed curves in the family $\mathcal F$.
+Exactly as in the planar case one verifies that
+the integrals in (i)  only depend upon the homotopy
+classes.
+So if $\omega$ is kept fixed we get a group homomorphism
+from $\pi_1(X)$ into the abelian group 
+${\bf{C}}$ defined by
+\[
+\{\gamma\}\mapsto \int_\gamma\,\omega\tag{i}
+\]
+Conversely one applies (1.5.3)  to show that
+\emph{every} group homomorphism
+$\rho\colon \pi_1(X)\to {\bf{C}}$
+is given by (i) for some
+holomorphic 1-form $\omega$.
+
+\bigskip
+
+\centerline
+{\bf{¤ 1.6. About the proofs.}}
+\medskip
+
+\noindent
+Theorem 1.3.1 plays a crucial role where  Perron's solution  for planar domains
+can be carried out directly on a manifold by repeating the proof for planar domains.
+To begin with  Theorem 1.3.1 is used to prove that
+the topology of $X$ is 
+countable which means that 
+there exists  denumerable increasing sequence of compact subsets
+$\{K_n\}$ where
+$K_n$ is contained in the interior of $K_{n+1}$ for every $n$.
+The proof is given
+in
+tbe Appendix  where the  crucial  point 
+is to apply Theorem 1.3.1  when
+$Y$ is the open complement in $X$   when
+one has removed
+a pair of closed discs in separate charts.
+\medskip
+
+\noindent
+Another very useful fact
+is  Montel's theorem for planar domains.
+Namely, let 
+$V$ and $U$ be  two open sets in
+${\bf{C}}$ where
+$V$ is relatively compact in
+$U$, i.e $\overline{V}$ is a compact subset
+of $U$. Then the restriction operator from
+$\mathcal O(U)$ into $\mathcal O(V)$ is compact
+where both are Frechet spaces under uniform convergence over compact subsets of 
+$V$ and $U$
+respectively.
+In ¤ xx we show that this 
+compactness and Pompieu's theorem for planar domains
+give:
+
+\medskip
+
+\noindent
+{\bf{1.6.1 Dolbeault's Lemma.}}
+\emph{Let $Y$
+be a relatively compact open subset of $X$.
+Then, for every open set $Y^*$ which contains $\overline{Y}$
+and
+each $\phi\in\mathcal E^{0,1}(Y^*)$, the restriction of
+$\phi$ to $Y$ is  $\bar\partial$-exact, i.e. one has the inclusion}
+\[
+ \phi|Y\in \bar\partial(\mathcal E(Y))
+\]
+
+\noindent
+{\bf{Remark.}}
+We shall see that this result
+constitutes the
+essential step to get   the Behnke-Stein theorem where
+the relative compactness is relaxed.
+\medskip
+
+
+\noindent
+{\bf{1.6.2 The elliptic
+property
+of $\bar\partial$.}}
+Recall that if $\mu$ is a distribution   in some open
+subset $U$ of ${\bf{C}}$ such that
+$\partial(\mu)=0$ then it
+is a holomorphic density.
+Passing to a Riemann surface $X$
+we consider a current $S$ of bi-degree
+$(1,0)$, i.e  a continuous linear form on
+test-forms of bi-degree $(0,1)$.
+The current $S$ is $\bar\partial$-closed in an open subset
+$U$ of $X$ if
+\[
+S(\bar\partial(g))=0\quad \colon g\in C_0^\infty(U)\tag{i}
+\]
+The planar result entails that (i) gives
+a holomorphic 1-form
+$\sigma$ in $U$ such that
+\[
+S(\phi^{0,1})=\int\, \phi\wedge \sigma\tag{ii}
+\]
+for every $\phi\in \mathcal E^{0,1}(X)$ having compact support in
+$U$.
+That $(i)\implies (ii)$ plays a crucial role in
+the proof of Theorem 1.2.2.
+
+
+\medskip
+
+
+\noindent
+{\bf{1.6.3 Counting zeros.}}
+A substitute for the argument principle in
+the complex plane to count zeros of analytic functions
+exists on Riemann surfaces.
+Let $f$ be holomorphic in an open subset $Y$ of $X$
+and suppose that the   zeros in $Y$ is a finite set
+$p_1,\ldots,p_k$, where each $p_\nu $ is  zero of some multiplicity
+$e_\nu$.
+Now $\log |f|^2$ is locally integrable in 
+$Y$
+which gives a current
+defined on test-forms
+$\omega$ of bi-degree $(1,1)$ with compact support in $Y$
+which is defined by 
+\[
+\int_Y\, \log|f|^2\cdot \omega^{1,1}\tag{i}
+\]
+To evaluate (i)
+we apply the calculus with currents.
+To begin with
+we get the current
+\[
+\partial(\log |f|^2)= \frac{\partial  f}{f}\tag{ii}
+\]
+whiuch  is a holomorphic density outside the zeros and if
+$(|Delta,z)$ is a chart around a zero $p_\nu$ of multiplicity
+$e_\nu$ then the 
+current in (ii) restricted to this chart
+is
+$e_\nu\cdot \frac{dz}{z}$.
+Now we can apply $\bar\partial$  and residue calculus shows that
+the (1,1)-current
+\[
+\bar\partial \partial(\log |f|^2)= 2\pi i\cdot \sum\, e_\nu\cdot \delta(p_\nu)
+\]
+where $\{\delta(p_\nu)\}$
+are Dirac measures. 
+More precisely, for every test-function $g\in C_0^\infty(Y)$
+one has the equality
+\[
+2\pi i\cdot \sum\, e_\nu\cdot g(p_\nu)
+\int_Y\, \log |f|^2\cdot  \bar\partial\partial (g)\tag{iii}
+\]
+\medskip
+
+\noindent
+{\bf{1.6.4 A continuity principle.}}
+Let $f\in\mathcal O(Y)$
+and suppose  it extends to a continuous function on
+$\overline{Y}$ and  there is some $\delta>0$ such that 
+$|f(p)|\geq \delta$ hold for each $p\in\partial Y$.
+For each complex number
+$a$ with $|a|<\delta$ it follows
+that $f-a$ has a finite number of zeros in $Y$. Denote by 
+$e_f(a)$ be the number of zeros counted with multiplicity.
+Exactly as above we get
+\[
+ 2\pi i\cdot e(a)=\int\,  \log |f-a|^2\cdot \bar\partial\partial(g)\tag{1}
+\]
+when $g$ is a test-function in $Y$ which take values one at
+the zeros of $f-a$.
+Let $0<\delta_0<\delta$ so that
+the set
+$\{|f|\leq \delta_0\}$ is compact in $Y$
+and fix $g\in C_0^\infty(Y)$ so that
+$g=1$ over this compact set.
+Now we get ther integer-valued function $a\mapsto e(a)$
+which for each $a$ is evaluated via (1).
+At the same time we have the $L^1$-functions
+$\{\log\, |f-a|\}$ and elementary measure theory
+shows that
+$a\mapsto \log |f-a|$
+is continuous with values in $L^1(Y)$.
+Passing to their distribution derivatives
+give a weak-star  continuous
+current-valued function
+$a\mapsto\bar\partial\partial(\log |f-a|)$
+which entails that
+(1) is a continuous integer-valued function defined in the disc
+$\{|a|<\delta\}$.
+Hence this function is constant, i.e. the number of
+$a$-values taken by $f$ and counted with multiplicities is
+constant.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+It is possible to prove
+the result above by regarding
+proper maps with
+finite fibers from one manifold into another. However, the proof given above
+has the merit that it can be extended to
+considerably  more general situations
+since we only used the fact that passage to higher order derivatives of distributions is a
+weak-star continuous process.
+
+
+
+\newpage
+
+
+\centerline{\bf{Appendix: Topological results.}}
+\bigskip
+
+
+\noindent
+We restrict the attention to topological spaces
+$X$ which are Hausdorff.
+A Hausdorff space $X$ is arc-wise connected
+if there to every pair of points $p,q$ in $X$ exists a continuous map
+$\gamma\colon [0,1]\to X$
+such that $\gamma(0)=p$ and $\gamma(1)= q$.
+Next, one says that
+the Hausdorff space $X$ has a countable topology if there
+exista a denumerable family $\mathfrak{U}$
+of open subsets
+$\{U_n\}$ such that every
+open set in $X$ is the union of 
+sets from $\mathfrak{U}$.
+The following remarkable result is due to PoincarŽ and Volterra:
+
+
+\medskip
+
+\noindent
+{\bf{A.1 Theorem.}} \emph{Let 
+$X$ be arc-wise  connected and Hausdorff which in addition is locally compact.
+Suppose there exists a continuous map
+$f\colon X\to Y$
+where
+$Y$ is a Hausdorff  space with countable topology
+and the fibers
+$f^{-1}(y)$ are discrete subsets of $X$ for every $y\in Y$. Then
+$X$ has countable topology.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Denote by $\mathfrak{B}$ the family of open sets
+$V$ in $X$ which satisfy the following:
+\[
+\text{$V$ has a countable topology}\tag {i} 
+\]
+\[
+\text{$V$ is a connected component of $f^{-1}(U)$ for some
+open set $U$ in $Y$}\tag{ii}
+\]
+Theorem A.1 follows if we prove that
+$\mathfrak{B}$ is a countable family and
+every open set in $X$ is a union of
+$\mathfrak{B}$-sets.
+\medskip
+
+\noindent
+\emph{Proof that $\mathfrak{B}$Êis countable.}
+Let $V_0$ be a set in $\mathfrak{B}$ and
+consider an open set $U$ in $Y$.
+The connected components of
+$f^{-1}(U)$ are disjoint by (i)
+$V_0$ has countable topology.
+It follows
+that
+at most countably many
+of the connected components of $f^{-1}(U)$
+have a non-empty
+intersection with $V$.
+Next, since every
+$V\in \mathfrak{B}$ is of the form $f^{-1}(U)$ for an open
+set in $Y$ and $Y$ has a countable topology we
+conclude that
+\[
+V_0\cap V\neq\emptyset\tag{iii}
+\]
+only  can hold for
+countably many $V$ in $\mathfrak{B}$.
+Next, fix $V_*\in\mathfrak{B}$ and set
+\[ 
+\mathfrak{B}_0=\{ V\colon V_*\cap V\neq\emptyset\}
+\]
+By (iii) this is a countable set in $\mathfrak{B}$.
+If $n\geq 1$ we define inductively
+\[
+\mathfrak{B}_n= \{V\colon \exists\, W\in\mathfrak{B}_{n-1}\, \colon
+ W\cap V\neq\emptyset\}
+\]
+An induction over $n$ entails
+that each
+$\mathfrak{B}_n$ is countable and since
+$X$ is connected it is clear that
+their union is equal to $\mathfrak{B}$
+which therefore is a countable family.
+\medskip
+
+\noindent
+\emph{Proof that
+$\mathfrak{B}$ is a basis of the topology.}
+Let $\Omega\subset X$ be open and take some
+$x\in\Omega$. We must prove that there exists
+$V\in\mathfrak{B}$ such that
+\[
+x\in V\subset\Omega
+\]
+To show this we consider the discrete fiber
+$f^{-1}(f(x))$. Since $X$ is Hausdorff and locally compact
+there exists 
+a small open and relatively compact neighborhood $W$ of $x$ such that 
+$W\subset \Omega$ and
+$\partial W\cap f^{-1}(f(x))=\emptyset$.
+Now $f(\partial W)$ is a compact set in $Y$
+which does not contain
+$f(x)$ which gives $U\in\mathfrak{U}$ such that
+\[
+f(x)\in U\quad\colon f(\partial W)\cap U= \emptyset
+\]
+Let $V$ be the connected component of $f^{-1}(U)$ which contains
+$x$.
+From the above $V\cap \partial W=\emptyset$ and
+we conclude that 
+\[
+x\in V\subset W\subset\Omega
+\]
+which finishes the proof.
+\bigskip
+
+\centerline {\bf{A.2  Covering spaces.}}
+\bigskip
+
+
+\noindent
+Let $X$ be arc-wise connected and Hausdorff.
+A pair $(Y,\rho)$ is a covering of $X$ 
+if $\rho\colon Y\to X$ is a continuous map and
+for each point $p\in X$ there exists some open neighborhood $U$
+such that
+\[ \rho^{-1}(U)= \cup \, V_\alpha
+\]
+where the right hand side is a disjoint union of open sets in
+$Y$ and $\rho\colon V_\alpha\to U$ are homeomorphisms for
+each $\alpha$.
+\medskip
+
+\noindent
+{\bf{A.2.1 Exercise.}}
+Let $\gamma\colon  [0,1]\to X$ be a continuous map
+and let $y_0\in Y$ be a point such that
+\[
+\rho(y_0)= x_0=\gamma(0)
+\]
+Show that there exists a unique continuous map
+$\gamma^*\colon  [0,1]\to Y$ such that
+$y_0=\gamma^*(0)$ and
+\[
+\rho(\gamma^*(t))= \gamma(t)\,\colon\, 0\leq t\leq 1\tag{i}
+\]
+which means that
+there exist unique liftings of curves. 
+\bigskip
+
+\noindent
+Next, let $\pi_1(X)$ be the fundamental  group of $X$.
+Since $X$ is arc-wise connected it can be identified with homotoy classes
+of closed curves $\gamma$ which have a given
+$x_0\in X$ as a common initial and terminal point.
+Let us also fix a point $y_0$Êin the fiber
+$\rho^{-1}(x_0)$.
+To each closed $\gamma$-curve as above the exercise gives
+a unique lifted curve
+$\gamma^*$  where  (i) entials that
+\[
+\rho(\gamma(1))\in
+\rho^{-1}(x_0)\tag{ii}
+\]
+
+\medskip
+
+\noindent
+{\bf{A.2.2 Exercise.}}
+Show that the end-point
+$\gamma(1)$ in  (ii)
+only  depends upon the homotopy class of
+$\gamma$ and conclude that
+one has a map
+\[
+\rho_*\colon \pi_1(X)\to \rho^{-1}(x_0)\tag{*}
+\]
+Show also that $\rho_*$ is surjective
+if $Y$ is connected.
+\medskip
+
+\noindent
+{\bf{A.2.3 The universal covering property.}}
+A covering $\phi \colon Z\to X$ has a universal property if the
+following holds: For every covering
+$\rho\colon Y\to X$
+and each pair of points $z_0\in \phi^{-1}(x_0)$ and
+$y_0\in \rho^{-1}(x_0)$ there exists a unique fiber preserving continuous map
+$f\colon Z\to Y$ with $f(z_0)=y_0$ and 
+\[ 
+\rho\circ f=\phi\tag{**}
+\]
+Notice that (**) means that $f$ is fiber preserving.
+\medskip
+
+\noindent
+{\bf{A.2.4 Exercise.}}
+Show that a covering with the universal property is unique in
+the sense that if $(Z_1,\phi_1)$ and $Z_2,\phi_2)$ is such a pair then
+there exists a homeomorphism $g\colon Z_1\to Z_2$
+with
+\[
+\phi_1= \phi_2\circ g
+\]
+\medskip
+
+\noindent
+{\bf{A.2.5 Existence.}}
+Show that an arc-wise connected  Hausdorff space
+$X$ has a universal covering $\widehat{X}$ and that
+the fundamental  group
+$\pi_1(\widehat{X})=0$.
+\medskip
+
+\noindent
+{\bf{A.2.6 The Galois property.}}
+A covering $\rho\colon Y\to X$
+where $Y$ is connected has the Galois property if there
+to each
+$p\in  X$ and every pair
+of points $y_1,y_2$ in $\rho^{-1}(p)$ exista a fiber presering
+homeomorphism $f\colon Y\to Y$
+with
+$f(y_1)= y_2$.
+\medskip
+
+\noindent
+{\bf{A.2.7 Exercise.}}
+Verify that the universal covering $\widehat{X}$
+has the Galois property.
+
+
+\bigskip
+\centerline {\bf{A.3 Runge sets on Riemann surfaces.}}
+
+\bigskip
+
+
+\noindent
+If $K$ is a compact subset of the Riemann surface $X$
+we get the conncted components $\{\Omega_\alpha\}$
+of the open complement $X\setminus K$.
+Since $X$ is connected we notice that
+\[ 
+\partial\Omega_\alpha\subset K\tag{i}
+\] 
+hold for every connected component in $X\setminus K$.
+Next,
+choose an open set $U$ which contains $K$ where $\overline{U}$
+is compact.
+This is of course possible since
+$K$  can be covered by a finite number of charts
+where each chart has a compact closure in $X$.
+If a component 
+$\Omega_\alpha$ is such that
+\[ 
+\partial U\cap \Omega_\alpha= \emptyset\tag {ii}
+\] 
+the connectivity
+of $X$ and (i) entail that
+\[
+\Omega_\alpha\subset U\tag{iii}
+\]
+Next,  the Heine-Borel Lemma
+a finite
+family of $\Omega_{\alpha_1},\ldots,\Omega_{\alpha_N}$
+whose union cover the compact set $\partial U$.
+Among these occur a finite family of non-compact
+sets, say
+$\Omega_{\alpha_1},\ldots,\Omega_{\alpha_k}$ where $1\leq k\leq N$.
+Set
+\[ 
+\mathfrak{h}(K)= K\, \cup\, \bigcup_*\, \Omega_\alpha\tag{iv}
+\]
+ where the *-marked union is taken over
+ all components for which (iii) hold together with  the finite family of relatively compact
+ components which intersect $\partial U$, or equivalently
+ \[
+ \mathfrak{h}(K)=X\setminus \Omega_{\alpha_1}\,\cup\ldotsÊ\cup\, \Omega_{\alpha_k}
+\]
+
+ 
+ \noindent
+ {\bf{A.3.1 Exercise.}}
+ Verify that $\mathfrak{h}(K)$ is compact and that
+ \[ 
+ \mathfrak{h}(\mathfrak{h}(K))=\mathfrak{h}(K)
+ \]
+ 
+ 
+ \noindent
+{\bf{A.3.2 Open Runge sets.}}
+An open subset $Y$ in $X$ is Runge if
+\[ 
+K\subset Y\implies \mathfrak{h}(K)\subset Y
+\]
+hold for every compact set $K$, i.e. the Runge hull of a compact
+subset of $Y$ stays in $Y$.
+ \medskip
+ 
+ \noindent
+{\bf{A.3.3 Proposition.}}
+\emph{Let $K$ be a compact Runge set
+in $X$ with a non-empty interior.
+Let $\Delta_1,\ldots,\Delta_N$
+be a finite number of open  discs whose union cover
+$\partial K$.  Then the open set below is Runge:}
+\[
+Y=K\setminus \,\cup\, \overline{\Delta}_\nu
+\]  
+
+ \noindent
+The easy proof is left as an exercise.
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{¤ 1. Proofs of the main results.}}
+\bigskip
+
+\noindent
+Preliminary results are established in ¤ 2
+where Dolbeaulit's Lemma from ¤ xx is crucial.
+Here the proof requires several steps which starts by a certain finiteness
+result in Propostion 2.3.2 and after one derives Dolbeault's Lemma via a 
+"tricky construction" which 
+is due to Cauchy and based upon 
+the general fact that if
+$A\colon V|to V$ is a linear operator on a finite dimensional vector space
+of some dimension $N$
+and
+\[ 
+\text{det}(\lambda\cdot E_V-A)=
+\lambda^N+
+c_{N-1}\lambda^{N-1}+\ldots +c_0
+\]
+then the linear operator
+\[
+A^N+
+c_{N--1}A^{N-1}+\ldots +c_0E_V
+\] 
+is identically zero.
+In ¤ 3 we first establish an approximation result
+where calculis with currents are used. The crucial point is the
+elliptic property of $\bar\partial$ 
+which implies that if $S$ is a current of bi-degree
+(1,0) in some open set $U$ of $X$
+which is $\bar\partial$-closed, then
+there exists a holomorphic 1-form $\sigma$ in $U$ such that
+\[
+S(\omega^{0,1})=\int_U\, \omega^{0,1}\wedge \sigma
+\]
+for every test-form $\omega^{0,1}$ of bi-degree 
+$(0,1)$ having compact support in $U$.
+At the end of ¤ 3 we deduce the Behnke-Stein theorem from the previous results.
+In ¤ 4 we derive further results  such as
+Weierstrass' theorem 
+which asserts that
+every divisor on an open Riemann surface is principal.
+Another crucial  fact is the existence of
+a globally defined holomorphic 1-form which never is zero.
+\medskip
+
+\noindent
+Armed with previous results we prove the uniformisation theorem in
+¤ 5 which is based upon repeated solutions to certain Dirchlet problems
+in an exhaustion of the simply connected Riemann surface
+$X$ by relatively compact Perron regular
+Runge domains.
+A crucial point during the proof  is that
+the hypothesis 
+\[
+\Omega(X)=\partial(\mathcal O(X))
+\]
+entails that the same holds for every
+open Runge set in $X$.
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{¤ 2. Dolbeault's Lemma.}}
+
+\bigskip
+
+
+\noindent
+Let $X$ be an open Riemann surface
+and $Y$  a
+relatively  compact open subset.
+Heine-Borel's Lemma gives a finite covering of
+$\overline{Y}$ by open charts
+$\{\Delta_\alpha\}$ and hence   a finite open covering 
+$\mathfrak{U}= \{U_\alpha\}$ 
+of $Y$ where
+\[
+U_\alpha=\Delta_\alpha\cap Y
+\]
+Construct  the Cech complex
+\[
+C^0(\mathfrak {U},\mathcal O)
+\overset{\delta}\to\,
+C^1(\mathfrak {U},\mathcal O)
+\overset{\delta}\to\,
+C^2(\mathfrak {U},\mathcal O)
+\overset{\delta}\to\ldots
+\]
+and consider  the cohomology group
+\[ 
+H^1(\mathfrak {U},\mathcal O)=
+\frac{Z^1(\mathfrak {U},\mathcal O)}{
+\delta(C^0(\mathfrak {U},\mathcal O)}\tag{2.1}
+\]
+Pompieu's  theorem and Leray's acyclicity theorem
+for sheaf cohomology entail that
+(2.1) is 
+independent of the chosen 
+covering  and equal to the cohomology group
+$H^1(Y;\mathcal O_X)$. Moreover,   the Dolbeault isomorphism from ¤ XX gives:
+\[
+H^1(\mathfrak {U},\mathcal O_X))\simeq
+\frac{\mathcal E^{0,1}(Y)}{\bar\partial(\mathcal E(Y))}\tag{2.2}
+\]
+
+\medskip
+
+\noindent
+{\bf{2.3 A finiteness result.}}
+Let $Y$ and $Y^*$ be a pair of relatively
+compact subsets of
+$X$ where  $\overline{Y}$ is a compact subset of
+$Y^*$.
+Let $\{\Delta_\alpha\}$ be a finite covering of 
+$\overline{Y^*}$
+by  charts and set
+$U_\alpha=\Delta_\alpha\cap Y^*$ so that
+$\mathfrak {U}^*=\{U_\alpha\}$
+is a finite 
+covering of 
+$Y^*$.
+Since $\overline{Y}$ is compact in
+$Y^*$ 
+there exists some
+$0<a<1$ such that
+$\{a\cdot \Delta_\alpha\}$ cover
+$\overline{Y}$ and  give a covering $\mathfrak{U}_*$
+of $Y$ where
+\[ 
+V_\alpha=
+a\cdot \Delta_\alpha\cap Y
+\]
+It is clear that
+$V_\alpha$ is a compact subset of $U_\alpha$ for every
+$\alpha$.
+Montel's theorem entails that the restriction operators
+\[
+C^p(\mathfrak{U},\mathcal O)\to 
+C^p(\mathfrak{U}_*,\mathcal O)
+\]
+are compact for each $p$.
+These restrictions  commute with the Cech coboundary mappings
+and give a  ${\bf{C}}$-linear operator
+\[
+H^1(\mathfrak U,\mathcal O)\to 
+H^1(\mathfrak{U}_*,\mathcal O)\tag{2.3.1}
+\]
+ A general result in functional analysis about
+ compact operators between Frechet spaces entails that the range of
+ (2.3.1) is finite dimensional.
+ By (2.2) it follows that 
+ the restriction map
+ \[
+ H^1(Y^*,\mathcal O)\to 
+  H^1(Y,\mathcal O)\tag{2.3.2}
+ \] 
+ has a finite dimensional range.
+Above $Y^*$ was relatively compact. More generally, let
+$U\subset X$ be open where
+$\overline{Y}$Êis a compact subset of $U$.
+We can find $Y^*$ as above where
+$Y\subset Y^*\subset U$.
+Let $N$ be the dimension of the range from (2.3.2). It means that
+there exists an $N$-tuple $\{\phi_\nu\}$ in $\mathcal E^{1,0}(Y^*)$
+and for every other $\phi\in \mathcal E^{1,0}(Y^*)$ there
+exist complex numbers $\{c_k\}$ such that
+\[
+\phi|Y-\sum\, c_k\cdot \phi_k|Y\in \bar\partial \mathcal E(Y)
+\]
+This applies  when we start from some
+$\psi\in \mathcal E^{1,0}(U)$
+and take the restriction $\phi=\psi |Y^*$. Hence
+the range of the map 
+\[ 
+H^1(U,\mathcal O)\to H^1(Y,\mathcal O)
+\] 
+is contained in the
+$N$-dimensional complex vector space
+generated
+by the images of $\{\phi_k|Y\}$ in
+Dolbeault's quotient space from (2.2) which defines
+$H^1(Y,\mathcal O)$. Summing up 
+we have proved
+
+\medskip
+
+\noindent
+{\bf{2.3.3 Proposition.}}
+\emph {Let $Y$ be a relatively compact open set in
+$X$. Then the range of}
+\[ 
+H^1(U,\mathcal O)\to H^1(Y,\mathcal O)
+\] 
+\emph{is finite dimensional for every open set
+$U$ which contains $\overline{Y}$.}
+\bigskip
+
+
+\noindent
+{\bf{2.4 Another finiteness result.}}
+Consider some finite open covering $\mathfrak{U}=\{U_\alpha\}$ of $X$.
+No assumption is imposed on the open sets $U_\alpha$.
+Let $Y$ be a relatively compact subset of $X$ and
+$\mathfrak{U}_*=\{V_\alpha\}$ a finite open covering of $Y$ such that
+$\overline{V}_\alpha$ is a compact subset of $U_\alpha$ for every
+$\alpha$.
+Restrictions give a 
+morphism from the Cech complex $C^\bullet(\mathfrak U,\mathcal O)$
+to
+$C^\bullet(\mathfrak{U}_* ,\mathcal O)$, and exactly as above  Montel's theorem implies that
+the  map
+\[
+H^1(\mathfrak U;\mathcal O)\to 
+H^1(\mathfrak{U}_*;\mathcal O)\tag{2.4.1}
+\] 
+has a finite dimensional range.
+\bigskip
+
+
+\noindent
+{\bf{2.4.2 A special case.}}
+Let $p$ be a point in $X$ and $Y$ a relatively compact subset.
+Here $p$ may or may not belong to $Y$.
+Choose a chart $\Delta$ centered at $p$.
+Now  $U_0=X\setminus\{p\}$ and $U_1=\Delta$ is an open covering 
+$X$.
+Let $0<a<1$ and put
+\[
+V_0=Y\setminus \frac{a}{2}\cdot \overline{\Delta}
+\quad\colon V_1=Y\cap a\cdot \Delta
+\]
+where
+$ \frac{a}{2}\cdot \overline{\Delta}$ is the closed disc of radius $a/2$.
+Here  $V_0,V_1$ cover $Y$
+and from the above the
+restriction map
+\[ 
+\rho\colon H^1(U_0,U_1;\mathcal O)\to
+H^1(V_0,V_1;\mathcal O)\tag{2.4.3}
+\] 
+has a finite dimensional range.
+Notice that
+\[ 
+C^1(U_0,U_1;\mathcal O)=\mathcal O(\Delta^*)
+\] 
+where $\Delta^*$ is the punctured
+disc wih $z=0$ removed.
+To each non-negative integer we have
+$z^{-j}\in \mathcal O(\Delta^*)$. Since 
+$C^2(U_0,U_1;\mathcal O)=0$  each
+of these holomorphic functions in
+the punctured disc yields a vector in
+$H^1(U_0,U_1;\mathcal O)$ and
+we apply $\rho$ to get
+\[ 
+\rho(z^{-j})\in  H^1(V_0,V_1;\mathcal O)
+\]
+If $N$ is the dimension of the range of $\rho$ we find
+complex numbers
+$c_0,\ldots,c_{N-1}$ such that
+\[
+\rho(z^{-N})= \sum\, c_j\cdot \rho (z^{-j})
+\]
+This means that there exists a pair $f_0\in\mathcal O(V_0)$ and
+$f_1\in\mathcal O(V_1)$ such that
+\[
+f_1=
+f_0+ \sum\, c_j\cdot z^{-j}-z^{-N}
+\quad\colon  z\in V_0\cap V_1\cap Y\tag{2.4.4}
+\]
+Hence $f_1$ and $g_0=f_0+ \sum\, c_j\cdot z^{-j}-z^{-N}$
+are glued in $V_0\cap V_1$ and give together a meromorphic function
+$g$ in $Y$ which is holomorphic in $Y\setminus \{p\}$ and has a pole of order
+$N$ at $p$  when
+$p\in Y$.
+
+\bigskip
+
+
+\noindent
+{\bf{2.5 Exercise.}}
+Use the above to show that
+when $Y$ is relatively  compact
+then there exists an open neighborhood $U$ of $\overline{Y}$ and some
+$f\in\mathcal O(U)$
+whose restriction to every connected component of $Y$ is
+non-constant.
+In particular the number of its zeros is finite
+and the reader should verify that
+the same holds if we take
+\[ F= f^N+c_{N-1}f^{N_1}+\ldots+c_1f+c_0
+\]
+where $N\geq 1$ and $\{c_k\}$ are complex numbers.
+
+
+
+\bigskip
+
+
+
+\centerline {\bf{2.6 Proof of Dolbeault's Lemma.}}
+\bigskip
+
+
+\noindent
+Let $Y\subset X$ be relatively compact and
+$Y^*$  another relatively compact set which contains
+$\overline{Y}$ as a compact subset. Choose coverings as in ¤ xx to
+get the restriction map
+\[
+\rho\colon H^1(Y^*,\mathcal O\to 
+ H^1(Y,\mathcal O)\tag{2.6.1}
+ \]
+We are going to prove that the $\rho$-image is zero.
+To get this we argue by a contradiction. If the image is $\neq 0$ we already know 
+that it has a finite dimension $N$.
+Choose
+$\xi_1,\ldots,\xi_N$ in $C^1(\mathfrak {U},\mathcal O)$
+such that $\{\rho(\xi_k)\}$ is a basis of the $\rho$-image.
+Here we employ Dolbeault's respresentation of
+cohomology so that each $\xi_k\in \mathcal E^{0,1}(Y^*)$.
+Next,  Exercise 2.5 applied with $Y^*$  gives
+$f\in \mathcal O(Y^*)$.
+Now  $f\cdot \xi_k$ belongs to
+$\mathcal E^{0,1}(Y^*)$ for each $k$
+and since   
+$\{\rho(\xi_k)\}$ was a basis
+we find  for each fixed $k$ complex numbers 
+$\{b_{kj}\}$
+such that
+\[
+f\cdot \xi_k-\sum_{j=1}^{j=N}\, b_{kj}\cdot \xi_k\, \bigl|Y\in
+\bar\partial (\mathcal E(Y))
+\tag{2.6.2 }
+\]
+Here $B=\{b_{kj}\}$ is an $N\times N$-matrix
+and we construct  the holomorphic function $F$ in $Y^*$
+\[
+F=\det(f\cdot E_N-B)
+\]
+The Cayley-Hamilton  theorem from  linear algebra gives
+\[
+F\cdot \xi_k|Y\in\bar\partial (\mathcal E(Y))
+\quad\colon k=1,\ldots,N\tag{2.6.3}
+\]
+Since $\{\rho(\xi_k)\}$ spans the $\rho$-image it follows that
+\[
+\rho(F\cdot \eta)=0\tag{2.6.4}
+\]
+for every cohomology class $\eta\in H^1(Y^*;\mathcal O)$.
+Next,  $f$ is non-constant
+on connected components in $Y^*$ and we notice  that 
+the same holds for $F$. Recall  also that $f$ even is holomorphic in
+a neighborhood of $Y^*$ which implies  that
+the zeros of $F$ in $Y^*$ is a finite set at most.
+Then   it is clear that there exists
+a finite covering
+$\mathfrak U$ via charts in $Y^*$ such
+that $F$ has no zeros in every non-empty intersection of $\mathfrak U$-sets.
+Let us now  consider an arbitrary
+cohomology class
+$\eta\in H^1(Y^*,\mathcal O)$
+represented by a Cech cocycle $\{\phi_{\alpha \beta}\}$.
+Since $F$ has no zeros in non-empty intersections 
+$U_\alpha\cap U_\beta$ we get another Cech cocycle
+\[ 
+\psi_{\alpha\beta}=\frac{\phi_{\alpha\beta}}{F}
+\]
+Let $\eta^*$ be its cohomology class. Now $\eta= F\cdot \eta^*$
+and (2.6.4) applied with
+$\eta^*$ entails  that
+$\rho(\eta)=0$. Since $\eta$ was arbitrary 
+the restriction map from 
+$H^1(Y^*;\mathcal O)$ into
+$H^1(Y;\mathcal O)$ is zero.
+\bigskip
+
+
+\centerline{\bf{¤ 3. Proofs of Theorem 0.2.1-0.2.2}}
+\bigskip
+
+
+\noindent
+Let us first consider
+a pair $(Y,K)$ from Theorem  0.2.2
+and  $Y^*$ is  another relatively compact subset of
+$X$ such that  $\overline{Y}$ is compact in $Y^*$.
+First we establish 
+a
+weaker variant of  Theorem
+0.2.2 where   the subsequent proof is attributed to Malgrange.
+
+\medskip
+
+\noindent
+{\bf{3.1 Proposition.}}
+\emph{When 
+ $f\in\mathcal O(Y)$ 
+there exists a sequence $\{g_n\}$ in $\mathcal O(Y^*)$ such that
+$|g_n-f|_K\to 0$.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $\mu$ be a Riesz measure
+supported by $K$ such that
+\[ 
+\int\, \phi\cdot d\mu=0\quad\colon \phi\in\mathcal O(Y^*)\tag{i}
+\]
+The Hahn-Banach  theorem gives Proposition 3.1 if we show that (i)
+entails that
+\[ 
+\int\, f\cdot d\mu=0\quad\colon f\in\mathcal O(Y)\tag{ii}
+\]
+To prove this
+we  construct a current
+$S$ on $X$ as follows: Apply Dolbeault's Lemma
+to the relatively compact set
+$Y^*$. It follows
+that  for each 
+$\omega^{0,1}\in \mathcal E^{0,1}(X)$ 
+there exists  
+$g\in \mathcal E(Y^*)$ such that
+\[
+\omega|Y^*= \bar\partial(g)\tag{iii}
+\]
+Here $g$ is unique up to $\mathcal O(Y^*)$ so by (i)
+the  integral 
+$\int\, g\cdot d\mu$
+only depends upon $\omega$. Hence there exists a
+current $S$ on $X$ 
+defined by
+\[ 
+S(\omega^{0,1})=\int\, g\cdot d\mu\tag{iv}
+\]
+with $g$ determined via (iii).
+Next, consider
+an 
+open chart $\Delta$ contained in $X\setminus K$.
+If $g\in C_0^\infty(X)$ has compact support in
+$\Delta$ we take $\omega^{0,1}= \bar\partial(g)$
+and since $g=0$ on $K$ one has 
+\[
+S(\bar\partial(g))=0
+\]
+Since this hold for every pair $(\Delta, g)$ as above,
+$S$ is $\bar\partial$-closed in $X\setminus K$ and
+the elliptic property of
+$\bar\partial$ gives a holomorphic 1-form
+$\sigma$ in $X\setminus K$ such that
+\[
+S(\omega^{0,1})=\int\, \omega^{0,1}\wedge \sigma\tag{v}
+\]
+holds when $\omega^{0,1}$ has compact support in
+$X\setminus K$.
+Let us now consider a point $p\in X\setminus \mathfrak{h}(K)$.
+By the construction of $\mathfrak{h}(K)$ this gives a non-compact
+open and connected subset $\Omega$ 
+of $X\setminus\mathfrak{h}(K)$
+which contains $p$. Since the current $S$ has compact support
+it follows that 
+\[
+\Omega\setminus \text{Supp}(S)\cup K)\neq \emptyset\tag{vi}
+\]
+Let $q$ be a point in this set and 
+choose a small open chart
+$\Delta$ centered
+at $q$
+which stays in $\Omega$ and is disjoint from
+the support of $S$. Then
+\[
+\int\, \omega^{0,1}\wedge \sigma=0
+\] 
+for every test-form
+$\omega^{0,1}$ with compact support in
+$\Delta$. Hence the restriction of $\sigma$
+to $\Delta$ is zero. Since
+$\sigma$ is a 
+holomorphic 1-form
+and  $\Omega$ is connected, 
+analyticity
+gives 
+$\sigma|\Omega=0$. In particular $\sigma=0$ holds in a neighborhood of
+$p$ which  proves the inclusion
+\[
+ \text{Supp}(S) \subset
+\mathfrak{h}(K)\tag{vii}
+\]
+Finally, by  assumption $\mathfrak{h}(K)$ is a compact subset of $Y$. 
+So if  $f\in\mathcal O(Y)$ we can find
+a test-function $g$ with compact support in
+$Y$ such that
+$g=f$ 
+holds in a neighborhood of $\mathfrak{h}(K)$.
+Then $\bar\partial(g)$ vanishes in a neighborhood of
+$\mathfrak{h}(K)$ so (vii) and the construction of $S$ entail that
+\[ 
+0=S(\bar\partial g)=\int_K\,g\cdot d\mu=
+\int_K\,f\cdot d\mu\tag{viii}
+\] 
+which proves Proposition 3.1.
+
+
+
+
+\bigskip
+
+
+
+
+
+\centerline{\bf{3.2 Proof of Theorem 0.2.1}}
+\medskip
+
+
+\noindent
+By  ¤ xx  we can  exhaust $X$ by an increasing sequence of Runge domains
+$\{Y_n\}$  where the closure of $Y_n$
+is a compact subset of $Y_{n+1}$ 
+for each $n$.
+Consider
+some $\phi\in \mathcal E^{0,1}(X)$.
+Dolbeault's Lemma applies to each pair
+$Y_n, Y_{n+1}$ and the restriction of
+$\phi$ to $Y_{n+1}$.
+Hence there exists
+$f_n\in \mathcal E(Y_n)$
+such that 
+\[
+ \bar\partial f_n=\phi|Y_n\tag{3.2.1}
+\]
+It follows that
+the restriction to $Y_n$ of $f_{n+1}-f_n$ is holomorphic
+and since $Y_n$ is Runge and $\overline{Y}_{n-1}$ is a compact subset,
+Proposition 2.4 entails that $f_{n+1}-f_n$
+can be uniformly approximated on
+$Y_{n-1}$ by functions from $\mathcal O(Y_{n+1})$.
+Hence there
+exists 
+$g_{n+1}\in \mathcal O(Y_{n+1})$
+such that the maximum norm
+\[
+||f_{n+1}+g_{n+1}-f_n||_{Y_{n-1}}<2^{-n}
+\]
+With $f^*_{n+1}= f_{n+1}+g_{n+1}$
+we still have
+\[
+\bar\partial f^*_{n+1}=\phi|Y_{n+1}
+\]
+Perfoming
+these modifications inductively with increasing $n$ we obtain a 
+sequence $\{f^*_n\}$ such that   (3.2.1) hold for every $n$
+and 
+\[
+||f^*_{n+1}-f^*_n||_{Y_{n-1}}<2^{-n}
+\quad\colon \, n=1,2,\ldots\tag{3.2.2}
+\]
+It follows that $\{f_n^*\}$ converge uniformly on $X$ to a continuous function
+$F$ which 
+entails that
+the distributions
+$\{\bar\partial f_n^*\}$ converge to the distribution derivative
+$\bar\partial (F)$. Moreover, since (3.2.1) hold for every
+$n$
+it is clear that
+\[ 
+\bar\partial(F)=\phi\tag{3.2.3}
+\]
+holds everywhere in $X$.
+Finally, $\phi$ is a smooth form so  the elliptic property of
+$\bar\partial$ implies that
+$F$ is a $C^\infty$-function. Hence the mapping
+$\bar\partial\colon \mathcal E(X)\to \mathcal E^{(0,1)}(X)$
+is surjective which proves Theorem 0.2.1.
+
+
+\bigskip
+
+
+
+
+
+\centerline{\bf{3.3 Proof of Theorem 0.2.2}}
+\medskip
+ TO BE GIVEN
+
+
+\newpage
+
+\centerline{\bf{¤ 4. Further results.}}
+\bigskip
+
+
+\noindent
+A locally free sheaf of $\mathcal O$-modules of rank one is called
+a
+holomorphic line bundle.
+Let $\mathcal L$ be such a sheaf.
+By definition it has local trivialisations, i.e. we can find
+a locally finite covering $\mathfrak{U}$
+by charts such that
+the restricted sheaf
+$\mathcal L|U_\alpha\simeq \mathcal O$.
+In each non-empty intersection
+$U_\alpha\cap U_\beta$ we find
+a zero free function 
+$g_{\alpha\beta}\in\mathcal O^*(U_\alpha\cap U_\beta)$
+so that the space $\mathcal L(V)$ of sections over
+an open subset $V$ in $X$
+consists of a family $\{\xi_\alpha\in \mathcal O(U_\alpha\cap V)\}$
+satisfying the glueing conditions
+\[
+\xi_\alpha|U_\alpha\cap U_\beta\cap V=
+g_{\alpha\beta}\cdot
+\xi_\beta|U_\alpha\cap U_\beta\cap V\tag{*}
+\]
+\medskip
+
+\noindent
+Repeating  the methods which were used to prove
+Theorem 0.2.1  one has the result below whose detailed verification is left
+as an exercise to the reader.
+
+\medskip
+
+\noindent
+{\bf{4.1 Theorem.}}
+\emph{For every holomorphic line bundle
+$\mathcal L$ one has $H^1(X,\mathcal L)=0$.}
+\bigskip
+
+
+\noindent
+{\bf{4.2 Example.}}
+The 
+sheaf $\Omega$ of holomorphic 1-forms is an example of a  holomorphic line bundle.
+Another example is the sheaf
+$\Theta_X$ whose sections are holomorphic vector fields.
+Notice that
+\[ 
+\Omega=Hom_{\mathcal O}(\Theta_X,\mathcal O)
+\]
+is the  dual line bundle.
+Theorem 4.1 entails that
+\[
+H^1(X, \Omega)=H^1(X,\Theta_X)=0\tag{4.2.1}
+\]
+
+
+
+ \medskip
+ 
+ 
+ \centerline{\bf{4.3 Proof of 
+Weierstrass'  Theorem}}
+
+\bigskip
+
+
+\noindent
+Let $D$ be a divisor on $X$
+which means that integers $\{k_\nu\}$ are assigned to
+a discrete sequence of points $\{p_\nu\}$.
+We must prove that there exists a globally deefined meromorphic function $\psi$
+whose principal divisor is $D$.
+To begin with one has:
+
+\medskip
+
+\noindent
+{\bf{4.3.1 Exercise.}}
+Use a
+$C^\infty$-partition of the unity
+to find a function $\phi$ which is zero-free and 
+$C^\infty$ in the open complement of
+the discrete set $\{p_\nu\}$, and for each
+$p_\nu$ there is a small open  chart
+$\Delta_\nu$ centered at $p_\nu$ with a local coordinate
+$z_\nu$ where 
+\[
+\phi|\Delta_\nu= z_\nu^{k_\nu}
+\]
+\medskip
+
+\noindent
+Next, we find a locally finite covering
+$\mathfrak{U}=\{U_\alpha\}$ of  charts in
+$X$ which contains
+the discs
+$\{\Delta_\nu\}$
+while each $U_\alpha$ which differs from these discs 
+does not contain points in $\{p_\nu\}$.
+For
+each
+$U_\alpha$ which does not contain any point in
+$\{p_\nu\}$ we take $f_\alpha=1$ while
+$f_\alpha= z_\nu^{k_\nu}$ when
+$U_\alpha=\Delta_\nu$.
+Then we can write 
+\[
+\phi|U_\alpha= f_\alpha\cdot \psi_\alpha
+\quad\colon\,\psi_\alpha\in C^\infty(U_\alpha)
+\tag{i}
+\] 
+Since $\phi$ is zero-free outside
+$\{p_\nu\}$ we see that
+every $\psi$-function is zero-free. Since  every chart
+$U_\alpha$ is simply connected there exist
+$\{\rho_\alpha\in C^\infty(U_\alpha)\}$ such that
+\[
+ \psi_\alpha= e^{\rho_\alpha}\tag{ii}
+\]
+In each non-empty intersection $U_\alpha\cap U_\beta$  
+it follows that
+\[
+e^{\rho_\alpha-\rho_\beta}=\frac{f_\beta}{f_\alpha}\tag{iii}
+\]
+Here 
+each quotient
+$\frac{f_\beta}{f_\alpha}\in \mathcal O^*(U_\alpha\cap U_\beta)$
+and 
+(iii) entails that
+the restricted differences
+\[
+\rho_\alpha-\rho_\beta|U_\alpha\cap U_\beta)\in 
+\mathcal O(U_\alpha\cap U_\beta)
+\]
+So with $g_{\alpha\beta}=\rho_\alpha-\rho_\beta|U_\alpha\cap U_\beta)$
+we get a Cech-cocycle in $H^1(\mathfrak{U},\mathcal O)$.
+The Behnke-Stein theorem entails that it is a $\delta$-coboundary. Hence
+there exist $\{g_\alpha\in \mathcal O(U_\alpha)\}$ such that
+\[
+\rho_\alpha-\rho_\beta|U_\alpha\cap U_\beta)=g_\alpha-g_\beta\tag{iv}
+\]
+Taking exponentials in (iv) and using (iii) it follows that
+\[
+e^{g_\alpha}\cdot f_\alpha=
+e^{g_\beta}\cdot f_\beta\tag{v}
+\] 
+hold in $U_\alpha\cap U_\beta$.
+This gives
+a globally defined meromorphic
+function
+$\psi $ such that
+\[ 
+\psi|U_\alpha=e^{g_\alpha}\cdot f_\alpha\tag{vi}
+\]
+Finally,  the construction of the $f$-functions  implies  that 
+the principal divisor $D(\psi)$ is equal to the given divisor $D$
+which finishes the proof of Weierstrass' theorem.
+\bigskip
+
+
+\noindent
+{\bf{4.4 The construction of a non-vanishing holomorphic form.}}
+By ¤ xx there exists a non-zero global section $\omega$ in $\Omega(X)$.
+If $(\Delta,z)$ is a chart we have
+\[
+\omega|\Delta=g(z)\cdot dz
+\]
+where $g\in\mathcal O(\Delta)$ is non-constant and hence has
+a discrete set of zeros.
+The locally defined divsors of these $g$-functions
+match each other and yield a globally defined
+divisor
+$D=\{(p_\nu;k_\nu)\}$ in $X$.
+Notice that
+$D$ is positive, i.e.
+ the integers $k_\nu>0$.
+Weierstrass's theoren gives
+$\psi\in\mathcal O(X)$ with $D(\psi)=D$.
+Then it is clear that
+\[ 
+\omega^*=\psi^{-1}\cdot \omega
+\]
+yields a holomorphic 1-form whose associated $g$-functions in local charts
+are zero-free.
+
+\bigskip
+
+
+\centerline{\bf{4.5 The Mittag-Leffler theorem.}}
+\bigskip
+
+
+\noindent
+Announce and Prove !
+ 
+\newpage
+
+
+
+
+\centerline{\bf{¤ 5. The uniformisation  theorem}}
+
+\bigskip
+
+
+\noindent
+Consider a  non-compact Riemann surface
+$X$ where  every holomorphic 1-form is $\partial$-exact.
+By ¤ xx there exists $\omega\in \Omega(X)$ which is everywhere 
+non-zero.
+So if $Y$ is an open set in $X$
+and $\mu\in\Omega(Y)$
+ there exists $g\in\mathcal O(Y)$ such that
+ \[ 
+ \mu= g\cdot \omega_Y\tag{i}
+\] 
+where $\omega_Y$ is the restriction of $\omega$ to $Y$.
+We use this to prove
+
+\medskip
+
+\noindent
+{\bf{5.1 Proposition.}} \emph{If 
+$Y$ is  an open Runge set in $X$ one has}
+\[
+\Omega(Y)=\partial(\mathcal O(Y))\tag{5.1.1}
+\]
+
+\noindent
+\emph{Proof.}
+Let  $\mu$ be as in (i).
+Consider a point $y_0\in Y$ and a closed curve
+$\gamma$ in $Y$ which has $y_0$ as initial 
+and terminal point.
+Since $Y$ is Runge, Theorem 0.2.2  gives  a sequence
+$\{g_n\}$ in $\mathcal O(X)$ and 
+the maximum norms $|g_n-g|_\gamma\to 0$.
+It follows that
+\[
+\int_\gamma\, \mu=\lim_{n\to\infty}\, \int_\gamma\, g_n\cdot \omega
+\]
+Here $\gamma$ is a closed curve in $X$ and since
+each $g_n\cdot \omega$ belong to $\Omega(X)$ the 
+hypothesis on $X$ implies
+that the integrals in
+the right hand side above are all zero. Hence
+the line integrals of $\mu$ are zero for all closed curves
+at $y_0$ and then  ¤ xx shows  that it is $\partial$-exact in $Y$
+which finishes the proof.
+
+\medskip
+
+\noindent
+{\bf{5.2 Semi-local conformal mappings.}}
+Let $Y$ be a relatively compact open subset of $X$ which is 
+Runge and Dirichlet regular.
+Let $y_0\in Y$ and by
+¤¤ there exists
+$g\in\mathcal O(X)$ with  a simple zero at $y_0$ and  zero-free
+in $X\setminus\{y_0\}$.
+Now $\mathfrak{Re}(g)$ restricts to a continuous function
+on $\partial Y$ and we find a harmonic function
+$u$ in $Y$ whose boundary value function is
+$\log |g|$.
+The equality (5.1.1) and the remark in ¤ xx  entail that
+$u$ has a harmonic conjugate $v$ in $Y$
+which gives $u+iv\in\mathcal O(Y)$. Set
+\[
+f=g\cdot e^{-(u+iv)}
+\]
+On $\partial Y$ it follows that
+\[ 
+|f|=|g|\cdot e^{-\log|g|}=1
+\]
+At the same time $f$ has a simple zero at $y_0$ and is zero-free in
+$Y\setminus \{y_0\}$.
+The result in ¤ xx shows  that
+$f\colon Y\to D$ is biholomorphic.
+Around $y_0$ we choose a small chart
+$(\Delta,z)$ and get the non-zero complex derivative 
+$f'(0)$
+of $f$ at $z=0$.
+With
+\[
+f^*=\frac{1}{f'(0)}\cdot f\tag{4.2.1}
+\] 
+we have a 
+biholomorphic mapping from $Y$ into the open disc of radius
+$|f'(0)|$
+and  the $f^*$-derivative at $z=0$ is one.
+
+
+
+
+\medskip
+
+\noindent
+{\bf{5.3 A global construction.}}
+By ¤ xx we can exhaust $X$ with an increasing sequence of
+relatively compact open subsets
+$\{Y_n\}$ which are Runge and Dirichlet regular.
+Fix a point $p\in Y_0$
+and a local chart $(\Delta,z)$ as above.
+For each $n\geq 0$  (5.2.1) gives some $r_n>0$ and a biholomorphic map
+\[
+f_n\colon Y_n\to D(r_n)
+\]
+where $f_n(p)=0$ and $f'_n(0)=1$.
+The inverse mapping $f_n^{-1}$
+is holomorphic in the open disc $D(r_n)$
+and we notice that the complex derivative
+\[
+(f_n^{-1})'(0)=1\tag{i}
+\]
+Next, to each $n\geq 0$ we have the  composed function
+\[
+h_n= f_{n+1}\circ f_n^{-1}
+\]
+which maps $D(r_n)$ into $D(r_{n+1})$
+where $h_n(0)=0$ and (i) gives
+$h'_n(0)=1$. Schwarz'  inequality implies that 
+\[
+r_n\leq r_{n+1}
+\]
+Set
+\[ 
+R= \lim_{n\to\infty}\, r_n
+\]
+We shall construct a biholomorphic map
+$f^*\colon X\to D(R)$  where the case $R=+\infty$ means that
+$D(+\infty)={\bf{C}}$.
+To find $f^*$ we shall pass to certain subsequences of 
+$\{f_n\}$.
+Consider first the composed functions
+\[
+g_n= \frac{1}{r_0}\cdot f_n\circ f_0^{-1}(r_0z)
+\]
+which by the choice of $r_0$ and the inclusion $Y_0\subset Y_n$ are
+holomorphic in the open unit disc $D$ of the complex $z$-plane.
+It is clear that
+we have
+\[
+g_n(0)=0\quad\colon g'_n(0)=1
+\]
+Moreover, $g_n$ is a biholomorphic map from
+$D$ onto the
+open set $r_0^{-1}\cdot f_n(Y_0)$.
+By the  result from ¤ xx  $\{g_n\}$ is a normal family in the sense lof
+Montel. Hence we can extract a subsequence
+$\{g_{n_k}\}$ which converges uniformly on compact subsets
+of $D$.
+\medskip
+
+\noindent
+{\bf{5.4 Exercise.}}
+Verify that
+the convergence of $\{g_{n_k}\}$  above entails that
+$\{f_{n_k}\}$  converges uniformly over compact subsets of $Y_0$
+to a limit function $f^*_0\in\mathcal O(Y)$.
+Moreover, since
+each restriction $f_{n_k}|Y_0$
+is biholomorphic and the derivatives
+$f'_{n_k}$ at $p$ all are equal to one, 
+it follows from
+the result in ¤ xx that
+$f^*_0\colon Y_0\to f_0^*(Y_0)$ is biholomorphic.
+\bigskip
+
+\noindent
+Next, starting with the sequence 
+\[
+g_k= r_1^{-1}\cdot f_{n_k}\circ f_1^{-1}
+\]
+we repeat the arguments above and find
+a subsequence $\{\phi_{k_j}\}$ which conveges uniformly  in the unit disc
+and
+returning  to the $f$-sequence,  its corresponding  subsequence
+converges uniformly on $Y_1$ to a limit function
+$f^*_1$ which yields a biholomorphic map from
+$Y_1$ onto $f^*_1(Y_1)$.
+We  continue  
+by an induction over $n$ and 
+obtain  biholomorphic maps $\{f^*_n\colon Y_n\to f^*_n(Y_n)\}$ 
+and after the passage to a  "diagonal subsequence" we find
+a subsequen ce $\{f_{n_k}\}$ which converges uniformly on compact subsets of
+$x$ to a limit function $f^*$ which gives the requested biholomorphic map
+from $X$ onto $D(R)$.
+
+ 
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sheaves and currents will be used in the subsequent proofs.
+The crucial result in this chapter are  the following vanishing theorems.
+
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{For every non-compact Remann surface one
+has
+ $H^1(X,\mathcal O)=0$.}
+\bigskip
+
+\noindent
+Next, let $\mathcal O^*$ be the multiplicative sheaf whose sections
+are zero-free holomorphic functions.
+
+\medskip
+
+
+\noindent
+{\bf{0.2 Theorem.}}
+\emph{The cohomology group $H^1(X,\mathcal O^*)=0$.}
+\medskip
+
+\noindent
+A locally free sheaf of $\mathcal O$-modules of rank one is called
+a holomorphic line bundle
+As explained in ¤ xx the family of holomorphic line bundles
+correspond to elements in
+$H^1(X,\mathcal O^*)=0$. So Theorem 0.2 means that
+every holomorphic line bundle $\mathcal L$
+is holomorphically trivial
+and as a sheaf  therefore isomorphic to
+$\mathcal O$ which by Theorem 0.1 entails that
+\[
+H^1(X;\mathcal L)=0\tag{*}
+\]
+
+
+\noindent
+However, to  prove Theorem 0.2 we shall  need 
+(*) and we shall later on explain how
+(*) can be established in a similar way as in the special case
+$\mathcal L=\mathcal O$.
+\medskip
+
+\noindent
+{\bf{0.3 Some  cohomology groups.}}
+The sheaf $\Omega$ is a locally free sheaf of $\mathcal O$-modules of rank one
+and there is  the exact sequence of sheaves:
+\[ 
+0\to {\bf{C}}_X\to \mathcal O\overset\partial\to \Omega\to 0
+\]
+Passing the the long exact sequence of cohomology
+the vanishing in
+(*)  entails that
+\[ 
+H^2(X,{\bf{C}}_X)=0
+\]
+From this
+it follows trivially - see ¤ xx - that
+if the complex field ${\bf{C}}$ is replaced by the field of rational numbers
+then
+\[
+H^2(X,Q_X)=0\tag{i}
+\]
+Next,   the exponential map
+which sends a holomorphic function $f$ to
+the zero-free function $e^{2\pi i f}$
+gives an exact sequence of sheaves:
+\[
+0\to {\bf{Z}}_X\to \mathcal O\overset{\text{exp}}\to \mathcal O^*\to 0
+\]
+Passing to the long exact sequence of cohomology  we get
+\[
+H^1(X,\mathcal O^*)\simeq
+H^2(X,{\bf{Z}}_X
+\]
+So Theorem 0.2 anounts to show that
+the last cohomology group is zero.
+We have already  (i) so 
+Theroem 0.2 is
+"almost" derived from 
+(*).
+However, extra arguments will be needed to 
+get Theorem 0.2 which we begin to explain.
+Let  $\mathcal L$
+ibea holomorphic line bundle.
+By definton it is trivial, i.e. isomorphic to $\mathcal O$ if and only if it
+has a global generating section.
+Suppose to begin with that one has found
+a non-constant global section $\xi\in \mathcal L$.
+The zeros of $\xi$ is some (possibly empty) discrete set in $xX$.
+Let $\{q_\nu\}$ be these zeros and $\xi$ vanishes of some
+order $k_\nu$ at $q_\nu$.
+Suppose we have
+found
+a meromorphic function $g$ in $X$
+with poles of order $k_\nu$ at every
+ $q_\nu$ while $g$ is a zero-free holomorphic function outside this
+ discrete set.
+ Then $g\cdot \xi\in\mathcal L(X)$ is 
+ a global section which gives the requested
+trivialisation so that
+ $\mathcal L\simeq \mathcal O$.
+ So in order to get Theorem 0.2 we need to 
+ prove the existence of globally defined meromorphic functions
+ with prescribed
+ poles on  discrete subsets  of  $X$.
+The whole discussion has shown that Theorem 0.2 follows if we in addition to
+Theorem 01 and its extension in  (*) have established the following:
+\medskip
+
+\noindent
+{\bf{0.4 Theorem.}}
+\emph{Every divisor $D$ on $X$ is principal, i.e.
+equal to $D(f)$ for some
+$f\in\mathfrak {M}(X)$.}
+
+ 
+ 
+\bigskip
+
+
+\noindent
+{\bf{0.5 Runge's theorem.}}
+Recall from ¤ xx that an open subset $Y$ in $X$ is a Runge domain if
+every connectd component of the closed complemnet $X\setminus y$
+is non-compact. The following result will
+be used to prove Theorem 0.1 and  has also independent interest:
+
+\medskip
+
+\noindent
+{\bf{0.6 Theorem.}}
+\emph{Let $Y\subset X$ be a Runge domain.
+Then
+the restriction map $\mathcal O(X)\to \mathcal O(Y)$ has a dense image.}
+\bigskip
+
+\noindent
+The results above constitute the
+major facts in this section.
+To prove Theorem 0.1  we first establish  seeemingly weaker results
+and after 
+finish the proofs of the the other  results.
+\medskip
+
+\centerline{\bf{¤ 1. A finiteness result.}}
+
+\medskip
+
+\noindent
+Consider
+an connected open subset $Y$ 
+which is relatively compact in
+$X$. The boundary
+$\partial Y$
+is  compact but in general it need not be connected.
+It can for example consist of a finite number of pairwise disjoint
+and closed Jordan curves
+together with some Jordan arcs and
+some isolated points, like an annulus where
+a finite set of points in the open annulus have been
+removed.
+If $\partial Y$
+is "nice", for example piecewise analytic
+then
+tthe cohomology group
+$H^1(Y,{\bf{C}})$ is a finite dimensional complex vector space.
+Recall also from ¤ xx that one has
+the isomorphism
+\[
+\frac{\mathcal E^1(Y)}{d(\mathcal E(Y))} \simeq
+H^1(Y,{\bf{C}})
+\]
+and
+as explained in ¤ xx there exists   an injective map
+\[
+\frac{\mathcal E^{0,1}Y)}{\bar\partial(\mathcal E(Y))}\to
+H^1(Y,{\bf{C}})
+\]
+Moreover, Dolbeault's Theorem   identifies
+right hand side with
+$H^1(Y,\mathcal O)$ and hence
+this cohomology group is finite dimensional
+for every $Y$ as above with a nice compact boundary.
+The finite-dimensionality
+enable us to construct non-constant meromorphic functions on
+$Y$.
+Namely, if $p\in Y$ is fixed we
+take a positive integer $N$ and
+the sheaf $\mathcal O_D$ where $D$ is the divisor
+$N\cdot p$ which means that one allows a pole of order
+$\leq N$ at $p$.
+Exactly as in the compact case from ¤ xx one has an exact sequence
+\[ 
+0\to \mathcal O(Y)\to \mathcal O_D(Y)
+\to {\bf{C}}^N\to H^1(Y,\mathcal O)\to H^1(Y,\mathcal O_D)\to
+0
+\]
+If $N$ is strictly larger than
+the dimension of
+$H^1(Y,\mathcal O)$ we  get a non-zero
+section of  $\mathcal O_D$, i.e. a meromorphic
+function
+in $Y$
+with a pole of order
+$\leq N$ at $p$ and otherwise  holomorphic.
+
+
+\bigskip
+
+
+\centerline{\bf{ ¤ 2. A vanishing lemma.}}
+\medskip
+
+\noindent
+Consider a pair  $Y\subset Y_1$ 
+where $Y$ is relatively compact in $Y_1$.
+As explained in ¤ xx one has  the restriction map
+
+\[
+\mathcal L\colon H^1(Y_1,\mathcal O)\to 
+H^1(Y,\mathcal O)\tag{2.1}
+\]
+\medskip
+
+\noindent
+{\bf{2.2 Proposition.}}
+\emph{If $H^1(Y;\mathcal O)$ is finite dimensional
+the $\mathcal L$-image in (2.1) is zero}
+\medskip
+
+\noindent
+\emph{Proof.}
+Choose $\xi_1,\ldots,\xi_K$ in  
+$H^1(Y_1,\mathcal O)$ such that
+$\{\mathcal L(\xi_k)\}$
+gives a basis for the  $\mathcal L$-image
+in the finite dimensional vector space
+$H^1(Y;\mathcal O)$.
+Next, we can find
+a 
+relatively compact set
+$Y_2$ in $X$ where $Y_1<< Y_2$
+and $\partial Y_2$ is "nice" so that
+$H^1(Y_2,\mathcal O)$ is finite dimensional.
+Fix a point $p\in Y_2\setminus Y_1$ and from ¤ 1 we 
+find
+a meromorphic function
+$f$
+in $Y_2$ 
+which restricts to a holomorphic funtion in
+$Y_1$
+which is not constant  on the connected components of this set.
+Now we get the vectors
+$\{f\cdot \xi_k\}$  in $H^1(Y_1,\mathcal O)$
+and take  their $\mathcal L$-images.
+Since we have chosen a basis above 
+there is an $N\times n$-matrix $B$ with complex
+elements such that
+
+\[ 
+\mathcal L(f\cdot \xi_k)=\sum_{j=1}^{j=N}\,
+b_{kj}\cdot \mathcal L(\xi_j)\tag{i}
+\]
+Let us now consider
+the holomorphic function in $Y_1$ defined by 
+\[ 
+F=\det(f\cdot E_N-B)
+\]
+Then (i) and Cramer's rule entail that
+\[
+\mathcal L(F\cdot \xi_k)=0\quad\colon\, 1\leq k\leq N\tag{ii}
+\] 
+Above $F$ is meromorphic in $Y_2$ with no poles
+in the relatively compact subset $Y_1$.
+We can therefore cover $Y_1$ with a finite number of charts
+$\mathfrak{U}= \{U_\alpha\}$
+such that
+$F$ has no zeros in
+non-empty intersections $U_\alpha\cap U_\beta$ when
+$\alpha\neq \beta$.
+Let us then take some $\eta\in H^1(Y_1,\mathcal O)$ which by 
+Lerays theorem is represented by a cocycle
+$\{\phi_{\alpha,\beta}\}$
+in $Z^1(\mathfrak{U},\mathcal O)$.
+Since $F\neq 0$ on each non-empty intersection we get  the cocycle
+$\{\psi_{\alpha,\beta}= F^{-1}\cdot \phi_{\alpha,\beta}\}$
+which represents a vector in $H^1(Y_1,\mathcal O)$ denoted by
+$\eta^*$.
+From  these  constructions we get
+\[ 
+\mathcal L(\eta)=\mathcal L(F\cdot \eta^*)
+\] 
+By (ii) the last term is zero and since
+$\eta\in H^1(Y_1,\mathcal O)$ was arbitrary Proposition 2.2 is proved.
+
+\medskip
+
+\noindent
+{\bf{2.3 A $\bar\partial$-equation.}}
+Consider a pair $Y<< Y_1$ as above.
+Dolbeault's theorem and Proposition 2.2  imply
+that every  $\phi\in \mathcal E^{0,1}(Y_1)$
+restricts to a $\bar\partial$-exact form on $Y$, i.e.
+there exsits $g\in \mathcal E(Y)$ such that
+\[ 
+\bar\partial g=\phi|Y\tag{2.3.1}
+\]
+\medskip
+
+\noindent
+Now we can establish  a density result:
+
+\medskip
+
+\noindent
+{\bf{2.4 Proposition.}}
+\emph{Let $Y$ be 
+a relatively compact
+Runge domain in $X$. Then, for every $Y_1$
+sich that $Y< Y_1$ and $H^1(Y_1,\mathcal O)$ is finite dimensional
+it follows that  the restriction map from 
+$\mathcal O(Y_1)$ to $\mathcal O(Y)$ has a dense image.}
+\bigskip
+
+
+\noindent
+\emph{Proof.}
+By the Hahn-Banach Theorem it suffices to show that 
+for every (1,1)-current $\gamma$ with  some compact support $K$  in $Y$
+one has the implication
+\[ 
+\gamma(f|Y)=0\quad\forall \,\, f\in \mathcal O(Y_1)\implies
+\gamma|\,\mathcal O(Y)=0\tag{i}
+\]
+Consider a current $\gamma$ as above which vanishes on
+each restricition of $f\in\mathcal O(Y_1)$
+to $Y$ and let  $k$ be its compact support in $Y$.
+Next,  choose an open set $Y_2$
+where $Y_1<< Y_2$ and (2.3.1)
+holds for this pair. So when
+$\phi\in \mathcal E^{0,1}(X)$
+there exists
+$g\in \mathcal E(Y_1)$ such that
+\[
+\bar\partial g=\phi|Y_1
+\]
+Above $g$ is unique up to a
+function in $\mathcal O(Y_1)$ and since
+$\gamma$  vanishes on
+$\mathcal O(Y_1)|Y$ 
+the evaluation $\gamma(g)$ only depends upon $\phi$.
+Hence there exists a current $S$ on $X$
+defined by
+the process above, i.e.
+\[
+S(\phi)= \gamma(g|Y)\quad\colon\,\bar\partial g=\phi|Y_1
+\]
+If $h\in C_0^\infty(X\setminus K)$
+we get the $(0,1)$-form
+$\bar\partial(h)$ and by the constructions above
+\[ 
+S(\bar\partial h)= \gamma(h|Y)=0
+\] 
+where the last equality follows since
+$\gamma$Êis supported by $K$.
+This means that the current $S$ is $\bar\partial$-closed in
+$X\setminus K$ and since $\bar\partial$ is elliptic
+the restricttion of $S$
+ to $X\setminus K$ is expressed by a holomorphic 1-form
+$\sigma\in \Omega(X\setminus K)$.
+So far we have not used the assumption that $Y$ is Runge.
+To profit upon this we consider
+the compact hull
+$\mathfrak{h}(K)$ from ¤ XX.
+If
+$y\in Y\setminus \mathfrak{H}(K)$  
+the connected component $V$
+in
+$X\setminus  K$ which contains $y$ is non-compact.
+Since the current $S$ has  compact support it follows that
+\[ 
+V\setminus \bigl(\text{Supp}(S)\cup K\bigr)\neq \emptyset\tag{ii}
+\]
+Now $\sigma$ respresents $S$ outside $K$
+and  therefore it must vanishes in
+the open set (ii).
+By analyticity $\sigma$ vanishes in the whole connected
+set $V$ and hence in a neighborhood of $y$.
+Since $y$ was arbitrary we conclude that 
+$\sigma$ vanishes identically in
+$Y\setminus \mathfrak{h}(K)$.
+Let us now consider some
+$f\in \mathcal O(Y)$ and 
+take
+$g\in C_0^\infty(Y)$ where
+$g=f$  in an open neighborhood of
+$\mathfrak{h}(K)$.
+It follows that
+\[ 
+S(\bar\partial(g))=\gamma(g|Y)= \gamma(f)
+\] 
+where the last equality holds since
+$K$ is the support of $\gamma$.
+Finally, since
+$f$ is holomorphic we have $\bar\partial g=0$ in a neighborhood of
+$\mathfrak{H}(k)$
+and since $\sigma$ is supported by $\mathfrak{h}(K)$ it follows that
+$S(\bar\partial(g))=0$. Hence 
+$\gamma(f)=0$ for every $f\in \mathcal O(Y)$
+which proves the requested implication (i)
+above and hence the density in
+Proposition 2.4.
+
+
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+ The
+ proof above
+ is attributed to Malgrange and  we  followed
+ the presentation in  [Forster: page xx-xx].
+ \bigskip
+ 
+\noindent
+{\bf{2.5 The case of locally free $\mathcal O$-modules.}}
+If $\mathcal L$ is 
+a locally free sheaf of $\mathcal O$-modules with rank one
+similar results as above hold. Theproofs are more or less verbatim.
+More precisely we first have some locally finite covering
+$\mathfrak{U}=\{U_\alpha\}$ by simply connected charts
+and $\mathcal L|U_\alpha$ are trvial for every $\alpha$, i.e.
+there exists a section $\rho_\alpha\in\mathcal L(U_\alpha)$
+such that the restricted sheaf
+$\mathcal L|U_\alpha$ is the free
+$\mathcal O_{U_\alpha}$-module 
+generated by $\rho_\alpha$.
+Shrinking $\mathfrak{U}$ if necessary we may assume that
+the transistion functions which give
+\[
+\rho_\beta= \phi_{\beta\alpha}\cdot \rho_\alpha
+\]
+ in each non-empty intersection $U_\beta\cap U_\alpha$ yiled bounded
+ holomrphic functions, i.e. the maximum norms
+ \[
+ || \phi_{\beta\alpha}||_{U_\beta\cap U_\alpha}<\infty
+\]
+When
+this holds it is meaningful to speak about convergence for $\mathcal L$-valued sections.
+More precisely, let 
+$Y<< Y_1$ and $\{\rho_\nu\in\mathcal (Y_1)\}$
+be given. If $\rho_*\in \mathcal L(Y)$ and $K$ is a compact subset
+of
+$Y$ we leave it to the reader to
+clarify the condition that $\{\rho_\nu|K$ converges in a uniform way to
+$\rho|K$, i.e. u
+Thus, in Propostion 22and 2.4 we can replace $\mathcal O$ by
+any $\mathcal L$. Concerning (2,3,1) we ntocie that
+there exists the sheaf
+\[
+ \mathcal E_\mathcal L= 
+ \mathcal O_\mathcal L\otimes_\mathcal O\,\mathcal E
+\]
+and
+a well  defined map
+\[
+\bar\partial\colon\mathcal E_\mathcal L\to \mathcal E^{(0,1)}_\mathcal L
+\]
+So now (2,3,1) means that if $\phi\in \mathcal E^{(0,1)}_\mathcal L(Y_1)$
+then there exists
+$g\in \mathcal E_\mathcal L(Y)$ such that
+\[
+\bar\partial(g)=\phi|Y
+\]
+
+
+
+
+
+\centerline{\bf{2.5 Proof of Theorem 0.1}}
+\medskip
+
+\noindent
+By  ¤ XX we  exhaust $X$ by an increasing sequence of Runge domains
+$\{Y_n\}$
+where $Y_n<<Y_{n+1}$ and $\{H^1(Y_n,\mathcal O)\}$ are finite dimensional.
+Consider
+some $\phi\in \mathcal E^{0,1}(X)$. Now (2.3.1) applies to each
+piar $Y_n<< Y_{n+1}$ and since $\phi$ restricts to 
+$\mathcal E^{(0,1)}(Y_{n+1}$
+there exists
+$f_n\in \mathcal E(Y_n)$
+such that 
+\[
+ \bar\partial f_n=\phi|Y_n
+\]
+It follows that
+the restriction to $Y_n$ of $f_{n+1}-f_n$ is holomorphic.
+Now $Y_{n-1}<< Y_n$ and
+Proposition 2.4 entails that
+this restricted holomorphic function can be uniformly approximated on
+$Y_{n-1}$ by functions from $\mathcal O(Y_{n+1}$.
+In particular we find
+$g_{n+1}\in \mathcal O(Y_{n+1})$
+such that the maximum norm
+\[
+||f_{n+1}+g_{n+1}-f_n||_{Y_{n-1}}<2^{-n}
+\]
+With $f^*_{n+1}= f_{n+1}+g_{n+1}$
+we still have
+\[
+\bar\partial f^*_{n+1}=\phi|Y_{n+1}
+\]
+Pwerforibng these modfifications inductively we get
+anew sequence $\{f^*_n\}$ where  (xx) hold for every $n$
+while
+\[
+||f^*_{n+1}-f^*_n||_{Y_{n-1}}<2^{-n}
+\quad\colon \, n=1,2,\ldots
+\]
+It follows that $\{f_n^*\}$ converge uniformly on $X$ to a continuous function
+$F$.
+This entials that
+the distributuons
+$\\bar\partial f_n^*\}$ converge to the distribution derivative
+$\bar\partial (F)$ and by (xx) it is clear that
+the following hold on the whole of $X$:
+\[ 
+\bar\partial(F)=\phi
+\]
+Now $\phi$ is a smooth form and the elliptic property of
+$\bar\partial$ implies that
+$F$ is a $C^\infty$-function. Hence the mapping
+\[ 
+\bar\partial\colon \mathcal E(X)\to \mathcal E^{(0,1)}(X)
+\]
+is surjective.
+Dolbeaualt's theorem gives  $H^1(X,\mathcal O)=0$
+and Theorem 0.1 is proved.
+\medskip
+
+\noindent
+{\bf{2.7 Exercise.}}
+Use the remarks from ¤ 25.5
+and repeat the methods above to show that
+\[
+H^1(X,\mathcal L)=0
+\] 
+for every locally free sheaf of $\mathcal O$-modules with rank one.
+
+
+
+\newpage
+
+
+
+
+\newpage
+
+
+
+
+
+Weierstrass product formula asserts that
+ every divisor on $X$ is principal-
+ 
+
+By a differentalble 1-chain in $X$ we mean a map 
+$t\to c(t)$ from the unit interval $[0,1]$ with values in $X$ which
+has a continuous derivative. The 1-chain is denoted by
+${\bf{c}}$. 
+The end points $q=c(0)$ and $p=c(1)$ can be either equal or
+different and it is not assumed that
+the map $t\to c(t)$ is 1-1, i.e. the  image curve
+can   have several "self-intersections".
+If $\omega$ belongs to $\mathcal E^1(X)$, i.e. a smoooth 
+differential 1-form, then  we take its pull-back to $[0,1]$ and
+obtain the integral
+\[ 
+\int_{{\bf{c}}}\, \omega\tag{1}
+\]
+Notice that
+(1) yields a 1- current of since
+$\omega\mapsto \int_{{\bf{c}}}\, \omega$ is a continuous linear form
+and the current is supported by the compact image under the $c$-map.
+We can construct other compactly supported 2-currents
+as follows:
+Let $p_1,\ldots,p_k$ be a finite set of points in $X$
+and $U$ some relalitively  compact open  subset which contains
+this $k$-tuple.
+Now we consider a global section $\psi$of the sheaf
+$\mathfrak {M}\otimes_\mathcal O\, \mathcal E$
+with the following properties:
+First $\psi$ is a zero-free $C^\infty$-function in
+$X\setminus \{p_1,\ldots,p_k\}$ and it is identically one
+in $X\setminus U_*$ where $\overline{U_*}$ is a compact subset of $U$.
+Finally, if $(\Delta,z)$ is a small chart centered at some $p_\nu$ then
+\[
+ \psi|\Delta= z^{e_\nu}\cdot \psi_\nu(z)
+\]
+where $e_\nu$ is
+some integer and $\psi_\nu$ a zero-free $C^\infty$-function in $\Delta$.
+Here $e_\nu$ can be positive or negative.
+Now there exists the current
+\[ 
+\gamma= \frac{\partial \psi}{\psi}
+\]
+Since $\psi=1$ in $X\setminus U$
+the support of this current is contained in the compact set
+$\overline{U_*}$. By defintion
+\[ 
+\gamma(\omega)=
+ \omega\wedge \frac{\partial \psi}{\psi}
+\] 
+for every smooth 1-foirm $\omega$.
+In the case when 
+there exists $g\in\mathcal E(U)$ such that 
+$\omega=d g$ holds in $U$ we have:
+\[
+\gamma(\omega)=\int \,dg\wedge \frac{\partial \psi}{\psi}=
+\int \,\bar\partial(g) \wedge \frac{\partial \psi}{\psi}
+\]
+where the last equality follows since
+$dg=\partial g+\bar\partial g$ and
+the exterior product
+$\partial(g) \wedge \frac{\partial \psi}{\psi}=0$.
+
+\medskip
+
+\noindent
+{\bf{0.6.7 Exercise.}} Apply Stokes Theorem and show that (x) is equal to
+\[ 
+-2\pi i\cdot \sum\, e_\nu\cdot g(p_\nu)
+\]
+So in the special case when
+the 1-current $\gamma$ satisfies
+\[
+\int_{\bf{c}}\, dg=
+\gamma(dg)\quad\colon g\in \mathcal E(X)\tag{0.6.7}
+\]
+it follows that
+$\{p_\nu\}$ is reduced to the pair $q,p$ where
+$e_q=1$ and $e_p=-1$.
+In ¤ xx w shall prove that
+when ${\bf{C}}$ is given as above then
+there existd
+a $\psi$-.function such that 
+(0.6.7) holds and this turns out to be the key point in  the
+proof of
+Weierstrass' result in (0.3).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+ 
+
+
+
+
+ 
+
+

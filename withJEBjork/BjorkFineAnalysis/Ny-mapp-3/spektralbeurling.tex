@@ -1,0 +1,219 @@
+
+
+\documentclass{amsart}
+
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\begin{document}
+
+\centerline{\bf{A spectral theorem for continuous functions.}}
+
+\bigskip
+
+\noindent
+On the real $\xi$\vvv line
+we denote by $C\uuu *$ the set of bounded and uniformly continuous functions
+$\phi(\xi)$. So there exists a constant $m$ such that
+$|\phi(\xi)\leq m$ for al $\xi$ and the uniform continuity means that if we put
+\[
+\omega\uuu\phi(\delta)=
+\max\uuu \xi\,|\phi(\xi+\delta)\vvv \phi(|xi)|
+\]
+then $\omega\uuu \phi(|delta)\to 0$ as $\delta \to  0$.
+When $\phi\in C\uuu *$
+we get the linear space $\mathcal T\uuu\phi$
+which consist of functions of the form
+\[
+\sum\, c\uuu k\cdot \phi(\xi+\tau\uuu k)\tag{1}
+\]
+where $\{\tau\uuu k\}$ is a finite set of real numbers and
+$\{c\uuu k\}$ a finite tuple of complex numbers.
+
+Following [Beurling] a function a function $f(x)$
+in the class $C\uuu *$
+ belongs to the 
+\emph{tight closure} of $\mathcal T\uuu\phi$
+if there exists a sequence
+$\{f\uuu k\}$ in
+$\mathcal T\uuu\phi$ such that
+$f\uuu k(\xi )\to f(\xi)$ holds uniformly on every bounded
+interval $\vvv A\leq \xi\leq A$ and moreover the maximum norms 
+taken over the whole $\xi$\vvv line satisfy
+
+\[ 
+||f\uuu||\leq ||f||\tag{2}
+\]
+\medskip
+
+\noindent
+{\bf{The spectrum of $\phi$}}.
+Given $\phi\in C\uuu *$ its spectrum is defined as the set of real numbers
+$\lambda$ such that the exponential function $e^{i\xi\lambda}$
+belongs to the tight closure of $\mathcal T\uuu\phi$.
+The major result in [Beurling] asserts that the spectrum always in
+$\neq\emptyset$ unless $\phi$ is identically zero.
+\bigskip
+
+\centerline{\emph{Proof that $\sigma(\phi)\neq \emptyset$}}
+\medskip
+
+\noindent
+First we take some even test\vvv function $H(x)$ on the real $x$\vvv line
+where $H(0)=\frac{1}{2\pi}$. With
+$\zeta=\xi+i\eta$ we get
+the entire function
+
+\[ 
+h(\zeta)= \int\, e^{i\zeta x}\cdot H(x)\cdot dx\tag{i}
+\]
+Since $H$ is a test\vvv function we know from XX
+that
+the functions
+\[ 
+\xi\mapsto h(\xi+i\beta)
+\]
+are rapidly decreasing for every $\beta$,  i.e. they
+decrease faster than any
+negative power of $|\xi|$. Moreover, Fourier's inversion formula gives
+in particular
+\[
+\frac{1}{2\pi}= H(0)= \frac{1}{2\pi}\cdot \int h(\xi)\cdot d\xi
+\]
+Hence we have
+\[
+ \int h(\xi)\cdot d\xi=1\tag{ii}
+\]
+
+\noindent
+Next, if $H(x)$ is supported by an interval $[\vvv c,c]$
+the result in XXX gives  a constant
+$C$ such that
+\[
+|h(\xi+i\eta)|\leq  C\cdot \frac{e^{c|\eta|}}{1+\xi^2+\eta^2}\tag{iii}
+\]
+for all $\xi+i\eta$
+
+\noindent
+Next, for each complex number $\alpha+i\beta$ we get a function of
+$\xi$ defined by
+\[ 
+\xi\mapsto =\int\uuu{\vvv \infty}^\infty\, 
+\phi(\xi\vvv s)\cdot h(s+\alpha+i\beta)\cdot ds\tag{iv}
+\]
+
+\noindent
+{\bf{Exercise.}}
+Show that the function in (iv) belongs to the tight closure of
+$\mathcal T\uuu \phi$.
+The hint is to use (iii) and the uniform continuity of $\phi$.
+\medskip
+
+\noindent
+Next,  consider the function
+\[
+ \psi(\xi+i\eta)=\int\uuu{\vvv \infty}^\infty\, 
+(\xi+i\eta\vvv s)\cdot \phi(s)\cdot ds
+\]
+It is easily seen that $\psi(\zeta)$ is an entire function
+and using (iii) there is a constant $C$ such that
+\[
+|\psi(\xi+i\eta)|\leq C\cdot e^{c|\eta|}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+When $\psi$ is restricted to the real $|xi$\vvv line it is the convolution
+of $h$ and $\phi$. Now $\phi(\xi)$ defines a temperate density
+function and is therefore equal to the Fourier transform of a temperate
+distribution $\mu$ on the real $x$\vvv line.
+From the calculus with tempered distributions in XXX this means that
+$\psi(\xi)$ up to a constant is the Fourier transform of
+the distribution $H(x)\cdot \mu$ which has compact support on the
+$x$\vvv line. This clarifies why
+$\psi(\zeta)$ is an entire Fourier\vvv Laplace transform and also the
+growth condition xx above.
+\medskip
+
+\noindent
+At this stage we announce the following:
+
+\medskip
+
+\noindent
+{\bf{Proposition.}}
+\emph{ There exists a real number $a$ and a sequence of complex numbers
+$\{alpha\uuu n+i\beta\uuu n\}$
+such that the functions}
+
+\[f\uuu n(\xi)=
+e^{i\alpha\xi}\cdot \frac{\psi(\xi+\alpha\uuu n+i\beta\uuu n)}
+{|\psi(\alpha\uuu n+i\beta\uuu n)|}
+\] 
+\emph{converge uniformly to 1 on the real $\xi$\vvv axis
+and at the same time
+the maximum norms
+$||f\uuu n||$ converge to one. which implies that
+$e^{ia\xi}$ belongs to the tight closure of $\mathcal T\uuu \phi$.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+Introduce the function
+\[
+\mu\uuu f(\eta)=\max\uuu\xi\, \log\,|\psi(\xi+i\eta)|
+\]
+By (XX) the functions $\xi\to |\psi(\xi+i\eta)|$
+are bounded in every interval $\vvv /rho\leq y\leq \rho$ so the $\mu$\vvv
+function is defined on the whole $\eta$\vvv line.
+By the result in XX the $\mu$\vvv function is convex
+and hence the derivative $\mu'(\eta)$ is non\vvv decreasing and the inequality
+(xx) entails that
+\[ 
+\mu'(\eta)\leq c
+\]
+hold for every $\eta$.
+As a consequence there exist the two limits
+
+\[
+a=\lim\uuu{\eta\to +\infty}\, \mu(\eta)\quad \colon\quad
+b=\lim\uuu{\eta\to \vvv \infty}\,\mu(\eta)
+\]
+where $b\leq a$.
+Using these limits we will show that a sequence $\{f\uuu n\}$
+exists where we can take $a$ to be the first term  in (xx) above.
+
+\bigskip
+
+PROOF rather easy now as exposed on page 65 in Collected.
+
+\newpage
+
+
+Measures. $\{\mu\uuu n\}$ converge to limit $\mu$
+meaning pointwise convergence of Fourier  weak type ...
+Many ways to reach $\mu$.
+Question when $\phi$ good in that sense. To entail convergence.
+Meaning $\mu\uuu n\to 0$ in weak sens implies that integrals to zero.
+True iff $\phi$ uniformly inverse transofrm.
+
+
+
+
+
+
+
+
+\end{document}
+

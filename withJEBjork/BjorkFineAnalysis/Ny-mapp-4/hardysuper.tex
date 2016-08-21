@@ -1,0 +1,535 @@
+%\documentclass{amsart}
+
+%\usepackage[applemac]{inputenc}
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+%\def\vvv{-}
+
+
+%\begin{document}
+
+\centerline{\bf\large {III. A. Hardy-Littlewood's maximal function}}
+\bigskip
+
+\centerline{\emph{Contents}}
+
+\bigskip
+
+\noindent
+\emph{1. The weak type estimate}
+
+
+\bigskip
+
+\noindent
+\emph{2.  An $L^2$-inequality}
+
+\bigskip
+
+\noindent
+\emph{3 Harmonic functions  and Fatou sectors}
+
+
+
+\bigskip
+
+\noindent
+\emph{4. Application to analytic functions}
+
+
+
+\bigskip
+
+\noindent
+\emph { 5. Conformal maps and the Hardy space
+$H^1(T)$}
+
+
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+The results below are foremost due to Hardy, Littlewood and Fatou.
+Before we describe results about harmonic and analytic functions
+we expose some general facts about maximal functions from measure theory.
+
+\medskip
+
+
+\centerline{\bf{1. The weak type estimate}}
+\bigskip
+
+
+
+\noindent
+Let $f(x)$ be a non-negative function and integrable function
+on the real $x$-line
+with support in a finite interval $[0,A]$.
+The  forward maximal function  is defined for ever $x\geq 0$ by
+\[
+ f^*(x)=\max_{h>0}\, \frac{1}{h}\int_x^{x+h}\, f(t)\cdot dt
+\]
+It is clear that $f^*$ is non-negative and supported by $[0,A]$.
+To each $\lambda>0$ we get the
+set $\{f^*>\lambda\}$. 
+\medskip
+
+\noindent
+{\bf{1.1 Theorem}}
+\emph{For each $\lambda>0$ one has the inequality}
+\[ 
+{\bf{m}}(\{f^*>\lambda\})\leq \frac{1}{\lambda}\cdot
+\int_{\{f^*>\lambda\}}\, f(x)\cdot dx
+\]
+
+
+\noindent
+\emph{Proof.}
+Introduce the primitive function
+\[ 
+F(x)=\int_0^x\, f(t)\cdot dt
+\]
+With $\lambda>0$ we have the continuous function $F(x)-\lambda$
+and define the forward Riesz set by:
+
+\[
+\mathcal E_\lambda=\{0\leq  x<A\colon\exists \, y>x\quad
+\text{and}\quad F(y)-\lambda y> F(x)-\lambda x\}
+\]
+
+\noindent
+{\bf{1.2 Exercise.}}
+Show  the equality
+\[
+\mathcal E_\lambda=\{ f^*>\lambda\}
+\]
+
+\noindent
+Now $\mathcal E_\lambda$ is an open  set and hence 
+a disjoint union of intervals $\{(a_k,b_k)\}$.
+With these notations one has
+\medskip
+
+\noindent
+{\bf{1.3 Exercise.}}
+Show the following for each interval $(a_k,b_k)$:
+\[
+F(b_k)-\lambda\cdot b_k=\max_{a_k\leq x\leq b_k}\, F(x)-\lambda
+\]
+In particular one has
+\[
+\lambda(b_k-a_k)\leq F(b_k)-F(a_k)
+\]
+This holds for each $k$ and after a summation over the 
+forward Riesz intervals the requested inequality in
+Theorem 1.1 follows.
+\bigskip
+
+\noindent
+Using Theorem 1 can prove the following $L^2$\vvv inequality.
+
+\medskip
+
+\noindent
+{\bf{1.4 Theorem.}}
+\emph{One has}
+
+\[
+||f^*||_2\leq  |f||_2
+\]
+
+\noindent
+\emph{Proof.} By the general formulas for distribution functions 
+from XX we have:
+\[
+\int_0^A\, f^*(x)^2\cdot dx=
+\int_0^\infty\,
+\lambda\cdot {\bf{m}}(\{f^*>\lambda\})\cdot d\lambda
+\]
+By Theorem 1.1 the last integral is majorised by
+
+\[
+\int_0^\infty\,[\int_
+{{\bf{m}}(\{f^*>\lambda\}}\, f(x)\cdot dx\,\bigr]\cdot d\lambda)=
+\iint_{\{f^*(x)>\lambda\}}\,f(x)\cdot dxd\lambda=
+\]
+\[
+\int_0^A\, \bigl[\int_0^{f^*(x)}\, d\lambda\bigr]\cdot f(x)\cdot dx
+=\int_0^A\, f^*(x)\cdot f(x)\cdot dx
+\]
+By the Cauchy-Schwarts in equality the last integral is majorised
+by the product of $L^2$-norms
+\[
+||f^*||_2\cdot |f||_2
+\]
+Hence
+\[
+||f^*||_2^2=
+\int_0^A\, f^*(x)^2\cdot dx\leq ||f^*||_2\cdot |f||_2
+\] 
+and Theorem 1.4 follows after
+division with $||f^*||_2$.
+
+\medskip
+
+
+
+\noindent
+{\bf{1.5 Remark.}}
+In a similar way we get an $L^2$-inequality using the 
+backward maximal  function
+\[
+ f_*(x)=\max_{h>0}\, \frac{1}{h}\int_{x-h}^x\, f(t)\cdot dt
+\]
+and also the
+full maximal function
+
+\[ f^{**}(x)= \max_{a,b}\, 
+\frac{1}{a+b}\int_{x-a}^{x+b}\, |f(t)|\cdot dt\tag{**}
+\] 
+with the maximum taken over pairs $a,b>0$.
+Then we get
+the $L^2$-inequality
+\[
+||f^{**}||_2\leq  2\cdot |f||_2\tag{1.6}
+\]
+
+
+
+
+
+
+\bigskip
+
+\noindent
+\centerline {\bf{2. A study of harmonic functions.}}
+\medskip
+
+\noindent
+Let $f(t)$ be complex-valued function on the real $t$-line
+such that
+\[
+\int_{-\infty}^\infty\, \frac{|f(t)|}{1+t^2}\cdot dt<\infty
+\]
+We also assume that
+\[ 
+\max\,\frac{1}{b+a}\cdot \int_{-a}^b\, |f(t)|\cdot dt<\infty
+\] 
+where the maximum is taken over all pairs $a,b>0$.
+Define the function $V(z)= V(x+iy)$ in the upper half-plane $y>0$
+by
+\[
+V(z)= \frac{1}{\pi}\int_{-\infty}^\infty\,
+\frac{y}{(x-t)^2+y^2}\cdot f(t)\cdot dt
+\]
+
+\medskip
+
+\noindent
+{\bf{2.1 Exercise.}}
+Prove the inequality
+\[ 
+|V(x+iy)|\leq \bigl(\frac{|x|}{y}+2\bigr)\cdot f^{**}(0)\tag{1}
+\]
+where 
+\[ 
+f^{**}(0)=\max\uuu{a,b>0}\,\frac{1}{b-a}|\cdot \int_{-a}^b\, |f(t)\cdot dt
+\]
+
+
+\medskip
+
+\noindent
+Next, define Fatou's maximal function on the real $x$-line by
+\[
+V^*(x)=\max_{y\leq |s|}
+|V(x+iy)|\tag{3}
+\]
+We also introduce the
+function $f^{**}(x)$ defined for each real $x$ by:
+\[
+f^{**}(x)=\max\,\frac{1}{b-a}|\cdot \int_{x-a}^{x+b}\, |f(t)\cdot dt
+\]
+\medskip
+
+\noindent
+{\bf{2.2 Exercise.}}
+Show the inequality
+\[ 
+V^*(x)\leq 3\cdot f^*(x)
+\] 
+\medskip
+
+\noindent
+Next, apply the inequality (1.6) which together with Exercise 2.2 give 
+
+\[
+ \int_{-\infty}^\infty V^*(x)^2\cdot dx\leq 18\cdot 
+\int_{-\infty}^\infty f^2(x)\cdot dx\tag{i}
+\]
+Since  $V(x)= f(x)$ holds on the real line we conclude the following:
+
+\medskip
+
+\noindent
+{\bf{2.3 Theorem.}} \emph{One has the inequality}
+\[
+||V^*||_2\leq 3\sqrt{2}\cdot  
+\sqrt{\int_{-\infty}^\infty V(x)^2\cdot dx}\tag{*}
+\]
+\bigskip
+
+\noindent
+\centerline
+{\bf{3. Application to analytic functions.}}
+\medskip
+
+\noindent
+Let $f(z)$ be analytic in $\mathfrak{Im}(z)>0$
+and assume that
+there is a constant $C$ such that
+
+\[
+\int_{-\infty}^\infty\,
+\frac{|f(x+iy)|}{1+x^2}\cdot dx\leq C\quad\text{for all}\quad y>0
+\] 
+It means that $f$ belongs to the Hardy space $H^1$ in the upper half-plane $U_+$.
+We can divide out the zeros via a Blaschke product and write
+\[ 
+f=B\uuu f\cdot g
+\] 
+where $g$ again belongs to $H^1$ and has no zeros in $U_+$.
+Then $\sqrt{g}$ is defined which 
+gives a complex-valued harmonic function
+\[ 
+V(z)= \sqrt{g(z)}
+\]
+\medskip
+
+\noindent
+{\bf{3.1 Exercise.}}
+Apply Theorem 2.3 to the $V$\vvv function and use that
+$|f(z)|\leq |g(z)|\leq |V^2(z)|$ to show that
+\[
+\int_{-\infty}^\infty\, |f^*(x)|\cdot dx\leq
+3\sqrt{2}\cdot \int_{-\infty}^\infty\, |f(x)|\cdot dx\tag{1}
+\] 
+where $f^*(x)$ is Fatou's maximal function
+for $f$ defined for each real $x$ by
+
+\[
+f^*(x)=\max_{y\leq |s|}\,|f(x+iy)|/tag{2}
+\]
+\medskip
+
+\noindent
+{\bf{3.2 Exercise.}}
+Use the conformal map from $U_+$ to the unit disc $D$
+defined by
+\[
+w=\frac{z-i}{z+i}
+\]
+Explain how the previous result is translated when we start from an
+analytic function $f$ in $D$ for which the boundary value function $f(e^{i\theta})$
+is in $L^1(T)$.
+
+\newpage
+
+\centerline{\bf{4. Hardy spaces and conformal maps}}
+
+
+\medskip
+
+\noindent
+Let $g(z)=\sum\, a_nz^n$ be analytic in $D$ and assume that 
+there exists a constant $C$ such that
+\[ 
+\int_0^{2\pi}\, |g(re^{i\theta})|\cdot d\theta\leq C
+\] 
+for every $r<1$.
+Thus, by the Brothers Riesz Theorem 
+$g$ belongs to the Hardy space $H^1(T)$.
+In $D$ there exists a single-valued brach of
+$\log(1-z)$ whose imaginary part stays in $(-\pi/2,\pi/2)$ and
+with $z=re^{i\theta}$ we  have
+\[ 
+\mathfrak{Im}\, \log(1-z)=
+-\frac{1}{2i}\cdot \sum_{n=1}^\infty\, \frac{r^n}{n}(e^{in\theta}-e^{-in\theta})
+\]
+
+
+\noindent
+{\bf{4.1 Exercise.}}
+Deduce from the above that
+\[
+\int_0^{2\pi}\, \mathfrak{Im}\,\log(1-re^{i\theta})\cdot
+g(re^{i\theta})\cdot d\theta=
+-\pi i\cdot \sum_{n=1}
+^\infty\, \frac{a_n}{n}\cdot r^{2n}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{The case when $\{b_n\}$ are real and $\geq 0$.}}
+If this holds then (*) and the triangle inequality yield:
+\[
+\pi\cdot  \sum_{n=1}
+^\infty\, \frac{a_n}{n}\cdot r^{2n}\leq \frac{\pi}{2}\cdot
+\int_0^{2\pi}\, |g(re^{i\theta})|\cdot d\theta
+\] 
+
+\noindent
+So if we introduce the $H^1(T)$-norm
+\[
+||g||_1= \int_0^{2\pi}\, |g(e^{i\theta})|\cdot d\theta
+\] 
+it follows after a passage to the limit when $r\to 1$ that
+\[
+\sum_{n=1}^\infty\, \frac{b_n}{n}\leq \pi\cdot |g||_1\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf{4.2 A study
+of conformal mappings.}}
+Let $\phi\colon D\to \Omega$ be a conformal mappng
+and assume that the complex derivative
+$\phi'(z)$ belongs to the Hardy space $H^1$ as above.
+Since $\phi'\neq 0$ in $D$ there exists a single-valued 
+analytic square-root:
+
+
+\[ 
+\psi(z)=\sqrt{\phi'(z)}
+\]
+Then $\psi\in H^2(T)$ 
+so if
+\[ 
+\psi(z)=\sum\, b_nz^n\implies \sum\, |b_n|^2<\infty
+\]
+\noindent
+Let us then consider the $H^2$-function
+\[
+\Psi(z)= \sum\, |b_n|z^n
+\]
+We get
+\[ 
+\Psi^2(z)=\sum\,A_nz^n\quad\text{where}\quad
+A_n=\sum_{k=0}^{k=n}\, |b_k|\cdot |b_{n-k}|
+\]
+and (**) in Exercise 4.1 gives:
+\[
+\sum_{n=1}^\infty
+\,\frac{A_n}{n}\leq \pi\cdot \int_0^{2\pi}\,
+|\Psi(e^{i\theta})|^2\cdot d\theta\tag{1}
+\]
+
+
+
+\noindent
+Next, consider the Taylor series
+\[ 
+\phi'(z)= \sum\, a_nz^n\implies
+a_n=\sum_{k=0}^{k=n}\, b_k\cdot b_{n-k}
+\] 
+The triangle inequality gives $|a_n|\leq A_n$ for each $n$
+so (1) entails that
+\[ 
+\sum_{n=1}^\infty \, \frac{|a_n|}{n}<\infty\tag{2}
+\]
+
+\noindent
+Finally, consider the Taylor expansion of $\phi(z)$:
+\[
+\phi(z)=\sum\, c_nz^n
+\]
+Here
+\[ 
+nc_n=a_{n-1}\quad\colon\quad n\geq 1
+\]
+Then it is clear that (2) implies that the series
+$\sum\, |c_n|<\infty$. Hence we have proved the following result which is due to Hardy:
+
+\medskip
+
+\noindent
+{\bf{4.3 Theorem.}}
+\emph{
+Let $\phi(z)$
+be a conformal map such that
+$\phi'$ belongs to $H^1$. Then the Taylor series of $\phi$ 
+is absolutely convergent.}
+\medskip
+
+\noindent
+{\bf{4.4 Exercise}}. Let $\Omega$ be a Jordan domain  whose boundary
+curve
+$\Gamma=\partial\Omega$ has a finite arc-length.
+Let $\phi\colon D\to \Omega$ be the con formal mapping which by results from
+(xx) extends to a homeomorphism from the closed disc
+$\bar D$ onto $\bar\Omega$.'
+Let $\ell(\Gamma)$ be the arc-length of $\Gamma$. Show that the derivative
+$\phi'(z)$ belongs to the Hardy space and
+\[
+\int_0^{2\pi}\, |\phi'(e^{i\theta})|\cdot d\theta
+\leq \ell(\Gamma)
+\]
+From this it follows that the Taylor series of $\phi(z)$ is absolutely convergent.
+\medskip
+
+\noindent
+\emph{A hint for the exercise.}
+To each $n\geq 1$ we set $\epsilon= e^{2\pi i/n}$, i.e. the $n$:th root of the unity.
+Now
+$\phi$ yields a homeomorphism from $T$ onto $\Gamma$.
+The definition of $\ell(\Gamma)$ gives the inequality
+below  where we set
+$\epsilon^0=1$.
+
+\[
+\sum_{k=1}^n\, |\phi(\epsilon^k\cdot e^{i\theta})-\phi(\epsilon^{k-1}
+\cdot e^{i\theta})|\leq \ell(\Gamma)\quad\text{for every}
+\quad
+ 0\leq\theta\leq 2\pi\tag{1}
+\] 
+Keeping $n$ fixed we notice that the function
+
+\[ 
+s_n(z)=\sum_{k=1}^n\, |\phi(\epsilon^k\cdot z)-\phi(\epsilon^{k-1}\cdot z)|
+\] 
+is subharmonic in $D$. So the maximum principle for subharmonic functions
+and (1) give
+
+\[
+\max_\theta\, s_n(re^{i\theta})\leq \ell(\Gamma)\tag{2}
+\] 
+for each $r<1$.
+Next,
+with $r<1$ fixed
+the reader may verify the limit formula:
+
+\[
+\lim_{n\to\infty}s_n(r)=
+\int_0^{2\pi}\, |\phi'(re^{i\theta})|\cdot d\theta\tag{3}
+\]
+Hence (2-3) give
+
+\[
+\int_0^{2\pi}\, |\phi'(re^{i\theta})|\cdot d\theta\leq \ell(\Gamma)
+\] 
+Now the Brothers Riesz  theorem implies that
+$\phi'(z)$ belongs to $H^1(T)$, i.e.
+the boundary value function $\phi'(e^{\theta})$ exists and belongs to $L^1(T)$.
+
+
+
+
+%\end{document}

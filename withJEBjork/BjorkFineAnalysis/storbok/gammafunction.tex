@@ -1,0 +1,3571 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+\centerline{\bf\large{Chapter VIII  The Gamma function and Riemann's $\zeta$-function}}
+
+\bigskip
+\noindent
+
+\centerline{\emph{Contents}}
+\bigskip
+
+\noindent
+\emph{1. The Gamma function}
+\bigskip
+
+
+\noindent
+\emph{2. The $\zeta$-function}
+
+
+
+\bigskip
+\noindent
+\emph{3. The Riemann hypothesis}
+\bigskip
+
+
+\noindent
+\emph{4. The prime number theorem.}
+
+
+\bigskip
+
+\noindent
+\emph{5. A uniqueness
+result for the $\zeta$\vvv function.}
+\bigskip
+
+\noindent
+\emph {6. A theorem on functions defined by a semi\vvv group}
+\bigskip
+
+\noindent
+\emph{7. Beurling's criterion for the Rieman hypothesis}
+
+
+\bigskip
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+The results in this chapter
+stem from early work by Euler and later
+studies by Gauss and Riemann.
+The $\Gamma$\vvv function is
+defined and analyzed in § I.
+A major result is that
+$\frac{1}{\Gamma(z)}$ is an entire function.
+More precisely one has the Gauss representation
+\[
+ \frac{1}{\Gamma(z)}=z\cdot e^{\frac{\gamma}{z}}\cdot
+ \prod_{m=1}^\infty\,
+ (1+\frac{z}{m})\cdot e^{-\frac{z}{m}}
+ \]
+ where $\gamma$ is the Euler constant.
+Section II is devoted to Riemann's $\zeta$-function 
+defined by the Dirichlet series
+\[ 
+\zeta(s)=\sum_{n=1}^\infty \frac{1}{n^s} 
+\quad\colon\quad
+\mathfrak{Re}\, s>1\tag{*}
+\]
+Euler proved that the $\zeta$-function extends to
+the whole complex $s$-plane with a simple  pole
+at $s=1$ whose residue is one which gives
+the entire function
+\[
+\zeta(s)- \frac{1}{s- 1}\tag{**}
+\]
+
+
+\noindent
+In 1894 it was proved (independently) by Hadamard and
+de Vallé Poussin 
+that 
+the zeta-function has no zeros on
+$\mathfrak{Re}\, s=1$, i.e.
+\[
+\zeta(1+it)\neq 0
+\quad\text{for all real}\quad t\neq 0\tag{1}
+\]
+From (1) we  shall deduce the Prime Number Theorem
+in § 4.
+We proceed to discuss 
+properties of  the $\zeta$-function which
+are due to 
+Riemann. His first major result is the functional equation:
+\[
+\zeta(1-s) =\frac{2}{(2\pi)^s}\cdot
+\text{cos}\,\frac{\pi}{2}\, s\cdot
+\Gamma(s)\cdot\zeta(s)\tag{2}
+\]
+where the $\Gamma$\vvv function appears with
+simple poles at
+$(0,-1,-2,\ldots)$. Hence this
+functional equation implies that
+\[
+\zeta(-2n)=0\quad\colon\quad n=1,2,\ldots\tag{3}
+\]
+The \emph{Riemann hypothesis} states that all other zeros belong to
+the critical line $\mathfrak{Re}\, s=1/2$. Further comments about this conjecture
+are given in § 0.4
+\medskip
+
+\noindent
+{\bf{Remark about Riemann's work.}}
+An account of Riemann's original work appears in
+the article [xxx] by Siegel where a wealth of
+involved analytic formulas related to
+the $\zeta$-function appear. So it was not by a mere guessing that
+Riemann arrived at his famous conjecture.
+Examples of his brilliant mastery establish various
+convergence formulas for
+the $\zeta$-function which later were  adopted by many authors.
+So even if we will prove a number of results about the
+$\zeta$-function i
+this material in this chapter does not give a full tribute to Riemann's work.
+An example from Riemann's original studies of the
+zeta-function is the following inequality:
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{There exists a constant $C$ such that}
+\[
+\max_ {|s|=r}\, |\zeta(s)|\leq
+C\cdot \frac{\Gamma(r)}{(2\pi )^r}\quad
+\colon
+r\geq 2\tag{i}
+\]
+\emph{Moreover, in the half-space
+$\mathfrak{Re}\, s>0$ one has the equation}
+\[
+\zeta (z)= s\cdot \sin\,\frac{\pi s}{2}\cdot
+\frac{1}{\pi}\cdot
+\int_ 0^\infty\, 
+\log \frac{e^{\pi x}-e^{-\pi x}}{2\pi x}\cdot \frac{dx}{x^{s+1}}\tag{ii}
+\]
+\medskip
+
+\noindent
+The fact that (*) gives  
+(i-ii) is far from obvious 
+and illustrates the
+depth in  Riemann's work.
+
+
+\bigskip
+
+
+\noindent
+{\bf{0.2  A class of Dirichlet series.}}
+Let $\mathcal F$
+be the family of all 
+non-decreasing  increasing sequence of
+positive numbers $\lambda_1\leq \lambda_2\leq \ldots$ 
+for which there exists some $\delta>0$ such that
+\[ 
+\lambda_n\geq \delta\cdot n\tag{i}
+\]
+hold for every $n$ where $\delta$ can depend on the given sequence.
+General facts about entire functions of exponential
+type 
+entail that (i)  
+the Hadamard product
+\[ 
+f(z)=\prod\, (1+\frac{z^2}{\lambda_n^2})\tag{ii}
+\]
+is an entire  function of exponential type, i.e. belongs to the class $\mathcal E$.
+Next, we construct
+the Dirichlet series
+\[
+\Lambda(s)=\sum_{n=1}^\infty \frac{1}{\lambda\uuu n^s}\tag{iii} 
+\]
+By (i) this gives
+an analytic function in the half-plane
+$\mathfrak{Re}\, s>1$.
+By a classic result known as the Mellin's inversion formula
+it follows that $\Lambda(s)$ is obtained
+from $f(z)$ by the equation
+\[
+\Lambda(s)= s\cdot \sin\,\frac{\pi s}{2}\cdot
+\frac{1}{\pi}\cdot
+\int_0^\infty\, \log f(x)\cdot \frac{dx}{x^{s+1}}\tag{iv}
+\]
+Using this we  prove the following conclusive result in § XX:
+
+\medskip
+
+\noindent
+{\bf{0.2.1 Theorem.}}
+\emph{Every  $\Lambda$-function obtained from 
+a seqence in $\mathcal F$
+extends to a meromorphic function in
+the complex $s$-plane.}
+
+
+
+\medskip
+
+\noindent
+{\bf{Example.}}
+By (ii) in Riemann's cited result above
+the assocaited $f$-function to the
+Direchlet series defining
+$\zeta(s)$ is equal to
+\[
+f(z)=
+\frac{e^{\pi z}-e^{-\pi z}}{2\pi z}
+\]
+
+
+
+\medskip
+
+
+\noindent
+{\bf{0.2.2  An extremal property of  $\zeta(s)$.}}
+In a lecture at Harvard University in 1949, Beurling proved
+that Riemann's  zeta\vvv function
+has a distinguished  position in a class of
+functions defined by Dirichlet series.
+For each  positive number $k$
+we denote by $\mathcal C\uuu k$
+the class of 
+series  $\Lambda(s)$ from (ii) 
+with the properties:
+\[
+\Lambda(s)\vvv \frac{1}{s\vvv 1}\quad\text{is entire}\tag{a}
+\]
+\[
+\Lambda(\vvv 2n)=0 \quad\text{for all positive integers}\tag{b}
+\]
+\[ 
+\max\uuu {|s|=r}\, |\Lambda(s)|\leq
+C\cdot \frac{\Gamma(r)}{(2\pi k)^r}\quad\text{hold for a constant}\quad
+C\quad\text{and 
+all}\quad r\geq 2\tag{c}
+\]
+
+\medskip
+
+\noindent
+Notice that the class $\mathcal C\uuu k$ becomes more
+restrictive as $k$ increases.
+We shall learn that $\zeta(s)$ satisfies (a-b) and (i) in
+Theorem 0.1 entails that
+the zeta-function belongs to $\mathcal D_1$.
+In  § 5 we prove that for every 
+$1/2<k\leq 1$ the class $\mathcal C\uuu k$ only consists of constants times
+the zeta-function while $\mathcal C_k=\emptyset$ if $k>1$.
+This illustrates
+the special role of the
+$\zeta$\vvv function. 
+\medskip
+
+
+\noindent
+{\bf{0.2.3 Beurling's closure theorem.}}
+In Theorem 7.1
+we prove another  result by  Beurling which
+gives a \emph{necessary and sufficient condition}
+for the validity of the
+Riemann hypothesis expressed by a certain $L^2$\vvv closure 
+on the interval $(0,1)$ generated by a specific family of functions.
+Theorem 7.1 is based upon
+a  closure theorem in
+§ 6 whose proof  illustrates the efficiency of mixing
+functional analysis with analytic function theory.
+Let us remark that the study of distributions of primes and the
+Riemann hypothesis was one of  the main issues in
+Beurling's research.
+His first extensive article on this subject  from 1937
+is  entitled \emph{Analyse de loi asymptotique
+de la distribution des nombres premier generalisés}.
+Even though this work does not settle the Riemann hypothesis the reader
+will find a number of interesting results concerned with
+Dirichlet series.
+
+
+\bigskip
+
+\centerline{\bf 0.3. The distribution of prime numbers}
+
+\medskip
+
+\noindent
+A motivation to consider the
+$\zeta$-function is Euler's product formula:
+\[
+\zeta(s)=\prod\,\frac{1}{1-p^{-s}}
+\colon\, \text{product over all prime numbers}\,\,\, \geq 2\tag{*}
+\]
+
+
+\noindent 
+Indeed, (*)   follows since
+every integer $n\geq 2$ can be factorised in a unique way
+as a product of  prime numbers. Let us introduce the counting function:
+\[ 
+\mathcal N(x)=
+\text{number of primes}\,\,\leq [x]\quad\colon
+[x]=\text{least integer}\,\,\,\leq x
+\]
+Thus $\mathcal N(x)$ is the primitive of the discrete
+measure supported by $[2,+\infty)$ which
+assigns a unit point mass at every prime.
+Integration by parts
+gives:
+\[ 
+\log\,\,\zeta(s)=
+s\cdot\int_2^\infty\,\frac{ \mathcal N(x)\cdot dx}{(x^s-1)x} 
+\quad\colon\,s\,\,\,\text{real and}\,\,>1\tag{i}
+\]
+
+
+\noindent
+By Euler's result we can write
+\[ 
+\zeta(s)=\frac{1}{s-1}+g(s)\quad\colon\, g(s)
+\,\,\text{analytic in a disc}\,\,|s-1|<\delta\tag{ii}
+\]
+
+
+\noindent
+This gives the  limit formula:
+\[ 
+\lim_{\epsilon\to 0}\,\,\,
+\frac{1}{\text{Log}\,[\frac{1}{\epsilon}\,]}
+\cdot\int_2^\infty
+\frac{\mathcal N(x)\cdot dx}{x^{2+\epsilon}}=1\tag{**}
+\]
+
+\medskip
+
+\noindent
+\emph{The Prime Number Theorem.}
+Notice that
+\[
+\lim_{\epsilon\to 0}\,\,\,
+\frac{1}{\log  \,[\frac{1}{\epsilon}\,]}
+\cdot\int_2^\infty
+\frac{x\cdot dx}{x^{2+\epsilon}
+\cdot\log\,x}=1
+\]
+which follows by the variable substitution
+$x\mapsto e^t$
+and the observation that
+\[
+\lim_{\epsilon\to 0}\,\,\,
+\frac{1}{\text{Log}\,[\frac{1}{\epsilon}\,]}
+\cdot\int_1^\infty
+\,e^{-\epsilon t}\cdot\frac{dt}{t}=1
+\]
+\medskip
+
+\noindent
+In view of (**)  it
+is therefore no surprise that
+the following limit formula holds for
+$\mathcal N$.
+\bigskip
+
+\noindent
+{\bf 0.3.1 Theorem.} \emph{One has}
+\[
+\lim_{x\to\infty}
+\frac{\text{Log}\, (x)\cdot \mathcal N(x)}{x}=1
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+This limit formula was known
+by heuristic considerations long before
+Riemann's study of the $\zeta$-function. 
+By elementary arithmetic 
+one  can show
+the prime number theorem holds
+under the
+\emph{extra hypothesis} that
+$\mathcal N(x)$ has a "regular growth".
+But 
+both Riemann and  Gauss  knew that
+$\mathcal N(x)$
+does \emph{not} increase in a  regular way.
+Hence a solid proof of the prime number theorem  was requested
+and it was finally established by Hadamard and 
+de Valle Poussin. The detailed proof is given
+in  § 4.
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline {\bf {0.4. The Riemann Hypothesis.}}
+\bigskip
+
+\noindent
+The  conjecture   by Riemann  states that  the zeros
+of $\zeta(s)$ in the critical strip $0<\mathfrak{Re}(s)<1$
+belong to  the line
+$\mathfrak{Re}(s)=1/2$.
+This line is special since
+the functional equation yields an entire function
+$\xi(s)$ defined by
+\[ 
+\xi(s)=\frac{s(s-1)}{2}\cdot \Gamma(\frac{s}{2})\cdot \pi^{-\frac{s}{2}}
+\cdot\zeta(s)\tag{*}
+\]
+Moreover, the $\xi$-function satisfies
+\[
+\xi(s)=\xi(1-s)\quad\colon\quad \xi(s)=\bar\xi(\bar s)
+\]
+From this it follows that the function
+\[ 
+t\mapsto 
+\Gamma(\frac{1/2+it)}{2})\cdot
+\pi^{-\frac{1/2+it}{2}}\cdot\zeta(\frac{1}{2}+it)
+\]
+is real-valued.
+Here  $\Gamma(\frac{1/2+it)}{2})\cdot
+\pi^{-\frac{1/2+it}{2}}\neq 0$
+for all real $t$
+and we can define the
+function
+\[
+\theta(t)=\text{arg}\bigl [\,\Gamma(\frac{1/2+it)}{2})\cdot
+\pi^{-\frac{1/2+it}{2}}\,\bigr ]\quad\colon\quad 0\leq t \leq\infty\tag{**}
+\]
+where we take $\theta(0)=0$.
+So now we have the real-valued function
+\[
+X(t)= e^{i\theta(t)}\cdot\zeta(\frac{1}{2}+it)\tag{***}
+\]
+
+
+\noindent
+Hence zeros  on the critical line
+$\mathfrak{Re}(s)=\frac{1}{2}$
+correspond to zeros of this real valued function.
+An  asymptotic formula  of $X(t)$ was established
+by Siegel based upon unpublished work
+by Riemann:
+\medskip
+
+
+\noindent
+{\bf 0.4.1 The Riemann-Siegel formula.}
+In [Sie] 
+the following asymptotic limit formula is proved:
+\[
+X(t)=\sum_{n\leq\sqrt{\frac{t}{2\pi}}}\,
+\frac{\text{cos}\,\theta(t)-t\cdot\text{log}\, n}{\sqrt{n}}
++O(t^{-\frac{1}{2}})\tag{*}
+\]
+Starting from this  Julius Gram and Arvid Bäcklund
+established   numerical
+results. Namely, from (*) one
+derives 
+the asymptotic formula:
+\[
+\theta(t)=\frac{t}{2}\cdot\bigl[\, \text{Log}\frac{t}{2\pi} -\frac{1}{2}\,\bigr ]
+-\frac{\pi}{8}+O(\frac{1}{t})
+\]
+
+
+\noindent
+Consider the increasing sequence of real numbers
+$\{t_\nu\}$
+for which
+\[
+\theta(t_\nu)=(\nu-1)\cdot\pi\quad\colon\quad \theta'(t_\nu)>0
+\]
+The Riemann-Siegel formula gives:
+\[
+\zeta(\frac{1}{2}+it_\nu)=1+
+\sum_{n\leq\sqrt{\frac{t}{2\pi}}}\,
+\frac{\text{cos}(\,t_\nu\cdot\text{log}\, n)}{\sqrt{n}}
++O(t_\nu^{-\frac{1}{2}})\tag{1}
+\]
+This  suggests that
+$\zeta(\frac{1}{2}+it_\nu)$ in general is positive
+and that $X(t_{\nu-1})$ and $X(t_\nu)$ will have different sign
+which therefore gives a zero for the
+$\zeta$-function in the interval $(t_{\nu-1}-t_\nu)$.
+The \emph{Law of Gram}
+asserts that all zeros of $X(t)$ should appear
+in this fashion, i.e. one zero is produced
+in $(t_{\nu-1}-t_\nu)$
+for every $\nu$. Of course, this "law" was
+presented  as an asymptotic formula only. A "weak
+asymptotic 
+law"  was confirmed
+in work by Hutchinson and Titchmarsh. But
+the situation is not so easy. For consider the
+actual zeros on the critical line:
+\[
+0<\gamma_1<\gamma_2<\ldots\quad\colon\quad 
+\,\zeta(\frac{1}{2}+i\gamma_\nu)=0
+\]
+
+
+\noindent
+In  an article from 1942,
+Atle Selberg proved  that the $\gamma$-sequence
+increases in a certain   \emph{irregular} fashion. 
+\medskip
+
+\noindent
+{\bf 0.4.2 Theorem.} \emph{There exists an absolute  constant
+$0<C_*<1$
+such that for every positive integer $r$
+one has}
+\[
+\limsup_{n\to\infty}\,
+\frac{\gamma_{n+r}-\gamma_n}{2\pi r}\cdot\text{Log}\,\gamma_n>1+C_*
+\quad\text{and}\quad
+\liminf_{n\to\infty}\,
+\frac{\gamma_{n+r}-\gamma_n}{2\pi r}\cdot\text{Log}\,\gamma_n<1-C_*
+\]
+\medskip
+
+\noindent
+Let us finish by a citation from A. Selberg's 
+lecture  on the Zeta Function and the Riemann Hypothesis
+at the Scandinavian Congress in mathematics held at Copenhagen in 1946,
+where he gave some comments about the eventual validity of the
+Riemann Hypothesis:
+\medskip
+
+\noindent
+\emph{In spite of the numerical evidence
+by which it  is supported there are still reasons
+to regard the Riemann Hypothesis with suspicion. For in the range
+covered by calculations. the exceptions from Gram's Law are few
+and they are of the simplest kind, farther out more severe
+departures from Gram's law must occur and it seems
+likely that the irregularities
+in the variation of
+$\zeta(s)$ which should be necessary
+for producing zeros outside
+$\mathfrak{Re}(s)=\frac{1}{2}$, should be
+far more remote than the first exceptions from
+Gram's Law.}
+\medskip
+
+\noindent{\bf Note.}
+Atle Selberg (191x-2007)
+received the Fields medal at the IMU-congress in 1950 for his outstanding contribution
+in number theory and deep studies of the $\zeta$-function.
+
+
+ 
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf 0.4.3 Hardy's inversion formula.}
+\bigskip
+
+\noindent
+Another  contribution in the study of
+zeros on the critical line was achieved by Hardy in
+[Har]. His  method was to regard the function
+\[
+\omega(x)=
+\sum_{n=1}^\infty\, e^{-n^2\pi x}\quad\colon\,x>0
+\]
+
+
+
+\noindent
+The construction of the $\Gamma$ function
+gives the equality
+\[ 
+\frac{1}{n^s}\cdot \Gamma(\frac{s}{2})
+\cdot {\pi}^{-\frac{s}{2}}=
+\int_0^\infty\, e^{-n^2\pi x}\cdot x^{\frac{s}{2}}\cdot\frac{dx}{x}\tag{*}
+\]
+for each positive integer $n$.
+A
+summation
+over $n$ gives:
+
+\[
+\zeta(s)\cdot \Gamma(\frac{s}{2})\cdot\pi^{-\frac{s}{2}}=
+\int_0^\infty\, \omega(x)
+\cdot x^{\frac{s}{2}}\cdot\frac{dx}{x}\quad\colon\mathfrak{Re}(s)>1
+\]
+
+
+
+\noindent 
+Using Fourier's inversion formula and a shift of certain complex
+line integrals, Hardy established the following result:
+\bigskip
+
+\noindent 
+{\bf {0.4.4 Theorem}.}
+\emph{When $\mathfrak{Re}\,x>0$ one
+has the equality}
+\[
+\omega(x)=\frac{1}{2\sqrt x}+
+\frac{1}{4\pi }\cdot\int_{-\infty}^\infty\,
+\zeta(1/2+it)\cdot \Gamma(1/4+it/2)\pi^{-it/2-1/4}
+x^{-1/4-it}\cdot dt
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+The right hand side yields a nicely convergent integral.
+The reason is that one has an exponential decay
+for the $\Gamma$-function, i.e. there are constants
+$A$ and $k$ such that
+\[
+|\Gamma(1/4+it/2)|\leq A\cdot e^{-k|t|}\quad\colon\, -\infty<t<\infty
+\]
+At the same time the $\zeta$-function 
+does not increase too fast. Namely, in § XX we show that
+there is constant $B$ such that
+\[
+|\zeta(1/2+it)|\leq B\cdot t^2\quad\colon\,t\geq 1
+\]
+
+
+\noindent
+We refer to Hardy's original work  how the inversion formula
+is used to
+produce zeros of the zeta-function on the critical line.
+See also  the text-book by Titchmarsch
+devoted  Riemann's $\zeta$-function 
+where results from  
+analytic function theory and  Fourier analysis
+are used to the "bitter end" in the search for a
+positive answer to the Riemann Hypothesis.
+\bigskip
+
+\noindent
+{\bf Final remark.}
+The literature about the Riemann hypothesis is
+extensive and there exist  alternative conjectures, some of them
+even more general than Riemann's.  
+We shall not enter into a  discussion about  this. 
+But let   recall that André Weil  solved
+the  Riemann hypothesis in characteristic $p$. 
+This gives some
+support for  the "optimistic point of view point "
+that Riemann's hypothesis is true.
+But until an answer is found  the Riemann Hypothesis remains as
+an outstanding open problem in mathematics.
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline {\bf {1. The Gamma function}}
+\bigskip
+
+
+\noindent
+The $\Gamma$-function has from the start a simple definition:
+\[ 
+\Gamma(z)=
+\int_0^\infty\,e^{-t}t^{z-1}dt\quad\colon\,
+\mathfrak{Re}(z)>0\tag{*}
+\]
+
+\medskip
+
+\noindent
+With $z=x+iy$ the absolute value $|t^{z-1}|= t^{x-1}$ when $t$ is real and
+positive. Moreover,  $t^\alpha\cdot \text{log}(t)$ is locally integrable
+on intervals $(0,t_*)$ with $t_*>0$ and we have the exponential decay from $e^{-t}$.
+Hence (*) converges when $\mathfrak{Re}(z)>0$ and gives a holomorphic
+function with the
+complex derivative 
+\[
+\Gamma'(z)=\int_0^\infty\,e^{-t}\cdot \,\text{Log}(t)\cdot t^{z-1}dt\tag{0.1}
+\]
+
+
+
+\noindent
+Partial integration gives:
+
+\[
+\Gamma(z)= e^{-t}\cdot \frac{t^z}{z}\,|_0^\infty+
+\frac{1}{z}\int_0^\infty e^{-t} t^z\,dt
+=\frac{1}{z}\cdot\Gamma(1+z)
+\]
+Hence we have the equality
+\[
+ z\Gamma(z)=\Gamma(z+1)\quad\colon\quad\mathfrak{Re}(z)>0\tag{0.2}
+\]
+Replacing  $z$ by $z+1$ and so on we obtain
+\[
+z(z+1)\cdots (z+m)\Gamma(z)= \Gamma(z+m+1)\quad\colon\quad
+m=0,1,2,\ldots\tag{0.3}
+\]
+Since (0.3) hold for all non-negative integers, 
+$\Gamma(z)$ extends to a meromorphic function defined in
+the whole complex plane and for every positive integer $m$ one has:
+\[
+\Gamma(z)=\frac{1}{z(z+1)\ldots(z+m)}
+\cdot \Gamma(z+m)\quad\colon\quad
+\mathfrak{Re}(z)>-m\tag{0.4}
+\]
+\medskip
+
+
+\noindent
+Here (0.4) shows that the
+poles of 
+$\Gamma(z)$  are contained in the set of 
+non-negative integers.
+We shall later prove that
+a simple pole exists for every
+such integer. Moreover, we will show that
+$\frac{1}{\Gamma(z)}]$ is an entire
+function and establish  the functional equation:
+\[
+\frac{1}{\Gamma(z)\cdot\Gamma(1-z)}=
+\frac{\text{sin}\,\pi z}{\pi}\tag{**}
+\]
+
+\bigskip
+
+\centerline {\bf 1. The Gauss representation.}
+\medskip
+
+\noindent
+Consider the
+Hadamard product:
+\[ 
+H(z)=\prod_{m=1}^\infty\,(1+\frac{z}{m})e^{-\frac{z}{m}}\tag{1.1}
+\]
+Here $H(z)$ is entire with simple zeros at negative integers and 
+(0.4) gives
+the entire  function
+\[
+z H(z)\cdot \Gamma(z)\in\mathcal O(\bf C)\tag{1.2}
+\]
+\medskip
+
+\noindent
+{\bf 1.3 Theorem} \emph{Let $\gamma$ be the Euler constant defined by}
+\[
+\gamma=Lim_{n\to\infty}\, 1+\frac{1}{2}+\ldots+\frac{1}{n}
+-\text{Log}\, n
+\]
+\emph{Then one has}
+\[
+z H(z)\cdot \Gamma(z)=e^{-\gamma z}\tag{**}
+\]
+
+\medskip
+
+\noindent 
+\emph{Proof.}
+When $n\geq 2$ we consider the partial product
+\[
+H_n(z)=\prod_{m=1}^{m=n}\,(1+\frac{z}{m})e^{-\frac{z}{m}}
+\]
+A computation gives the identity
+\[
+\frac{z(z+1)\cdots(z+n)}{n\,!\cdot n^z}
+=
+e^{z\cdot [1+\frac{1}{2}+\ldots+\frac{1}{n}-\text{Log}\,n]}
+\cdot z\cdot H_n(z)	
+\]
+If $\mathfrak{Re}(z)>0$ the right hand side
+converges to the limit $e^{\gamma z}\cdot z\cdot H(z)$.
+Hence  there exists the entire limit function
+\[ 
+G(z)=\lim_{n\to\infty}\,\frac{z(z+1)\cdots(z+n)}{n\,!\cdot n^z}\tag{i}
+\]
+It is clear that (**) holds in Theorem 1.3
+if we have proved:
+
+\[ 
+G(z)\cdot\Gamma(z)=1\tag{ii}
+\]
+To prove (ii) we regard the meromorphic function $\mathcal G=
+\frac{1}{G}$ so that
+\[ 
+\mathcal G(z)=
+\lim_{n\to\infty}\,
+\frac{n\,!\cdot n^z}
+{z(z+1)\cdots(z+n)}\tag{iii}
+\]
+Let us put
+\[
+\mathcal G_n(z)=
+\frac{n\,!\cdot n^z}
+{z(z+1)\cdots(z+n)}\tag{iv}
+\]
+Then we have
+
+
+\[
+\mathcal{G}_n(z+1)=\frac{n\,!\cdot n^{1+z}}
+{(z+1)(z+2)\cdots(z+n+1)}=
+\]
+\[
+\frac{n\,!\cdot n^z}
+{z(z+1)\cdots(z+n)}\cdot\frac{nz}{n+1+z}=z\mathcal{G}_n(z)\cdot\frac
+{n}{n+z+1}
+\]
+The last quotient tends to $z$ and we already know that
+$\mathcal{G}_n(z)\to \mathcal {G}(z)$. We conclude 
+that the $\mathcal G$-function satisfies
+\[ 
+\mathcal G(z+1)=z\mathcal G(z)\tag{v}
+\]
+Hence $\mathcal G$ satisfies the same functional equation as the
+$\Gamma$-function and there remains only to show that
+$\Gamma=\mathcal G$. Since we have two meromorphic functions
+it suffices that they are equal on the positive real axis.
+To show this  we first regard complex derrivatives
+of $\text{Log}\,\mathcal G$ which is holomorphic in the right
+half-plane. Since  the limit in (iii)  defines
+$\mathcal G$ in $\mathfrak{Re}(z)>0$
+we  have
+\[
+\log\,\mathcal G(z)=
+\lim\,[z\cdot \log(n)+\sum_{\nu=1}^{\nu=n}\,
+\log\,\nu -
+\sum_{\nu=0}^{\nu=n}\,
+\log(z+\nu) \,]\tag{vi}
+\]
+In the right hand side we take the second order derivative
+which becomes
+\[
+\sum_{\nu=0}^{\nu=n}\,\frac{1}{z+\nu)^2}
+\]
+Passing to limit as $n\to\infty$ it follows that
+\[
+\frac{d^2\,\log\,\mathcal G(z)}{dz^2}=
+\lim_{n\to\infty}\,-\sum_{\nu=0}^n\,\frac{1}{(z+\nu)^2}=
+-\sum_{\nu=0}^\infty\,\frac{1}{(z+\nu)^2}\tag{vii}
+\]
+Let us now regard the function defined for $x>0$ by
+\[  
+\delta(x)=\log\,\Gamma(x)-
+\log\,\mathcal G(x)\tag{vii}
+\]
+If we prove that $\delta(x)=0$ for all $x>0$ then (ii) follows by analyticity.
+To show that $\delta(x)=0$
+we first notice that (v) gives:
+\[
+\delta(x+1)=\delta(x)\quad\colon\quad x>0\tag{viii}
+\]
+Next, we shall regard the second derivative
+of $\delta$. First, put
+\[ 
+\psi(x)=\frac {d^2\log\,\Gamma(x)}{dx^2}
+=\frac{\Gamma(x)\Gamma''(x)-\Gamma'(x)^2}{\Gamma'(x)^2}\tag{ix}
+\]
+
+
+
+\noindent
+Next we have
+\[ \Gamma'(x)=
+\int_0^\infty\, e^{-t}\cdot \log\,t\cdot t^{x-1}\cdot dt
+\quad\colon\quad\Gamma''(x)= \int_0^\infty\, e^{-t}(\log\,t)^2\cdot t^{x-1}\cdot dt\tag{x}
+\]
+
+
+\noindent
+From these two expressions 
+the Cauchy Schwarz inequality gives
+\[
+\Gamma(x)\Gamma''(x)-\Gamma'(x)^2\geq 0\tag{xi}
+\]
+At the same time (vii) shows that
+the second order derivative of
+$\log\,\mathcal G(x)$ is $<0$.
+We conclude that 
+$\delta''(x)\geq 0$, i.e. the $\delta$-function is strictly convex when $x>0$.
+Next, the periodicity remains valid for the first order derivative, i.e.
+\[ 
+\delta'(x+1)=\delta'(x)\quad\colon\quad x>0\tag{xii}
+\]
+Finally,  $\delta$ is convex  the derivative
+$\delta'(x)$ is a non-increasing  function and we notice that
+every non-increasing and
+1-peridoic function on $x>0$
+is a constant. Hence $\delta'(x)$ is a constant which gives
+\[
+\delta(x)=ax+b\quad\colon\, a,b \,\,\text{real constants}\tag{xiii}
+\]
+Since  $\delta(x+1)=\delta(x)$ it follows that
+$a=0$. Hence 
+$\delta(x)=b$ is a constant But $b=0$ since it is clear that
+the functions $\Gamma$ and $\mathcal G$ are equal at all positive integers. This proves that
+$\delta(x)$ is identically zero on $x>0$ and the proof of Theorem 1.3 is finished.
+
+\bigskip
+
+\noindent
+{\bf 1.4 Remark.}
+The limit of products which defined $\mathcal G(z)$
+was considered by Gauss. So one  refers to 
+$\mathcal G$ as the \emph{Gauss representation}
+of the $\Gamma$-function.
+Theorem 1.3 is   due to Weierstrass.
+The proof above using the $\delta$-function
+was  discovered by  Erhard Schmidt.
+His method was later extended by Emil Artin who established a remarkable
+uniqueness property of the $\Gamma$-function in an article from
+1931. More precisely he proved
+\medskip
+
+\noindent 
+{\bf 1.5 Artin's Theorem}
+\emph{Let $f(z)$ be an entire function  with $f(0)=1$
+satisfying:}
+\[
+f(z+1)=f(z)\quad\colon\,\colon\,
+\frac{d^2\log\,f(x)}{dx^2}\geq 0\quad\colon\,x>0
+\]
+\emph{Then $f(z)=\frac {1}{z\cdot \Gamma(z)}$.}
+\bigskip
+
+\noindent
+We refer  [Artin] for details of proof and
+a further discussions about the $\Gamma$-function.
+
+
+\bigskip
+
+
+\noindent
+\centerline {\bf  2. A functional equation.}
+
+
+
+\noindent
+Consider the product
+\[ 
+\Gamma(z)\cdot\Gamma(1-z)\tag{2.1}
+\]
+This is a meromorphic function with simple poles at all integers.
+Next, we have the entire function $\text{sin}\,\pi z$
+with simple zeros at all integers. Hence the function
+\[ 
+F(z)=
+\Gamma(z)\cdot\Gamma(1-z)\cdot
+\text{sin}\,\pi z
+\] 
+has no poles and is therefore  entire.
+It turns out that this function is constant. 
+\bigskip
+
+\noindent {\bf 2.1 Theorem.}
+One has the equality
+\[
+\frac{1}{\Gamma(z)\cdot\Gamma(1-z)}=
+\frac{\text{sin}\,\pi z}{\pi}
+\]
+
+\medskip
+
+\noindent \emph{Proof.}
+The Gauss representation from (iii) in the proof of Theorem 1.3
+gives
+\[ 
+\frac{1}{\Gamma(z)}=
+\lim_{n\to\infty}\,\frac{z(z+1)\cdots(z+n)}{n\,!\cdot n^z}=
+\lim_{n\to\infty}\,
+\frac{z (z+1)\cdot(\frac{z}{2}+1))\cdots
+(\frac {z}{n}+1)}{n^z}
+\]
+Similarly we obtain
+\[
+\frac{1}{\Gamma(1-z)}=
+\lim_{n\to\infty}\,
+\frac{(1-z) \cdot(1-\frac{z}{2})\cdots
+(1-\frac {z}{n})}{n^{-z}}\cdot \frac{n+1-z}{n}
+\]
+Since $\lim_{n\to\infty}\, \frac{n+1-z}{n}=1$ we conclude that
+\[
+\frac{1}{\Gamma(z)\cdot\Gamma(1-z)}=
+\lim_{n\to\infty}\,
+z \cdot (1-z^2)\cdot(1-(\frac{z}{2})^2)\cdots
+(1-(\frac {z}{n})^2)
+\]
+But the last term is the Hadarmard product for
+$\frac{\text{sin}\,\pi z}{\pi}$
+and Theorem 2.1 follows.
+
+
+\bigskip
+
+
+\centerline {\bf 3. The integral formula.}
+\medskip
+
+\noindent
+Let $z$ be a non-zero complex number
+such that $\mathfrak{Re}\, z<1$.
+Keeping $z$ fixed we  define the complex powers
+$s^{-z}$ for all $s$ in ${\bf{C}}\setminus (-\infty,0]$.
+More precisely, when the negative real axis is removed we have a unique polar
+form
+\[ 
+s= re^{i\theta}\, -\pi<\theta<\pi\tag{i}
+\]
+Then we can write
+\[ 
+s^{-z}= r^{-z}\cdot e^{-i\theta z}\tag{ii}
+\]
+For every fixed $z$
+the  function $s\mapsto s^{-z}$ is analytic in the simply connected
+domain
+$\Omega={\bf{C}}\setminus (-\infty,0]$ where it is equal to
+$e^{-z\cdot\log \,s}$ and (i) determines the value of
+$\log s$.
+Multiplying with $e^s$ we get
+\[
+ f(s)=
+s^{-z}\cdot e^s\in\mathcal O(\Omega)\tag{1}
+\]
+With $s=\sigma+i\tau$ we get
+\[ 
+|f(\sigma+i\tau)|=
+|r|^{-x}\cdot e^{-\theta y}\cdot e^\sigma\quad\colon\quad
+z=x+iy\quad\colon\,
+\tag {2}
+\]
+
+
+\noindent
+Hence $f(s)$ has exponential decay in the right
+half-plane $\mathfrak{Re}(s)<0$.
+We profit upon this to construct two absolutely convergent integrals.
+Given $\epsilon>0$ we consider the two half-lines
+\[ 
+\ell^*(\epsilon)=
+\{ s=\sigma+i\epsilon\,\quad\colon\, \sigma\leq 0\}\quad\colon\quad
+\ell_*(\epsilon)=
+\{ s=\sigma-i\epsilon\,\quad\colon\, \sigma\leq 0\}\tag{3}
+\]
+\medskip
+
+\noindent
+Let $T_+(\epsilon)=\{ s= \epsilon e^{i\theta}
+\,\colon\, -\pi/2\leq\theta<\pi/2\}$ and put:
+\medskip
+\[\gamma(\epsilon)=\ell^*(\epsilon)\cup\,T_+(\epsilon)\,\cup
+\ell_*(\epsilon)\tag{4}
+\]
+We choose the \emph{negative} orientation along
+$\gamma(\epsilon)$ which means that
+we first integrate along
+$\ell^*(\epsilon)$ as $\sigma$ increases from
+$-\infty$ to 0 and  and so on. This gives:
+
+\[ \int_{\gamma(\epsilon)}f(s)ds=
+\int_{-\infty}^0\, f(\sigma+i\epsilon)d\sigma
+-i\epsilon \cdot \int_{-\pi/2}^{\pi/2}\,
+f(\epsilon\cdot e^{i\theta})e^{i\theta}\cdot d\theta-
+\int_{-\infty}^0\, f(\sigma-i\epsilon)d\sigma\tag{5}
+\]
+
+
+\noindent
+With $\mathfrak{Re}(z)=x<1$ we see from (2) that
+\[
+\lim_{\epsilon\to 0}\,\epsilon \cdot \int_{-\pi/2}^{\pi/2}\,
+f(\epsilon\cdot e^{i\theta})e^{i\theta}\cdot d\theta=0\tag{6}
+\]
+Next, when $\sigma<0$ we see that (ii) and (1) give
+\[ 
+\lim_{\epsilon\to 0}\,
+f(\sigma+i\epsilon)-f(\sigma-i\epsilon)=
+|\sigma|^{-x-iy}[e^{i\pi\cdot z}-
+e^{-i\pi\cdot z}]\tag{7}
+\]
+
+
+\noindent
+Hence we have proved
+
+\medskip
+
+\noindent
+{\bf 3.1 Proposition.}
+\emph{One has}
+\[ 
+\lim_{\epsilon\to 0}\,
+\int_{\gamma(\epsilon)}f(s)ds=2i\cdot\text{sin}(\pi z)\cdot \int_{-\infty}^0\, |\sigma|^{-x-iy}\cdot
+e^\sigma d\sigma
+\]
+
+
+\noindent
+Dividing by $2\pi i$
+and making the variable substitution $t=-\sigma$ we get
+\[
+\lim_{\epsilon\to 0}\,\frac{1}{2\pi i}\cdot \int_{\gamma(\epsilon)}f(s)ds=
+\frac{\text{sin}(\pi z)}{\pi}\cdot
+\int_0^\infty  t^{-x-iy}\cdot e^{-t}dt\tag{8}
+\]
+\medskip
+
+\noindent
+The last integral is $\Gamma(1-z)$. Together with
+Theorem 2.1 we conclude the following:
+\medskip
+
+\noindent
+{\bf 3.2 Theorem.}
+\emph{When $\mathfrak{Re}(z)<1$ one has the equality}
+\[
+\frac{1}{\Gamma(z)}=
+\lim_{\epsilon\to 0}\,\frac{1}{2\pi i}\cdot \int_{\gamma(\epsilon)}e^s\cdot s^{-z}ds
+\]
+\emph{where $\gamma(\epsilon)$ has the negative orientation
+as described in (4).}
+\bigskip
+
+\noindent
+{\bf 3.3 Remark.}
+In the right hand side we can change the contour
+$\gamma\uuu\epsilon$ where convergence
+holds as long as the real part of $s$ tends to
+$\vvv\infty$
+along the
+end\vvv tails. For example, the integral representation holds for
+every $\epsilon>0$, i.e. even for \emph{large} $\epsilon$.
+This flexible manner to represent $\frac{1}{\Gamma(z)}$
+is used in many formulas where $\Gamma$\vvv functions appear.
+An  example are  the  integral formulas due to Barnes
+for hypergeometric functions.
+
+
+\newpage
+
+
+
+\centerline{\bf \large II. Riemann's $\zeta$-function}
+
+\bigskip
+
+\noindent
+{\bf Introduction.}
+The 
+zeta-function is defined
+by the series:
+\medskip
+\[ 
+\zeta(s)=\sum_{n=1}^\infty \frac{1}{n^s} 
+\quad\colon\quad
+\mathfrak{Re}\, s>1\tag{0.1}
+\]
+
+
+
+
+\noindent 
+It is clear that
+$\zeta(s)$ is an analytic function in the half-space
+$\mathfrak{Re}(s)>1$ whose complex derivative is found
+by termwise differentiation, i.e.
+\[
+\zeta'(s)=-\sum_{n=1}^\infty \frac{\log(n)}{n^s} 
+\quad\colon\quad
+\mathfrak{Re}\, s>1\tag{0.1}
+\]
+In the subsequent sections we establish  results about
+the $\zeta$\vvv functions concerned with
+growth properties and distribution of its zeros.
+\bigskip
+
+
+\centerline{\bf{1. The meromorphic extension.}}
+\medskip
+
+\noindent
+The fact  that  $\zeta(s)$ has a meromorphic extension
+with a simple pole a $s=1$
+goes back to  Euler and is presented below.
+
+\medskip
+
+\noindent
+{\bf{1.1 Euler's summation formula.}}
+When
+$x\geq 1$ we let $[x]$
+denote the largest integer which is $\leq x$.
+Set
+\[
+P(x)= [x]-x+\frac{1}{2}\,,\quad x\geq 1
+\]
+The differential  $dP$ is  the counting function at
+positive integers. So if $\mathfrak{Re}\, s>1$
+we have
+
+\[ 
+\zeta(s)-\int_1^\infty\, \frac{dx}{x^s}=
+\int_1^\infty\, \frac{dP(x)}{x^s}=
+\frac{P(x)}{x^s}\bigl|_1^\infty-
+\int_1^\infty\, \frac{P(x)}{x^{s+1}}\cdot dx
+\]
+\medskip
+
+\noindent
+Since $P(1)=\frac{1}{2}$
+and $\int_1^\infty\, \frac{dx}{x^s}=\frac{1}{s-1}$ we obtain
+\medskip
+
+\noindent
+{\bf 1.2 Euler's integral formula.}
+One has
+\[
+\zeta(s)= \frac{1}{s-1}+\frac{1}{2}+
+s\cdot \int_1^\infty\, \frac{P(x)}{x^{s+1}}\cdot dx
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+Since the function $P(x)$ is bounded  the last integral
+extends to an analytic function 
+in the half plane
+$\mathfrak{Re}\, s>0$.
+So Euler's integral formula  shows that
+the zeta-function extends to a meromorphic function in
+$\mathfrak{Re}\, s>0$ with a simple pole at
+$s=1$.
+\medskip
+
+\noindent
+{\bf 1.3 Further integral formulas.}
+Notice  that $P(x)$ is 1-periodic:
+\[
+P(x+1)=P(x)\,\quad\, x\geq 1\,.
+\]
+Moreover it has
+the Fourier series expansion
+
+\[ 
+P(x)=\sum_{n=1}^\infty\,
+\frac{\text{sin}\, (2n\pi x)}{n\pi}
+\]
+whose primitive function becomes
+\[
+P_1(x)=-
+\sum_{n=1}^\infty\,
+\frac{\text{cos}\,( 2n\pi x)}{2n^2\pi^2}
+\]
+A partial integration gives
+\[
+s\cdot \int_1^\infty\, \frac{P(x)}{x^{s+1}}\cdot dx
+=s\cdot \frac{P_1(x)}{x^{s+1}}\bigl|_1^\infty-
+s(s+1)\int_1^\infty\,\frac{P_1(x)}{x^{s+2}}\cdot dx
+\]
+Next, one has the summation formula
+\[
+P_1(1)=\sum_{n=1}^\infty\,
+\frac{1}{2n^2\pi^2}=\frac{1}{12}
+\]
+It follows that
+\[
+\zeta(s)= \frac{1}{s-1}+\frac{1}{2}+\frac{s}{12}-
+s(s+1)\cdot \int_1^\infty\, \frac{P_1(x)}{x^{s+2}}\cdot dx
+\]
+\medskip
+
+\noindent
+The last integral is analytic when
+$\mathfrak{Re}\, s>-1$ which gives a further
+meromorphic extension of $\zeta(s)$.
+Repeating the process by taking the primitive function of
+$P_1$ one shows that $\zeta(s)$ extends to the whole complex plane with
+a  simple pole at $s=1$.
+Let us also notice that the boundedness of $P_1(x)$
+and the formula above gives
+\medskip
+
+\noindent
+{\bf 1.4. Proposition.} \emph{Let $0<\delta<1$. Then
+there exists a constant $C(\delta)$
+such that}
+
+\[ |\zeta(-1+\delta+it)|\leq
+C(\delta)\cdot t^2\,,\quad\text{for all}\,\,|t|\geq 1
+\]
+
+\bigskip
+
+
+
+
+
+\centerline{\bf 2. Riemann's functional equation.}
+\bigskip
+
+\noindent
+The next result consolidates Euler's results from section 1.
+\medskip
+
+\noindent
+{\bf 2.1. Theorem} 
+\emph{The $\zeta$-function extends to a meromorphic
+function in the whole complex $s$-plane where
+it satisfies the functional equation}
+\[
+\zeta(1-s) =\frac{2}{(2\pi)^s}\cdot
+\text{cos}(\,\frac{\pi s}{2})\, \cdot
+\Gamma(s)\cdot\zeta(s)\quad\colon\, s\in {\bf{C}}
+\]
+
+\medskip
+
+\noindent
+The proof requires several steps. To begin with we have
+the integral formula in Theorem 3.2 from § I: 
+\[
+\frac{1}{\Gamma(s)}=
+\frac{1}{2\pi i}\cdot
+\int_{L\uuu \epsilon}\,
+e^z\cdot z^{-s} dz\tag{1}
+\]
+Notice that the role of $z$ and $s$ are interchanged
+in (1) above as compared to the formula in  § 3 about the
+$\Gamma$-function. 
+Since both sides in (1) are entire functions of $s$
+we can replace $s$ by $1-s$ and write
+\[
+\frac{1}{\Gamma(1-s)}=\frac{1}{2\pi i}\cdot
+\int_{\gamma(\epsilon)}\,
+e^z\cdot z^s \cdot \frac{dz}{z}\tag{2}
+\]
+If $n$ is a positive integer the variable substitution $z\mapsto nz$
+gives
+\[
+\frac{1}{\Gamma(1-s)}=\frac{1}{2\pi i}\cdot
+n^s\cdot \int_{L_\epsilon}\,
+e^{nz}\cdot z^s \cdot \frac{dz}{z}\implies
+\]
+\[
+n^{-s}\cdot \frac{1}{\Gamma(1-s)}=
+\frac{1}{2\pi i}\cdot
+\int_{L_\epsilon}\,
+e^{nz}\cdot z^s \cdot \frac{dz}{z}
+\tag{3}
+\]
+
+
+\noindent
+Next, notice that
+\[ 
+\sum_{n=1}^\infty\, 
+e^{nz}=
+\frac{e^{z}}{1-e^{z}}\quad\colon\, \mathfrak{Re}\, z<0
+\]
+
+
+\noindent
+Taking the sum over $n$ in (3)
+we obtain
+\medskip
+
+
+
+\noindent
+{\bf 2.2 Proposition.} \emph{One has the equality}
+\[ 
+\frac{\zeta(s)}{\Gamma(1-s)}=
+\lim_{\epsilon\to 0}\frac{1}{2\pi i}\cdot
+\int_{L_\epsilon}\,
+\frac{e^{z}}{1-e^z}\cdot z^s \cdot \frac{dz}{z}
+\]
+\newpage
+
+\centerline{\emph{Proof of  Theorem 2.1}}
+
+
+\medskip
+
+\noindent
+Let $R=(2N+1)\pi$ where $N$ is a positive integer.
+With $0<\epsilon<1$ we obtain a simply connected
+domain
+$\Omega$ bounded by the circle $|z|=R$
+and the portion of  of $L_\epsilon$. See figure !
+With $s$ fixed we find a single valued branch of
+$z^s$ in $\Omega$ and regard the analytic function
+\[ 
+g_s(z)=\frac{e^{z}}{1-e^{z}}\cdot z^{s-1}\tag{ii}
+\]
+In $\Omega$ we encounter poles when
+$e^z=1$, i.e. when $z=2\pi i\nu$ when $1\leq\nu\leq N$.
+Residue calculus gives - see figure !!:
+\[ 
+\int_{-\pi+\delta}^{\pi-\delta}
+\, g_s(Re^{i\theta})\cdot d\theta
+-\int_{L_\epsilon}\, g_s(z)\cdot dz=
+2\pi i\cdot\sum_{\nu=1}^{\nu=N}\,\mathfrak{res}\,
+[g_s(2\pi i\nu)+g_s(-2\pi i\nu)]\tag{iii}
+\]
+
+
+\noindent
+The residue sum is easily found, i.e. one has
+\medskip
+
+\noindent \emph{Sublemma} The right hand side in
+(iii) becomes:
+\[
+2\cdot\sum_{\nu=1}^{\nu=N}\,
+\frac{1}{\nu^{1-s}}\cdot (2\pi)^{s-1}\cdot
+\text{cos}\frac{\pi}{2}(s-1)\tag{*}
+\]
+
+
+\noindent
+So far we have allowed any $s$. Let us now specify $s$ to be real and negative.
+A straightforward calculation which is left to the reader gives:
+\[
+\lim_{N\to\infty}\,
+\int_{-\pi+\delta}^{\pi-\delta}
+\, g_s(Re^{i\theta})\cdot d\theta
+=0\colon\quad\, s\,\,\text{real and}\,\,<0\tag{iv}
+\]
+
+
+\noindent
+Next,  the  definition of
+the $\zeta$-function gives
+\[ 
+\zeta(1-s)=
+\lim_{N\to\infty}\, \sum_{\nu=1}^{\nu=N}\,
+\frac{1}{\nu^{1-s}}\quad\colon\, s<0\tag{**}
+\]
+\medskip
+
+\noindent Hence (iii-iv) together with
+Proposition 2.2, (*) and (**) give:
+
+\medskip
+
+
+
+
+
+\noindent
+{\bf{Sublemma}}.
+\emph{When $s$ is real and $<0$ one has
+the equality:}
+\[
+2\cdot (2\pi)^{s-1}\cdot \zeta(1-s)\cdot 
+\text{cos}\,\frac{\pi}{2}(s-1)=
+\frac{\zeta(s)}{\Gamma(1-s)}
+\]
+
+
+\noindent
+\emph{Final part of the proof }.
+Notice  that
+\[
+\text{cos}\,\frac{\pi}{2}(s-1)=\text{sin}\,\frac{\pi s}{2}=
+\frac{\text{sin}\,\pi s}{2\cdot 
+\text{cos}\,\frac{\pi s}{2}}\tag{1}
+\]
+
+
+
+
+
+\noindent 
+Hence the Sublemma gives
+\[
+\frac{\zeta(s)}{\Gamma(1-s)}=
+(2\pi)^{s-1}\cdot\zeta(1-s)\cdot 
+\text{sin}\,\pi s\cdot 
+\frac{1}{\text{cos}\,\frac{\pi s}{2}}\implies
+\]
+\[
+\text{cos}\,\frac{\pi s}{2}\cdot\zeta(s)=
+(2\pi)^{s-1}\cdot\zeta(1-s)\cdot 
+\text{sin}\,\pi s\cdot\Gamma(1-s)\tag{1}
+\]
+\medskip
+
+\noindent
+At this stage we recall that
+\[
+\text{sin}\,\pi s\cdot\Gamma(1-s)=
+\frac{\pi}{\Gamma(s)}\tag{2}
+\]
+
+
+\noindent 
+So (1-2) give together:
+
+\[
+\text{cos}\,\frac{\pi s}{2}\cdot\zeta(s)=
+\frac{1}{2}\cdot (2\pi)^s\cdot\zeta(1-s)\cdot 
+\frac{1}{\Gamma(s)}\tag{3}
+\]
+\medskip
+
+\noindent
+Expressing $\zeta(1-s)$ alone we get the requested formula in
+Theorem 2.1 where analyticity gives equality for all $s$.
+
+\bigskip
+
+
+\centerline {\bf 3. The asymptotic formula for
+$\mathcal N(T)$ }
+\bigskip
+
+
+
+\noindent
+Using the functional equation and the
+fact that the $\Gamma$-function has simple poles
+at all non-negative integers we will show
+that $\zeta(-2m)=0$ for every positive integer $m$.
+Apart from these zeros    it turns out
+that
+the remaining zeros of $\zeta(s)$ belong to the strip
+\[ 
+\mathcal S=\{0<\mathfrak{Re}\, s<1 \}\tag{0.1}
+\]
+
+\noindent
+To find  zeros in $\mathcal S$
+we  notice that 
+the $\zeta$-function is real when $s$ is real and $>1$. 
+By analytic continuation it follows that
+\[ 
+\zeta(s)=\bar\zeta(\bar s)\tag{0.2}
+\]
+hold for all $s$. Hence  zeros of $\zeta$ appear with conjugate pairs 
+in $\mathcal S$   and it suffices to
+study the counting function
+\[ 
+\mathcal N(T)=\text{number of zeros of}\,\,\zeta(s)\quad
+\colon\, s\in\mathcal S\cap\,\{\mathfrak{Im}\,s>0\}\tag{0.3}
+\]
+
+\bigskip
+
+
+
+\noindent
+{\bf 3.1 Riemann's asymptotic formula.}
+\emph{There exists a constant $C_0$ such that the following hold when $T\geq 1$:}
+\[
+\mathcal N(T)=\frac{1}{2\pi} T\cdot\log\,T-
+\frac{1+\log\,2\pi}{2\pi}\cdot T+\rho(T)\cdot \log\,T\quad\colon
+\,|\rho(T)|\leq C_0
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+Riemann announced this asymptotic formula in [Rie]. It was later
+proved
+by von Mangoldt and here we shall 
+present the elegant    proof due to
+Bäcklund.
+Before we begin the proof of the asymptotic formula above
+we draw some conclusions from
+Riemann's functional equation.
+Let $n\geq 1$ be a positive  integer and put $s=2n+1$.
+Here the cosine function has a simple zero, i.e.
+$\text{cos}\,\pi n+\frac{\pi}{2}=0$ and at  the same time 
+$\zeta(2n+1)$ and $\Gamma(2n+1)$  are real and positive.
+Hence Theorem 2.2  implies that the $\zeta$-function has a simple
+zero at $1-s=-2n$. So we have proved:
+\bigskip
+
+\noindent
+{\bf 3.2 Proposition.}
+\emph{The $\zeta$-function has simple zeros at all even negative integers.}
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent{\bf 3.3 The entire $\xi$-function.} Let us define the function
+\[ 
+\xi(s)= \frac{s(s-1)}{2}\cdot \Gamma(\frac{s}{2}) \cdot \pi^{-\frac{s}{2}}
+\cdot\zeta(s)
+\]
+
+
+\noindent {\bf 3.4 Proposition.} \emph{The function $\xi(s)$ is entire and satisfies}
+\[
+\xi(s)=\xi(1-s)\quad\colon\,\xi(s)=\bar\xi(\bar s)
+\]
+
+
+\noindent 
+\emph{Proof.} That $\xi(s)$ is entire is clear from the
+construction since
+the zeros of the
+$\zeta$-function at even and negative integers
+compensate the simple poles of the
+$\Gamma$-function at negative integers. Moreover, the
+factor $s(s-1)$
+takes care of the simple pole of
+$\zeta(s)$ at $s=1$
+and the pole of the $\Gamma$-function at
+$s=0$.
+The equality $\xi(s)=\bar\xi(\bar s)$ follows
+since the same conjugation property  hold for 
+the three factors defining $\xi(s)$ and
+the equality $\xi(s)=\xi(1-s)$ follows from Riemann's 
+functional equation.
+
+\bigskip
+
+
+\centerline {\bf 3.5. Zeros in the critical strip.}
+\medskip
+
+\noindent
+The construction of the $\xi$-function in
+3.3. and the fact that
+$\Gamma(\frac{s}{2})$ has no zeros in the critical strip give:
+\medskip
+
+\noindent {\bf 3.6 Proposition.}
+\emph{The zero sets of $\zeta$  and $\xi$
+in the critical strip are equal.}
+
+
+\medskip
+
+\noindent
+Now we shall count zeros of $\xi$.
+For this purpose we consider
+the rectangle
+\[ 
+\square_T=\{s=\sigma+it\quad\colon\, -1/2<\sigma<3/2\,\colon
+-T<t<T\}\quad\colon\, T\geq 1
+\]
+Notice that $\square_T$ is symmetric around $\mathfrak{Re}(s)=1/2$.
+We choose $T$ so that $\xi(s)$
+has no zeros occur when
+$\mathfrak{Im}(s)=T$.
+This gives
+\[ 
+2\cdot \mathcal N(T)=\frac{1}{2\pi i}
+\int_{\partial\square_T}\, \frac{\xi'(s)ds}{\xi(s)}\tag{*}
+\]
+\medskip
+
+\noindent 
+To estimate the line integral in
+(*) we recall that
+\[ 
+\xi(s)=\xi(1-s)\quad\colon\,\xi(s)=\bar\xi(\bar s)\tag{i}
+\] 
+
+\noindent
+These two equations  entail
+that the  line integral
+over $\partial\square_T$  is \emph{four times}
+the line integral over the the "quarter part" given by the union of
+the two lines
+\[
+\ell_*(T)=\{2+it\quad\colon\,0<t<T\}\quad\colon\,
+\ell^*(T)=\{\sigma+iT\quad\colon\,1/2<\sigma<2\}\tag{ii}
+\]
+
+
+
+
+\noindent
+Next,  the line integral is the real number
+$2\cdot\mathcal N(T)$ and
+taking the factor 4 into the account we get:
+\medskip
+
+\noindent
+{\bf 3.7 Lemma.} \emph{One has}
+\[
+\mathcal N(T)=
+\frac{1}{\pi i}
+\cdot\int_{\ell_*}\,
+ \frac{\xi'(s)ds}{\xi(s)}+
+\frac{1}{\pi i}
+\cdot\int_{\ell^*}\,
+ \frac{\xi'(s)ds}{\xi(s)}
+\]
+
+
+\medskip
+
+
+
+
+
+
+\noindent
+Following Backlund we  decompose  the logarithmic
+derivative of $\xi(s)$ which gives   a sum of
+five terms:
+\medskip
+\[
+\cdot  \frac{\xi'(s)ds}{\xi(s)}=\frac{1}{s}+\frac{1}{s-1}+
+\frac{1}{2}\cdot  \frac{\Gamma'(\frac{s}{2})}{\Gamma(\frac{s}{2})}
+-\frac{\text{Log}\,\pi}{2}+
+\frac{\zeta'(s)}{\zeta(s)} \tag{iii}
+\]
+
+\noindent
+There remains to study the line integrals of
+each of these separate terms. 
+The reader can verify that
+the contribution from  the four
+first terms  give
+the sum of the four first terms
+which appear in Riemann's asymptotic formula.
+There remains to investigate
+the contribution of:
+
+\[
+\frac{1}{\pi i}
+\cdot\int_{\ell_*(T)}\,
+ \frac{\zeta'(s)ds}{\zeta(s)}+
+\frac{1}{\pi i}
+\cdot\int_{\ell^*(T)}\,
+ \frac{\zeta'(s)ds}{\zeta(s)}\tag{*}
+\]
+Here the  requested  estimate for the remainder  term
+follows if we have proved
+\medskip
+
+\noindent
+{\bf{3.8 Lemma.}} \emph{There exists a constant $C$ such that the absolute value
+of (*) is bounded above by
+$C\cdot\log(T)$ for every $T\geq e$.}
+
+
+\medskip
+\noindent
+{\emph{Proof.}}
+First we
+consider the
+the line integral over the vertical line $\ell_*(T)$.
+To pursue the logarithmic derivative 
+of $\zeta$ along
+$\ell_*$
+which  by assumption is $\neq 0$
+we choose choose a branch of its Log-function and
+write
+\[
+\log\,\zeta(2+it)=
+\log\,|\zeta(2+it)|+ i\phi(t)\tag{1}
+\]
+where $\phi(t)$  is a real valued argument function which gives
+\[ 
+\frac{\zeta'(2+it)}{\zeta(2+it)}=
+\frac{1}{i}\frac{d}{dt}\,[
+\log\,\zeta(2+it)\,]=
+\frac{1}{i}\frac{d}{dt}\,
+|\log\,\zeta(2+it)|\,]+\frac{d\phi}{dt}\tag{2}
+\]
+\medskip
+
+\noindent
+Along $\ell_*$ we  have $ds=idt$ and
+since $\mathcal N(T)$ is real our sole concern is to study:
+\[
+\mathfrak{Re}\,[
+\frac{1}{\pi i}
+\cdot\int_{\ell^*}\,
+ \frac{\zeta'(s)ds}{\zeta(s)}\,]=
+ \frac{1}{\pi}\int_0^T\,
+\frac{d\phi}{dt}\cdot dt \tag{3}
+\]
+
+
+\noindent
+To estimate  (3)
+we shall need
+the following inequality
+\[ 
+\mathfrak{Re}[\,\zeta(2+it)\,]>\frac{1}{3}\quad\colon\,t>0\tag{4}
+\]
+
+
+
+\noindent
+To verify (4) we use that
+$n^{it}=e^{it\text{log}\,n}$ and get
+$\mathfrak{Re}\, n^{it}=
+\text{cos}\, (t\cdot \text{log}\, n)$. It follows that
+\[
+\mathfrak{Re}[\,\zeta(2+it)\,]=
+1+\sum_{n=2}^\infty\, \frac{\text{cos}\, (t\cdot \text{log}\, n)}{n^2}
+\geq 1-\sum_{n=2}^\infty\, \frac{1}{n^2}
+= 2-\frac{\pi^2}{6}>\frac{1}{3}\tag{5}
+\]
+
+\medskip
+
+
+\noindent
+which proves (4) and it shows
+that 
+$\zeta(2+it)$ belongs to   the right half-plane when
+$0\leq t\leq T$.Hence the argument of the $\phi$-function satisfies:
+\[
+-\pi/2<\phi(t)<\pi/2\,\,\quad\colon\,\text{along}\,\,\ell_*(T)
+\] 
+In particular we get
+\[
+-1< \frac{1}{\pi}\int_0^T\,
+\frac{d\phi}{dt}\cdot dt <1
+\]
+
+
+\noindent 
+Thus, the contribution along $\ell_*(T)$ has absolute value $<1$ for all
+$T$ and is therefore  harmless for the asymptotic estimate
+in Lemma 3.8.
+\bigskip
+
+\noindent
+{\emph{3.9
+The line integral over $\ell^*(T)$.}} Along $\ell^*(T)$
+we have $ds=d\sigma$. So this time our concern is to estimate
+\[
+\frac{1}{\pi}\cdot\int_{1/2}^2\,
+\mathfrak{Im}\,[\frac{\zeta'(\sigma+iT)}{\zeta(\sigma+iT)}\,]\cdot
+d\sigma \tag{1}
+\]
+
+
+
+\noindent
+By the result in XXX this amounts to find an upper bound for
+the zeros of the function
+\[
+\sigma\mapsto
+\mathfrak{Re}(\zeta(\sigma+iT)\quad\colon
+1/2< \sigma<2\tag{2}
+\]
+
+
+
+\noindent
+Since
+$\zeta(s)=\bar\zeta(\bar s)$
+this amounts to consider zeros of the function
+\[
+\sigma\mapsto
+\zeta(\sigma+iT)+\zeta(\sigma-iT)\quad\colon\,
+1/2< \sigma< 2\tag{3}
+\]
+
+
+\noindent
+We seek an upper bound of zeros for large
+$T$. So from now on we assume that
+\[ 
+T\geq \frac{7}{2}
+\]
+To obtain an upper bound for the zeros in (3)
+we consider the 
+analytic function of
+a new complex variable $w$:
+\[
+\phi_T(w)=\zeta(w+iT)+\zeta(w-iT)\quad\colon\,|w-3|\leq 5/2\tag{4}
+\]
+
+
+\noindent
+Let $\frac{1}{2}< \sigma_1\leq\ldots\leq \sigma_m<2$
+be the $m$-tuple which yield all the zeros counted with 
+multiplicities in (3).
+They also give zeros of the analytic  function $\phi$ in the disc
+$|w\vvv 3|\leq 5/2$
+and by the general inequality from XXXX we have
+\[
+\sum_{\nu=1}^m\,\text{log}\,\bigl[\frac{5}{2\sigma_\nu}\,\bigr]
++\text{log}\,|\phi_T(3)|\leq
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\text{log}\,\bigl|\phi_T(3+\frac{5}{2}e^{i\theta})\,\bigl|\cdot d\theta\tag{5}
+\]
+\medskip
+
+\noindent
+By XX we have
+$|\phi_T(3)|\geq 1/3$ and since
+$1/2\leq\sigma\uuu \nu\leq 2$ hold we get
+\[
+m\cdot \text{log}\,\frac{5}{4}\leq
+\text{log}\, 3+\max_{|w-3|= 5/2}\,\text{log}\, |\phi_T(w)|\tag{6}
+\]
+\medskip
+
+\noindent
+Finally, Proposition xx gives the constant $C(1)$ such that
+\[
+\phi_T(w)|\leq 2\cdot C(1)\cdot T^2\quad\colon\quad  T\geq 7/2\tag{7}
+\]
+\medskip
+
+\noindent
+Passing to $\text{Log}\,|\phi_T(w)|$
+we conclude that the $m$-number which counts the zeros
+is bounded above by an absolute constant times
+$\text{log}\, T$ for all $T\geq 7/2$
+which  finishes the proof of
+Lemma 3.8.
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf  4. The prime number theorem}
+
+\bigskip
+
+\noindent
+The counting function for prime numbers is defined by
+\[ 
+\Pi(x)=\text{number of primes}\,\,\,\leq x\tag{i}
+\]
+This is an increasing jump function where
+we for example have
+$\Pi(8)=\Pi(9)=\Pi(10)=4$ and 
+$\Pi(11)=5$. 
+\medskip
+
+\noindent
+{\bf{4.0 Exercise.}}
+Show that prime numbers are sufficiently sparse in order that
+\[
+\lim_{x\to\infty}\, \frac{\Pi(x)}{x}=0
+\]
+
+\medskip
+
+\noindent
+{\bf{4.1 Theorem}}
+\emph{There exists the limit formula}
+\[
+\lim_{x\to\infty}\,\,\frac{\text{log}\,x\cdot \Pi(x)}{x}=1\tag{*}
+\]
+\medskip
+
+\noindent
+To prove this  we introduce the function
+defined for $x>0$ by
+\[
+\gamma(x)=\sum_{p\leq x}\,\log p
+\] 
+where the sum as indicated extends over all prime numbers $\leq x$.
+Next, let $d\Pi$ be the discrete measure which assigns a unit point mass
+at every prime number.
+A
+partial integration gives the equation:
+\[
+\gamma(x)=\int_2^x \,\log x\cdot d\Pi(x)=
+\log x\cdot \Pi(x)-\int_2^x \,\frac{\Pi(x)}{x}\cdot dx\tag{i}
+\]
+Afer a division by $x$  on both sides it follows from
+Exercise 0.4 that the limit formula (*) in Theorem 4.1. is equivalent to 
+\[ 
+\lim_{x\to\infty}\, \frac{\gamma(x)}{x}=1\tag{**}
+\]
+
+\noindent
+There  remains to prove (**) where a first step
+ is the following:
+
+\medskip
+
+\noindent
+{\bf Lemma 4.2.} \emph{The function $\frac{\gamma(x)}{x}$ is bounded.}
+\medskip
+
+\noindent
+\emph{Proof.}
+The idea is to use that if $N\geq 2$ is a positive integer
+then all terms in  the binomial expansion of $(1+1)^{2N}$
+are integers. In particular we have the integer
+\[
+\xi_N=\frac{(2N)\,!}{N\,!\cdot N\,!}\tag{i}
+\]
+Let $q_1,\ldots,q_m$ be the distinct primes
+in $[N+1,2N-1]$.
+By (i) each $q_\nu$ is a prime divisor of $\xi_N$. So we have trivially
+\[ 
+q_1\cdots q_m\leq\xi_N
+\]
+Taking the logarithm the definition of the
+$\gamma$-function gives
+\[ 
+\gamma(2N)-\psi(N)\leq
+\log\,\xi_N\leq N\cdot \log\, 2\tag{ii}
+\]
+where the reader may confirm the last inequality by
+a trivial calculation.
+Now we perform the usual trick using 2-powers, i.e. given
+$K\geq 2$ we apply (ii) with
+$N=2^k\quad\colon\,1\leq k\leq K-1$. After a
+summation over $k$ we get
+
+\[
+\gamma(2^{K}-\psi(2)\leq \log\,2\cdot [1+\ldots+2^{K-1}]
+\leq \log\, 2\cdot 2^K
+\]
+Since this hold for all $K$ and the $\gamma$-function is increasing we see that
+Lemma 4.2 holds.
+
+\bigskip
+
+\noindent
+Next, Lemma 4.2 and an elementary fact about convergent integrals 
+give
+(**) if we have proved
+that the  integral below exists:
+\[
+\int_2^\infty\, \frac{\gamma(x)-x}{x^2}\cdot dx\tag{***}
+\]
+Notice that we only request that
+there exists
+a limit
+\[
+\lim_{M\to \infty}\,\int_2^M\, \frac{\gamma(x)-x}{x^2}\cdot dx
+\]
+whose  the actual limit value
+is of no concern for us !
+
+
+\medskip
+
+\noindent
+{\bf{4.3 The $\Phi$-function}}.
+To establish (***) we introduce the function
+\[
+\Phi(z)=\sum\,\log p\cdot p^{-z}
+\]
+where $z$ is a complex variable. To begin  with $\Phi(z)$ is defined
+in the half-plane $\mathfrak{Re}(z)>1$ and
+since $d\gamma$ is the discrete measure which assigns the mass
+$\log p$ at every prime number we have:
+\[
+\Phi(z)=\int_1^\infty\,\,x^{-z}\cdot d\gamma(x)=
+z\cdot 
+\int_1^\infty\, x^{-z-1}\cdot \gamma(x)\cdot dx\tag{1}
+\]
+With $z=1+\zeta$ and $\mathfrak{Re}(\zeta)>0$
+we can write (1) as
+\[
+\frac{1}{1+\zeta}\cdot \Phi(1+\zeta)=
+\int_1^\infty\, x^{-\zeta-2}\cdot \gamma(x)\cdot dx\tag{2}
+\]
+and the substitution
+$x\to e^{t}$ identifies the last integral by
+\[
+\int_0^\infty\, e^{-\zeta t}\cdot e^{-t}\cdot \gamma(e^t)\cdot dy\tag{3}
+\]
+Next, let us introduce the function
+\[ 
+f(t)=e^{-t}\gamma(e^t)-1
+\]
+
+
+\noindent
+Lemma 4.2 shows that $f$ is a bounded function
+and the substitution $x\to e^t$ shows that
+the integral (***) converges if there exists the limit
+\[ 
+\lim_{T\to\infty}\, \int_0^T\, f(t)\cdot dt\tag{****}
+\]
+Hence there only remains to prove (****). For this purpose we introduce the 
+Laplace transform
+\[
+F(z)=\int_0^\infty\, e^{-z t}\cdot f(t)dt\tag{4}
+\]
+Using the equality
+
+\[ 
+\int_0^\infty\, e^{-z t}\cdot dt=
+\frac{1}{z}
+\] 
+we see that (2-3) above give
+
+\[
+\frac{1}{1+z}\cdot \Phi(1+z)=F(z)-\frac{1}{z}\tag{5}
+\]
+At this stage we can apply Ikehara's Tauberian Theorem which
+applied to the bounded
+function $f(t)$ (****) if $F(\zeta)$ extends to an analytic function in some
+open set
+$\Omega$ which contains the closed half-space
+$\mathfrak{Re}(z)\geq 0$.
+Hence, using (5) we conclude that the Prime Number theorem
+follows from the following:
+\bigskip
+
+\noindent
+{\bf{4.4 Lemma}}\emph{
+The function 
+$\frac{1}{1+z}\cdot \Phi(1+z)+\frac{1}{z}$ extends to
+be analytic in an open set which contains
+$\mathfrak{Re}(z)\geq 0$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+When $\mathfrak{Re}\, z<1$
+Euler's product formula gives
+\[ 
+\log \zeta(z)=\sum\,\log(1-p^{-z})
+\]
+Passing to the logarithmic derivative we get
+
+\[
+-\frac{\zeta'(z)}{\zeta(z)}=
+\sum\,\frac{\log p}{p^z-1}
+\]
+The last sum is rewritten as
+\[
+\sum\,\frac{\log p}{p^z}-
+\sum\,\frac{\log p}{p^z\cdot (p^z-1)}
+\]
+So the construction of $\Phi$ gives
+the equality
+
+\[ 
+\Phi(z)=-\frac{\zeta'(z)}{\zeta(z)}
+-\sum\,\frac{\log p}{p^z\cdot (p^z-1)}
+\]
+With $z=1+w$ we can write
+\[
+\Phi(1+w)-\frac{\zeta'(1+w)}{\zeta(1+w)}=
+-\sum\,\frac{\log p}{p^{1+w}\cdot (p^{1+w}-1)}\tag{1}
+\]
+It is clear the  right hand side is an analytic function of
+$w$ in the half-plane $\mathfrak{Re}(w)>-1/2$.
+Finally, since the $\zeta$-function has a simple pole at
+$z=1$ while $\zeta(1+it)\neq 0$
+for all real $t$ we get Lemma 4.4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline {\bf{5. A uniqueness result for the $\zeta$\vvv function}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+In the introduction  we defined
+a class $\mathcal D\uuu k$
+of Dirichlet series for every $k>0$ in § 0.1.
+The proof of Beurling's  result in (0.0.2)
+requires  several steps and 
+we  describe some steps before the details of the proof start.
+Each  Dirichlet series $\Lambda (s)$ in the family $\mathcal D\uuu k$
+ gives an even and entire function of exponential type defined by 
+an Hadamard product:
+\[ 
+f(z)=\prod\, (1+ \frac {z^2}{\lambda\uuu n^2})
+\]
+Using 
+Phragmén\vvv Lindelöf inequalities together with
+properties of the $\Gamma$\vvv function and Mellin's inversion formula,
+we shall prove that for each $\epsilon>0$ there exists a constant
+$C\uuu\epsilon$
+such that the following hold for each real $x>0$:
+\[ 
+\bigl |f(x)\vvv ax^p\cdot e^{\pi x}\bigr | \leq
+C\uuu\epsilon\cdot e^{\pi(1\vvv 2k+\epsilon\cdot x}
+\tag{*}
+\] 
+where
+\[
+a= e^{2\Lambda(0)}\quad\text{and}\quad  p=2\Lambda'(0)
+\]
+
+
+\noindent
+When $k>1/2$ we can choose $\epsilon$ small so that
+$1\vvv k+\epsilon=\vvv \delta$ for some $\delta>0$
+which 
+means that
+$f(x) \vvv ax^p\cdot e^{\pi x}$ has exponential decay as $x\to+\infty$.
+From this we shall deduce that $f(z)$ is of a 
+special form and after deduce Theorem 0.1 
+via an  inversion formula for Dirichlet series. First  we shall 
+establish a  uniqueness result for entire functions in the class
+$\mathcal E$.
+ 
+\bigskip
+\centerline{\bf{5.A. On a  uniqueness result in $\mathcal E$}}.
+\medskip
+
+\noindent
+Let $a$ and $\delta$ be positive real numbers and $p$ some real number.
+Consider an even entire function $f(z)$ of exponential type
+for which there exists a constant $C$ such that
+\[ 
+\bigl|f(x)\vvv ax^p\cdot e^{\pi x}\bigr|\leq Ce^{\vvv \delta x}
+\quad\colon\,   x\geq 1\tag{*}
+\] 
+
+
+\noindent
+We shall prove that
+$f$ is of a special form.
+In  the half-space $\mathfrak{Re}(z)>0$
+we have the analytic  function
+\[
+h(z)= f(z)\vvv az^p\cdot e^{\pi z}\tag{i}
+\]
+where the branch of $z^p$ is taken so that $x^p>0$ when
+$z=x$ is real and $>0$.
+Consider  the domain
+\[ 
+\Omega=\{z=x+iy\quad y>0\quad\text{and}\quad x>1\}
+\]
+Since $f\in \mathcal E$ there is a  constant $A$ such that
+$e^{\vvv A|z|}\cdot f(z)$ is bounded which gives
+constants $C$ and  $B$ such that
+\[
+ |h(1+iy)|\leq C\cdot e^{By}\tag{ii}
+ \] 
+for all $y>0$.
+At the same time (*) gives
+\[
+ |h(x)|\leq C\cdot e^{\vvv \delta x}\tag{iii}
+\]
+The Phragmén\vvv Lindelöf theorem applied to the quarter planer
+$\Omega$ therefore gives a constant $C$ such that
+\[ 
+|h(x+iy)|\leq Ce^{Ay\vvv \delta x}\quad\text{for all}\quad
+x+iy\in\Omega\tag{iv}
+\]
+In exactly the same way one proves (iv) with $y$ replaced by $\vvv y$
+in the quarter\vvv plane where $x>0$ and $y<0$.
+Let us then consider the strip domain
+\[
+S=\{ x+iy\quad |y|\leq 1\quad \text{and}\quad x>1\}
+\]
+Then we see that there is a constant such that
+\[
+ h(x+iy)|\leq C\cdot e^{\vvv \delta x}\quad\colon\quad  x+iy\in S\tag{v}
+\]
+If $n\geq 1$ we consider the complex derivative $h^{(n)}$
+and with $x>2$   Cauchy's inequality and (*)
+give a constant $C\uuu n$ such that
+\[ 
+|h^{(n)}(x)|\leq C\uuu n\cdot e^{\vvv \delta x}\quad\colon x\geq 2\tag{vi}
+\]
+Next, consider the second order
+differential operator
+\[
+L=x^2\partial\uuu x^2\vvv 2p\cdot x\partial\uuu x\vvv \pi^2x^2+
+p(p+1)
+\]
+The  functions $x^pe^{\pi x}$ and $x^pe^{\vvv \pi x}$
+are  solutions to
+the homogeneous equation $L=0$ when $x> 0$ and hence 
+\[ 
+L(f)=L(h)
+\]
+holds on $x>0$.
+Now $L$ also yields the holomorphic differential operator
+where $\partial\uuu x$ is replaced by $\partial\uuu z$
+and here  $g=L(f)$ is en entire function exponential type.
+Now (*) above  and the estimates (vi) for $n=0,1,2$ give a constant
+$C$ such that
+\[
+|g(x)|\leq  C(1+x^2)\cdot e^{\vvv \delta|x|}\quad x>0\tag{vii}
+\]
+Moreover, since $f$ is even it follows that
+$g$
+is so and hence (vii) hold for all real $x$.
+Then the $\mathcal E$\vvv function $g$ is identically zero by
+the result in § XXX.
+Hence  $f$ satisfies the differential equation
+\[ 
+L(f)=0\tag{viii}
+\]
+The uniquenss for solutions of the  in ODE-equation
+(viii) gives contants $c_1,c_2$ such that
+\[
+f(x)= 
+c_1x^pe^{\pi x}+
+c_2x^pe^{-\pi x}\quad x>0
+\]
+Since $f$ is an even entire  function it is clear that this entails that
+$p$ must be an integer and if we moreover assume that
+$f(0)=1$ then the reader may verify that
+we have $p=0$ or $p=-1$
+which yield corresponding
+$f$-functions
+\[
+f_1(z)=
+\frac{e^{\pi z}+
+e^{-\pi z}}{2}\quad\colon\,\,
+f_2(z)=\frac{e^{\pi z}-
+e^{-\pi z}}{2\pi z}
+\]
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf{B. Dirichlet series and their transforms.}}
+
+
+\bigskip
+
+\noindent
+Let $0<\lambda\uuu 1\leq\lambda\uuu 2\leq\ldots$
+be a non\vvv decreasing sequence of positive real numbers in the family $\mathcal F$
+(0.0.2).
+It is clear that
+the
+Dirichlet series
+\[
+\Lambda(s)=\sum_{n=1}^\infty \frac{1}{\lambda\uuu n^s}\tag{1} 
+\]
+is analytic in the half\vvv space
+$\mathfrak{Re}\, s>1$
+and  the results by Hadamard and Lindelöf in
+§§ XX give the entire function 
+\[ 
+f(z)=\prod\, \bigl(1+\frac{z^2}{\lambda^2\uuu n}\bigr)\tag{2}
+\] 
+of exponential type.
+
+\bigskip
+
+\noindent
+{\bf{B.1 Inversion formula.}} \emph{One has the equation}
+\[
+\int\uuu 0^\infty\log f(x)\cdot  \frac{dx}{x^{s+1}}= \frac{\pi\cdot \Lambda(s)}
+{s\sin\,\frac{\pi s}{2}}\quad\colon\quad \mathfrak{Re}\, s>1\tag{B.1.}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+When $0<\mathfrak{Re}\, s<2$ and $a>0$ is real
+the reader may verify the
+equality:
+\[
+\int\uuu 0^\infty\, \log\,(1+\frac{x^2}{a^2})\cdot \frac{dx}{x^{s+1}}
+=\frac{1}{a^s}\cdot \frac{\pi}{\cdot \sin\,\frac{\pi s}{2}}\tag{i}
+\]
+\medskip
+
+
+\noindent
+Apply (i) with 
+$a=\lambda\uuu n$ and then (B.1) follows
+after a summation over
+$n$.
+\medskip
+
+
+\noindent
+{\bf{B.2 Meromorphic extensions.}}
+The inversion formula  (B.1) entails that
+$\Lambda$ extends to a meromorphic function in the complex $s$-plane.
+To see this we notice that if $x>0$ then the logartihmic derivative
+\[
+\frac{f'(x)}{f(x)}=\sum\, \frac{2x}{\lambda_n^2+x^2}\tag{i}
+\]
+Next, a   partial integration gives
+\[
+(s+1)\cdot
+\int\uuu 0^\infty\, \log\,f(x)\cdot \frac{dx}{x^{s+1}}
+=
+\int\uuu 0^\infty\, \frac{f'(x)}{f(x)}\cdot 
+\frac{dx}{x^s}\tag{ii}
+\]
+Since $\sum\, \lambda_n^{-2}$ is convergent it is clear
+that
+the right hand side is analytic in
+the half-space $\mathfrak{Re}\, s>0$
+and by further integrations by parts the reader
+may verify that it extends to
+a meromorphic function in
+the $s$-plane. Together with
+the inversion for ua we conclude that
+$\Lambda(s)$ extends to a meromorphic
+function in the $s$-plane.
+
+
+\bigskip
+
+
+
+\noindent 
+{\bf{The case when
+$\Lambda\in\mathcal D_k$}}.
+Suppose this holds for some
+$k>1/2$.
+In particular $\Lambda(-2n)=0$ for every positive integer 
+and then 
+the right hand side in (B.1)
+is a meromorphic function whose poles 
+are confined to $s=0$ and $s=1$.
+Denote this function with
+$\Phi(s)$.
+Now we shall  estimate  certain $L^1$\vvv integrals.
+\medskip
+
+\noindent
+{\bf{B.3 Proposition.}}
+\emph{There exists a constant $C$ such that}
+\[
+\int\uuu{\vvv\infty}^\infty\, 
+|\Phi(\vvv \sigma+it)|\cdot dt\leq C\cdot
+\frac{\sigma^3\cdot \Gamma(\sigma)}{(2\pi k)^\sigma}
+ \quad\colon\quad \sigma\geq 2
+ \]
+ \medskip
+ 
+ \noindent
+\emph {Proof.}
+Consider the function
+\[ 
+\psi\uuu *(s)=
+(2\pi k)^s\cdot \Gamma(2\vvv s)
+\]
+The  series expression for 
+$\Lambda (s)$ gives a constant $C$ such that
+\[ 
+\Lambda(3/2+it)|\leq C\quad\colon\quad \vvv \infty <t<+\infty\tag{i}
+\] 
+It follows that
+\[ 
+\bigl|\frac{\Phi(3/2+it)}{\psi\uuu *(3/2+it)}\bigr |
+ \leq \frac{C\pi}{|3/2+it|}\cdot \frac{1}{2\pi k)^{3/2}} \cdot 
+ \frac{1} { \sin\,(\pi(3/4+it/2)\cdot \Gamma(1/2\vvv it)}\tag{ii}
+\]
+\medskip
+
+\noindent
+The complex sine\vvv function increases along this
+vertical line, i.e. there is  a constant $c>0$ such that
+ \[
+ |\sin\,(\pi(3/4+it/2)|\geq c\cdot e^{\pi |t|/2}\tag{iii}
+\]
+At the same time the result in (§ xx) gives the lower bound
+\[
+| \Gamma(1/2\vvv it)|\geq \sqrt{\pi}\cdot e^{\vvv \pi|t|/2}\tag{iv}
+\]
+From (iii\vvv iv ) we conclude that
+the function $\frac{\Phi}{\psi\uuu *}$ is bounded
+on the line $\mathfrak{Re}(s)= 3/2$.
+\medskip
+
+\noindent
+\emph{Sublemma 1.} \emph{The function
+$\frac{\Phi}{\psi\uuu *}$ is a bounded function in the domain}
+\[ 
+\Omega=\{ \mathfrak{Re}(s)<3/2\}\cap\, \{|s| >2\}
+\]
+
+\medskip
+
+\noindent\emph{Proof.}
+Follows easily via
+the Phragmén\vvv Lindelöf theorem and the bound above on
+$\mathfrak{Re}(s)= 3/2$.
+
+\medskip
+
+\noindent
+Next, Sublemma  1 gives a constant $C$ such that
+\[ 
+|\Phi(s)|\leq C\cdot \bigl|(2\pi k)^s\cdot \Gamma(2\vvv s)|
+\quad\colon\quad s\in\Omega\tag{v}
+\]
+
+\medskip
+
+\noindent
+We shall also need an inequality for the
+$\Gamma$\vvv function which
+asserts that there
+exists a constant $C$ such that
+\[
+\int\uuu {\vvv \infty}^\infty\, 
+ \bigl|\, \Gamma(\sigma+2+it)\,\bigr|\cdot dt\leq 
+ C\cdot \sigma^3\cdot \Gamma(\sigma)
+ \quad\colon\quad \sigma\geq 2\tag{vi}
+ \]
+\medskip
+
+\noindent
+The verification of (vi) is left to the reader. Together (v) and (vi)
+give the inequality in Proposition B.3.
+
+\newpage
+
+
+
+
+\centerline {\bf{B.4 Mellin's inversion formula.}}
+\bigskip
+
+\noindent
+The integral inequality in Proposition B.3  enable us to apply
+the Fourier\vvv Mellin inversion formula via (**) from XX. This gives
+\[
+\log f(x)= \frac{1}{2\pi i}\cdot
+\int\uuu {c\vvv  i\infty }^{c+i\infty}\,
+\Phi(s)\cdot x^s\cdot ds\quad\colon\quad 1<c<2
+\]
+\medskip
+
+\noindent
+Using Proposition B.3  we can shift the contour the left and perform
+integrals over
+lines
+$\mathfrak{Re}\, s= \vvv c$ where $c>0$.
+During such a shift we pass the poles of
+$\Phi$ which appear at $s=0$ and $s=1$. Using condition (a) from (0.2)
+in the introduction the
+reader can deduce  the integral formula:
+\[
+\log f(x)\vvv \pi x\vvv
+2\phi(0)\cdot \log x\vvv 2\phi'(0) = \frac{1}{2\pi i}\cdot
+\int\uuu {\vvv c \vvv  i\infty}^{\vvv c+i\infty}\,
+\Phi(s)\cdot x^s\cdot ds \quad \text{for all}\quad c>0\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{B.4.1 A clever estimate.}}
+To profit upon (*)
+we  adapt the  $c$\vvv values when $x$ are real and large.
+With $x\geq 2$ we take $c=x$ and notice that
+\[
+|x^{(\vvv x+it)}|= x^{\vvv x}
+\]
+Proposition B.3  and the triangle inequality show that
+the absolute value of the right hand side integral in (*)  is majorized by
+\[
+2\pi\cdot x^{\vvv x}\cdot C\cdot \frac{x^3\cdot \Gamma(x)}{(2\pi k)^x}
+\quad\colon\quad x\geq 2\tag{**}
+\]
+\medskip
+
+\noindent{\bf{B.4.2 Exercise.}}
+Recall that $\Gamma(N)= N !$ for positive integers. Use this and
+Stirling's formula to conclude that
+for every $\epsilon>0$ there is a constant $C\uuu\epsilon$
+such that (**)  is majorized by
+\[
+C\uuu\epsilon\cdot e^{\vvv 2\pi(k\vvv \epsilon)x}
+\]
+
+
+\noindent
+{\bf{B.4.3 Consequences.}}
+With $x\geq 2$, 
+$p=2\phi(0)$ and $a=2\phi'(0)$ we obtain from above:
+
+\[
+\bigl|\log f(x)\vvv \pi x\vvv
+p\cdot \log x\vvv a\bigr| \leq
+C\uuu\epsilon\cdot e^{\vvv 2\pi(k\vvv \epsilon)x}
+\]
+
+\medskip
+
+\noindent
+Now
+(B.4.3) gives
+a constant
+$C^*\uuu\epsilon$ such that
+\[ 
+|f(x)\vvv e^a\cdot x^p\cdot e^{\pi x}|\leq 
+C^*\uuu\epsilon\cdot e^{\pi(1\vvv 2k+2\epsilon)\cdot x}
+\quad\colon\quad x\geq 2\tag{B.4.4}
+\]
+\medskip
+
+\noindent
+Since $k>1/2$ and $\epsilon$ can be arbitrary small
+we conclude the foillowing
+
+\medskip
+
+\noindent
+{\bf{B.4.5 Theorem.}}
+\emph{When $\Lambda\in \mathcal D_k$ for some $k>1/2$ there
+exists $\delta>0$ and constants $a,p$ such that}
+\[
+|f(x)\vvv e^a\cdot x^p\cdot e^{\pi x}|\leq 
+C^*\uuu\epsilon\cdot e^{-\delta\cdot x}
+\quad\colon\quad x\geq 2
+\]
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+STRUL to be deleted
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+\noindent
+{\bf{B.2 A condition on $f$}}.
+Suppose there exist real constants $a,p,k$  where $k>1/2$
+such that 
+\[
+f(x)= ax^pe^{\pi x}+O(e^{\pi(1+\epsilon\vvv 2k)x}
+\] 
+hold for each $\epsilon>0$ as $x\to +\infty$.
+In other words, for every $\epsilon>0$ there exists a constant
+$C\uuu \epsilon$ such that
+\[
+|f(x)\vvv ax^pe^{\pi x}|\leq C\uuu\epsilon\cdot
+e^{\pi(1+\epsilon\vvv 2k)x}\quad\text{for all}\quad x\geq 1\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that (*) entails that
+\[
+\log f(x)=\log a+p\log x+\pi\cdot x+
+O(e^{\pi(1+\epsilon\vvv 2k)x}\quad\text{for all}\quad x\geq 1\tag{**}
+\]
+where $\epsilon>0$ can be arbitrary small.
+\medskip
+
+\noindent
+Next, set
+\[
+\psi(s)=\int\uuu 0^\infty\, \log\,f(x)\cdot \frac{dx}{x^{s+1}}
+\]
+Notice that $f$ is an even entire function where
+the Hadamard product gives $f(0)=1$ which implies that
+\[ 
+\log f(x)\simeq x^2
+\] 
+when $x$ is close to zero.
+Therefore it is only the behaviour of $f(x)$ when $x$ is large
+which determines whether the $\psi$\vvv function
+is nice or not in the half\vvv space $\mathfrak{Re}\, s<2$.
+Notice that
+
+\[
+\int\uuu 0^\infty\,[\log a+p\log x+\pi\cdot x]\cdot \frac{dx}{x^{s+1}}
+=\frac{\log a}{s}+\frac{p}{s^2}+\frac{\pi}{s\vvv 1}
+\]
+Moreover, we have 
+$k>1/2$ so when $\epsilon$ is small it follows that
+$1+\epsilon\vvv 2k=\vvv \delta$ for some $\delta>0$ and
+the function
+\[ 
+g\uuu\delta(s)=  \int\uuu 0^\infty e^ {\vvv \pi\delta x}\cdot \frac{dx}{x^{s+1}}
+\]
+is analytic in the half\vvv space $\mathfrak{Re}\, s< 2$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Use the definition of the $\Gamma$\vvv function to conclude that
+\[
+|g\uuu\delta(\vvv \sigma+it)|\leq 
+\frac{\Gamma(\sigma)}{(\pi \delta)^\sigma}
+\quad\text{hold for every}\quad  \sigma>0
+\]
+
+
+
+
+
+
+\bigskip
+
+
+
+\noindent Let us now add the assumption that
+\[
+\phi(\vvv 2n)=0\quad\text{hold  for  every positive integer}\tag{*}
+\]
+
+\medskip
+
+\noindent
+When (*) holds we see that
+the right hand side in (B.1.2)
+is a meromorphic function whose poles in the half\vvv plane
+$\mathfrak{Re} s<2$ are confined to $s=0$ and $s=1$.
+Denote this function with
+$\Phi(s)$.
+Next, by assumption $\phi$ also belongs  $\mathcal D\uuu k$
+for some $k>1/2$ and  using  the growth condition (xx) from § XX
+we shall  estimate  certain $L^1$\vvv integrals.
+\medskip
+
+\noindent
+{\bf{B.3 Proposition.}}
+\emph{There exists a constant $C$ such that}
+
+\[
+\int\uuu{\vvv\infty}^\infty\, 
+|\Phi(\vvv \sigma+it)|\cdot dt\leq C\cdot
+\frac{\sigma^3\cdot \Gamma(\sigma)}{(2\pi k)^\sigma}
+ \quad\colon\quad \sigma\geq 2
+ \]
+ \medskip
+ 
+ \noindent
+\emph {Proof.}
+Consider the function
+\[ 
+\psi\uuu *(s)=
+(2\pi k)^s\cdot \Gamma(2\vvv s)
+\]
+Next, the convergent series expression for the given Dirichlet series
+$\phi(s)$ gives a constant $C$ such that
+\[ 
+\phi(3/2+it)|\leq C\quad\colon\quad \vvv \infty <t<+\infty\tag{i}
+\] 
+It follows that
+\[ 
+\bigl|\frac{\Phi(3/2+it)}{\psi\uuu *(3/2+it)}\bigr |
+ \leq \frac{C\pi}{|3/2+it|}\cdot \frac{1}{2\pi k)^{3/2}} \cdot 
+ \frac{1} { \sin\,(\pi(3/4+it/2)\cdot \Gamma(1/2\vvv it)}\tag{ii}
+\]
+\medskip
+
+\noindent
+The complex sine\vvv function increases along this
+vertical line,i.e. there is  a constant $c>0$ such that
+ \[
+ |\sin\,(\pi(3/4+it/2)|\geq c\cdot e^{\pi |t|/2}\tag{iii}
+\]
+At the same time the result in (§ xx) gives the lower bound
+\[
+| \Gamma(1/2\vvv it)|\geq \sqrt{\pi}\cdot e^{\vvv \pi|t|/2}\tag{iv}
+\]
+From (iii\vvv iv ) we conclude that
+the function $\frac{\Phi}{\psi\uuu *}$ is bounded
+on the line $\mathfrak{Re}(s)= 3/2$.
+\medskip
+
+\noindent
+\emph{Sublemma 1.} \emph{The function
+$\frac{\Phi}{\psi\uuu *}$ is a bounded function in the domain}
+\[ 
+\Omega=\{ \mathfrak{Re}(s)<3/2\}\cap\, \{|s| >2\}
+\]
+
+\medskip
+
+\noindent\emph{Proof.}
+Follows easily via
+the Phragmén\vvv Lindelöf theorem and the bound above on
+$\mathfrak{Re}(s)= 3/2$.
+
+\medskip
+
+\noindent
+Next, Sublemma  1 gives a constant $C$ such that
+\[ 
+|\Phi(s)|\leq C\cdot \bigl|(2\pi k)^s\cdot \Gamma(2\vvv s)|
+\quad\colon\quad s\in\Omega\tag{v}
+\]
+
+\medskip
+
+\noindent
+We shall also need an inequality for the
+$\Gamma$\vvv function which
+asserts that there
+exists a constant $C$ such that
+\[
+\int\uuu {\vvv \infty}^\infty\, 
+ \bigl|\, \Gamma(\sigma+2+it)\,\bigr|\cdot dt\leq 
+ C\cdot \sigma^3\cdot \Gamma(\sigma)
+ \quad\colon\quad \sigma\geq 2\tag{vi}
+ \]
+\medskip
+
+\noindent
+The verification of (vi) is left to the reader. Together (v) and (vi)
+give the inequality in Proposition B.3.
+
+\bigskip
+
+\medskip
+
+
+\centerline {\bf{B.4 Mellin's inversion formula.}}
+\medskip
+
+\noindent
+The integral inequality in Proposition B.3  enable us to apply
+the Fourier\vvv Mellin inversion formula via (**) from XX. This gives
+\[
+\log f(x)= \frac{1}{2\pi i}\cdot
+\int\uuu {c\vvv  i\infty }^{c+i\infty}\,
+\Phi(s)\cdot x^s\cdot ds\quad\colon\quad 1<c<2
+\]
+\medskip
+
+\noindent
+Using Proposition B.3  we can shift the contour the left and perform
+integrals over
+lines
+$\mathfrak{Re}\, s= \vvv c$ where $c>0$.
+During such a shift we pass the poles of
+$\psi$ which appear at $s=0$ and $s=1$
+with residues described in §§ XX - at start - above.
+From this the reader can deduce  the integral formula:
+\[
+\log f(x)\vvv \pi x\vvv
+2\phi(0)\cdot \log x\vvv 2\phi'(0) = \frac{1}{2\pi i}\cdot
+\int\uuu {\vvv c \vvv  i\infty}^{\vvv c+i\infty}\,
+\Phi(s)\cdot x^s\cdot ds \quad \text{for all}\quad c>0\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{B.6 A clever estimate.}}
+To profit upon (*)
+we shall adapt the  $c$\vvv values when $x$ are real and large.
+More precisely, with $x\geq 2$ we take $c=x$ and notice that
+\[
+|x^{(\vvv x+it)}|= x^{\vvv x}
+\]
+Then Proposition B.4  and the triangle inequality show that
+the absolute value of the right hand side integral in (*)  is majorized by
+\[
+2\pi\cdot x^{\vvv x}\cdot C\cdot \frac{x^3\cdot \Gamma(x)}{(2\pi k)^x}
+\quad\colon\quad x\geq 2\tag{**}
+\]
+\medskip
+
+\noindent{\bf{B.7 Exercise.}}
+Recall that $\Gamma(N)= N !$ for positive integers. Use this and
+Stirling's formula to conclude that
+for every $\epsilon>0$ there is a constant $C\uuu\epsilon$
+such that (**)  is majorized by
+\[
+C\uuu\epsilon\cdot e^{\vvv 2\pi(k\vvv \epsilon)x}
+\]
+\medskip
+
+\noindent
+{\bf{B.8 Consequences.}}
+With $x\geq 2$, 
+$p=2\phi(0)$ and $a=2\phi'(0)$ we obtain from above:
+
+\[
+\bigl|\log f(x)\vvv \pi x\vvv
+p\cdot \log x\vvv a\bigr| \leq
+C\uuu\epsilon\cdot e^{\vvv 2\pi(k\vvv \epsilon)x}
+\]
+
+\medskip
+
+\noindent
+{\bf{B.9 Exercise.}}
+Deduce from this estimate
+that there is a constant
+$C^*\uuu\epsilon$ such that
+\[ 
+|f(x)\vvv e^a\cdot x^p\cdot e^{\pi x}|\leq 
+C^*\uuu\epsilon\cdot e^{\pi(1\vvv 2k+2\epsilon)\cdot x}
+\quad\colon\quad x\geq 2
+\]
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf{6. A theorem on functions defined by a semi\vvv group}}
+\bigskip
+
+\noindent
+Let $f(x)$ be a complex-valued function in $L^2(0,1)$ which is 
+not identically zero on any interval $(0,\delta)$ with
+$0<\delta<1$, i.e.
+for each $\delta>0$ one has
+\[
+\int\uuu 0^\delta\, |f(x)|\cdot dx>0\tag{*}
+\]
+Next, for each $0<a<1$ we set
+\[ 
+f\uuu a(x)=f(ax)
+\] 
+We restrict each  $f\uuu a$ to  $(0,1)$
+and denote by $\mathcal C\uuu f$
+the linear space generated by $\{f\uuu a\}$ as $0<a<1$.
+Thus, a function in $\mathcal C\uuu f$
+is expressed as a finite sum
+\[
+\sum\, c\uuu k\cdot f\uuu{a\uuu k}(x)
+\]
+where $\{c\uuu k\}$ are complex numbers and 
+$0<a\uuu 1<\ldots<a\uuu n<1$ some finite 
+tuple of points in $(0,1)$.
+Consider  some  $1<p<2$.
+The inclusion $L^2(0,1)\subset L^p(0,1)$
+identifies $\mathcal C\uuu f$ with a subspace of
+$L^p(0,1)$ and 
+its closure  in the Banach space $L^p(0,1)$.
+is denoted by $\mathcal C\uuu f(p)$.
+
+
+
+\medskip
+
+
+\noindent
+{\bf{0.1 The function $F(s)$}}. It is defined by
+\[
+F(s)=\int\uuu 0^1\, f(x)\cdot x^{s\vvv 1}\cdot ds\tag{1}
+\]
+Here  $F$ is analytic
+in  the
+half\vvv plane 
+$\mathfrak{Re}(s)>1/2$. Indeed, with
+$\sigma= \mathfrak{Re}(s)>1/2$
+the Cauchy\vvv Schwarz inequality gives
+\[ 
+|F(\sigma+it)|\leq
+\sqrt{\int\uuu 0^1\, |f(x)|^2\cdot dx}\cdot
+\sqrt{\int\uuu 0^1\, |x|^{2\sigma\vvv 2}\cdot dx}=||f||\uuu 2\cdot
+\sqrt{\frac{1}{2\sigma\vvv 1}}\tag{2}
+\]
+\medskip
+
+
+\noindent
+{\bf{6.1 Theorem}} \emph{If there exists some
+$1<p<1$ such that
+$\mathcal C\uuu f(p)$ is a proper subspace of
+$L^p[0,1]$, then
+$F(s)$ extends to a meromorphic function in the whole complex
+$s$\vvv plane whose poles are confined to the open half\vvv plane
+$\mathfrak{Re}(s)<1/2$. Moreover, for every  pole
+$\lambda$ the function
+$x^{\vvv\lambda}$ belongs to   $\mathcal C\uuu f(p)$.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+Recall that $L^q(0,1)$ is the dual of $L^p(0,1)$ where
+$\frac{1}{q}= 1\vvv \frac{1}{p}$. The assumption that
+$\mathcal C\uuu f(p)\neq L^p(0,1)$ gives 
+a non\vvv zero $k(x)\in L^q(0,1)$ such that
+\[
+\int\uuu 0^1\, k(x) f(ax)\cdot dx=0
+\quad\colon\quad 0<a<1\tag{1}
+\]
+To the $k$\vvv function we associate
+the transform
+\[
+ K(s)= \int\uuu 0^1\, k(x)\cdot x^{\vvv s}\cdot dx\tag{2}
+\]
+\medskip
+
+\noindent
+Hölder's inequality implies that
+$K(s)$ is analytic in the half\vvv plane $\mathfrak{Re} s<\frac{1}{p}$.
+Next, we define a function $g(\xi)$ for every real $\xi>1$ by
+\[
+ g(\xi)=\int\uuu 0^1\, k(x)\cdot f(\xi x)\cdot dx
+\]
+Hölder's inequality gives
+\[ 
+|g(\xi)|\leq 
+\bigl[\int\, |k(x)|^q\cdot dx\bigr]^{\frac{1}{q}}\cdot
+\bigl[\int\uuu 0^{1/\xi}\, |f(\xi x)|^p\cdot dx\bigr]^{\frac{1}{p}}
+\]
+With $\xi>1$ we notice that the last factor after a variable
+substitution is equal to
+\[
+||f||\uuu p\cdot |\xi|^{\vvv 1/p}
+\]
+Since the $L^p$\vvv norm of $f$ is majorized by its $L^2$\vvv norm
+we conclude that
+\[
+|g(\xi)\leq ||k||\uuu q\cdot ||f||\uuu p\cdot \xi^{\vvv 1/p}\quad\colon\quad \xi>1\tag{3}
+\]
+Next, put
+\[
+G(s)= \int\uuu  1^\infty\, g(\xi)\cdot \xi^{s\vvv 1}\cdot d\xi\tag{4}
+\]
+
+
+\noindent
+From (3) it follows that
+$G(s)$ is analytic in the half\vvv space
+$\mathfrak{Re}\, s<1/p$.
+Consider  the strip domain:
+\[
+\square=1/2<\mathfrak{Re}\, s< 1/p
+\]
+
+\noindent
+Variable substitutions of  double integrals show that the following holds
+in $\square$:
+\[
+ G(s)= F(s)\cdot K(s)\tag{*}
+\]
+
+
+\noindent
+\emph{Conclusion.}
+If follows from (*) that
+$F$ extends to a meromorphic function in the whole $s$\vvv plane.
+The
+inequality (2) from 0.1 which
+shows that
+no poles appear during the meromorphic continuation across 
+$\mathfrak{Re}\, s=1/2$. Hence
+$F$ either is an entire function or else  it has a
+non\vvv empty set of
+poles where each pole
+$\lambda$ has  real part  $<1/2$.
+At this stage we are prepared to finish the proof of Theorem 6.1
+and begin with:
+
+\medskip
+
+
+
+
+\noindent{\bf{Existence of at least one pole.}}
+There remains to prove that $F$ has at least one pole.
+We prove this by a contradiction, i.e. suppose that
+$F$  is  an entire function and 
+consider 
+a real number 
+$1/2<\alpha<1/p$.
+The construction of $F$ shows  that its
+restriction to the half\vvv space
+$\mathfrak{Re}\, s\geq \alpha$ is bounded and it is also clear that
+\[
+\lim\uuu{\sigma\to +\infty}
+F(\sigma+it)=0\tag{i}
+\]
+
+
+
+\noindent
+Next, in the half\vvv space 
+$\mathfrak{Re}\,s\leq\alpha$
+we know that
+$F=\frac{G}{K}$
+where  $G$ and $K$ both are  bounded and at the same time their quotient is
+analytic in this half\vvv space.
+Moreover their constructions imply that
+\[ 
+\lim\uuu{\sigma\to \vvv \infty}\, G(\sigma+it)=0\quad\text{and}|\quad
+K(\sigma+it)=0
+\] 
+Next,   the result by F. and R. Nevanlinna from XX
+gives some 
+$M>0$ and  a real number  $c$ such that
+\[
+F(\sigma+it)|\leq M\cdot e^{c(\sigma\vvv \alpha})
+\quad\text{holds when}\quad \sigma\leq \alpha\tag{iii} 
+\]
+
+
+\noindent
+If $c\geq 0$  we see  that
+the entire function $F$ is bounded and
+(i) implies  that $F=0$. But this is impossible since it
+entails that $f=0$.
+\medskip
+
+\noindent
+{\bf{The case $c<0$.}}
+When this holds we set $a=e^c$ so that $0<a<1$
+and define
+\[ 
+F\uuu 1(s)= \int\uuu 0^1\, f(ax)x^{s\vvv 1}\cdot ds\tag{iv}
+\]
+
+
+
+\noindent 
+Here a  variable substitution  gives
+\[
+F\uuu 1(s)=a^s\bigl( F(s)\vvv
+\int\uuu a^1\, f(x)x^{s\vvv 1}\cdot ds\bigr)\tag{v}
+\]
+It follows that the entire function $F\uuu 1(s)$ is bounded
+so  by Liouville's theorem it is identically zero.
+Si by (iv) the
+the transform of the function
+$f\uuu a(x)=f(ax)$ is identically zero. This means precisely that
+$f$ vanishes on the interval $[0,a]$. But this was
+excluded by condition (*)  above Theorem 6.1. which 
+shows that $F$ cannot be an entire function.
+
+\medskip
+
+\noindent
+{\bf{The case at pole}}
+Suppose that $F$ as a pole at some
+$\lambda$ with  real part  $<1/2$.
+Since $G$ is analytic in $\mathfrak{Re}(s)<1/2$
+the equality (*)
+implies that $\lambda$ is  a zero of $K$.
+Notice also that the presence  of the 
+pole of $F$ at $\lambda$ is \emph{independent}
+of the chosen 
+$L^q$\vvv function $k$
+which is $\perp$ to $\mathcal C\uuu f$. Hence the following 
+implication holds:
+\[
+k\perp \mathcal C\uuu f(p)\implies 
+K(\lambda)= \int\uuu 0^1\, k(x) x^{\vvv \lambda}\cdot dx=0
+\]
+The Hahn\vvv Banach theorem  entails
+that
+the $L^p$\vvv function $x^{\vvv\lambda}$ belongs to
+$\mathcal C\uuu h(p)$ which proves  the last claim in
+Theorem 6.1
+
+
+
+
+
+\newpage
+
+\centerline {\bf{7. Beurlings criterion for the Riemann hypothesis}}
+\bigskip
+
+\noindent
+Let $\rho(x)$ denote the 1\vvv periodic function on the positive real $x$\vvv line
+with $\rho(x)=x$ if $0<x<1$.
+So if $\{x\}$ is the integral part of $x$ then
+\[
+\rho(x)= x\vvv\{x\}
+\]
+To each $0<\theta<1$ we get the function
+\[ 
+\rho\uuu\theta(x)= \rho(\theta/x)
+\]
+whose  restriction   to $(0,1)$
+gives a non\vvv negative function 
+with  jump\vvv discontinuites at the discrete set 
+of $x$\vvv values  where $\theta/x$ is an integer.
+Denote by $\mathcal D$
+the linear space 
+of functions on $(0,1)$ of the form
+\[
+f(x)=\sum\, c\uuu\nu\cdot \rho(\theta\uuu \nu/x)
+\]
+
+\noindent
+where $0<\theta\uuu 1<\ldots<\theta\uuu N<1$ is a finite set
+and $\{c\uuu\nu\}$ complex numbers such that
+\[
+\sum\, c\uuu\nu\cdot \theta\uuu\nu=0
+\]
+
+
+\noindent
+{\bf{7.1 Theorem.}} \emph{The Riemann hypothesis is valid if and only if
+the identity function 1 belongs to the closure of
+$\mathcal D$ in
+$L^2(0,1)$.}
+\medskip
+
+\noindent
+The proof will use the following formula:
+
+\medskip
+
+\noindent
+{\bf{7.2 Proposition.}}
+\emph{ For each $0<\theta<1$ one has the equality}
+\[
+ \int\uuu 0^1\,\rho(\theta/x)x^{s\vvv 1}\cdot dx=
+ \frac{\theta}{s\vvv 1}\vvv 
+ \frac{\theta^s\cdot \zeta(s)}{s}
+\quad\text{when}\quad \mathfrak{Re}s >1\tag{*}
+\]
+\medskip
+ 
+\noindent
+\emph{Proof.}
+The variable substitutions $x\to \theta\cdot y$ and $y\to 1/u$ 
+identifies the left hand side with
+\[
+\theta^s\cdot \int\uuu  0^{1\theta}\, \rho(1/y)\cdot y^{s\vvv 1} \cdot dy=
+\theta^s\cdot 
+\int\uuu\theta^\infty\,\rho(u)\cdot u^{\vvv s\vvv 1}\cdot du\tag{i}
+\]
+Next, since $\rho$ is periodic we have
+\[
+\int\uuu1^\infty\,\rho(u)\cdot u^{\vvv s\vvv 1}\cdot du=
+\sum\uuu{n=1}^\infty\, \int\uuu 0^1\,\frac{u}{(u+n)^{s+1}}\cdot du\tag{ii}
+\]
+An integration by parts gives for each $n\geq 1$:
+\[
+\int\uuu 0^1\,\frac{u}{(u+n)^{s+1}}\cdot du=
+\vvv \frac{1}{s}(n+1)^{\vvv s}+\frac{1}{s}\int\uuu 0^1\, \frac{du}{(n+u)^s}
+\]
+After a summation over $n$ we see that (ii) becomes
+\[
+\vvv \frac{\zeta(s)}{s}+\frac{1}{s}+\frac{1}{s}\int\uuu 1^\infty\, u^{\vvv s}\cdot du
+=\vvv \frac{\zeta(s)}{s}+\frac{1}{s}+\frac{1}{s(s\vvv 1)}=
+\vvv \frac{\zeta(s)}{s}+\frac{1}{s\vvv 1}
+\]
+It follows that the left hand side in (*) is equal to
+\[
+\theta^s\cdot \bigl [\int\uuu \theta^1\, u\cdot u^{\vvv s\vvv 1}\cdot du
+\vvv \frac{\zeta(s)}{s}+\frac{1}{s\vvv 1}\,\bigr]=
+\]
+\[
+\theta^s\cdot \bigl[ \frac{\theta^{\vvv s+1} \vvv 1}{s\vvv1}
+\vvv \frac{\zeta(s)}{s}+\frac{1}{s\vvv 1}\,\bigr]=\frac{\theta}{s\vvv 1}\vvv
+\frac{\theta^s\cdot \zeta(s)}{s}
+\]
+
+\newpage
+
+
+
+\noindent Now we are prepared to begin the proof of Theorem 7.1
+and begin with the sufficiency.
+
+
+\medskip
+
+\centerline{\emph{2. The case when $1$ in the $L^2$\vvv closure of $\mathcal D$.}}
+\medskip
+
+
+\noindent
+If   $\epsilon>0$ this assumption
+gives some 
+$f\in\mathcal D$ such that the $L^2$\vvv norm
+of $1+f$ is $<\epsilon$. 
+Since $\sum\, c\uuu \nu\cdot\theta\uuu\nu =0$,
+Proposition 7.2 gives:
+\[
+\int\uuu 0^1\,(1+f(x))\cdot x^{s\vvv 1}\cdot dx=
+\frac{1}{s}
+ \vvv \frac{\zeta(s)}{s}\cdot \sum\, c\uuu\nu\cdot \theta\uuu\nu ^s
+\] 
+With $s=\sigma+it$ and  $\sigma>1/2$
+we have $x^{s\vvv 1}$ in $L^2$ and Cauchy\vvv Schwarz inequality gives:
+\[
+\bigl|\int\uuu 0^1\,(1+f(x))\cdot x^{s\vvv 1}\cdot dx\,\bigr|\leq
+||f||\uuu 2\cdot \sqrt{\int\uuu 0^1\, x^{2\sigma\vvv 2}\cdot dx}=
+||f||\uuu 2\cdot \frac{1}{\sqrt{2\sigma\vvv 1}}
+\]
+Hence we obtain
+\[
+|\frac{1}{s}
+\vvv \frac{\zeta(s)}{s}\cdot \sum\, c\uuu\nu\cdot \theta\uuu\nu ^s|\leq
+ \epsilon\cdot \frac{1}{\sqrt{2\sigma\vvv 1}}\quad\colon\quad
+ \sigma>1/2
+\]
+If $\zeta(s\uuu *)=0$ holds for some $s\uuu *=\sigma\uuu *+it\uuu *$
+with $\sigma\uuu *>1/2$, 
+the left hand side is reduced to $\frac{1}{|s\uuu *|}$. 
+Since
+we can find $f$ as above for every $\epsilon>0$ it would follow that
+\[
+\frac{1}{|s\uuu *|}\leq \epsilon\cdot 
+\frac{1}{\sqrt{2\sigma\uuu *\vvv 1}}\quad\text{for every}\quad 
+\epsilon>0
+\]
+But this is clearly impossible so
+if 1 belongs to the $L^2$\vvv closure of $\mathcal D$ then
+the Riemann\vvv Hypothesis holds.
+\bigskip
+
+\noindent
+\centerline{\emph{3. Proof of necessity.}}
+\medskip
+
+\noindent
+There remains to show that if
+1 is outside the $L^2$\vvv closure of $\mathcal D$
+then the $\zeta$\vvv function has a zero in
+the half\vvv plane $\mathfrak{Re}\, s>1/2$.
+To show this we 
+introduce a family of linear operators $\{T\uuu a\}$
+as follows:
+If $0<a<1$ and $g(x)$ is a function on $(0,1)$
+we set
+\[ 
+T\uuu a(g)(x)= g(x/a)\quad\colon\quad 0<x<a
+\]
+while $T\uuu a(g)=0$ when $x\geq a$.
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that each $T\uuu a$ maps $\mathcal D$ into itself
+and one has the inequality
+\[
+||T\uuu a(f)||\uuu 2\leq ||f||\uuu 2
+\]
+
+
+\noindent
+Since 
+$1$ is outside the $L^2$\vvv closure of $\mathcal D$
+its orthogonal complement in the Hilbert space
+is $\neq 0$ which gives
+a non\vvv zero
+$g\in L^2(0,1)$ such that
+\[
+\int\uuu 0^1\, f(x)\cdot g(x)\cdot dx=0
+\quad\colon\quad f\in\mathcal D\tag{*}
+\]
+Since $\mathcal D$ is invariant under the $T$\vvv operators it follows that
+if $0<a<1$ then we also have
+\[
+0=\int\uuu 0^a\, f(x/a)\cdot g(x)\cdot dx=
+a\cdot \int\uuu 0^1\, f(x)\cdot g(ax)\cdot dx\tag{1}
+\]
+
+
+\noindent
+At this stage we  apply Theorem 6.1.
+To begin with we show that the $g$\vvv function satisfies
+(*) in Theorem 6.1.
+For suppose that $g=0$ on some interval $(0,a)$ with $a>0$.
+Choose some $b$ where
+\[
+a<b<\min (1,2a)
+\]
+Now $\mathcal D$ contains the function
+$f(x)= b\rho(x/a)\vvv a\rho(x/b)$.
+The reader may verify that $f(x)=0$ for $x>b$ 
+and is equal to the constant $a$ on $(a,b)$.
+With (1) applied to $f$ we therefore get
+\[
+\int\uuu a^b\, g(x)\cdot dx=0
+\]
+This 
+means that the primitive function
+\[
+ G(x)=\int\uuu 0^x\, g(u)\cdot du
+ \]
+has a vanishing derivative on the interval $(a,b)$. The derivative is also zero  on
+$(0,a)$ where $g=0$.
+We conclude that $G=0$ on the interval $(0,b)$ so the
+$L^2$\vvv function $g$ is almost everywhere a fixed constant on this interval.
+But this constant is zero since $g=0$ on $(0,a)$. Hence we have shown that
+$g=0$ on the whole interval $(0,b)$.
+We can repeat this with $a$ replaced by $b$
+and conclude that $g$ also is zero on the interval
+\[ 
+0<x<\min(1,2b) =\min(1,4a)
+\]
+After a finite number of steps $2^m a\geq 1$ and 
+hence $g$ would be identically zero on $(0,1)$ which is not the case.
+Hence  Theorem 6.1 applies to  $g$
+and gives
+some $\lambda\uuu *$ with $\mathfrak{Re}\, \lambda\uuu *<1/2$
+such that $x^{\vvv \lambda\uuu *}$
+belongs to $\mathcal C\uuu g(p)$ for every
+$p<2$.
+Next, for each $\theta>0$ we get
+the $\mathcal D$\vvv function
+\[
+x\mapsto \rho(1/x)\vvv \frac{1}{\theta}\cdot \rho(\theta/x)
+\]
+Since (1) holds for all $0<a<1$ it follows that
+\[
+\int\uuu 0^1\, [\rho(1/x)\vvv \frac{1}{\theta}
+\cdot \rho(\theta/x)]\cdot x^{\vvv\lambda\uuu *}
+\cdot dx=0\tag{2}
+\]
+Put
+$s\uuu *=1\vvv\lambda\uuu *$.
+The formula in Proposition 7.2 
+shows  that the vanishing in
+(2)  gives
+\[
+\frac{\theta^{s\uuu *}\vvv 1}{s\uuu *}\cdot \zeta(s\uuu *)=0
+\]
+This hold for every $0<\theta<1$ and  we can choose $\theta$
+ so that
+$\theta^{s\uuu *}\vvv 1\neq 0$ which would give a  zero
+$\zeta(s\uuu *)=0$
+where  $\mathfrak {Re}(s\uuu *)=1
+\vvv \mathfrak {Re}(\lambda \uuu *)>1/2$.
+
+
+
+\newpage
+
+ 
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+

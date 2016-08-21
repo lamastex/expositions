@@ -1,0 +1,1261 @@
+
+
+\documentclass{amsart}
+
+
+
+
+
+
+\begin{document}
+
+
+
+\newtheorem{theorem}{Theorem} 
+\newtheorem{lemma}{Lemma} 
+\newtheorem{definition}{Definition} 
+\newtheorem{notation}{Notation} 
+\newtheorem{proposition}{Proposition}
+
+
+
+
+\centerline{\bf{Optimal fishing}}
+\medskip
+
+
+\noindent
+A population of fish appears  in a lake.
+Let $x(t)$ be the time dependent 
+size of this population and suppose it obeys  the ODE
+\[
+\dot x=C(x-a)(b-x)=g(x)\tag{*}
+\]
+where $0<a<b$ and $C>0$.
+So  if the population is large, i.e. $x(t)>b$
+then lack of space and food will
+decrease the size, and if $x(t)<a$ then
+the population  decreases because
+repoduction becomes too small.
+If the population initially is $x(0)$ with
+$a<x(0)<b$ we can solve (*)
+and find that
+the population increases where
+\[
+\lim_{t\to \infty}\, x(t)=b
+\]
+So the size $b$ is an equilibrium which satisfies
+ecologists.
+Year after year one finds the same population of fish in the lake,
+unless some natural disaster occurs.
+Now one can try to catch fish to make some profit.
+The "problem" is that as soon as one starts fishing
+starting from the size  $b$, then the amount of fishes
+will
+decrease,  and even if a very small portion  of fish
+is caught, it will
+taka much time until
+the population has recovered to be
+almost equal to $b$.
+So in order to get some profit  one should be
+allowed to move a bit from the equilibrium.
+This  leads to an optimisation problem which goes as follows:
+The society decides after an intense debate
+between parties with some different ideas about the
+enviroment
+that it is reasonable to
+allow fishing during a time  interval $[0,T]$ under the
+constraint  that the population at time $T$ is $\beta$ for some
+$a<\beta<b$.
+Let $p>0$ be  the price of caught fish per kilogram say, where
+$p$ is 
+constant  during the whole time period. Let 
+$t\mapsto \dot \xi(t)$ be the rate of fishing
+which by  (*) means thst the population
+satisfies the ODE
+\[
+\dot x=g(x)-\ddot \xi
+\]
+Suppose that the net profit
+is 
+\[
+\int_0^T\, (p-\rho(x(t))\cdot \dot \xi(t)\, dt
+\]
+where
+$x\mapsto \rho(x)$
+increases as $x$ decreases, i.e. it becoes more expensive to catch
+fish
+when the population  decreases and  we suppose also that
+\[
+\rho(a)>p
+\] 
+which means that it is not profitable to let
+the population decrease too much.
+ue to limited resources to
+catch fish we suppose from the start that
+\[
+0\leq \dot \xi\leq M
+\]
+hold for some constant  $M$, where  $M$ is so large that
+it exceeds the maximum of the $g$-function in (*).
+\medskip
+
+
+
+\noindent
+Now it is tempting to
+start fishing at maximal  rate $M$ until
+the population has become $\alpha$ for some
+$a<\alpha<b$, and then
+catch fish in accordance with the biological growth, i.e. 
+\[
+\dot \xi=g(\alpha)
+\]
+so that $x(t)$ stays constant and is equal to $\alpha$.
+Finally, at some later time
+$\tau^*$ one stops fishing
+and let
+the biological increase work until
+time
+$T$ so that the populatiion  $x(T)=\beta$ which was imposed by
+Law.
+It  turns out that this is an   optimal strategy which
+maximizes the net profit where there only remains
+to determine $\alpha$ which after determines 
+the time vslues $\tau$ and $\tau^*$.
+Thus,  if $x(\tau)$ is the population after
+the initial maximal rate for catching  fish, then
+the imposed Law requires that
+\[
+\beta-x(\tau)= \int_\tau ^T\, g(x(t))\, dt\tag{1}
+\]
+\medskip
+
+\noindent
+From the above one easily  derives
+an equation which  determines the first 
+switch time
+$\tau$, and after one also determines $\tau*$
+via (1) above.
+Taking numerical values for $a,b,\beta$ and $T$
+one gets a numerical solution.
+One can regard other optimization problems.
+For example, let us  introduce a penalty 
+which means that
+the constraint  expressed  by
+$\beta$ no longer is present, while
+a penalty
+\[
+\Pi=A(b-x(T)
+\]
+is introduced where $A$ is rather large, 
+so that it never is profitable to
+catch too much fish,
+The reader is invited to contemplate how
+optimal fishing should be performed in this case.
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+{\bf Introduction.} 
+We  expose solutions to some
+problems to illustrate how to  solve an OCT-problem when the control is Bang-bang. The major issue
+is  to find 
+\emph{switch times} in  an optimal control of Bang-bang type.
+There is no general  method to find these switch times, i.e. each special problem requires 
+a  "clever idea" before a solution is found.
+At the end of this chapter
+we give a proof of
+the maximum principle for an optimal control of the Bang-bang type
+restricted to the case of a single control.
+
+
+
+\bigskip
+
+\noindent
+{\bf 1.1 Linear control.} Bang-bang solutions 
+occur  when the  
+functions $f$ and $g$ both are linear in the control variable $u$. 
+Exceptions may occur when
+the state function
+during  certain time intervals 
+gives a maximum of the value integral.
+This leads to a \emph{mixture}, where one can change from a Bang-bang
+control to a control function which via the state function is a solution to the Euler-Lagrange equations in calculus of variation.
+Solutions where this occur are  said to have the MRAP-property, where MRAP stands for \emph{most rapid approach path}.
+Consider the following
+OCT-problem
+\[
+\max_u\int_0^T\,[a(x,t)+b(x,t)\cdot u]\,dt\quad
+0\leq u\leq 1\quad x(0)=0\quad x(T)=A
+\]
+
+
+
+
+
+\noindent
+If $p$ is the adjoint function the Hamiltonian becomes
+\[ 
+H=
+a(x,t)+[b(x,t)+ p(t)]u
+\]
+
+
+\noindent 
+By the maximum principle  the \emph{sign} of 
+$b(x(t),t)+p(t)$ determines if $u=1$ or 0.
+An exception may occur if this function happens to vanish identically
+on some time interval. Ignoring this possibility for the moment, an
+optimal control $u^*$ satisfies:
+\[
+b+p<0\implies u^*=0\quad\text{and}\quad  b+p>0\implies u^*=1\tag{*}
+\]
+
+
+\noindent
+{\bf 1.2 Active and inactive intervals.}
+An interval is \emph{active}, respectively \emph{in-active}, if $u^*$ is 1, 
+respectively 0
+on this interval. 
+Suppose  that $(\alpha,\beta)$ is an \emph{inactive interval} where $\beta<T$.
+In this case we say that
+$\beta$ is an \emph{interior
+switch time}. So here $u^*(t)=1$ on some  time interval
+$(\beta,\gamma)$ with $\beta<\gamma$.
+Since $u(t)=0$ on the in-active interval, the ODE for the $p$-function yields
+\[
+\dot p(t)+a'_x(x^*(t),t)=0\quad \alpha<t<\beta
+\]
+
+\noindent
+Next, $x^*(t)$ stays constant on the inactive interval 
+and is therefore equal to $x^*(\beta)$. 
+To simplify notations we put $\phi(t)= b(x^*(t),t)+p(t)$.
+It follows that the time derivative over the inactive interval becomes:
+\medskip
+\[
+\dot\phi(t)=b'_t(x^*(\beta),t)+\dot p(t)=
+b'_t(x^*(\beta),t)-a'_x(x^*(\beta),t)
+\quad\,\colon\, \alpha<t<\beta
+\]
+
+\medskip
+
+\noindent
+{\bf  1.3 Conclusion} Above we assumed that
+$\beta$ is a \emph{switch point} where $u^*$
+jumps from zero to 1, i.e. at time $\beta$ we leave the in-active
+interval and enter an active interval $(\beta,\gamma)$.
+By the maximum principle 
+$\phi(t)<0$ when $t<\beta$ and $>0$ when $t>\beta$. Hence the
+time derivative $\dot\phi(\beta)$ must be $\geq 0$.
+\bigskip
+
+
+\noindent
+{\bf{1.4 Theorem}}\emph{ If $\beta$ is an interior switch point with an 
+inactive interval to the left, it follows that one has the  inequality}
+\[
+b'_t(x^*(\beta),\beta)\geq a'_x(x^*(\beta),\beta)
+\]
+\emph{Moreover, since $\beta$ is a switch time we also have the equality}
+\[
+b(x^*(\beta),\beta)+p(\beta)=0
+\]
+\medskip
+
+
+\noindent
+{\bf Remark.} This result is often used to describe
+a Bang-bang solution.
+Reversing the inequality in Theorem  1.4 one gets similar 
+conclusions under  a passage from an active to an inactive interval.
+\medskip
+
+
+\noindent
+{\bf 1.5 Example}
+Let $g(x)$ be a given function and $r>0$ a positive constant.
+Put
+
+\[
+a(x,t)=g(x)e^{rt}\quad b(x,t)=-g(x)e^{rt}\implies
+\]
+\[
+b'_t(x,t)-a'_x(x,t)=e^{rt}[ -rg(x)-g'(x)]
+\]
+\medskip
+
+\noindent
+If the $g$-function is positive and non-decreasing. 
+the last term is always $<0$ and hence there cannot exist an interior switch time
+where one moves from an in-ative interval to an active.
+So in this case $u^*$ can only be zero on some final interval, i.e. there exists a unique $0\leq t^*\leq T$ such that
+\[
+t<t^*\implies u(t)=1\quad \text{and}\quad t>t^*\implies u(t)=0
+\]
+\bigskip
+
+
+\centerline {\bf Specific Problems : 1}
+
+
+\bigskip
+\noindent 
+The model for which the OCT-problem is posed below can
+be  presented as follows: 
+\emph{An individual allocates his daily time between working and enjoying leisure. When enjoying leisure
+his utility increases with the amount of toys he has to play with. If he works, he gets money which he spends on increasing his stock of toys. On the other hand, while working he cannot enjoy his toys. The problem can be written}: 
+\[
+\max_u\int_0^T(1-u)U(x)dt\quad\,0\leq u\leq 1
+\quad \dot x=u\quad x(0)=0\quad x(T)\,\, \text{free}
+\]
+\medskip
+
+\noindent 
+Here $U$ is  a utility function, i.e. strictly increasing 
+and strictly concave and satisfies $U(0)=0$. Now one can ask:
+\medskip
+
+\noindent{\bf Problem A} Show that the solution is Bang-bang and describe the nature of the control function.
+\medskip 
+ 
+ \noindent
+ {\bf Problem B} If you have settled A. Express 
+ all eventual switch points in terms of the given utility function $U$.
+\medskip
+
+\noindent
+{\bf Problem C} Solve the problem in the case $U(x)=\sqrt{x}$
+\bigskip  
+
+\noindent 
+{\bf Solution for A}: The adjoint $p$-function satisfies the ODE:
+\begin{equation*}
+\dot p+(1-u)U'(x)=0
+\end{equation*}
+\medskip \noindent The Hamiltonian becomes $H=(1-u)U(x)+pu$.
+So by the Maximum principle we choose $u=1$ if $p(t)-U(x(t))>0$ and $u=0$ if
+$p(t)<U(x(t))$.
+To analyze when switch points  appear we  regard the function
+\begin
+{equation*} 
+\phi(t)=p(t)-U(x(t))\implies \dot \phi=\dot p-U'(x)\dot x
+\end{equation*}
+\medskip 
+\noindent At this stage you need {\it{a trick}}.
+Namely,  the ODE-equation for $p$ plus the equality $u=\dot x$
+yield
+\[
+\dot \phi(t)=U'(x(t))
+\]
+\medskip 
+
+\noindent
+Since $\dot x=u$ and the control is $\geq 0$ the function $x(t)$ is non-decreasing.
+Next, the utility function is increasing and hence
+$\phi(t)$ is \emph{non-decreasing.}
+\medskip
+
+\noindent
+Switch points only can occur when $\phi$ has a zero.
+Since $\phi$ is decreasing the Bang-bang solution has a most one switch point, say $\tau$.
+Finally, since $\phi$ is decreasing one has
+$\phi(t)>0$ when $t<\tau$ which by the Maximum Principle
+means that $u=1$ {\it{before}} the switch point and hence $u=0$ after.
+Hence we can conclude:
+\medskip 
+
+\noindent 
+{\bf Answer to A:} The Bang-bang solution has at most one switch point
+$\tau$ and here $u(t)=1$ when $t<\tau$ and $u(t)=0$ when $\tau>t$.
+\bigskip
+
+
+\noindent
+{\bf Solution for B:}
+When $u(t)=1$ for $0<t<\tau$ and zero after we find that the state function becomes:
+\begin{equation*} x(t)=t\,\colon\, 0\leq t\leq \tau
+\quad x(t)=\tau\,\colon\,\tau< t \leq 1
+\end{equation*}
+\medskip
+\noindent By this descripition  of the state function, the value interal  for a given $\tau$ 
+becomes;
+\[
+V(\tau)=\int_\tau^T\,U(\tau)dt=(T-\tau)U(\tau)
+\]
+\medskip
+\noindent 
+Hence we should find $\tau$ which maximizes this $V$-function.
+It derivative becomes:
+\begin{equation*}
+V'(\tau)=
+(T-\tau)U'(\tau)-U(\tau)
+\end{equation*}
+\medskip
+\noindent To decide whether $V$ has a maximum at a zero of its first order
+derivative, we   consider the second order derivative:
+\begin{equation*}
+V''(\tau)=(T-\tau)U''(\tau)-2U'(\tau)
+\end{equation*}
+\medskip 
+
+\noindent 
+Since $U$ is a utility function we see that $V''<0$ and hence $V$ is 
+\emph{strictly concave} 
+which  ensures that $V$ has a maximum when
+$V'(\tau)=0$.
+Hence we can conclude
+\medskip
+
+\noindent
+{\bf Answer to B:} The optimal switch point
+$0<\tau<T$ satisfies
+$U(\tau)=(T-\tau)U'(\tau)$ .
+\medskip
+
+\noindent
+{\bf Remark.} Above $\tau$ exists for if 
+$h(t)=U(t)-(T-t)U'(t)$ we have 
+
+\[
+h(0)=-TU'(0)<0\quad\text{ and}\quad  h(T)= U(T)>0
+\]
+so the continuous function $h$ has some zero $0<\tau<T$.
+
+\medskip
+
+
+\noindent  {\bf Answer to C:} Here one finds that 
+$\tau=T/3$ after an easy calculation. 
+\medskip  
+
+\noindent
+{\bf Another way to determine $\tau$.}  The adjoint function satisfies  the
+ODE-equation
+\[ 
+\dot p(t)+(1-u^*(t))U'(x^*(t))=0
+\]
+
+\noindent
+If $t>\tau$ we have $x^*(t)=x^*(\tau)=\tau$ and $u^*(t)=0$. Hence
+\[
+\dot p+U'(\tau)=0\quad \tau<t<T\implies
+p(t)=p(\tau)-(t-\tau)U'(\tau)
+\]
+Next, since $\tau$ is a switch time we have $p(\tau)=U(\tau)$. Finally, since
+$x(T)$ is free we have $p(T)=0$ by transversality. The equation for 
+$p(t)$ when $t>\tau$ gives at time $T$.
+\[
+0=U(\tau)-(T-\tau)U'(\tau)
+\]
+which agreses with the previous determination of $\tau$ found by maximising the value integral. 
+Hence  we have  \emph{confirmed} the 
+transversality condition when the state function has free end value.
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+\centerline {\bf   Problem 2}
+\bigskip
+
+
+\noindent
+Let $\phi(t)$ be a continuous function on an interval $[0,T] $ such that
+each level set $\{t\,\colon\, \phi(t)=c\}$
+is finite when $c$ is a arbitrary constant.
+Consider the OCT problem
+\begin{equation*}
+\min_u\,\int_0^T\, \phi(t)udt\quad\, 0\leq u\leq 1\quad\,\dot x=u\quad x(0)=0\quad x(T)=A<T
+\end{equation*}
+\medskip
+\noindent 
+Notice that the end-value $x(T)=A$ is assumed to be 
+$<T$ which is necessary in order that it can be reached since we have imposed
+$\dot x=u\leq 1\implies x(t)\leq t$ for any chosen control function.
+\medskip
+
+\noindent 
+{\bf Problem A.} 
+Show that the solution is Bang-Bang and that only finitely many switch times can occur.
+\medskip
+
+\noindent 
+{\bf Problem B.} Assume now that the function $\phi(t)$ is strictly increasing.
+Show that there exists at most one switch time $\tau$ and determine its value.
+
+\medskip
+
+
+\noindent
+{\bf Problem C.} Suppose that $\phi(t)$ is a strictly convex function.
+Show that there exist at most two switch times
+and describe how active and in-active intervals can be distributed.
+
+
+
+\bigskip
+
+
+
+\medskip 
+
+\noindent
+{\bf Answer to A:} Since the partial derivatives $f'_x$ and $g'_x$ both are zero, it follows from the ODE-equation for the adjoint function that $\dot p=0$. Hence $p(t)$ is a constant, say $p^*$. The Hamiltonian becomes
+\begin{equation}
+H=[\phi(t)+p^*]u
+\end{equation} 
+\medskip
+\noindent
+By the hypothesis on $\phi$, the time dependent function
+$\phi(t)+p^*$ has at most a finite set of zeros. The Maximum Principle
+entails that if $u^*$ is an optimal control, then $u^*=1$
+when this function is  $>0$ and $u^*=0$ when the
+function is $<0$. This prives that $u^*$ is Bang-bang with  a finite
+set of switch times.
+\medskip
+
+\noindent
+{\bf Answer to B:} Since we consider a {\it{minimum problem}} we seek for each $t$
+the control $u$ 
+which {\it{minimizes}} the Hamiltonian.
+Hence  $u=0$ if $\phi(t)+p^*>0$ and $u=1$ if
+$\phi(t)+p_*<0$. 
+Since $\phi$ is assumed to be strictly increasing, it follows that
+$u(t)=1$ when $t<\tau$ and $u(t)=$ when $t>\tau$.  The ODE for the state function implies that
+$x^*(t)=t$ when $t\leq\tau$ and $x^*(t)=x(\tau)=\tau$ when $t>\tau$.
+The end-value condition for the state function gives $\tau=A$.
+
+\bigskip  
+
+\noindent {\bf Answer to C:}
+We have already seen that $p(t)=p^*$ is a constant. Now the function
+$g(t)=\phi(t)+p^*$ is also strictly convex.
+By drawing a strictly convex curve we see that there can only occur one of the
+following five cases: 
+
+\medskip
+
+
+\noindent
+\emph{First}, $g$ has two zeros 
+$0<a<b<T$ in the open interval 
+$(0,T)$.  \emph{Second} $g$ has a single zero $0<a<b$ where $g'(a)>0$.
+\emph{Third}, $g$ has a single zero $a$ where $g'(a)<0$. Finally, in 
+case \emph{four} we have 
+$g>0$ in $(0,T)$ and in case \emph{five} it is $<0$ on $(0,T)$.
+\medskip
+
+
+\noindent
+Above case 4 and 5 are excluded. For if $g>0$ on $(0,T)$ 
+we would have $u^*=1$ on the whole interval and then
+the state function $x(t)=t$ and hence $x(T)=T>A$ violating
+the end value cndition. Similarly, if $g<0$ then
+$x(t)=0$ and then $x(0)=A>0$ cannot hold.
+In case 3 we have $u^*(t)=1$ when $t<a$ and after it is zero. It follows that
+$x(T)=x(a)=a$ so $a=A$.  In the second case $u(t)=1$ when
+$t>a$ and this time you get $x(T)=T-a$ and ence $a=T-A$.
+Finally, since $\phi'(x)$ is strictly decreasing
+and the inequality $\dot x^*\geq 0$ implies that $x^*(t)$
+is non-decreasing, we see that $u^*(t)=0$ when $t<a$ or when $t>b$, while 
+$u(t)=1$ on $(a,b)$. On this active interval the state function increases and we conclude that
+$A=b-a$
+
+\noindent
+{\bf Determination of $a$.} In case 1 we have the sole active interval $(a,b)$
+and  the value integral for a given $a$ becomes
+\[
+V(a)=\int_a^{a+A}\,\phi(t)dt
+\]
+Hence $V'(a)=\phi(a+A)-\phi(a)$ and the second derivative
+$V''(a)=\phi'(a+A)-\phi'(a)>0$ since 
+the first order derivative of the strictly convex function $\phi$ increases.
+So here $V$ achieves a minimum at a unique point $a$  determined by
+the equation:
+\[
+\phi'(a)=\phi'(a+A)\quad 0\leq a\leq T-A
+\]
+
+
+
+\bigskip
+
+
+
+\centerline{\bf\large Problem 3}
+\medskip
+
+\noindent
+Consider the  problem
+\begin{equation*}
+\max_u\int_0^T(1-u)x\cdot dt \quad \dot x= ux \quad
+x(0)=1 \quad x(T)\geq x_T\quad 0\leq u\leq 1
+\end{equation*} 
+We  assume that $e^T\geq k_T$ which by the ODE for the state function
+$\dot x=ux$ means that it is possible to attain the end value $x_T$.
+\medskip
+
+\noindent {\bf Problem}
+Show  that there exists $0\leq\tau\leq T$ such that the optimal control 
+satisfies $u^*(t)=1$ when $t<\tau$ and
+$u*(t)=0$ when $t>\tau$. Determine also the switch point $\tau$ under the 
+extra assumption that $T>1$.
+\medskip
+
+\noindent
+{\bf Solution}
+Let $p(t)$ be the adjoint function. The Hamiltonian is 
+\[
+H=(1-u)x+upx=x+xu(p-1)\tag{1}
+\]
+
+
+
+
+\noindent
+By the maximum principle
+\[
+p(t)<1\implies u^*(t)=0\quad\, p(t)>1 \implies u^*(t)=1\tag{2}
+\]
+
+\noindent
+Hence, whenever $\tau$ is a switch time we  have $p(\tau)=1$.
+Next,
+the ODE for the adjoint function is:
+\[
+\dot p+u^*p+1-u^*=0\tag{3}
+\]
+\medskip
+
+\noindent
+If $\tau$ is a switch time the equality
+$p(\tau)=1$  gives $\dot p(\tau)+1=0$, i.e. one has:
+\[
+\tau \,\,\text{is a switch time}\,\implies
+\dot p(\tau)=-1<0
+\]
+
+\noindent
+So if $\tau$ is a switch time and $t>\tau$ where $t-\tau$ is small, then
+the equality $p(\tau)=1$ and the inequality $\dot p(\tau)<0$, imply that
+$p(t)<1$ and hence $u^*(t)=1$ by  the maximum principle.
+This means that the optimal control cannot jump from 1 to zero as time increases.
+We conclude that there exists a unique switch time $\tau$ such that $u^*(t)=1$
+when $t<\tau$ and $u^*(t)=0$ when $t>\tau$.
+ 
+
+
+\medskip
+
+\noindent
+{\bf The determination of $\tau$.} By the above the first part of the problem is solved.
+Next, if the optimal control has $\tau$ as switch point, the ODE for the state function gives $\dot k(t)=k(t)$ when $0\leq t\leq\tau$. Since $k(0)=1$ it follows that 
+\[
+k(T)=k(\tau)=e^\tau
+\]
+Now two cases may occur. Either $k(\tau)=k_T$ which
+then determines $\tau$, i.e. we find $\tau=\text{log}(k_T)$.
+The second possible case is that one has strict inequality $k(T)>k_T$.
+In this case we know that the adjoint function $p$ vanishes
+at $T$. See XXX.
+and also [Note 1 page 308 in Sydsaeter]
+for this transversality condition.
+Now, since $u(t)=0$ when $\tau<t<T$, the ODE for $p$ above gives
+$\dot p(t)+1=0$ when $\tau<t<T$. Since $p(\tau)=1$, it follows that
+\[
+t >\tau\implies\,p(t)=1-(t-\tau)
+\]
+
+\noindent
+This gives $0=p(T)=1-(T-\tau)$ and hence we obtain
+
+\[
+\tau=T-1\tag{*}
+\]
+where the assumption that $T>1$ shows that this indeed 
+is satisfied for a switch time $0<\tau<T$.
+\medskip
+
+\noindent {\bf Remark} See also (Sydsaeter: page 327]  for a similar 
+treatment of Problem 3.
+Above we appealed to the transversality condition to
+determine of $\tau$.
+An alternative method  is to regard the value function, i.e. if 
+$0<\tau<T$ and we choose a control
+such that $u(t)=1$ when $t<\tau$ and $u(t)=0$ when $t>\tau$, then
+the value function becomes
+
+\[
+V(\tau)=\int_\tau^T\,k(t)dt= k(\tau)(T-\tau)=
+e^\tau(T-\tau)
+\]
+
+\noindent
+We see that the derivative $V'(\tau)e^\tau(T-1-\tau)$. Hence 
+it vanishes when $\tau=T-1$ which means that $V$ takes its maximum for this
+switch point.
+
+
+
+\bigskip
+
+\centerline{\bf\large
+Addendum to Problem 3 }
+
+\bigskip
+
+\noindent
+We shall give an extension of the result from Problem 3 and at the same time
+point out a \emph{useful principle} when one regards
+OCT-problems with free end value.
+Consider a problem with free end-value
+\[
+V^*_{\text{free}}=\max_u\int_=^T\, f(t,x,u)dt\quad
+0\leq u\leq 1\quad \dot x=g(t,x,u)\quad x(0)=1\quad x(T)\,\, \text{free}
+\]
+Suppose that $u^*$ is an optimal control. 
+The associated state function $x^*$ has some end value $A=x^*(T)$.
+Let us then
+consider the OCT problem with fixed end value $A$, i.e.
+\[
+V^*_A=\max_u\int_0^T\, f(t,x,u)dt\quad
+0\leq u\leq 1\quad \dot x=g(t,x,u)\quad x(0)=1\quad x(T)=A
+\]
+\noindent It is obvious that  $V^*_A\leq
+V^*_{\text{free}}$. Hence the optimal control $u^*$
+with free end value  is also an optimal control
+for the maxium problem with fixed end values.
+This observation can often be used
+to find solutions  to  OCT-problems when $f$ is a liner function of $u$.
+\medskip
+
+\noindent
+{\bf An example}
+Consider the problem
+\[
+V^*_{\text{free}}=\max_u\int_0^T\,(1- u)\rho(x)dt \quad
+0\leq u\leq 1\quad \dot x=u\phi(x)\quad x(0)=1\quad x(T)\,\, \text{free}
+\]
+
+\noindent
+We assume that $\phi(x)$ is a positive 
+function and that the $\rho$-function
+is strictly increasing. The Hamiltonian becomes
+\[
+H=(1-u)\rho(x)+up\phi(x)
+\]
+
+\noindent 
+The adjoint function satisfies $\dot p+u\phi'(x)-u\rho'(x)=0$.
+From these rather complicated equations 
+it is not clear  how to
+desribe the behaviour of $u^*$.
+However, it turns out that this maximim problem has a unique solution $u^*$
+where $u^*$ is a Bang-bang solution such that $u^*(t)=1$ when 
+$0<t<\tau$ and $u^*(t)=0$
+when $\tau < t< T$. In other words, the structure of the 
+optimal control is the same as in Problem 4.
+\medskip
+
+\noindent
+{\bf Proof.} By the  observation
+above it suffices to prove that $u^*$ has the required Bang-bang solution when the end value $x(T)=A$ is fixed. In this case
+we consider the folowing primitive function of $\frac{\rho}{\phi}$:
+\[ 
+\Psi(x)=\int_1^x\,\frac{\rho(s)}{\phi(s)} ds
+\]
+
+\noindent
+The state equation $\dot x=u\phi$ gives the equality
+\[
+u\rho(x)=\frac{\rho}{\phi}\dot x=\Psi'(x)\dot x=
+\frac{d}{dt}(\Psi)\]
+It follows that
+\[
+\int_1^T\, u\rho(x)dx=\int_0^T
+\frac{d}{dt}(\Psi)dt=\Psi(x(T))=\Psi(A)
+\]
+
+
+\noindent
+Thus, in the maximum problem
+\[
+V^*_A=\max_u\int_1^T\,(1- u)\rho(x)dt \quad
+0\leq u\leq 1\quad \dot x=u\phi(x)\quad x(0)=1\quad x(T)=A
+\]
+
+\noindent 
+we can \emph{ignore} the contribution of
+$\int_1^T\, u\rho(x)dt$ since it is equal to $\Psi(A)$ for any control function
+$u$.
+Hence there remains to find the structure of an optimal control for the maximum problem
+\[
+W^*_A=\max_u\int_0^T\,\rho(x)dt \quad
+0\leq u\leq 1\quad \dot x=u\phi(x)\quad x(0)=1\quad x(T)=A
+\]
+\medskip
+
+\noindent
+But here the solution is OBVIOUS. The reason is that since
+$\phi>0$ the state function $x(t)$ is \emph{always non-decreasing} - i.e. this is clear from the ODE-equation $\dot x=u\phi(x)$ and the constraint $0\leq u\leq 1$.
+Next, the $\rho$-function is by assumption strictly increasing. 
+So in order to maximize the value integral we should try to increase 
+$x(t)$ as quick as possible.
+From the ODE-equation $\dot x=u\phi(x)$ we see that
+$x(t)$ has its most rapid increase when $u(t)=1$ holds in
+the beginning of the time period until $x(t)$ reaches the imposed end-value $A$.
+This proves that $u^*$ is of the required Bang-bang form. The switch time
+$\tau$ is determined by the equality $x^*(\tau)=A$. Since 
+$\dot x^*(t)=\phi(x(t))$ when $0\leq t\leq\tau$ we have
+\[
+\tau=\int_1^A\,\frac{dx}{\phi(x)}
+\]
+
+\noindent
+This determines $\tau$ as a function of $A$. Returning 
+to the maximum problem with free end value we use the 
+already established fact that $u^*$ is a Bang-bang solution 
+with $u(t)=1$ for $0<t<\tau$. The switch time in the case of a free
+end value   maximizes the value integral, i.e. 
+this amounts to find
+
+\[
+\max_A\,\int_0^{\tau(A)}\,\rho(x^\ast(t))dt-\Psi(A)\,\,\colon\,\, \quad
+\dot x^*(t)=\phi(x(t))\quad x(0)=1
+\]
+\noindent where the function $A\mapsto \tau(A)$ is determined by the 
+integral of $\frac{1}{\phi}$ above.
+\medskip
+ 
+\noindent 
+{\bf Remark} 
+The claim  about the OBVIOUS solution above can be
+confirmed  by the maximum principle as follows:  First, the Hamiltonian is
+\[
+H=\rho(x)+pu\phi(x)
+\]
+hence the sign of the adjoint function determines if 
+$u^*$ is zero or one.
+The ODE-equation for the adjoint
+function is
+\[
+\dot p+u\phi'(x)p+\rho'(x)=0
+\]
+ 
+\noindent
+So if $p$ has a zero at a point $\tau$, it follows that 
+\[
+\dot p(\tau)+\rho'(x(\tau))=0\implies \dot p(\tau)<0
+\]
+
+\noindent
+But then we cannot move from an in-active interval to an active interval
+since $p(t)<0$ gives $u^*(t)=0$. Hence there exists a unique witch time
+$\tau$ where $u(t)=1$ if $t<\tau$ and zero after.
+
+
+
+\bigskip
+
+
+
+\centerline{\bf\large Problem 4} 
+\bigskip
+
+\noindent
+We discuss a model from Exercise 6 on page 207
+in the text-book 
+\emph{Dynamic optimization} by Kamien and Schwarz. The optimisation problem is:
+\begin{align*}
+\max\,\int_0^T\, e^{-rt}[px(t)-u(t)]dt+e^{-rT}sx(T)\\
+\text{subject to}\,\, \dot x=u-bx\quad 0\leq u\leq M\quad x(0)=x_0
+\end{align*}
+\medskip
+
+\noindent
+In addition to (2-3)
+we also assume that
+\[
+s<1<\frac{p}{r+b}
+\]
+
+\noindent
+Following the text-book by Kamien-Schwarz  this optimisation 
+problem can be phrased as follows. \emph{The revenue that a machine earns at any time $t$ is proportional to it quality $x(t)$ by a 
+constant $p>0$. The quality decays at a constant proportionate rate $b$ but can
+be enhanced by expenditure $u(t)$ on maintenance. The machine will
+be sold at a prescribed time $T$. The sale price is proportional to its quality
+$x(T)$ at the terminal time. Finally, $r$ is a rate of interest so that
+$e^{-rt}$ stands for a discount factor.} 
+In addition to (2-3)
+we also assume that
+\medskip
+
+\noindent
+{\bf Solution} Since $u$ appears in a linar way
+we expect a Bang-bang solution. This is indeed the case and
+it is quite easy to find the optimal control using a standard trick 
+when all equations are
+linear.
+First we notice that if a control $u$ has been
+chosen which gives the terminal value $x(T)$ of the state, then
+$u$ maximises the OCT problem with fixed end-values. 
+So consider first $x(T)$ as fixed. Then we perform some partial integrations.
+Namely, we have
+\begin{equation*}
+\int_0^T e^{-rt}x(t)dt=-\frac{1}{r}\cdot
+e^{-rt}x(t)|_0^T+\frac{1}{r}\int_0^T e^{-rt}\dot x(t)dt
+\end{equation*}
+\medskip With $x(T)$ fixed the boundary term
+$\frac{1}{r}( e^{-rT}\dot x(T)-x_0)$ is just a constant, say $A$. 
+Next, using the ODE $\dot x=u-bx$ we can replace $\dot x$ by $u-bx$ in the last integral. Hence
+\begin{equation*}
+(1+\frac{b}{r})\int_0^T e^{-rt}x(t)dt=A+
+\frac{1}{r}\int_0^T e^{-rt}u(t)dt
+\end{equation*}
+\medskip
+We conclude that with $x(T)$ fixed then (1) takes the form
+\begin{equation*}
+\max_u\,\int_0^T e^{-rt}(\frac{p}{b+r}-1)u(t)dt
+\end{equation*}
+\medskip By the hypothesis (3) the constant
+$(\frac{p}{b+r}-1$ is positive.
+Since the function $e^{-rt}$ decreases, we conclude that
+if we ever perform maintenance, then it should be
+done as quick as possible.
+In other word, the optimal control solution means that one chooses
+a time $0\leq\tau\leq T$ where $u(t)=1$ when $0\leq t\leq\tau$ and zero when 
+$\tau<t\leq T$.
+There remains to find the optimal switch time $\tau$.
+But this is an ordinary problem, i.e. for any chosen switch time
+$\tau$ the state function is determined which is evaluated (1) as a function of 
+$\tau$ and  after it is maximised.
+\medskip
+\newline \noindent
+{\bf Remark.}Notice that if we instead assume that
+\begin{equation*}
+\frac{p}{r+b}<1
+\end{equation*}
+then the Bang-bang solution is \emph{reversed}, i.e.now
+$u=1$ during an interval $[\tau,T]$.
+The reader should contemplate upon these two different solutions. 
+Notice also that the size of $s$ has no influence for the character of the Bang-bang solution. But of course, the 
+optimal switch time
+will depend upon $s$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf\large II. Proof of the MP
+in the Bang-bang case}
+\bigskip
+
+\noindent 
+Suppose that an optimal control in an OCT-problem with free end-value is of Bang-bang type. Let us consider  a \emph{maximum problem} - the case of a
+minimum problem can be treated in the same way with reversed inequalities. 
+It suffices to establish the maximum principle 
+at any time before $T$ which we can take as 
+$t=0$, and without loss of generality assume that the state variable has
+initial condition $x(0)=0$ while $x(T)$ is free.
+Consider the case when the optimal  Bang-bang control $u^*$ is \emph{inactive}
+on some initial time interval $[0,\tau]$. The case when $u^*$ instead 
+is active on  $[0,\tau]$
+can be treated in exactly the same way as below - except that we then get reversed inequalies.
+Put
+\medskip
+\[
+\Delta(f)=f(0,0,1)-f(0,0,0)\quad
+\Delta(g)=g(0,0,1)-g(0,0,0)
+\]
+
+\noindent
+Let $p(t)$ be the adjoint function saisfying the transversality condition $p(T)=0$.
+Since we assume that $u^*(0)=0$.
+the maximum principle at time $t=0$ amounts  to prove 
+\[
+f(0,0,1)+p(0)\cdot g(0,0,1)\leq f(0,0,0)+p(0)\cdot g(0,0,0)
+\]
+
+
+\noindent
+To prove this inequality we consider some small $\epsilon<\tau$
+an\ define the control $u(t)$ where 
+\[
+0<t<\epsilon\implies u(t)=1\quad t>\epsilon\implies u(t)=u^*(t)
+\]
+\medskip
+
+\noindent 
+Next, consider the unique function $\rho(t)$
+which solves the following first order linear ODE when $\epsilon\leq t\leq T$:
+\[ 
+\dot\rho(t)= g'_x(t,x^*(t),u^*(t))\rho(t)\quad \rho(\epsilon)=\Delta(g)
+\]
+By wellknown  results about
+pertubations of solutions in ODE-theory, it follows that
+the state function $x(t)$ associated to the control
+$u(t)$ satisfies the following up to \emph{small ordo} of $\epsilon$:
+\[
+x(\epsilon)=\Delta(g)\epsilon\quad\colon\quad x(t)\simeq x^*(t)+\epsilon\rho(t)
+\quad \epsilon\leq t\leq T
+\]
+Put
+\[
+ V^*=\int_0^T\, f(t,x^*(t),u^*(t))dt\quad
+ V=\int_0^T\, f(t,x(t),u(t)) dt
+ \]
+
+\medskip
+
+\noindent
+Using the  expression of $x(t)$ above and a first order Taylor expansion of $f$ 
+give the following equality up to small ordo of 
+$\epsilon$.
+\[
+V^*-V\simeq \epsilon[\,-\Delta(f)+\int_\epsilon^T\,f'_x(t,x^*t(t),u^*(t))\rho(t)dt\,]
+\]
+\medskip
+
+\noindent The adjoint $p$-function $p$ 
+satisfies the ODE
+
+\[
+\dot p+g'_x(t,x^*(t),u^*(t))p(t)+f'_x(t,x^*(t),u^*(t))
+\]
+\medskip
+
+
+\noindent
+This holds in particular  on the interval $[\epsilon,T]$. So
+multiplying the zero function above with
+the $\rho$-function gives the \emph{trivial} equation:
+\[
+0=\int_\epsilon^T\,\rho(t)[\dot p(t)+g'_x(t,x^*(t),u^*(t))p(t)+f'_x(t,x^*(t),u^*(t))]dt
+\]
+\medskip
+
+\noindent
+Partial integration using $p(T)=0$  and $\rho(\epsilon)=\Delta(g)$ yield
+\[
+\int_\epsilon^T\,\rho\cdot\dot  pdt=-\Delta(g)p(\epsilon)
+-\int_\epsilon^T\,\dot\rho\cdot pdt
+\]
+\medskip
+
+\noindent Hence the \emph{trivial} zero term above gives
+\[
+0=\int_\epsilon^T\,[ -\dot\rho p  +\rho g'_x p+\rho f'_x]dt
+-\Delta(g)p(\epsilon)
+\]
+\medskip
+
+\noindent
+Since $\dot\rho=g'_x\rho$ we arrive at the equality
+\[
+\int_\epsilon^T\,f'_x\cdot\rho dt=
+-\Delta(g)p(\epsilon)
+\]
+\medskip
+
+\noindent
+Using this equality we obtain the following up to small ordo of $\epsilon$:
+\[
+V^*-V\simeq\, -\epsilon[\Delta(f)+\Delta(g)p(\epsilon)]
+\]
+\medskip
+
+\noindent
+Now we pass to the limit as $\epsilon\to 0$. 
+Since $u^*$ is an optimal control for a maximum
+we have $V^*\geq V$. Passing to the limit as $\epsilon\to 0$
+the continuity of the adjoint $p$-function therefore yields:
+\[
+\Delta(f)+\Delta(g)\cdot p(0)\leq 0
+\]
+\medskip  
+
+\noindent But this is precisely the 
+inequality required by maximum principle and
+finishes the
+proof of the maximum principle for an optimal control of
+Bang-bang type.
+
+
+
+
+
+\newpage
+
+\noindent
+{\bf Remark} Bang-bang solutions for
+vector valued state functions is established  in the same
+way  as above.
+During the proof one appeals to
+results concerning pertubations of linear systems of 
+ODE:s since  the $\rho$-function now is vector valued.
+Next, if we consider the case with a \emph{multi-dimensional
+control} of some dimension $m\geq 2$, the
+proof is  straightforward when
+the control is restricted to a compact convex
+$\mathcal U$  set in
+$\bold R^m$  which is a \emph{polyhedron}, i.e. the
+number of extreme points is finite.
+The proof of the maximum principle
+follows exactly as in the 1-dimensional case.
+Here one
+starts from an optimal control
+$\bold u^*$ which is 
+assumed to be Bang-bang, i.e. the range of values for
+this vector valued function is contained in the finite set of
+extreme points of $\mathcal U$.
+To verify the maximum principle for its associated adjoint 
+function it suffices to consider the effect when $\bold u^*$
+is changed to a control $\bold u$ which is equal to $\bold u^*$
+on a time interval $[\epsilon,T]$ while $\bold u(t)$  is equal to 
+\emph{another extreme point} of $\mathcal U$ than the 
+constant extreme point
+value fior $u^*(t)$ on the short initial time interval $[0,\epsilon]$. After
+the proof is the same as in the 1-dimensional case.
+
+
+\newpage
+
+
+
+
+
+
+
+
+\centerline{\bf\large 5. A special case of the maximum principle}
+
+\bigskip 
+\noindent
+This section serves only to illustrate the general maxium principle. But it may be helpful for the reader's intuition.
+Let $\phi(t)$ be a positive continuous function on a time interval $[0,T]$. We seek
+\begin{equation*}
+\max_u\,\int_0^T\, u\phi(t)dt\quad 0\leq u\leq 1\quad \dot x=u\quad\, 
+x(0)=0\,\,\,x(1)=m<1
+\end{equation*}
+\medskip 
+The Hamiltonian is $H=u\phi(t)+pu$ and the ODE-equation for the adjoint function
+gives $\dot p=0$ and hence $p(t)=p*$ is constant.
+So by the maximum principle an optimal control $u*$ satisfies
+\begin{equation*}
+u(t)=1 \simeq g(t)>p*
+\end{equation*}
+\medskip \noindent 
+Let us explain why this solution is very natural. Call a time interval 
+$(a,b)$ {\it{active}} if $u(t)=1$ when $a<t<b$.
+The end value condition $x(1)=m$ together with the ODE
+$\dot x=u$ means precisely that the sum of the lengths of all active intervals for the control is equal to $m$.
+Now, regarding an integral of a positive function defining an area, 
+it is clear that one should try to keep $\phi$ as large 
+as possible on every active interval.
+If you just contemplate upon this it is clear that for an optimal control $u^*$ - i.e. by 
+choice of active intervals over which the sum of integrals of $\phi$ gives a maximal area will determine a constant $p*$ such that
+active integrals are chosen precisely when $\phi(t)>p^\ast$.
+This geometric picture illustrates the Maximum principle for
+the  optimization problem above. 
+\medskip
+
+\noindent
+Let us also remark that the number of switch points can be estiamted above if the $\phi$-function does 
+not posses to many points of inflexion, i.e. points where its second derivative vanishes. More precisely, if
+$\phi''(t)$ has $k$ distinct zeros on $(0,t)$ while $\phi''(0)$ and 
+$\phi''(1)$ both are 
+$\neq 0$, then the number of switch points for the optimal control is at most
+$k+2$.
+both $f$ and $g$ are linear and 
+vector valued - i.e. in general one regards
+vector-valued states and multiple control functions. The 
+most advanced  result concerning Bang-bang solutions
+I know about, merely gives certain
+upper bounds
+on the number of switch points derived from studies of
+of 
+exponential functions with polynomial coefficients.
+This is a topic which belongs to more advanced mathematical analysis, and yet
+it is often insufficient
+for concrete applications.
+In fact, to find switch points in Bang-Bang problems is the dynamic counter-part of
+solving linear or even non-linear systems with various "convex contraints"
+where the general theory predicts when  optimal solutions occur on certain extreme points.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+

@@ -1,0 +1,1543 @@
+
+%\documentclass{amsart}
+%\usepackage[applemac]{inputenc}
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+\centerline{\bf\large{6. Interpolation and solutions to the $\bar\partial$-equation.}}
+
+
+\bigskip
+
+\centerline{\emph{Contents.}}
+
+\bigskip
+
+\noindent
+\emph{1. Carleson's interpolation theorem}
+\bigskip
+
+\noindent
+\emph{2. Wolff's theorem}
+
+
+\bigskip
+
+\noindent
+\emph{3. A class of Carleson measures.}
+
+
+\bigskip
+
+\noindent
+\emph{4. Berndtsson's $\bar\partial$-solution}
+
+\bigskip
+
+\noindent
+\emph{5. Hšrmander's $L^2$-estimate}
+\bigskip
+
+\noindent
+\emph{6. The Corona problem.}
+
+
+\bigskip
+
+
+
+
+
+
+\centerline{\bf\large I. Carleson's Interpolation Theorem}
+
+\bigskip
+\noindent
+{\bf Introduction.}
+Let $U=\mathfrak{Im}(z)>0$
+be the upper half-plane. 
+Denote by ${\bf{c}}_*$
+the family of sequences of complex numbers 
+$\{c_\nu\}$ where every
+$|c_\nu|\leq 1$. A sequence $z\uuu\bullet =\{z_\nu\}$
+in $U$ has a finite interpolation norm
+if there
+exists a constant $K$ such that
+for every 
+sequence $\{c_\nu\}$ in
+${\bf{c}}_*$ we can find  an analytic function $f(z)$ in $U$
+where
+\medskip
+\[
+f(z_\nu)=c_\nu\quad\colon\quad\nu=1,2,\ldots\quad\text{and}\quad |f|_U\leq K\tag{*}
+\]
+
+\noindent
+The least constant
+$K$ above is denoted by
+$\mathfrak{int}(z_\bullet)$ and called the interpolation  norm of
+$\{z\uuu\nu\}$.
+\medskip
+
+
+\noindent
+{\bf 0.1 Theorem.}
+\emph{A sequence $z_\bullet$ is interpolating  if}
+\medskip
+\[
+\min\uuu \nu\, \prod_{k\neq\nu}\, |\frac{z_\nu-z_k}{z_\nu-\bar z_k}|>0
+\]
+
+
+\noindent
+\emph{Moreover, if $\delta(z\uuu\bullet)$ denotes the minimum
+above then}
+\[ \mathfrak{int}(z_\bullet)\leq \frac{4A}{\delta(z\uuu\bullet)}\cdot
+\text{Log}
+\,\frac{1}{\delta(z\uuu\bullet)}\,.\tag{2}
+\]
+\emph{where  $A$ is an absolute  constant.}
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Theorem 0.1 gives a sufficient condition in order that  a sequence 
+is  interpolating. That the condition (1) also is
+\emph{necessary}
+is easily verified. See Exercise XX below.
+In 
+[Ca] the proof is carried out in the unit disc $D$
+where 
+the companion to Theorem 0.1 is that a sequence
+$\{z\uuu\nu\}$ is interpolating if and only 
+\[
+\min\uuu\nu \prod\uuu{k\neq \nu}\,
+\frac{|z\uuu\nu\vvv z\uuu k|}{|1\vvv \bar z\uuu k\cdot z\uuu\nu|}>0
+\tag{3}
+\]
+for every $\nu$.
+After a conformal map one verifies that (1) and (3)
+give equivalent conditions. Here we prove Carleson's result
+in the upper half\vvv plane since various constructions
+below become a bit more transparent as compared
+to the unit disc.
+\medskip
+
+\noindent 
+Let $\{z\uuu\nu\}$ be a sequence with a positive $\delta$\vvv number.
+Since a set of analytic functions
+in $U$ with a uniform upper bound for the maximum norm is a normal
+family it is sufficient to  prove the requested interpolation by bounded
+functions
+for every
+finite subsequence.
+The Nevanlinna-Pick theorem assigns   to each  finite
+sequence $\{z_\nu\}$ and every sequence 
+$\{c_\nu\}$  a unique interpolating analytic function
+$F(z)$ with smallest maximum norm.
+So Carleson's result  
+gives a uniform bound in
+the Nevannlinna-Pick interpolation.
+\medskip
+
+\newpage
+
+
+
+\centerline {\bf 0.1 Carleson measures.}
+\medskip
+
+\noindent
+ The main ingredient  in the proof 
+is to consider
+a certain class of non-negative measures in the upper half-plane
+$\mathfrak{Im}\,z>0$.
+For every
+$h>0$ we denote by
+$\mathfrak{square}(h)$
+the family of squares of the form
+\[ 
+\square=\{(x,y)\quad\colon\quad x_0-h/2<x<x_0+h/2\quad\colon 0<y<h\}
+\quad\colon\, x_0\in{\bf{R}}
+\]
+
+\noindent
+{\bf 0.2. Definition.}
+\emph{A non-negative measure $\mu$ in $U$ is called a Carleson measure if
+there exists a constant $K$such that}
+\[
+\mu(\square)\leq K\cdot h\quad\colon\quad
+\square\in \mathfrak{square}(h)\quad\colon\, 0<h<\infty
+\]
+\emph{The least constant $K$ is denoted by
+$\mathfrak{car}(\mu)$ and called the Carleson norm of
+$\mu$.}
+\medskip
+
+\noindent
+An essential step during   the
+proof Theorem 0.1 is the following inequality:
+\medskip
+
+\noindent
+{\bf 0.3 Theorem.}
+\emph{Let $\{z\uuu\nu\}$ be a sequence with a positive $\delta$\vvv number.
+Then}
+\[
+\mathfrak{car}\bigl (\, 
+\sum_{\nu=1}^{\nu=\infty}\,
+\mathfrak{Im}(z_\nu)\cdot \delta_{z_\nu}\bigr)\leq
+ 2\cdot\text{Log}\,\frac{1}{\delta)z\uuu\bullet)}
+\]
+\emph{where $\{\delta\uuu{z\uuu\nu}\}$
+denote Dirac measures.}
+\medskip
+
+\noindent
+{\bf {Use of duality.}}
+Once 
+Theorem 0.3 is established the interpolation theorem
+follows  by a duality argument where
+the Hardy space
+$H^1({\bf{R}})$ appears.
+Namely, to each $h\in H^1({\bf{R}})$ we associate the
+maximal function
+$h^*$ and
+the following inequality  is proved in
+Section 2:
+
+\medskip
+
+\noindent
+{\bf 0.4 Theorem.}
+\emph{Let $\mu$ be a Carleson measure in the upper half-plane. Then}
+\[ 
+\int_U\, |h(z)|\cdot d\mu(z)\leq
+\mathfrak{car}(\mu)\cdot ||h^*||_1\quad\colon\, h\in H^1({\bf{R}})
+\]
+\medskip
+
+
+\noindent
+Armed with Theorem 0.3 and 0.4 the
+interpolation theorem is derived in section 3 below.
+
+\bigskip
+
+
+\centerline{\bf {1. Proof of Theorem 0.3}}
+\medskip
+
+
+\noindent
+First we establish an inequality which is attributed to L. Hšrmander.
+\medskip
+
+
+
+\noindent {\bf 1.1 Lemma}
+\emph{Let
+$z_1,\ldots,z_N$ be a finite sequence in $U$ and put $\delta=\delta(z\uuu\bullet)$.
+Then}
+\medskip
+\[
+\sum_{\nu\neq k}\, \mathfrak{Im}(z_k)\cdot
+\frac{\mathfrak{Im}(z_\nu)}{|z_k-\bar z_\nu|^2}
+\leq \frac{1}{2}\cdot
+\text{Log}\,\frac{1}{\delta}\quad\colon\quad 1\leq k\leq N\tag{i}
+\]
+\medskip
+
+\noindent 
+\emph{Proof.} The left hand side as well as
+the $\delta$-norm of the
+$z$-sequence are unchanged if we translate all points
+to $z_\nu+a$ where $a$ is a real number. Similarly, the
+$\delta$-norm and the left hand side in (i) are both unchanged when
+the sequence is replaced by $\{A\cdot z_\nu\}$ for some $A>0$.
+To prove (i) for a fixed $k$ which we may take  $k=N$
+and it suffices to consider the case when $z_N=i$.
+Put $z_\nu=a_\nu+ib_\nu$ when $1\leq\nu\leq N-1$.
+Then we must show
+\[ 
+\sum_{\nu=1}^{\nu=N-1}\,
+\frac{b_\nu}{(1+b_\nu)^2+a_\nu^2}\leq \frac{1}{2}\cdot
+\text{Log}\,\frac{1}{\delta}\tag{i}
+\]
+
+\noindent
+Notice that
+\[
+\frac{|i-\bar z_\nu|^2}{|i-z_\nu|^2}=
+\frac{(1+b_\nu)^2+a_\nu^2}
+{(1-b_\nu)^2+a_\nu^2}\tag{iii}
+\]
+Next,  by inverting the  $\delta$\vvv we have:
+\[
+ \prod\uuu{\nu=1}^{\nu=N\vvv 1}\,
+\frac{(1+b_\nu)^2+a_\nu^2}
+{(1-b_\nu)^2+a_\nu^2}\leq \delta^{\vvv 2}\tag{iii}
+\]
+Passing to the Log\vvv functions it follows that
+\[
+\sum_{\nu=1}^{\nu=N-1}\,
+\log \bigl[\,\frac{(1+b_\nu)^2+a_\nu^2}
+{(1-b_\nu)^2+a_\nu^2}\,\bigr]\leq 2\cdot\log\,\frac{1}{\delta}\tag{iv}
+\]
+
+\noindent
+Next, for each $\nu$ we have the integral formula
+\[
+\log \, \frac{(1+b_\nu)^2+a_\nu^2}
+{(1-b_\nu)^2+a_\nu^2}=\int\uuu{\vvv b\uuu\nu}^{b\uuu\nu}\,
+\frac{2(1+ s)\cdot ds}{(1+ s)^2+a\uuu\nu^2}
+\]
+
+
+
+
+
+
+Apply this with $(a_\nu,b_\nu)$ and after
+a summation over $\nu$
+the inequality (iv) gives (i) in Lemma 1.1.
+\bigskip
+
+
+
+
+
+
+
+\centerline{\emph{Final part of the
+proof of  Theorem 0.3}}
+\medskip
+
+
+\noindent
+If $z_\bullet\in\mathcal S(\delta)$ and $a$ is any real number
+then the translated sequence $z_\bullet+a=\{z_\nu+a\}$
+also belongs to
+$\mathcal S(\delta)$. Since Theorem 0.3 asserts
+an
+a priori estimate we may  assume that
+$\square$ is centered at $x=0$, i.e. 
+\[
+\square=\{(x,y)\,\colon\, -h/2<x<h/2\,\,\text{and}\,\, 0<y<h\}
+\]
+There remains to estimate
+\[
+\sum_{z_\nu\in \square}\, \mathfrak{Im}\, z_\nu\tag{i}
+\]
+Set
+\[
+y^*=\text{max}\,\{ \mathfrak{Im}(z_\nu)\,\colon\,z_\nu\in\square\}
+\]
+
+\noindent
+Let $k$ give the equality $y^*=\mathfrak{Im}(z_k)$.
+With $z_k=x_k+iy^*$ and $z_\nu=x_\nu+iy_\nu\in\square$
+we  have
+\[
+|z_k-\bar z_\nu|^2=(x_k-x_\nu)^2+(y^*-y_\nu)^2
+\leq h^2+(y^*)^2\implies
+\]
+\[
+\frac{\mathfrak{Im}(z_k)}{|z_k-\bar z_\nu|^2}\geq
+\frac{y^*}{h^2+(y^*)^2}\quad\colon\,\nu\neq k
+\]
+
+\noindent
+Next, notice that 
+\[
+y^*\geq h/2\implies\frac{y^*}{h^2+(y^*)^2}\geq \frac{1}{5h}\,.
+\]
+
+\noindent
+Lemma 1.1. applied with $\nu=k$
+gives therefore
+\[
+\sum_{z_\nu\in \square}\, \mathfrak{Im}(z_\nu)
+\leq y^*+\frac{5h}{ 2}\cdot\text{Log}\,\frac{1}{\delta}\leq
+h\cdot\bigl (1+\frac{5}{ 2}\cdot\text{Log}\,\frac{1}{\delta}\bigr)
+\tag{ii}
+\]
+\medskip
+
+\noindent
+So if $y^*\geq h/2$ we are done.
+Suppose now that  $y^*<h/2$ and
+regard the cubes:
+\[
+\square_1=\{
+-h/2<x<0\,\text{and}\,\, 0<y<h/2\}\quad
+\square_2=\{
+0<x<h/2\,\,\text{and}\,\, 0<y<h/2\}
+\]
+
+
+\noindent
+We want to estimate
+\[
+S_1+S_2=\sum_{z_\nu\in\square_1}\,\mathfrak{Im}(z_\nu)+
+\sum_{z_\nu\in\square_2}\,\mathfrak{Im}(z_\nu)
+\]
+We have also two sequences:
+\[
+\{z_\nu\,\colon\,z_\nu\in\square_1\}\quad\text{and}\quad
+\{z_\nu\,\colon\,z_\nu\in\square_2\}
+\] 
+Since all factors defining the $\delta$-norm are $\leq 1$
+these two smaller sequences both belong to $\mathcal S(\delta)$.
+Suppose that:
+\[
+y_1^*=
+\max_{z_\nu\in\square_1}\,
+\mathfrak{Im}(z_\nu)\geq \frac {h}{4}
+\]
+When this holds we obtain
+exactly as above:
+\[
+S_1\leq \frac{h}{2}\cdot 2\cdot \text{Log}\, \frac{1}{\delta}
+ \]
+ 
+\noindent
+If $y^*_1<\frac{h}{4}$ we continue to
+split the cube $\square_1$. 
+In a similar fashion we treat
+the sequence which stays in $\square_2$.
+After a finite number of steps we get the required inequality in
+Theorem 0.3.
+
+
+\bigskip
+
+
+\centerline{\bf 2. Proof of Theorem 0.4}
+
+\medskip
+
+
+\noindent
+Let $h\in H^1({\bf{R}})$ and  recall  that its maximal function is 
+defined by
+\[ 
+h^*(t)=\max\, |h(x+iy)|\quad\colon\quad
+|x-t|<y\tag{i}
+\]
+
+\noindent
+To each  $\lambda>0$ we consider the open subset
+on the real line defined by $\{h^*>\lambda\}$. It is some
+union of disjoint intervals $\{(a_j,b_j)\}$ and
+(i) gives the set-theoretic inclusion:
+\[
+\{|h(x+iy)|>\lambda\}\subset\,\cup \,\,T\uuu j
+\quad\colon\tag{ii}
+\]
+where $T\uuu j$ is the  triangle side standing on the interval $(a_j,b_j)$
+as explained in XXX.  (Hardy space). In particular we have
+the inclusion:
+\[ 
+T\uuu j\subset
+\square(a_j,b_j)=\{ x+iy\,\,\colon |x-\frac{a_j+b_j}{2}|< b_j-a_j\,\,
+\colon\,\, 0<y< b_j-a_j\}\tag{iii}
+\]
+
+\noindent 
+See figure XXX.
+So if $\mu$ is a positive measure in $U$  we obtain:
+\[
+\mu(\{|h|>\lambda\})
+\leq \sum \mu(T\uuu j)
+\leq \sum \mu(\square(a_j,b_j))\tag{iv}
+\]
+
+\noindent 
+If $\mu$ is a Carleson measure
+the right hand side
+is estimated by
+\[
+\mathfrak{car}(\mu)\cdot \sum\,(b_j-a_j)=
+\mathfrak{car}(\mu)\cdot\mathfrak{m}(
+\{h^*>\lambda\})\tag {v}
+\]
+
+\noindent
+where  $\mathfrak{m}$
+ refers to the 1-dimensional Lebesgue measure.
+Here (v) holds for every $\lambda>0$. So by the general 
+inequality for distribution functions from XXX we get:
+\[
+\int _U
+|h|\cdot d\mu\leq \mathfrak{car}(\mu)\cdot||h^*||_1
+\]
+This finishes the proof of Theorem 0.4.
+
+\bigskip
+
+
+
+\centerline{\bf 3. Proof of Theorem 0.1.}
+\bigskip
+
+\noindent
+As explained in XX the Banach space
+$H^1({\bf{R}})$
+contains a dense subspace
+of functions $h(z)$ with polynomial decay at infinite, i.e.
+functions in the Hardy space for which
+\[
+|h(z)|\leq C_N\cdot (1+|z|)^{-N} 
+\quad\colon\text{hold for some constant}\,\,\, C_N\quad\colon\, N=1,2,\ldots
+\]
+This is used below to ensure that various integrals are defined
+where it suffices to 
+to use "nice" functions while an \emph{a priori}
+inequality is established.
+Consider a
+finite sequence $z_1,\ldots,z_N$  in $U$
+and
+a finite sequence $c_1,\ldots,c_N$ in
+${\bf{c}}_*$. Newton's interpolation
+gives  a
+unique  polynomial $P(z)$ of degree $N-1$ such that:
+\[ 
+P(z_k)=c_k\quad\colon\quad 1\leq k\leq N\tag{i}
+\]
+
+\noindent
+Let $B(z)$ be  the Blascke product
+associated to the $z$-sequence:
+\[ 
+B(z)=\prod_{\nu=1}^{\nu=N}\, \frac{z-z_\nu}{z-\bar z_\nu}\tag{ii}
+\]
+
+\noindent
+Let $h\in H^1({\bf{R}})$ have the  polynomial
+decay $\geq N+2$. Residue calculus gives
+\[ 
+\int_{-\infty}^\infty\,\frac{P(x)}{B(x}\cdot h(x)\cdot dx=
+\sum_{k=1}^{k=N}\, \frac{c_k}{B'(z_k)}\cdot h(z_k)\tag{iii}
+\]
+
+
+\noindent
+If $k$ is fixed we have
+\[ 
+\frac{1}{B'(z_k)}=\prod_{\nu\neq k}\,
+\frac{z_k-\bar z_\nu}{z_k-z_\nu}\cdot 2\cdot \mathfrak{Im}(z_k)\tag{iv}
+\]
+
+
+\noindent
+It follows that
+\[
+\bigl |\frac{1}{B'(z_k)}\bigr |\leq\frac{2}{\delta(z\uuu\bullet)}\cdot \mathfrak{Im}(z_k)\tag{v}
+\]
+
+\medskip
+\noindent
+Since $\{c_\nu\}\in{\bf{c}}_*$ we see that (v) and the 
+triangle inequality applied to (iii) give:
+
+\[ 
+\bigl |\int_{-\infty}^\infty\,\frac{P(x)}{B(x}\cdot h(x)\cdot dx
+\,\bigr | \leq
+\frac{2}{\delta(z\uuu\bullet)}\cdot 
+\sum_{k=1}^{k=N}| h(z_k)|
+\cdot\mathfrak{Im}(z_k) \tag{*}
+\]
+\medskip
+
+
+\noindent 
+Now Theorem 0.4 gives the inequality
+\[
+\sum_{k=1}^{k=N}| h(z_k)|\cdot
+\mathfrak{Im}(z_k)\leq\mathfrak{car}(\sum\,
+\mathfrak{Im}(z\uuu\nu)\cdot \delta\uuu{z\uuu\nu}\cdot ||h^*||\uuu 1\tag{5}
+\]
+
+\medskip
+
+\noindent
+\emph{Use of duality.} Let us put
+
+\[
+C\uuu\delta =\frac{2}{\delta(z\uuu\bullet)}\cdot 2\cdot \log\,\frac{1}{\delta(z\uuu\bullet)}
+\]
+Then (5) and Theorem 0.3
+Let $C_\delta$ be the constant from Theorem 0.3 together with (*) give
+\[
+\bigl |\int_{-\infty}^\infty\,\frac{P(x)}{B(x}\cdot h(x)\cdot dx
+\,\bigr | \leq C\cdot ||h^*||\uuu 1
+\]
+
+\noindent
+Next,  the result in 
+(Hardy Chapter ) gives an absolute constant $A$ such that
+
+\[
+||h^* ||_1\leq A\cdot ||h||_1
+\]
+
+\noindent
+Hence the densely defined linear functional
+\[
+h\mapsto \int_{-\infty}^\infty\, \frac{P(x)}{B(x)}
+\cdot h(x)\cdot dx
+\] 
+has norm $\leq C\cdot A$.
+The Duality
+Theorem from XXX  implies that if
+$\epsilon>0$, then
+there exists  some $G(z)\in\mathcal O(U)$
+such that
+the maximum norm
+\[
+\bigl |\frac{P(x)}{B(x)}-G(x)\bigr |_U<A\cdot C_\delta+\epsilon\tag{6}
+\]
+
+\noindent
+Since $B(x)$ is a Blaschke product we have 
+$|B(x)|=1$   almost everywhere and hence (6) gives:
+
+\[
+\bigl |P(x)-B(x)\cdot G(x)\,\bigr |<A\cdot C_\delta+\epsilon
+\]
+
+\medskip
+
+\noindent
+Now $f(z)=P(z)-B(z)G(z)$ is analytic in $U$
+and  since 
+$B(z_\nu)=0$ for every $\nu$ we have
+\[
+f(z_\nu)=P(z_\nu)=c_\nu
+\]
+So 
+the bounded analytic function $f(z)$ interpolates and since
+$\epsilon>0$ can be arbitrary small
+and $c_1,\ldots,c_N$ was an arbitrary  sequence  in
+${\bf{c}}_*$ we conclude that
+the interpolation norm of the finite sequence $z_1,\ldots,z_N$ is at most
+$A\cdot C_\delta$.  Since this uniform bound holds for all $N$
+we get
+\[
+\mathfrak{int}(z_\bullet)\leq A\cdot C_\delta
+\]
+which  finishes
+the proof of Theorem 0.1.
+\bigskip
+
+\bigskip
+
+
+\noindent
+{\bf {Exercise.}} Prove that (1) in the
+Interpolation Theorem is necessary.
+
+\bigskip
+
+\newpage
+
+
+\centerline{\bf  II. Wolff's Theorem.}
+
+\bigskip
+
+
+\noindent
+{\bf Introduction.}
+The Pompieu formula solves
+the inhomogeneous $\bar\partial$-equation in the unit disc
+$D$.
+So if $h(z)$ is a $C^\infty$-function defined in some open
+neighborhood of the closed disc there exists
+a $C^\infty$-function $v$ such that
+\[
+\bar\partial(v)(z)=h(z)\quad\colon\quad z\in D\tag{*}
+\]
+We seek conditions 
+in order that
+(*) has a solution $v$ whose maximum norm over $D$
+is controlled by some extra properties of  $h$.
+Conditions of this kind were imposed  in [Wolff]
+which we
+begin to
+explain.
+To
+every 
+$C^\infty$-function $h$ on $\bar D$
+we define a pair of non-negative  functions:
+\[
+\mu_h(z)=\text{Log}\,\frac{1}{|z|}\cdot
+|\partial(h)(z)|\quad\colon\quad\nu_h(z)
+=\text{Log}\,\frac{1}{|z|}\cdot|h(z)|^2\tag{**}
+\]
+
+
+\noindent
+Wolff's condition is expressed in terms of
+Carleson norms  on
+$\mu_h$ and $\nu_h$.
+Before we announce Theorem 0.4  we recall the following.
+\medskip
+
+
+\noindent
+{\bf{0.1 Carleson measures in $D$.}}
+Consider  the family of
+sector domains defined for all pairs
+$0<h<1$ and $0\leq\theta\leq 2\pi$ by:
+\[
+S_h(\theta)=\{\,z=r\cdot e^{i\phi}\,\,\colon 1-h< r <1\,\colon
+|e^{i\phi}-e^{i\theta}|\leq \frac{h}{2}\,\,\}
+\]
+
+\noindent
+{\bf 0.2 Definition.}
+\emph{A non-negative  measure $\mu$ in 
+$D$ is called a Carleson measure if there
+exists a constant $K$  such that}
+\[
+\iint_{S_h(\theta)}\, d\mu\leq K\cdot h
+\quad\colon\quad 0< h> 1
+\quad\colon\quad 0\leq\theta<2\pi 
+\]
+\emph{The least constant $K$ is denoted by
+$\mathfrak{car}(\mu)$ and called the Carleson norm
+of $\mu$.}
+\medskip
+
+
+\noindent
+{\bf 0.3 An inequality.} Exactly as in the upper half-plane
+there exists an absolute constant $A$
+such that the following holds for every pair of a
+Carleson measure $\mu$ in $D$ and 
+a function $f(z)$ in the Hardy space $H^1(T)$
+\[ 
+\iint_D\, \bigl|f(z)\bigr|\cdot d\mu(z)\leq
+A\cdot \mathfrak{car}(\mu)\cdot ||f||_1
+\]
+
+\medskip
+
+
+
+
+\noindent
+{\bf 0.4 Theorem.}
+\emph{Let $A$ be as in (0.3).
+For every $C^\infty$-function $h\in C^\infty(\bar D)$
+the equation (*) has a $C^\infty$-solution
+$v_*$ where}
+\[ 
+\max_\theta |v_*(e^{i\theta})|\leq 2\cdot A\cdot \mathfrak{car}(\mu_h)+2\cdot \sqrt{A\cdot 
+ \mathfrak{car}(\nu_h)}
+\]
+
+
+\noindent
+For the
+proof
+we need an   integral formula 
+due to Jensen.
+\medskip
+
+\noindent
+{\bf{0.5 The Fourier-Jensen formula.}}
+\emph{Let $F(z)$ be an analytic function in $D$ 
+with a simple zero at $z=0$ and otherwise it
+is $\neq 0$. Then one has the equality:}
+
+
+
+\[
+ \iint_D\, \text{Log}\,\frac{1}{|z|}
+\cdot\frac{|F'(z)|^2}{|F(z)|}\cdot dxdy=\int_0^{2\pi}\,
+|F(e^{i\theta})|\cdot d\theta\tag{*}
+\]
+\medskip
+
+
+\noindent
+To prove (*) we set $F(z)=z\cdot G(z)$ where the hypothesis means that
+$G$ is zero\vvv free so
+we can construct a square
+root function and  write
+\[ 
+F(z)=z\cdot \Psi^2(z)\quad\colon\,\,\Psi\in\mathcal O(D)\tag{i}
+\]
+
+
+\noindent
+This implies that
+\[
+\frac{|F'(z)|^2}{|F(z)|}=\frac{|\Psi(z)+2z\cdot\Psi'(z)|^2}{|z|}
+\]
+Hence the left hand side in (*) becomes:
+
+
+\[
+ \iint_D\, \log \,\frac{1}{|z|}
+\cdot\bigl |\Psi(z)+2z\cdot\Psi'(z)\bigr |^2\cdot\frac{1}{|z|}
+\cdot dxdy\tag{ii}
+\]
+To evaluate this integral we consider the series expansion
+$\Psi(z)=\sum\, a_nz^n$. In polar coordinates the double integral
+becomes
+
+\[
+\int_0^1\int_0^{2\pi}\, \log \,\frac{1}{r}
+\cdot\bigl |\sum\, (2n+1)\cdot a_n\cdot r^n\cdot e^{in\theta}\bigr|^2\cdot
+drd\theta\tag{iii}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that (iii) is equal to
+\[ 
+2\pi\cdot \sum\,|a_n|^2=\int_0^{2\pi}\,|\Psi(e^{i\theta})|^2\cdot d\theta=
+\int_0^{2\pi}\,|F(e^{i\theta})|\cdot d\theta
+\]
+which gives the requested equality (*).
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf 1. Proof of Theorem 0.4}
+\medskip
+
+\noindent
+The Pompieu formula  gives
+a solution $v$ to the $\bar\partial$-equation
+\[ 
+\bar\partial(v)=h\tag{i}
+\]
+We get new solutions to (i) by $v_*=v-G$ when
+$G(z)$ are analytic functions in $D$.
+So in order to minimize the maximum norm
+of a solution to (i) we seek a  bounded analytic function
+$G_*$ such that
+\[
+|v-G_*|_D=\min_G\,\,|v-G|_D\quad\colon\, G\in H^\infty(T)\tag{ii}
+\]
+
+
+\noindent
+Let $m_*$
+be the minimum value in (ii). 
+To estimate $m_*$
+we use  the duality between
+$H^\infty(T)$
+and 
+$H_0^1(T)$ where $H_0^1(T)$
+is the space of functions $F(z)$ in the Hardy space $H^1(T)$
+for which $F(0)=0$.
+Denote by
+$S_*^(T)$ the set of functions
+$F\in H_0^1(T)$ such that
+\[
+\int_0^{2\pi}\, \bigl|F(e^{i\theta})\bigr|\cdot d\theta=1\tag{1}
+ \]
+
+
+\noindent
+The duality result from (XX) gives:
+\[
+m_*=\max_F\, \bigl|
+\int_0^{2\pi}\, v(e^{i\theta})\cdot  F(e^{i\theta})\cdot d\theta\,\bigr|
+\quad\colon\, F\in S_*(T)\tag{2}
+\]
+\medskip
+
+\noindent
+Since $F(0)=0$
+Green's   formula shows that
+(2) becomes
+\[
+\iint_D\,\text{Log}\,\frac{1}{|z|}\cdot\Delta(vF)\cdot dxdy\tag {3}
+\]
+
+\noindent
+Since $\Delta=\partial\bar\partial$ and  $v$ solves
+(i) while  $\bar\partial(F)=0$, we get
+\[
+\Delta(vF)=4\cdot\partial(hF)=4\cdot F\cdot\partial(h)+4\cdot h\cdot F'\tag{4}
+\]
+
+
+\noindent
+Hence we have proved the following
+\medskip
+
+\noindent
+{\bf 1. Lemma.} \emph{One has the equality}
+\[
+m_*=\max_F\,\,\bigl|
+\iint_D\, \text{Log}\,\frac{1}{|z|}\cdot\,
+\bigl[F\cdot\partial(h)+h\cdot F'\bigr]\cdot dxdy\bigr|
+\quad\colon\quad F\in S_*^1(T)
+\]
+\medskip
+
+\noindent
+To profit upon this expression for $m_*$
+we use the Jensen-Nevanlinna factorisation
+and reduce
+the
+estimate to the
+case when $F(z)$ has a simple zero at $z=0$ 
+while it is $\neq 0$ in the punctured disc $D\setminus\{0\}$.
+Thus, consider some $F$ in $S_*(T)$. Since $F(0)=0$ we 
+there exists  the Jensen-Nevanlinna factorisation:
+\[ 
+F(z)=z\cdot B(z)\cdot G(z)\tag{i}
+\]
+where $B(z)$ is a Blaschke product and
+$G$ has no zeros in $D$. Moreover, since
+$|B|=1$ holds almost everywhere on $T$
+it follows that $G$ belong to $S_*(T)$. Set:
+
+\[ 
+F_1(z)=\frac{z}{2}\bigl(B(z)-1\bigr)G(z)\quad\text{and}\quad
+F_2(z)=\frac{z}{2}\bigl(B (z)+1\bigr)G(z)\tag{ii}
+\]
+
+
+\noindent
+It follows that
+$F=F_1+F_2$
+and since the maximum norms of
+$B(z)-1$ and $B(z)+1$ are at most 2
+we have 
+\[
+||F_\nu||_1\leq 1\quad\colon\quad \nu=1,2\tag{iii}
+\]
+
+
+\noindent
+From (ii) we see that $F_1$ and $F_2$ both have a simple zero at the origin
+and are otherwise $\neq 0$ in the punctured disc.
+Hence we can apply the Fourier-Jensen formula from (0.4)   which gives
+\[
+\bigl [\, \iint_D\, \text{Log}\,\frac{1}{|z|}
+\cdot\frac{|F_\nu'(z)|^2}{|F_\nu(z)|}\cdot dxdy=\int_0^{2\pi}\,
+|F_\nu(e^{i\theta})|\cdot d\theta\leq 1\quad\colon\,\nu=1,2 \tag{iv}
+\]
+\medskip
+
+
+\noindent
+\emph{Final part of the proof.}
+For each $\nu=1,2$ we set
+\[
+V(F_\nu)= \iint_D\, \text{Log}\,\frac{1}{|z|}\cdot|\partial(h)|\cdot |F_1(z)|dxdy+
+\iint_D\, \text{Log}\,\frac{1}{|z|}\cdot|h(z)|\cdot\,|F_1'(z)|\cdot dxdy
+\tag{1}
+\]
+\medskip
+
+
+\noindent
+By the triangle inequality the right hand side in Lemma 1 is $\leq V(F_1)+V(F_2)$.
+Let us for example  estimate  $V(F_1)$.
+By the inequality (0.3) the first integral in (1) is estimated by
+\[
+A\cdot \mathfrak{car}(\text{Log}\,\frac{1}{|z|}\cdot|\partial(h)|)\cdot
+||F_1||_1\tag{2}
+\]
+
+
+\noindent
+Since $||F_1||_1\leq 1$ the definition of $\mu_h$ means that (2) is majorised by
+\[
+A\cdot \mathfrak{car}(\mu_h)\tag{*}
+\]
+
+\noindent
+To estimate the second integral in (1) we
+insert $\sqrt{|F_1|}$ as a factor 
+and by the  Cauchy-Schwartz inequality this
+second integral is estimated by the square root of
+
+
+
+
+\[
+\bigl [\, \iint_D\, \text{Log}\,\frac{1}{|z|}
+\cdot\frac{|F_1'(z)|^2}{|F_1(z)|}\cdot dxdy
+\bigr]
+\cdot
+\bigl[ \iint_D\, 
+\text{Log}\,\frac{1}{|z|}\cdot\,|h(z)|^2\cdot |F_1(z)|\cdot dxdy\tag{3}
+\]
+\medskip
+
+\noindent
+In this product the first factor is given by the formula (iv)
+and is therefore $\leq ||F\uuu 1||_1\leq 1$.
+Finally, by the definition of the Caelson norm
+the last factor is majorised by
+$A\cdot\mathfrak{car}(\nu_h)$.
+Taking the square root together with
+(*) above we have proved that
+\[ 
+V(F_1)\leq+ A\cdot\mathfrak{car}(\mu_h)+\sqrt{A\cdot\mathfrak{car}(\nu_h)}\tag{4}
+\]
+The same holds for $F_2$ and  thanks to the
+factor 2  the requested inequality in Wolff's theorem follows.
+
+\bigskip
+
+
+\centerline{\bf III. A class of Carleson measures}
+
+
+\medskip
+
+\noindent
+Let $f(z)$ be a bounded analytic function
+in $D$ and associate the non-negative measure in $D$ by:
+\[
+\mu_f=|f'(z)|^2\cdot\text{Log}\,\frac{1}{|z|}
+\]
+
+
+
+\medskip
+
+\noindent {\bf {3.1 Theorem. }} \emph{There exists an absolute constant
+$A_*$ such that}
+
+\[
+\sqrt{\mathfrak{car}(\mu_f)}\,\leq A_*\cdot |f|_D\quad\colon\quad
+f\in H^\infty(D)
+\]
+
+
+\medskip
+
+
+\noindent
+\emph{Proof.} By the Heine-Borel Lemma 
+it suffices to prove this 
+for small sectors. Notice also that
+\[
+\text{Log}\,\frac{1}{[z[}\simeq |1-z|
+\]
+when $z$ approaches the unit circle.
+By a conformal mapping the proof is therefore reduced to the
+case when we  have a bounded analytic function
+$f(z)$ defined in a square
+\[
+\square=\{z=x+iy\quad\colon\quad-1<x<1\quad\colon
+0<y<1\}
+\]
+where  it suffices to get an absolute constant such that
+
+\[
+\frac{1}{h}\int_{\square_h}
+\,y\cdot |f'(x+iy)|^2\cdot dxdy\leq A\cdot |f|^2_\square \quad\colon 0< h <\frac{1}{2}\tag{i}
+\]
+\medskip
+
+\noindent
+Set  $f=u+iv$ which gives
+$|f'(|^2=u_x^2+u_y^2$.
+The left hand side in (i) becomes:
+\[
+\frac{1}{h}\int_{\square_h}
+\,y\cdot (u_x^2+u_y^2)
+\cdot dxdy\tag{ii}
+\]
+It remains to find an absolute constant $A$ such that
+(ii) is majorised by $A\cdot |u|_\square^2$.
+To achive this
+we  replace
+$\square_h$ by the larger semi-disc
+\[
+D_h=\{ z=x+iy\quad\colon\, |z|<h\quad\colon y>0\}
+\]
+which only with increase the left hand side in (ii).
+Next, since $4h^2-|z|^2\geq 3h^2$ when $z\in D_h$ we get
+a larger contribution by integrating over the larger
+semi-disc $D_{2h}$. Hence 
+it suffices to get an absolute constant $A$ such that
+\[
+J(h)=\int_{D_{2h}}\, y(4h^2-|z|^2)\cdot(u_x^2+u_y^2)dxdy\leq A\cdot h^3
+\cdot |u|^2_\square\tag {*}
+\]
+\medskip
+
+\noindent
+To get A in (*) we
+use the equality
+
+\[ 
+\Delta(u^2)=2(u_x^2+u_y^2)
+\]
+
+\medskip
+
+\noindent
+Next, the  function $g(x,y)=y(4h^2-|z|^2)$ is zero on the boundary
+of $D_{2h}$ and   Green's formula gives
+\[
+2\cdot J(h)=\int_{D_{2h}}\, u^2\cdot\Delta(y(4h^2-|z|^2)\cdot dxdy
+-\int_{\partial D_{2h}}\, u^2\cdot\partial_{\bf{n}}(y(4h^2-|z|^2)\cdot ds
+\]
+\medskip
+
+\noindent
+Notice that 
+$\Delta(y(4h^2-|z|^2)=-8y<0$ in $D_{2h}$ and an easy computation gives
+\[
+-\int_{\partial D_{2h}}\, u^2\cdot\partial_{\bf{n}}(y(4h^2-|z|^2)\cdot ds=
+\]
+\[
+\int_{-2h}^{2h}\, u^2(x,0)\cdot(4h^2-x^2)\cdot dx+
+\int_0^\pi\, u^2(2he^{i\theta})\cdot \text{sin}\,\theta\cdot
+\bigl[ -4h^2+ 3\cdot(2h)^2\bigr ]\cdot h\cdot d\theta
+\]
+\medskip
+
+\noindent
+Introducing the maximum norm
+$|u|_\square$ 
+we conclude that
+\[
+2\cdot J(h)\leq |u|_\square^2\cdot\bigl[
+\int_{-2h}^{2h}\, (4h^2-x^2)\cdot dx+
+\int_0^\pi\,  \text{sin}\,\theta\cdot
+\bigl[ -4h^2+ 3\cdot(2h)^2\bigr ]\cdot h\cdot d\theta\bigr]
+\]
+At this stage the reader can evaluate the requested constant $A$
+which estimates the last factor by $2A\cdot h^3$.
+
+
+
+\bigskip
+
+
+
+
+\centerline
+{\bf IV. Berndtsson's  $\bar\partial$-solution}
+\bigskip
+
+\noindent
+We announce an inequality
+due to
+Bo Berndtsson in [Bern] which has the merit that
+it is valid   for a quite extensive
+family of 
+domains in
+${\bf{C}}$.
+Here is the set-up : Let $\mathcal B$
+denote the family of bounded open sets
+$\Omega$ defined by
+\[ 
+\Omega=\{\rho(z)<0\}
+\] 
+where $\rho(z)$ is a real-valued $C^2$-function defined in some
+neighborhood of $\bar\Omega$ which satisfies
+\[ 
+\Delta(\rho)(z)>0
+\,\,\colon\,\, z\in\Omega \quad\colon\quad \nabla(\rho)(z)\neq 0
+\,\, z\in\partial\Omega
+\]
+\medskip
+
+\noindent
+Next, let $\Omega\in\mathcal B$ be given together with
+a bounded and subharmonic function
+$\phi(z)$ in $\Omega$.
+Denote by $\mathfrak{Bernt}(\Omega,\phi)$ the family of $C^\infty$-functions
+$f(z)$ in $\Omega$  which satisfy:
+\[ 
+|f(z)|\leq -\rho(z)\cdot \Delta\,\phi(z)\quad\colon\quad z\in\Omega\tag{*}
+\]
+\medskip
+
+
+\noindent
+{\bf 4.1 Theorem.} \emph{To each $f\in\mathfrak{Bernt}(\Omega,\phi)$
+the inhomogeneous equation}
+\[ 
+\bar\partial(u)=f\tag{*}
+\] 
+\emph{has a solution $u(z)$ which satisfies}
+\[
+\max_{z\in\partial \Omega}\, \frac{\bigl|u(z)|\cdot e^{-\phi(z)/2}\bigr|}{
+|\nabla\rho(z)\bigr|}\leq
+\max_{z\in\Omega}\, \frac{\bigl|f(z)|\cdot e^{-\phi(z)/2}\bigr|}{
+|-\rho(z)\cdot \Delta\,\phi(z)+\nabla\rho(z)\bigr|}\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+A special case occurs when
+$\Omega=D$ and  $\rho(z)=|z|^2-1$. 
+Then (*)   means that
+a function $f$ in the Berndtsson class satisfies
+\[
+|f(z)|\leq 2(1-|z|)\cdot\Delta(\phi)(z)
+\]
+
+\noindent
+So here $|f|$ decays as $|z|\to 1$
+and when
+$\Delta(\phi)$ is bounded this inequality estimates
+the Carleson norm of $f$.
+So  in this situation Theorem 4.1 resembles Wolf's theorem. 
+The solution $u$ in
+Theorem 4.1 is found by  solving an
+extremal problem in a Hilbert space. Namely, given
+the
+$\phi$-function, Berndtsson   considered the Hilbert space
+of functions in $D$ which are square integrable with
+respect to $e^{-\phi}$, i.e. functions $g$ for which
+\[ 
+\iint_D\, |g(z)|^2\cdot e^{-\phi(z)}\cdot dxdy<\infty\tag{1}
+\]
+\medskip
+
+\noindent
+Now there exists  the unique extremal  solution $u$ to 
+the equation $\bar\partial(u)=f$
+whose
+norm in $L^2(e^{-\phi})$
+is minimal among all functions
+$\psi$ in $D$ satisfying $\bar\partial\psi=f$.
+In [Berndtsson]
+it is  proved that his extremal solution 
+$u$ satisfies the inequality (**) in
+Theorem 4.1. 
+
+\bigskip
+
+
+\centerline{\bf{V. Hšrmander's  $L^2$-estimate}}
+
+\bigskip
+
+\noindent
+Let $\Omega$ be an open  set in  ${\bf{C}}$.
+If $\phi$ is a real-valued continuous and non-negative function 
+we get the Hilbert space 
+$\mathcal H_\phi$
+whose elements are Lebesgue measurable functions $f$ in $\Omega$ such that
+\[ 
+\int_\Omega\, |f|^2\cdot e^{-\phi}\cdot dxdy<\infty\tag{*}
+\]
+The square root of (*) yields norm and is  denoted by
+$||f||_{2,\phi}$. Let $\psi$ be another
+real-valued continuous and non-negative function 
+which gives the Hilbert space 
+$\mathcal H_\psi $ where the norm of an element $g$ is denoted by $||g||_{2,\psi}$.
+We are interested in the inhomogenous $\bar\partial$-equation, i.e. given
+$w\in\mathcal H_\psi$ we seek $f\in \mathcal H_\phi$ such that
+$\bar\partial(f)=w$. In addition we want to solve this equation with
+a bound for the $L^2$-norms.
+To attain this we impose
+
+\medskip
+
+\noindent
+{\bf{5.1 Hšrmander's condition.}}
+The pair  $\phi,\psi$ satisfies the Hšrmander condition if there exists some 
+positive constant $c_0$ such that the following pointwise inequality holds in
+$\Omega$:
+\[ 
+\Delta(\psi)\vvv 2\cdot |\nabla(\psi)|^2+
+\psi\uuu x\phi\uuu x+\psi\uuu y\phi\uuu y\geq
+2\cdot c_0^2\cdot e^{\psi(z)-\phi(z)}
+\tag{*}
+\]
+where we have put $|\nabla(\psi]|^2=\psi\uuu x^2+\psi\uuu y^2$.
+\medskip
+
+
+\noindent
+{\bf{5.2 Theorem.}}
+\emph{If $(\phi,\psi)$ satisfies (*) for some $c_0>0$ then
+the equation
+$\bar\partial(f)=w$ has a solution for every $w\in\mathcal H_\psi$ where}
+\[
+||f||_\phi\leq \frac{1}{c_0}\cdot ||w||_\psi
+\]
+
+
+\noindent
+\emph{Proof.}
+Since $C_0^\infty$ is a dense subspace of $\mathcal H_\phi $
+the linear operator $T$ from $\mathcal H_\phi$ to $\mathcal H_\psi$ given by $T(f)=\bar\partial(f)$ is densely defined.
+Let $w$ be in the domain of definition for
+the adjoint operator 
+$T^*$. If $f\in C_0^\infty(\Omega)$ we get
+\[ 
+\langle T(f),w\rangle=\int \bar\partial(f)\cdot \bar w\cdot e^{-\psi}dxdy=
+-\int\, f\cdot 
+\bigl[\bar\partial(\bar w)-\bar w\cdot \bar\partial(\psi)\bigr]\cdot
+ e^{-\psi}dxdy\tag{*}
+\]
+
+
+\noindent
+Since $\psi$ is real\vvv valued it follows that
+$\bar\partial(\bar w)-\bar w\cdot \bar\partial(\psi)$
+is the complex conjugate of
+$\partial(w)-w\cdot\partial(\psi)$ which gives
+\[
+T^*(w)=-\bigl[\partial(w)-w\cdot\partial(\psi)\bigr]\cdot
+ e^{\phi-\psi}\tag{**}
+\]
+Taking the squared $L^2$-norm we obtain
+\[ 
+||T^*(w)||^2_\phi=
+\int\, |\partial(w)-w\cdot\partial(\psi)|^2\cdot
+e^{\phi-2\psi}\tag{1}
+\]
+Expanding the integrand it follows that (1) is equal to
+\[
+\int\, \bigl[|\partial(w)|^2+|w|^2\cdot|\partial(\psi)|^2\bigr]\cdot
+e^{\phi-2\psi}-2\cdot\mathfrak{Re}\bigl (
+\int\, \partial(w)\cdot\bar w\cdot\bar \partial(\psi)\cdot
+e^{\phi-2\psi}\bigr)\tag{2}
+\]
+In the last integral we perform a partial integration
+and conclude that the last term is the real part of
+\[
+2\cdot \int\,w\cdot[\partial(\bar w)\cdot\bar \partial(\psi)+
+\bar w\cdot \partial\bar\partial(\psi)\vvv
+2\bar w\cdot \bar \partial(\psi)\cdot \partial (\psi)+
+\bar w\cdot \bar\partial(\psi)\cdot \partial(\phi)]\cdot e^{\phi\vvv 2\psi}
+\]
+
+
+\noindent
+Next, the Cauchy\vvv Schwarz inequality shows that
+the absolute value of 
+\[
+2\cdot 
+\int \, w\cdot  \partial(\bar w)\cdot \bar \partial(\psi)\cdot e^{\phi\vvv 2\psi}
+\] 
+is majorized by the left hand integral in (2). It follows that
+
+\[
+||T^*(w)||^2_\phi\geq 
+2\cdot \mathfrak{Re}\,  \int\, |w|^2\cdot \bigl[\,\partial\bar\partial(\psi)\vvv
+2\cdot \bar \partial(\psi)\cdot \partial (\psi)+
+\bar\partial(\psi)\cdot \partial(\phi)\,\bigr ]\cdot e^{\phi\vvv 2\psi}\tag{3}
+\]
+\medskip
+
+
+\noindent
+Since $\phi$ and $\psi$ are real\vvv valued
+the real part of the inner bracket above becomes
+
+\[
+\frac{1}{4}\bigl[\Delta(\psi)\vvv 2\cdot |\nabla(\psi)|^2+
+\psi\uuu x\phi\uuu x+\psi\uuu y\phi\uuu y\,\bigr]\tag{4}
+\]
+
+
+\bigskip
+
+
+
+\noindent
+So when (4) majorizes $\frac{c\uuu 0^2}{2}\cdot
+e^{\psi\vvv \phi}$ it follows that
+
+\[
+||T^*(w)||^2_\phi\geq c\uuu 0^2\cdot \int\, |w|^2\cdot
+e^{\psi\vvv \phi}\cdot e^{\phi\vvv 2\psi}=
+c\uuu 0^2\cdot ||w||^2\uuu\psi\tag{5}
+\]
+This lower bound implies that the norm of $T$ is bounded by $c\uuu o$
+and Theorem XX follows.
+
+
+
+
+\bigskip
+
+\noindent {\bf{5.3 Remark.}}
+There exist different  pairs $(\phi,\psi)$ for which Hšrmander's condition
+(*) applies.
+and
+We refer to the article [Kiselman] by C. Kiselman for
+some specific applications of  $L^2$-estimates in
+${\bf{C}}$ applied to study  carriers of Borel transforms.
+The full strength of  $L^2$-estimate
+appears in dimension $n\geq 2$ where one works with
+\emph{plurisubharmonic functions}  and 
+impose the condition that $\Omega$ is a
+strictly pesudo-convex set in ${\bf{C}}^n$ and
+solve inhomogeneous $\bar\partial$-equations for 
+differential forms of bi-degree $(p,q)$. 
+As expected
+the proofs are more involved
+where 
+various Hermitian forms appear.
+In addition to  Hšrmander's original article [Hšrmander] we refer to his text-book
+[Hšrmander] and  Chapter XX in [Hšmander XX-Vol 2]
+where  certain bounds for $\bar\partial$-equations are 
+established with certain  relaxed assumptions which are used 
+to settle the fundamental principle 
+for over-determined systems of PDE-equations in the smooth case.
+Working on complex manifolds with various metric 
+properties $L^2$-estimates  is a
+powerful tool. For a wealth of results of this nature we refer to the notes by 
+Demailly
+in [Dem].
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf VI. The Corona Theorem.}
+
+\bigskip
+\noindent
+{\bf Introduction.} In  the unit disc $D$ we 
+have the Banach algebra $H^\infty(D)$ of bounded analytic functions.
+Let $\mathfrak{M}_\infty(D)$ denote its maximal ideal space.
+Via point evaluations in $D$ we get a map
+
+\[ 
+i\colon D \mapsto \mathfrak{M}_\infty(D)
+\]
+The Corona problem asked if $i(D)$ is dense in
+$\mathfrak{M}_\infty(D)$. The affirmative answer
+to this question was found by Carleson.
+It is easily seen that the density of the $i$-image is equivalent to the following
+result which was proved in [Carleson]:
+
+\medskip
+
+\noindent{\bf{6.1 Theorem.}}
+\emph{The ideal generated
+by
+a finite family $f_1,\ldots,f_n$ in $H^\infty(D)$ is equal to $H^\infty(D)$
+if and only if there exists $\delta>0$ such that}
+
+
+\[
+|f_1(z)|+\ldots+|f_n(z)|\geq\delta\quad\text{hold for all}\,\, \, z\in D
+\]
+
+\bigskip
+
+\noindent
+{\bf Remark.}
+Just as  in the  proof of the Interpolation Theorem an
+essential ingredient of the proof
+relies upon 
+Carleson measures. 
+An alternative to Carleson's original proof was
+given by Wolff and relies upon
+his result for the inhomogeneous $\bar\partial$-equation 
+from XX.
+The deduction from Wolff's Theorem  in XX to the solution
+of the Corona problem
+is  exposed a several places. Se for example
+Chapter XX in [Narasimhan] and also the article [Gamelin]
+by T.Gamelin.
+So here we refrain from giving further details.
+Let us only remark that one may consider
+related problems where the boundedness of the $f$-function is relaxed.
+For example, using $L^2$-estimates with weight functions
+one can solve  a  problem where
+$f_1,\ldots,f_n$ are analytic functions in $D$ with
+moderate growth,  i.e 
+there is an integer $m$ and a constant $A$ such that
+\[ 
+(1-|z|)^m\cdot |f_\nu(z)|\leq K
+\] 
+holds in $D$ for every $\nu$.
+Assume also that there is an integer $m_*$ and  $\delta>0$
+such that
+\[
+|f_1(z)|+\ldots+|f_n(z)|\geq\delta\cdot (1-|z|)^{m_*}
+\quad\text{hold for all}\,\, \, z\in D
+\]
+Then one can show that
+there exists an $n$-tuple $g_1,\ldots g_n$ of analytic functions with
+moderate growth such that
+\[ 
+g_1\dot f_1+\ldots+g_n\cdot f_n=1\tag{1}
+\] 
+holds in $D$.
+\medskip
+
+\noindent{\bf{Question.}}
+Find the smallest possible number $\rho=\rho(m,m_*)$ such that 
+(1) has a solution where the $g$-functions satisfy
+
+\[
+|g_\nu(z(|\leq C\cdot (1-|z|)^{-\rho}
+\]
+for some constant $C$.
+It appears that
+the best constant $\rho$ is not known.
+However,  upper bounds for $\rho$ can be established using
+$L^2$-estimates for the $\bar\partial$-equation.
+But there remains
+to investigate how sharp such bounds are.
+
+
+%\end{document}
+
+
+
+
+
+
+

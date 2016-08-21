@@ -1,0 +1,1731 @@
+%\documentclass{amsart}
+
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+%\def\uuu{_}
+
+%\def\vvv{-}
+
+
+
+
+
+
+%\begin{document}
+
+\centerline{\bf\large{8. Series and analytic functions.}}
+
+\bigskip
+
+\centerline{\emph{Contents}}
+
+\bigskip
+
+
+\noindent
+\emph{1. A theorem by Kronecker.}
+\bigskip
+
+
+\noindent
+\emph{2. Newton polynomials and the disc algebra.}
+
+\bigskip
+\noindent
+
+\noindent
+\emph{3. Absolutely convergent Fourier series.}
+
+\bigskip
+
+
+
+\noindent
+\emph{4. Harald Bohr's inequality}
+\bigskip
+
+
+\noindent
+\emph{5. Theorem of Fatou and M. Riesz}
+
+
+\bigskip
+
+\noindent
+\emph{6. On Laplace transforms}
+\bigskip
+
+
+\noindent
+\emph{7. The Kepler equation and Lagrange series}
+
+\bigskip
+
+\noindent
+\emph{8. An example by Bernstein}
+
+
+\bigskip
+
+\noindent
+\emph{9. Almost periodic functions and additive number theory}
+
+
+
+\bigskip
+
+
+
+
+
+
+
+\centerline{\bf 1. A theorem by Kronecker.}
+
+\bigskip
+
+\noindent
+{\bf Introduction.} We seek
+necessary and sufficient condition in order
+that a sequence
+$c_0,c_1,c_2,\ldots$ of complex numbers yield the coefficients in
+the Taylor series at the origin of a rational function, i.e. that
+\[ 
+\sum\, c_\nu z^\nu=\frac{a_0+a_1z+\ldots+a_mz^m}
+{b_0+b_1z+\ldots+b_nz^n}
+\quad\text{where}\,\, b_0\neq 0\,,\tag{*}
+\]
+Here
+$A(z)= a_0+a_1z+\ldots+a_mz^m$
+and $B(z)=b_0+b_1z+\ldots+b_nz^n$ are polynomials and we
+say that
+$\{c_\nu\}$is of \emph{rational type} when
+(*) holds.
+A necessary condition for $\{c\uuu\nu\}$
+to be of rational type follows via euclidian  division.
+Namely, let $f(z)=\sum\, c\uuu\nu z^\nu$
+and expand the product $f(z)\cdot B(z)$
+into a power series. For each integer $M\geq n$
+the coefficient of $z^M$ becomes
+\[
+c_{M\vvv n} b_n+c_{M\vvv n +1}b_{n-1}+\ldots+c_M\cdot b_0=0\tag{1}
+\]
+When (*) holds it follows that (1) is zero for every
+$M\geq m+1$.
+It means precisely that if $\lambda$ is an integer which is
+$\geq\text{max}(0, n\vvv m+1)$
+then
+\[
+c\uuu\lambda b_n+c_{\lambda +1}b_{n-1}+\ldots+c_{\lambda+n}\cdot b_0=0\tag{2}
+\]
+Here $(b\uuu n,\ldots, b\uuu 0)$ 
+is a fixed non\vvv zero
+$(n+1)$\vvv vector and hence (2) implies that the vectors
+
+\[
+(c\uuu\lambda +k,\ldots,c\uuu{\lambda+n+k})\quad\colon\quad 0\leq k\leq n
+\]
+are linearly dependent which entails that the determinant of the
+following matrix must be zero:
+
+\[
+\begin{pmatrix}c_\lambda&\ldots&c_{\lambda+n}\\
+c_{\lambda+1}&\ldots&c_{\lambda+1+n}\\
+\\
+\\
+c_{\lambda+n}&\ldots&c_{\lambda+2n}\end{pmatrix}
+\]
+\medskip
+
+\noindent
+Kronecker proved that the vanishing of similar matrices
+also yields a sufficient condition in order that
+$\{c\uuu\nu\}$ is of rational type.
+More precisely, for each pair of  integers $\lambda\geq 0$
+and $\mu\geq 1$ we set
+
+\[
+C\uuu\lambda(\mu)=
+\text{det}\, 
+\begin{pmatrix}c_\lambda&\ldots&c_{\lambda+\mu}\\
+c_{\lambda+1}&\ldots&c_{\lambda+1+\mu}\\
+\\
+\\
+c_{\lambda+\mu}&\ldots&c_{\lambda+2\mu}\end{pmatrix}
+\]
+\bigskip
+
+
+
+
+
+
+
+
+\noindent
+{\bf 1.1  Theorem.} \emph{The sequence  $\{c_\nu\}$ is of rational type if 
+if 
+there exist a pair of integers $\lambda\uuu *\geq 0$ and
+$\mu\uuu *\geq 1$
+such that}
+
+\[
+C\uuu\lambda(\mu\uuu *)=0\quad
+\text{for all}\quad \lambda\geq \lambda\uuu *\tag{*}
+\]
+\bigskip
+
+\noindent
+\emph{Proof.}
+For each $\lambda\geq \lambda\uuu *$
+we
+consider the vectors
+\[ 
+\xi_\lambda=(c_\lambda,c_{\lambda+1}\ldots,c_{\lambda+\mu_*})\tag{i}
+\]
+If the family $\{\xi_\lambda\}_{\lambda\uuu *}^\infty$ span
+${\bf{C}}^{\mu_*+1}$ we find the smallest
+integer $w_*$
+for which there exist 
+\[
+\lambda\uuu *\leq w_0<\ldots<w_{\mu_*-1}<w_{\mu\uuu *}\quad\text{and}\quad 
+\xi_{w_0},\ldots,\xi_{w_{\mu_*-1}},\xi_{w_*}\quad
+\text{are linearly independent}
+\]
+
+\medskip
+
+\noindent
+But this gives a contradiction because the vectors
+$\{\xi\uuu{w\uuu *\vvv \mu\uuu *},\ldots,\xi\uuu {w\uuu *}\}$
+appear as row vectors in the matrix
+$C\uuu{w\uuu *\vvv \mu\uuu *}(\mu\uuu *)$
+whose determinant by hypothesis is zero because
+$w\uuu *\vvv \mu\uuu *\geq \lambda\uuu *$.
+
+
+
+
+Notice that  $w_*\geq M_*$ must hold and
+(ii) applied with $\lambda=w_*-M_*$
+implies that
+$\xi_{w_*}$ belongs to the linear  hull of the
+vectors
+$\xi_{w-1},\ldots,\xi_{w-M_*}$.
+But this contradicts the minimal choice of $w_*$.
+Hence the linear hull of the vectors $\{\xi_\lambda\}_0^\infty$
+must be a proper subspace of $\neq {\bf{C}}^{M_*+1}$.
+This gives a non-zero vector
+$(b_0,\ldots,b_{M_*})$
+such that
+
+\[
+c_\lambda\cdot b_0+\ldots+c_{\lambda+M_*}\cdot b_{M_*}=0
+\quad\text{for all}\,\,\lambda\geq 0\,.\tag{iv}
+\]
+But these relations obviously imply that 
+the sequence $\{c_\nu\}$ is of rational type and Kronecker's theorem is proved.
+\bigskip
+
+
+\medskip
+
+
+
+
+
+\noindent
+\emph{Sublemma.}
+\emph{For each $\mu\geq 2$ and every $\lambda\geq 0$
+one has the equality}
+\[ 
+C_\lambda(\mu)\cdot C_{\lambda+2}(\mu)-
+C_\lambda(\mu+1)\cdot
+C_{\lambda+2}(\mu+1)=C_{\lambda+1}(\mu)\cdot 
+C_{\lambda+1}(\mu)\,.
+\]
+
+
+\noindent
+\emph{Proof continued.}
+Notice that the Kronecker matrix 
+$\mathcal K_M=\mathcal C_0(M)$.
+Assume that there exists $M_*$ such that
+\[
+\text{det}\,\mathcal K_M=0\quad\text{for all}\,\,M\geq M_*\tag{i}
+\]
+With the notations above (i) means that
+$C_0(\nu)=0$ when
+$\nu\geq M_*$.
+With $\lambda=0$ in the Sublemma  we conclude that
+$C_1(\nu)=0$ for all $\nu\geq M_*$. We can  proceed by an induction
+over $\lambda$  which gives:
+
+\[ 
+C_\lambda(M_*)=0\quad\text{for all}\,\,\lambda\geq 0\,.\tag{ii}
+\]
+
+Let us then consider the $M_*+1$-vectors
+\[ 
+\xi_\lambda=(c_\lambda,c_{\lambda+1}\ldots,c_{\lambda+M_*})\quad\colon\, \lambda=0,1,\ldots
+\]
+The vanishing of the determinants in (i)
+means that the $(M_*+1)$-tuple of vectors
+\[
+\xi_\lambda,\xi_{\lambda+1}\,\ldots,\xi_{\lambda+M_*}\tag{iii}
+\]
+are linearly dependent for every
+$\lambda\geq 0$.
+Suppose now that the family $\{\xi_\lambda\}_0^\infty$ span
+${\bf{C}}^{M_*+1}$.
+Choose the \emph{smallest} integer $w_*$
+for which there exist 
+\[
+0\leq w_0<\ldots<w_{M_*-1}<w_*\quad\text{and}\quad 
+\xi_{w_0},\ldots,\xi_{w_{M_*-1}},\xi_{w_*}\quad
+\text{are linearly independent}
+\]
+Notice that  $w_*\geq M_*$ must hold and
+(ii) applied with $\lambda=w_*-M_*$
+implies that
+$\xi_{w_*}$ belongs to the linear  hull of the
+vectors
+$\xi_{w-1},\ldots,\xi_{w-M_*}$.
+But this contradicts the minimal choice of $w_*$.
+Hence the linear hull of the vectors $\{\xi_\lambda\}_0^\infty$
+must be a proper subspace of $\neq {\bf{C}}^{M_*+1}$.
+This gives a non-zero vector
+$(b_0,\ldots,b_{M_*})$
+such that
+
+\[
+c_\lambda\cdot b_0+\ldots+c_{\lambda+M_*}\cdot b_{M_*}=0
+\quad\text{for all}\,\,\lambda\geq 0\,.\tag{iv}
+\]
+But these relations obviously imply that 
+the sequence $\{c_\nu\}$ is of rational type and Kronecker's theorem is proved.
+\bigskip
+
+\noindent
+{\bf Remark.}
+Kronecker's theorem can be used to establish 
+conditions in order that a meromorphic function
+is rational.
+One has for example the following result which is due to Polya in [Pol]:
+\medskip
+
+\noindent
+{\bf 1.2 Theorem.}
+\emph{Let $\{c_n\}$ be a sequence of integers.
+Suppose that the power series}
+\[
+f(z)=\sum\,c_n\cdot z^n
+\]
+\emph{converges in some open disc centered at the origin and that
+$f(z)$ extends to an analytic function in
+a simply connected domain $\Omega$.
+whose mapping radius with respect to $z=0$ is
+strictly greater than one Then
+$f(z)$ is a rational function.}
+\medskip
+
+\noindent
+{\bf{Remark.}} For the definition and various results about
+the \emph{mapping radius} of simply connected domains the
+reader may consult Chapter X in [Po-Szegö] where
+other results based upon
+Kronecker's theorem appear.
+
+
+\newpage
+
+
+
+\centerline {\bf {II. Newton polynomials and
+the disc algebra $A(D)$}}
+
+
+\bigskip
+
+
+\noindent
+{\bf Introduction.}
+Let  $A(D)$ be the disc algebra.
+If $f(z)\in A(D)$ then its
+Taylor series a $z=0$ give the partial sum polynomials
+$\{s_n^f(z)\}$.
+Denote by $A^ *(D)$
+the unit ball, i.e.
+funtions $f$ with maximum norm
+$|f|_D\leq 1$ and set
+\[
+\mathcal M_n=
+\max_{f\in A *(D)}\, \,|s^f_n|_D\tag{*}
+\]
+We are going to determine  these $\mathcal M$-numbers.
+In his   text-books from 1666, Isaac Newton
+studied  the funcion
+$\sqrt{1-z}$ whose
+series expansion becomes:
+\[
+\sqrt{1-z}= q_0+q_1z\ldots\quad\colon\,\quad
+q_n=\frac{1\cdot 3\dots(2n-1)}{ 2\cdot 4\cdots 2n}\tag{1}
+\]
+Notice that
+these positive coefficients decrease, i.e.
+\[ 
+1=q_0>q_1>q_2>\ldots\tag{2}
+\]
+To each $n\geq 1$ we get the Newton polynomial
+\[ 
+Q_n(z)= q_0+q_1z+\ldots+q_nz^n\tag{3}
+\]
+By (2)  and Kakeya's  result from XXX,
+$Q_n(z)$ has no zeros in the closed unit disc. Put
+\[
+\mathcal G_n=1+q_1^2+\ldots+q_n^2\tag{4}
+\]
+
+
+\medskip
+
+\noindent
+{\bf 1. Theorem.}
+\emph{For each integer $n\geq 1$ one has the equality
+$\mathcal M_n=\mathcal G_n$ and the maximum in (1) is attained by
+the $A^*(D)$-function}
+\[ 
+f^*_n(z)=\frac{z^n\cdot Q_n(\frac{1}{z})}{Q_n(z)}\tag{2}
+\]
+\medskip
+
+\noindent
+{\bf 2. Remark.}
+Using \emph{Stirling's formula} one can easily show that
+\[ 
+\lim_{n\to\infty}\,\frac{\mathcal G_n}{\log\,  n}=\frac{1}{\pi}
+\]
+\medskip
+
+
+\noindent
+Before Theorem 1 is proved we
+need some preliminary observations about
+partial sum functions.
+Let $f\in A_*(D)$.
+Cauchy's formula gives
+
+
+\[ 
+s^f_n(1)=\frac{1}{2\pi i}\cdot
+\int_{|z|=1}\,
+\frac{f(z)}{z^{n+1}}\cdot(1+z+\ldots+z^n)\cdot dz\quad\colon\, n=0,1,\ldots
+\tag {i}
+\]
+Since $\int_{|z|=1}\,f(z)z^kdz=0$ for every $k\geq 0$
+we see that if
+$Q(z)$ is any polynomial of the form
+\[
+ Q(z)=1+z+\ldots+z^n+q_{n+1}z^{n+1}+\ldots\implies\tag{ii}
+\]
+\[
+s^f_n(1)=\frac{1}{2\pi i}\cdot
+\int_{|z|=1}\,
+\frac{f(z)}{z^{n+1}}\cdot Q(z)\cdot dx\tag{iii}
+\]
+\medskip
+
+
+ 
+\noindent
+{\emph{ Proof of Theorem 1.}}
+For each  $n\geq 1$ 
+the squared Newton polynomial $Q_n^2(z)$ satisfies (ii) above.
+So if $f\in A*(D)$ we have
+\[ 
+s^f_n(1)=
+\frac{1}{2\pi i}\cdot
+\int_{|z|=1}\,
+\frac{f(z)}{z^{n+1}}\cdot Q\uuu n^2(z)\cdot dx\tag{iv}
+\]
+Since the maximum norm of $|f|_D\leq 1$,
+the triangle inequality gives:
+\[ 
+|s^f_n(1)| \leq\frac{1}{2\pi} \cdot\int_0^{2\pi}
+\bigl |Q\uuu n(e^{i\theta})\bigr |^2\cdot d\theta\tag{v}
+\]
+
+\noindent
+By  \emph{Parseval's formula}  the last integral is equal to $\mathcal G_n$.
+Hence (v) gives the inequality
+\[ 
+\mathcal M_n\leq\mathcal G_n\tag{vi}
+\]
+\medskip
+Next, with $n$ kept fixed we consider the function
+\[
+f^*(z)=\frac{z^n\cdot Q_n(\frac{1}{z})}{Q_n(z)}\implies\tag{vii}
+\]
+\[ 
+s^{f^*}_n(1)=
+\frac{1}{2\pi i}\cdot
+\int_{|z|=1}\,
+\frac{f^*_n(z)}{z^{n+1}}\cdot Q\uuu n^2(z)\cdot dx\tag{viii}
+\]
+where $\implies$ follows from (iii) above. Notice that
+\[
+\frac{f^*_n(z)}{z^{n+1}}\cdot Q^2(z)=\frac{1}{z}Q_n(z)\cdot
+Q_n(\frac{1}{z})\implies\tag{ix}
+\]
+\[ 
+s^{f^*}_n(1)=
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+Q_n(e^{i\theta})\cdot Q(e^{-i\theta})\cdot d\theta=
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\bigl |Q_n(e^{i\theta})\bigr |^2\cdot d\theta=\mathcal G_n\tag{5}
+\]
+Since $f^*\in A^ *(D)$
+we conclude that (vi) above is an equality and Theorem 1 is proved.
+
+
+
+
+\bigskip
+
+\centerline{\bf 3. Convergence of  Fourier series}
+
+\bigskip
+
+\noindent
+Let $f(z)=\sum\, c_nz^n$ be in the disc algebra $A(D)$.
+With $c_n=a_n+ib_n$ and $f=u+iv$
+we get  series for the real and the imaginary part respectively:
+\[ 
+u(e^{i\theta})=
+\sum_{n=0}^{n=N}\, a_n\cdot\text{cos}\, n\theta-
+\sum_{n=0}^N\,  b_n\cdot\text{sin}\, n\theta
+\]
+\[ 
+v(e^{i\theta})=\sum_{n=-N}^{n=N}\, a_n\cdot\text{sin}\, n\theta+
+\sum_{n=-N}^N\,  b_n\cdot\text{cos}\, n\theta
+\]
+
+
+\noindent
+Continuous boundary values of $f$  certainly exist if
+\[ 
+\sum\,|a_n|+|b_n|<\infty\tag{*}
+\]
+
+
+\noindent
+We shall give a sufficient condition for the validity of
+(*) expressed by the modulos of continuity of
+$u$:
+\[
+\omega_u(\delta)=\max\,|u(e^{i\theta})-u(e^{i\phi})|\quad\colon
+\,\,\text{maximum over pairs}\,\,\,\,|\theta-\phi|\leq\delta
+\]
+
+
+
+\noindent
+{\bf 1. Theorem.} \emph{The series (*) is convergent if}
+\[
+\sum_{n=1}^\infty\, \frac{1}{\sqrt{n}}\cdot\omega_u(\frac{1}{n})<\infty
+\]
+\medskip
+
+
+\noindent
+Theorem 1 is due to S. Bernstein in [1].
+One may ask for other convergence criteria.
+Denote by
+$\mathcal F$ the class of continuous functions
+$F(s)$  defined for $s\geq 0$ which are
+increasing and concave and $F(0)=0$ while $F(s)>0$ for
+every $s>0$. Then  the following result 
+is in 
+[Salem: P. 39]:
+\medskip
+
+
+\noindent
+{\bf 2. Theorem.}
+\emph{Let $F\in \mathcal F$ be such that}
+\[ \sum_{n=1}^\infty\, F\bigl (\frac{1}{n}\cdot\omega_u^2(\frac{1}{n})\,\bigr )
+<\infty\tag{*}
+\]
+\emph{Then it follows that}
+\[
+\sum_{n=1}^\infty\, F(a_n^2+b_n^2)<\infty\tag{**}
+\]
+
+
+
+\medskip
+
+\noindent
+Notice that Bernstein's theorem is the case
+$F(s)=\sqrt{s}$.
+The proof of Theorem 2 relies upon a
+result due to La Vallée Poussin who established a
+{\emph{lower bound} for the
+modulus of continuity.
+Recall first the general $L^2$-equality:
+\[ 
+2a^2_0+\sum_{n\geq 1}\,a_n^2+b_n^2=\frac{1}{\pi}\int_0^{2\pi}\, u(e^{i\theta})^2
+\cdot d\theta\tag{*}
+\]
+Now we consider the tail sums
+\[
+V_N=\sum_{n=N+1}^\infty\, (a_n^2+b_n^2)
+\]
+
+\medskip
+
+
+\noindent
+{\bf  3. Theorem.}
+\emph{For every real valued and continuous function $u$ on the unit circle one has}
+\[ 
+\omega_u^2(\frac{1}{N})>\frac{1}{72}\cdot V_N
+\quad\colon\quad N=1,2,\ldots
+\]
+
+\medskip
+
+\noindent
+{\bf Remark.} See 
+Vallée Poussin's   text-book
+\emph{Lecons sur l'approximation des fonctions
+d'une variable réelle}  for the proof.
+
+
+\bigskip
+
+\noindent
+\emph{Proof of Theorem 2.}
+Put $\rho_n^2=a_n^2+b_n^2$.
+Since $F(s)$ is concave and increasing we have for every $N\geq 1$:
+\[
+\frac{1}{N}\sum_{n=N+1}^{n=2N}\,
+F(\rho_n^2)\leq F(\frac{1}{N}\sum_{n=N+1}^{n=2N}\rho_n^2)
+< 72\cdot F\bigl (\frac{1}{N} \omega^2(\frac{1}{N})\bigr )\tag{i}
+\]
+where the last inequality follows from Theorem 3 above.
+Apply (i) with $N=2^k$ as $k=0,1,\ldots$.
+Then (i) obviously gives the implication:
+\[
+\sum_{k=0}^\infty
+2^k\cdot F\bigl (2^{-k}\cdot  \omega^2(2^{-k})\bigr )<\infty\implies
+\sum_{n=1}^\infty\, F(\rho_n^2)<\infty\tag{ii}
+\]
+Now we are almost done. Namely, 
+the sequence $2^{-k}\cdot  \omega^2(2^{-k})$ decreases with $k$
+and since  $F$ increases we have
+\[
+\sum_{n=2^{k-1}+1}^{2^k}
+F(\frac{1}{n}\omega^2(\frac{1}{n}))\geq
+2^k\cdot F(2^{-k}\cdot \omega^2(2^{-k}))\quad\colon\,\,k=1,2,\ldots
+\]
+Hence Salem's convergence condition (*)
+in Theorem 2 gives 
+(ii) above and the proof is finished.
+
+
+
+\bigskip
+
+
+\centerline
+{\bf  4. Harald Bohr's inequality.}
+\bigskip
+
+\noindent
+Let $A^*(D)$ be the unit ball in $A(D)$.
+When $f\in A^*(D)$ and  $0<r<1$ we set
+\[
+\mathfrak M_f(r)=\sum\, |a_n|r^n\tag{*}
+\]
+The question arises for which $r$ it holds that
+\[
+\mathfrak M_f(r)\leq 1\quad\colon\,\forall\, f\in A^*(D)\tag{**}
+\]
+
+
+\noindent
+{\bf 1. Theorem.} \emph{One has (**) if and only if $r\leq \frac{1}{3}$.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+Given $f$ in $A_*(D)$ we set
+\[ 
+\phi(z)=\frac{f(z)-a_0}{1-\bar a_0\cdot f(z)}\tag{i}
+\]
+Then the maximum norm 
+$|\phi|_D\leq 1$ and its
+derivative at $z=0$ becomes
+\[
+\phi'(0)=\frac{f'(0)}{1-|a_0|^2}\tag{ii}
+\]
+Since $g(0)=0$ we have $|g'(0)|\leq 1$
+by the inequality of Schwarz.
+It follows that
+\[ 
+|a_1|\leq (1-|a_0|^2)
+\leq
+2\cdot [1-|a_0|)\tag{iii}
+\]
+where the last inequality holds since
+$1+|a_0|\leq 2$.
+Next, put  
+$\rho= e^{2\pi i/n}$ for every  $n\geq 2$
+and regard the function
+\[
+F_n(z)=\frac{f(z)+f(\rho z)+\ldots+f(\rho^{n-1}z)}{n}\tag{*}
+\]
+
+
+\noindent
+Since $1+1+\rho^\nu+\ldots+\rho^{\nu(n-1)}=0$
+whenever $\nu$ is not a multiple of $n$ we conclude that
+\[
+F_n(z)=
+a_0+a_nz^n+a_{2n}z^{2n}+\ldots\tag{**}
+\]
+
+
+\noindent
+Notice that the maximum norm
+$|F_n(z)|_D\leq 1$. 
+Now we regard the
+analytic function
+
+\[ 
+g(z)=a_0+a_n z+a_{2n}z^{2}+\ldots
+\]
+\medskip
+
+\noindent
+Since $|F_n(z)|_D\leq 1$ it is clear that we also have
+$|g|_D\leq 1$.
+Then (*) applied to $g$ gives
+\[
+|a_n|\leq 2(1-|a_0|)\quad\colon\, n\geq 1\tag{***}
+\]
+Armed with this  we  can finish
+the proof of Theorem 1.
+First we show
+\bigskip
+
+\noindent
+{\bf 2. The inequality $\mathfrak {M}_f(\frac{1}{3})\leq 1$}.
+From (***) we obtain
+
+\[ 
+\mathfrak {M}_f(\frac{1}{3})=|a_0|+\sum_{n=1}^\infty\, 3^{-n}|\cdot|a_n|\leq
+|a_0|+\sum_{n=1}^\infty\,3^{-n}\cdot 2(1-|a_0|)=1
+\]
+\medskip
+
+\noindent
+There remains to prove that the upper bound
+$\frac{1}{3}$ is sharp in Theorem 1.
+To see this we take a real number
+$0<a<1$ and consider the Möbius function
+\[ 
+f(z)=\frac{z-a}{1-az}=
+-a+(1-a^2)z+(a-a^2)z^2+(a^2-a^3)z^3+\ldots\implies
+\]
+\[ 
+\mathfrak {M}_f(r)=
++(1-a^2)r+(a-a^2)r? 2+\ldots=a+\frac{(1-a^2)r}{1-ar}
+\]
+\medskip
+
+\noindent
+The last term is $\leq 1$  if and only if
+\[
+a(1-ar)+(1-a^2)r\leq 1-ar\implies
+(1+a-2a^2)r\leq 1-a
+\]
+With $a=1-s$ and $s>0$ small this gives
+\[
+s+2s-2s^2)r\leq s\implies r\leq\frac{1}{3}+2s
+\]
+Since $s$ can be arbitrary small the upper bound
+$\frac{1}{3}$ in Theorem 1 is best possible.
+
+
+
+\bigskip
+
+
+\centerline{\bf 5. A theorem by  Fatou and M. Riesz.}
+\bigskip
+
+\noindent
+{\bf Introduction.} We prove a result 
+due to Fatou and M. Riesz. See
+the 
+article [M. Rie] from  1911.
+Let
+\[ 
+f(z)=\sum\, c_nz^n\tag{1}
+\]
+be an analytic function in  the open unit disc.
+We shall consider the situation
+when
+$f$ extends analytically along some arc of the unit circle.
+For example, the analytic function  $\frac{1}{1-z}$ extends 
+analytically outside
+the boundary point $z=1$ and
+the series
+\[ 
+\sum\, e^{in\theta}
+\]
+converges for all $0<\theta<2\pi$.
+Let us now consider
+some $f\in\mathcal O(D)$  for which
+there exists some $0<\theta^*<\pi/2$ such that
+$f$ extends to an analytic function in  the union of
+$D$ and the sector
+\[ 
+S=
+\{ z=re^{i\theta}\quad\colon\, 1\leq r<R\quad\colon
+-\theta^*<\theta< \theta^*\}\tag{ii}
+\]
+Moreover, we suppose that
+$f$ extends to a continuous function
+on the closed union of $D\cup S$. See figure XXX.
+With these notations one has
+
+\bigskip
+
+\noindent
+{\bf 1. Theorem.}
+\emph{Assume that $c_n\to 0$. Then the 
+partial sums $\{s_n(e^{i\theta})\}$
+converge uniformly to $f(e^{i\theta})$
+one every compact  interval of $(-\theta^*,\theta^*)$.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+To each $n\geq 1$ we consider the function
+\[ 
+g_n(z)=\frac{f(z)-(c_0+c_1z+\ldots+c_nz^n)}
+{z^{n+1}}\cdot
+(z+e^{i\theta^*})(
+(z-e^{i\theta^*})\tag{i}
+\]
+\medskip
+
+\noindent
+This is an analytic function in the domain $D\cup S$. Consider a
+closed  circular interval $\ell=[-\theta_*\leq\theta\leq\theta_*]$
+for some $0<\theta_*<\theta^*$.
+It appears as a compact subset of $S\,\cup D$ and
+it is clear that
+the required uniform convergence of $\{s_n\}$ holds
+on $\ell$
+if
+the $g$-functions converge uniformly to zero on $\ell$,. In fact, this
+follows since
+the absolute values  
+
+\[
+|(z+e^{i\theta^*}|\cdot 
+|z-e^{i\theta^*}|\geq (\theta^*-\theta_*)^2\quad\colon\quad z\in\ell
+\]
+To prove that the maximum norms $|g_n|_\ell\to 0$ it suffices by the 
+maximum principle for analytic
+functions to show that
+$g_n$ converges uniformly to zero on
+the boundary of the sector $S$ which by the construction contains
+$\ell$.
+Here $\partial S$ contains  the outer circular arc
+\[
+\Gamma=\{ Re^{\i\theta}\quad\colon\, 
+\-\theta_*\leq\theta\leq\theta_*\tag{i}
+\]
+In addition $\partial S$ contains  two rays. Let us regard the two pieces
+of
+$\partial S$ given by
+\[
+\Gamma_*=\{ z=re^{i\theta^*}\,\colon\, 0\leq r\leq 1\}\quad\colon
+\quad\Gamma^*=
+\{ z=re^{i\theta^*}\,\colon\, 1\leq r\leq R\}\tag{ii}
+\]
+
+
+\noindent
+There remains to estimate the maximum norms of $g_n$
+over each of these pieces of $\partial S$. Of course, in addition to
+(ii) we have the contribution when
+$z=re^{-i\theta^*}$ but by symmetry the subsequent estimates 
+are valid here too. Before we establish the required estimates we introduce
+a notation. To each integer $m\geq 1$ we set:
+\[
+A_m=M+|c_0|+|c_1|\cdot R+\ldots+
+|c_m|\cdot R^m\quad\colon\,\epsilon_m=\max_{\nu>m}\, |c_\nu|
+\tag{1}
+\]
+
+\noindent
+By hypothesis we have
+\[ 
+\lim_{m\to\infty}\,\epsilon_m=0\tag{2}
+\]
+
+\medskip
+
+\noindent
+{\bf 2. The estimate of $|g_n|_\Gamma$.}
+By assumption $f$ extends continuously to the closure of
+$S$ so the maximum norm
+$|f|_S =M$ is finite. 
+If $z\in\Gamma$ we have $|z|=R$ and the triangle inequality
+gives for each pair $1\leq M<N$:
+\medskip
+
+\[
+\bigl|f(z)-(c_0+c_1z+\ldots+c_nz^n)\bigr|\leq
+A_m+\epsilon_m(R^{m+1}+\ldots+R^n)\leq 
+A_m+\epsilon_m\cdot
+\frac{R^{n+1}}{R-1}\tag{i}
+\]
+\medskip
+
+\noindent
+With the constant
+\[
+K=\max_{z\in\Gamma}\, |z-e^{i\theta^*}|\cdot |z+e^{i\theta^*}|
+\] 
+we therefore obtain
+\[ |g_n|_\Gamma\leq
+\frac{K}{R^{n+1}}\cdot \bigl(A_m+\epsilon_m\cdot
+\frac{R^{n+1}}{R-1}\bigr)=\frac{K\cdot A_m}{R^{n+1}}+
+\frac{K\cdot\epsilon_m}{R_1}
+\tag{ii}
+\]
+If $\delta>0$ we use (2) above and find $m$ so that
+$\epsilon_m<\delta$. Once $m$ is fixed
+we use that $R>1$ and hence
+$\frac{K\cdot A_m}{R^{n+1}}<\delta$ if $n$ is large. Since 
+$\delta>0$ is arbitrary
+we conlcude that
+$|g_n|_\Gamma\to 0$ as required.
+\bigskip
+
+\noindent
+{\bf 3. Estimate of $|g_n|_{\Gamma^*}$}.
+With the same notations as above we  consider some
+$z=re^{i\theta^*}$ with $1<r<R$ and obtain:
+\[
+\bigl|f(z)-(c_0+c_1z+\ldots+c_nz^n)\bigr|\leq
+\]
+\[
+A_m+\epsilon_m(r^{m+1}+\ldots+r^n)\leq 
+A_m+\epsilon_m\cdot
+\frac{r^{n+1}}{r-1}\implies
+\]
+\[ 
+|g_n(re^{i\theta}|\leq
+\bigl(A_m+\epsilon_m\cdot
+\frac{r^{n+1}}{r-1}\bigr)
+\cdot\frac{1}{r^{n+1}}\cdot
+|re^{i\theta^*}-e^{i\theta^*}|\cdot 
+|re^{i\theta^*}-e^{-i\theta^*}|\tag{i}
+\]
+\medskip
+
+\noindent 
+Here
+$|re^{i\theta^*}-e^{i\theta^*}|=r-1$
+and $|re^{i\theta^*}-e^{-i\theta^*}|\leq 2R$ for all $1\leq r\leq R$.
+So with $K=(R^2-1)$ we see that (i) gives
+\[
+|g_n(re^{i\theta}|\leq\frac{K\cdot A_m}
+{r^{n+1}}\cdot(r-1)+
+R\cdot\epsilon_m\tag{ii}
+\]
+At this stage we use the  obvious inequality for $r>1$:
+\[
+\frac{r-1}{r^{n+1}}<\frac{r-1}{r^{n+1}-1}=\frac{1}{
+1+r+\ldots+r^n}<\frac{1}{n}\implies
+\]
+\[ 
+|g_n|_{\Gamma_*}\leq \frac{KA_m}{n}+2R\cdot\epsilon_m
+\]
+Since $\epsilon_m\to 0$ the reader concludes that
+$|g_n|_{\Gamma_*}\to 0$ as $n\to\infty$.
+\bigskip
+
+\noindent 
+{\bf Estimate of $|g_n|_{\Gamma_*}$}.
+With $x=re^{i\theta^*}$ and $0<r<1$ the triangle inequality gives
+\[
+\bigl|f(z)-(c_0+c_1z+\ldots+c_nz^n)\bigr|\leq
+|c_{n+1}
+|\cdot |z|^{n+1}+
+|c_{n+2}|\cdot |z|^{n+2}+\tag{i}
+\ldots
+\]
+Recall that
+$\epsilon_n=\max_{\nu>n}\, |c_\nu|$. Hence (i) is majorized by
+\[
+\epsilon_n \cdot\bigl( |z|^{n+1}+|z|^{n+2}+\ldots\bigr)
+=\epsilon_n \cdot 
+\frac{|z|^{n+1}}{1-|z|}
+\]
+Now $z=re^{i\theta^*}$ and we get as before with
+$K=\max|re^{i\theta^*}-e^{-i\theta^*}|$:
+\[
+|g_n(z)|\leq
+\frac {\epsilon_n \cdot 
+\frac{|z|^{n+1}}{1-|z|}}{|z|^{n-1}}\cdot (1-|z|)\cdot K=
+K\cdot \epsilon_n
+\]
+Again, since $\epsilon_m$ can be chosen arbitrary small
+we conclude that
+$|g_n|_{\Gamma_*}\to 0$ as $n\to\infty$. 
+This finishes the proof of the Theorem 1.
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf 6. On Laplace transforms.}
+\bigskip
+
+\noindent
+Let $f(t)$ be a bounded function defined on the
+real $t$-line.
+Consider its Laplace transform
+\[
+L(z)=\int_0^\infty\, f(t)e^{-zt}\cdot dt
+\]
+which is
+analytic in the open half-plane
+$\mathfrak{Re}\, z>0$.
+\emph{Assume} that there exists some open
+subset $\Omega$ of
+${\bf{C}}$ which contains the closed
+half-plane
+$\mathfrak{Re}\, z\geq 0$ such that $L(z)$ extends to an analytic
+function in $\Omega$.
+Under this assumption one has
+\medskip
+
+\noindent
+{\bf 1. Theorem.}
+\emph{There exists the limit}
+\[
+\lim_{T\to\infty}\, \int_0^T\, f(t)\cdot dt
+\]
+\emph{Moreover, the limit value is equal to $L(0)$ where $L$ under its analytic extension to
+$\Omega$ has been evaluated at $z=0$.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+To each $T>0$ we have the entire function
+\[ 
+L_T(z)=\int_0^T\, f(t)e^{-zt}\cdot dt\tag{i}
+\]
+Theorem 1 amounts to prove that
+\[ 
+\lim_{T\to\infty}\, L_T(0)=L(0)\tag{ii}
+\]
+
+
+\noindent
+To prove (ii) we consider  certain complex line integrals.
+If $R>0$ the assumption on $L$ gives some
+$\delta>0$ such that
+$\Omega$ contains
+the closed set given by the union
+of the half disc
+$\bar D_R^+=\bar D_R\cap\,\mathfrak{Re}\, z\geq 0$
+and the rectangle
+\[ 
+\square=\{x+iy\quad\colon\, -\delta\leq x\leq 0\quad\colon
+-R\leq y\leq R\}
+\]
+Let $\Gamma$ be the boundary
+of
+$\bar D_R^+\cup\,\square$ and
+introduce the function
+\[
+g(z)=
+\bigl[L(z)-L_T(z)\bigr ]\cdot(1+\frac{z^2}{R^2})\cdot \frac{e^{zT}}{z}\tag{iii}
+\]
+
+
+\noindent
+Here $g(z)$ is a meromorphic function in
+$\Omega$ with a simple pole at $z=0$
+whose residue is $L(0)-L_T(0)$.
+Hence residue calculus applied to $g$ and $\square$ gives:
+\[
+L(0)-L_T(0)=\frac{1}{2\pi i}\cdot
+\int_\Gamma\,g(z)\cdot dz\tag{iv}
+\]
+
+
+\noindent
+Put $B=\max_t\, |f(t)|$ which for every $T>0$ gives
+the inequality:
+\[ 
+|L(z)-L_T(z)|
+=\bigl|\int_T^\infty\, f(t)e^{-zt}dt\,\bigr |\leq 
+\]
+\[
+B\cdot\int_T^\infty\, \bigl| e^{-zT}\bigr |\cdot dt=
+B\cdot\int_T^\infty\,  e^{-\mathfrak{Re}\,z\cdot T}\cdot dt=B\cdot 
+\frac{e^{-\mathfrak{Re}(z)\dot T}}{
+\mathfrak{Re}(z)}\quad\colon\quad \mathfrak{Re}(z)>0\tag{v}
+\]
+\medskip
+
+\noindent
+Now we begin to estimate the line integral in (iv).
+Consider first the part of $\Gamma$ given by
+the half circle $\partial D_R^+$.
+Here we notice that
+\[
+|1+\frac{R^2e^{2i\theta}}{R^2}|=|1+e^{2i\theta}|=2\cdot\text{cos}\,\theta\tag{vi}
+\]
+Next, $\frac{dz}{z}= R\cdot d\theta$ holds during the integration on
+$\partial D_R^+$ and we also
+have
+\[
+\frac{1}{\mathfrak{Re}(R\cdot  e^{i\theta})}=\frac{1}{R\cdot\text{cos}\,\theta}
+\]
+Hence  (v) and (vi)  give
+\[ 
+\bigl|\int_{\partial D^+R}\, g(z)\cdot \frac{dz}{z}\bigr|
+\leq 2\cdot B\cdot \int_{-\pi/2}^{\pi/2}\,\frac{\text{cos}\,\theta}{
+R\cdot\text{cos}\,\theta}\cdot d\theta
+\leq 2\cdot B\cdot \frac{\pi}{R}\tag{*}
+\]
+
+
+\noindent
+There remains to estimate the integral over
+the part of $\Gamma$ which belongs to
+$\partial\square$.
+Here we simply perform estimates for the two functions
+$L(z)$ and $L_T(z)$ separately.
+First, since $L_T(z)$ is entire we can
+just as well integrate over the
+half-circle $D_R^-$ where
+$\mathfrak{Re}(z)<0$.
+We notice that
+\[
+|L_T(z)|\leq B\int_0^T\, e^{-\mathfrak{Re}\, z\cdot t}\cdot dt
+\leq B\cdot \frac{e^{-\mathfrak{Re}\, z\cdot T}}{\bigl|\mathfrak{Re}\, z\bigr|}
+\quad\colon\quad \mathfrak{Re}\, z<0
+\]
+Here $e^{-\mathfrak{Re}\, z\cdot T}$ is large when
+$z\in D_R^-$ but this factor is cancelled by
+the absolute value of $e^{zT}$ which appears in the $g$-function. Hence
+we obtain
+\[
+\bigl|\int_{D_R^-}\, L_T(z)\cdot(1+\frac{z^2}{R^2})
+\cdot e^{zT}\cdot \frac{dz}{z}\bigr|
+\leq
+B\cdot
+\int_{\pi/2}^{3\pi/2}\, \frac{\bigl|1+e^{2i\theta}\bigr|}{
+R\cdot\bigl|\text{cos}\,\theta\,\bigr |}\cdot d\theta\leq\frac {2\pi\cdot B}{R}\tag{**}
+\]
+
+
+\noindent
+Finally,  consider the line integral
+along $\Gamma\cap\partial\square$  where 
+the analytic function $L(z)$ appears. First we regard the line integral along 
+the vertical line where
+$\mathfrak{Re}(z)=-\delta$ whose
+absolute value becomes:
+\medskip
+
+\[
+\bigl|\int_R^R\, L(-\delta+iy)\cdot(1+\frac{(-\delta+iy)^2}{R^2})\cdot 
+e^{-\delta T}
+\cdot e^{iyT}\cdot  \frac{i\cdot dy}{(-\delta+iy}\bigr|\tag{vii}
+\]
+Notice that we have not imposed any growth condition
+Here 
+$e^{-\delta T}$ appears and at the same time
+$e^{iyT}$ has absolute value one. Hence (vii)
+is estimated by
+\[
+\max_{-R\leq y\leq R}\,
+\bigl |\frac{L(-\delta+iy)\cdot(1+\frac{(-\delta+iy)^2}{R^2})}{
+(-\delta+iy)}\bigr|\cdot 2R\cdot e^{-\delta T}=M^*(R)\cdot
+e^{-\delta T}\tag{***}
+\]
+where $M^*(R)$ depends on $R$ only.
+\medskip
+
+\noindent
+For the integrals on the two intervals  where
+$z=-s+iR$ and $z=-s-iR$ with $0\leq s\leq \delta$
+we also get a constant $M^{**}(R)$ which is independent of
+$T$ while the sum of absolute values of the line integrals over
+these two lines 
+is estimated by
+\[
+M^{**}(R)\cdot\int_0^\delta\, e^{-sT}\cdot ds=
+M^{**}(R)\cdot \frac{1-e^{-\delta T}}{T}\tag{****}
+\]
+
+
+\noindent
+Now the requested limit formula (ii) follows from the (*)-inequalities
+above.
+Namely, for a given
+$\epsilon>0$ we first choose $R$ so large
+that the sum of (*) and (**) is $\leq\epsilon/2$.
+With $R$ kept fixed we can then choose $T$ so large
+that (***) and (****) both are $\leq\epsilon/2$ which
+finishes the proof of Theorem 1.
+
+
+\bigskip
+
+
+\centerline{\bf 7. The
+Lagrange series and the Kepler equation}
+\bigskip
+
+\noindent
+Let $f(w)$ be an 
+analytic function of the complex variable $w$
+defined in some disc of radius $R$ centered at $w=0$. We assume that
+$f(0)=0$ and with another complex variable $z$
+we seek an analytic  function $w=w(z)$ such that
+\medskip
+
+\noindent
+\[ 
+w(z)= z\cdot f(w(z))\tag{*}
+\]
+We will use residue calculus and Rouche's theorem to
+find $w(z)$. Let 
+$z$ be fixed for a while and consider some
+$0<r<R$ such that
+\[
+\max_{|w|=r}\, |z\cdot f(w)|<r
+\]
+This means that the analytic function
+$g(w)= z\cdot f(w)$ has absolute value $<|w|$ on
+the circle $|w|=r$. Rouche's theorem implies that
+the analytic function $w-zf(w)$ has a unique simple zero in
+the disc
+$|w|<r$.
+Moreover, by the formula in XX this zero is given by
+\[
+w(z)=\frac{1}{2\pi i}\cdot\int_{|w|=r}
+\frac{1-zf'(w)}{w-zf(w)}\cdot w\cdot dw
+\]
+We can evaluate the integral using the series expansion
+\[
+\frac{1}{1-\frac{z^k\cdot f(w)^k}{w}}=
+1+\sum_{k=1}^\infty\frac{(zf(w))^k}{w^k}
+\]
+More precisely, we see that $w(z)$ becomes
+\[
+\frac{1}{2\pi i}\cdot\int_{|w|=r}\,\sum_{k=1}^\infty\,
+\frac{(z(f(w))^k}{w^k}- 
+\frac{1}{2\pi i}\cdot\int_{|w|=r}\,\sum_{k=2}^\infty\,
+\frac{z^k\cdot f'(w)\cdot f(w))^{k-1}}{w^{k-1}}
+\]
+\medskip
+
+\noindent
+If $k\geq 1$  residue calculus gives
+\[
+\frac{1}{2\pi i}\cdot\int_{|w|=r}\,
+\frac{(z(f(w))^k}{w^k}-\cdot dw=
+z^k\cdot 
+\frac{f^k)^{(k-1)}(0)}{(k-1)!}
+\]
+Similarly we find
+\[
+\frac{1}{2\pi i}\cdot\int_{|w|=r}\,\sum_{k=2}^\infty\,
+\frac{z^k\cdot f'(w)\cdot f(w))^{k-1}}{w^{k-1}}\cdot dw=
+z^k\cdot 
+ \frac{f'\cdot f)^{k-1})^{(k-2)}(0)}{(k-2)!}
+\]
+
+
+\noindent
+Next, notice the equality
+\[
+(f^k)^{(k-1)}(0)= k\cdot
+(f'\cdot f^{k-2})^{(k-2)}(0)
+\]
+
+
+\noindent
+Since $\frac{1}{(k-1)!}-
+\frac{1}{k\cdot (k-2)!}=\frac{1}{k !}$
+we conclude that
+one has the series formula:
+\[ 
+w(z)= \sum_{k=1}^\infty\, \frac{(f^k)^{(k-1)}(0)}{k!}\cdot z^k\tag{*}
+\]
+\medskip
+
+
+\noindent
+{\bf Radius of convergence.}
+The analytic function $w(z)$ has the expansion
+by the Lagrange series above.
+The determination of the radius of convergence depends on
+the given function $f(w)$.
+A \emph{lower bound} for the radius of convergence
+is found by the use of Rouche's theorem above. Assume for simplicity
+that $f(w)$ is an entire function. If $r>0$ is given
+we find the positive number $\rho(r)$ for which
+\[
+\rho(r)\cdot \max_{|w|=r}|f(w)|=r
+\]
+By (*) above and  Rouche's theorem we have seen
+that the Lagrange series converges in
+the disc $|z|<r$.
+Here we have a \emph{free choice} of $r$. But each
+time
+$r$ is chosen we must take into the account the maximum
+of $f(w)$ on $|w|=r$. More precisely, put
+\[
+M_f(r)=\max_{|w|=r}\, |f(w)|
+\]
+Then the discussion above gives
+\medskip
+
+\noindent
+{\bf Theorem.} \emph{The Lagrange series converges in the disc
+of the complex $z$-plane whose radius is}
+\[ 
+\rho^*=\max_r\,\frac{r}{M_f(r)}
+\]
+\medskip
+
+\noindent
+{\bf Example.}
+In his far reaching studies of 
+the motion of orbits of those planets which astronomers
+were able to 
+watch before 1600, 
+Kepler's work contains a study of   the equation
+\[
+\zeta=a+z\cdot\text{sin}\,\zeta\tag{*}
+\] 
+where $a>0$ is a real constant.
+We shall determine
+the series expansion of $\zeta(z)$.
+Notice that if $w=\zeta-a$ then
+(*) becomes
+\[
+w=z\cdot \text{sin}(w+a)
+\]
+So with the entire function $f(w)=\text{sin}(w+a)$ we encounter the
+general case above and conclude that
+the series becomes
+\[
+\zeta(z)=a+z\cdot\text{sin}\, a+\sum_{k=2}^\infty
+\frac{z^k}{k!}\cdot\frac{ d^{k-1}(\text{sin}^k\, a)}{da^{k-1}}
+\]
+\medskip
+
+\noindent
+{\bf Exercise.}
+Let $r>0$ and show that
+the series
+$\zeta(z)$ converges when
+\[ 
+|z|\cdot\frac{e^r+e^{-r}}{2r}<1\implies
+|z|<\frac{2r}{e^r+e^{-r}}
+\]
+and for $z$ in  this disc we get
+$|\zeta(z)|<r$.
+To obtain a largest possible disc we seek
+\[
+\max_r\, \frac{2}{e^r+e^{-r}}
+\]
+The reader is invited to calculate the maximum numerically
+and in this way find a \emph{lower bound} for the 
+radius of convergence of
+the Kepler series.
+In contrast to all "heroic computations" by Kepler carried out
+in the years 1600-1620 and the subsequent 
+refined studies of series expansions by Lagrange around
+1760 
+described above, today's student can use a computer to determine
+the radius of convergence numerically.
+This, it is an instructive exercise to determine numerically
+the radius of convergence of the Lagrange series for each
+real $a$. Here it is of course interesting to analyze hos
+the radius of convergence depends on $a$.
+
+
+\bigskip
+
+\centerline{\bf{8. An example by Bernstein.}}
+\medskip
+
+\noindent
+Let $n\geq 1$ and consider a polynomial $P(z)=a_0+\ldots+a_nz^n$ 
+of some degree  $n$. We have the equality
+\[ 
+\sum\, |a_n|^2=\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\bigl|P(e^{i\theta})\bigr |^2\cdot d\theta
+\]
+So if we consider the maximum norm over the unit disc $D$:
+\[ 
+||P||_D=\max_\theta\, |P(e^{i\theta})|
+\]
+then the Cauchy-Schwarz inequality gives
+\[
+\sum\, |a_k|\leq \sqrt{n+1}\cdot \sqrt{||P||_D}\tag{*}
+\]
+\medskip
+
+\noindent
+It turns out that (*) is sharp, i.e for arbitrary large $n$
+we can find a polynomial $P_n(z)$ such that
+\[
+\frac{\bigl(\sum\, |a_k|\bigr)^2}{ n+1}\simeq  ||P_n||_D\tag{**}
+\]
+
+
+\noindent
+The first example of this kind 
+comes from a construction by  S. Bernstein from 1914.
+He considered a prime number $p$ of the form $4\mu+1$.
+For each integer $1\leq k\leq p-1$
+there exists the Legendre symbol
+$\binom{k}{p}$which is +1 if $k$ is a quadratic remained to $p$
+and otherwise $-1$.
+Now we get the trigonometric cosine-polynomial
+\[ 
+B_p(\theta)= \frac{2}{p^{\frac{3}{2}}}\cdot \sum_{k=1}^{p-1}\,
+(p-k)\binom{k}{p}\cdot \text{cos}(k\theta)=\sum_{k=1}^{p-1}\, a_k^{[p)}\cdot
+\text{cos}(k\theta)
+\]
+Bernstein proved that
+\[ 
+\max_\theta |B_p(\theta)\leq 1\quad\text{and}\quad 
+\sum_{k=1}^{p-1}\, a_k^{[p)}=
+\frac{p-1}{\sqrt{p}}
+\]
+\medskip
+
+\noindent
+With $n=4\mu$ we get the polynomial $Q_n(z)$ where
+
+\[
+\mathfrak{Re}(Q_n(e^{i\theta})=B_p(\theta)\quad\text{and}\quad
+\mathfrak{Im}(Q_n(0))=0
+\]
+The maximum norm for $\mathfrak{Im}(P(e^{i\theta})$
+is estimated above by the Exercise below.
+It follows that
+\[
+Q_n(z)= \sum_{k=1}^{p-1}\, a_k^{[p)}\cdot z^k\quad\text{and}\quad
+|Q_n|_D\leq C\cdot \text{log}\,p 
+\] 
+where $C$ is the absolute constant from
+Exercise XX below.
+So for this polynomial the left hand side in (**) becomes
+$\frac{(p-1)^2}{p^2}$ which is close to 1 when $p$ is large. At the same time
+$\text{log}\, p$ is considerably smaller than the degree $n=p-1$.
+So with
+\[ 
+P_n(z)= \frac{1}{|Q_n|_D}\cdot Q_n(z)
+\] 
+we get a polynomial whose maximum norm is one
+while the left hand side gets close to one as $p$ increases.
+\medskip
+
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Let 
+$u(\theta)=\sum_{k=0}^n
+\, a_k\cdot\text{cos}\,\theta+
+\sum_{k=1}^n
+\, b_k\cdot\text{sin}\,\theta$ 
+be a trigonometric polynomial of degree $n$
+where $\{a_k\}$ and $\{b_k\}$ are real.
+The conjugate trigonometric polynomial is defined by
+\[
+ v(\theta)=\sum_{k=1}^n \, \bigl[-b_k\cdot\text{cos}\,\theta+
+a_k\cdot\text{sin}\,\theta\bigr]
+\] 
+Show the integral formula 
+
+
+\[
+v(\phi)=\frac{1}{\pi}\cdot \int_0^{2\pi}\,
+\frac {\text{sin}\,\frac{n(\phi-\theta)}{2}\cdot
+\text{sin}\,\frac{(n+1)(\phi-\theta)}{2}}{\text{sin}\,\frac{(\phi-\theta)}{2}}
+\cdot u(\theta)\cdot d\theta\tag{1}
+\]
+\medskip
+
+\noindent
+From (1) the reader should verify that if
+$M=\max_\theta\,|u(\theta)|$ then
+
+\[ |v(\phi)|\leq
+\frac{M}{\pi}\int_0^{2\pi}\, 
+\bigl|\frac {\text{sin}\,\frac{n(\phi-\theta)}{2}}{\text{sin}\,\frac{(\phi-\theta)}{2}}
+\bigr|\cdot d\theta
+\]
+\medskip
+
+\noindent
+Finally, show that there is an absolute constant $C$ such that
+\[
+\frac{1}{\pi}\cdot \int_0^{2\pi}\, \bigl|\frac {\text{sin}\,\frac{n(\phi-\theta)}{2}}{\text{sin}\,\frac{(\phi-\theta)}{2}}
+\bigr|\cdot d\theta\leq C\cdot \text{Log}\, n\quad\colon\quad n\geq 2
+\]
+Hence the maximum norm for the conjugate $v$-function satisfies
+
+\[
+\max_\theta\, |v(\theta)|\leq C\cdot \text{Log}\, n\cdot
+\max_\theta\, |u(\theta)|\tag{*}
+\]
+
+
+\noindent{
+\bf{Remark.}} The  inequality above was first demonstrated by Fekete
+in his article (Journal für mathematik 146).
+
+
+\newpage
+
+\centerline{\bf{9. Almost periodic functions and additive number theory.}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We expose  a result
+presented by Beurling at a seminar at Uppsala University in April 1948.
+Let $2\leq m\uuu 1<m\uuu 2<\ldots$ be a strictly increasing
+sequence
+of integers. Denote by $S$  the even set
+given by the union  of  $\{m\uuu\nu\}$  and 
+$\{\vvv m\uuu\nu\}$.
+Assume that the additive group generated by the integers in $S$ is equal to
+${\bf{Z}}$ which  means that the sequence $\{m\uuu\nu\}$
+has no common prime number $\geq 2$ as factor.
+Next, consider some non\vvv negative and even function
+$\phi$ defined on $S$. 
+By  hypothesis 
+every integer $n$ can be represented by a finite sum
+of integers from $S$ where repetitions are allowed. Hence we can 
+define the function $\mathfrak{p}\uuu\phi$ on ${\bf{Z}}$
+by
+\[
+\mathfrak{p}\uuu\phi(n)=\min \sum \,\phi(m\uuu \nu)\quad \text{such that}\quad
+n= \sum\, m\uuu\nu\tag{1}
+\] 
+where  the minimum is taken over
+finite subsets of $S$.
+It is obvious that
+this function is even and  subadditive:
+\[
+\mathfrak{p}\uuu\phi(n\uuu 1+n\uuu2)\leq
+\mathfrak{p}\uuu\phi(n\uuu 1)+\mathfrak{p}(n\uuu 2)
+\]
+\medskip
+
+
+\noindent
+In particular $\mathfrak{p}\uuu\phi(n)=0$ for all $n\neq 0$
+if and only if $\mathfrak{p}\uuu\phi(1)=0$ and 
+this vanishing holds if and only if for every
+$\delta>0$ there exists  a finite set
+$\{m\uuu\nu\}$ in $S$ such that
+\[
+\sum\, m\uuu \nu=1\quad\text{and}\quad 
+\sum\,\phi(m\uuu\nu)<\delta\tag{*}
+\]
+We seek conditions on $\phi$ in order that
+(*) holds, or equivalently that $\mathfrak{p}\uuu\phi(1)=0$.
+To get such a criterion Beurling restricted the attention to a class of
+$\phi$\vvv functions satisfying the following extra condition.
+An even  subset $W$ of ${\bf{Z}}$
+is called relatively  dense if
+the additive group generated by $W$ is equal to
+${\bf{Z}}$.
+
+\medskip
+
+\noindent
+{\bf{9.1 Definition.}}
+\emph{Given the even set $S$  above we denote by
+$\text{AP}(S)$ the set of even functions
+$\phi$ defined on $S$  such that for every $\epsilon >0$
+the set}
+\[
+S\uuu\epsilon(\phi)= \{m\in S\,\colon\, \phi(m)<\epsilon\}
+\]
+\emph{is relatively dense.}
+\medskip
+
+\noindent
+{\bf{The zig\vvv zag function $\rho(x)$.}}
+Before Theorem 9.2  is announced
+we introduce the periodic $\rho$\vvv function on the real $x$\vvv line
+where
+\[ 
+\rho(x)=|x|\quad\colon \vvv 1/2\leq x\leq 1/2
+\]
+and extended so that
+$\rho(x)=\rho(x+1)$ hold for
+every  $x$.
+\bigskip
+
+\noindent
+{\bf{9.2 Theorem.}}
+\emph{For each $\phi\in\text{AP}(S)$ the necessary and sufficient
+condition in order that (*) holds is that}
+\[ 
+\max\uuu {m\in S}\, \,\rho(\alpha m)\vvv \eta\cdot \phi(m)\geq 0\tag{**}
+\] 
+\emph{hold for all pairs $0<\alpha<1$ and $\eta>0$.}
+\bigskip
+
+\noindent
+Before we enter the proof
+we recall some facts about almost periodic functions.
+A bounded  complex\vvv valued
+function $f$ on ${\bf{Z}}$
+is almost periodic
+if there to every
+$\epsilon>0$ exists a relatively dense set $W$ such that
+\[
+ \max\uuu {n\in{\bf{Z}}}\, 
+|f(n+w)\vvv f(n)|<\epsilon\quad\text{for all}\quad w\in W
+\]
+From this it follows easily that there exists
+the mean\vvv value
+defined by
+\[ 
+\mathcal M(f)= \lim\uuu{b\vvv a\to+\infty}\,
+\frac{f(a)+f(a+1)+\ldots f(b)}{b\vvv a+1}
+\]
+\medskip
+
+\noindent
+Next, for each real number
+$\alpha$ the exponential function $E\uuu\alpha$
+defined by
+$E\uuu\alpha(n)= e^{2\pi i\alpha n}$
+is almost periodic on ${\bf{Z}}$.
+It follows that when $f$ is almost
+periodic then there exists the function
+\[
+\mathcal C\uuu f(\alpha)=
+\mathcal M(E\uuu\alpha\cdot f)
+\]
+A result due to Harald Bohr
+asserts that if  $f$ is almost periodic and $f(1)\neq 0$
+then the $\mathcal C\uuu f$\vvv function is not identically zero
+on $(0,1)$, i.e. there
+exists some $0<\alpha<1$ such that
+$\mathcal C\uuu f(\alpha)$. 
+For the  proof of Theorem 9.2  we shall alos need  the following:
+\medskip
+
+\noindent
+{\bf{9.3 Proposition}}
+\emph{If $\phi$ belongs to $\text{AP}(S)$ it follows that
+$\mathfrak{p}\uuu\phi$ is an almost periodic function on
+${\bf{Z}}$.}
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this assertion.
+
+\bigskip
+
+
+
+
+\noindent
+\emph{Proof of Theorem 9.2}
+Suppose first that
+$\mathfrak{p}\uuu\phi (1)\neq 0$ which means that (*)
+has no solution for small $\delta$. To show that
+the inequalitites
+(**) in Theorem 9.2 cannot hold for all pairs $\alpha.\eta$
+we proceed as follows: Since $\mathfrak{p}\uuu\phi$ by defintion 
+is periodic it is in particular almost periodic and by
+a  general formula  for $\mathcal M$\vvv functions
+attached to almost periodic functions we get for each integer $m\in S$:
+
+
+\[
+|e^{2\pi i\alpha m}\vvv 1|\cdot \mathcal C_{\mathfrak{p}_\phi}(\alpha)|
+\leq
+\max\uuu n\, |\mathfrak{p}\uuu\phi(n+m)\vvv p(n)\bigr|\leq
+\mathfrak{p}\uuu\phi (m)
+\]
+where the last inequality follows since  that $\mathfrak{p}\uuu\phi $ is subadditive.
+Introducing the sine\vvv function we get
+\[
+2\cdot |\sin (\pi \alpha m)|\cdot \mathcal C_{\mathfrak{p}_\phi}(\alpha)|\leq\mathfrak{p}\uuu\phi(m)
+\leq 
+\phi(m)\quad\colon\quad m\in S
+\]
+\medskip
+
+\noindent
+Since $\mathfrak{p}\uuu\phi (1)\neq 0$ is assumed
+we know from Bohr's theory  that there exists some
+$0<\alpha<1$ such that
+$\mathcal C_{\mathfrak{p}_\phi}(\alpha)\neq 0$.  
+At the same time the zig\vvv zag function
+satisfies:
+
+\[ 
+\rho(x)\leq \frac{\pi}{2}\cdot |\sin \pi\cdot x\,|
+\] 
+for every real $x$. Hence we get
+\[ 
+\rho(\alpha\cdot m)\cdot \mathcal C(\alpha)\leq \frac{4}{\pi}\phi(m)
+\]
+
+
+FINISH ....
+
+\newpage
+
+%\end{document}
+
+
+
+

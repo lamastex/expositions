@@ -1,0 +1,1083 @@
+
+
+
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+\centerline{\bf{0.5.5 Adjoint operators and closed extensions.}}
+\medskip
+
+
+\noindent
+Let $T$ be densely defined. 
+But for the monent we do not assune that it is closed.
+In the dual space $X^*$ we have   the family 
+of  vectors $y$ for which   there exists a constant
+$C(y)$ such that
+\[
+|y(Tx)|\leq C(y)\cdot ||x||\quad\colon x\in\mathcal D(T)\tag{i}
+\]
+It is clear that the set of such $y$-vectors is a subspace of $X^*$.
+Moreover, when (i) holds the density of $\mathcal D(T)$
+gives  a unique vector 
+$T^*(y)$ in $X^*$ 
+such that
+\[
+y(Tx)= T^*(y)(x)\quad\colon x\in\mathcal D(T)\tag{ii}
+\]
+One refers to $T^*$ as the adjoint operator of $T$ whose
+domain of definition is denoted by
+$\mathcal D(T^*)$.
+
+
+
+\noindent
+{\bf{Exercise.}}
+Show that the graph of $T^*$ is closed in
+$X^*\times X^*$.
+However,
+$\mathcal D^*(T)$
+is in general not a dense subspace of $X^*$.
+See ¤ xx for an example.
+
+
+
+\bigskip
+
+\noindent
+{\bf{ Closed extensions.}}
+There may exist  several closed operators $S$
+with the property that
+\[
+\Gamma(T)\subset \Gamma(S)
+\]
+When this holds
+we refer to
+$S$ as  a closed extension of $T$. Notice that
+the inclusion above is strict if and only if
+$\mathcal D(S)$ is strictly larger than
+$\mathcal D(T)$.
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Use the density of
+$\mathcal D(T)$ to show that 
+\[ 
+T^*= S^*
+\]
+hold for every closed extension $S$ of $T$.
+\medskip
+
+\noindent
+{\bf{The case when
+$\mathcal D(T^*)$ is dense.}}
+Let $T$ be densely defined and assume that its adjoint has a dense domain of definition.
+In this situation the following holds:
+
+
+\medskip
+
+
+
+
+\noindent
+{\bf{0.5.6 Theorem.}}
+\emph{If $\mathcal D(T^*)$ is dense then there exists
+a closed operator $\widehat{T}$ whose graph is the closure of
+$\Gamma(T)$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Consider the graph 
+ $\Gamma(T)$
+and let 
+$\{x_n\}$ and $\{\xi_n\}$
+be two sequences in $\mathcal D(T)$ which both converge to a point
+$p\in X$ while 
+$T(x_n)\to y_1$ and $T(\xi_n)\to y_2$ hold 
+for some pair $y_1,y_2$. We must rove that $y_1=y_2$.
+To achieve this we take some
+$x^*\in \mathcal D(T^*)$ which gives
+\[
+x^*(y_1)= \lim \,x^*(Tx_n)= \lim\,T^*(x^*)(x_n)= T^*(x^*)(p)
+\]
+In the same way we get $x^*(y_2)=T^*(x^*)(p)$. 
+Now the density of $\mathcal D(T^*)$ gives $y_1=y_2$
+which proves that
+the closure of $\Gamma(T)$ is a graphic subset of $X\times X$
+and gives the closed   operator $\widehat{T}$
+with 
+\[
+\Gamma(\widehat{T})=
+\overline{\Gamma(T)}
+\]
+\bigskip
+
+
+\noindent
+{\bf{ The case when $X$ is reflexive.}}
+Assume this and
+let $T$ be a densely defined and closed operator. Suppose in addition
+that $T^*$ also is  densely defined. 
+Now we can construct the adjoint of $T^*$ which is denoted by $T^{**}$.
+Since $X$ is reflexive it follows that $T^{**}$ is a 
+closed and densely  defined operator on $X$.
+If $x\in\mathcal D(T)$ and $y\in\mathcal D(T^*)$
+we have the vector $\widehat{x}\in X^{**}$
+and
+\[
+\widehat{x}(T^*(y))=T^*(y)(x)= y(T(x))
+\]
+From this it is clear that
+$\widehat{x}\in\mathcal D(T^{**})$
+and one has the equality
+\[
+T^{**}(\widehat{x})= T(x)
+\]
+Hence 
+the graph of $T$ is contained in that of $T^{**}$, i.e.
+$T^{**}$ is a closed extension of $T$.
+
+\bigskip
+
+\noindent
+{\bf{0.5.7 The spectrum of $T^*$.}}
+Let $X$ and $T$ be as above. Then
+one has the inclusion
+\[
+ \rho(T) \subset \rho(T^*)\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+By translations it suffices to show that if
+the origin belongs to $\rho(T)$ then it also belongs to
+$\rho(T^*)$. So now  the resolvent 
+$R_T(0)$ exists which means  that
+$T$ is surjective
+and there is a constant $c>0$ such that
+\[
+||x||\leq c^{-1}\cdot ||Tx||\quad\colon x\in\mathcal D(T)\tag{i}
+\]
+Consider some
+$y\in\mathcal D(T^*)$ of unit norm. Since $T$ is surjective
+we find 
+$x\in\mathcal D(T)$ with 
+$||Tx||=1$ and
+\[ 
+|y(Tx)|\geq 1/2\tag{ii}
+\]
+Now
+\[ 
+y(Tx)= T^*(y)(x)\tag{iii}
+\]
+and from (i) we have
+\[
+||x||\leq c^{-1}\cdot ||Tx||= c^{-1}\tag{iv}
+\]
+Then (ii) and (iv) entail that 
+\[ 
+||T^*(y)||\geq c/2
+\]
+This proves that
+\[ 
+||T^*(y)||\geq  c/2\cdot ||y||\quad\colon y\in\mathcal D(T^*)\tag{v}
+\]
+Hence the origin belongs to $\rho(T^*)$ if we prove that
+$T^*$ has a dense range.
+If the density  fails  there exists a non-zero linear functional
+$\xi\in X^{**}$ such that
+\[
+\xi(T^*(y))=0\quad\colon y\in\mathcal D(T^*)
+\]
+Since $X$ is reflexive we have $\xi=\mathfrak{i}_X(x)$ for some
+vector $x$ and obtain
+\[
+y(Tx)=0\quad\colon y\in\mathcal D(T^*)
+\]
+The density of $\mathcal D(T^*)$ gives $Tx=0$ which contradicts the hypothesis that
+$T$ is injective and (*) follows.
+\medskip
+
+\noindent
+{\bf{0.5.8 The case when $X$ is a Hilbert space.}}
+In this case we shall prove that
+when both $T$ and $T^*$ are closed and densely defined, then one has the equality
+\[
+\sigma(T)\subset\sigma(T^*)
+\]
+We refer to  ¤ xx for the proof.
+
+\bigskip
+
+
+
+
+
+
+\noindent
+{\bf{0.5.3 The case when resolvent operators are compact.}}
+Let $T$ be such that
+$R_T(\lambda_0)$ is a compact operator for some
+resolvent value. We assume of course that
+the Banach space $X$ is not finite dimensional.
+In ¤¤ we shall learn that the spectrum of a compact operator
+always contains zero and outside the origin the spectrum is a discrete set
+with a sole cluster point at the origin.
+From (0.5.1) it follows that
+$\sigma(T)$ is a discrete set in
+${\bf{C}}$, i.e. its intersection with
+every disc
+$\{|\lambda|\leq R\}$ is finite.
+\bigskip
+
+\noindent
+{\bf{0.5.4 Remark.}}
+In ¤ xx we shall learn that if $S$ is a compact operator
+then $S\circ  U$ and $U\circ S$ are compact for every bounded
+operator $U$.
+Applying  Neumann's equation (*) in (0.3)
+it follows  that
+if one resolvent operator
+$R_T(\lambda_0)$ is  compact, then all resolvents  of $T$ are compact.
+ 
+\bigskip
+
+
+
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{0.1 The class $\mathcal I(X)$.}}
+It consists
+of bounded linear operators
+$R$ on $X$ with the property that
+$R$ is injective and the range
+$R(X)$ is a dense subspace of $X$.
+We do not exclude the possibility that
+$R$ is surjective.
+Each such operator
+$R$ gives  a densely defined
+operator $T$ as follows:
+If $x\in R(X)$ the injectivity of $R$ gives a unique
+vector
+$\xi\in X$ such that
+$R(\xi)=x$ and we set
+\[
+T(x)=\xi\tag{i}
+\]
+It means that the composed operator $T\circ R=E$, where
+$E$ is the identity operator on $X$.
+Here the domain of defintion for $T$ is equal to the range $R(X)$ 
+and this dense subspace of $X$ is denoted by
+$\mathcal D(T)$. By construction we have
+\[ 
+R\circ T(x)=x\quad\colon x\in\mathcal D(T)
+\]
+Next, the bounded operator $R$ has a finite operator norm
+$||R||$ and (i) entails that
+\[
+||x|||\leq ||R||\cdot ||T(x)||\tag{ii}
+\]
+Thus, with $c= ||R||^{-1}$ one has
+\[
+||T(x)||\geq c\cdot ||x|||\quad\colon x\in\mathcal D(T)\tag{iii}
+\]
+\medskip
+
+\noindent
+{\bf{The graph $\Gamma(T)$}}.
+It is  the subset of $X\times X$ given by
+$\{(x,Tx)\,\colon x\in\mathcal D(T)\}$.
+The construction of $T$ gives
+\[
+\Gamma(T)=\{(Rx,x)\colon x\in X\}
+\]
+Since
+$R$ is a bounded inear operator it is clear  that
+the last set is closed in $X\times X$, i.e.
+$\Gamma(T)$ is closed which means
+that
+$T$ is a densely defined and closed
+linear operator on $X$.
+The inequality (iii) shows that $T$ is injective and
+since
+\[ 
+T(Rx))=x\quad\colon x\in X
+\]
+the range of $T$ is equal to $X$.
+\medskip
+
+
+\noindent
+{\bf{A converse result.}}
+Assume that $T$ is a densely defined and closed operator
+such that
+(iii) holds and in addition the range of $T$ is dense in $X$.
+It turns out that this gives the equality
+\[
+T(\mathcal D(T))=X\tag{1}
+\]
+For if $y\in X$ the density of the range  gives
+a sequence
+$\{x_n\}$ in $\mathcal D(T)$ such that
+\[
+\lim_{n\to \infty}\, ||T(x_n)-y||=0\tag{2}
+\]
+Now
+\[
+||x_n-x_m||\leq c^{-1}\cdot ||T(x_n)-T(x_m)||
+\] 
+and (2) entails that
+$\{T(x_n)\}$ is a Cauchy sequence. Since $X$ is a Banach space
+it follows that
+$\{x_n\}$ converges to a limit vector $x$.
+Now $\Gamma(T)$ is closed which implies that 
+$(x,y)$ belongs to the graph, i.e. $x\mathcal D(T)$ and $T(x)=y$
+which proves (1).
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Let $T$ be densely defined and closed where
+(iii) holds and $T(\mathcal D(T))=X$. 
+Show that there exists a unique bounded operator
+$R\in\mathcal I(X)$
+such that $T$ is the attached operator as in 0.1 above.
+
+\newpage
+
+
+
+
+
+\centerline
+{\bf{0.2 Spectra of densely defined operators.}}
+\medskip
+
+
+
+
+\noindent
+Let $T$ be a densely defined and closed linear operator.
+Each complex number
+$\lambda$ gives  the densely defined
+operator $\lambda\cdot E-T$.
+We say that
+$\lambda$ is a resolvent value of $T$
+if
+$\lambda\cdot E-T$ is surjective and there exists 
+a positive constant $c$ such that
+\[
+||\lambda\cdot x-T(x)||\geq c\cdot ||x||
+\]
+The set of resolvent values is denoted by
+$\rho(T)$. Its closed complement is called the spectrum of $T$ and we put
+\[
+\sigma(T)={\bf{C}}\setminus \rho(T)
+\]
+Each
+$\lambda\in\rho (T)$   gives a unique bounded operator
+$R_T(\lambda)\in\mathcal I(X)$ such that
+\[
+(\lambda\cdot E-T)\circ R_T(\lambda)(x)=x
+\] 
+Since $\mathcal D(T)= \mathcal D(\lambda\cdot E-T)$
+it follows that the range of $R_T(\lambda)$ is equal to $\mathcal D(T)$.
+\medskip
+
+
+\noindent
+{\bf{0.2.1 Definition.}}
+\emph{Tbe family
+$\{R_T(\lambda)\,\colon\,\lambda\in \rho(T)\}$
+are called Neumann's resolvents  of $T$.}
+
+\medskip
+
+\noindent
+{\bf{An example.}}
+Let $X$ be the Hilbert space $\ell^2$ whose vectors are  complex sequences
+$\{c_1,c_2,\ldots\}$ for which $\sum\ |c_n|^2<\infty$.
+We have  the dense subspace $\ell^2_*$ vectors such that
+$c_n\neq 0$ only occurs for finitely many integers $n$.
+If $\{\xi_n\}$ is an arbitrary sequence of complex numbers
+there exists the densely defined operator $T$ on $\ell^2$
+which
+sends every sequence  vector $\{c_n\}\in \ell_*^2$ to
+the vector $\{\xi_n\cdot c_n\}$.
+If $\lambda$ is a complex number 
+the reader may check that
+(i) holds in (0.0.1) if and only if
+there exists a  constant $C$ such that
+\[
+|\lambda-\xi_n|\geq C\quad\colon n=1,2,\ldots\tag{v}
+\]
+Thus, $\lambda\cdot E-T$ has a bounded left inverse if and ony if
+$\lambda$ belongs to the open complement of the closure of the
+set
+$\{\xi_n\}$ taken in the complex plane.
+Moreover,   if (v) holds then
+$R_T(\lambda)$ is the bounded
+linear operator on $\ell^2$
+which sends $\{c_n\}$ to 
+$\{\frac{1}{\lambda-\xi_n}\cdot c_n\}$.
+Since
+every closed subset of ${\bf{C}}$
+is equal to the closure of a denumerable set of points our
+construction  shows that the spectrum of a 
+densely defined
+operator $\sigma(T)$ can be an arbitrary closed set in
+${\bf{C}}$. 
+
+\medskip
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline {\bf{¤ 9. Neumann's  resolvent operators}}
+\medskip
+
+
+
+\noindent
+Throughout $X$ denotes a complex Banach space.
+ densely defined linear operator on $X$
+ isa liner map
+ \[ T\colon\mathcal D(T)\to X
+ \] 
+ where $\mathcal D(T)$ is a dense subspace of $X$, called the domain of definition for $T$.
+To each such $T$ we associate the graph
+\[ 
+\Gamma(T)= \{(x,Rx)\,\colon\, x\in \mathcal D(T)\}
+\]
+So $\Gamma(T)$ is a subspace of the product $X\times X$ and 
+if this graph is a closed subspace we say for brevity that
+$T$ is closed. From now on $T$ is densely defined and closed.
+Let $E$ be the identity operator on $X$. Then  each complex number
+$\lambda$ gives the  operator
+\[
+\lambda\cdot E-T
+\]
+whose domain of definition is equal to $\mathcal D(T)$.
+\medskip
+
+
+\noindent
+{\bf{Definition.}}
+\emph{A complex number $\lambda$ is called a resolvent value of $T$
+if there exists a constant $c>0$ such that}
+\[ 
+||\lambda\cdot x-Tx||\geq c\cdot ||x||\quad\colon\quad x\in\mathcal D(T)\tag{*}
+\]
+\emph{and in addition the range of $\lambda\cdot E-T$ is equal to $X$.}
+\medskip
+
+
+
+\noindent
+The set of resilient values is denoted by $\rho(T)$.
+There exist ugly operators for which
+$\rho(T)=\emptyset$. We shall ignore this car and assume that
+$T$ has at least one resolvent value.
+\medskip
+
+\noindent
+{\bf{The resolvent operator $R_T(\lambda)$.}}
+Let $\lambda\in \rho(T)$ be given.
+Sinc the range of $\lambda\cdot E-T$ is equal to $X$ we find for
+every $y\in X$ some $x(y)\in\mathcal D(T)$ such that
+\[ 
+\lambda\cdot x(y)-Tx(y)=y
+\]
+and here (*) entails that $x$ is unique and
+\[
+||x||\leq c^{-1}||y||
+\]
+Hence there exists a bounded liner operator $S$ on $X$ with operator norm
+$\leq c^{-1}$ such that
+\[ 
+Sy= x(y)
+\]
+We put $S=R_T(\lambda)$ and it is called Neumannn's resovlent operator
+of $T$ for at the given resolvent value $\lambda$.
+The construction shows that the range
+\[ 
+R_T(\lambda)(X)= \mathcal D(T)
+\]
+and passing to composed operators we have
+\[
+R\circ T(x)=x\,\colon\, x\in \mathcal D(T)\,\,\&\,\,
+T\circ R(x)=x\,\colon\, x\in X
+\]
+\medskip
+
+\centerline{\bf{0.3 Neumann's equation.}}
+
+\medskip
+
+
+\noindent
+Let $T$ as above be densely defined and closed where $\rho(T)$ is non-empty. Then one has:
+\medskip
+
+
+\noindent
+\emph{For each pair 
+$\lambda\neq\mu$  in $\rho(T)$ the operators 
+$R_T(\lambda)$ and $R_T(\mu)$ commute
+and}
+\[
+R_T(\mu)R_T(\lambda)=\frac{R_T(\mu)-R_T(\lambda)}{\lambda-\mu}\tag{*}
+\]
+
+
+\noindent
+\emph{Proof.}
+Notice that
+\[
+(\mu\cdot E-T)\cdot \frac{R_T(\mu)-R_T(\lambda)} {\lambda-\mu}
+=
+\]
+\[
+\frac{E}{\lambda-\mu}-(\mu-\lambda)\cdot\frac{R_T(\lambda)}{\lambda-\mu}-
+(\lambda\cdot E-T)\cdot \frac{R_T(\lambda)}{\lambda-\mu}=R_T(\lambda)\tag{i}
+\]
+Multiplying to the left by
+$R_T(\mu)$
+gives (*).
+
+
+\newpage
+
+
+\centerline {\bf{0.4 Neumann series.}}
+\medskip
+
+
+\noindent
+If  $\lambda_0\in\rho(T)$  we
+construct the operator valued series
+\[
+S(\zeta)= R_T(\lambda_0)+ \sum_{n=1}^\infty
+(-1)^n\cdot \zeta^n\cdot R_T(\lambda_0)^{n+1}\tag{1}
+\]
+where the series 
+converges in the Banach space of bounded linear operators when
+\[
+|\zeta|<\frac{1}{||R_T(\lambda_0)||}
+\]
+Next, one has 
+\[ 
+(\lambda_0+\zeta-T)\cdot S(\zeta)=
+(\lambda_0-T)\cdot S(\zeta)+\zeta S(\zeta)=
+\] 
+\[
+E+ \sum_{n=1}^\infty
+(-1)^n\cdot \zeta^n\cdot R_T(\lambda_0)^{n+1}+\zeta S(\zeta)
+\]
+and thanks to the alternating signs the last term is reduced to $E$.
+We conclude that
+\[
+S(\zeta)=R_T(\lambda_0+\zeta)
+\] 
+give resolvent operators. This the open disc of radius 
+$\frac{1}{||R_T(\lambda_0)||}$ centered at $\lambda_0$ stays in $\rho(T)$. Hence 
+the set of reovlent values for $T$ is open.
+Moreover, the
+ operator-valued  function
+\[
+\lambda\mapsto R_T(\lambda)
+\]
+is an
+analytic function in
+$\rho(T)$.
+For if  $\lambda\in \rho(T)$ we can pass to the limit as 
+$\mu\to \lambda$ in Neumann's equation
+and conclude that the complex derivative exists and is given by
+\[
+\frac{d}{d\lambda}(R_T(\lambda)=-R^2_T(\lambda)\tag{**}
+\]
+Thus, Neumann's resolvent operator satisfies a specific differential equation for
+every densely defined and closed operator $T$
+with a non-empty resolvent set.
+
+\medskip
+
+
+
+
+\centerline{\bf{0.5 The position of $\sigma(T)$.}}
+
+\medskip
+
+
+
+\noindent
+Assume that $\rho(T)\neq\emptyset$.
+For a pair of resolvent values of $T$ we
+can  write Neumann's equation in the form
+\[
+R_T(\lambda)(E+(\lambda-\mu)R_T(\mu))= R_T(\mu)\tag{1}
+\]
+Keeping $\mu$ fixed we conclude that
+$R_T(\lambda)$ exists if and only if
+$E+(\lambda-\mu)R_T(\mu))$ is invertible. This gives 
+the set-theoretic equality
+\[
+ \sigma(T)= \{\lambda\,\colon \frac{1}{\mu-\lambda}\in
+\sigma(R_T(\mu))\} \tag{0.5.1}
+ \]
+
+ 
+ \noindent
+Hence one  recovers $\sigma(T)$ via the spectrum of
+any given  resolvent operator. Notice that (0.5.1) holds  even
+when
+the open component
+of $\sigma(T)$ has several connected components.
+
+\medskip
+
+\noindent
+{\bf{0.5.2 Example.}}
+Suppose that $\mu=i$ and that 
+$\sigma(R_T(i))$ is contained in a circle
+$\{|\lambda+i/2|=1/2\}$.
+If $\lambda\in\sigma(T)$ the inclusion (0.0.5.1) gives some
+$0\leq\theta\leq 2\pi$ such that 
+\[
+\frac{1}{i-\lambda}=-i/2+ 1/2\cdot e^{i\theta}\implies
+1-i\cdot e^{i\theta}=\lambda(e^{i\theta}-i)
+\]
+The last equation entails that
+\[
+\lambda=\frac{2\cdot \cos \theta}{|e^{i\theta}-i|^2}
+\]
+and hence $\lambda$ is real.
+
+\newpage
+
+
+
+
+
+\centerline{\bf{0.6 Operational calculus.}}
+\medskip
+
+
+\noindent
+Let $T$ be a densely defined and closed operator on a Banach space $X$.
+To each pair $(\gamma,f)$ where
+$\gamma$ is a rectifiable Jordan
+arc contained in
+${\bf{C}}\setminus \sigma(T)$
+and $f\in C^0(\gamma)$, there exists the bounded linear operator
+\[ 
+T_{(\gamma,f)}=\int_\gamma\, f(z)R_T(z)\, dz\tag{0.6.1}
+\]
+The integral is calculated
+via a Riemann sum
+where the integrand has values in the Banach space of bounded
+linear operators on $X$. 
+More precisely, let $s\mapsto z(s)$ be a parametrisation with respec to
+arc-length. If $L$ is the arc-length of $\gamma$ we 
+get Riemann sums
+\[
+\sum_{k=0}^{k=N-1} \, f(z(s_k))\cdot (z(s_{k+1})-z(s_k))\cdot 
+(s_{k+1}-s_k)\cdot R_T(z(s_k))
+\]
+where $0=s_0<s_1<\ldots s_N=L$ is a partition of
+$[0,L]$.
+These Riemann sums converge
+to a limit when
+$\{\max\, (s_{k+1}-s_k\}\to 0$ with respect to the operator norm
+and give the $T$-operator in (0.6.1). The triangle inequality entails that
+\[
+T_{(\gamma,f)}\leq L\cdot |f|_\gamma\cdot \max_{z\in\gamma}\, ||R_T(z)||
+\]
+where $|f|_\gamma$ is the maximum norm of $f$ on $\gamma$..
+\medskip
+
+\noindent
+Neumann's equation in (0.3)
+entails that
+$R_T(z_1)$ and $R_T(z_2)$
+commute for all pairs $z_1,z_2$ on $\gamma$. It follows that
+if 
+$g$ is another function in
+ $C^0(\gamma)$
+then  the operators $T_{f,\gamma}$
+and $T_{g,\gamma}$
+commute. Moreover, for each $f\in C^0(\gamma)$
+the reader may verify that
+the closedeness of $T$
+implies that
+the range of
+$T_{f,\gamma}$ is contained in
+$\mathcal D(T)$ and one has
+\[
+T_{f,\gamma}\circ T(x)= T\circ T_{f,\gamma}(x)
+\quad\colon x\in \mathcal D(T)
+\]
+
+
+ 
+
+\medskip
+
+\noindent
+Next, let $\Omega$ be an open set of class $\mathcal D(C^1)$, i.e.
+$\partial\Omega$ is a finite union of
+closed differentiable Jordan curves. 
+When
+$\partial\Omega\,\cap \sigma(T)=\emptyset$
+we construct line integrals as in (0.6.1)
+for continuous functions on
+the boundary.
+Consider the algebra $\mathcal A(\Omega)$
+of analytic functions in
+$\Omega$ which extend to be continuous on the closure.
+Each $f\in \mathcal A(\Omega)$
+gives the operator
+\[ 
+T_f=
+\int_{\partial\Omega}\, f(z)R_T(z)\, dz\tag{0.6.2}
+\]
+\medskip
+
+\noindent
+{\bf{0.6.3 Theorem.}}
+\emph{The map $f\mapsto T_f$ is an algebra homomorphism from
+$\mathcal A(\Omega)$ into a commutative algebra of bounded
+linear operators on $X$ whose  image is  a commutative algebra of 
+bounded linear operators
+denoted by $T(\Omega)$.}
+
+\medskip
+
+\noindent
+{\emph{Proof.}}
+Let $f,g$ be a pair in $\mathcal A(\Omega)$.
+To show that
+$T_{gf}= T_f\circ T_g$
+we consider a slightly  smaller open
+set $\Omega_*$ which again is of class $\mathcal D(C^1)$
+and each of it  bounding Jordan curve is close to one 
+boundary curve in
+$\partial\Omega$ and $\Omega\setminus \Omega_*$ does not
+intersect $\sigma(T)$.
+By Cauchy's theorem we can shift the integration to
+$\partial\Omega_*$ and get
+\[
+T_g=
+\int_{\partial\Omega_*}\, g(z)R_T(z_*)\, dz_*\tag{i}
+\]
+where we use  $z_*$ to indicate that integration takes place
+along
+$\partial\Omega_*$. Now
+\[
+T_f\circ T_g=
+\iint_{\partial\Omega_*\times\partial\Omega}\, f(z)g(z_*)R_T(z)\circ
+R_T(z_*)\, dz_*dz\tag{ii}
+\]
+Neumann's equation
+(*) from  (0.0.3) entails that  the right hand side in
+(ii) becomes
+\[
+\iint_{\partial\Omega_*\times\partial\Omega}\, \frac{f(z)g(z_*)R_T(z_*)}{z-z_*}
+\, dz_*dz+
+\iint_{\partial\Omega_*\times\partial\Omega}\, \frac{f(z)g(z_*)R_T(z)}{z-z_*}
+\, dz_*dz=A+B
+\tag{iii}
+\]
+\medskip
+
+\noindent
+Here $A$ is  evaluated
+by first integrating with respect to $z$ and 
+Cauchy's theorem gives
+\[
+f(z_*)=\frac{1}{2\pi i}\cdot 
+\iint_{\partial\Omega }\frac{f(z)}{z-z_*}\quad\colon z_*\in\partial\Omega_*
+\, dz
+\]
+It follows that
+\[ 
+A=\frac{1}{2\pi i}\cdot
+\iint_{\partial\Omega_*\times\partial\Omega}\, f(z_*)g(z_*)R_T(z_*)\, dz_*
+=T_{fg}
+\]
+Next, $B$ is evaluated when we first integrate with respect to $z_*$. Here
+\[
+\iint_{\partial\Omega}\frac{g(z_*)}{z-z_*}\quad\colon z\in\partial\Omega
+\]
+which entails that $B=0$ and the theorem  follows.
+\medskip
+
+\centerline {\bf{0.7 Spectral gap sets.}}
+\medskip
+
+
+\noindent
+Let
+$K$ be a compact subset
+of $\sigma(T)$ 
+such that
+$\sigma(T)\setminus K$ is a closed
+set in ${\bf{C}}$.
+This implies that if $V$ is an open  neighborhood of $K$, then
+there exists a relatively compact subdomain
+$U\in \mathcal D(C^1)$ which contains
+$K$ as a compact subset.
+To every such domain $\Omega$ we can apply Theorem 0.0.6.3.
+If $U_*\subset U$ for a pair of such domains
+we can restrict functions in
+$\mathcal A(U)$ to $U_*$
+which  yields an algebra homomorphism
+\[
+\mathcal T(U)\to \mathcal T(U_*)
+\]
+Next, denote by
+$\mathcal O(K)$ the algebra of germs of analytic functions
+on $K$.
+So each $f\in \mathcal O(K)$ 
+comes from
+some analytic function in a domain $U$ as above.
+The resulting operator $T_U(f)$ depends on the germ $f$ only.
+In fact, this follows because if
+$f\in \mathcal A(U)$ and
+$U_*\subset U$ is a similar 
+$\mathcal D(C^1)$-domain which again contains
+$K$, then
+Cauchy's vanishing theorem from ¤ xxx is applied
+to $f(z)R_T(z)$ in $U\setminus \bar U_*$ and entails that
+\[
+\int_{\partial U_*}\, f(z)R_T(z)\, dz=
+\int_{\partial U}\, f(z)R_T(z)\, dz
+\]
+Hence there exists an algebra homorphism
+from $\mathcal O(K)$ into
+bounded linear operators on $X$
+whose image is denoted by $\mathcal T(K)$.
+The identity in $\mathcal T_K$
+is denoted
+by $E_K$ and called 
+the spectral projection operator
+attached to the compact set $K$ in
+$\sigma(T)$. By this construction one has
+\[
+E_K=\frac{1}{2\pi i}\cdot \int_{\partial U}\, z\cdot R_T(z)\, dz
+\] 
+for every open domain $U$ around $K$ as above.
+
+
+\medskip
+
+\noindent
+{\bf{0.0.6.4 The operator $T_K$.}} When $K$ is a compact spectral gap set of $T$
+we set
+\[
+ T_K=TE_K
+\]
+This   bounded linear operator is given
+by
+\[
+\frac{1}{2\pi i}\cdot \int_{\partial U}\, z\cdot R_T(z)\, dz
+\] 
+where $U$ is a domain as above containing $K$.
+\medskip
+
+\noindent
+{\bf{0.0.6.4.1}} \emph{Identify
+$T_K$ with a densely defined operator on
+the space $E_K(X)$. Then one has the equality}
+\[
+\sigma(T_K)=K
+\]
+\emph{Proof.}
+If $\lambda_0$ is outside $K$ we can choose
+$U$ so that $\lambda_0$ is outside $\bar U$
+and construct the operator
+\[
+S=\frac{1}{2\pi i}\cdot \int_{\partial U}\, \frac{1}{\lambda_0-z}\cdot R_T(z)\, dz
+\]
+The operational calculus gives
+\[
+S(\lambda_0 E_K-T)= E_K
+\]
+here $E_K$ is the identity operator on
+$E_K(X)$ which shows that
+$\sigma(T_K)\subset K$.
+
+
+\bigskip
+
+
+\noindent
+{\bf{0.0.6.5  Discrete spectra.}}
+Consider 
+a spectral set  reduced to a singleton set
+$\{\lambda_0\}$, i.e.
+$\lambda_0$ is an isolated point in
+$\sigma(T)$. The associated spectral projection is denoted by
+$E_T(\lambda_0)$ and
+expressed 
+\[
+E_T(\lambda_0)=
+\frac{1}{2\pi i}\cdot \int_{|\lambda-\lambda_0|=\epsilon}\,
+R(\lambda)\, d\lambda
+\]
+for all sufficiently small $\epsilon$.
+Now
+$R_T(\lambda)$ is an analytic function defined
+in some punctured disc
+$\{0<\lambda-\lambda_0|<\delta\}$
+with  a Laurent expansion
+\[
+R_T(\lambda)=\sum_{-\infty}^\infty\, 
+(\lambda-\lambda_0)^k\cdot B_k
+\]
+where $\{B_k\}$ are bounded linear operators
+obtained  by residue formulas:
+\[
+B_k= \frac{1}{2\pi i}\cdot
+\int_{|\lambda|=\epsilon}\,  
+\frac{R_T(\lambda)}{(\lambda-\lambda_0)^{k+1}}\, d\lambda
+\quad\colon\,\epsilon<\delta
+\]
+
+\noindent
+{\bf{Exercise.}}
+Show
+that
+$R_T(\lambda)$ is meromorphic, i.e. 
+$B_k=0$ hold when $k<<0$,
+if and only if there
+exists a constant $C$ and some integer $M\geq 0$ such that
+the operator norms satisfy
+\[
+||R_T(\lambda)||\leq C\cdot |\lambda-\lambda_0)^{-M}
+\]
+\medskip
+
+\noindent
+Suppose now that
+$R_T$ has a pole of some order $M\geq 1$ which gives
+an  expansion
+\[
+R_T(\lambda)=\sum_1^M\,
+\frac{B_{-k}}{(\lambda-\lambda_0)^k}+
+\sum_0^\infty\, 
+(\lambda-\lambda_0)^k\cdot B_k
+\]
+Here $B_{-1}=E_T(\lambda_0)$ and if $M\geq 2$
+the negative indexed operators satisfy
+\[
+B_{-k}= B_{-k}E_T(\lambda_0)\quad 2\leq k\leq M
+\]
+In the case of a simple pole, i.e.
+when $M=1$ the operational calculus gives
+\[
+(\lambda_0E-T)E_T(\lambda_0)=
+\lim_{\epsilon\to 0}
+\frac{1}{2\pi i}\cdot \int_{|\lambda-\lambda_0|=\epsilon}\,
+(\lambda_0-\lambda)R(\lambda)\, d\lambda=0
+\]
+which implies
+hat the range of the projection operator
+$E_T(\lambda_0)$ is equal to the kernel of
+$\lambda_0\cdot E-T$.
+\medskip
+
+\noindent
+{\bf{0.0.6.6 The case $M\geq 2$}}.
+Now one has 
+a
+a non-decreasing family of subspaces
+\[
+N_k(\lambda_0)= \{ x\colon (\lambda_0E-T)^k(x)=0\}
+\quad\colon 1\leq k\leq M
+\]
+
+
+\noindent
+Let us analyzie the special case
+when the range of 
+$E_T(\lambda_0)$ has   finite dimension.
+Here  the operator $T(\lambda_0)= TE_T(\lambda_0)$
+acts on this finite dimensional vector space 
+and the $B$-matrices with negative indices can be expressed 
+as in linear algebra via 
+a Jordan decomposition of $T(\lambda_0)$.
+More precisely Jordan blocks of size
+$>1$ may occur which
+occurs of the smallest positive integer $m$ such that
+\[
+(\lambda_0E-T)^m(x)= \quad\colon
+x\in E_T(\lambda_0)(X)
+\]
+is strictly larger than one.
+Moreover, $E-E_T(\lambda_0)$ is a projection operator
+and
+one has a direct sum decompostion
+\[
+X=E_T(\lambda_0)(X)\oplus E-E_T(\lambda_0)
+\]
+Here $V=E-E_T(\lambda_0)$ is a closed subspace of $X$
+which is invariant under $T$ and  there exists
+some $c>0$ such that
+\[
+||\lambda_0-Tx||\geq ||x||\quad x\in V\cap \mathcal D(T)
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In applications it is often an important issue to decide when
+$E_T(\lambda_0)$ has a finite dimensional range for
+an isolated point in $\sigma(T)$.
+The Kakutani-Yosida theorem 
+in ¤ 11.9 is an example where
+this finite dimensionality will
+be established for certain
+operators $T$.
+
+
+
+\end{document}
+

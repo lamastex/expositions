@@ -1,0 +1,1316 @@
+\documentclass{amsart}
+
+
+
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+\centerline{\bf\large{An automorphism on product measures}}
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+The main result is Theorem xx below which was proved by Beurling in
+[Beurling]. Before we introduce    measure theoretic
+notions  we
+insert comments from [Beurling] about 
+the  significance of Theorem XX.
+
+\medskip
+
+
+\noindent
+{\bf{Schršdinger equations.}}
+The article
+\emph{ThŽorie relativiste de l'electron et l'interprŽtation
+de la mŽcanique quantique} was published 1932 where
+Schršdinger raised a new and unorthodox question concerning Brownian motions
+leading to new mathematical problems of considerable interest.
+More precisely, consider a Brownian motion which takes place in a bounded
+region $\Omega$ of some euclidian space
+${\bf{R}}^d$ for some $d\geq 2$.
+At time $t=0$
+the densities of particles 
+under observation is given by some
+non\vvv negative function $f\uuu 0(x)$ 
+defined on $\Omega$.
+The density at a later time $t>0$
+is classically  equal to
+a function
+$x\mapsto u(x,t)$ where
+$u(x,t)$ solves the heat equation
+\[
+\frac{\partial u}{\partial t}= \Delta(u)
+\] 
+with boundary conditions 
+\[
+u(x,0)=f\uuu 0(x)\quad\text{and}\quad
+\frac{\partial u}{\partial {\bf{n}}}(x,t)= 0
+\quad\text{on}\quad \partial\Omega
+\]
+Schršdinger took into the account
+the reality of quantum physics which
+means that in an  actual experiment
+the observed density of particles at a time
+$t\uuu 1>0$ does not coincide with $u(x,t\uuu 1)$.
+He posed the problem to find the most probable development during the time
+interval $[0,t\uuu 1)$ which leads to the state at time
+$t\uuu 1$.
+His major conclusion was that
+the the requested density
+function   which
+substitutes the heat\vvv solution $u(x,t)$
+should belong to a non\vvv linear class of functions formed by
+products
+\[ 
+w(x,t)= u\uuu 0(x,t)\cdot u\uuu 1(x,t)
+\]
+where $u\uuu 0$ is a solution to (*) above
+defined for $t>0$
+while $u\uuu 1(x,t)$ is a solution to an adjoint equation
+\[
+\frac{\partial u\uuu 1}{\partial t}= \vvv\Delta(u)
+\quad\colon\quad
+\frac{\partial u\uuu 1}{\partial {\bf{n}}}(x,t)= 0
+\quad\text{on}\quad \partial\Omega
+\] 
+defined when $t<t\uuu 1$.
+This leads to a new type of Cauchy problems
+where one asks if there exists a unique $w$\vvv function as above
+satisfying
+\[ 
+w(x,0)= f\uuu 0(x)\quad\colon\quad w(x,t\uuu 1)=f\uuu 1(x)
+\]
+where $f\uuu 0,f\uuu 1$ are non\vvv negative functions
+such that
+\[
+\int\uuu\Omega\, f\uuu 0\cdot dx=
+\int\uuu\Omega\, f\uuu 1\cdot dx
+\]
+\medskip
+
+\noindent
+The solvability of this non\vvv linear boundary value problem was left open
+by Schršdinger and the search for  solutions has remained as an active field
+in mathematical physics.
+When $\Omega$ is a bounded set
+and has a smooth boundary
+one can use the Poisson\vvv Greens function for the
+classical equation (*)  and 
+rewrite Schršdinger's equation  to 
+a system of non\vvv linear integral equations.
+The interested reader should consult the talk by I.N. Bernstein a the IMU\vvv congress at ZŸrich 1932 for a first account about mathematical solutions to
+Schršdinger equations.
+Examples occur already  on the product
+of two copies of the real line where Schršdinger's equations lead to
+certain non\vvv linear equation for measures which goes as follows:
+Consider the Gaussian density function
+
+
+\[
+\frac{1}{\sqrt{2\pi}}\cdot e^{\vvv t^2/2}
+\]
+
+\medskip
+
+\noindent
+Next, consider the family $\mathcal S^*$
+of all non\vvv negative product measures
+$\gamma\uuu 1\times\gamma\uuu 2 $ for which
+\[
+\iint g(x\uuu 1\vvv x\uuu 2)\cdot d\gamma\uuu 1(x\uuu 1)
+\cdot d\gamma\uuu 2(x\uuu 2)=1
+\]
+The product measure gives another product measure 
+\[
+\mathcal T\uuu g(\gamma\uuu 1\times\gamma\uuu 2)=
+\mu\uuu 1\times\mu\uuu 2
+\]
+where
+\[
+\mu\uuu 1(E\uuu 1)\cdot \mu\uuu 2(E\uuu 2)=
+\iint \uuu {E\uuu 1\times E\uuu 2}\,
+g(x\uuu 1\vvv x\uuu 2)\cdot d\gamma\uuu 1(x\uuu 1)
+\cdot d\gamma\uuu 2(x\uuu 2)
+\] 
+hold for all pairs of bounded Borel sets.
+Notice that $\mu\uuu 1\times \mu\uuu 2$
+becomes a probability measure since (*) above holds.
+With these notations one has
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+For every product measure
+$\mu\uuu1\times\mu\uuu2$ which in addition is a probability measure there exists
+a unique $\gamma\uuu 1\times\gamma\uuu 2$ in $S\uuu g$
+such that 
+\[
+\mathcal T\uuu g(\gamma\uuu 1\times\gamma\uuu 2)=\mu\uuu1\times\mu\uuu2
+\]
+\medskip
+
+
+\noindent
+In ¤ x below we prove
+the result above which actually appears as a special case of
+Theorem XX
+where the  $g$\vvv function is replaced by
+an arbitrary  non\vvv negative and bounded function $k(x\uuu 1,x\uuu 2)$
+such that
+\[
+\iint\uuu{{\bf{R}}^2}\,\log \, k\cdot dx\uuu 1dx\uuu 2>\vvv \infty
+\]
+
+  
+
+\centerline{\bf\large{An automorphism on product measures}}
+
+\bigskip
+
+
+\noindent
+Let $n\geq 2$ and consider an $n$\vvv tuple of
+sample spaces $\{X\uuu\nu=(\Omega\uuu\nu,\mathcal B\uuu\nu)\}$.
+We get the product space
+\[ 
+Y=\prod X\uuu\nu
+\]
+whose sample space is the set\vvv theoretic product
+$\prod\,\Omega\uuu\nu$ and   Boolean $\sigma$\vvv algebra 
+$\mathcal B$ generated by
+$\{\mathcal  B\uuu \nu\}$.
+\medskip
+
+
+\noindent
+{\bf{0.1 Product measures.}}
+Let $\{\gamma\uuu\nu\}$ be an $n$\vvv tuple of signed measures on
+$X\uuu 1,\ldots,X\uuu n$ where  each $\gamma\uuu\nu$
+has a finite total variation. We get a unique measure $\gamma^*$
+on $Y$ such that
+\[ 
+\gamma^*(
+E\uuu 1\times\ldots\times E\uuu n)=
+\prod\,\gamma\uuu\nu(E\uuu\nu)
+\]
+hold for every $n$\vvv tuple of $\{\mathcal B\uuu\nu\}$\vvv measurable sets.
+We refer to $\gamma^*$ as the product measure. It is
+uniquely determined  because $\mathcal B$ is generated
+by
+product sets $E\uuu 1\times\ldots\times E\uuu n)$
+with each $E\uuu\nu\in\mathcal B\uuu\nu$.
+When no confusion is possible we put
+\[
+ \gamma^*=\prod\,\gamma\uuu\nu
+\]
+
+\medskip
+
+\noindent
+{\bf{0.2 Remark.}}
+The set of product measures is a proper non\vvv linear subset of all
+measures on $Y$.
+This is already seen when $n=2$ with two discrete sample spaces, i.e.
+$X\uuu 1$ and $X\uuu 2$  consists of $N$
+points for some integer $N$. A
+Every $N\times n$\vvv matrix with 
+non\vvv negative elements $\{a\uuu{jk}\}$
+give a probability measure $\mu$ on
+$X\uuu 1\times X\uuu 2$
+when the double sum $\sum\sum\, a\uuu{jk}=1$
+The condition that $\mu$ is a product measure is tha there exist
+$N$\vvv tuples $\{\alpha\uuu j$ and $\{\beta\uuu k\}$
+such that $\sum\,\alpha\uuu \nu=\sum\,\beta\uuu k=1$
+and 
+$a\uuu{jk}=\alpha\uuu j\cdot \beta\uuu k$.
+\medskip
+
+
+\noindent
+{\bf{The operator $T\uuu k$.}}
+Consider a positive $\mathcal B$\vvv measurable function $k$
+such that  $k$ and $k^{\vvv 1}$
+both are bounded functions.
+Let $\mu$ be a non\vvv negative
+product measure on $Y$ such that
+\[ 
+\int\uuu Y\, k\cdot d\mu=1
+\]
+Let $1\leq\nu\leq n$ and $g$ is some
+$\mathcal B\uuu\nu$\vvv measurable function. Then we have the integral
+\[
+\int\uuu Y\, g^*\cdot k\cdot d\mu\tag{ii}
+\]
+where $g^*$ is the function on the product space defined by
+\[
+g^*(x\uuu 1,\ldots,x\uuu n)g(x\uuu n)
+\]
+This gives a measure denoted b $(k\mu)\uuu \nu$ on $X\uuu\nu$
+such that (i) is equal to
+$\int\, g\cdot (k\mu)\uuu\nu$
+for all $g$ as above.
+This gives the product measure
+
+\[ 
+T\uuu k(\mu)=\prod\, (k\mu)\uuu\nu
+\]
+\medskip
+
+\noindent
+It is clear that (i) entails that $T\uuu k(\mu)$ is a probability measure on
+$Y$.
+denote by $\mathcal S^*\uuu k$ the family of non\vvv negative product measures
+satisfying (i) above, and similarly $\mathcal S^*\uuu 1$ is the set of
+product measures which at the same time are probability measures.
+
+
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{$T$ yields a homeomorphism between $S^*\uuu k$ and $S^*\uuu 1$}.
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Above we refer to  the norm topology on the space of measure, i.e.
+if $\gamma\uuu 1$ and $\gamma\uuu 2$ are two  measures on
+$Y$ then
+the norm $||\gamma\uuu 1\vvv \gamma\uuu 2||$ is the total variation of
+the signed measure $\gamma\uuu 1\vvv\gamma\uuu 2$.
+Recall from XX that the space of meauures on $Y$
+is complete under this norm.
+In particular, let $\{\mu\uuu \nu\}$
+be a Cauchy sequence with respect to the norm where
+each $\mu\uuu\nu\in \mathcal S\uuu 1$. Then there exists a strong limit
+$\mu^*$ where $\mu^*$ again belongs to $\mathcal S^*\uuu 1$
+and
+\[
+||\mu\uuu\nu\vvv \mu^*||\to 0
+\]
+\medskip
+
+\noindent
+{\bf{0.4 A variational problem.}}
+The proof of Theorem 1 relies upon a variational
+problem which we begin to describe  before
+Theorem 1 is proved  in xx below.
+Denote by $\mathcal A$
+the linear space 
+of functions on $Y$
+whose elements are of the form
+\[
+a=g^*\uuu 1+\ldots+g^*\uuu n
+\] 
+where each $g^*\uuu\nu$ comes from a function
+$g\uuu\nu$ on $X\uuu\nu$ as in (0.3
+The exponential function $e^a$ becomes
+\[
+e^a=\prod\, e^{g^*\uuu\nu}
+\]
+If 
+$\gamma^*$ is a product measure
+with factors $\{\gamma\uuu\nu\}$, it follows that
+$e^a\cdot \gamma^*$
+is a  product measures with factors
+$\{e^{g^*\uuu\nu}\cdot \gamma\uuu\nu\}$.
+Next, for every pair  $\gamma\in \mathcal S^*\uuu 1$ and
+$a\in \mathcal A$  we set
+\[ 
+W(a,\gamma)=\int\uuu Y\, (e^ak\vvv a)\cdot d\gamma 
+\]
+
+\medskip
+
+\noindent
+Keeping $\gamma$ fixed we set
+
+\[
+W\uuu *(\gamma)=
+ \min\uuu{a\in\mathcal A}\,W(a,\gamma)
+\]
+
+\medskip
+
+\noindent
+The main step towards the proof of Theorem xx is the following:
+
+\medskip
+
+\noindent
+{\bf{Proposition.}}\emph{Let $\{a\uuu \nu\}$ be a sequence in
+$\mathcal A$ such that}
+\[
+\lim W(\gamma,a\uuu\nu)= W\uuu*(\gamma)
+\]
+Then the sequence  $\{e^{a\uuu \nu}\cdot \gamma\}$
+converges to a unique probability measure
+$\mu$ such that $T\uuu k(\gamma)=\mu$.
+
+
+\bigskip
+
+\noindent
+The proof of Proposition xx is preceeded by the following two results.
+\medskip
+
+
+\noindent
+{\bf{0. x. Lemma.}} 
+\emph{Let $\epsilon>0$ and $a\in\mathcal A$ be such that
+$W(a)\leq m\uuu *(\gamma)+\epsilon$. Then it follows that}
+
+\[
+\int\, e^a\cdot k\cdot \gamma\leq 
+\frac{1+\epsilon}{1\vvv e^{\vvv 1}}
+\]
+
+\noindent
+\emph{Proof.}
+For every real number $s$   the function $a\vvv s$
+again belongs to $\mathcal A$ and by the hypothesis 
+$W(a\vvv s)\geq W(a)\vvv \epsilon$. This entails that
+
+\[
+\int\, e^a k\cdot d\gamma\leq
+\int\uuu Y\, e^{a\vvv s}\cdot kd\gamma+s\int\, k\cdot d\gamma+\epsilon
+\implies
+\]
+\[
+\int (1\vvv e^{\vvv s})\cdot e^a\cdot kd\gamma\leq s+\epsilon
+\]
+Lemma 1 follows if we take $s=1$.
+
+
+\medskip
+
+\noindent
+{\bf{0.X Lemma.}}
+\emph{Let $\gamma\uuu 1$ and $\gamma\uuu 2$
+be a pair of probability measures on $Y$. Let $\epsilon>0$
+and suppose that}
+\[ 
+\bigl|\int\uuu Y\, G\uuu \nu\cdot d\gamma\uuu 1\vvv
+\int\uuu Y\, G\uuu \nu\cdot d\gamma\uuu 2\bigr |\leq\epsilon
+\] 
+\emph{hold for every $1\leq \nu\leq n$ and every function $g\uuu\nu$ on $X\uuu\nu$ with maximum norm
+$\leq 1$. Then the norm}
+\[ 
+||\gamma\uuu 1\vvv \gamma\uuu 2||\leq n\cdot \epsilon
+\]
+\medskip
+
+\noindent
+The proof is left to the reader
+where the hint is to 
+make repeated  use of  Fubini's theorem.
+\medskip
+
+
+
+\bigskip
+
+
+\noindent
+\emph{Proof of Proposition XX}
+Let $\epsilon>0$ and consider a pair $a,b$ in $\mathcal A$ such that
+$W(a)$ and $W(b)$ both are $\leq m\uuu *(\gamma)+ \epsilon$
+where we also suppose that
+$\epsilon\leq 1$.
+Now $\frac{1}{2}(a+b)$
+belongs to $\mathcal A$ and we get
+
+\[
+2\cdot W(\frac{1}{2}(a+b))\geq 2\cdot m\uuu *(\gamma)
+\geq W(a)+W(b)\vvv 2\epsilon
+\]
+Next, notice that
+\[
+W(a)+W(b)\vvv
+2\cdot W(\frac{1}{2}(a+b))=
+\int\uuu Y\, [e^a+e^b\vvv 2\cdot e^{\frac{1}{2}(a+b))}]\cdot kd\gamma
+\]
+Now we use the algebraic identity
+\[
+e^a+e^b\vvv 2\cdot e^{\frac{1}{2}(a+b))}]=(e^{a/2}\vvv e^{b/2})^2
+\]
+It follows from (x\vvv x) that
+
+\[
+\int\uuu Y\, (e^{a/2}\vvv e^{b/2})^2\cdot k\cdot d\gamma \leq 2\epsilon\tag{iv}
+\]
+Next, we notice the identity
+
+\[
+|e^a\vvv e^b)|=
+(e^{a/2}+e^{b/2})\cdot |e^{a/2}\vvv e^{b/2}|
+\]
+Using the Cauchy\vvv Schwarz inequality we get
+
+\[
+\bigl[\int\uuu Y\, |e^a\vvv e^b|\cdot k\cdot d\gamma]^2\leq
+2\epsilon\cdot \int\uuu Y\, (e^{a/2}+e^{b/2})\cdot k\cdot d\gamma
+\]
+By the remark in XX the last factor is bounded by
+a fixed constant and hence we have proved that
+
+\[
+\int\uuu Y\, |e^a\vvv e^b|\cdot k\cdot d\gamma
+\leq C\cdot \sqrt{\epsilon}
+\]
+where $C$ is a fixed constant.
+Replacing $C$ by $C/k\uuu *$ where $k\uuu *$ is the minimum of
+$k$
+we get
+\[
+\int\uuu Y\, |e^a\vvv e^b|\cdot d\gamma
+\leq C\cdot \sqrt{\epsilon}
+\] Since the left hand side majorizes the total variation of the signed measures
+$e^a\cdot\gamma\vvv e^b/cdot\gamma$ we get Cauchy sequences with
+respect to the strong norm and
+conclude that there exists a unique limit measure $\mu$
+where
+$M(a\uuu\nu)\to m\uuu*(\gamma)$ implies that
+
+\[
+||e^{a\uuu\nu}\cdot\gamma\vvv \mu||\to 0
+\]
+
+\noindent
+\emph{The equality $T(\mu)=\gamma$}.
+To show this 
+we study $a$\vvv functions in the minimizing sequence.
+If $\rho\in \mathcal A$ is arbitrary we have
+\[ 
+W(a\uuu\nu+\rho)\geq W(a\uuu\nu)\vvv \epsilon\uuu\nu
+\] 
+where $\epsilon\uuu\nu\to 0$.
+This gives
+\[
+\int\uuu Y\, [ke^{a\uuu\nu}(1\vvv\rho)+\rho]\cdot d\gamma\leq \epsilon\uuu\nu
+\]
+Assuming that the maximum norm
+$|\rho|\uuu Y\leq 1$ we can write
+\[
+e^\rho=1+\rho+\rho\uuu 1
+\]
+where $0\leq \rho\uuu 1\leq \rho^2$.
+Then we see that (xx) gives
+\[
+\int\uuu Y\,[\rho\vvv ke^{a\uuu\nu}\cdot \rho]\cdot d\gamma\leq
+\epsilon\uuu\nu +\int\,\rho\uuu 1\cdot \gamma\leq
+\epsilon+||\rho||\uuu Y^2
+\]
+where the last inequality follows since
+$\gamma$ is a probability measure.
+The same inequality holds with $\rho$ replaced by $\vvv \rho$
+which entails that
+\[
+\bigl|\int\uuu Y\,(ke^{a\uuu\nu}\vvv 1)\cdot \rho\cdot d\gamma\bigr|
+\leq\epsilon\uuu\nu+||\rho||\uuu Y^2
+\]
+At this stage we apply Lemma xx to the measure
+$(ke^{a\uuu\nu}\vvv 1)\cdot d\gamma$ while we use
+$\rho$\vvv functions in $\mathcal A$ of norm $\leq\sqrt{\epsilon\uuu\nu}$.
+This gives the following inequality for the total variation:
+\[
+||ke^{a\uuu\nu}\vvv 1)\cdot\gamma||\leq n
+\cdot \frac{1}{\sqrt{\epsilon}}\cdot
+(\epsilon+\epsilon)= 2n\cdot \sqrt{\epsilon\uuu\nu}
+\]
+
+
+
+
+\bigskip
+
+
+{\bf{Remark.}} For every positive number  $q$ and every
+real number $\alpha$ one has the inequality
+\[
+e^q\cdot \alpha\vvv \alpha\geq 1+\log\,q
+\]
+Conclude  that
+\[ 
+W(a)\geq 1+\log k\uuu *
+\] 
+where $k\uuu *$ is the minium of the positive $k$\vvv function.
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+Let $n\geq 2$ and consider an $n$\vvv tuple of
+sample spaces $\{X\uuu\nu=(\Omega\uuu\nu,\mathcal B\uuu\nu)\}$.
+We get the product space
+\[ 
+Y=\prod X\uuu\nu
+\]
+whose sample space is the set\vvv theoretic product
+$\prod\,\Omega\uuu\nu$ and its  Boolean $\sigma$\vvv algebra is
+generated by
+$\{\mathcal  B\uuu \nu\}$.
+On $Y$ we consider a positive $\mathcal B$\vvv measurable function $k$
+such that  $k$ and $k^{\vvv 1}$
+both are bounded functions.
+Denote by $\mathcal S\uuu k$ the family of
+$\sigma$\vvv additive measures on $Y$ which are non\vvv negative 
+and normalized so that
+\[
+\int\uuu Y\, k\cdot d\mu=1\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Some notations.}}
+If $g\uuu \nu$ is a bounded $\mathcal B\uuu\nu$ measurable function
+on $X\uuu \nu$ we obtain the function $G\uuu\nu$ on $Y$
+defined by
+\[ 
+G\uuu\nu(x\uuu 1,\ldots,x\uuu n)= g\uuu\nu(x\uuu 1)
+\]
+Notice that if $r$ is a real number then the $\mathcal B$\vvv 
+measurable set
+\[
+\{G\uuu\nu<r \}=
+\{g\uuu\nu <r\}\times X\uuu \times\ldots\times X\uuu n
+\]
+Next, if $\mu\in \mathcal S\uuu 1$
+we obtain for each $1\leq\nu\leq n$
+a measure on $X\uuu\nu$ defined
+by the additive function on
+bounded $\mathcal B\uuu\nu$\vvv measurable functions by
+\[ 
+g\uuu\nu\mapsto  \mu(k\cdot G\uuu\nu)= \int\uuu Y\, k\cdot G\uuu\nu\cdot d\mu
+\]
+The resulting measure on $X\uuu\nu$ is denoted by
+$(k\mu)\uuu \nu$.
+\medskip
+
+\noindent
+{\bf{0.1 Product measures.}}
+Let $\{\gamma\uuu\nu\}$ be an $n$\vvv tuple of signed measures on
+$X\uuu 1,\ldots,X\uuu n$. We assume that each $\gamma\uuu\nu$
+has a finite total variation. Then we get a unique measure $\gamma^*$
+on $Y$ such that
+\[ 
+\gamma^*(
+E\uuu 1\times\ldots\times E\uuu n)=
+\prod\,\gamma\uuu\nu(E\uuu\nu)
+\]
+hold for every $n$\vvv tuple of $\{\mathcal B\uuu\nu\}$\vvv measurable sets.
+We refer to $\gamma^*$ as the product measure. It is
+uniquely determined  because $\mathcal B$ is generated
+by
+product sets $E\uuu 1\times\ldots\times E\uuu n)$
+with each $E\uuu\nu\in\mathcal B\uuu\nu$.
+When no confusion is possible we put
+\[
+ \gamma^*=\prod\,\gamma\uuu\nu
+\]
+
+\medskip
+
+\noindent
+{\bf{0.2 Remark.}}
+The set of product measures is a proper non\vvv linear subset of all
+measures on $Y$.
+This is already seen when $n=1$ and we have two discrete sample spaces, i.e.
+with a finite set of points. say that $X\uuu 1$ and $X\uuu 2$ both consists of $N$
+points for some integer $n$. A
+Every $N\times n$\vvv matrix with 
+non\vvv negative elements $\{a\uuu{jk}\}$
+give a probability measure $\mu$ on
+$X\uuu 1\times X\uuu 2$
+when the double sum $\sum\sum\, a\uuu{jk}=1$
+if $\mu$ is a product measure we can find
+$n$\vvv tuples $\{\alpha\uuu j$ and $\{\beta\uuu k\}$
+where each tuple has some equal to one and
+$a\uuu{jk}=\alpha\uuu j\cdot \beta\uuu k$.
+\medskip
+
+
+\noindent
+{\bf{0.3 The operator $T$}}.
+Let $\mu$ be a measure in $\mathcal S\uuu k$.
+To each $1\leq \nu\leq n$
+we obtain the measure $(k\mu)\uuu\nu$ on $X\uuu\nu$
+and get  the product measure 
+\[
+T(\mu)=\prod\, (k\mu)\uuu\nu
+\]
+If $1$ is the identity function on $Y$ we notice that
+\[
+\int\uuu Y\, 1\cdot dT(\mu)=
+\prod\,\int\uuu{X\uuu\nu} 1\cdot d(k\mu\uuu\nu)=
+\prod \int\uuu Y\, 1\cdot k\cdot d\mu=1
+\]
+Hence the product measure $T(\mu)$ 
+is a probability measure on $Y$.
+Denote the set of probability measures which in addition are product measures on
+$Y$ by $\mathcal S\uuu 1^*$.
+Similarly, denote by $\mathcal S^*\uuu k$ the family of measures in
+$\mathcal S\uuu k$ which in addition are product measures.
+We can restrict the $T$\vvv operator to $\mathcal S\uuu k^*$
+and then the following holds.
+
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{$T$ yields a homeomorphism between $S^*\uuu k$ and $S^*\uuu 1$}.
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Above we use the norm topology on the space of measure, i.e.
+if $\gamma\uuu 1$ and $\gamma\uuu 2$ are two in general signed measures on
+$Y$ then
+the norm $||\gamma\uuu 1\vvv \gamma\uuu 2||$ is the total variation of
+the signed measure $\gamma\uuu 1\vvv\gamma\uuu 2$.
+Recall from XX that the space of meauures on $Y$
+is complete under this norm.
+In particular, let $\{\mu\uuu \nu\}$
+be a Cauchy sequence with respect to the norm where
+each $\mu\uuu\nu\in \mathcal S\uuu 1$. Then there exists a strong limit
+$\mu^*$ where $\mu^*$ again is a probability measure and
+\[
+||\mu\uuu\nu\vvv \mu^*||\to 0
+\]
+\medskip
+
+\noindent
+{\bf{A variational problem.}}
+The proof of Theorem 1 relies upon a variational
+problem which we begin to describe  before we prove
+Theorem 1 in xx below.
+Denote by $\mathcal A$
+the linear space 
+of functions on $Y$
+whose elements are of the form
+\[
+a=G\uuu 1+\ldots+G\uuu n
+\] 
+where each $G\uuu\nu$ comes from a function
+$g\uuu\nu$
+given by (0.xx) above.
+Every such $a$ is a bounded function and hence there exists
+the exponential function $e^a$ on $Y$. Notice that this function is of the form
+\[
+e^a=\prod\, e^{G\uuu\nu}
+\]
+If we consider a product measure
+$\gamma^*$ with factors $\{\gamma\uuu\nu\}$
+we see that the measure $e^a\cdot \gamma^*$
+is a new product measures with factors
+$\{e^{G\uuu\nu}\cdot \gamma\uuu\nu\}$.
+Now we ill define a variational problem where
+product measures of this kind appear.
+Let $\gamma\in \mathcal S^*\uuu 1$.
+To each function $a\in \mathcal A$  we set
+\[ 
+W(a)=\int\uuu Y\, (e^ak\vvv a)\cdot d\gamma 
+\]
+
+\medskip
+
+\noindent
+{\bf{Remark.}} For every positive number  $q$ and every
+real number $\alpha$ one has the inequality
+\[
+e^q\cdot \alpha\vvv \alpha\geq 1+\log\,q
+\]
+Conclude  that
+\[ 
+W(a)\geq 1+\log k\uuu *
+\] 
+where $k\uuu *$ is the minium of the positive $k$\vvv function.
+Now we can introduce the number
+
+\[
+m\uuu *(\gamma)=
+ \min\uuu{a\in\mathcal A}
+\, \int\uuu Y\, (e^a \cdot k\vvv a )\cdot d\gamma\tag{*}
+\]
+
+\noindent
+We are going to find a solution to this variational problem.
+First we establish a certain upper bound which will
+be used later on.
+\medskip
+
+\noindent
+{\bf{Lemma.}} 
+\emph{Let $\epsilon>0$ and $a\in\mathcal A$ be such that
+$W(a)\leq m\uuu *(\gamma)$. Then it follows that}
+
+\[
+xxxx\leq xxx
+\]
+
+\noindent
+\emph{Proof.}
+In $\mathcal A$ we have the function $a\vvv s$
+and by the hypothesis 
+$W(a\vvv s)\geq W(a)\vvv \epsilon$ which gives
+
+\[
+\int\uuu Y\, e^{a\vvv s}\cdot kd\gamma\vvv a+s
+\geq W(a)\vvv \epsilon\implies
+\]
+\[
+(1\vvv e^{\vvv s})\cdot e^a\cdot kd\gamma\leq s+\epsilon
+\]
+Lemma 1 follows if we take $s=1$.
+
+\medskip
+
+\noindent
+We shall  need another  preliminary result of independent interest.
+
+\medskip
+
+\noindent
+{\bf{Lemma.}}
+\emph{Let $\gamma\uuu 1$ and $\gamma\uuu 2$
+be a pair of probability measures on $Y$. Let $\epsilon>0$
+and suppose that}
+\[ 
+\bigl|\int\uuu Y\, G\uuu \nu\cdot d\gamma\uuu 1\vvv
+\int\uuu Y\, G\uuu \nu\cdot d\gamma\uuu 2\bigr |\leq\epsilon
+\] 
+\emph{hold for every $1\leq \nu\leq n$ and every function $g\uuu\nu$ on $X\uuu\nu$ with maximum norm
+$\leq 1$. Then the norm}
+\[ 
+||\gamma\uuu 1\vvv \gamma\uuu 2||\leq n\cdot \epsilon
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this result where the hint is to 
+make succesive use of  Fubini's theorem.
+\medskip
+
+\noindent
+Now we announce the solution to the variational problem.
+
+
+
+\medskip
+
+\noindent
+{\bf{Proposition.}}
+\emph{Let  $\{a\uuu\nu\}$ be a  sequence 
+in $\mathcal A$ such that}
+\[
+m\uuu *(\gamma)=
+ \lim\uuu{\nu\to\infty}
+\, \int\uuu Y\, (e^{a\uuu\nu}k\vvv a\uuu\nu )\cdot d\gamma
+\]
+\emph{Then the sequence 
+$\{\mu\uuu\nu= e^{a\uuu\nu}\cdot\gamma\}$
+converges strongly to a limit measure $\mu\in \mathcal S\uuu k$. 
+Moreover, this limit measure is unique and $T(\mu)=\gamma$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $\epsilon>0$ and consider a pair $a,b$ in $\mathcal A$ such that
+$W(a)$ and $W(b)$ both are $\leq m\uuu *(\gamma)+ \epsilon$
+where we also suppose that
+$\epsilon\leq 1$.
+Now $\frac{1}{2}(a+b)$
+belongs to $\mathcal A$ and we get
+
+\[
+2\cdot W(\frac{1}{2}(a+b))\geq 2\cdot m\uuu *(\gamma)
+\geq W(a)+W(b)\vvv 2\epsilon
+\]
+Next, notice that
+\[
+W(a)+W(b)\vvv
+2\cdot W(\frac{1}{2}(a+b))=
+\int\uuu Y\, [e^a+e^b\vvv 2\cdot e^{\frac{1}{2}(a+b))}]\cdot kd\gamma
+\]
+Now we use the algebraic identity
+\[
+e^a+e^b\vvv 2\cdot e^{\frac{1}{2}(a+b))}]=(e^{a/2}\vvv e^{b/2})^2
+\]
+It follows from (x\vvv x) that
+
+\[
+\int\uuu Y\, (e^{a/2}\vvv e^{b/2})^2\cdot k\cdot d\gamma \leq 2\epsilon\tag{iv}
+\]
+Next, we notice the identity
+
+\[
+|e^a\vvv e^b)|=
+(e^{a/2}+e^{b/2})\cdot |e^{a/2}\vvv e^{b/2}|
+\]
+Using the Cauchy\vvv Schwarz inequality we get
+
+\[
+\bigl[\int\uuu Y\, |e^a\vvv e^b|\cdot k\cdot d\gamma]^2\leq
+2\epsilon\cdot \int\uuu Y\, (e^{a/2}+e^{b/2})\cdot k\cdot d\gamma
+\]
+By the remark in XX the last factor is bounded by
+a fixed constant and hence we have proved that
+
+\[
+\int\uuu Y\, |e^a\vvv e^b|\cdot k\cdot d\gamma
+\leq C\cdot \sqrt{\epsilon}
+\]
+where $C$ is a fixed constant.
+Replacing $C$ by $C/k\uuu *$ where $k\uuu *$ is the minimum of
+$k$
+we get
+\[
+\int\uuu Y\, |e^a\vvv e^b|\cdot d\gamma
+\leq C\cdot \sqrt{\epsilon}
+\] Since the left hand side majorizes the total variation of the signed measures
+$e^a\cdot\gamma\vvv e^b/cdot\gamma$ we get Cauchy sequences with
+respect to the strong norm and
+conclude that there exists a unique limit measure $\mu$
+where
+$M(a\uuu\nu)\to m\uuu*(\gamma)$ implies that
+
+\[
+||e^{a\uuu\nu}\cdot\gamma\vvv \mu||\to 0
+\]
+
+\noindent
+\emph{The equality $T(\mu)=\gamma$}.
+To show this 
+we study $a$\vvv functions in the minimizing sequence.
+If $\rho\in \mathcal A$ is arbitrary we have
+\[ 
+W(a\uuu\nu+\rho)\geq W(a\uuu\nu)\vvv \epsilon\uuu\nu
+\] 
+where $\epsilon\uuu\nu\to 0$.
+This gives
+\[
+\int\uuu Y\, [ke^{a\uuu\nu}(1\vvv\rho)+\rho]\cdot d\gamma\leq \epsilon\uuu\nu
+\]
+Assuming that the maximum norm
+$|\rho|\uuu Y\leq 1$ we can write
+\[
+e^\rho=1+\rho+\rho\uuu 1
+\]
+where $0\leq \rho\uuu 1\leq \rho^2$.
+Then we see that (xx) gives
+\[
+\int\uuu Y\,[\rho\vvv ke^{a\uuu\nu}\cdot \rho]\cdot d\gamma\leq
+\epsilon\uuu\nu +\int\,\rho\uuu 1\cdot \gamma\leq
+\epsilon+||\rho||\uuu Y^2
+\]
+where the last inequality follows since
+$\gamma$ is a probability measure.
+The same inequality holds with $\rho$ replaced by $\vvv \rho$
+which entails that
+\[
+\bigl|\int\uuu Y\,(ke^{a\uuu\nu}\vvv 1)\cdot \rho\cdot d\gamma\bigr|
+\leq\epsilon\uuu\nu+||\rho||\uuu Y^2
+\]
+At this stage we apply Lemma xx to the measure
+$(ke^{a\uuu\nu}\vvv 1)\cdot d\gamma$ while we use
+$\rho$\vvv functions in $\mathcal A$ of norm $\leq\sqrt{\epsilon\uuu\nu}$.
+This gives the following inequality for the total variation:
+\[
+||ke^{a\uuu\nu}\vvv 1)\cdot\gamma||\leq n
+\cdot \frac{1}{\sqrt{\epsilon}}\cdot
+(\epsilon+\epsilon)= 2n\cdot \sqrt{\epsilon\uuu\nu}
+\]
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\noindent
+{\bf{Introduction.}}
+Abstract measure theory is often convenient to
+achieve general results.
+Here we expose material from Beurling's  article 
+\emph{An automorphism of product measures}
+where Theorem 1  is the main result.
+In this theorem appears a continuous function $k$ defined on a product
+$Y=X\uuu 1,\ldots,X\uuu n$ where each $X\uuu\nu$ is a locally
+compact metric space.
+Under the assumption that there are positive real numbers
+$0<a<b$ such that the range of $k$ is confined to $[a,b]$
+it will be proved that a certain operator $\mathcal K$ yields a homoeomorphism
+from the space of
+non\vvv negative Riesz measures $\mu$ on $Y$
+normalized by the condition
+\[
+\int\, k\cdot d\mu=1
+\]
+to the space of probability measures on $Y$.
+A much more involved case appears in the singular case, i.e. when
+$k(x)$ for example can attain arbitrary small positive values.
+In section 2 we discuss the singular case
+for a product of two locally compact metric spaces.
+
+\medskip
+
+\noindent
+{\bf{Schršdinger equations.}}
+A motivation for the abstract results in Section 1
+come from the article
+\emph{ThŽorie relativiste de l'electron et l'interprŽtation
+de la mŽcanique quantique} published 1932.
+In the introduction to [Beurling]
+the author ponits out that
+Schršdinger's raised a new and unorthodox question concerning Brownian motions
+leading to new mathematical problems of considerable interest.
+More precisely, consider a Brownian motion which takes place in a bounded
+region $\Omega$ of some euclidian space
+${\bf{R}}^d$ for some $d\geq 2$.
+At time $t=0$
+the densities of particles 
+under observation is given by some
+non\vvv negative function $f\uuu 0(x)$ 
+defined on $\Omega$.
+The density at a later time $t>0$
+is then equal to
+a function
+$x\mapsto u(x,t)$ where
+$u(x,t)$ solves the heat equation
+
+\[
+\frac{\partial u}{\partial t}= \Delta(u)
+\] 
+with boundary conditions $u(x,0)=f\uuu 0(x)$ and
+\[
+u(x,0)=f\uuu 0(x)\quad\text{and}\quad
+\frac{\partial u}{\partial {\bf{n}}}(x,t)= 0
+\quad\text{on}\quad \partial\Omega
+\]
+Schršdinger took into the account
+the reality of quantum physics which
+means that in an  actual experiment
+the observed density of particles at a time
+$t\uuu 1>0$ does not coincide with $u(x,t\uuu 1)$.
+He posed the problem to find the most probable development during the time
+interval $[0,t\uuu 1)$ which leads to the state at time
+$t\uuu 1$.
+His major conclusion was that
+the the requested density
+function   which
+substitutes the heat\vvv solution $u(x,t)$
+should belong to a non\vvv linear class of functions formed by
+products
+\[ 
+w(x,t)= u\uuu 0(x,t)\cdot u\uuu 1(x,t)
+\]
+where $u\uuu 0$ is a solution to (*) above
+defined for $t>0$
+while $u\uuu 1(x,t)$ is a solution to an adjoint equation
+\[
+\frac{\partial u\uuu 1}{\partial t}= \vvv\delta(u)
+\quad\colon\quad
+\frac{\partial u\uuu 1}{\partial {\bf{n}}}(x,t)= 0
+\quad\text{on}\quad \partial\Omega
+\] 
+defined when $t<t\uuu 1$.
+This leads to a new type of Cauchy problems
+where one asks if there exists a unique $w$\vvv function as above
+satisfying
+\[ 
+w(x,0)= f\uuu 0(x)\quad\colon\quad w(x,t\uuu 1)=f\uuu 1(x)
+\]
+where $f\uuu 0,f\uuu 1$ are non\vvv negative functions
+such that
+\[
+\int\uuu\Omega\, f\uuu 0\cdot dx=
+\int\uuu\Omega\, f\uuu 1\cdot dx
+\]
+\medskip
+
+\noindent
+The solvability of this non\vvv linear boundary value problem was left open
+by Schršdinger and the search for  solutions have been
+studied by many mathematicians.
+When $\Omega$ is a bounded set
+and has a smooth boundary
+one can use the Poisson\vvv Greens function for the
+classical equation (*)  and in this way
+rewrite Schršdinger's equation  to 
+a system of non\vvv linear integral equations.
+We refer to page 190 in Beurling's article for details
+how one arrives at such integral equations
+and why this motivates the result in Theorem 1 below.
+
+\bigskip
+
+
+\centerline {\bf{1. Product measures.}}
+
+\medskip
+
+\noindent
+Let  $X$ be a locally compact metric space. Denote by $C^b(X)$
+the linear space of bounded real\\\ valued functions on $X$
+which is a Banach a space equipped with the maximum norm.
+The linear space of real\vvv valued Riesz measures on
+$X$ with finite total variation is denoted by
+$\mathfrak{M}(X)$ and the subclass of  
+non\vvv negative measures of  total mass one is
+denoted by $P^+(X)$.
+Next,  consider an $n$\vvv tuple $X\uuu 1,\ldots,X\uuu n$
+of locally compact spaces
+and
+let $Y=X\uuu 1\times\ldots\times X\uuu n$.
+be the product space.
+If $1\leq \nu\leq n$ and $\phi\in C^b(X\uuu\nu)$
+we get the function $\Phi\uuu\nu$ on $Y$ defined by
+\[
+\Phi\uuu\nu(x\uuu 1,\ldots,x\uuu n)=
+\phi\uuu\nu(x\uuu \nu)\tag{1}
+\]
+
+\noindent
+Then, if  $\mu\in\mathfrak{M}(Y)$
+we get the measure factors $\{\mu\uuu \nu\}$
+where
+\[
+\mu(\Phi\uuu \nu)=
+\mu\uuu\nu(\phi)\tag{2}
+\] 
+hold for each $\phi\in C^b(X\uuu\nu)$.
+Conversely, let $\{\mu\uuu\nu\}$ 
+be an $n$\vvv tuple of measures 
+on $X\uuu 1,\ldots, X\uuu n$.
+Then we get their product measure $\mu\uuu *$
+where
+\[
+\mu\uuu *(E\uuu 1\times\ldots\times E\uuu n)=
+\prod\, \mu\uuu\nu(E\uuu\nu)
+\]
+hold when   $\{E\uuu\nu\}$ are   Borel sets in
+$X\uuu 1,\ldots, X\uuu n$.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Consider the special case when
+each $\mu\uuu\nu$ is non\vvv negative
+Then the product  measure $\mu\uuu *$ is
+non\vvv negative. Let  $\{\gamma\uuu\nu\}$ be another
+$n$\vvv tuple  of non\vvv negative measures
+whose product measure $\gamma\uuu *=\mu\uuu *$.
+For each fixed $1\leq\nu\leq n$
+we take $\phi\in C^b(X\uuu\nu)$
+and get
+
+\[
+\mu\uuu *(\Phi\uuu \nu)=
+\prod\uuu{j\neq \nu}\, \mu\uuu (X\uuu j)\cdot \mu\uuu\nu(\phi)
+\]
+A similar formula holds for $\gamma\uuu *$ and   we conclude that
+an equality $\mu\uuu *=\gamma\uuu *$
+gives for each $\nu$ 
+a constant $c\uuu \nu$ such that
+\[ 
+\gamma\uuu \nu=c\uuu\nu\cdot \mu\uuu \nu
+\]
+We obtain  a unique
+$n$\vvv tuple of components representing $\mu\uuu *$
+when we choose $\{\mu\uuu\nu\} $ so that each has
+total mass given by
+the $n$:th root of $\mu\uuu *(Y)$.
+
+\bigskip
+
+\noindent 
+{\bf{The operator $\mathcal K$}}.
+Consider some $k(x)\in C^b(Y)$
+where $a\leq k(x)\leq b$ hold for some  pair $0<a<b$.
+To each $\mu\in \mathfrak{M}(Y)$
+we get  the measure $\mathcal K\uuu\mu$ on $Y$ which satisfies
+\[ 
+\mathcal K\uuu\mu(\prod\phi\uuu\nu(x\uuu \nu))=
+\prod\, \mu(k(x)\cdot \Phi\uuu \nu(x))
+\]
+for every $n$\vvv tuple $\{\phi\uuu\nu\in C^b(X\uuu\nu)\}$.
+Consider in particular the case when $\mu\in P^+(Y)$ and
+\[
+\int\uuu Y\, k\cdot d\mu=1\tag{*}
+\]
+Then  
+$\mathcal K\uuu \mu$ has total mass one
+and if $\gamma\uuu 1,\ldots,\gamma\uuu n$ are its normalised factors
+we have
+\[
+\gamma\uuu \nu(\phi)= \mu(\Phi\uuu \nu\cdot k)
+\]
+when $\phi\in C^b(X\uuu\nu)$.
+\medskip
+
+\noindent
+Denote by $P^+\uuu k(Y)$ the set of non\vvv negative measures
+$\mu$ on $Y$ for which
+(*) above holds. With these notations one has:
+\bigskip
+
+\noindent
+{\bf{1. Theorem.}}
+\emph{For each   function $k$ as above 
+the operator
+$\mathcal K$ yields a homeomorphism from
+from $P^+\uuu k(Y)$ onto $P^+(Y)$
+where each of these sets are equipped with the strong topology.}
+\bigskip
+
+\noindent
+For the  proof of Theorem 1 we refer to  [Beurling].
+At the end of the article a more involved case is studied.
+
+\medskip
+
+\noindent
+{\bf{  A singular case.}}
+Here we restrict the attention to the case $n=2$
+and let $k(x\uuu 1,x\uuu 2)$ be a bounded and strictly positive 
+continuous function on
+$Y= X\uuu 1\times X\uuu 2$. Let $\mu\in P^+(Y)$
+be such that
+\[
+\int\uuu Y\, \log k\cdot d\mu>\vvv \infty\tag{1}
+\]
+Under this integrability condition one has
+
+\medskip
+
+\noindent
+{\bf{2. Theorem.}}
+\emph{There exists a unique non\vvv negative measure
+$\gamma$ on $Y$ such that
+$\mathcal K(\gamma)=\mu$.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In contrast to Theorem 1 the measure $\gamma$ need not have finite mass
+but the proof shows that
+$k$ belongs to $L^1(\gamma)$.
+Concerning the integrability condition in Theorem 2
+it can be relaxed a bit, i.e. it suffices to assume that
+
+\[ 
+\min\uuu{s>0}\,
+\int \, (ke^s\vvv s)\cdot d\mu>\vvv \infty\tag{2}
+\]
+
+\noindent
+As pointed out by Beurling the result in Theorem 2
+can be applied to the case $X\uuu 1=X\uuu 2={\bf{R}}$
+both are copies of the real line and
+\[
+k(x\uuu1,x\uuu 2)=g(x\uuu 1\vvv x\uuu 2)
+\] where $g$ is the density of a Gaussian distribution which after  a
+normalisation  of
+the variance is taken to be
+\[
+\frac{1}{\sqrt{2\pi}}\cdot e^{\vvv t^2/2}
+\]
+So the integrability condition for $\mu$ in Theorem 2 becomes
+
+\[
+\iint\, (x\uuu 1\vvv x\uuu 2)^2\cdot d\mu(x\uuu 1,x\uuu 2)<\infty
+\] 
+\medskip
+
+\noindent
+The proof of Theorem 2 is given on page 218\vvv 220
+in [loc.cit] and relies upon
+the method and various estimates from the proof of
+Theorem 1.
+For higher dimensional cases,  i,e, with $n\geq 3$
+Beurling gives the
+following comments 
+\medskip
+
+\noindent
+\emph{Theorem 1 relies heavily on the condition that $k\geq a$ for some
+$a>0$.
+If this lower bound condition is dropped
+the individual equation $\mathcal K(\gamma)=\mu$ may still
+be meaningful, but serious complications will
+arise concerning the global uniqueness if $n\geq 3$
+and the proof of Theorem 2 for the case n$n\geq 3$ cannot be duplicated.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

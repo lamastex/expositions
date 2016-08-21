@@ -1,0 +1,1918 @@
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+\centerline{\bf{§ A. Eigenvalues and eigenfunctions for the Laplace operator
+in ${\bf{R}}^2$}}.
+\bigskip
+
+
+\noindent
+Theorem 1 below  was  presented by Carleman at the
+Scandinavian Congress in mathematics held in Stockholm 1934:
+In
+${\bf{R}}^2$ we 
+consider a bounded Dirichlet regular domain
+$\Omega$, i.e. every $f\in C^0(\partial\Omega)$
+has a harmonic extension to $\Omega$.
+A wellknown  
+fact which goes back to original work by Dirichlet
+gives the following: There
+exists the Greens' function
+\[
+G(p,q)= \log\,\frac{1}{|p-q|}-H(p,q)\tag{*}
+\]
+where $H(p,q)= H(q,p)$ is continuous in
+the product set
+$\overline{\Omega}\times\overline{\Omega}$.
+Moreover, $H(p,q)= H(q,p)$ is symmetric and when
+$q\in\Omega$ is fixed, then
+$p\mapsto H(p,q)$ is harmonic in
+$\Omega$ and 
+\[ 
+H(p,q)= \log\,\frac{1}{|p-q|}\quad\colon\, p\in \partial\Omega
+\]
+This means that $p\mapsto  G(p,q)$ vanishes on the boundary.
+Next, (*) shows  that $p\mapsto G(p,q)$ is superharmonic and
+and the minimum principe for superharmonic functions
+plus symmetry entail that 
+\[
+G(p,q)>0
+\]
+hold in $\Omega\times\Omega$. 
+Next, it is obvious that
+\[
+ \iint_{\Omega\times\Omega}\,|G(p,q)|^2\, dpdq<\infty
+ \]
+Hence the linear operator on the Hilbert space $L^2(\Omega)$ defined by
+the symmetric kernel $G(p,q)$
+is a Hilbert-Schmidt operator 
+and therefore a compact operator.
+Since the kernel is symmetric and positive the eigenvalues
+are positive, General Hilbert space theory
+applied to the symmetric $G$-kernel gives a 
+a sequence of pairwise orthogonal functions
+$\{\phi_n\}$
+whose $L^2$-norms are one and
+\[
+\int_\Omega\, G(p,q)\phi_n(q)\, dq=2\pi\cdot \mu_n\cdot \phi_n(p)\tag{1}
+\]
+where
+$\{\mu_n\}$
+is a non-increasing sequence of positive eigenvalues which tend to zero.
+Next, we apply the Laplace operator on both sides.
+Recall that
+\[
+\Delta(\log\, \frac{1}{|z|})=-2\pi\cdot \delta_0
+\]
+where $\delta_0$ is the Dirac measure.
+It follows that 
+the Laplacian of the left hand side in (1)
+becomes
+$-2\pi\cdot \phi(p)$ and hence (1) gives the equation
+\[
+\Delta(\phi_n)(p)+\frac{1}{\mu_n}\cdot \phi_n(p)=0
+\]
+We prefer to use $\lambda_n=\frac{1}{\mu_n}$. Then
+$\{\lambda_n\}$ is a non-decreasing sequence of real numbers
+which tends to $+\infty$.
+Since the kernel $G(p,q)$ is positive it follows, again   by general 
+Hilbert space theory, 
+that $\{\phi_n\}$ is an orthonormal basis in
+$L^2(\Omega)$, i.e. each $L^2$-function $f$ has an expansion
+\[
+f=\sum\, a_n\cdot \phi_n\quad\colon\,\,
+a_n= \int_\Omega\, f_n(p)\cdot\overline{\phi_n}(p)\, dp\tag{2}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Verify from the above   that each $\phi$-function is  a continuous function
+in $\Omega$ whose boundary  values on
+$\partial\Omega$ are zero.
+Show also that
+\[
+G(p,q)=
+\sum_{n=1}^\infty\, \frac{\phi_n(p)\cdot \phi_n(q)}{\lambda_n}\tag{0.1}
+\]
+where the right hand side is a convergent series when $p\neq q$.
+\bigskip
+
+
+\noindent
+Notice that $G(p,p)=+\infty$
+so the series
+above with $p=q$ is divergent.
+However, there exists a limit when 
+we employ  larger denominators.
+\medskip
+
+
+\noindent
+{\bf{Main Theorem.}} \emph{For 
+$p\in\Omega$ one has the limit formula}
+\[ 
+\lim_{N\to\infty}\, \lambda_N^{-1}\cdot \sum_{n=1}^{n=N}\, \phi^2_n(p)= \frac{1}{4\pi}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}} Carleman was inspired by an earlier result due to
+H. Weyl which asserts that
+the set of eigenvalues satisfy the asymptotic formula
+\[
+\lim_{N\to \infty}\, \frac{\lambda_N}{N}=\frac{\text{Area}(\Omega)}{4\pi}
+\]
+Notice that Weyl's asymptotic formula together with (*) gives
+\[
+\lim_{N\to \infty}\,N^{-1}\cdot \sum_{n=1}^{n=N}\, \phi^2_n(p)=xxxx
+\]
+The notable point is that this asymptotic limit is the same for
+\emph{every} point $p\in\Omega$.
+\medskip
+
+
+\noindent
+To get the main Theorem we proceed as follows.
+First, since  $\mathcal G$ is a Hilbert-Schmidt operator a  result due to Schur
+gives
+\[
+\sum\, \lambda_n^{-2}<\infty \tag{i}
+\]
+Let us also remark that since
+each $\phi_n$ is harmonic we have
+the mean-value equality
+\[
+\phi_n(p)= \frac{1}{\pi r^2}\cdot \int_{D_p(r)}\, \phi(q)\,dq
+\] 
+where $D_p(r)$ is the disc of radius $r$ centered at $p$ and
+$r$ is chosen so small that
+the disc stays in $\Omega$.
+Since the $L^2$-norms of the $\phi$-functions are equal to one,
+the Cauchy-Schwarz inequality  gives a constant $C$ such that
+\[
+|\phi_n(p)|\leq C\quad\colon \, n=1,2,\ldots\tag{ii}
+\]
+Now (i-ii) entail that 
+that  the  Dirichlet series
+\[
+\Phi_p(s)=\sum_{n=1}^\infty \frac{\phi_n^2(p)}{\lambda_n^s}
+\]
+is an analytic function of the complex variable $s$
+in the half-plane
+$\mathfrak{Re}\,  s>2$.
+With these notations we shall prove:
+\medskip
+
+\noindent
+{\bf{Theorem 2.}}
+\emph{For each $p\in\Omega$ there exists an entire function
+$\Psi_p(s)$ such that}
+\[
+\Phi_p(s)=\Psi_p(s)+\frac{1}{4\pi(s-1)}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In § xx we explain how
+Theorem 2 gives
+Theorem 1 from   Ikehara's limit formula.
+So the main task is to establish Theorem 2.
+The proof of Theorem 2 employs analytic function theory and is inspired by Riemann's
+work on the $\zeta$-function.
+One can establish more general results, where $\Delta$ is replaced by a higher order
+elliptic  operator with constant coefficients in ${\bf{R}}^n$ where $n\geq 3$ can hold.
+and the reader is invited to
+continue this analysis which does not seem to be covered in the literature.
+In the cited article  such extensions are pointed out by Carleman
+
+\medskip
+
+\noindent
+\emph{Remarquons que la méthode dont nous
+nous sommes servis est aussi appliquable à une equation
+elliptique quleconque à un nombre quleconque de dimensions.}
+\medskip
+
+\noindent
+In § xx we shall present Carleman's asymptotic formula for
+eigenvalues of a second order ellitpic operator
+in ${\bf{R}}^3$
+which in general has variable coefficiebts and need not be self-adjoint.
+Of course, to get a resyukt such as
+Theorem 1 with an asymptotic limit formula which
+is independent of the point $p$
+in the domain where
+the eigenfunctions appear, usually requires that the elliptic
+PDE-operator has constant coefficients.
+It goes without saying that many specific problems desevere to be analyzed in more detail.
+A broader perpective concerning asymptotic
+reperesentations arises when one for example regards
+spectral functions associated to
+self-adjoint operators defined via elliptic PDE:s.
+See § xx below whgere we give some comments about
+Carlea'ns discussion of
+the Schrödinger equation
+\[
+\Delta(u)- c(x,y,z)\cdot u=i\frac{\partial u}{\partial t}
+\]
+Here $\Delta is the Laplace operator and
+$c(x,y,z) is a real-valued function which
+is locally square integrable and
+there exist  constants $R$  and  $M$ such that
+\[
+c(x,y,z)\leq M\quad\colon x^2+y^2+z2\geq R^2
+\] 
+When (*) holds it was proved by Carleman  in 1931
+that the densely defined operator
+$\Delta-c$ is self-adjoint on $L^2({\bf{R}}^3)$
+whose  spectrum is confined to
+$[\ell,+\infty)$ for some real number
+$\ell$.
+If $\Theta$ is the associated spectral function
+we get a solution to (xx) wiuth
+initial condition
+$u(p,0)= f(p)$ by
+\[
+u(p,t)= \int_\ell^\infty\, e^{it\lambda}\cdot \bigl[\,{\int_{\bf{R}}^3}
+\Theta(p,q;\lambda)\cdot f(q)\, dq\,\bigr ]\,d\lambda
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{Proof of Theorem 2}}
+
+\bigskip
+
+\noindent
+For each $\lambda$ outside the discrete set $\{\lambda_n\}$ we put
+\[
+G(p,q;\lambda)=
+G(p,q)+
+2\pi\lambda\cdot \sum_{n=1}^\infty\,
+\frac{\phi_n(p)\phi_n(q)}{\lambda_n(\lambda-\lambda_n)}\tag{1}
+\]
+Notice that (i-ii) above entail that the last sum is
+converges and gives a meromorohic function of
+the complex variable $\lambda$ whose poles
+are at most simple and confied to the set $\{\lambda_n\}$
+Moreover, we get 
+the integral operator
+$\mathcal G_\lambda$ defined on $L^2(\Omega)$ by
+ \[ 
+ \mathcal G_\lambda(f)(p)
+ =\frac{1}{2\pi}\cdot \iint_\Omega\, G(p,q;\lambda )\cdot f(q)\, dq\tag{2}
+\]
+
+\medskip
+
+\noindent
+{\bf{A. Exercise.}} Use that the eigenfunctions $\{\phi_n\}$ is an orthonormal basis in
+$L^2(\Omega)$ to show that
+\[
+(\Delta+\lambda)\cdot \mathcal G_\lambda=-E
+\]
+
+
+\noindent{\bf{B. The function $F(p,\lambda)$}}.
+Set
+\[ 
+F(p,q,\lambda)= G(p,q;\lambda)- G(p,q)
+\]
+Keeping $p$ fixed we see that (1) gives
+\[
+\lim_{q\to p}\, F(p,q,\lambda)=
+2\pi\lambda\cdot \sum_{n=1}^\infty\,
+\frac{\phi_n(p)^2}{\lambda_n(\lambda-\lambda_n)}\tag{B.1}
+\]
+Set
+\[
+F(p,\lambda)=
+\lim_{q\to p}\, F(p,q,\lambda)\tag{B.2}
+\]
+From (i-ii) above we see that
+$F(p,\lambda)$
+is a meromorphic function in
+the complex $\lambda$-plane with at most simple poles
+at $\{\lambda_n\}$.
+\medskip
+
+\noindent{\bf{C. Exercise.}}
+Let $0<a<\lambda_1$. Use  residue calculus to show
+the equality below in the  half-space
+$\mathfrak{Re}\, s>2$:
+\[ 
+\Phi_p(s)=
+\frac{1}{4\pi^2 \cdot i}\cdot \int_{a-i\infty}^{a+i\infty}\, 
+F(p,\lambda)\cdot \lambda^{-s}\, d\lambda\tag{C.1}
+\]
+where the line integral  is taken on the vertical  line
+$\mathfrak{Re}\,\lambda=a$.
+
+\medskip
+
+\noindent
+{\bf{D. Change of contour integrals.}}
+At this stage we employ a device which goes to
+Riemann and
+move the integration into the half-space
+$\mathfrak{Re}(\lambda)<a$.
+Consider  the curve $\gamma_+$
+defined as the union of the
+negative real interval $(-\infty,a]$ followed by
+the upper
+half-circle $\{\lambda= ae^{i\theta}\,\colon 0\leq\theta\leq \pi \}$
+and the 
+half-line $\{\lambda= a+it\,\colon t\geq 0\}$.
+Cauchy's theorem entails that 
+\[ 
+\int_{\gamma_+}\, F(p,\lambda)\cdot \lambda^{-s}\, d\lambda=0
+\]
+We leave it to the reader to contruct the
+similar
+curve
+$\gamma_-=\bar \gamma_+$. Using 
+the vanishing of these line integrals and taking the branches of the 
+multi-valued function
+$\lambda^s$ into the account the reader should verify the following:
+
+\medskip
+
+
+\noindent
+{\bf{E. Lemma.}}
+\emph{When $\mathfrak{Re}\, s$ is sufficientyl large
+one has the equality}
+\[ 
+\Phi(s)=\frac{a^{s-1}}{4\pi}\cdot \int_{-\pi}^\pi\,
+F(ae^{i\theta})\cdot e^{(i(1-s)\theta}\,d\theta
++
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\, F(p,-x)\cdot x^{-s}\,dx\tag{E.1}
+\]
+\medskip
+
+\noindent
+The first term in the sum of the right hand side of (E.1)
+is obviously an entire function of $s$. So Theorem 2 follows if
+\[
+ s\mapsto  \frac{\sin \pi s}{2\pi^2}\cdot \
+ \int_a^\infty\, F(p,-x)\cdot x^{-s}\,dx\tag{E.2}
+\]
+is meromorphic with
+a single pole at $s=1$ whose residue is $\frac{1}{4\pi}$.
+To prove  this we shall  express $F(p,-x)$ when $x$ are real and positive in another way.
+\medskip
+
+\noindent
+{\bf{F.  The $K$-function.}}
+In the half-space $\mathfrak{Re}\,z>0$ there exists the analytic function
+\[
+K(z)= \int_1^\infty\, \frac{e^{-zt}}{\sqrt{t^2-1}}\,dt
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $K$ extends to a multi-valued analytic function outside
+$\{z=0\}$ given by
+\[
+K(z)=-I_0(z)\cdot \log z+ I_1(z)\tag{F.1}
+\] 
+where $I_0$ and $I_1$ are entire functions
+with series expansions
+\[
+I_0(z)=\sum_{m=0}^\infty\, \frac{2^{-2m}}{(m!)^2}\cdot
+z^{2m}\tag{i}
+\]
+\[ 
+I_1(z)= \sum_{m=0}^\infty\, \rho(m)\cdot
+\frac{2^{-2m}} {(m!)^2} \cdot z^{2m}\quad
+\colon \rho(m)=1+\frac{1}{2}+\ldots+\frac{1}{m}-\gamma\tag{ii}
+\]
+where $\gamma$ is the usual Euler constant.
+
+\bigskip
+
+
+\noindent
+Next, with   $p$ kept fixed and $\kappa>0$ 
+we solve the Dirichlet problem and find
+a  function $q\mapsto H(p,q;\kappa)$ which satisfies  the
+equation
+\[
+ \Delta(H)-\kappa\cdot H=0\tag{F.2}
+\] 
+in $\Omega$ with boundary values
+\[ 
+H(p,q;\kappa)=K(\sqrt{\kappa}|p-q|)\quad\colon q\in \partial\Omega
+\]
+
+
+\noindent
+{\bf{G. Exercise.}}
+Verify the equation
+\[ 
+G(p,q;-\kappa)=K(\sqrt{\kappa}\cdot |p-q|)- H(p,q;\kappa)\quad\colon \kappa>0\tag{G.1}
+\]
+
+
+
+\noindent
+Together with the  construction of $G(p,q)$ the reader can verify the equation
+\[
+ F(p,-\kappa)=
+ \lim_{q\to p}\,
+ [K(\sqrt{\kappa}\cdot |p-q|)+\log\,|p-q|]+
+ \lim_{q\to p}\,[H(p,q)- H(p,q,\kappa)]\tag{G.2}
+\]
+The last term above has the  "nice limit" 
+$H(p,p)+H(p,p,\kappa)$ and from  (F.1)  the reader can  verify the limit formula:
+\[
+ \lim_{q\to p}\,
+ \bigl(\, K(\sqrt{\kappa}\cdot |p-q|)+\log\,|p-q|\bigr)=
+ -\frac{1}{2}\cdot \log \kappa +\log 2-\gamma\tag{G.3}
+\]
+where $\gamma$ is  Euler's constant.
+
+\bigskip
+
+\noindent
+{\bf{H. Final part of the proof.}}.
+Set $A=  +\log 2-\gamma+H(p,p)$. Then (G.1) and (G.2)
+give
+\[
+F(p,-\kappa)= -\frac{1}{2}\cdot \log \kappa +A+H(p,p;\kappa)
+\]
+With $x=\kappa$ in (E.2 ) we  proceed  as follows.
+To  begin with it is clear that
+\[
+s\mapsto A\cdot 
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\,  x^{-s}\,dx
+\]
+is an entire function of $s$.
+Next,  consider the function
+\[ 
+\rho(s)=
+ -\frac{1}{2}\cdot 
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\,  \log x\cdot x^{-s}\,dx
+\]
+Notice that the complex derivative
+\[
+\frac{d}{ds}\,  \int_a^\infty\,  x^{-s}\,dx=
+- \int_a^\infty\,  \log x\cdot x^{-s}\,dx
+\]
+
+\medskip
+\noindent
+{\bf{H.1 Exercise.}}
+Use the  above to show that
+\[
+\rho(s)-\frac{1}{4\pi(s-1)}
+ \]
+is an entire function.
+\medskip
+
+
+\noindent
+From the above we see that Theorem 2  follows if we have proved
+\medskip
+
+\noindent
+ {\bf{H.2 Lemma.}}
+\emph{The following function  is entire}:
+\[
+s\mapsto \frac{\sin\,\pi s}{2\pi^2}\cdot
+\int_a^\infty\, H(p,p,\kappa)\cdot  \kappa^{-s}\,d\kappa
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+When $\kappa>0$
+the equation (F.1) shows that $q\mapsto H(p,q;\kappa)$
+is subharmonic  in $\Omega$ and the maximum principle gives
+\[
+0\leq  H(p,q;\kappa)\leq \max_{q\in\partial\Omega}\,K(\kappa|p-q|)\tag{i}
+\]
+With  $p\in\Omega$ fixed there is 
+a positive number
+$\delta$ such that
+$|p-q|\geq\delta\,\colon q\in \partial\Omega$ which  
+gives
+positive constants
+$B$ and  $\alpha$  such that
+\[
+H(p,p;\kappa)\leq e^{-\alpha\kappa}\quad\colon \kappa>0\tag{ii}
+\]
+The reader may now check that this
+exponential decay gives Lemma H.2.
+
+\newpage
+
+
+\centerline{\bf{Neumann's resolvent operators and
+the spectral theorem for self-adjoint operators}}
+
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We shall review basiuc facts from operator theory
+where the spectral theorem for self-adjoint operators on
+Hilbert spaces is in the focus.
+The notable point is that one in general allows unbounded
+self-adjoint operators.
+\medskip
+
+
+\centerline{\bf{Neumann resolvents.}}
+\medskip
+
+\noindent
+Let $X$ be a Banach space and $T\colon X\to X$
+is an unbounded and  densely defined linear operstor.
+It means that the domain of definition is a dense subspace denoted by
+$\mathcal D(T)$, while
+thr norms $||Tx||$ can take arbirary large values whiule
+$x$ varies over vectors of unit norm in
+$\mathcal D(T)$.
+We say that $T$ has an inverse in Neumann's sense 
+if the range
+$T(\mathcal D(T))=X$ and there exists a posotiove constant $c$ such that
+\[
+||Tx||\geq c\cdot ||x||\quad\colon\, x\in\mathcal D(T)
+\]
+When this hold it is easily seen that nthere exists a bounded inear operator
+$R$ whose range is equalm tom $\mathcal D(T)$ and
+\[
+R\circ T(x)=x\quad\colon x\in\mathcal D(T)\quad
+\&\quad T\circ R(x)=x\quad \colon\,\ x\in X
+\]
+We put $R= T^{-1}$ and refer to $R$ as Neumann's resolvent
+of the densely defined operator $T$.
+The reader should notice that
+$R$ is not invertible as a bounded operator, i.e.
+$\{0\}$ belongs to its compact spectrum
+$\sigma(R)$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Let $E$ be the identity operator on $X$.
+Keeping $T$ fixed we 
+regard the set of non-zero complex numbers
+$\lambda$ for which $\lambda\cdot E-T$ has an inverse in Neumann's sense.
+The reader may verify that
+$(\lambda\cdot E-T)^{-1}$ exists if and only if
+the bounded operator $E-\lambda\cdot R$ is invertible
+and that
+\[
+(\lambda\cdot E-T)^{-1}=(E-\lambda\cdot R)\tag{*}
+\]
+If $\lambda|\cdot ||R||<1$ then the operator
+$E-\lambda\cdot R$ is invertible and hence
+$(\lambda\cdot E-T)^{1}$ exists when $\lambda$ belongs to the disc of radius
+$||R||^{-1}$ centered at the origin.
+The closed complement where
+$(\lambda\cdot E-T)^{-1}$ does not exist is denoted by
+$\sigma(T)$. It is in general an unbunded closed subet of
+the complex $\lambda$-plane.
+More precisely we have
+\[
+\sigma(T)=\{\lambda\neq 0\,\colon
+\lambda^{-1}\in\sigma(R)\}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Above we regard the spectrum of $T$
+in the finite complex plane, i.e. the special point at infinity may be included to
+add that $T$ itself is an unbounded operator.
+Conversely, let $R$ be a bounded linear operator whose kernel is the zero space and
+the range $R(X)$ is dense in $X$. Then
+we see that $R=T^{-1}$ where $T$ is the densely defined operstor for ehich
+$T(Rx)=x$ for all $x\in X$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Find a pair $(R,X)$ where
+$R$ as above is injective with a dense range
+and $\sigma(R)$ is reduced to the origin.
+So in that case th unbounded operator
+$T$ is such that
+$(\lambda\cdot E-T)^{1}$ exists for
+all $\lambda\in {\bf{C}}$.
+\bigskip
+
+\noindent
+{\bf{The case when $X$ is a Hilbert space.}}
+Now we assume that $X=\mathcal H$ is a complex Hilbert space.
+Let $T$ as above be densely defined and unbounded
+where $T^{-1}$ exists.
+Wr impose the extra condition that
+Neumann's resolvent $R$ is a \emph{normal operator}, i.e.
+$R$ commutes with the adjoint $R^*$ in the algebra of bounded linear opertors
+on $\mathcal H$.
+
+
+
+
+
+
+
+
+
+
+
+To begin with, let $\mathcal H$ be a complex Hilbert space
+equiped with a hermitian inner priduict, i.e.
+to each pair of vectors $x,y$ one assigns a complex number
+$\langle x,y\rangle$ which satisfies
+\[
+\langle x,y\rangle=\overline{\langle y,x\rangle}\quad
+\&\quad \langle x,x\rangle>0\,\colon\, x\neq 0
+\]
+Moreover, $\mathcal H$ is complete under
+the norm defined by
+$|x|= \sqrt{\langle x,x\rangle}$.
+Denoten by $L(\mathcal H)$
+the space of bounded linear operators on $\mathcal H$
+equipped with the norm
+\[
+||T||=\max_{|x|=1}\ |T(x)|
+\]
+Recall that every bounded inear operator
+$T$ has a spectrum
+$\sigma(T)$ which appears
+as a compact subset of
+${\bf{C}}$. A complex number $\lambda$ is outside
+$\sigma(T)$ if and only if
+the operator $\lambda\cdot E_T)$ is invertible. The inverse operator
+\[ 
+R_T(\lambda)= (\lambda\cdot E-T)^{-1}
+\] 
+is called a Neumann resolvent of $T$.
+A wellknown fact asserts that the $L(\mathcal H)$-valued function
+\[
+\lambda\mapsto R_T(\lambda)
+\] 
+is analytic in ${\bf{C}}\setminus \sigma(T)$.
+Moreover, Neumann's resolvent operators commute
+weith each other, and also with the given operator $T$.
+Thus follows from Neuann's equation
+\[
+R(\mu)-R(\lambda)=\frac{R(\mu)\cdot R(\lambda)}{\lambda-\mu}
+\]
+In particular the complex derivatives satsify
+\[
+\frac{d}{d\lambda}(R_T(\lambda)= -R_T(\lambda)^2
+\]
+for every $\lambda$ outside $\sigma(T)$.
+\medskip
+
+\noindent
+Jext, recall the spectral radius formula which is valid for elements in arbitrary
+commutative Banach algebras which posses an identty element.
+For a bounded operator $T$ on $\mathcal H$ this gives
+the equation
+\[
+\lim_{n\to \infty}\, ||T^n||^{\frac{1}{n}}=
+\max_{\lambda\in\sigma(T)}\tag{0.1}
+\,|\lambda|
+\]
+The common value in (0.1) is denoted by $\rho(T)$.
+Notice that $\rho(T)=0$ can occur, i.e this holds when
+$\sigma(T)$ is reduced to the origin.
+The multiplicative inequality for operators norms gives
+\[
+\rho(T)\leq ||T||\tag{0.2}
+\]
+In general this is a strict inequality.
+Next, let
+\[
+p(T)=a_0\cdot E+a_1T\ldots+a_nT^n
+\]
+be a polynomial in $T$.
+At the same time we have the polynomial $P(\lambda)$. of the complex
+variable $\lambda$. The following is left to the reader:
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that
+\[
+\sigma(P(T))=P(\sigma(T))\tag{0.3}
+\]
+
+
+\bigskip
+
+
+\centerline{\bf{A. Self-adjoint operators.}}
+\medskip
+
+\noindent
+A bounded linear operator $A$ is self-adjoint if
+\[
+\langle Ax,y\rangle=\langle x,Ay\rangle\tag{A.1}
+\] 
+hold for all pairs $x,y$.
+it follows that
+\[
+|Ax|^2=\langle Ax,Ax\rangle=\langle A^2x,x\rangle\tag{i}
+\]
+hold for every vector $x$. Form this the reader can check the following equality
+for operator norms:
+\[
+||A||^2=||A^2||\tag{A.2}
+\]
+\medskip
+
+\noindent
+{\bf{A.3 Exercise.}}
+Deduce from (A.2) that
+\[
+||A||= \rho(A)\tag{A3.1}
+\]
+Show also
+that when $A$ is self-adjoint, then
+$\sigma(A)$ is a compact set on the real $\lambda$-line.
+A hint is that
+if $\lambda$ is complex and $x$ a unit vector then
+\[
+\langle \lambda x-Ax,\lambda x-Ax\rangle=
+|\lambda|^2+|Ax|^2-2\mathfrak{Re}(\lambda)\cdot \langle Ax,x\rangle
+\geq |\mathfrak{Im}\lambda|^2\tag{A.3.2}
+\]
+Finally, show that if
+$p(A)$ is a polynomial with
+real coefficients, then
+$p(A)$ is self-adjoint and
+\[
+||p(A)||= \max_{\lambda\in \sigma(A)}\, |p(\lambda)|\tag{A.3.3}
+\]
+\bigskip
+
+\centerline{\bf{B. Normal operators.}}
+\bigskip
+
+\noindent
+A bounded linear operator $R$ is normal if it connutes
+with its adjoint $R^*$.
+Since $R^{**}=R$ and $(ST)^*= T^*S^*$ hold for
+every pair $S,T$ in $L(\mathcal H)$, it follows that
+the operator $RR^*$ is self-adjoint.
+\medskip
+
+\noindent
+{\bf{B.1 Exercise.}}
+Use the equality $||T||=||T^*||$ for every bounded operator, together with
+(A.3.1) applied to $A=RR^*$ to conclude that
+\[
+\rho(R)=||R||\tag{B.1.1}
+\]
+Next, let
+\[
+p(R)= c_0+c_1R+\ldots+c_mR^m
+\]
+be a polynomial where $\{c_\nu\}$ are complex numbers.
+The adjoint becomes
+\[
+p(R)^*=  \bar c_0+\bar c_1R^*+\ldots+\bar c_m(R^*)^m
+\]
+Conclude that when $R$ is normal, it follows that
+$p(R)$ also is normal, and that (0.3) gives
+\[
+||p(R)||=
+\max_{\lambda\in \sigma(R)}\,|p(\lambda)|\tag{B.1.2}
+\]
+\medskip
+
+\noindent
+More generally, consider a polynomial in $\lambda$ and its complex conjugarte:
+\[
+Q=\sum\sum\, c_{\nu,k}\cdot \lambda^\nu\cdot \bar\lambda^k
+\]
+To $Q$ we associate the operator
+\[
+\widehat{Q}= \sum\sum\, c_{\nu,k}\cdot R^\nu\cdot (R^*)^k
+\]
+Te reader shouod check that
+this gives a normal operator
+and also  verify
+the equality
+\[
+||Q||= \max_{\lambda\in\sigma(R)}\, |Q(\lambda)|\tag{B.1.3}
+\]
+
+
+\bigskip
+
+\noindent
+{\bf{B.2 The algebra $\mathcal B^\infty(R)$.}}
+Keeping $R$ fixed we have the compact
+set
+$K=\sigma(R)$ in the complex $\lambda$-plane.
+Let $C^0(K)$ be the Banach algebra of continuous and complex-valued
+functions on $K$ equipped with the maxium norm.
+The Stone-Weierstrass theorem
+asserts that
+every
+$\phi\in C^0(K)$ can be uniformly approximated by
+polynomials in $\lambda$ and its complex conjugate $\bar\lambda$.
+So given $\epsilon>0$ we can find
+\[
+Q=\sum\sum\, c_{\nu,k}\cdot \lambda^\nu\cdot \bar\lambda^k
+\]
+such that the maximum norm $|\phi-Q|_K<\epsilon$.
+Let us choose a sequence of such polynomials $\{Q_n\}$
+where $|\Phi-Q_n|_K\to 0$
+Now (B.1.3) entials that
+\[
+\lim\, ||Q_n-Q_m||=0
+\] 
+when $n$ and $m$ both tend to infty.
+Since $L(\mathcal H)$ is compete under the operator norm
+there exists a bounded linear operator
+$T$ such that
+\[
+\lim\,||Q_n-T||=0
+\]
+The reader should check that $T$ does not depend upon the
+sequence $\{Q_n\}$ which approximates the given
+$\Phi$-function.
+We set $T=\widehat{\Phi}$ and in this way we
+have constructed a bounded linear opertor starting from
+an arbitrary continuous  function on $K$.
+Moreover, we have the equality
+\[
+|\Phi|_K= ||\widehat{\Phi}||\tag{B.2.1}
+\]
+\medskip
+
+\noindent
+{\bf{B.3 Exercise.}}
+Use (B.2.1) to conclude that
+$\Phi\mapsto \widehat{\Phi}$
+is a norm-preseribnfg algebra isomorphism from
+$C^0(K)$ onto a closed subalgebra of $L(\mathcal H)$
+which we denote by $\mathcal B(R)$.
+Moreover, every operator  in this algebra is normal
+and  commutes with
+$R$. In this algebra 
+$R$ corresponds to
+the $\Phi$-function defined by
+$\lambda$, while $R^*=\widehat{\Psi}$
+with
+$\Psi(\lambda)=\bar\lambda$.
+\medskip
+
+\noindent
+{\bf{B.4 The algebra $\mathcal B^\infty(R)$.}}
+Let $x,y$ be a pair of vectors in
+$\mathcal H$..
+To each $\Phi\in C^0(K)$ we get the complex number
+\[
+\langle \widehat{\Phi}(x),y\rangle\tag{B.4.1}
+\]
+From (B.3) we see that
+the absolute value of this inner product is
+\[
+\leq |x|\cdot |y|\cdot |\Phi|_K\tag{B.4.2}
+\]
+Tjs emans that (B.4.1) in  defines a linear functional on
+the complex vector space
+$C^0(K)$ whose norm is majorised by
+$|x|\cdot |y|$.
+The famous represetnationm theoremn by F. Riesz
+gives a compex Borel measure $\mu$ of totalvariation
+$\leq |x|\cdot |y|$ such that
+\[
+\langle \widehat{\Phi}(x),y\rangle=\int_K\Phi(\lambda)\,d\mu(\lambda)
+\]
+The measure depends on the pair $x,y$ and is denoted
+by
+$\mu_{\{x,y\}}$.
+In this way we have condtructed a map
+\[
+\mathcal H\times\mathcal H\to M(K)\tag{B.4.3}
+\]
+where $M(K)=nC^0(K)^*$ is the space of
+Borel measure of finite total variation on $K$.
+let us now consider a bounded complex-valued
+Borel function
+$\Psi$ on $K$.
+In other words, for
+every open set $U$ in the complex $\lambda$-plane the inverse image
+$\Psi^m{-1}(U)$ belongs to
+the Boolean $\sigma$-algebra of subsets of $K$ generated by
+its compact subsets.
+Now we apply classic measure theory from
+original work by Emile Borel
+In  particular there exist  integrals
+\[
+\int_K\, \Psi(\lambda)\cdot d\mu_{\{x,y\}}(\lambda)\tag{B.4.4}
+\]
+for every pair $x,y$ in  $\mathcal H$.
+\medskip
+
+
+
+\noindent
+{\bf{The operator $\widehat{\Psi}$.}}
+Keeping $\Psi$ and $y$ fixed
+we notice that
+the integral in (B.4.4) depends linearly upon $x$.
+Recall that a Hibert space is self-dual.
+This gives a unique vector
+$\xi\in \mathcal H$ such that
+\[
+\int_K\, \Psi(\lambda)\cdot d\mu_{\{x,y\}}(\lambda)=\langle x,\xi \rangle
+\quad\colon\,\forall\,\,x\in\mathcal H
+\]
+Next, $\xi$ depends upon the pair $\Psi$ and $y$
+and is dentoed by $\xi(\Psi;y)$.
+Keeping $\Psi$ fixed while $y$ varies the
+reader should verify that
+\[
+y\mapsto \xi(\Psi;y)
+\]
+is linear with resepct to
+$y$.
+The conclusion is that there exists a  linear operator
+$\widehat{\Psi}$ such that
+\[
+\int_K\, \Psi(\lambda)\cdot d\mu_{\{x,y\}}(\lambda)=\langle x,\widehat{\Psi}(y) \rangle
+\]
+hold for every pair $x,y$ in $\mathcal H$.
+The reader should alsomcheck that
+thisoinear operator is bounded and the operator norm
+satisfies
+\[
+||\widehat{\Psi}||\leq |\Psi|_K
+\]
+
+
+
+
+\newpage
+
+
+\centerline{\bf{Self-adjoint operators.}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf{§ A. Eigenvalues and eigenfunctions for the Laplace operator
+in ${\bf{R}}^2$}}.
+\bigskip
+
+
+\noindent
+An instructive exampe of a densely defined but unbounded self-adjoint operator
+appears in PDE-thery where we consider propagation of sound.
+More precisely, let $U$ be a bounded open domain in
+${\bf{R}}^3$ whose boundsry
+$S=\partial U$ is a union of a finite number of
+surfaces, each of class $C^2$.
+Let $\Omega= {\bf{R}}^\setminus \overline{U}$
+be the unbounded complement.
+With $t$ as a time variable we seek solutions to
+the wave equation
+\[
+\partial^2 u/\partial t^2=\\Delta(u)
+\]
+where $\Delta$ is the Laplace operator in
+${\bf{R}}3$.
+Above $u=u(x,t)$ is defined for
+$t\geq 0$ and $x\in\Omega$
+and satisfies the following boundary conditions:
+To begin with
+$x\mapsto u(x,t)$ belongs to $L^2(\Omega9$ for
+every $t\geq 0$.
+Moreover, applying the Lapace operator we also request that
+$x\mapsto \Delta u(x,t)$ belongs to $L^2(\Omega)$ for
+every $t\geq 0$.
+Finally
+\[
+\frac{\partial u}{\partial n}(p,t)=0
+\] 
+for every $p\in S$ and $t\geq 0$ where we have taken
+outer nortmal derivatives along
+$S$.
+Denote by $\mathfrak{U}$ the family of all functions
+$u(x,t)$ satisfying the wave equation and
+the boundary condition (*) together with
+the impposed $L^2$-conditions.
+With these notations one has the following
+classic result:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For each pair of functions $f_0,f_1$ in
+the family $\mathcal F(\Omega)$ there
+exists a unique $u\in\mathfrak{U}$
+such that}
+\[
+u(p,0)= f_0(p)\quad\colon \frac{\partial u}{\partial t}(p,0)=f_1(p)
+\]
+\medskip
+
+\noindent
+In [ibid] Carleman gave a proof of this theorem using his theory
+about unbounded
+self-adjoint operators.It has the merit that
+it yields an expression of the unique solution $u$
+and at the same time
+clarifies the physically expected fact that
+for every $u$-solution one has
+\[
+\lim_{t\to +infty}\, \nabla u(p,t)=0
+\] 
+where the convergence holds uniformly while $p$ satays in a compact subset of
+$\Omega$.
+Here $\nabla(u)=(u_x,u_y,u_z)$ is the gradient vector
+and (*) can be expressed by saying that as $t\to +infty$ then every
+compact portion of $\Omega$ comes to rest.
+The novelty in Carelan's demonstration of (*) was to
+analyze the spectral function assocviated toa certain 
+symmetric Green's function.
+This method has later been adotpoted in PDE-theory dealing with
+various boundary value problems.
+Following  (ibid; page 1xx-1xx] we expose Carleman's
+proof of Theorem x and of (*) which in my opinion offers a very
+instructiuve lesson about
+constructions of unbounded self-adjoint operators.
+First we recall some facts which were established by G. Neumann and H.Poincaré
+around 1880.
+
+\medskip
+
+\centerline{\bf{The Green's function $G(p,q)$.}}
+\medskip
+
+
+\noindent
+Given $\Omega$ as above with its $C^2$-boundary $S$
+there exists a unique function $G(p,q)$
+defined in
+$\Omega\times\Omega$ which is symmetric
+and has Newton's singulairty along the diagonal,  i.e.
+\[
+G(p,q)= \frac{1}{[p-q|}+ H(p,q)
+\] 
+where
+the $H$-function is symmetric and continuous on
+$\overline{\Omega}\times\overline{\Omega}$
+and
+\[
+\lim_{|p|\to \infty} \, |p-q|\cdot H(p,q)=0
+\]
+hold for every fixed
+$q$.
+Moreover, for every fixed
+$p\in \Omega$ one has
+\[
+\frac{\partial G(p,q)}{\partial n_q}=0\quad\colon q\in S
+\]
+let us also recall that during the construction of
+the syymeric $G$-ffun ction, Poincaré established the following
+estimate: For every $p\in \Omega$ there
+exists a constant $C(p)$ such that 
+\medskip
+
+\[
+ \max_{q\in \overline{\Omega}}\,
+|p-q|\cdot |G(p,q)|\leq C(p)
+\]
+\medskip
+
+\noindent
+Keeping $p$ fixed
+one has 
+\[
+G^2(p,q)\simeq |p-q|^{-2}
+\]
+when $|q|$ tends to infinity.
+So the integral
+\[
+\int_\Omega\, G^2(p,q)\, dq
+\] 
+is divergent.
+However, if $p$ and $p'$ is a pair of points in
+$\Omega$ then
+Poincaré proved that
+\[
+\int_\Omega\, (G(p,q)-G(p',q))^2\, dq<\infty
+\] 
+The finiteness of these $L^2$-integrals will
+be sued below to
+analyze the unbounded operator defined via
+the symmetric $G$-function.
+More precisely, we
+notice that
+there exists a densely defined operator on $L^2(\Omega$ defined by
+\[
+\mathcal G(f)(p)= \int_\Omega\, G(p,q)\cdot f(q)\, dq
+\]
+
+\medskip
+
+\noindent
+So far we have collected classic results due to G. Neumann and H. Poincaré.
+The new feature in Carleman's work goes as follows:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{The densely defined linear operator
+$\mathcal G$ is self-adjoint and its  spectrum is confined to
+the non-negative real line. Moreover, $\mathcal G$  is complete in the sense that}
+\[
+f=\int_0^\infty\, \frac{d\Theta}{d\lambda}(f)
+\]
+\emph{hold for every $f\in\mathcal F(\Omega)$
+where $\lambda\to \Theta(\lambda)$ is
+the spectral function attached to $\mathcal G$.}
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+See § xx for the meaning of the
+operator-valued $\Theta$-function attched to the
+self-adjoint operator
+$\mathcal G$.
+The theorem above  implies that
+the unique solution $u$ in Theorem xx is given by
+\[
+u=\int_0^\infty\, \cos\,\sqrt{\lambda}\,t\cdot \frac{d\Theta}{d\lambda}(f_0)+
+\int_0^\infty\, \sin\,\sqrt{\lambda}\,t\cdot \frac{d\Theta}{d\lambda}(f_1)
+\]
+Finally, (*) follows via Riemann's Lemma for Fourier series if
+the spectral function $\Theta$ is absolutely continuous with
+respect to
+$\lambda$.
+\bigskip
+
+\centerline{\bf{About the proof of Theorem xx}}
+\bigskip
+
+\noindent
+As expected Green'sformuka wull
+be applied in several situations.
+To begin with we shal need the following:
+\medskip
+
+\noindent
+{\bf{A. Lemma}}\emph{For each $f\in\mathcal F(\Omega)$ it follows that
+that the Dirichlet integral} 
+\[
+\int_\Omega\, |\nabla(f)|^2\, dq<\infty
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Consider large $R$ so that ${\bf{R}}^3\setminus \Omega$
+is a compact subset of the ball $B(R)$.
+Greens formula gives
+\[
+\int_{\Omega\cap B(R)}\, f\cdot \Delta(f)\, dq+
+\int_{\Omega\cap B(R)}\, |\nabla(f)|^2 \, dq=
+\int_{S(R)}\, u\cdot \frac{\partial u}{\partial r}\, d\sigma-
+\int_{\partial\Omega}\, u\cdot \frac{\partial u}{\partial n}\, d\sigma
+\]
+where $S=\partial\Omega$ and $S(R)$ is the shere of radius $R$.
+Since both $u$ and $\Delta(u)$ belong to
+$L^2(\Omega)$ the Cauchy-Schwarz inequaslity entials that
+the first term above is bounded as a funvtion of $r$ and
+the last area integral over $\partial\Omega$ is also bounded by
+(xx).
+Now we see that lemma A follows if
+\[
+\liminf_{R\to \infty}\, \int_{S(R)}\, u\cdot \frac{\partial r}{\partial n}\, d\sigma=0\tag{A.1}
+\]
+To orve (A.1) we introduce the function
+\[
+\psi(R)= \int_{\Omega\cap B(R)}\, u^2\,dq
+\]
+It follows that
+\[
+\psi'(R)=\int-{S(R)}\, u^2\,d\sigma
+\] 
+Passing to the second derivative the reader can check that
+\[
+\psi''(R)=\frac{2}{R}\cdot \psi'(R)+2\cdot\int_{S(R)}\, \, u\cdot \frac{\partial u}{\partial r}\, d\sigma
+\]
+So (A.1) follows if
+\[
+\liminf_{R\to \infty}\, \frac{\psi''(R)}{2}-\frac{1}{R}\cdot \psi'(R)=0
+\]
+To prove this we frist notice that
+$\psi(R)$ is a positive and  increasing function. Moreover, 
+since
+$u\in L^2(\Omega)$ 
+the $\psi$-function has  a finite limit $A$ as $R\to\infty$.
+Now two csses can occur:
+
+\medskip
+
+\noindent 
+{\bf{Case 1}}. Here we assume that 
+ $R\mapsto \psi'(R)$
+is non-increasing and tends to zero.  
+With $R_2>R_1$ we apply Rolle's theorem and obtain
+\[
+\psi '(R_2)-\psi '(R_1)=(R_2-R_1)\cdot \psi ''(r)\quad\colon R_1<r<R_2
+\]
+We can apply this for pair $R_2>>R_1>>1$ and from this the reader
+can check (xx).
+
+\medskip
+
+\noindent
+{\bf{Case 2.}}
+Here the non-negative function $\psi'(R)$ takes infinitely
+many local  minima.
+Say that they occur at points $q_1<q_2<\ldots$ where $q_\nu\to \infty$.
+At these points we have $\psi''(q_\nu))=0$.
+
+
+\medskip
+
+\noindent
+{\bf{exercise.}}
+deducde from the above that if $f$ and $g$ is a pair in
+$\mathcal F(\Omega)$ then
+\[
+\int_\Omega\, g\cdot \delta(f)\ dq=
+\int_\Omega\, f\cdot \delta(q)\ dq
+\]
+
+\medskip
+
+\noindent
+{\bf{An integral equation.}}
+Keeping $p_*\in\Omega$ fixed
+we consider a complex number $\lambda$ and seek
+complex-valued functions
+$u$ in $\mathcal F(\Omega)$ which satisfy
+\[
+u(p)-u(p_*)= \frac{\lambda}{4\pi}\cdot \int_\Omega\, 
+(G(p,q)-G(p_*,q))u(q)\, dq
+\]
+From the results in § xx it is clear that
+every such $u$-function
+satisfies the equation
+\[ 
+\Delta(u)+\lambda\cdot u=0
+\]
+and the outer normal derivative
+$\frac{\partial u}{\partial n}$ is zero on
+$\partial\Omega$.
+Moreover, using Lemma xx the reader can check that
+\[
+\lambda\cdot \int_\Omega\, |u|^2\, dq=
+ \int_\Omega\, \bigl [\, |u_x|^2+|u_y|^2+(u_z|^2\bigr ]\, dq
+\]
+This entails that
+$\lambda$ must be a real and positive number when
+$u$ is not identically zero.
+\medskip
+
+\noindent
+{\bf{Conclusion.}}
+The fact that (xx) above has no non-trivial solution when
+$\mathfrak{Im}\,\lambda\neq 0$
+entails via Carleman's  general theory in [ibid] that
+the densely defined operator $\mathcal G$ is self-adjoint.
+Moroever, we leave it to the reader to check
+that every $g\in L^2(\Omega)$ for which the function
+\[
+p\mapsto \int_\Omega\, \bigl (G(p,q)-G(p_*,q)\bigr )\cdot g(q)\, dq=0
+\] 
+must be a zero function in
+$L^2(\Omega)$.
+From this it follows that
+the self-adjoint operator $\mathcal G$ is complete, i.e. one
+has the integral represetnation formua (xx) for
+every $f\in\mathcal F(\Omega)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+\centerline{\bf{§ A. Eigenvalues and eigenfunctions for the Laplace operator
+in ${\bf{R}}^2$}}.
+\bigskip
+
+
+\noindent
+Theorem 1 below  was  presented by Carleman at the
+Scandinavian Congress in mathematics held in Stockholm 1934:
+In
+${\bf{R}}^2$ we 
+consider a bounded Dirichlet regular domain
+$\Omega$, i.e. every $f\in C^0(\partial\Omega)$
+has a harmonic extension to $\Omega$.
+A wellknown  
+fact which goes back to original work by Dirichlet
+gives the following: There
+exists the Greens' function
+\[
+G(p,q)= \log\,\frac{1}{|p-q|}-H(p,q)\tag{*}
+\]
+where $H(p,q)= H(q,p)$ is continuous in
+the product set
+$\overline{\Omega}\times\overline{\Omega}$.
+Moreover, $H(p,q)= H(q,p)$ is symmetric and when
+$q\in\Omega$ is fixed, then
+$p\mapsto H(p,q)$ is harmonic in
+$\Omega$ and 
+\[ 
+H(p,q)= \log\,\frac{1}{|p-q|}\quad\colon\, p\in \partial\Omega
+\]
+This means that $p\mapsto  G(p,q)$ vanishes on the boundary.
+next, (*) means that $p\mapsto G(p,q)$ is superharmonic and
+and the minimum principe for superharmonic functions
+plus symmetry entail that 
+\[
+G(p,q)>0
+\]
+hold in $\Omega\times\Omega$. 
+Next, it is obvious that
+\[
+ \iint_{\Omega\times\Omega}\,|G(p,q)|^2\, dpdq<\infty
+ \]
+Hence the linear operator on the Hilbert space $L^2(\Omega)$ defined by
+the symmetric kernel $G(p,q)$
+is a Hilbert-Schmidt operator on
+the Hilbert space $L^2(\Omega)$ and therefore a compact operator.
+Since the kernel symmetric and positive the eigenvalues
+are positive, and general Hilbert space theory
+applied to the symmetric $G$-kernel gives a 
+a sequence of pairwise orthogonal functions
+$\{\phi_n\}$
+whose $L^2$-norms are one and
+\[
+\int_\Omega\, G(p,q)\phi_n(q)\, dq=2\pi\cdot \mu_n\cdot \phi_n(p)\tag{1}
+\]
+where
+$\{\mu_n\}$
+is a non-increasing sequence of positive eigenvalues which tend to zero.
+Next, we apply the Laplace operator on both sides.
+Recall that
+\[
+\Delta(\log\, \frac{1}{|z|})=-2\pi\cdot \delta_0
+\]
+where $\delta_0$ is the Dirac measure.
+It follows that 
+the Laplacian of the left hand side in (1)
+becomes
+$-2\pi\cdot \phi(p)$ and hence (1) gives the equation
+\[
+\Delta(\phi_n)(p)+\frac{1}{\mu_n}\cdot \phi_n(p)=0
+\]
+We prefer to use $\lambda_n=\frac{1}{\mu_n}$. Then
+$\{\lambda_n\}$ is a non-decreasing sequence of real numbers
+which tends to $+\infty$.
+Since the kernel $G(p,q)$ is positive it follows  by general 
+Hilbert space theory -
+that $\{\phi_n\}$ is an orthonormal basis in
+$L^2(\Omega)$, i.e. each $L^2$-function $f$ has an expansion
+\[
+f=\sum\, a_n\cdot \phi_n\quad\colon\,\,
+a_n= \int_\Omega\, f_n(p)\cdot\overline{\phi_n}(p)\, dp\tag{2}
+\]
+\medskip
+
+\noindent
+{\bf{0. Exercise.}}
+Verify from the above   that each $\phi$-function is  a continous function
+in $\Omega$ whose boundary  values on
+$\partial\Omega$ are zero.
+Show also that
+\[
+G(p,q)=
+\sum_{n=1}^\infty\, \frac{\phi_n(p)\cdot \phi_n(q)}{\lambda_n}\tag{0.1}
+\]
+where the right hand side is a convergent series when $p\neq q$.
+\bigskip
+
+
+\noindent
+Notice that $G(p,p)=+\infty$
+so the series
+above with $p=q$ is divergent.
+However, there exists a limit when 
+we employ  larger denominators.
+\medskip
+
+
+\noindent
+{\bf{Theorem 1.}} \emph{For every Dirichlet regular domain
+$\Omega$ and each $p\in\Omega$ one has the limit formula}
+\[ 
+\lim_{N\to\infty}\, \lambda_N^{-1}\cdot \sum_{n=1}^{n=N}\, \phi^2_n(p)= \frac{1}{4\pi}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}} Carleman was iinspired by an earlier result due to
+H. Weyl which asserts that
+the set of eigenvalues satisfy the asymptotic formula
+\[
+\lim_{N\to \infty}\, \frac{\lambda_N}{N}=\frac{\text{Area}(\Omega)}{4\pi}
+\]
+Notice that Weyl's asymptotic formula together with (*) gives
+\[
+\lim_{N\to \infty}\,N^{-1}\cdot \sum_{n=1}^{n=N}\, \phi^2_n(p)=xxxx
+\]
+The notable point is that this asymptotic limit is the same for
+\emph{every} point $p\in\Omega$.
+The proof of Theorem 1 requires several steps.
+First, since  $\mathcal G$ is a Hilbert-Schmidt operator a wellknown result due to Schur
+gives
+\[
+\sum\, \lambda_n^{-2}<\infty \tag{i}
+\]
+Let us also remark that since
+each $\phi_n$ is harmonic we have
+the mean-value equality
+\[
+\phi_n(p)= \frac{1}{\pi r^2}\cdot \int_{D_p(r)}\, \phi(q)\,dq
+\] 
+where $D_p(r)$ is the disc of radius $r$ centered at $p$ and
+$r$ is chosen so small that
+the disc stays in $\Omega$.
+Since the $L^2$-norms of the $\phi$-functions are equal to one,
+the Cauchy-Schwarz inequality  gives a constant $C$ such that
+\[
+|\phi_n(p)|\leq C\quad\colon \, n=1,2,\ldots\tag{ii}
+\]
+Now (i-ii) entail that 
+that  the  Dirichlet series
+\[
+\Phi_p(s)=\sum_{n=1}^\infty \frac{\phi_n^2(p)}{\lambda_n^s}
+\]
+is an analytic function of the complex variable $s$
+in the half-plane
+$\mathfrak{Re}\,  s>2$.
+Less obvious  is the following:
+
+\medskip
+
+\noindent
+{\bf{Theorem 2.}}
+\emph{For each $p\in\Omega$ there exists an entire function
+$\Psi_p(s)$ such that}
+\[
+\Phi_p(s)=\Psi_p(s)+\frac{1}{4\pi(s-1)}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In § xx we explain how
+Theorem 2 gives
+Theorem 1 from   Ikehara's limit formula.
+So the main task is to establish Theorem 2.
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+The proof of Theorem 2 employs analytic function theory and is inspiredby Riemann's
+work on the $\zeta$-function.
+The interested reader is invited to
+establish more general results, where $\Delta$ is replaced by a higher order
+elliptic  operator in ${\bf{R}}^n$ where $n\geq 3$ can hold.
+In the cited article  such extensions are poibnted out by Carleman on
+p. xx after the proof of Theorem 1.
+\medskip
+
+\noindent
+\emph{Remarquons que la méthode dont nous
+nous sommes servis est aussi appliquable à une equation
+elliptique quleconque à un nombre quleconque de dimensions.}
+\medskip
+
+\noindent
+In § xx we shall present Carleman's asymptotic formula for
+eigenvalues of a second order ellitpic operator
+in ${\bf{R}}^3$
+which in general has variable coefficiebts and need not be self-adjoint.
+Of course, to get a resyukt such as
+Theorem 1 with an asymptotic limit formula which
+is independent of the point $p$
+in the domain where
+the eigenfunctions appear, usually requires that the elliptic
+PDE-operator has constant coefficients.
+It goes without saying that many specific problems desevere to be analyzed in more detail.
+A broader perpective concerning asymptotic
+reperesentations arises when one for example regards
+spectral functions associated to
+self-adjoint operators defined via elliptic PDE:s.
+See § xx below whgere we give some comments about
+Carlea'ns discussion of
+the Schrödinger equation
+\[
+\Delta(u)- c(x,y,z)\cdot u=i\frac{\partial u}{\partial t}
+\]
+Here $\Delta is the Laplace operator and
+$c(x,y,z) is a real-valued function which
+is locally square integrable and
+there exist  constants $R$  and  $M$ such that
+\[
+c(x,y,z)\leq M\quad\colon x^2+y^2+z2\geq R^2
+\] 
+When (*) holds it was proved by Carleman  in 1931
+that the densely defined operator
+$\Delta-c$ is self-adjoint on $L^2({\bf{R}}^3)$
+whose  spectrum is confined to
+$[\ell,+\infty)$ for some real number
+$\ell$.
+If $\Theta$ is the associated spectral function
+we get a solution to (xx) wiuth
+initial condition
+$u(p,0)= f(p)$ by
+\[
+u(p,t)= \int_\ell^\infty\, e^{it\lambda}\cdot \bigl[\,{\int_{\bf{R}}^3}
+\Theta(p,q;\lambda)\cdot f(q)\, dq\,\bigr ]\,d\lambda
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{Proof of Theorem 2}}
+
+\bigskip
+
+\noindent
+For each $\lambda$ outside the discrete set $\{\lambda_n\}$ we put
+\[
+G(p,q;\lambda)=
+G(p,q)+
+2\pi\lambda\cdot \sum_{n=1}^\infty\,
+\frac{\phi_n(p)\phi_n(q)}{\lambda_n(\lambda-\lambda_n)}\tag{1}
+\]
+Notice that (i-ii) above entail that the last sum is
+converges and gives a meromorohic function of
+the complex variable $\lambda$ whose poles
+are at most simple and confied to the set $\{\lambda_n\}$
+Moreover, we get 
+the integral operator
+$\mathcal G_\lambda$ defined on $L^2(\Omega)$ by
+ \[ 
+ \mathcal G_\lambda(f)(p)
+ =\frac{1}{2\pi}\cdot \iint_\Omega\, G(p,q;\lambda )\cdot f(q)\, dq\tag{2}
+\]
+
+\medskip
+
+\noindent
+{\bf{A. Exercise.}} Use that the eigenfunctions $\{\phi_n\}$ is an orthonormal basis in
+$L^2(\Omega)$ to show that
+\[
+(\Delta+\lambda)\cdot \mathcal G_\lambda=-E
+\]
+
+
+\noindent{\bf{B. The function $F(p,\lambda)$}}.
+Set
+\[ 
+F(p,q,\lambda)= G(p,q;\lambda)- G(p,q)
+\]
+Keeping $p$ fixed we see that (1) gives
+\[
+\lim_{q\to p}\, F(p,q,\lambda)=
+2\pi\lambda\cdot \sum_{n=1}^\infty\,
+\frac{\phi_n(p)^2}{\lambda_n(\lambda-\lambda_n)}\tag{B.1}
+\]
+Set
+\[
+F(p,\lambda)=
+\lim_{q\to p}\, F(p,q,\lambda)\tag{B.2}
+\]
+From (i-ii) above we see that
+$F(p,\lambda)$
+is a meromorphic function in
+the complex $\lambda$-plane with at most simple poles
+at $\{\lambda_n\}$.
+\medskip
+
+\noindent{\bf{C. Exercise.}}
+Let $0<a<\lambda_1$. Use  residue calculus to show
+the equality below in the  half-space
+$\mathfrak{Re}\, s>2$:
+\[ 
+\Phi_p(s)=
+\frac{1}{4\pi^2 \cdot i}\cdot \int_{a-i\infty}^{a+i\infty}\, 
+F(p,\lambda)\cdot \lambda^{-s}\, d\lambda\tag{C.1}
+\]
+where the line integral  is taken on the vertical  line
+$\mathfrak{Re}\,\lambda=a$.
+
+\medskip
+
+\noindent
+{\bf{D. Change of contour integrals.}}
+At this stage we employ a device which goes to
+Riemann and
+move the integration into the half-space
+$\mathfrak{Re}(\lambda)<a$.
+Consider  the curve $\gamma_+$
+defined as the union of the
+negative real interval $(-\infty,a]$ followed by
+the upper
+half-circle $\{\lambda= ae^{i\theta}\,\colon 0\leq\theta\leq \pi \}$
+and the 
+half-line $\{\lambda= a+it\,\colon t\geq 0\}$.
+Cauchy's theorem entails that 
+\[ 
+\int_{\gamma_+}\, F(p,\lambda)\cdot \lambda^{-s}\, d\lambda=0
+\]
+We leave it to the reader to contruct the
+similar
+curve
+$\gamma_-=\bar \gamma_+$. Using 
+the vanishing of these line integrals and taking the branches of the 
+multi-valued function
+$\lambda^s$ into the account the reader should verify the following:
+
+\medskip
+
+
+\noindent
+{\bf{E. Lemma.}}
+\emph{When $\mathfrak{Re}\, s$ is sufficientyl large
+one has the equality}
+\[ 
+\Phi(s)=\frac{a^{s-1}}{4\pi}\cdot \int_{-\pi}^\pi\,
+F(ae^{i\theta})\cdot e^{(i(1-s)\theta}\,d\theta
++
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\, F(p,-x)\cdot x^{-s}\,dx\tag{E.1}
+\]
+\medskip
+
+\noindent
+The first term in the sum of the right hand side of (E.1)
+is obviously an entire function of $s$. So Theorem 2 follows if
+\[
+ s\mapsto  \frac{\sin \pi s}{2\pi^2}\cdot \
+ \int_a^\infty\, F(p,-x)\cdot x^{-s}\,dx\tag{E.2}
+\]
+is meromorphic with
+a single pole at $s=1$ whose residue is $\frac{1}{4\pi}$.
+To prove  this we shall  express $F(p,-x)$ when $x$ are real and positive in another way.
+\medskip
+
+\noindent
+{\bf{F.  The $K$-function.}}
+In the half-space $\mathfrak{Re}\,z>0$ there exists the analytic function
+\[
+K(z)= \int_1^\infty\, \frac{e^{-zt}}{\sqrt{t^2-1}}\,dt
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that $K$ extends to a multi-valued analytic function outside
+$\{z=0\}$ given by
+\[
+K(z)=-I_0(z)\cdot \log z+ I_1(z)\tag{F.1}
+\] 
+where $I_0$ and $I_1$ are entire functions
+with series expansions
+\[
+I_0(z)=\sum_{m=0}^\infty\, \frac{2^{-2m}}{(m!)^2}\cdot
+z^{2m}\tag{i}
+\]
+\[ 
+I_1(z)= \sum_{m=0}^\infty\, \rho(m)\cdot
+\frac{2^{-2m}} {(m!)^2} \cdot z^{2m}\quad
+\colon \rho(m)=1+\frac{1}{2}+\ldots+\frac{1}{m}-\gamma\tag{ii}
+\]
+where $\gamma$ is the usual Euler constant.
+
+\bigskip
+
+
+\noindent
+Next, with   $p$ kept fixed and $\kappa>0$ 
+we solve the Dirichlet problem and find
+a  function $q\mapsto H(p,q;\kappa)$ which satisfies  the
+equation
+\[
+ \Delta(H)-\kappa\cdot H=0\tag{F.2}
+\] 
+in $\Omega$ with boundary values
+\[ 
+H(p,q;\kappa)=K(\sqrt{\kappa}|p-q|)\quad\colon q\in \partial\Omega
+\]
+
+
+\noindent
+{\bf{G. Exercise.}}
+Verify the equation
+\[ 
+G(p,q;-\kappa)=K(\sqrt{\kappa}\cdot |p-q|)- H(p,q;\kappa)\quad\colon \kappa>0\tag{G.1}
+\]
+
+
+
+\noindent
+Together with the  construction of $G(p,q)$ the reader can verify the equation
+\[
+ F(p,-\kappa)=
+ \lim_{q\to p}\,
+ [K(\sqrt{\kappa}\cdot |p-q|)+\log\,|p-q|]+
+ \lim_{q\to p}\,[H(p,q)- H(p,q,\kappa)]\tag{G.2}
+\]
+The last term above has the  "nice limit" 
+$H(p,p)+H(p,p,\kappa)$ and from  (F.1)  the reader can  verify the limit formula:
+\[
+ \lim_{q\to p}\,
+ \bigl(\, K(\sqrt{\kappa}\cdot |p-q|)+\log\,|p-q|\bigr)=
+ -\frac{1}{2}\cdot \log \kappa +\log 2-\gamma\tag{G.3}
+\]
+where $\gamma$ is  Euler's constant.
+
+\bigskip
+
+\noindent
+{\bf{H. Final part of the proof.}}.
+Set $A=  +\log 2-\gamma+H(p,p)$. Then (G.1) and (G.2)
+give
+\[
+F(p,-\kappa)= -\frac{1}{2}\cdot \log \kappa +A+H(p,p;\kappa)
+\]
+With $x=\kappa$ in (E.2 ) we  proceed  as follows.
+To  begin with it is clear that
+\[
+s\mapsto A\cdot 
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\,  x^{-s}\,dx
+\]
+is an entire function of $s$.
+Next,  consider the function
+\[ 
+\rho(s)=
+ -\frac{1}{2}\cdot 
+\frac{\sin \pi s}{2\pi^2}\cdot \int_a^\infty\,  \log x\cdot x^{-s}\,dx
+\]
+Notice that the complex derivative
+\[
+\frac{d}{ds}\,  \int_a^\infty\,  x^{-s}\,dx=
+- \int_a^\infty\,  \log x\cdot x^{-s}\,dx
+\]
+
+\medskip
+\noindent
+{\bf{H.1 Exercise.}}
+Use the  above to show that
+\[
+\rho(s)-\frac{1}{4\pi(s-1)}
+ \]
+is an entire function.
+\medskip
+
+
+\noindent
+From the above we see that Theorem 2  follows if we have proved
+\medskip
+
+\noindent
+ {\bf{H.2 Lemma.}}
+\emph{The following function  is entire}:
+\[
+s\mapsto \frac{\sin\,\pi s}{2\pi^2}\cdot
+\int_a^\infty\, H(p,p,\kappa)\cdot  \kappa^{-s}\,d\kappa
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+When $\kappa>0$
+the equation (F.1) shows that $q\mapsto H(p,q;\kappa)$
+is subharmonic  in $\Omega$ and the maximum principle gives
+\[
+0\leq  H(p,q;\kappa)\leq \max_{q\in\partial\Omega}\,K(\kappa|p-q|)\tag{i}
+\]
+With  $p\in\Omega$ fixed there is 
+a positive number
+$\delta$ such that
+$|p-q|\geq\delta\,\colon q\in \partial\Omega$ which  
+gives
+positive constants
+$B$ and  $\alpha$  such that
+\[
+H(p,p;\kappa)\leq e^{-\alpha\kappa}\quad\colon \kappa>0\tag{ii}
+\]
+The reader may now check that this
+exponential decay gives Lemma H.2.
+
+\newpage
+
+
+\end{document}
+

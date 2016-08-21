@@ -1,0 +1,3991 @@
+
+\documentclass{amsart}
+
+
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\begin{document}
+
+\centerline{\bf\large  Chapter 4: Multi-valued analytic functions}
+
+\bigskip
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+1. Angular variation and Winding numbers
+\medskip
+
+\noindent
+2. The argument principle
+\medskip
+
+\noindent
+3. Multi-valued functions
+
+\medskip
+
+
+\noindent
+4. The monodromy theorem
+\medskip
+
+\noindent
+5. Homotopy and Covering spaces
+\medskip
+
+\noindent
+6. The uniformisation theorem
+\medskip
+
+
+\noindent
+7. The $\mathfrak{p}^*$-function
+
+
+\medskip
+
+\noindent
+8. Eistensein's theorem
+\medskip
+
+\noindent
+9. Reflections across a boundary
+
+
+\medskip
+
+\noindent
+10. The elliptic modular function
+\medskip
+
+
+\noindent 
+11. Work by Henri PoincarŽ
+
+
+
+
+
+\bigskip
+
+
+
+\noindent
+\centerline {\bf\large{ Introduction.}}
+\medskip
+
+
+\noindent
+In ¤ 1 we define winding numbers of curves
+in ${\bf{R^2}}$
+where no complex variables appear.
+After his we study
+complex line integrals where
+Theorem 1.7 which is the first main result in this chapter.
+The second main result is
+Theorem 2.1, referred to as the
+\emph{argument principle}. It gives  a gateway to
+find zeros of an analytic function since the counting function of its
+zeros is expressed by winding numbers arising from
+the image under the given function of closed boundary curves to a domain where
+we seek the number of zeros of $f$.
+\medskip
+
+\noindent ¤ 3 starts with 
+a construction due to Weierstrass
+and leads to the total analytic continuation of   germs of
+analytic functions.
+A  picture arises when we  
+consider the \emph{total sheaf space} 
+$\widehat{\mathcal O}$
+whose stalks are germs of analytic functions 
+at points in ${\bf{C}}$.
+This topological manifold  is locally homemorphic to
+small discs in $\bf C$ which   express 
+germs of multi-valued
+functions $f$.
+More precisely, 
+if $\rho$ denotes the local homemorphism from 
+$\mathcal {\widehat O}$ onto $\bf C$ , then
+there is a 1-1 correspondence between connected open subsets of
+$\rho^{-1}(\Omega)$ and the class of multi-valued analytic functions in
+$\Omega$, where on does not exclude those functions $f$ which may
+have analytic continuation to larger sets.
+Using the Weierstrass procedure to
+perform analytic continuation along a curve by regarding
+local power series in small discs placed in succesion along the curve, one
+can  prove
+that various  classes of multi-valued analytic functions are
+\emph{normal} in the sense of Montel. In other words, 
+results for single-valued analytic functions from ¤ X in Chapter III
+can be extended to the multi-vaued case.
+
+\medskip
+
+\noindent
+In ¤ 4 we prove the 
+\emph{Monodromy Theorem}  and describe
+multi-valued functions in a punctured disc. After this we insert material
+from topology in ¤ 5 and announce
+the uniformisation theorem in ¤ 6.
+In  ¤7 we construct the
+${\bf{p}}^*$-function which will be used
+to solve 
+the Dirichlet problem in Chapter 5 and 
+¤ 8 is devoted to a  result due to
+Eisenstein. The
+proof is instructive since it 
+teaches how to manipulate with
+multiple-valued algebraic root functions. In ¤ 9 we recall the 
+\emph{Spiegelungsprinzip}
+by  Hermann Schwarz which is
+applied
+in ¤ 10 to construct the
+\emph{modular function} and after can be used
+to establish
+the uniformisation theorem for domains in
+${\bf{C}}$.
+A special local study about algebraic functions is made in ¤ 11
+where the results are used to construct Riemann surfaces of
+algebraic function fields.
+The final Section 12 contains  a brief exposittion 
+about  contributions by PoincarŽ, foremost
+his constructions of Fuchsian groups.
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf 1. Angular variation and Winding numbers}
+
+
+
+\bigskip
+
+\noindent
+Let $(x,y)$ be the coordinates
+in ${\bf{R}}^2$ and
+consider a vector-valued function of the real parameter $t$:
+\[ 
+t\mapsto (x(t),y(t))\quad\colon\quad 0\leq t\leq T
+\]
+We assume that the image does not contain the origin, i.e. 
+$x^2(t)+y^2(t)>0$ and  $x(t)$ and $y(t)$  are both
+continuously differentiable. Set
+\[
+\dot x(t)=\frac{dx}{dt}\quad\text{and}\quad
+\dot y(t)=\frac{dy}{dt}\quad\text{and}\quad 
+r(t)=\sqrt{x(t)^2+y(t)^2}
+\]
+\medskip
+
+\noindent 
+{\bf{1.1 Proposition.}}
+\emph{There exists a unique continuous map $t\mapsto \phi(t)$ such that}
+\[ 
+x(t)=r(t)\cdot \text{cos}\,\phi(t)\quad\colon\quad
+y(t)=r(t)\cdot \text{sin}\,\phi(t)\quad\colon 0\leq t\leq T\tag{*}
+\]
+\emph{where the $\phi$-function satisfies
+the initial condition:}
+\[
+x(0)=r(0)\cdot \text{cos}\,\phi(0)\quad\text{and}\quad
+y(0)=r(0)\cdot \text{sin}\,\phi(0
+\]
+
+
+
+\medskip
+\noindent
+\emph{Proof.}
+We  can solve the first order  ODE-equation.
+\[
+\dot\phi=
+\frac{x\dot y-y\dot x}{x^2+y^2}
+\]
+with initial condition $\phi(0)$ as above.
+There remains to show that (*) holds for all $t$.
+Let us for example verify the
+$x(t)=r(t)\cdot \text{cos}\,\phi(t)$.
+It suffices to prove that
+\[ 
+\frac{d}{dt}( r(t)\cdot \text{cos}\,\phi(t))=\dot x\tag{1}
+\]
+To prove  this we notice that the left hand side becomes
+\[
+\dot r\cdot\text{cos}(\phi)-
+r\cdot\text{sin}(\phi)\dot\phi=
+\frac{\dot r\cdot x}{r}-y\cdot\dot\phi
+\tag{2}
+\]
+Next, since $r=\sqrt{x^2+y^2}$ we have
+\[ 
+r\dot r=x\dot x+y\dot y
+\]
+Hence (2) is equal to
+\[
+\frac{x^2\dot x+xy\dot y}{r^2}-
+\frac{y(x\dot y-y\dot x)}{r^2}=\frac{(x^2+y^2)\dot x}{r^2}=\dot x
+\]
+This proves Proposition 1.1
+
+\bigskip
+
+\noindent
+{\bf {1.2 The angular variation.}}
+Since the sine  and the cosine functions are $2\pi$-periodic,
+the $\phi$-function  above is only uniquely determined up to
+integer multiples of $2\pi$. A specific choice
+arises from  the   value $\phi(0)$.
+However, we get an
+\emph{intrinsic number}  by the difference
+\[ 
+\phi(T)-\phi(0)\tag{**}
+\] 
+This number is  called the  \emph{angular variation}
+of the  function
+$t\mapsto (x(t),y(t))$.
+If we  choose another parametrization where $t=t(\tau)$ is 
+non-decreasing and $0\leq \tau\leq T^*$, then 
+we start with the vector valued function $\tau\mapsto x(t(\tau),y(t(\tau))$
+and find $\phi(\tau)$. Calculus shows that
+(**) is the same. Thus, the  angular variation
+of an oriented  parametrized $C^1$-curve is intrinsically defined.
+
+
+\bigskip
+
+\noindent
+{\bf A notation.} The angular  variation along
+a parametrized curve
+$\gamma$ is denoted by
+$\mathfrak{a}(\gamma)$.
+If $\gamma$ is a curve we can construct the
+curve $\gamma^*$ with the opposite direction:
+\[ \gamma^*(t)=\gamma(T-t)
+\]
+It is clear that
+\[
+\mathfrak{a}(\gamma^*)=-
+\mathfrak{a}(\gamma)
+\]
+In other words,  up to a sign the angular variation is
+determined by the orientation of the curve.
+
+
+\newpage
+
+
+\centerline {\bf 1.3 The case of closed curves.}
+\medskip
+
+\noindent
+If $x(0)=x(T)$ and $y(0)=y(T)$
+the   variation is an integer multiple of $2\pi$.
+So if $\gamma$ is a closed  parametrized curve then
+$\mathfrak{a}(\gamma)$ is an integer multiple of $2\pi$ and we set
+\[
+\mathfrak{w}(\gamma)=\frac{\mathfrak{a}(\gamma)}{2\pi}
+\]
+We refer to $\mathfrak{w}(\gamma)$ 
+as the 
+\emph{winding number} of $\gamma$.
+By the construction one has
+\[ 
+\mathfrak{w}(\gamma)=
+\frac{1}{2\pi}\int_0^T\,
+\frac{x\dot y-y\dot x}{x^2+y^2}\cdot dt\tag{1.1}
+\]
+
+
+\noindent
+{\bf Example.}
+Let  $m$ be a positive integer and 
+\[
+x(t)=\text{cos}\, mt\quad\colon\quad
+y(t)=\text{sin}\, mt
+\]
+Notice that $x^2+y^2=1$. It follows that
+\[
+\frac{x\dot y-y\dot x}{x^2+y^2}\cdot dt=
+\text{cos}\,mt\cdot m\cdot \text{cos}\, mt-
+\text{sin}\, mt\cdot (-m\cdot\text{sin}\, mt)=m
+\]
+Hence the winding number is equal to $m$.
+
+
+
+
+
+
+\bigskip
+
+\noindent
+{\bf 1.4 Homotopy invariance.}
+Consider a family of closed curves
+\[
+\{\gamma_s\colon\,0\leq s\leq 1\}\quad\colon\,\gamma_s(0)=\gamma_s(T)
+\,\colon\quad\,0\leq s\leq 1
+\]
+Let $t\mapsto (x_s(t),y_s(t))$ be the parametrization of
+$\gamma_s$. 
+For  each fixed $s$ the curve
+$t\mapsto \gamma_s(t)$ 
+has a winding number $\mathfrak{w}(\gamma_s)$.
+\emph{Assume} that
+the two $C^1$-functions 
+depend continuously upon $s$. Then
+$s\mapsto\mathfrak{w}(\gamma_s)$ is a continuous function and
+since it is  integer-valued it must be a constant.
+Hence we have proved
+\bigskip
+
+\noindent {\bf 1.5 Theorem} \emph{Let $\{\gamma_s\}$
+be a homotopic  family of closed
+curves 
+Then
+they have the same winding number.}
+\medskip
+
+\noindent {\bf  Remark.} In topology one refers to
+this by saying that the winding number is
+the same in each homotopy class of closed 
+parametrized curves which
+surround the origin. A parametrized curve
+$\gamma$ is defined by a map
+$t\mapsto \gamma(t)$
+which  need not be 1-1, i.e. we only assume that
+$\gamma(0)=\gamma(T)$.
+One may think of an insect which takes a walk on the
+horisontal $(x,y)$-plane starting at point
+$p$ at time $t=0$ and  returns to $p$ after a certain time
+interval $T$. During this walk the
+insect may
+cross an earlier path several times and even walk in the same path
+but in opposed direction for a while. The sole constraint is that the insect
+never attains the origin, i.e. 
+$x(t)^2+y(t)^2>0$ must hold in order to construct the winding number.
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf 1.6 Rouche's principle.}
+\medskip
+
+\noindent
+Let $\gamma_*$ be a  parametrized closed curve. Suppose that
+$\gamma$ is another closed curve such that
+\[
+|\gamma_*(t)-\gamma(t)|<|\gamma_*(t)|\quad
+\colon\quad 0\leq t\leq T\tag{i}
+\]
+To each $0\leq s\leq 1$ we  obtain the closed curve
+$\gamma_s(t)=s\cdot \gamma_*+(1-s)
+(\gamma_*(t)-\gamma(t))$ which by (i)
+also the  surrounds the origin.
+This gives  a homotopic family and   Theorem 1.5 gives:
+\[ 
+\mathfrak{w}(\gamma_*)=
+\mathfrak{w}(\gamma)\tag{*}
+\]
+
+
+\noindent
+{\bf The case of non-closed curves.}
+Let $p$ and $q$ be two points outside the origin.
+Consider two curves
+$\gamma_1$ and $\gamma_2$ where $p$ is the common initial point and $q$ the common end-point.
+Now we get the closed curve
+$\rho$ defined by
+\[ 
+\rho(s)=\gamma_1(2s)\quad\colon 0\leq s\leq T/2\text{and}\quad \rho(s)=
+\gamma_2(2T-2s)
+\quad\colon T/2\leq s\leq T
+\]
+Here we find that
+\[
+\mathfrak{w}(\rho)=
+\mathfrak{a}(\gamma_1)-
+\mathfrak{a}(\gamma_2)
+\]
+Next,
+keeping $p$ and $q$ fixed we consider a continuous family of curves
+$\{\gamma_s\}$ where
+$\gamma_s(0)=p$ and $\gamma_s(T)=q$ for all $0\leq s\leq 1$.
+To each $s$ we get the two curves
+$\gamma_0$ and $\gamma_s$
+and construct the closed curve
+$\rho$ as above. Theorem 1.5  implies 
+that the difference
+\[
+\mathfrak{a}(\gamma_0)-
+\mathfrak{a}(\gamma_s)
+\] 
+is a constant function of $s$.
+Since the difference obviously is zero when $s=0$
+we conclude that
+\[
+\mathfrak{a}(\gamma_0)=
+\mathfrak{a}(\gamma_s)\quad\colon\, 0\leq s\leq 1
+\]
+Thus, the angular variation is constant in a homotopic family of curves
+which join a pair of
+points $p$ and $q$.
+
+
+
+\bigskip
+
+\noindent
+{\bf 1.7 Variation of vector-valued functions}
+Let $\gamma$ be a  parametrized $C^1$-curve. Here we do not exclude
+that
+$\gamma(t)=(0,0)$ for some values of $t$, i.e. $\gamma$ is an arbitrary
+$C^1$-curve.
+Consider a pair of $C^1$-functions $u(x,y)$ and
+$v(x,y)$ defined in some neighborhood of the compact
+image set $\Gamma=\gamma([0,T])$.
+If $u^2+v^2\neq0$ on $\Gamma$
+we get a  curve $\gamma^*$ which surrounds the
+origin
+defined by
+\[ 
+t\mapsto (u(\gamma(t)),v(\gamma(t))\tag{i}
+\]
+Write $\gamma(t)=(x(t),y(t))$ and set
+\[ 
+\xi(t)=u(x(t),y(t))\quad\colon\quad
+\eta(t)=v(x(t),y(t))
+\]
+Then we have
+\[ 
+\mathfrak{a}(\gamma^*)=
+\int_0^T\,\frac{\xi\dot\eta-\eta\dot\xi}{\xi^2+\eta^2}\cdot dt\tag{ii}
+\]
+Now $\dot\xi= u_x\ddot x+u_y\dot y$ and similarly for
+$\dot\eta$.
+So the last integral becomes
+\[
+\int_0^T\,\frac{u(v_x\dot x+v_y\dot y)-v(u_x\dot x+u_y\dot y)}
+{u^2+v^2}\cdot dt \tag{*}
+\]
+This yields an integer which we refer to as the
+variation 
+of the vector valued function $(u,v)$ along the closed curve
+$\gamma$.
+We denote this integer by a subscript notation and write
+$\mathfrak{a}_{(u,v)}(\gamma)$. In the case when
+$\gamma$ is a  closed curve we define the winding number
+\[
+\mathfrak{w}_{(u,v)}(\gamma)=
+\frac{1}{2\pi}\cdot \mathfrak{a}_{(u,v)}(\gamma)
+\]
+Notice that this integer depends upon the pair $(u,v)$ while $\gamma$ is kept fixed. 
+
+
+
+\medskip
+
+
+\noindent{\bf 1.8 The case of CR-pairs}
+Let $\gamma$ be a  curve
+and $f(z)=u+iv$  an  analytic in a neighborhood of
+$\gamma(T)$ where we assume that
+$f(\gamma(t))\neq 0$ for all $t$.
+Hence $u^2+v^2\neq 0$ on $\gamma$
+so we can define
+$\mathfrak{a}_{(u,v)}(\gamma)$.
+Now $(u,v)$ satisfy the Cauchy-Riemann equations
+which enables us to express  
+$\mathfrak{a}_{(u,v)}(\gamma)$ 
+in an elegant way.
+Namely let $t\mapsto 
+(x(t),y(t))$ be a parametrization of $\gamma$ and write
+$z(t)=x(t)+iy(t))$. Then
+\[ 
+\dot z=\dot x+i\dot y
+\]
+Now we regard the function
+\[
+t\mapsto \mathfrak{Im}\,[\frac{f'(z(t))}{f(z(t))}\cdot\dot z(t)\,]\tag{i}
+\]
+Since the complex derivative
+$f'(z)=u_x+iv_x$ we obtain
+\[
+\frac{f'(z(t))}{f(z(t))}\cdot\dot z(t)=
+\frac{(u_x+iv_x)(u-iv)(\dot x+i\cdot \dot y)}{u^2+v^2}\tag{ii}
+\]
+The imaginary part becomes
+
+
+\[
+\frac{u_x u\dot y-u_xv\dot x+v_x u\dot x+v_xv\dot y}{u^2+v^2}=
+\frac{u(u_x\dot y+v_x\dot x)-v(u_x\dot x-v_x\dot y)}{u^2+v^2}\tag{iii}
+\]
+
+
+\noindent
+Next, we can apply the Cauchy-Riemann equations and replace
+$u_x$ with $v_y$ and $-v_x$ by $u_y$. Then
+we see that (iii) is equal to the integrand which appears
+in (*) in 1.7.
+Hence we have proved the following:.
+\medskip
+
+\noindent {\bf 1.9 Theorem} \emph{Let $f(z)=u+iv$ be holomorphic in a neighborhood of
+$\gamma$ and set $\mathfrak{a}_f(\gamma)=\mathfrak{a}_{(u,v)}(\gamma)$.
+Then}
+\[ 
+\mathfrak{a}_f(\gamma)=
+\int_0^T\,
+\mathfrak{Im}\,\bigl [\frac{f'(z(t))}{f(z(t))}\cdot\dot z(t)\,\bigr ]\cdot dt\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf 1.10 Remark} By the construction of complex line integrals, 
+(*) 
+can  be written
+as
+\[
+\frac{1}{i}\cdot\int_\gamma
+\mathfrak{Im}\,[\frac{f'(z)}{f(z)}\,]\cdot dz
+\]
+This complex notation is often used.
+When
+$\gamma$ is a closed curve we get the winding number
+\[
+\mathfrak{w}_f(\gamma)=
+\frac{1}{2\pi i}\cdot\int_\gamma
+\mathfrak{Im}\,[\frac{f'(z)}{f(z)}\,]\cdot dz
+\]
+So this complex line integral always is an integer whenever
+$f(z)$ is analytic and $\neq 0$ in some open neighborhood of
+the compact set
+$\gamma([0,T])$.
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf 1.11 Jordan's curve theorem  }
+Let $\gamma$ be 
+a closed $C^1$-curve and set $\Gamma=\gamma([0,T])$.
+To each $a\in {\bf{ C}}\setminus \Gamma $
+the closed curve 
+\[
+t\mapsto \frac{1}{\gamma(t)-a}
+\]
+surrounds the origin. Its   winding number
+denoted by $\mathfrak{w}_a(\gamma)$.
+From (*) in 1.4 we see
+that
+this winding number is constant in every connected
+component if $ {\bf {C}}\setminus \Gamma$.
+
+\bigskip
+
+
+\noindent
+{\bf 1.12 The case when $\gamma$ is 1-1}
+Assume that $\gamma(t)$ is 1-1  except for the 
+common end-values. This means that the image curve
+$t\mapsto \gamma(t)$ is a 
+\emph{closed Jordan curve}.
+For each $a\in{\bf{ C}}\setminus\Gamma$ 
+we notice that $t\mapsto \gamma(t)-a$
+is  1-1.
+In  the equation from XX which
+determines the $\phi$-function for a given $a$
+where we may take $\phi(0)=0$
+as initial value shows that $t\mapsto\gamma(t)$ is 1-1 on the open interval $(0,T)$.
+Hence $\phi(t)$ cannot be an integer multiple of $2\pi$ when
+$0<t<T$.
+Starting with $\phi(0)=0$ it  follows that
+\[ -2\pi<\phi(t)<2\pi\quad\colon\quad
+0<t<2\pi
+\]
+Hence $\phi(T)$ can only attain one of the values $-2\pi,0,2\pi$.
+The \emph{Jordan curve theorem}  tells us that the value zero is never
+attained. Moreover, 
+the set of points $a$ for which the winding number equals 1 is a conneced
+open set, called the Jordan domain bounded by $\Gamma$. The complementary set is also
+connected and here $\mathfrak{w}_a(\gamma)=0$.
+This can be expressed by saying
+that the closed Jordan curve $\Gamma$ divides $\bf C$ into two component.
+This topological  result was proved by   
+Camille Jordan in 1850 and it is 
+is actually  valid under the relaxed assumption that the $\gamma $-function is only continuous.
+In that case the proof of Jordan's Curve Theorem
+is  more demanding.
+For a detailed proof 
+of the continuous version of Jordan's Curve 
+Theorem we refer  [Newmann] where methods of algebraic topology are used.
+We remark that Jordan's theorem in the plane is subtle in view of a quite 
+remarkable  discovery in dimension 3 due to 
+X. Alexander who constructed 
+a \emph{homeomorphic copy} of the unit sphere in $R^3$ where the analogue of Jordan's theorem is not valid. This goes beyond
+the scope of these notes.
+A recommended text-book in
+algebraic topology is Alexander's classic text-book [Al] 
+which gives an excellent introduction to the  subtle parts of the theory.
+\medskip
+
+
+\noindent
+{\bf 1.13 The case of a simple polygon.}
+Let $p_1,\ldots,p_N$ be distinct points in $\bf C$
+where $N\geq 3$.
+To each 
+$1\leq\nu\leq N-1$ we get a line segment
+$\ell_\nu=[p_\nu,p_{\nu+1}]$ and we also get the line segment 
+$\ell_N=[p_N,p_1]$.
+Assume that they do not intersect.Then
+they give sides of a simple closed curve $\Gamma$ whose corner points are
+$p_1,\ldots,p_N$. The circle $\Gamma$ is oriented where one travels in 
+the positive direction from $p_\nu$ to $p_{\nu+1}$ 
+when $1\leq\nu\leq N-1$ and makes the final positive travel from
+$p_N$ to $p_1$.
+We can imagine a narrow channel $\mathcal C_+$ which 
+surrounds $\Gamma$ and from this one can
+"escape" to the point at infinity. For example at a corner point
+$p_\nu$ where $|p_\nu|$ is maximal the channel contains
+points of absolute value $>1$.
+From this picture it is clear the the \emph{outer component}
+$\Omega_\infty$
+of
+$\Gamma$ is connected - and even simply connected if one
+adds the point at infinity. Rouche's principle shows
+that the winding number is zero for
+all points in the exterior component.
+If we instead construct a narrow channel $\mathcal C_*$
+which moves "just inside" $\Gamma$ 
+then the channel itself is obviously connected.
+But their remains to see why the whole interior is connected and that
+the common winding number is  equal to one.
+This, if $\Omega_*$ is the open complement of
+$\Gamma\cup\Omega_\infty$ we must first prove that
+$\Omega_*$ is connected. Since the narrow channel $\mathcal C_*$
+is connected it suffices to show that when $p\in\Omega_*$ then
+there exists  some curve $\gamma$
+from $p$ which reaches $\mathcal C_*$.
+To obtain $\gamma$ we consider a point $p^*\in\Gamma$
+such that $|p-p^*|$ is the distance of $p$ to $\Gamma$, i.e.
+we pick a point nearest to $p$.
+Now we draw the straight line $L$ through $p$ and $p^*$ and by a picture
+the reader discovers that if we travel along $L$ from
+$p$ towards $p^*$ then we  reach $\mathcal C_*$ prior to the
+arrival at $p^*$.
+This proves that $\Omega_*$ is connected. The proof that the
+common winding number for points in $\Omega_*$ is equal to one
+is left as an \emph{exercise} to the reader.
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf\large  2. The argument principle}
+\bigskip
+
+\noindent
+Let $\Omega\in \mathcal D(C^1)$ and $f(z)$ is an analytic function
+in $\Omega$ which extends to a $C^1$-function on its closure.
+Denote by $\mathcal N_\Omega(f)$ the number of zeros of $f$ in
+$\Omega$. We also assume that $f\neq 0$ on $\partial\Omega$.
+\medskip
+
+
+\noindent {\bf 2.1 Theorem.} \emph{Let $\Omega\in\mathcal D(C^1)$
+and let $\Gamma_1,\ldots,\Gamma_k$
+be its simple and closed boundary curves.
+Then}
+\[
+N_\Omega(f)=\sum_{\nu=1}^{\nu=k}\,\mathfrak{w}_f(\Gamma_\nu)
+\]
+
+
+
+\noindent 
+\emph{Proof.}
+By Theorem III.XX  we have
+\[
+N_\Omega(f)=\sum\,\frac{1}{2\pi i}\cdot
+\int_{\Gamma_\nu}\, \frac{f'(z)dz}{f(z)}
+\]
+Since $N_\Omega(f)$ is an integer and hence a real nmber
+this gives
+\[
+N_\Omega(f)=\sum\,\frac{1}{2\pi }\cdot
+\int_{\Gamma_\nu}\, \mathfrak{Im}\,[\frac{f'(z)dz}{f(z)}\,]
+\]
+Theorem 1.9 expressed with  complex notations
+shows each
+term of the sum above is equal to
+$\mathfrak{w}_f(\Gamma_\nu)$ and Theorem 2.1 follows.
+
+
+
+
+\medskip
+
+
+
+\noindent 
+{\bf 2.2 Rouche's Theorem.}
+\emph{Let $\Omega$ and $f$ be as above and let $g$ be another
+holomorphic function in $\Omega$ which extends to be $C^1$Êon the closure.
+Then, if $|g|<|f|$ holds on $\partial\Omega$, it follows that}
+\[
+\mathcal N_{f+g}(\Omega)=\mathcal N_f(\Omega)
+\]
+
+
+\noindent 
+\emph{Proof.} Apply the result in 1.6.
+
+
+\bigskip
+
+
+\noindent
+{\bf 2.3 An application to trigonometric series}.
+Let $1\leq m<n$ be a pair of positive integers. Consider a trigonometric polynomial
+\[ 
+P(\theta)=
+\sum_{\nu=m}^{\nu=n}\,
+a_\nu\text{cos}(\nu\theta)+
+b_\nu\text{sin}(\nu\theta)\quad\colon\quad a_\nu,b_\nu\in\bf R
+\]
+We assume that at least one of the coefficients $a_m$ or $b_m$ is $\neq 0$, and similarly at least one of the numbers  $a_n$ or $b_n$ is $\neq 0$.
+Then one has 
+\medskip
+
+\noindent {\bf 2.4 Theorem} 
+\emph{$P$ has at least $2m$ zeros on $[0,2\pi]$ and at most $2n$ zeros.}
+\medskip
+
+\noindent
+\emph{Proof}
+Consider the polynomial 
+\[
+Q(z)=(a_m-ib-m)z^m+\ldots+(a_n-ib_n)z^n
+\]
+Notice that $\mathfrak{Re}(Q(e^{i\theta})=P(\theta)$.
+The polynomial $Q$ has a zero of multiplicity $m$ at the origin.
+Let us now consider some $r<1$ with $r\simeq 1$ and chosen so that
+$Q\neq 0$ on the circle $T_r=\{|z|=r\}$.
+Since $Q(z)$ has at least $m$ zeros counted with
+multiplicity in the disc $D_r$, it follows from
+Theorem 2.2that
+\[
+\mathfrak{w}_{T_r}(Q)\geq m
+\]
+Regarding a picture the reader discovers that  the curve
+$\theta\mapsto Q(re^{i\theta})$ must intersect the real line at least $2m$
+times.
+This proves the lower bound. The upper bound $2n$ is easily
+proved by elementary Calculus  and  left to the reader.
+
+\bigskip
+
+\noindent
+{\bf 2.5 A special estimate.}
+Theorem 2.1 can be used to give upper bounds for the counting function
+$\mathcal N_\Omega(f)$.
+Suppose  that $\Omega$ is a rectangle
+\[ \{z=x+iy\colon\, a<x<b\colon\, 0<y<T\}
+\]
+Here $\partial\Omega$ contains the vertical line
+$\ell=\{x=b\,\colon\,0<y<T\}$.
+The line integral along $\ell$ contributes to the evaluation of
+$\mathcal N_\Omega(f)$ by
+\[
+\frac{1}{2\pi}\cdot
+\int_\ell\,\mathfrak{Im}\,\bigl(\frac{f'(z)dz}{f(z)}\,\bigr)
+\]
+\bigskip
+
+\noindent
+Now $dz=idy$ along $\ell$ and therefore
+the integral above is equal to
+\[
+\frac{1}{2\pi}\cdot\int_0^T\,
+\mathfrak{Re}[\frac{f'(b+iy)}{f(b+iy)}]\, dy
+\]
+\medskip
+
+\noindent Assume that $\mathfrak{Re}\, f(b+iy)\geq c_0>0$
+for all $0\leq y\leq T$ which gives
+a single valued branch of the Log-function, i.e.
+\[ 
+\log\, f(b+iy)=
+\log\, |f(b+iy)|+
+i\cdot \text{arg}(f(b+iy))\,\,\colon\,
+-\pi/2<\text{arg}(f(b+iy))<\pi/2
+\]
+Since $f'(z)=\frac{1}{i}\cdot\partial_y(f)$ it follows that
+\[
+\frac{f'(b+iy)}{fb+iy)}=
+\frac{1}{i}\cdot [\partial_y(\log\, |f(b+iy)|)+
+i\cdot\partial_y(\text{arg}(f(b+iy)))]
+\]
+Hence we obtain
+\medskip
+
+\noindent {\bf 2.6 Proposition.} \emph{One has the equality}
+\[
+\mathfrak{Re}\,\frac{f'(b+iy)}{f(b+iy)}=
+\partial_y(\text{arg}(f(b+iy)))
+\]
+
+
+\noindent
+{\bf 2.7 Remark.} Proposition 2.6  gives therefore
+\[
+\frac{1}{2\pi}\cdot
+\int_\ell\,\mathfrak{Im}\,\bigl(\frac{f'(z)dz}{f(z)}\,\bigr)=
+\frac{1}{2\pi}\cdot
+\text{arg}(f(b+iT)))-\text{arg}(f(b))\tag{*}
+\]
+The right hand side is a real number in $(-1/4,1/4)$ and 
+hence we get a small contribution from the line integral in the left
+hand side when we regard  whole line integral over $\partial\Omega$
+which
+evaluates $\mathcal N_f(\Omega)$. This will be used to study the
+zeros of Riemann's $\zeta$-function.
+\bigskip
+
+
+\noindent
+{\bf{2.8 An application.}}
+Let $m\geq 2$ and $g_2(z),\ldots,g_m(z)$
+are analytic functions defined in an open disc
+$D$ centered at $z=0$ and where $g_\nu(0)=0$ for every
+$\nu$. Let also $\phi(z)$ be another analytic function in
+$D$ with $\phi(0)=0$.
+Consider the algebraic equation
+\[ 
+y+g_2(z)y^2+\ldots+g_m(z)y^m=\phi(z)\tag{*}
+\]
+Thus, we seek $y(z)$ so that (*) holds.
+It turns out that there exists a unique analytic function
+$y(z)$ defined in some open disc $D_*$ centered at $z=0$
+where $y(0)=0$ and
+(*) hold for every $z\in D_*$. 
+To attain this we set
+\[
+P(y,z)=
+y+g_2(z)y^2+\ldots+g_m(z)y^m
+\]
+Now we can find
+$\delta>0$
+such that if $z\in D(\delta)$ then
+\[
+|\phi(z)|<|P(e^{i\theta},z)|
+\quad\text{for all}\quad 0\leq\theta\leq 2\pi\tag{i}
+\]
+Next, let us put
+\[
+P'_y(y,z)= 1+2g_2(z)y+\ldots+mg_m(z)y^{m-1}
+\]
+From (i)  there exists the integral
+\[
+\frac{1}{2\pi i}\cdot \int_{|y|=1}\,
+\frac{P'_y(y,z)}{P(y,z)-\phi(z)}\cdot dy\quad
+\colon\, z\in D(\delta)\tag{1}
+\]
+Rouche's Theorem shows that this integer-valued function
+is constant as $z$ varies in $D(\delta)$.
+When $z=0$ we see tha the integrand is $\frac{1}{y}$ and hence
+the constant integer is one.
+But this means precisely that when $z\in D(\delta)$ is fixed, then
+the analytic function
+\[ 
+y\mapsto P(y,z)-\phi(z)
+\] 
+has exactly one simple zero in $|y|<1$.
+Denote this zero by $y(z)$.
+By the residue formula we get
+\[ 
+y(z)=\frac{1}{2\pi i}\cdot \int_{|y|=1}\,
+\frac{y\cdot P'_y(y,z)}{P(y,z)-\phi(z)}\cdot dy\quad
+\tag{2}
+\]
+It is clear that $y(z)$ is analytic in $D(\delta)$ and by the construction
+$P(y(z),z)=0$.
+Thus, $y(z)$ is the required solution. The proof of its uniqueness is left
+as an exercise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf\large  3. Multi-valued functions}
+\bigskip
+
+\noindent
+Let $\Omega$ be an open connected subset of ${\bf{ C}}$
+and 
+$D\subset\Omega$ is an open disc of some radius $r$ centered at a point $z_0$.
+The material about  power series in Chapter XX
+shows that
+$\mathcal O(D)$ is identified with  convergent power series
+\[
+\sum\,c_\nu(z-z_0)^\nu\quad\colon\quad
+\text{radius of convergenece}\,\,\geq r
+\]
+So if $f\in\mathcal O(\Omega)$ its restriction to any disc $D\subset\Omega$
+determines a convergent power series.
+These power series must be matching when two discs have a
+non-empty intersection.
+This  observation is the starting point for a general construction
+due to
+Weierstrass.
+
+\medskip
+
+\noindent
+{\bf 3.1 Analytic continuation along paths}
+Let $s\mapsto \gamma(s)$ be a continuous and
+complex valued function with values in
+$\Omega$. We do not require that $\gamma(0)=\gamma(1)$
+or that $\gamma$ is 1-1.
+The points $p=\gamma(0)$ and $q=\gamma(1)$ are called the 
+terminal points of $\gamma$. Let $f_0\in\mathcal O( D_r(p))$
+for some $r>0$, i.e. $f$ is analytic in a small disc centered at $p$.
+Consider a
+strictly increasing sequence
+$0=s_0<s_1<\ldots<s_N=1$ and to each $p_\nu=\gamma(s_\nu)$
+we choose a small  disc $D_{p_\nu}(r_\nu)$ such that:
+\[
+D_{p_\nu}(r_\nu)\cap
+D_{p_{\nu+1}}(r_{\nu+1})\neq\emptyset\quad\,\quad 0\leq\nu\leq N-1
+\]
+Assume that
+for  each $1\leq\nu\leq N$
+exists  $f_\nu\in\mathcal O( D_{r_\nu}(p_\nu)) $ such that
+\[
+f_\nu=f_{\nu+1}\,\,\text{holds in}\,\,\,
+D_{p_\nu}(r_\nu)\cap
+D_{p_{\nu+1}}(r_{\nu+1})
+\]
+After $N$ many   \emph{direct analytic continuations over  pairs of intersecting discs}
+we arrive at
+$f_N$ which is analytic in an open disc centered at $\gamma(1)$.
+From the  uniqeness of each direct analytic continuation, it follows
+that
+the locally defined analytic function $f_N$
+at $\gamma(1)$ is the same  if we instead have chosen
+a \emph{refined} partition  of $[0,1]$.
+Since two coverings of $\gamma$ via  finite families of discs
+have a common refinement, we conclude
+that  locally defined analytic function at the end-point is unique.
+Thus, the  construction   yields a map
+$T_\gamma$ map which sends an analytic function
+$f$ defined in a disc around $\gamma(0)$ to an analytic
+function $T_\gamma(f)$ defined is some disc centered at  $\gamma(1)$. Of course, here
+$T_\gamma$ is only defined on those $f$ at $\gamma(0)$ which have an analytic continuation along $\gamma$ in the sense of Weierstrass.
+
+
+\bigskip
+
+\noindent
+{\bf 3.2 Example}
+Let $\gamma$ be the closed unit circle centered at the origin where
+$\gamma(0)=\gamma(1)$.
+At $\gamma(0)$ we start with a chosen branch of the complex
+Log-function with  the   power series representation
+\[ 
+f_0(1+z)=z-z^2/2+z^3/3+\ldots
+\]
+This power series converges when $|z|=1$
+So let the first disc $D_1$ be centered at $z=1$ and of radius 1.
+Let $D_2$ be the disc centered at $i$ of radius $i$.
+In this disc we have
+the analytic function $f_1(z)$ given by the power series
+\[ 
+f_1(i+z)=i\frac{\pi}{2}+\sum_{n=1}^\infty\,
+(-1)^{n+1}\cdot i^{-n}\cdot z^n/n
+\]
+Drawing a figure the two discs intersect and in particular $D_1\cap D_2$ contains an 
+open arc
+of the unit circle around $e^{i\pi/4}$.
+With $\theta$ close to $\pi/4$ we get the two series  expansion
+\[
+f_0(e^{i\theta})=
+\sum_{n=1}^{\infty}
+(-1)^{n+1}\cdot (e^{i\theta}-1)^n\quad\colon\quad
+f_1(e^{i\theta})=
+i\frac{\pi}{2}+\sum_{n=1}^{\infty}\,(-1)^{n+1}
+\cdot i^{-n}\cdot(e^{i\theta}-i)^n /n
+\]
+\medskip
+
+\noindent
+\emph{Exercise.} Verify that
+the two series expansions give the same $\theta$-function, i.e. that one
+has the equality
+\bigskip
+\[
+\sum_{n=1}^{\infty}
+(-1)^{n+1}\cdot (e^{i\theta}-1)^n=
+i\frac{\pi}{2}+\sum_{n=1}^{\infty}\,(-1)^{n+1}
+\cdot i^{-n}\cdot(e^{i\theta}-i)^n /n\quad
+\colon \quad  |\theta-\frac{\pi}{4}|<\delta
+\]
+where $\delta>0$ is chosen so that $|e^{i\pi/4}-1|<1$.
+This series expansion starts the analytic continuation of the complex Log-function along
+the closed unit circle which after one turn around the origin gives
+the
+new local branch $f_0(z)+2\pi i$.
+
+
+
+\bigskip
+
+
+
+
+\centerline {\bf 3.3 The class $M \mathcal O(\Omega)$.}
+\bigskip
+
+\noindent
+Let $\Omega$ be an open subset of $\bf C$. At each point
+$z\in\Omega$ we denote by $\mathcal O(z_0)$
+the germs of analytic functions at $z_0$ and recall that
+this set is identified with  power series
+$\sum\,c_\nu(z-z_0)^\nu$ which have some positive radius of
+convergence. 
+In  $\mathcal O(z_0)$ we can consider those germs which have
+analytic continuation along \emph{every}
+curve in $\Omega$ whose initial point is $z_0$ while the end-point is arbitrary.
+This leads to:
+
+\bigskip
+
+\noindent
+{\bf 3.4 Definition}
+\emph{A germ $f\in\mathcal O(z_0)$ generates a multi-valued analytic function
+in $\Omega$ if it can be extended in the sense of Weierstrass along every
+curve $\gamma\subset\Omega$ which has $z_0$ as initial point.
+The set of all these germs is denoted by
+$M\mathcal O(\Omega)(z_0)$}.
+
+
+\bigskip
+
+\noindent{\bf Remark.} Notice that
+$M\mathcal O(\Omega)(z_0)$ contains those germs at $z_0$ which
+are induced by \emph{single-valued} analytic functions in
+$\Omega$.
+If $f\in M\mathcal O(\Omega)(z_0)$ and $\gamma$ is a curve in 
+$\Omega$ with $z_0$ as initial point and $z_1$ as end-point, then
+the germ $T_\gamma(f)$ at $z_1$ belongs to
+$M\mathcal O(\Omega)(z_1)$.
+This is obviuos since if $\gamma_1$
+is a curve starting at $z_1$ with end-point at $z_2$, then $f$ extends along the composed curve $\gamma_1\circ \gamma_1$
+and one has the composition formula:
+\[ 
+T_{\gamma_1}(T_\gamma(f))= T_{\gamma\circ\gamma}(f)\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf 3.5 The total sheaf space $\mathcal {\widehat O}$.}
+Let
+us 
+introduce a big topological space
+$\mathcal {\widehat O}$ defined as follows: One has a map
+$\rho$ from $\mathcal {\widehat O}$ onto $\bf C$. The inverse fiber
+$\rho^{-1}(z)=\mathcal O(z)$  for each $z\in\bf C$.
+An open neighborhood of a "point"  $f\in\rho^{-1}(z_0)$
+consists of 
+a pair $(f,D)$ where $D$ is a small disc centered
+at $z_0$ such that the germ $f$ extends to an analytic function in $D$. 
+Then its induced germ at a point $z\in D$ belongs to
+$\rho^{-1}(z)$. The set of points in
+$\mathcal {\widehat O}$ obtained in this way yields the subset $(f,D)$
+and as $D$ shrinks to $z_0$ they give by definition a fundamental system of open
+neighborhoods of the point $f$ in $\mathcal {\widehat O}$.
+With this topology on $\mathcal{\widehat O}$ 
+the map $\rho$ is a \emph{local homeomorphism} 
+and each inverse fiber $\rho^{-1}(z_0)$ appears as a 
+\emph{discrete} subset of
+$\mathcal {\widehat O}$.
+\medskip
+
+\noindent
+{\bf Remark} Above $\mathcal{\widehat O}$ is the first example of a sheaf
+which  has
+led
+to the general construction of sheaves
+which  is presented in elementary text on  topology.
+The construction of the sheaf topology 
+on $\mathcal{\widehat O}$ yields the following elegant
+description of multi-valued functions.
+\bigskip
+
+\noindent
+{\bf 3.6 Proposition.} \emph{Let $\Omega$ be an open and connected
+subset of $\bf C$.
+Let $z_0\in\Omega$ and  $f\in M\mathcal(\Omega)(z_0)$.
+Then  $f$ appears in the inverse fiber $\rho^{-1}(z_0)$
+of  an open and connected
+set $\mathcal W(f)$ of $\rho^{-1}(\Omega)$ called 
+Weierstrass Analytische Gebilde of the germ of this multi-valued
+funtion. For each $z\in \Omega$ the set
+$\mathcal W(f)\cap\rho^{-1}(z)$ consists of all germs at $z$ obtained by
+analytic continuation of $f$ along some curve with end-point at $z$.}
+\bigskip
+
+\noindent
+{\bf{Some notations.}}
+Let $f$ be as above.
+If $z\in\Omega$ we denote by $W(f:z)$ the set of germs at $z$ which arise via 
+all analytic continuations  of $f$. Thus, $W(f:z)$ is equal to
+$\mathcal W(f)\cap\rho^{-1}(z)$. In addition to this we can consider the
+set of values at $z$ which are attained by these germs.
+So we have also the set
+\[ 
+R_f(z)= \{T_\gamma(f)(z)\quad\colon\,\, T_\gamma(f)\in W(f:z)\}
+\]
+\medskip
+
+
+
+
+\noindent
+{\bf Example}
+Let $\Omega=\bf C$ minus the origin, i.e. the punctured complex plane.
+Then we have the multi-valued Log-function. At each point
+$z\in\Omega$ it has an infinite set of local branches which differ by integer
+multiples of $2\pi i$. The resulting connected set
+$\mathcal W(\text{Log}(z))$ can be regarded as a 2-dimensional connected manifold.
+In topology one learns that this is the \emph{universal covering space} of 
+$\Omega$, so that
+$\mathcal W(\text{Log}(z))$  is a  \emph{simply connected} manifold.
+On the other hand, if $N\geq 2$ is an integer we have the multi-valued function 
+$z^{\frac{1}{N}}$ Here $\mathcal W(z^{\frac{1}{N}})$ is an
+$N$-fold unramified covering map of $\Omega$, i.e. the $\rho$-map is a local 
+homeomorphism whose inverse fibers contain $N$ points.
+\newpage
+
+
+\centerline {\bf 3.7 Normal families.}
+\medskip
+
+\noindent
+Let $\Omega$ be some connected open set in
+${\bf{C}}$.  Let $x_0\in \Omega$ and consider
+some germ $f\in M\mathcal O(\Omega)(x_0)$.
+We say that $f$ yields a  bounded multi-valued function if there exists a constant
+$K$ such that
+\[
+\bigl|T_\gamma(f)(x)\bigr |\leq K\tag{*}
+\] 
+holds for all pairs $x,\gamma$ where $x\in\Omega$ and
+$\gamma$ is any curve from $x_0$ to $x$.
+Suppose that
+$\{f_\nu\}$ is a sequence of germs
+in $M\mathcal O(\Omega)(x_0)$ which are uniformly bounded, i.e.
+(*) above holds for some constant $K$ and every $\nu$.
+If we to begin with consider a small open disc
+$D$ centered at $x_0$ we get the unique single-valued branches of
+each $f_\nu$ in
+$\mathcal O(D)$. This family in
+$\mathcal O(D)$ is normal by the results in
+XXX. Passing to a subsequence we may assume that
+there exists a limit function
+$g\in\mathcal O(D)$, i.e. shrinking $D$ if necessary we may assume that
+\[
+\lim_{\nu\to\infty}\, ||f_\nu-g||_D\to 0\tag{i}
+\]
+Next, if $\gamma$ is a curve in
+which starts at $x_0$ and has some end-point $x$
+we cover $\gamma$ with a finite number of open discs and
+each $f_\nu$ has its analytic continuation along $\gamma$
+by the Weierstrass procedure.
+From the material in XXX it is clear that
+during these analytic continuations the local series expansions of
+the sequence $\{f_\nu\}$ converge uniformly
+and as a result we find that
+$g$ has an analytic extension along
+$\gamma$. Hence the germ of $g$ at $x_0$
+belongs to $M\mathcal O(\Omega)(x_0)$.
+Moreover, the uniform convergence "propagates".
+For example, if $\gamma$ is a closed curve at
+$x_0$ we get the sequence
+$\{T_\gamma(f_\nu)\}$
+after the analytic continuation along $\gamma$, and similarly
+$T_\gamma(g)$. Then 
+\[
+\lim_{\nu\to\infty}\, ||T_\gamma(f_\nu)-T_\gamma(g)||_D\to 0\tag{ii}
+\]
+holds for a small disc $D$ centered at the end point of $\gamma$.
+
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf 3.8 Algebraic root functions}
+\medskip
+
+\noindent
+Consider a polynomial $P(z,w)$ in two variables:
+\[ 
+P(z,w)= p_m(z)w^m+
+p_{m-1}(z)w^{m-1}+\ldots + p_1(z)w+p_0(w)
+\] 
+Here $m\geq 2$ is assumed. 
+The zeros of leading polynomial $p_m(z)$ is a finite subset of $\bf C$ 
+which we denote by 
+$\mathcal Z_P$.
+If $z$ is outside this zero set we have an algebraic equation
+$P(z_0,w)$ which by the Fundamental Theorem of algebra has $m$ roots
+denoted by $\alpha_1(z),\ldots,\alpha_m(z)$.
+By the  Newton formula from XXX in Chapter I
+the
+symmetric product
+
+\[ 
+D(z)=\prod_{i\neq\nu}\,
+(\alpha_i(z)-\alpha_\nu(z)
+\]
+is a rational function of $z$, unless it happens to be identically zero. We shall 
+exclude this case
+and 
+remark that elementary algebra shows that
+the $D$-function is not
+identically  zero if and only if
+the polynomial $P(z,w)$ has no multiple factors 
+in the unique factorisation domain $C[z,w]$. One
+refers to $D(z)$ as the \emph{discrimant} of $P$.
+Put
+
+\[
+\Sigma_P=\mathcal  Z _P\cup\, D^{-1}(0)
+\]
+This is a finite set in $\bf C$. If $\Omega$ is its open  complement
+we get the multi-valued root functions.
+Assuming that $P(z,w)$ from the start is an irreducible polynomial in
+$C[z,w]$ these root functions are local branches of a
+multi-valued function $f$ in $\Omega$.
+The fibers of $W(f)$ above a point $z_0\in\Omega$
+consists of the $k$-tuple of germs induced by
+the $m$-many distinct $\alpha$-roots at $z_0$.
+The \emph{connectivity} 
+of $W(f)$ means precisely
+that the polynomial $P(z,w)$ is irreducible.
+\medskip
+
+\noindent 
+{\bf Remark} The realisation of roots to $P(z,w)$ as multi-valued
+analytic functions is  classic.
+Historically it led to the construction of the 
+\emph{closed Riemann surface}
+attached to the polynomial $P(z,w)$. We return to this in the
+chapter about compact Riemann surfaces.
+\newpage
+
+\centerline
+{\bf 4. The Monodromy Theorem}
+\medskip
+
+\noindent
+Let $f\in M\mathcal O(\Omega)$.
+If $z_0\in\Omega$ and $\gamma$ is a curve starting at $z_0$ we obtain 
+the germ $T_\gamma(f)$ at the end-point $z_1$ of $\gamma$.
+The analytic continuation is obtained by the Weierstrass procedure and
+since $\gamma$ is a compact subset of $\Omega$
+it can be covered by a finite set of discs $D_0,D_1,\ldots,D_N$ where 
+$D_\nu\cap\,D_{\nu+1}$ are non-empty and the analytic continuation of 
+$f$ is achieved by succesive direct continuations of analytic functions
+$\{g_\nu\in\mathcal O(D_\nu)\}$
+where $g_\nu=g_{\nu+1}$ holds in
+$D_\nu\cap\,D_{\nu+1}$.
+The discs are  chosen 
+so small that they are 
+relatively compact in $\Omega$.
+If $\gamma_1$  is another curve from $z_0$ to $z_1$ which stays
+so close to $\gamma$ that the discs $D_0,\ldots,D_N$
+again can be used to perform the analytic continuation of $f$ along
+$\gamma_1$, then it is clear that  $T_\gamma(f)=T_{\gamma_1}$.
+This observation gives:
+\medskip
+
+\noindent {\bf 4.1 Theorem} \emph{Let $(z_0,z_1)$ be a pair in $\Omega$ and
+$\Gamma(s,t)$ 
+a continuous map from the unit square in the $(s,t)$-space into $\Omega$ where}
+\[ 
+\Gamma(s,0)=z_0\quad\colon,\gamma(s,1)=z_1\quad\colon\quad
+0\leq s\leq 1 
+\]
+\emph{Then, if  $\{\gamma_s\}$ is the family of curves defined by
+ $t\mapsto \Gamma(s,t)$, it follows that}
+ \[ 
+ T_{\gamma_s}(f)=T_{\gamma_0}(f)\quad\colon\,\quad 0\leq s\leq 1
+ \]
+ \medskip
+ 
+ \noindent {\bf Remark} This is called the monodromy theorem and can be
+ expressed by saying that  analytic continuation along a curve 
+ which joins  a given pair of points only  depends on the
+ \emph{homotopy} class of the curve, taken in the family of all
+ curves which joint
+ the two given points.
+Of course, when we deal with some multi-valued function in an open set
+$\Omega$ we are obliged to use curves inside $\Omega$ only.
+
+\bigskip
+
+\noindent
+{\bf 4.2 The case of finite determination.}
+Let $f\in M\mathcal(\Omega)$.
+If $z_0\in\Omega$ we get the set of germs   $W(f:z_0)$ at $z_0$.
+This is a subset of $\mathcal O(z_0)$ and we can regard the complex vector space
+it generates. It is denoted by $\mathcal H_f(z_0)$.
+Suppose that this complex vector space has a finite dimension $k$.
+Then we can choose  a $k$-tuple of germs $g_1,\ldots,g_k$
+in $W(f:z_0)$  which give a basis of
+$\mathcal H_f(z_0)$. Thus, one has to begin with
+
+\[ 
+\mathcal H_f(z_0)=Cg_1+\ldots+Cg_k
+\]
+Let $z_1$ be another point in $\Omega$ and fix 
+some curve $\gamma$ which joins $z_0$ and $z_1$.
+At $z_1$ we get the germs $T_\gamma(g_1),\ldots,T_\gamma(g_k)$.
+By the remark in XXX
+$T_\gamma$ is a \emph{bijective map} from $W(f:z_0)$ 
+to $W(f:z_1)$.
+Moreover, if  $\phi=c_1g_1+\ldots+c_kg_k$ belongs to $\mathcal H_f(z_0)$ we have
+
+\[
+T_\gamma(\phi)=c_1T_\gamma(g_1)+\ldots+c_kT_\gamma(g_k)
+\]
+Hence the $k$-tuple $\{T_\gamma(g_\nu)\}$ generates the vector space 
+$\mathcal H_f(z_1)$.
+Since we also can use  the inverse map $T_{\gamma^{-1}}$
+it follows that the $k$-tuple
+$\{T_\gamma(g_\nu)\}$ yields a basis of $\mathcal H_f(z_1)$.
+In particular the vector space $\mathcal H_f(z)$ have common dimension 
+$k$ as $z$ varies in the connected open set
+$\Omega$.
+\emph{Summing up}, we can conclude the following:
+
+\medskip
+
+
+\noindent
+{\bf 4.3 Proposition}
+\emph{If $f\in M\mathcal (\Omega)$ has finite determination the complex vector spaces
+$\mathcal H_f(z)$ have  common dimension. Moreover, one gets
+a basis of these by  starting at any point $z_0$ and choose some $k$-tuple
+of $C$-linearly germs $g_1,\ldots,g_k$ in $W(f:z_0)$. 
+Then
+we obtain a basis in $\mathcal H_f(z)$ for any point $z\in\Omega$ by a $k$-tuple
+$\{T_\gamma(g_\nu)\}$ where $\gamma$ is any curve which joins  
+$z_0$ and $z$.}
+\bigskip
+
+
+\noindent
+{\bf 4.4 The case of a punctured disc}
+Let $\dot D=\{0<|z|<R\}$
+be a punctured disc centered at the origin.
+Consider some $f\in\mathcal M\mathcal O(\dot D)$ of finite determination and let 
+$k$ be its rank.
+In a punctured open disc every closed curve is homotopic to
+a closed circle parametrized by  $\theta\mapsto re^{i\theta}$.
+Another way to express this is that the fundamental group
+$\pi_1(\dot D)$ is isomorphic to the abelian group of
+integers.
+Thus, the multi-valuedness is determined by a sole $T$-operator
+which arises when we let $\gamma$ be a circle surrounding the origin in
+the positive sense.
+Given $z_0\in\dot D$ we  consider the  ${\bf{C}}$-linear operator
+\[
+T_\gamma\colon\,\mathcal H_f(z_0)\mapsto\mathcal H_f(z_0)
+\]
+By Jordan's decomposition theorem we can choose a basis
+in $\mathcal H_f(z_0)$ such that the matrix representing
+$T_\gamma$ is of Jordan's  normal form.
+This means that we have a direct sum
+\[ 
+\mathcal H_f(z_0)=\oplus\,
+\mathcal K_\nu(z_0)
+\]
+where $\{\mathcal K_\nu(z_0)\}$ are $T_\gamma$-invariant subspaces and the
+restriction of $T_\gamma$
+$\mathcal K_\nu(z_0)$ is represented by an elementary
+Jordan matrix $J(m,\lambda)$
+for some complex number $\lambda$ and $m\geq 1$.
+Given the pair $m,\lambda$  we consider
+a local branch of the function
+\[ 
+f(z)=z^\alpha\cdot\,[ \text{Log}\,z\,]^{m-1}\quad\colon\,
+e^{2\pi i\alpha}=\lambda
+\]
+which for example is defined close to $z=1$ where 
+$f(1)=0$. After one turn around the origin we get a new local branch
+of the form
+\[ 
+f_1(z)=\lambda\cdot  z^\alpha\cdot
+[\text{Log}\,z\,+2\pi i]^{m-1}
+\]
+Continuing in this way $m$ times we see that 
+the local branches of $f$ 
+generate an $m$-dimensional complex vector space
+whose  monodromy is  determined by the matrix $J(m,\lambda)$.
+Using this fact it follows that if $f(z)$ is any local branch of a multi-valued function of
+finite determination, then it can be expressed as:
+\[ 
+f(z)=\sum_{\nu=1}^k\sum_j\, \, g_{\alpha_\nu,j}(z)\cdot
+z^{\alpha_\nu}\cdot\,[\text{Log}\, z\,]^j\tag{*}
+\] 
+Here 
+$0\leq\mathfrak{Re}(\alpha_1)<\ldots<\mathfrak{Re}(\alpha_k)<1$
+and $\{j\}$ is a finite set of  non-negative integers
+and the $g$-functions 
+are \emph{single-valued} in the punctured disc $\dot D$.
+Moreover these $g$-functions
+are
+uniquely determined provided a specific local 
+branch of the Log-function is chosen. 
+For example, when $f$ is a local branch at some real point
+$0<a<R$ where  $\text{Log}\,a$ is chosen to  be real.
+\bigskip
+
+
+
+
+
+\centerline { \bf\large 5. Homotopy and Covering spaces}
+\bigskip
+
+\noindent
+First we  recall some facts
+in  topology.
+Let $X$ be a metric space, i.e. the topology is defined by some
+distance function. By a  curve in $X$ we  mean a
+continuous map $\gamma$ from the closed unit interval
+$[0,1]$ into $X$.
+In general $\gamma$ need not be 1-1.
+The initial point is $\gamma(0)$ and the end point is $\gamma(1)$.
+If $\gamma(0)=\gamma(1)$ we 
+say that $\gamma$ is a \emph{closed} curve.
+We say that $X$ is \emph{arcwise connected}
+if there to each pair of points $x_0,x_1$ exists some curve
+$\gamma$ with
+$x_0=\gamma(0)$ and
+$x_1=\gamma(1)$.
+
+\medskip
+
+
+\noindent
+{\bf A notation.} Given a point $x_0\in X$ we denote by
+$\mathcal C(x_0)$ the family of all closed curves
+$\gamma$ where
+$\gamma(0)=\gamma(1)=x_0$.
+\medskip
+
+\noindent
+{\bf 5.1 Definition.}
+\emph{A pair of closed curves
+$\gamma_0$ and $\gamma_1$
+in $\mathcal C(x_0)$ are homotopic if there
+exists a continuos map $\Gamma$ from the
+unit square
+$\square=\{(t,s)\quad\colon\, 0\leq t,s\leq 1\}$ into $X$
+such that}
+\[ 
+\Gamma(t,0)=\gamma_0(t)
+\,\,\text{and}\,\, 
+\Gamma(t,1)=\gamma_1(t)\quad
+\, \Gamma(0,s)=\Gamma(1,s)=x_0\,\,\,
+\colon\,\, 0\leq s\leq 1
+\]
+\medskip
+
+\noindent
+It is clear that homotopy yields an equivalence relation on 
+$\mathcal C(x_0)$.
+If $\gamma\in \mathcal C(x_0)$ then
+$\{\gamma\}$ denotes its homotopy class.
+Next, 
+if
+$\gamma_0$ and $\gamma_1$ are two closed curves
+at $x_0$ we get a new closed curve
+$\gamma_2$ defined by
+\[ 
+\gamma_2(t)=\gamma_1(2t)\,\colon\, 0\leq t\leq \frac{1}{2}\,
+\,\text{and}\,\, 
+\gamma_2(t)=\gamma_2(2t-1)\,\colon\, \frac{1}{2}\leq t\leq 1\,
+\]
+We refer to $\gamma_2$ as the composed curve
+and it is denoted by $\gamma_1\circ\gamma_0$. One verifies easily that
+the homotopy class of $\gamma_2$
+depends upon $\{\gamma_1\}$
+and $\{\gamma_1\}$ only.
+In this way we obtain a composition law on the 
+set of homotopy classes of closed curves at $x_0$ defined by
+\[
+\{\gamma_1\}\cdot \{\gamma_0\}=
+\{\gamma_1\circ\gamma_0\}
+\]
+One verifies easily that this composition satisfies the associative law.
+A neutral element is the closed curve
+$\gamma_*$ for which $\gamma_*(t)=x_0$ for every $t$.
+Finally, if
+$\gamma(t)$ is any closed curve at
+$x_0$ we get a new closed curve by reversing
+the direction, i.e. set
+\[ 
+\gamma^{-1}(t)= \gamma(1-t)
+\]
+
+
+\noindent
+{\bf Exercise.} Show that
+the composed curve $\gamma^{-1}\circ\gamma$ is homotopic to $\gamma_*$.
+\medskip
+
+\noindent
+{\bf 5.2 The fundamental group}. The construction of
+composed closed curves and the exercise above show
+that 
+homotopy classes of closed curves at $x_0$ give elements of a group 
+to be denoted
+by $\pi_1(X:x_0)$.
+\medskip
+
+\noindent
+{\bf Remark.} The group
+$\pi_1(X:x_0)$ is intrinsic in  the sense that it does not depend upon the chosen point $x_0$. Namely, let $x_1$ be another point in $X$ and fix
+a curve
+$\lambda$ with $\lambda(0)=x_0$ and $\lambda(1)=x_1$.
+Then we obtain a map from
+$\mathcal C(x_1)$ to $\mathcal C(x_0)$ defined by
+\[
+\gamma\mapsto \lambda^{-1}\circ\gamma\circ\lambda\tag{i}
+\]
+One verifies that (i) sends homotopic curves to homotopic curves
+and by considering homotopy classes we obtain an 
+isomorphism between 
+$\pi_1(X:x_0)$ and $\pi_1(X:x_1)$.
+Hence there exists an intrinsically defined group
+denoted by $\pi_1(X)$. It is called the fundamental group of
+the metric space $X$. If 
+$\pi_1(X)$ is reduced to a single element,  i.e. when all closed curves
+in $\mathcal C(x_0)$ are homotopic we say that
+$X$ is \emph{simply connected}.
+\medskip
+
+\noindent
+{\bf Exercise.}
+Let $x_0$ and $x_1$ be two distinct points in $X$. Denote by
+$\mathcal C(x_0,x_1)$ the family of curves
+$\gamma$ for which
+$\gamma(0)=x_0$ and $\gamma(1)=x_1$.
+Two such curves
+$\gamma_0$ and $\gamma_1$ are homotopic if there exists
+a continuos map $\Gamma$ from the square $\square$ such that
+\[
+\Gamma(t,0)=\gamma_0(t)
+\,\,\text{and}\,\, 
+\Gamma(t,1)=\gamma_1(t)\quad
+\, \Gamma(0,s)=x_0\,\,\text{and}\,\, \Gamma(1,s)=x_1\,\,\,
+\colon\,\, 0\leq s\leq 1
+\]
+\medskip
+\noindent
+Show that a pair $\gamma_0$ and $\gamma_1$ are homotopic in
+$\mathcal C(x_0,x_1)$ if and only if the closed curve
+$\gamma_1^{-1}\circ\gamma_0$ is homotopic to
+$\gamma^*$ in $\mathcal C(x_0)$ where
+\[ 
+\gamma_1^{-1}=\gamma_1(1-t)
+\]
+In particular each pair of curves in $\mathcal C(x_0,x_1)$
+are homotopic if $X$ is simply connected.
+\bigskip
+
+\noindent
+{\bf 5.3 Covering spaces.}
+Let $X$ and $Y$ be two
+arcwise connected metric
+spaces.
+A continuous map $\phi$ from $X$ onto $Y$
+is called a \emph{covering map} if the following hold:
+For each $y_0\in Y$ there exists an open neighborhood
+$U$ such that the inverse image
+$\phi^{-1}(U)$ is a union of  pairwise disjoint open
+sets $\{U_\alpha^*\}$ and the restriction of $\phi$ to each
+$U_\alpha^*$
+is a homeomorphism from
+this set onto $U$.
+\medskip
+
+\noindent
+{\bf 5.4 Lifting of curves.} Suppose that
+$\phi\colon X\to Y$
+is a covering map.
+Let $\gamma$ be a curve in $Y$ defined by
+a continuous map $t\to\gamma(t)$ from the closed unit interval $[0,1]$
+into $Y$ with 
+some initial point
+$y_0=\gamma(0)$ and some end-point $y_1=\gamma(1)$.
+The case  $y_0=y_1$ is not excluded, i.e. $\gamma$ may
+be a closed curve.
+Next, in $X$ we chose a point $x_0$ such that
+$\phi(x_0)=y_0$.
+By assumption there exists an open neighborhood $U$ of $y_0$
+in $X$ a unique open neighborhood $U^*$ of $x_0$
+such that
+$\phi\colon\, U^*\to U$ is a homeomorphism.
+Since $t\to\gamma(t)$is continuous there exists
+some $\delta>0$ such that
+\[
+\gamma(t)\in U\,,\quad 0\leq t\leq \delta\tag{i}
+\]
+Then we get a \emph{unique} curve
+$\gamma^*$ in $X$
+defined for $0\leq t\leq\delta$ such that 
+\[
+\phi(\gamma^*(t))=\gamma(t)\,,\quad 0\leq t\leq \delta\quad
+\text{and}\,\, \gamma^*(0)=x_0\,.\tag{ii}
+\]
+If this lifting process can continued for
+all $0\leq t\leq 1$ we say that
+$\gamma$ has a lifted curve
+$\gamma^*$. This  means that there exists a curve
+$t\mapsto\gamma^*(t)$ from $[0,1]$ into $X$
+such that
+\[
+\phi(\gamma^*(t))=\gamma(t)\,,\quad 0\leq t\leq 1\quad
+\text{and}\,\, \gamma^*(0)=x_0\,.\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf Exercise.}
+Show  that
+the curve
+$\gamma^*$ is unique if it exists.
+The hint is to use that
+$\phi$ is a local homeomorphism.
+\medskip
+
+\noindent
+The whole discussion above leads to
+\medskip
+
+\noindent 
+{\bf 5.5 Definition.}\emph{ A
+covering
+map $\phi\colon X\to Y$ is of class $\mathcal L$ 
+if the following hold: For each pair of points
+$y_0\in Y$ and 
+$x_0\in \phi^{-1}(0)$, every 
+curve $\gamma$ in $Y$ with initial 
+point $y_0$ can be lifted to a curve in
+$X$ with initial point $x_0$.}
+\bigskip
+
+\noindent
+{\bf 5.6 The case when
+$X$ is simply connected.}
+Assume this and let
+$\phi\colon X\to Y$ be a covering map of class
+$\mathcal L$.
+Let $y_0\in Y$ and choose some point $x_0\in\phi^{-1}(y_0)$.
+Next, let
+$\gamma$ be a closed curve in $Y$ with
+$\gamma(0)=\gamma(1)=y_0$.
+By assumption there exists a unique lifted curve
+$\gamma^*$ in $X$ with
+$\gamma^*(0)=x_0$.
+Suppose  that
+$\gamma^*(1)=x_0$, i.e.  the lifted curve is closed.
+Since $X$ is simply connected it is homotopic to
+the trivial curve which stays at $x_0$, i.e. there exists a continuos map
+$\Gamma^*$ from $\square$ into $X$ 
+such that
+\[
+\Gamma^*(t,0)=\gamma^*(t)\,
+\text{and}\,\Gamma^*(t,1)=x_0\quad
+\Gamma^*(0,s)=\Gamma(1,s)=x_0\,\,\colon\,0\leq s\leq 1\tag{i}
+\]
+Now $\Gamma(t,s)=\phi(\Gamma^*(t,s)$  is a continuous map from
+$\square$ into $Y$ and from (i) we see that
+$\Gamma$ yields a homotopy between
+$\gamma_0$ and $\gamma_1$.
+Using this observation we arrive at:
+\medskip
+
+\noindent
+{\bf 5.7 Proposition.} \emph{Let
+$\gamma_0$ and $\gamma_1$ be two closed curves at
+$y_0$. Then  they are homotopic if and only if
+$\gamma^*(1)=\gamma^*(1)$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+We have already seen that if
+$\gamma^*(1)=\gamma^*(1)$
+then the two curves are homotopic.
+Conversely, if they are homotopic we get a continus map
+$\Gamma(s,t)$ from $\square$ into $Y$ and for each
+$0\leq s\leq 1$ we have the closed curve
+$\gamma_s(t)=\Gamma(t,s)$
+at $y_0$.
+Since the inverse fiber
+$\phi^1{_1}(y_0)$ by assumption is a discrete set in
+$X$, it follows by 
+continuity and the unique path lifting
+that $s\mapsto \gamma_s^*(1)$ 
+is constant and hence
+$\gamma_0^*(1)=\gamma^*_1(1)$.
+\bigskip
+
+\noindent
+{\bf 5.8 Conclusion.}
+Proposition 5.7 shows that homotopy classes of closed curves
+$\gamma$ at $y_0$ are in a 1-1 correspondence with
+their end-points in $X$.
+Notice also that if $x$ belongs to $\phi^{-1}(y_0)$ then
+the arc-wise connectivity of $X$ gives a curve
+$\rho$ where
+$\rho(0)=x_0$ and $\rho(1)=x$.
+Now $\gamma(t)=\phi(\rho(t))$ is a closed curve at
+$y_0$ and here $\gamma^*(t)=\rho(t)$
+and hence $x$ appears as an end-point for at least one closed curve
+at $y_0$. Identifying $\pi_1(Y)$ with homotopy classes of closed
+curves at $y_0$ we have therefore proved the following:
+\medskip
+
+\noindent
+{\bf 5.9 Theorem.}
+\emph{The map $\gamma\to\gamma^*(1)$
+yields a bijective correspondence between the fundamental group
+$\pi_1(Y)$ and the inverse fiber
+$\phi^{-1}(y_0)$.}
+
+\medskip
+
+\noindent
+{\bf Exercise.}
+Let $X$ and $Z$ be two simply connected metric spaces.
+Suppose that  $\phi\colon X\to Y$ and $\psi\colon Z\to Y$
+are two covering maps which both belong to the class $\mathcal L$.
+Fix some $y_0\in Y$. Choose
+$x_0\in \phi^{-1}(y_0)$ and 
+$z_0\in \psi^{-1}(y_0)$.
+Next, let $y\in Y$ and consider some curve
+$\gamma$ in $Y$ with $\gamma(0)=y_0$ and $\gamma(1)=y$.
+Its unique lifted curve to
+$X$ is denoted by $\gamma^*$ and we get the end-point
+\[
+\gamma^*(1)\in \phi^{-1}(y)
+\]
+Similarly. we get a unique lifted curve
+$\gamma^{**}$ in $Z$ and the end-point
+
+\[
+\gamma^{**}(1)\in \psi^{-1}(y)
+\]
+From the above these two end-points only depend on  the homotopy class
+of $\gamma$. Use this to conclude that
+we obtain a \emph{unique and  bijective} map
+from the discrete fiber
+$\phi^{-1}(y)$ to $\psi^{-1}(y)$. Moreover, as $y$ varies
+in $Y$ this gives a unique homeomorphism $G$ from $X$ onto $Z$
+with $G(x_0)=z_0$.
+\medskip
+
+\noindent
+\centerline {\bf 5.10 The universal covering space.} 
+
+\medskip
+
+\noindent
+The exercise above
+shows that up to a homeomorphism the  metric space
+$Y$ with a non-trivial fundamental group
+has a unique simply connected covering space
+$X$ where the map $\phi\colon X\to Y$ is of class $\mathcal L$.
+In topology one refers to $X$ as the \emph{universal covering space}
+of $Y$.
+There remains the question   if there
+exists  such a universal covering space.
+We shall not
+try to investigate this existence problem in full generality
+but  consider the case when
+$Y$ is an open and connected subset of
+${\bf{C}}$.
+In this case we can show that
+$Y$ has a universal covering space by the following construction.
+First, if
+$y_0\in Y$ we  find an open disc
+$D(y_0)$ centered at $y_0$ whose
+radius is
+equal to  $\text{dist}(y_0,\partial Y)$.
+Next, let $G$ denote the fundamental group of
+$Y$. To each $y_0\in Y$
+we consider the product set
+\[ 
+D(y_0)\times G
+\]
+It is considered as a disjoint union
+of copies of the discs given by
+\[
+D(y_0)\times\{g\}\quad\, g\in G
+\]
+Let us now consider two circles
+$D(y_0)$ and $D(y_1)$ with a non-empty intersection.
+Let $y\in D(y_1)\cap D(y_1)$.
+If $g\in G$ we have the disc
+$D(y)\times{g}$.
+Let $g=\{\gamma\}$
+for some  closed curve at $y$.
+In the disc $D(y_0$ we have the line $\ell_0$ from
+$y_0$ to $y$. Now we get
+a closed curve  at $y_0$ defined by
+\[
+\gamma_0=\ell_0^{-1}\circ\gamma\circ\ell_0
+\]
+Identifying $G$ with $\pi_1(Y:y_0)$ we get the
+$G$-element $g_0=\{\gamma_0\}$.
+We say that $g_0$ is \emph{a neighbor} of $g$. In the same way
+we use the straight line $\ell_1$ from $y_1$ to $y$
+and construct a neighbor $g_1$
+to $g$ when
+$G$ is identified with
+$\pi_1(Y:y_1)$.
+Set
+\[
+W_0(g)=\{(y,g_0)\in D(y_0)\times\{g_0\}\quad\colon\, y\in
+D(y_0)\cap D(y-1)\}
+\]
+Similarly we set
+\[
+W_1(g)=\{(y,g_0)\in D(y_1)\times\{g_1\}\quad\colon\, y\in
+D(y_0)\cap D(y-1)\}
+\]
+Now we agree to
+identify $W_0(G)$ and  $W_1(g)$. This identification 
+takes place for each $g\in G$.
+At this stage it is clear how one constructs the universal covering space over
+$Y$ where the details are left to the reader.
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf 6. The uniformisation theorem.}
+\bigskip
+
+\noindent
+{\bf Introduction.}
+Let $\Omega$ be a connected open subset
+of
+${\bf{C}}$. If
+the closed complement contains at least two points
+then the universal covering space
+can be taken as the unit disc
+$D$. Moreover  there exists a a covering map $f\colon\,D\to \Omega$
+of $\mathcal L$-type given by an analytic function.
+This will be proved in Chapter 6.
+Here we  take this existence for granted and analyze some consequences.
+In particular we  discuss some    properties of such an
+analytic uniformisation.
+More precisely,
+in Chapter VI
+we prove Riemann's mapping theorem for connected domains
+which goes as follows:
+\medskip
+
+\noindent
+{\bf 6.1 Theorem.} \emph{For every  $z_0\in\Omega$ 
+there exists a unique analytic covering map
+$f$ of $\mathcal L$-type where $f(0)=z_0$ and $f'(0)$ is real and positive.}
+\bigskip
+
+
+\noindent
+{\bf 6.2 The multi-valued inverse to $f$.}
+We take the theorem above for granted and discuss some consequences.
+Let $f$ be a an analytic covering map as above.
+To distinguish  the
+$z$-coordinate in $\Omega$ from $D$ we let $w$ be the complex
+coordinate in $D$.
+To begin with $f$ yields a biholomorphic map from a small open
+disc $D_*$ centered at the origin in $D$
+to a small open neighborhood $U_0$ of
+$z_0$. It gives the inverse analytic function
+$F(z)$ defined in $U_0$ such that
+\[ 
+F(f(w))=w\quad\, w\in D\,.
+\]
+Next, let $\gamma$ be a curve in
+$\Omega$ with
+$\gamma(0)=z_0$.
+Since $f$ is of $\mathcal L$-type there exists a unique lifted
+curve
+$\gamma^*$ in $D$ with
+$\gamma^*(0)=0$.
+Now the germ of $F$ at $z_0$ can be continued analytically along
+$\gamma$ where
+\[ 
+T_{\gamma(t)}(F(\gamma(t))=\gamma^*(t)\quad\colon\,
+0\leq t\leq 1\tag{i}
+\]
+Hence we get a multi-valued analytic function $F$ in $\Omega$.
+It gives an inverse to $f$ in the following sense: Let
+$w\in D$ and consider the curve
+$t\mapsto t\cdot w$ in $D$. Now $t\mapsto f(t\cdot w)$
+is a curve $\gamma$ in
+$\Omega$ and by the construction (i) we have
+\[
+T_{\gamma(t)}(F(f(t\cdot w))=tw\quad\colon\,0\leq t\leq 1\tag{ii}
+\]
+We may express this by saying that the composed function
+$F\circ f$ is the identity on $D$.
+\medskip
+
+\noindent
+{\bf{6.3 Example.}}
+To begin with the unit disc $D$ is conformally equivalent to the upper
+half-plane so in Theorem we can just as well consider
+an analytic covering map $f$ from $U_+$ to $\Omega$.
+Suppose that $\Omega$ is the punctured unit disc
+$\dot D= D\setminus \{0\}$.
+in $U_+$ we have the analytic function
+$f(z)= e^{iz}$
+and it is clear that it
+gives
+an analytic covering map from $U_+$ onto $\dot D$
+where we have
+\[
+f(i)= e^{-1}=z_0
+\]
+In $\dot D$ we have the multi-valued Log-function
+\[
+F(z)= -i\cdot \text{Log}(z)
+\]
+So here
+\[ 
+\mathfrak{Im}(F)=-\cdot \text{Log}|z|
+\]
+When $0<|z|<1$ it means that
+the imaginary part is $>0$ and it is clear that  the $F$-image is $U_+$.
+We also get
+\[ 
+-i\cdot \text{Log}(e^{iw})=w\quad\colon\, w\in U_+
+\]
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf 6.4 Constructing single-valued functions.}
+Return to the situation in Theorem 6.2, i.e. $f$ is a covering map from
+$D$ into $\Omega$.
+Let $g(w)$ be some analytic function in
+$D$ whose range $g(D)\subset \Omega$ and $g(0)=0$.
+We  use $F$ to construct another 
+single-valued analytic function
+$F\circ g$  in $D$. Namely, let $w\in D$
+which gives  the curve $\gamma_w$
+$t\mapsto g(t\cdot w)$ in $\Omega$
+where $\gamma_w(0)=z_0$.
+We can continue $F$ along
+this curve
+and when $t=1$ we 
+get the value
+\[ 
+T_{\gamma_w(1)}(F(g(w))
+\]
+It is clear that this gives an analytic function in
+$D$ defined by
+\[ 
+F\circ g(w)= T_{\gamma_w(1)}(F(g(w))
+\]
+This construction can be performed for every
+$g\in\mathcal O(D)$ such that $g(0)=z_0$ and $g(D)\subset \Omega$.
+Hence we have
+proved the following:
+\medskip
+
+\noindent
+{\bf 6.5 Proposition.}
+\emph{Let $\mathcal O_*(D:\Omega)$  denote the family of analytic functions $g$
+in
+$D$ where $g(0)=z_0$ and $g(D)\subset \Omega$.
+Then there exists
+a map from $\mathcal O_*(D:\Omega)$ into $\mathcal O(D)$
+given by:}
+\[ 
+g\mapsto F\circ g\,.
+\] 
+\emph{Here
+$F\circ g(0)=0$ and the range
+$(F\circ g)(D)\subset D$.}
+\bigskip
+
+
+
+\noindent
+{\bf 6.6 Mšbius transforms.}
+Let $f$ be a covering map as in Theorem 6.1.
+Identify the fundamental group
+$\pi_1(\Omega)$ with
+homotopy classes of closed curves at $z_0$.
+Theorem xx gives a bijective map between
+elements in the group $\pi_1(\Omega)$ and the discrete subset 
+$f^{-1}(z_0)$ of $D$.
+Consider a point $a$ in this inverse fiber, i.e.
+here $f(a)=z_0$. For each
+$0\leq\theta<2\pi$
+we get a new covering map
+$g$ defined by
+\[ 
+g(w)=f(e^{i\theta}\cdot \frac{w+a}{1+\bar a\cdot w})
+\]
+Here $g(0)=f(a)=z_0$ and
+the complex derivative at $w=0$ becomes
+\[ 
+g'(0)=f'(a)\cdot  e^{i\theta}\cdot (1-|a|^2)
+\]
+We can choose $\theta$ so that
+$f'(a)\cdot  e^{i\theta}$ is real and positive.
+With this choice of $\theta$ it follows from
+the uniqueness in Theorem 6.1
+that $g=f$.
+Hence the function $f$ satisfies
+
+\[ 
+f(w)=f(e^{i\theta}\cdot \frac{w+a}{1+\bar a\cdot w})\tag{*}
+\]
+\bigskip
+
+
+
+
+
+
+
+
+
+
+\noindent
+\centerline {\bf 6.7 Inverse multi-valued functions.}
+\bigskip
+
+
+
+
+\noindent
+Let $\phi$ be an analytic function 
+defined in some
+open and connected subset $U$
+of ${\bf{C}}$. We assume that the derivative
+is $\neq 0$ at every point and get the open image domain
+$\Omega=\phi(U)$.
+Since $\phi$ is locally conformal it gives a covering map from
+$\Omega$ onto $U$.
+Consider some $\zeta_0\in\Omega$ and
+put $x_0=\phi(\zeta_0)$.
+We get a germ $f(x)$ of an analytic function at
+$x_0$ using the local inverse of $\phi$, i.e. since
+$\phi'(\zeta_0)\neq 0$
+there exists a small open disc
+$D_\delta(\zeta_0)$ such that
+\[ 
+f(\phi(\zeta)=\zeta\quad\colon\quad
+|\zeta-\zeta_0|<\delta
+\]
+In fact, we simply find the  convergent power series
+\[ 
+f(x)=
+\sum\, c_\nu(x-x_0)^\nu
+\]
+where $c_0,c_1,\ldots$ are determined so that
+\[
+\sum\, c_\nu\bigl (\phi(\zeta)-\phi(\zeta_0)\bigr)^\nu=\zeta
+\]
+Less obviousis the following
+\medskip
+
+\noindent
+{\bf 6.8 Proposition.}
+\emph{The germ $f$ at $x_0$ extends to a multi-valued analytic function in
+$U$.}
+\medskip
+
+\noindent
+\emph{Proof.} 
+Let $\gamma$ be a curve in
+$U$ having $x_0$ as initial point.
+The lifting lemma gives a unique curve
+$\gamma^*$ in $\Omega$.
+The required analytic continuation of $f$
+along
+$\gamma$ now follows when we apply the Heine-Borel Lemma cover
+the compact set $\gamma$ with a finite set of discs which
+are homemorphic images of discs
+in $\Omega$ whose consequtive union covers
+$\gamma^*$. Then we use that
+$\phi$ is everywhere analytic. The result is that
+the germ $T_\gamma(f)$ at the end-point
+$\zeta_1=\gamma(1)$ satisfies
+\[
+T_\gamma(f)(\phi(x))=x
+\]
+where $x$ is close to the point $\phi(\gamma^*(1))$
+in $\Omega$. So in particular
+\[ T_\gamma(f)(\gamma(1))= \gamma^*(1)
+\]
+which clarifies how to determine  values of
+the multi-valued  analytic function.
+\medskip
+
+\noindent
+{\bf 6.9 Remark.}
+It is instructive to consider some specific cases.
+Consider the entire function
+$\phi(\zeta)=e^\zeta$. With $\Omega={\bf{C}}$
+the image domain $U$
+is the punctured complex plane. If we take
+$x_0=1$ and $\zeta_0=0$
+we find that $f$ is the multi-valued Log-function
+where we start with the local branch at $x_0=1$ for which
+$\log\,1=0$.
+Next, let
+us regard the polynomial $\phi(\zeta)= \zeta^2$.
+in order to get a covering we must exclude the origin to
+ensure that
+$\phi'(\zeta)\neq 0$. So if $\Omega={\bf{C}}\setminus\{0\}$
+we get a covering whose image set $U$
+also becomes the punctured complex plane.
+In this case the inverse fiber consists of two points and
+the function $f(z)$ is the multi-valued
+square-root of $z$.
+More involved examples occur when
+$\phi(\zeta)$ is a polynomial of degree
+$\geq 3$.
+Consider the case
+\medskip
+
+\[ 
+\phi(\zeta)= \zeta^3-3\zeta-2
+\]
+Here $\phi'(\zeta)=3\zeta^2-3$ and to avoid zeros we take
+$\Omega={\bf{C}}\setminus \{-1,1\}$.
+In this case the multi-valued inverse function
+is defined in the open set
+given as the image under $\phi$.
+Thus, we seek the domain:
+
+\[ U=\{x\colon\quad x=
+\zeta^3-3\zeta -2\quad\colon \zeta\neq -1,+1\}
+\]
+The reader is invited to find $U$. Next, notice that
+$\phi$ has a simple zero when
+$\zeta=2$.
+Now we can start with the germ and 
+$f_0$ at $x=0$
+which satisfies
+\[ 
+f_0(\zeta^3-3\zeta +1)=\zeta\quad\colon\quad f_0(0)=0
+\]
+for a small disc centered at the $\zeta=2$  in the complex
+$\zeta$-plane. 
+After analytic continuation the total number
+of local branches of $f$ at $x=0$ is 3, i.e. this follows since
+the inverse fibers under the covering map $\phi$ contain
+three points.
+However, the determination of these local branches is not so easy.
+The reason is that the fundamental group of
+$U$ no longer is generated by a single loop around a point, i.e. above we have 
+removed two
+points. So one must study the analytic continuation of
+$f$ along several closed curves. To begin with the two simple closed curves
+in $U$ which surround +1 and -1 respectively.
+It is clear from this "intuitive discussion" that
+one needs a more systematic theory to analyze
+analytic continuations.
+The most efficient procedure is to use
+$\mathcal D$-module theory where
+one starts with  the polynomial map
+\[ 
+\phi\colon\zeta\mapsto x=\zeta^3-3\zeta+1
+\]
+and  regards not only the special multi-valued inverses
+function $f$ but more objects which have
+direct images and to achieve this the basic
+role is played by the direct image of
+$\mathcal D$-modules under $\phi$ which after
+is used to determine the set of differential operators in
+the Weyl algebra ${\bf{C}}\langle x,\partial_x\rangle$
+which annihilate $f$.
+Let us remark that $\mathcal D$-module theory has a rather recent origin.
+The foundations of the theory
+appeared for the first time in the 
+thesis [Kash]
+by Masaki Kashiwara from 1970.
+We refer to Chapter for further comments on
+$\mathcal D$-module theory and describe how we
+use it to investigate the local branches of $f$ in the specific example above.
+
+\medskip
+
+\centerline{\bf 6.10 Constructing  single-valued functions.}
+
+\medskip
+
+\noindent
+Let $\Omega$ be a connected open set and consider some
+multi-valued analytic function
+$F$ in $\Omega$.
+Let $U$ be some open and 
+\emph{simply connected} set.
+Consider some $h\in\mathcal O(U)$ whose image set $h(U)$
+is contained in $\Omega$. No further conditions on $h$ are imposed, i.e.
+the inclusion
+$h(U)\subset\Omega$ may be strict and
+the derivative of $h$ may have zeros.
+Using $F$ we produce single valued analytic functions
+in $U$ by the following procedure.
+Let us fix a point $\zeta_0\in U$
+and put $x_0=h(\zeta_0)$.
+At $x_0$ we haver the family of local branches of
+$F$. Let $f_*$ be one such local branch.
+Next, let $\gamma$
+be a curve in $U$ where $x_0$ is the initial point
+and $x=\gamma(1)$ denotes the end-point. 
+In $\Omega$ we get the image curve
+\[ 
+t\mapsto  h(\gamma(t))\tag{i}
+\]
+Now $f_*$ has an analytic continuation along
+the curve in (i).
+When $t=1$ we arrive at the endpoint $\gamma(1)$
+which we denote by $x$.
+At $x$ 
+we can evaluate the local branch $T_\gamma(f_*)$.
+Next, let $\gamma_1(t)$ be another curve
+in $U$ with  the same end-point $x$ as $\gamma$.
+By assumption $U$is simply connected which means that
+the tewo curves
+$\gamma$ and $\gamma_1$ are homotopic.
+It is clear that the homotopy in $U$ implies that
+the two image curves
+obtained via (i) are homotopic in  the curve family in
+$\Omega$ which joint $x_0$ and $x$.
+It follows that
+the image curves constructed via (i) are homotopic 
+The monodromy theorem applied to $F$ implies that
+\[
+T_\gamma(f_*)(x)=T_{\gamma_1}(f_*)(x)\tag{ii}
+\]
+\medskip
+
+\noindent
+Next, given an open and simply connected
+set $U$ in ${\bf{C}}$
+we denote by
+$\mathcal O(U)_\Omega$
+the family of analytic functions in
+$U$ whose image is contained in
+$\Omega$.
+With these notations the discussion above gives:
+
+\medskip
+
+\noindent
+{\bf 6.11 Proposition.}
+For each point $\zeta_0\in U$ there exists a map
+\[
+\rho\colon\, \mathcal O(U)_\Omega\times M\mathcal O(\Omega)(x_0)
+\to \mathcal O(U)
+\]
+where $x_0=h(\zeta_0)$
+and  for a  pair
+$h\in \mathcal O(U)_\Omega$ and $f_*\in M\mathcal O(\Omega)(x_0)$
+the analytic function $\rho(h,f_*)$ 
+satisfies
+\[ 
+\rho(h,f_*)(\zeta)= T_\gamma(f_*)(h(\zeta))\quad\colon\quad \zeta\in U
+\]
+where $\gamma$  is the $h$-image of any curve
+in $U$ which joins
+$\zeta_0$ with
+$\zeta$.
+\bigskip
+
+\noindent
+{\bf Remark.}
+Keeping $h$ fixed we notice that
+the map $f_*\to \rho(h,f_*)$ is a ${\bf{C}}$-algebra homomorphism from
+the complex ${\bf{C}}$-algebra 
+$M\mathcal O(\Omega)(x_0)$ into $\mathcal O(U)$.
+\medskip
+
+
+\noindent
+{\bf Example.}
+Let $h(z)$ be analytic in the open unit disc
+$D$ and assume that $h(D)\subset U=\mathfrak{Im}\, z>0$.
+Consider the multi-valued function
+$\text{Log}\, z$. I has a single valued branch in
+$U$ and we therefore get an analytic function
+in $D$ defined by
+\[ 
+g(z)=\text{Log}\, h(z)
+\]
+which by the construction satisfies
+\[ 
+\mathfrak{Im}\, g(z)>0\quad\colon\quad z\in D
+\]
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline {\bf 7. The $p^*$-function.}
+\medskip
+
+\noindent
+We  construct a special harmonic function which 
+will be  used
+to get solutions to the Dirichlet problem in
+XXX.
+Let $\Omega$ be an open and connected set in
+${\bf{C}}$.
+Its closed complement has connected components.
+Let $E$ be
+such a connected component.
+To each $a\in E$ we get the winding number
+$\mathfrak{w}_a(\gamma)$. If $b$  is another point in
+$E$ which is sufficiently close to  $a$
+it is clear that
+\[
+\bigl|\frac{1}{\gamma(t)-a}-\frac{1}{\gamma(t)-b}\bigr|<
+\bigl|\frac{1}{\gamma(t)-a}\bigr |
+\]
+
+
+\noindent
+Rouche's theorem from 1.4 implies that
+$\mathfrak{w}_a(\gamma)=\mathfrak{w}_b(\gamma)$, i.e. 
+for every closed curve $\gamma$ in $\Omega$,
+the winding number
+stays constant in each connected component of
+${\bf{C}}\setminus\Omega$. 
+This  enable us to construct single valued  Log-functions
+in $\Omega$.
+Namely, let $a\in E$ where $E$ is a connected
+componen in the complement of
+$\Omega$.
+Consider 
+$f=\text{Log}\,(z-a)$ and choose a single valued branch
+$f_*$ at some point $z_0\in\Omega$. 
+If $\gamma\subset\Omega $ is a closed curve with initial point at
+$z_0$ the analytic continuation along $\gamma$ of the Log-function
+gives:
+\[
+T_\gamma(f_*)= f_*+2\pi i\cdot \mathfrak{w}_a(\gamma)\tag {1}
+\]
+
+
+\noindent
+Next, if $b$ is another point in $E$ we consider
+$g_*=\text{Log}(z-b)$ and obtain
+\[
+T_\gamma(g_*)= g_*+2\pi i\cdot \mathfrak{w}_b(\gamma)\tag {2}
+\]
+
+
+
+\noindent
+Since
+$\mathfrak{w}_b(\gamma)=\mathfrak{w}_b(\gamma)$ it follows that
+\[
+T_\gamma(f_*)-T_\gamma(g_*)=f_*-g_*\tag{3}
+\]
+Hence the difference $\text{Log}(z-a)-\text{Log}(z-b)$
+is a \emph{single valued} analytic function in $\Omega$. Taking  
+is exponential we
+find $\Psi(z)\in\mathcal O(\Omega)$ such that
+\[
+e^{\Psi(z)}=
+\frac{z-a}{z-b}\tag{4}
+\]
+
+
+\noindent
+Since $a\neq b$
+we see that
+$\Psi(z)\neq 0$
+for all $z\in\Omega$. Next, we get the
+harmonic function defined in 
+$\Omega$
+by
+\[
+p(z)=\mathfrak{Re}\bigl(\frac{1}{\Psi(z))}\bigr)=
+\frac{\mathfrak{Re}(\Psi(z)}{|\Psi(z)|^2}\tag{*}
+\]
+
+
+\noindent
+Notice that
+$\mathfrak{Re}(\Psi(z))=\text{Log}\, |z-a|-\text{Log}|z-b|$
+and since
+$\text{Log}\, |z-a|\to-\infty$ as $z\to a$
+we see from (*) that
+\[
+\lim_{z\to a}\, p(z)=0\tag{**}
+\]
+
+
+\noindent
+Notice also that
+$\Psi(z)$ exends to a continuous function on
+$\bar\Omega\setminus (a,b)$ and we can
+choose a small $\delta>0$ such that
+\[ 
+\text{Log}|z-a|-\text{Log}\,|z-b|<-1\quad\colon\quad
+|z-a|\leq\delta\tag{ii}
+\]
+
+\noindent Then (i) and (ii) give
+
+\medskip
+
+\noindent {\bf 7.1 Theorem.}
+\emph{Let $a\in\partial\Omega$ be such that
+the connected component of ${\bf{C}}\setminus \Omega$
+which contains $a$ is not reduced to the single point $a$.
+Then there exists a harmonic function
+$p^*(z)$
+in $\Omega$
+for which}
+\[
+\lim_{z\to a}\, p^*(z)=0
+\]
+\emph{and there exists $\delta>0$ such that}
+\[
+\max_{\{|z-a|=r\}\,\cap\Omega}\, p^*(z)<0\quad\colon\quad
+z\in D_a(r)\,\cap\,\Omega
+\]
+
+
+\newpage
+
+
+\centerline{\bf 8. Eisenstein's theorem.}
+\bigskip
+
+\medskip
+
+\noindent
+{\bf Introduction.}
+The theorem  below was  announced by 
+Eisenstein in 1852 and 
+goes as follows: Let
+
+\[ 
+w(z)= c_1z+c_2z^2\ldots\tag{0.1}
+\]
+be a convergent power series in a disc centered at the origin
+where the  coefficients 
+$\{c_\nu\}$ are rational numbers. Assume also that 
+$w$ satisfies an algebraic equation:
+\[
+q_m(z)w^m+\ldots+q_1(z)w+q_0(z)=0\quad\colon
+q_0,\ldots,q_m\,\,\text{are polynomials}\tag{0.2}
+\]
+\medskip
+
+\noindent
+{\bf{Eisenstein's Theorem}}. 
+\emph{Under the assumption above
+there exists a positive integer $k$ such that}
+\medskip
+\[ 
+k^\nu\cdot c_\nu\in {\bf{Z}}\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Or equivalently, we can find $k$ so that
+$w(kz)$ has a power series expansion with integer coefficients.}
+\medskip
+
+
+\noindent
+The complete proof of (*) was given by
+Heine
+from 1854. Since
+${\bf{R}}$ is a vector space over the field of rational numbers
+it is easily seen that (0.1) implies that
+we can choose the $q$-polynomials in $Q[z]$, i.e. so that they all have
+rational coefficients. Multiplying  these $q$-polynomials with
+a positive integer we remove denominators and may  assume 
+from the start that
+they  have integer coefficients.
+\medskip
+
+\noindent
+{\bf{0.1 A special case.}}
+Suppose that
+the $q$-polynomials satisfy:
+
+\[ 
+q_m(0=\ldots=q_2(0)=0\quad\text{where}\quad q_1(0)=k\neq 0\tag{**}
+\]
+When (**) holds
+an easy induction over $\nu$ shows that
+$k^\nu\cdot c_\nu$ are integers for all $k$.
+The non-trivial part of the proof is the reduction  to the case (**).
+Heine achieved this by the following construction: For every 
+positive integer $p$ we break the series (0.1) and write
+
+\[
+w(z)=c_1z+\ldots+c_{p-1}z^{p-1}+\beta_p(z)\cdot z^p\tag{0.5}
+\]
+Heine showed that if $p$ is sufficiently large then
+$\beta_p(z)$ satisfies an algebraic equation for which
+(*) holds and after this  Eisenstein's theorem can be derived.
+Heine's reduction is established in section 2. But first we
+expose background about algebraic functions which is needed
+for Heine's result
+and in  section 3 we give the proof of
+Eisenstein's theorem.
+\bigskip
+
+\noindent
+\centerline {\bf 1. On algebraic functions.}
+\medskip
+
+\noindent
+Let ${\bf{C}}[z,w]$ be the
+polynomial ring in two
+independent variables
+Introducing the field
+$K={\bf{C}}(z)$ of rational functions in $z$
+we get the polynomial ring $K[w]$ of one variable.
+This ring has important  properties. Namely,
+if $Q(w)=\sum\, k_\nu(z)\cdot w^\nu$ is a $w$-polynomial with
+of some degree $m\geq 1$, then
+every other polynomial $S\in K[w]$ can be written in a unique way as
+\[ S(w)= A(w)\cdot Q(w)+R(w)\quad\colon\,\text{degree of}\,\, R(w)\leq m-1\tag{1}
+\]
+This  division shows that 
+$K[w]$ is an \emph{euclidian ring} where every ideal is principal and
+every polynomial can be written in a unique way as a product of
+irreducible polynomials. Of course, in such a factorisation multiple factors
+can occur.
+Suppose now that
+$Q(w)$ is an irreducible polynomial on $K[w]$. Bringing out
+the denominators in the coefficients from ${\bf{C}}(z)$
+it follows that $Q(w)$ corresponds to
+a polynomial
+\[ 
+q(w,z)=\rho(z)\cdot\, [g_m(z)w^m+\ldots+g_1(z)w+g_0(z)]\tag {2}
+\]
+where $g_0(x),\ldots,g_m(z)$ are polynomials in ${\bf{C}}[x]$ 
+without a common zero. Moreover, this factorisation
+is unique when we require that
+the leading polynomial $g_m(x)$ is monic, i.e. if $k$ is its degree
+then 
+$g_m(x)= x^k+\text{lower order monomials}$.
+Now (2) is used to construct root functions of
+$q(z,w)$. Namely, let $\sigma$ be the finite set of zeros of
+$g_m(z)$. For each fixed $z_*\in{\bf{C}}\setminus\sigma$
+we get a $w$-polynomial of degree $m$:
+\[
+g_m(z_*)w^m+\ldots+g_1(z_*)w+g_0(z_*)
+\]
+By the fundamental theorem of algebra it has $m$ roots 
+where eventual multiple roots are repeated. Denote this unordered
+$m$-tuple of roots by
+$\alpha_1(z_*),\ldots,\alpha_m(z_*)$.
+Then we have
+\[
+q(w,z_*)=\prod_{\nu=1}^{\nu=m}\, (w-\alpha_\nu(z_*))\tag{3}
+\]
+To find out if multiple roots occur  we
+set
+\[
+\Delta(z_*)= \prod_{j\neq\nu}\,
+(\alpha_\nu(z_*)-\alpha_j(z_*))\tag{4}
+\]
+This is a product of $m(m-1)/2$ many factors 
+and constructed in a symmetric fashion,
+i.e. the product does not change when the $m$-tuple of roots is permuted.
+Since $q(w,z)$ comes from the irreducible polynomial $Q(w)$
+the $\Delta$-function is not  identically zero.
+To see this we regard the $w$-derivative of $Q(w)$ which has degree
+$m-1$ in $K[w]$.
+Since $Q(w)$ is irreducible  there exist  polynomials
+$A(w)$ and $B(w)$ in $K[w]$ such that
+\[
+A(w)Q'(w)+B(w)Q(w)=1\tag{5}
+\]
+Bringing out common denominators we get an equality in ${\bf{C}}[z,w]$:
+ \[ 
+a(w,z)\cdot \partial (Q(w,z)/\partial w+ b(w,z)\cdot Q(w,z)= h(z)\tag{6}
+\]
+where $a,b,h$ are some polynomials and $h(z)$ is not identically zero.
+Then it is clear that if $z_*\in {\bf{C}}\setminus\sigma$ 
+and $h(z_*)\neq 0$, then $\Delta(z_*)\neq 0$.
+\medskip
+
+\noindent
+{\bf 1.1 The resolvent polynomial for $\Delta$.}
+We have seen that $\Delta(z_*)$ is a symmetric product of the roots.
+By a wellknown result in algebra this implies that
+it can be expressed as a sum of elementary symmetric 
+$\alpha$-polynomials. Applied to the present situation this gives
+rational functions
+$c_0(z)\,\ldots,c_{m(m-1)/2}(z)$ such that
+\[ 
+\Delta(z_*)=\sum\, c_j(z_*)\cdot[\,\alpha_1^j(z_*)+\ldots
+,\alpha_m^j(z_*)]\quad\colon\, z_*\in{\bf{C}}\setminus\sigma.\tag{7}
+\]
+
+
+\noindent
+Now residue calculus gives:
+\[
+\alpha_1^j(z_*)+\ldots+\alpha_m^j(z_*)=
+\frac{1}{2\pi i}\cdot
+\int_{|w|=R}\,
+\frac{w^j\cdot\partial q/\partial w(w,z_*)\cdot dw}
+{q(w,z_*)}\tag{8}
+\]
+where we for each fixed $z_*$ choose $R$ so large that the zeros of
+$q(w,z_*)$ have absolute value $<R$.
+From this we  conclude that
+$\Delta(z_*)$ is a rational function
+of the $z$-variable and since it stays bounded
+when the leading polynomial $g_m(z)$ of $q(w,z)$ is non-zero, this
+rational function has poles contained in $g_m^{-1}(0)$.
+Finally, using (7-8) and the euclidian division in $K[w]$
+we arrive at
+\medskip
+
+
+
+\noindent
+{\bf 1.2 Proposition.}
+\emph{There exists a unique $w$-polynomial}
+
+\[ \mathcal R(w,z)= r_{m-1}(z)w^{m-1}+\ldots+r_0(z)\quad
+\colon\, r_\nu(z)\in{\bf{C}}|z]
+\] 
+\emph{such that}
+\[ 
+\Delta(z_*)=
+\frac{1}{2\pi i}\cdot
+\int_{|w|=R}\,
+\frac{\mathcal R(w,z_*)\cdot\partial q/\partial w(w,z_*)\cdot dw}
+{q(w,z_*)}\quad\colon\quad z_*\in{\bf{C}}\setminus\sigma
+\]
+\emph{Moreover, the poles of the rational $r$-functions  are contained in
+$g_m^{-1}(0)$.}
+
+
+\medskip
+
+\noindent 
+\emph{Proof.}
+The existence of $\mathcal R$ has already been settled. To see that
+uniqueness holds we recall from
+linear algebra that the \emph{van der Monde determinant}
+constructed from the $m\times m $-matrix whose rows are
+$1,\alpha_\nu(z_*),\ldots,\alpha_\nu^{m-1}(z_*)$
+is $\neq 0$  when $z_*\in{\bf{C}}\setminus\sigma$.
+\medskip
+
+
+\noindent
+{\bf 1.3 The multi-valued root functions.}
+Put $\sigma^*=\sigma\cup\,h^{-1}(0)$.
+Outside this set the $m$-tuple of roots are distinct and
+at the same time we avoid zeros of the $g_m$-polynomial.
+This implies that
+the root functions yield single valued analytic functions
+in every disc $D$ contained in $\Omega={\bf{C}}\setminus\sigma^*$.
+Moreover, each single root is a germ of a multi-valued analytic function
+defined in the whole connected set $\Omega$.
+These multi-valued functions are special since 
+we always  stay within  roots during an analytic continuation. So if $z_*$
+is fixed in $\Omega$ and $\alpha_1(z)$ is a local branch of one root at
+$z_*$, then $T_\gamma(\alpha_1)$ is again a root of $q(w,z_*)$
+whenever $\gamma$ is a closed curve a $z_*$.
+Hence the family $\{T_\gamma(\alpha_1)\}$
+is a finite subset of $\mathcal O(z_*)$.
+Moreover, this family consists of \emph{all the root functions}
+at $z_*$.
+For assume the contrary. Then all the analytic continuations of
+$\alpha_1$ produce $k$ many root functions at $z_*$, say
+$\alpha_1,\ldots,\alpha_k$.
+This $k$-tuple is permuted under all  analytic continuations along  closed
+curves at $z_*$. As explained in XX
+the same holds at other points in
+${\bf{C}}\setminus\sigma^*$. Hence their symmetric products
+become single valued and
+we get a function
+\[ 
+B(w,z)=
+\prod_{\nu=1}^{\nu=k}\, [w-\alpha_\nu(z))
+\] 
+which is a polynomial in $w$ with rational coefficients in
+${\bf{C}}$. In the same way get a polynomial $B_1(w,z)$ using the symmetric
+product over the remaining $m-k$ roots functions. But then
+the irreducible polynomial $Q(w)$ in $K[w]$ has a factorisation  $B\cdot B_1$
+which is a contradiction.
+Hence we have the proved:
+\medskip
+
+\noindent {\bf 1.4 Proposition.} \emph{For each single root-function
+$\alpha$ at a point $z_*\in{\bf{C}})\setminus \sigma^*$
+it follows that $\{T_\gamma(\alpha)\}$
+consists of the whole $m$-tuple
+of root functions at $z^*$.}
+\bigskip
+
+
+\noindent
+{\bf{Remark}}.
+This means that in the total  sheaf space
+$\mathcal {\widehat O}$
+there exists a connected set $W$ contained in
+$\rho^{-1}({\bf{C}}\setminus\sigma^*)$
+which corresponds to the root functions. In particular the projection
+$\rho\colon\, W\to {\bf{C}}\setminus\sigma^*$ 
+is an $m$-sheeted covering map.
+
+
+\medskip
+
+\noindent
+{\bf 1.5 Associated algebraic functions.}
+We have the multi valued root functions
+$\{\alpha_\nu(z)\}$ in $\Omega={\bf{C}}\setminus \sigma_*$.
+If $z_0\in\Omega$ each root function is analytic in a disc $D$
+centered at $z_0$ and has some   series expansions:
+\[ 
+\alpha_\nu(z)=\sum_{j=0}^\infty\, c_{\nu,j}(z-z_0)^j
+\quad\colon\, 1\leq \nu\leq m\tag{1}
+\]
+
+
+\noindent
+Take $\nu=1$
+and start the series expansion of $\alpha_1(z)$ . If $p\geq 1$
+we can write
+\[ 
+\alpha_1(z)= c_{1,0}+\ldots+c_{1,p-1}\cdot (z-z_0)^{p-1}+
+(z-z_0)^p\cdot \beta_p(z)\tag{2}
+\]
+
+
+\noindent 
+Here $\beta_p(z)$ is a new germ of analytic function at $z_0$ and we can
+write
+\[
+\beta_p(z)= \frac{\alpha_1(z)- c_{1,0}+
+\ldots+c_{1,p-1}\cdot (z-z_0)^{p-1}}
+{(z-z_0)^p}\tag{3}
+\]
+
+
+\noindent
+If $\gamma$ is an curve in ${\bf{C}}\setminus\sigma^*$
+we obtain an analytic continuation of $\beta$ where
+\[
+T_\gamma(\beta_p)= \frac{T_\gamma(\alpha_1)- c_{1,0}+
+\ldots+c_{1,p-1}\cdot (z-z_0)^{p-1}}
+{(z-z_0)^p}\tag{3}
+\]
+The resulting his multi-valued extension produces the same number of
+different local branches a $z_0^*$ as the germ of $\alpha_1$, i.e. the number is equal to $m$. From this we conclude that 
+$\beta_p$ is a root function associated to
+an irreducible polynomial $S[w]$ of degree $m$ in
+$K[w]$.
+\newpage
+
+\centerline {\bf 2.  Heine's reduction.}
+\medskip
+
+
+\noindent
+We   establish a result due to Heine
+which will be used
+to prove
+Eisenstein's theorem. With the notations from ¤ 1.5 we have
+$\beta_p(z) $  which is analytic at $z_0$. When we perform  analytic continuations, 
+$\alpha_1$ changes  and it may occur that
+we arrive to a root $\alpha_j$ where
+the numerator in (3) from 1.5  does not vanish up to order $p$
+at $z_0$, i.e. we may encounter a pole at $z_0$ when we regard
+\[
+ \frac{\alpha_j(z)- c_{1,0}+
+\ldots+c_{1,p-1}\cdot (z-z_0)^{p-1}}
+{(z-z_0)^p}\tag{4}
+\]
+In fact, this will occur for \emph{every} $2\leq j\leq k$
+if $p$ is large enough.
+To see  this we  notice that
+the $m$-tuple of germs
+$\alpha_1,\ldots,\alpha_m$ at $z_0$
+are \emph{linearly independent}
+in the complex vector space
+$\mathcal O(z_0)$. This implies that there exists some
+$p^*$ such that the power series of
+$\alpha_1,\ldots,\alpha_m$ at $z_0$ cannot be identical up to order
+$p^*$. So when $p\geq p^*$ it follows that
+we get a pole at $z_0$ for each $2\leq j\leq m$ in (4).
+\medskip
+
+
+\noindent
+{\bf 2.1 A consequence.}
+Let $p$ be so large that we get poles at $z_0$
+in (4) for every $2\leq j\leq m$.
+Regard analytic continuations along
+closed curves $\gamma^*$ which
+stay in $\Omega^*$. Then (2) implies that
+\[ 
+T_{\gamma^*}(\alpha_1)=
+c_{1,0}+\ldots+c_{1,p-1}\cdot (z-z_0)^{p-1}+
+(z-z_0)^p\cdot T_{\gamma^*}(\beta_p)\tag{5}
+\]
+
+
+\noindent
+Choose $\gamma^*$ so that
+$T_{\gamma^*}(\beta_p)$ is another root of the algebraic equation satisfied by
+$\beta_p$. Let us call it $\rho$ for the moment.
+Since $\rho\neq \beta_p$ in $\mathcal O(z_0^*)$
+it follows that
+$T_{\gamma^*}(\alpha_1)\neq\alpha_1$ and hence
+$T_{\gamma^*}(\alpha_1)=\alpha_j$ for some $j\geq 2$.
+So at $z_0^*$ we have
+\[
+\alpha_j(z)=
+ c_{1,0}+\ldots+c_{1,p-1}\cdot (z-z_0)^{p-1}+\rho(z)(z-z_0)^p\tag{6}
+\]
+But now (4) gives a pole at $z_0$
+and therefore the germ $\rho$ \emph{cannot} extend to be analytic a $z_0$.
+This holds for every root except $\beta_p$. Hence we have proved
+\medskip
+
+\noindent {\bf 2.2 Proposition.}
+\emph{If $S[w)$ is the irreducible polynomial in $K[w]$ which produces
+the root functions generated by $\beta_p$, then 
+$\beta_p$ is the only root which can be extended analytically at
+$z_0$. Moreover, if $\Omega$ is a simply connected sector in
+$D$ and $\rho_2,\ldots,\rho_m$ the remaining roots then their single-valued
+restrictions to $\Omega$ are unbounded when $z_0$ i approached.}
+
+\bigskip
+
+\noindent
+{\bf 2.3 Structure of $S[w]$}
+To $S[w]$ we get exactly as in (0.2) a polynomial
+\[
+s(w,z)=
+\rho^*(z)\cdot s_m(z)w^m+\ldots+s_1(z)w+s_0(z)]\tag{i}
+\]
+where $\beta_p(z)$ appears as one root function.
+By analyticity any germ $\phi\in\mathcal O(z_0)$
+which satisfies
+\[
+s_m(z)\cdot \phi^m(z)+\ldots+s_1(z)\cdot \phi(z)+s_0(z)=0
+\]
+in a neighborhood of $z_0$ yields a root function of $S[w]$.
+Now  Proposition 2.2 and the result in XX shows that
+we must have
+\[
+s_m(0)=\ldots=s_2(0)=0\tag{**}
+\]
+This finishes the proof of Heine's reduction
+
+\bigskip
+
+\noindent
+\centerline {\bf 3. Proof of Eisenstein's theorem.}
+\bigskip
+
+\noindent
+Let $w(z)$ satisfy an algebraic equation $P(z,w)=0$
+and assume that it has a rational series expansion (0.1) at some point.
+Now $P(z,w)=\sum\, c_jk z^jw^ k$
+with complex coefficients. But ${\bf{C}}$ is a vector space
+over the field $Q$ of rational numbers.
+So regarding the finite set of complex coefficients
+they can be expanded in a basis, i.e. we can write
+\[ 
+c_{jk}=\sum\, q_{j,k;\alpha}\cdot \xi_\alpha\quad\colon\, q_{i,j;\alpha}\in
+Q\quad,\colon\,m\{\xi_\alpha\} \,\,\text{ are linearly independent
+over}\,\, Q
+\]
+If $P_\alpha(z,w)=\sum\, q_{j,k;\alpha}(z,w)$
+it follows that
+$\xi_\alpha\cdot \sum \, P_\alpha(z,w)=0$. Using the rational series for
+$w$ and the $Q$-linear independence of the $\xi$-numbers, we see that
+$P_\alpha(z,w)=0$ for eah $\alpha$. Now we simply use that at
+least one of these polynomials is not identically zero.
+hence $w$ satisfies t an algebraic equation defined by a polynomial in
+$Q[z,w]$.
+So now $P$ has rational coefficients. Next, in (0.5) the
+expansion of $\beta_p(z)$ contains all 
+coefficients in the expansion in (0.1) except for $c_0,\ldots,c_{p-1}$.
+if $k\geq 1$ is found so that $\beta_p(kz)$ has an integer
+expansion the same holds for $w(M\cdot z)$
+when $M$ is an integer such that $M\cdot c_\nu\in{\bf{Z}}$ for
+each $0\leq\nu\leq p-1$.
+There remains only to show that $k$ exists for
+the algebraic function $\beta_p(z)$ which satisfies
+an equation $Q(z,\beta_p)=0$. Here $P$ has rational coefficients
+and multiplying these by some integer we can assume that the polynomial has integer 
+coefficients.
+To simplyify notations we set $w=\beta_p$ and we are in the favourable case
+described by (*) in (0.3).
+The rational expansion of $w(z)$ is given
+as in (0.1). 
+\[
+\sum_{\nu=2}^{\nu=m}\, q_\nu(z)\cdot w(z)^\nu+
+q_1(z)w(z)+q_0(z)=0\tag{i}
+\]
+Let $2\leq \nu\leq m$ be given. Since $q_j(0)=0$
+we  have
+\[
+q_\nu(z)\cdot w(z)^\nu=\sum_{j\geq 1}\,
+q_{j,\nu}z^j\cdot(c_0+c_1z+\ldots)^\nu=\sum\,\rho_{\nu,N}\cdot z^N\tag{ii}
+\]
+By assumption $q_{j,\nu}\in{\bf{Z}}$ and since $j\geq 1$ always occurs
+it is clear that if $N\geq 1$ then
+the $\rho$-coefficient is expressed by
+\[ 
+\rho_{\nu,N}=\sum_{j\geq 1}\,q_{j,\nu}z^j\cdot B_j[c_0,\ldots,c_{N-j}]
+\]
+where each $B_j$ is a homogeneous polynomial of degree
+$N-j$.
+This implies that if $k$ is a positive integer such that
+$k^j\cdot c_j\in {\bf{Z}}$ hold for $0\leq j\leq N-1$, then
+$k^{N-1}\cdot\rho_{\nu,N}\in{\bf{Z}}$.
+This conclusion holds for every $\nu\geq 2$.
+Together with (i) we get the following
+\medskip
+
+\noindent
+\emph{Sublemma.}
+\emph{Let $N\geq 2$ and assume let $k$
+be an integer $k$ is an integer such that
+$k^jc_j\in{\bf{Z}}$ hold for each $0\leq j\leq N-1$.
+Then }
+\[ 
+k^{N-1}\cdot\rho_{0,N}\in{\bf{Z}}
+\]
+\medskip
+
+\noindent
+The Sublemma  enable us to cary out an induction. For first we have the zero
+coefficient for $z^N$ in (i) which gives:
+\[ 
+q_{0,1}\cdot c_N+\sum_{j\geq 1}\, q_{j,1}c_{N-j}+\sum_{\nu\geq 2}\,\rho_{\nu,N}
++q_{N,0}=0\tag{iii}
+\]
+\medskip
+
+\noindent
+Here all the doubly-indexed $q$-numbers are integers.
+If $k=q_{0,1}$
+and the induction holds up to $N_1$ we therefore get
+$k^N\cdot c_N$ and hence Eisenstein's Theorem will follow. Well, of course
+we must settle the start,  i.e. we must also show that
+\[ 
+q_{0,1}\cdot c_1\in{\bf{Z}}
+\]
+But this is clear for now we only have to identify the
+$z$-coefficient in (0.1) and get
+\[
+\sum_{\nu\geq 2}\, q_{1,\nu}\cdot c_0+
+q_{0,1}\cdot c_1+q_{1,0}=0
+\]
+Since we also may assume that
+$c_0$  is an integer we get (x) as required.
+So this finishes the proof of Eisenstein's Theorem.
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf 9. Extensions by reflection}
+\bigskip
+
+\noindent
+{\bf Introduction.} 
+\emph{Das Spiegelungsprinzip} is due to H. Schwartz.
+It is frequently  used to obtain analytic continuations.
+First we describe the standard case.
+Let $f(z)$ be an analytic function in the upper half plane
+$U_+=\{\mathfrak{Im}\,z>0\}$.
+Let $J(a,b)=\{a<x<b\}$ be an interval, on  the real axis.
+Suppose that $f$ extends to a continuous function to this open interval
+and takes real values. In the lower half-plane $U_-$
+we get the analytic function
+\[  
+f_*(z)=\bar f(\bar z)\tag{i}
+\]
+
+\medskip
+\noindent By the result in XX the two functions are analytic
+continuations of each other over
+$(a,b)$. So this means that $f$ itself has an analytic extension
+to the open set $\Omega={\bf{C}}\setminus J$, where
+$J_*=(-\infty,a]\cup\, [b,+\infty)$
+is the closed complement of $J(a,b)$ on the $x$-axis.
+Next, suppose that
+$e^{i\theta}f(z)$ extends to a real-valued function on
+$(a,b)$ for some $\theta$. 
+After multiplication
+with $e^{-i\theta}$ we get an extension of $f$. That is, one has only to require
+that the argument of $f$ is constant to obtain an
+analytic continuation.
+Suppose now that the argument of $f$ is constant  over a family of
+pairwise disjoint  intervals $\{J(a_\nu,b_\nu)\}$. Then we get analytic
+continuations across each interval. In particular one has: 
+\bigskip
+
+\noindent
+{\bf 9.1 Theorem.}
+\emph{Let $a_1<\ldots<a_N$ be a finite set of real numbers
+and assume that $f$ extends to a continuous function on each of the intervals}
+\[ 
+J_0=(-\infty,a_1)\quad\colon \,J_\nu=(a_\nu,a_{\nu+1}\,\colon
+2\leq\nu\leq N_1\quad \colon\, J_N=(a_N,+\infty)
+\]
+\emph{and on every such interval the argument of $f$ is some constant.
+By reflection over one such  interval
+we obtain an analytic
+of $f_*^\nu$ to the set
+${\bf{C}}\setminus (a_1,\ldots,a_N)$.}
+\medskip
+
+\noindent
+{\bf Example.} In the upper half-plane $U_+$
+we consider the analytic function
+\[ 
+f(z)=\sqrt{z}\cdot\sqrt{1-z}
+\]
+The single-valued branches of the root functions are chosen so that
+\[ 
+\sqrt{z}=\sqrt{r}\cdot e^{i\theta/2}\quad \colon\quad
+\sqrt{z-1})=\sqrt{1+r^2-2r\cdot\text{cos}\,\theta}\cdot e^{i\phi}
+\quad\colon z= re^{i\theta}
+\] 
+where 
+$0<\theta<\pi$ and $\phi$ is the outer angle of the triangle in figure xx.
+So here $0<\phi<\pi$ holds.
+As we approach a point $0<x<1$
+we get the boundary value
+\[ 
+f(x)=\sqrt{x}\cdot i\cdot\sqrt{1-x}
+\]
+Now get the analytic continuation $f_*^1$
+across the interval $J_1=(0,1)$ which becomes an analytic function
+defined in the lower half-plane $U_-$ by
+\[
+f_*^1(z)=-\bar f(\bar z)
+\]
+Notice that the minus-sign appears in order that
+$f(x)=f_*^1(x)$ holds for $0<x<1$.
+Suppose now that $x>1$. Then we get
+\[ 
+\lim_{y\to 0}\,f_*^1(x-iy)=\lim_{y\to 0}\,-\bar f(1(x+iy)=-\sqrt{x}\cdot\sqrt{x-1}
+\]
+So $f$ and $f_*^1$ do not agree on
+the real interval $(1,+\infty)$. At the same time
+$f_*^1$ can be continued analytically across
+$(1,+\infty$ and gives 
+an analytic function
+$f_+{**}$ defined in $U_+$ where we obtain
+\[ 
+f_+^{**}(z)= -f(z)\quad\colon\quad z\in U_+
+\]
+Another analytic continuation of
+$f_*^1$ takes place across $(-\infty,0)$.
+When $x<0$ we have
+\[
+\lim_{y\to 0}\,f_*^1(x-iy)=
+\lim_{y\to 0}\,-f(1(x+iy)=
+\]
+
+
+
+
+
+
+
+
+
+After $f$ has been extended to the lower half-plane
+where we get an analytic function denoted by
+$f_*$ we notice that
+$f_*$ by the construction also
+has boundary values with a constant argument as
+we approach points on the real axis form below.
+So $f_*$ also extends to the upper half-plane where we encounter
+a new analytic function $f^*(z)$.
+Next, we can continue $f^*$ to the lower half-plane and so on.
+The result is that
+$f$ from the start extends to a multi-valued function in
+${\bf{C}}\setminus (a_1,\ldots,a_N)$.
+
+\medskip
+
+\noindent
+{\bf 9.2 The use of conformal maps.}
+For local extensions there exists  a  general result.
+Let $D$ be an  open disc and $\gamma$ a Jordan arc
+which joins two points on $\partial D$ and separates
+$D\setminus\gamma$ into a pair
+of disjoint Jordan domains.
+Let $f$ is analytic in one of the Jordan domains, say
+$D^*$. Assume also that $f$ extends to a continuous and real-valued
+function on $\gamma$.
+Now there exists a conformal map from $D^*$ to
+the upper half-plane and using this it follows that
+$f$ extends analytically across $\gamma$. of course, the
+extension $f_*$ will in general only exist in a small
+domain close to $\gamma$, i.e. this is governed via the
+conformal mapping. But here exists at least
+a locally defined  analytic continuation across $\gamma$.
+\medskip
+
+\noindent
+{\bf 9.3 Boundary values on circles}
+Let $f(z)$ be as above and suppose it extends continuously to
+$\gamma$ where the absolute value is constant, say 1.
+Using a conformal map from $D_*$ to the unit disc we may
+assume that $\gamma$ is an interval of the unit disc $D$
+and
+$f$ is analytic in a small region $U\subset D$ where
+$\gamma$ appears as a relatively open subset of
+$\partial U$.
+By hypothesis  $f(\gamma)$
+is a subset of another unit circle and using a conformal map
+from the disc bordered by this unit circle we
+get the situation in 7.2. and conclude that
+$f$ continues analytically across $\gamma$.
+More generally, using a locally defined conformal map
+there exists an analytic
+extension of $f$ across $\gamma$ if we only assume that
+the continuous boundary values of $f$ on
+$\gamma$ are contained in some locally defined 
+\emph{real-analytic curve}.
+Finally, by a two-fold application of conformal mappings
+we get the following
+quite general result:
+\medskip
+
+\noindent
+{\bf {9.4 Theorem.}}
+\emph{Let $f(z)$ be analytic in a Jordan domain
+$\Omega$ and suppose that
+$\gamma$is an open arc of $\partial\Omega$ such that
+$f$ extends continuosly from
+$\Omega$ to $\Omega\cup\gamma$
+and the restriction $f|\gamma$has a range
+$f(\gamma)$  contained in a 
+simple real-analytic curve $\gamma^*$.
+Then $f$ extends analytically across $\gamma$, i.e. there exists
+an open and connected neighborhood $U$ of $\gamma$ such that
+the original $f$-function extends to the connected domain
+$\Omega\cup U$.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Theorem 9.4 follows from the fact that if
+$\Omega_2$ and $\Omega_2$
+are two Jordan domains whose boundaries
+both are \emph{real analytic}
+closed Jordan curves, then a conformal map from
+$\Omega_1$ to $\Omega_2$ extends to a conformal map 
+from an open neighborhood of
+$\bar\Omega_1$ to an open neighborhood
+of $\bar\Omega_2$.
+
+
+
+
+\newpage
+\centerline{\bf 10. The elliptic modular function}
+
+\bigskip
+
+\noindent
+{\bf Introduction.}
+We   construct
+an analytic function
+$\lambda(z)$  in
+the upper half-plane
+$U_+=\mathfrak{Im}\, z>0$ whose
+complex derivative of $\lambda$ 
+is $\neq 0$ and the image set $\lambda(U_+)$ is equal to
+the connected open set
+$\Omega={\bf{C}}\setminus \{0,1\}$, i.e. the two points 0 and 1 are removed from
+the complex plane.
+
+
+\medskip
+
+\noindent
+{\bf 8.1 An initial construction.}
+Consider the simply connected
+open set
+\[
+V_0=U_+\,\cap {\ |z-1/2|>1/2}\cap\,
+\{0<\mathfrak{Re}\, z<1\}
+\]
+
+\noindent
+Here $\partial V_0$ consists of three pieces. One is
+the vertical line $\ell_0$ on which $x=0$ and $y>0$. The second is
+the line
+$\ell_1$ on which $x=1$ and $y>0$. Finally we have the half-circle
+\[
+T_0=\{ 1/2+1/2\cdot e^{i\theta}\}\quad\colon\quad 0<\theta<\pi
+\]
+
+
+\noindent
+We admit Riemann's mapping theorem for simply connected
+domains and find a unique  conformal mapping $\lambda_0$ from
+$V_0$ onto $U_+$ when we 
+require that  $\lambda_0$
+yields a 1-1 map from
+$\ell_0$ to $(-\infty,0)$ and after
+it maps $T_0$ onto $(0,1)$ and finally $\ell_1$ is mapped onto
+$(1,+\infty)$. See Figure XXX.
+\medskip
+
+\noindent
+{\bf 8.2 Reflection on vertical lines.}
+The boundary values along $\ell_0$
+of the mapping function $\lambda_0$ stay on the real interval
+$(-\infty,0)$.
+We can therefore apply the reflection principle to continue
+$\lambda_0$ across $\ell_0$.
+To see this we consider the domain
+\[
+V_{-1}= V_0-\{1\}
+\]
+That is, points in $V_{-1}$ are of the form
+$z-1$ with $z\in V_0$.
+Notice that we get a 1-1 from $V_{-1}$ onto $V_0$ by:
+\[ 
+z\mapsto -\bar z\quad\colon\quad z\in V_{-1}
+\]
+By the Schwarz reflection principle we get
+an analytic function in 
+$V_{-1}$ defined by
+\[
+g(z)=\bar\lambda_0(-\bar z)
+\]
+Since $-\bar z=z$ hold when $z=iy$
+we conclude that
+$\lambda_0$ extends to an analytic function
+in the domain formed by the union 
+$V_0\cup V_{-1}$ and the real line where $x=0$ and $y>0$.
+Since conjugate values appear in (ii) this extended function
+has an image given by ${\bf{C}}\setminus [0,+\infty)$
+and by the construction this map is even conformal.
+\medskip
+
+\noindent
+In exactly the same way we can extend $\lambda_0$ 
+across $\ell_1$,. This gives  an analytic function
+defined in the union of $V_1=V_0+\{1\}$ and $V_0$ 
+which yields a conformal map from this open
+set onto ${\bf{C}}\setminus(-\infty,0]$.
+At this stage it is clear how one can proceed.
+For example, we can regard the extended $\lambda$-function in
+$V_1$ and extend it across the line $\ell_2$ where $x=2$ and $y>0$.
+Simiarly we get extensions to the left.
+As explained by Figure xx the result after all such
+reflections across
+vertical lines $\ell_\nu$ we arrive at the following.
+Set
+\[ V_*=\cup\, \{V_0+\nu\}
+\] 
+where the union is taken over all integers.
+Then one has:
+\medskip
+
+\noindent
+{\bf 8.3 Proposition.}
+\emph{After  continuation we obtain
+a single valued analytic function
+$\lambda_*$ defined in the domain $V_*$
+whose image set is ${\bf{C}}\setminus [0.1]$.}
+\medskip
+
+\noindent
+{\bf Remark.} As explained by Figure x we have for each
+integer $k$ the simply connected domain
+$V_k=V_0+\{k\}$.
+The restriction of $\lambda_*$
+to $V_k$ gives a conformal map onto
+the upper half-plane if
+$k$ is an even integer and the lower half-plane if $k$ is odd.
+Notice also that $\lambda_*$  is periodic:
+\[ 
+\lambda_*(z)=\lambda_*(z+2k)\quad\text{for each
+integer}\quad  k.
+\]
+
+\medskip
+
+\noindent
+{\bf 8.4 Reflections over circles.}
+Let us return to the function $\lambda_0$. The semi-circle $T_0$ borders $V_0$
+and is mapped by $\lambda_0$ 
+to the real interval  $(0,1)$.
+So again we can apply the reflection principle. Namely,
+introduce a new complex variable $w$
+and represent points on $T_0$ by
+\[
+1/2+1/2\cdot e^{i\theta} 
+\]
+Here $\lambda_0(1/2+w/2)$ is defined in a portion
+of the exterior disc
+$|w|>1$, i.e. when
+$1/2+w/2\in V_0$.
+Set
+\[ 
+g(w)=\bar\lambda(1+\frac{1}{2\bar w})
+\]
+Then $g(w)=\lambda_0(1/2+w/2)$ when $|w|=1$
+and $g$ extends to an analytic function in
+$|w|<1$ as long as
+\[
+1+\frac{1}{2\bar w}\in V_0\tag{*}
+\]
+By drawing a figure and using euclidian geometry one sees 
+that (*) holds if and only if the corresponding points
+$z=1/2+w/2$ stay outside the union of the two half-discs
+$|z-1/4|<1/4$ and $|z-3/4|<1/4$.
+The conclusion is that
+$\lambda_0$ extends from $V_0$ to
+the larger domain
+\[
+V_0(1)=\{z\,\colon 0<\mathfrak{Re}(z)<1\}\setminus
+\{|z-1/4|\leq 1/4\}\cup\, \{|z-3/4|\leq1/4\}
+\]
+\medskip
+
+\noindent
+The extended function gives a conformal map from
+to $V_0(1)$ onto the simply connected
+subset of
+${\bf{C}}$ where
+$(-\infty,0]$ and $(1,+\infty)$ are removed.
+In the same way we apply the reflection principle in
+each domain $V_k$ and obtain an analytic extension to the set
+$V_k(1)=\{V_0(1)+k\}$. Taking the whole union we obtain an extension of
+the  $\lambda_*$-function to the domain
+$V_*(1)$ which is a simply connected subset of
+the upper half-plane bordered by a sequence of half-circle of radius 1/4. See
+Figure XX.
+\medskip
+
+\noindent
+Let us denote the extended function by $\lambda_{**}$. 
+The construction goes on where we now use the refection principle for
+the extension of $\lambda_{**}$ across each of the half-circles which
+borders $V_*(1)$ and as a result we get an extension to a domain
+$V_*(2)$ which now is bordered by a sequence of half-circles of radius $1/8$
+centered at integer multiples of 1/8.
+We can continue and passing to the limit we obtain an analytic function
+$\lambda$ defined in the whole upper half-plane with values in
+${\bf{C}}\setminus \{0,1\}$.
+This proves the existence of the required $\lambda$-function.
+\bigskip
+
+\noindent
+{\bf{8.5 Invariance under a  Mšbius group}}
+By the construction
+\noindent
+the $\lambda$-function  is locally conformal but not 1-1.
+It turns out that this function is
+\emph{invariant} under a group of Mšbius tranasformations
+$U_+$. 
+\medskip
+
+\noindent
+{\bf 8.6 Definition.} \emph{Denote by $G$ the group of
+Mšbius transformations of the form}
+\[
+z\mapsto \frac{az+b}{cz+d}\quad\colon\quad
+ad-bc=1\quad\colon a,b,c,d\in{\bf{Z}}\quad
+\colon\,a,d\,\,\,\text{are even}\,\colon b,c\,\,\,\text{are odd}
+\]
+\medskip
+
+\noindent
+One verifies easily that
+$G$ is a group and that every 
+$G$-element yields a conformal map of
+$U_+$ onto itself.
+By scrutinizing the construction of
+the $\lambda$-function one verifies that
+it is invariant under $G$. More precisely,
+\[ 
+\lambda(z)=\lambda(g(z))\quad\colon\quad
+g\in G\quad\colon z\in U_+
+\]
+\medskip
+
+\noindent
+This means that
+$\lambda$ is an automorphic function with respect to $G$.
+Moreover,  for each
+point $\zeta\in{\bf{C}}\setminus \{0,1\}$
+the inverse the  fiber
+$\lambda^{-1}(\zeta)$ is  an
+orbit for $G$. More precisely,  we  get the  inverse
+fiber by the following procedure: Pick any $z_0$ with $\lambda(z_0)=\zeta_0$.
+Then the map
+\[ 
+g\mapsto g(z_0)\quad\colon\quad g\in G
+\]
+yields a \emph{bijective} correspondence between the elements of the group
+$G$ and the inverse fiber
+$\lambda^{-1}(\zeta_0)$.
+\medskip
+
+\noindent
+{\bf Remark.}
+For  a further account of the
+assertions above the reader may consult
+[Bieberbach : page 40-45].
+\medskip
+
+\noindent
+{\bf{The multi-valued inverse}}.
+Since $\lambda(U_+)={\bf{C}}\setminus \{0,1\}$ and 
+$\lambda$ is locally conformal we can construct a multi-valued inverse function to be denoted by
+$\mathfrak{m}$.
+Namely, set $\Omega={\bf{C}}\setminus \{0,1\}$ and consider the point
+$\zeta_0=i$.
+We first find   the  unique point $z_0\in V_0$ such that $\lambda(z_0)=i$.
+At $\zeta_0$ we get a unique germ $\mathfrak{m}_0(\zeta)
+\in\mathcal O(\zeta_0)$
+such that
+
+\[ 
+\mathfrak{m}_0(\lambda(z))= z
+\] 
+hold for $z$ close to $i$.
+Next, let $\gamma$ be a curve in $\Omega$ which starts at $i$ and has some end-point
+$\zeta_1$.
+Since $\lambda$ is locally conformal there exists a unique curve
+$\gamma^*$ in $U_+$ such that
+\[
+\lambda(\gamma^*(t))= \lambda(t)\quad\colon\, 0\leq t\leq 1
+\]
+Since $\lambda$ is locally conformal it is clear that we can construct 
+an analytic extension of
+$\mathfrak{m}_0$ along $\gamma$ which locally produces inverses of
+the $\lambda$-function.
+For the resulting multi-valued $\mathfrak{m}$-function
+we get the sets of values  $W(\mathfrak{m},\zeta)$ for every 
+$\zeta\in\Omega$. This set is in a 1-1 correspondence
+with the inverse fiber
+$\lambda^{-1}(\zeta)$ and hence also a bijective
+with the unimodular  group $G$ above.
+
+
+
+ 
+
+
+\newpage
+
+
+\centerline
+{\bf {11. Poincare's theory of Fuchsian groups}}
+\bigskip
+
+\noindent
+The  theory of Fuchsian groups was
+created by PoincarŽ.
+His  two articles
+\emph{ThŽorie des groupes fuchsiens} and
+\emph{Memoire sur les fonctions
+fuchsiennes} were  published 1882
+in the first
+first volume of Acta Mathematica and
+the article \emph{Memoire sur les groupes kleinŽens}
+appeared in  volume III.
+The last  article  is  more advanced  and we shall not discuss
+Kleinan groups here. Nor do we discuss
+the article \emph{Memoire sur les fonctions
+zŽtafuchsiennes}. The connection to arithmetic was
+presented in a later article \emph{Les fonctions
+fuchsiennes et l'ArithmŽtique} from 1887. One should also
+mention the
+article
+\emph{Les fonctions
+fuchsiennes et l'Žquation $\Delta(u)=e^u$}
+where PoincarŽ proved that this second order differential equation has a 
+subharmonic solution with prescribed
+singularities on every closed Riemann surface attached to an algebraic equation.
+The last work started  potential theoretic analysis
+on complex manifolds.
+Here we  only discuss   material
+from the first two cited articles.
+\medskip
+
+\noindent 
+{\bf Remark.} PoincarŽ was  inspired by
+earlier work, foremost by Bernhard Riemann, Hermann
+Schwarz and  Karl Weierstrass.
+For example, he  used the construction  of multi-valued analytic
+extensions by Weierstrass which leads to the
+\emph{Analytische Gebilde} of a multi-valued function
+$f$ defined in some connected
+open subset  $\Omega$ of 
+${\bf{C}}$. This \emph{Analytische Gebilde} is a connected
+complex manifold $X$ on which $f$
+becomes a single valued analytic function $f^*$. More precisely, there
+exists a locally biholomorphic map
+\[
+\pi\colon\, X\mapsto\Omega
+\]
+When $U\subset\Omega$ is simply connected
+the inverse image $\pi^{-1}(U)$ is a union of pairwise
+disjoint open sets
+$U^*_\gamma$ where
+the single-calued analytic function $f^*$
+is determined by a branch $T_\gamma$ of $f$, i.e. one has
+\[
+T_\gamma(f)(\pi(x)=f^*(x)\quad\colon
+x\in U^*_\gamma
+\]
+
+\medskip
+
+\noindent
+Major contributions are also due to Schwarz.
+In 1869 he used the reflection principle
+and calculus of variation to settle the Dirichlet problem
+and used this to prove  the uniformisation  theorem for
+connected 
+domains bordered by $p$ many real analytic and closed Jordan curves where
+$p$ in general is $\geq 2$.
+Of special interest is the multi-valued $\mathfrak{m}$-function
+defined in ${\bf{C}}\setminus\{0,1\}$
+which is related to the elliptic integral of the first kind
+and hence to Jacobi's $\mathfrak{sn}$-function
+which appears in the equation of motion
+when a rigid body rotates around a fixed point.
+\medskip
+
+\noindent
+{\bf A comment.}
+The theory  of Fuchsian functions was not restricted
+to analytic function theory.
+The  main concern for PoincarŽ was to develop the
+theory of  differential systems, both linear and non-linear.
+His research was
+also directed towards to the general theory about abelian functions and their
+integrals, inspired by Abel's pioneering work.
+Hundreds of text-books have appeared after
+PoincarŽ. Personally I find that  his own and often quite
+personal
+presentation 
+superseeds most   text-books which individually only
+treat
+some  fraction from his great visions.
+See in particular
+the book \emph{Analyse de ses travaux scientifiques}
+where  PoincarŽ
+describes his 
+research areas in  the period between
+1880 until 1907. It contents  has the merit that
+it 
+not only contains a summary of results
+but also explanations of the
+the main
+ideas and methods which led to the theories.
+\medskip
+
+\noindent
+Of course  there exists more recent advancement   in function theory.
+Here one should foremost
+mention work by Lars Ahlfors. So in addition
+to the cited reference above I recommend text-books by
+Ahlfors, especially his book  \emph{Conformal Invariants} which 
+contains material about the 
+theory of \emph{extremal length}
+created by Arne Beurling.
+From a complex analytic   point of view the
+discoveries by Ahlfors and Beurling
+have a wider scope and has led to
+many still unsolved problems in complex analysis.
+including the study of  quasi-conformal mappings.
+In addition  one should also  mention the book [A-S]
+by Ahlfors and Sario about Riemann surfaces.
+
+
+
+\newpage
+
+
+
+\centerline
+{\bf 12. Remarks about Fuchsian groups.}
+\medskip
+
+\noindent
+They are constructed via Mšbius transforms 
+which give conformal mappings
+of the unit disc $D$ onto itself.
+The set up is as follows: To
+each $a\in D$ we have
+the Mšbius transform
+\[ 
+M_a(z)=\frac{z+a}{1+\bar a\cdot z}\tag{i}
+\]
+If $a,b$ is a pair of points in $D$, a  computation shows that
+the composed map
+\[ 
+M_b\circ M_a=M_c\quad\colon\quad c=\frac{a+b}{1+\bar a\cdot b}\tag{ii}
+\]
+In particular $M_{-a}$ is the inverse to $M_a$ and by
+(ii) 
+the points in the unit disc correspond to   elements in a group denoted by
+$\mathcal M$.
+Let $\mathcal F$ be a subgroup of
+$\mathcal M$. To each $z\in D$ we get the orbit:
+\[ 
+\mathcal F_z=\{ M_a(z)\quad\colon\,M_a\in\mathcal F\}\tag{*}
+\]
+
+
+
+\noindent
+Following PoincarŽ
+we say that $\mathcal F$ is a discrete Fuchsian group if every
+orbit is a discrete subset of $D$. It means that
+if $r<1$ then $\mathcal F_z$ only contains a finite set of points
+in the disc
+$D_r$ of radius $r$. Notice that if $z=0$ is the origin then
+the orbit $\mathcal F_0$ corresponds to the set of of points
+$a\in D$ for which the Mšbius transform
+$M_a$ belongs to $\mathcal F$.
+\medskip
+
+\noindent
+{\bf Fundamental domains.}
+Let $\mathcal F$ be a discrete Fuchsian group.
+We seek open subsets
+of the unit disc
+where every pair of distinct points are
+\emph{non-equivalent}.
+To find such domains we  use the hyperbolic  distance function on the unit disc
+introduced by Hermann Schwarz.
+
+
+\medskip
+
+
+\noindent
+{\bf 12.1 Definition.} \emph{The $\delta$-distance in the unit disc
+$D$ is defined by}
+\[
+\delta(z_1,z_2)= \frac{|z_1-z_2|}{|1-z_1\bar z_2|}\quad\colon\quad
+z_1,z_2\in D
+\]
+\medskip
+
+\noindent
+Let us see how a
+Mšbius transformation affects the $\delta$-function. 
+If $a\in D$ 
+a computation gives:
+\[
+\delta(M_a(z_1),M_a(z_1))= \frac{1}{1-|a|^2}\cdot\delta(z_1,z_2)
+\]
+
+\noindent
+So when $|a|\to 1$
+then
+the Mšbius transform
+$M_a$ tends to increase the
+$\delta$-distance. Given a Fuchsian group $\mathcal F$ as above we set
+\[ 
+\mathfrak{D}=\{z\in D\quad\colon\quad
+\delta(z,0)<\delta(z,a)\quad\forall \, a\in\mathcal F_0\setminus\{0\}\}\tag{**}
+\]
+where $\mathcal F_0$ is the orbit which contains the origin.
+
+\medskip
+\noindent
+{\bf 12.2 Proposition.}
+\emph{Every $\mathcal F$-orbit intersects
+$\mathfrak{D}$ in at most one point.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Assume the contrary, i.e. there exists some
+$b\in \mathfrak{D}$ and $0\neq a\in\mathcal F_0$ such that
+both $b$ and $M_a(b)$ belong to
+$\mathfrak{D}$. Since $\mathcal F$ is a group we also have
+$-a\in\mathcal F_0$. Now
+\[
+\delta(b,0)<\delta(b,-a)
+\]
+From (iii) we get
+\[
+\delta(M_a(b),M_a(0))<\delta (M_a(b), M_a(-a))=
+\delta(M_a(b),0)
+\]
+This gives a contradiction since
+$M_a(0)=a$ and the inclusion
+$M\uuu a(b)\in\mathfrak{D}$
+means that we have the opposite inequality
+\[
+\delta(M_a(b),0)<\delta(M_a(b),M_a(0))
+\]
+\bigskip
+
+
+\noindent
+{\bf 12.3 The boundary of $\mathfrak{D}$.}
+If $z$ is a boundary point of
+$\mathfrak{D}$ it follows by continuity that
+there exists at least
+some
+$0\neq a\in\mathcal F_0$ such that
+\[
+\delta(z,0)=\delta(z,a)\tag{*}
+\]
+The converse also holds, i.e. the reader
+should verify
+\medskip
+
+\noindent
+{\bf 12.4 Proposition.}
+\emph{The set $\partial\mathfrak{D}\,\cap D$
+is equal to the set of points
+$z\in D$ for which there
+exists some
+$0\neq a\in\mathcal F_0$
+for which (*) above holds.}
+
+
+\bigskip 
+
+\noindent
+{\bf 12.5 The sets $K(a,b)$.}
+Proposition 12.4  suggests that we consider sets of the form:
+\[
+K(a,b)=\{z\in D\quad\colon\quad
+\delta(z,a)=\delta(z,b)\}\quad\colon\quad a,b \in D\tag{iv}
+\]
+\medskip
+
+\noindent
+{\bf A.5 Proposition.}
+\emph{The set $K(a,b)$ is an arc of a circle which
+intersects the unit circle at a right angle.
+Moreover, $a$ and $0$ 
+"liegen spiegelbildlich zueinander"}.
+\medskip
+
+\noindent
+\emph{Proof.}
+The assertion is invariant under a Mšbius transform. So
+it suffices to consider the case when
+$b=-a$ with $0<a<1$, i.e. the pair are real and symmetrically placed
+with respect to the origin. Then
+\[ 
+K(a,b)=\{z\,\colon\,\frac{|z-a|}{1-az|}=\frac{z+a|}{1+az|}
+\]
+With $z=x+iy$ an easy computation shows that (i) holds if and only if
+\[ 
+4ax(1-x^2-y^2)=0
+\]
+It follows that $K(A,-A)\cap D$ is the 
+lie segment $(-i,i)$ on the imaginary axis. It is regarded
+as a circle which has a  $\perp$-intersection with
+the unit circle and  the tow real points
+$a$ and $-a$ are mutually reflected with each other along the
+imaginary axis.
+\bigskip
+
+\noindent
+{\bf A.6 Remark.}
+The reader should illustrate the results above
+by suitable  pictures. For example,  
+describe the sets $K(a,0)$ as $a$
+varies where one seeks all $z\in D  $
+such that
+
+\[
+|z|= \frac{|z-a|}{1-\bar az|}
+\]
+Up to rotation it is enough to treat the case when
+$0<a<1$ is real and positive.
+\bigskip
+
+\noindent
+{\bf A.7 The favourable case.}
+In most applications
+$\partial\mathfrak{D}$
+consists of a finite union of circular
+arcs which belong to
+$K(0,a)$ for a finite set of points
+$0\neq a\in\mathcal F_0$.
+Moreover, every such
+circular
+arc has end-points on the unit circle.
+So on $T$ there exists  a finite set of corner points
+which appear as common end-points of two circular arcs
+in the boundary of
+$\mathfrak{D}$.
+The simplest case is the Fuchsian group which
+corresponds to the fundamental group
+of ${\bf{C}}\setminus \{0,1\}$ which was already
+described by Schwarz after his explicit construction of the
+modular function with the aid of the reflection principle.
+For further examples we refer to
+the cited articles by PoincarŽ. Of course, the reader may also consult 
+text-books of more recent origin   for further examples.
+
+\bigskip
+
+\noindent
+{\bf {A.8. Automorphic functions.}}
+Let $\mathcal F$ be a discrete Fuchsian group.
+An analytic function $F(z)$ in $D$ is called
+$\mathcal F$-automorphic if
+\medskip
+
+\[
+ F(z)=F(M_a(z))\quad\colon\quad a\in\mathcal F
+\]
+\medskip
+
+\noindent
+The existence of such automorphic functions
+can be established  when
+$\mathcal F$ is defined via
+a uniformisation of a connected
+open domain in
+${\bf{C}}$. 
+The  construction of automorphic functions for 
+an arbitrary Fuchsian group and further studies about these
+is a topic which goes beyond the scope of these notes,
+especially since we do not prove the uniformisation theorem in its full
+generality.
+In addition to the  cited literature above the reader may consult
+other text-books. Personally I would recommend  [Ford].
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

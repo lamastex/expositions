@@ -1,0 +1,948 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+\centerline{\bf\large {XIII. Uniform approximation by Blaschke products}}
+\bigskip
+
+
+\noindent
+{\bf Introduction}. 
+A bounded analytic function $f(z)$ in the unit disc $D$
+is  an \emph{inner function} if the boundary function
+on $T$ has constant absolute value  almost everywhere.
+The set of inner functions is denoted by $\mathcal I(D)$.
+The first result about inner functions
+is due to O. Frostman in [x] :
+\medskip
+  
+\noindent
+
+\noindent
+{\bf 0.1 Theorem}. \emph{Let $w(z)\in\mathcal I(D)$. For every
+$\epsilon>0$ there exists a real number $c$ and a Blaschke product
+$B(z)$ such that}
+\[
+\max_{z\in D}\,|w(z)-e^{ic}B(z)|<\epsilon
+\]
+\medskip
+
+\noindent
+The next result is due to D. Marshall in [Mar] and asserts that
+the convex hull of Blaschke products is dense in the unit ball of
+$H^\infty(D)$.
+\bigskip
+
+\noindent
+{\bf 0.2 Theorem.}
+\emph{Let $f(z)\in H^\infty(D)$ with $|f|_D\leq 1$. For each $\epsilon>0$ there exists
+a finite family  of Blaschke functions
+$B_1\,\ldots,B_N$ and
+an $N$-tuple of positive real numbers
+$a_1,\ldots,a_N$ with $\sum\, a_\nu=1$ such that}
+
+\[
+\bigl |f(z)-\sum\,a_\nu\cdot B_\nu(z)\bigr |_D<\epsilon
+\]
+
+
+\medskip
+
+\noindent
+{\bf Remark.}
+Frostman's theorem reduces Theorem 0.2  to the assertion
+that the  convex hull of inner functions is dense in
+$H^\infty(T)$. 
+The first step in the proof of Theorem 0.2 is to use
+an approximation theorem which takes place in
+the Banach space $L^\infty(T)$.
+Notice that if
+$w$ is an inner function then $\frac{1}{w}\in L^\infty(T)$.
+We can also take quotients $\frac{w_1}{w_2}$
+and get new $L^\infty(T)$-functions.
+With this in mind  the following result  is due to
+Douglas and Rudin in [xx]
+\medskip
+
+\noindent
+{\bf 0.3 Theorem} \emph{The convex hull formed by
+functions $\frac{w_1}{w_2}$ from pairs in
+$\mathcal I(D)$ is dense in $L^\infty(T)$.}
+
+\bigskip
+
+\noindent
+We prove this result in section 5.
+Now we consider some  $f\in H^\infty(T)$ with
+norm $|f|_\infty=1$. 
+Theorem 0.3 gives for each
+$\epsilon>0$ an
+$N$-tuple of unimodular functions
+$\{\frac{w_1^\nu}{w_2^\nu}\}$ formed by inner functions 
+such that
+\[
+\bigl |f-
+\sum\, a_\nu\cdot \frac{w_1^\nu}{w_2^\nu}\bigr |_\infty
+<\epsilon\quad\colon\quad
+a_1+\ldots+a_N=1\,\,\colon\,\, a_\nu\geq 0\tag{*}
+\]
+
+
+\noindent
+However,  (*) does not give Theorem 0.2
+since the individual 
+quotients $\frac{w_1^\nu}{w_2^\nu}$ are not analytic in $D$.
+To proceed from (*) 
+Marshall 
+considered the inner function
+\[ 
+\mathcal J=w_2^1\cdots w_2^N
+\]
+Then we can write
+\[
+\sum\, a_\nu\cdot \frac{w_1^\nu}{w_2^\nu}=
+\sum\, a_\nu\cdot \frac{W_\nu}{\mathcal J}\quad\colon
+W_\nu=w_1^\nu\cdot\prod_{j\neq\nu}\, w_2^j\tag{**}
+\]
+\medskip
+
+\noindent
+The next step in Marshall's proof is to 
+apply a theorem by Nevanlinna which implies that
+(*)  gives the existence of another inner
+function
+$W_*$ such that the function 
+\[
+g=\sum\, a_\nu\cdot \frac{W_\nu}{\mathcal J}+
+\epsilon\cdot\frac{W_*}{\mathcal J}\quad\text{belongs to}\,\, H^\infty(T)\tag{***}
+\]
+
+
+\noindent
+It follows that
+$\bigl|f-g\bigr|<2\epsilon$ and  to finish the proof
+of Theorem 0.2 there  remains only to approximate the 
+special $H^\infty(T)$-function
+$g$-function by a convex combination 
+of inner functions. This  step in  the proof of Theorem 0.2 
+is given  under the heading \emph{Marshall's Lemma} in section 4.
+\medskip
+
+\noindent
+{\bf Remark.} Before we enter the proofs of
+Theorem 0.1 and 0.2 we  expose some preliminaries
+about inner functions and Blaschke products based upon results from
+Chapter XX about  the Jensen-Nevanlinna class of
+analytic functions in $D$.
+
+\newpage
+
+
+
+\centerline {\bf 1. Blaschke products and inner functions}.
+\medskip
+
+\noindent
+A sequence $\{z_n\}$ of non-complex numbers
+in $D$ arranged so that
+$0<|z_1|\leq|z_2|\leq ...$ 
+satisfies
+Blaschke's condition if
+\[
+\sum_{n=1}^\infty\, (1-|z_n|)<\infty
+\]
+Blaschke's theorem  asserts 
+that the infinite product
+\[
+B(z)=\prod_{n=1}^\infty\,
+\frac{z-z_n}{1-\bar z_n z}\cdot\frac{\bar z_n}{z_n}\tag{1}
+\]
+converges in $D$ and yields an analytic function such that
+\medskip
+\[
+\lim_{r\to 1}\,
+|B(re^{i\theta})|=1 \quad\text{holds  almost everywhere}\,\,
+0\leq\theta\leq 2\pi
+\]
+
+
+\noindent
+In particular every Blaschke product belongs to $\mathcal I(D)$.
+Next, let
+$\mu$ be a singular non-negative Riesz measure on the unit circle, i.e.
+$\mu$ carries all mass on a null set in the sense of Lebesgue.
+Then  there exists the analytic function in $D$ defined by
+\[
+G_{\vvv \mu}(z)= 
+\text{exp}\bigl[\,-\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\frac{e^{i\theta}-z}{e^{i\theta}+z}\cdot d\mu(\theta)\,\bigr]\tag{2}
+\]
+
+
+\noindent 
+The
+Factorisation Theorem from XX gives:
+\medskip
+
+
+
+\noindent{\bf 1.1. Theorem}
+\emph{Every $w\in\mathcal I(D)$ is a unique product}
+\[ w(z)=e^{ic}\cdot B(z)\cdot G_{\vvv \mu}(z)\quad\colon\quad  c=\text{a real number}
+\]
+\emph{where $B(z)$ is the Blascke product formed by the zeros of
+$w$ in $D$ and $\mu$  a singular and non-negative measure.}
+\medskip
+
+\noindent
+We will also need Theorem  XXX from XXX
+which characterizes when an inner function is a Blaschke product.
+\medskip
+
+
+\noindent 
+{\bf 1.2 Theorem.} \emph{An inner function $w(z)$ is
+of the form $e^{c}\cdot B(z)$ if and only if}
+\[
+\limsup_{r\to 1}
+\,\int_0^{2\pi}\,
+\log\,\bigl|w(re^{i\theta})\bigr|\cdot d\theta=0
+\]
+\bigskip
+
+
+
+
+
+
+
+\centerline{ \bf\large 2. Proof of Frostman's theorem}
+\bigskip
+
+
+\noindent
+Let $0<\rho<1$ and  $\gamma$ is a complex number
+with $|\gamma|\leq 1$. Then one has the equality
+\[
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\log\,\bigl |\,\frac{\gamma-\rho e^{i\theta}}{1-\rho e^{-i\theta}\gamma}\,\bigr |
+\cdot d\theta
+=\text{max}\,(\rho,\log\,|\gamma|)\tag{*}
+\]
+
+
+\noindent
+The verification is left to the reader.
+Now we consider some
+$w\in\mathcal I(D)$. Apply (*) with 
+$\gamma=w(re^{it})$ for pairs $0<r<1$ and $0\leq t\leq2\pi$.
+Integration with respect to $t$  gives the equality:
+
+
+\[
+\frac{1}{2\pi}\int_0^{2\pi}\bigl[\,\int_0^{2\pi}\,
+\log|\,\frac{w(re^{it})-\rho e^{i\theta}}{1-\rho e^{-i\theta}w(re^{it})}\,|
+\cdot d\theta\,\bigr ] dt
+=
+\int_0^{2\pi}\,\text{max}\,[\rho,\log\,|w(re^{it})|\,]\cdot dt\tag{*}
+\]
+
+
+\noindent
+Since $w\in\mathcal I(D)$ we have
+\[
+\lim_{r\to 1}\log\,|w(re^{it})|=0
+\quad\colon\quad\text{for almost all}\,\,\,t\tag{i}
+\]
+
+
+\noindent
+Keeping  $0<\rho<1$  fixed the function
+$t\mapsto\text{max}\,\bigl [\rho,\log\,|w(re^{it}|\,\bigr ]$ is bounded
+so
+by \emph{dominated convergence} under the intergral sign we have:
+\[
+\lim_{r\to 1}\,\int_0^{2\pi}\,
+\text{max}\,[\rho,\log\,|w(re^{it}|)\,]\cdot dt=0\tag{ii}
+\]
+
+
+\noindent
+Replace this limit by the double integral which comes from the equality (*)
+and apply
+\emph{Fubini's theorem} to
+interchange the order of integration. Hence (ii)  gives:
+\[
+\lim_{r\to 1}\,\frac{1}{2\pi}\int_{\theta=0}^{\theta=2\pi}
+[\,\int_{t=0}^{t=2\pi}\,
+\log\,\bigl |\,\frac{w(re^{it})-\rho e^{i\theta}}{1-\rho e^{-i\theta}w(re^{it})}\,
+\bigr |
+\cdot dt\,] d\theta=0\tag{iii}
+\]
+\medskip
+
+\noindent
+Now we use that the  integrand
+\[
+\log\,|\,\frac{w(re^{it})-
+\rho e^{i\theta}}{1-\rho e^{-i\theta}w(re^{it})}\,|\leq 0\quad\colon\quad
+0\leq \theta,t\leq 2\pi\tag{iv}
+\]
+\medskip
+
+\noindent
+Then (iii) and  \emph{Fatou's theorem} gives:
+\[
+\limsup_{r\to 1}\,
+\int_0^{2\pi}\,\log\,|
+\,\frac{w(re^{it})-\rho e^{i\theta}}{1-\rho e^{-i\theta}w(re^{it})}\,|
+\cdot dt\,]=0\quad\colon\text{almost everywhere for}\,\,\theta\tag{v}
+\]
+
+
+\noindent
+At this stage the proof is almost finished. 
+Namely, we notice that the functions
+\[ 
+F_\theta(z)=\,\frac{w(z)-\rho e^{i\theta}}{1-\rho e^{-i\theta}w(z)}
+\]
+belong to $\mathcal I(D)$ 
+for every $\theta$. Moreover, (v) gives a null set $\mathcal N$
+in $T$ such that
+\[
+\limsup_{r\to 1}\,
+\int_0^{2\pi}\,
+\log|F_\theta(re^{it})|\, dt=0
+\quad\colon\quad \theta\in T\setminus\mathcal N\tag{vi}
+\]
+
+
+\noindent
+Finally, for  every $\theta\in T\setminus\mathcal N$, Theorem 1.2 
+implies that $F_\theta(z)=e^{ic_\theta}B_\theta(z)$ for
+some Blaschke product $B_\theta$ and a constant $c_\theta$.
+With such a choice of
+$\theta$ we have
+\[
+|w(z)-e^{ic}\cdot B_\theta(z)|=
+|\frac{\rho e^{i\theta}-\rho e^{-i\theta}(w(z))^2}{
+1-\rho e^{-i\theta} w(z)}|\leq
+\frac{2\rho}{1-\rho}\tag{vii}
+\]
+Here we can choose any $\rho<1$. So with  $\epsilon>0$
+we choose $\rho$ so small that
+$\frac{2\rho}{1-\rho}<\epsilon$ and 
+Frostman's Theorem follows.
+
+
+\bigskip
+
+
+\centerline{\bf 3. A theorem by Nevanlinna}
+\bigskip
+
+\noindent
+Theorem 3.1 below was proved by
+R. Nevanlinna in his article [Nev:xx.] from 1919.
+On the unit circle $T$ we have the Banach space
+$L^\infty(T)$ which 
+contains the 
+closed  subspace $H_0^\infty(T)$
+of boundary values from
+bounded analytic functions $h(z)$ in $D$ which vanish
+at $z=0$. 
+Recall from XX that a 
+bounded Lebesgue measurable function $f(e^{i\theta})$
+belongs to $H_0^\infty(T)$ if and only if
+\[
+\int_0^{2\pi}\, e^{in\theta}\cdot f(e^{i\theta})d\theta=0
+\quad\colon\quad n=0,1,2,\ldots\tag{0.1}
+\]
+
+
+\noindent
+Since
+$H_0^\infty(T)$ is a closed subset of $L^\infty(T)$
+there exists the Banach space
+\[
+\mathcal B=\frac{L^\infty(T)}{H_0^\infty(T)}\tag{0.2}
+\]
+
+
+\noindent
+For each $F\in L^\infty (T)$ we set:
+\[ 
+\mathfrak{nev}(F)=\min\,||F-h||_\infty\quad\colon\, h\in H_0^\infty(D)
+\tag{0.3}
+\]
+\medskip
+\noindent
+We refer to $\mathfrak{nev}(F)$ as the Nevanlinna norm of $F$.
+Since $\mathfrak{nev}(F)$
+is the norm in the quotient space $\mathcal B$ it is trivial that
+\[
+\mathfrak{nev}(F)\leq |F|_\infty\tag{*}
+\]
+
+
+\noindent
+When  strict inequality holds in (*) one has the following:
+\medskip
+
+\noindent
+{\bf 3.1 Theorem}
+\emph{Let $F\in L^\infty(T)$ be such that
+$\mathfrak{nev}(F)< |F|_\infty$.
+Then there exists  $h^*\in H^\infty(T)$ 
+such that}
+
+
+\[
+|F(e^{i\theta})-h^*(e^{i\theta})|=|F|_\infty\quad\colon\quad
+\text{almost everywhere on}\,\,T
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+By a change of scale, i.e. replacing $F$ by
+$F$ times the inverse of $|F|_\infty$ we may  assume that
+$|F|_\infty=1$. Set
+\[
+\mathcal H_F=\{ h\in H^\infty(T)\quad\colon\,\,
+|F-h|\leq 1\}\tag{i}
+\]
+
+
+\noindent
+The triangle inequality gives $|h|_\infty\leq 2$ for every
+$h\in\mathcal H_F$. So we have a uniform bound and hence
+$\mathcal H_F$ is a normal family of analytic functions in
+the unit disc $D$.
+By the general result from Ch. 3-XX
+there exists $h^*\in\mathcal H_F$ such that
+\[ 
+h^*(0)=\max_{h\in\mathcal H_F}\, |h(0|\tag{ii}
+\]
+\medskip
+
+\noindent
+Notice that $h^*(0)>0$. In fact, since
+$\mathfrak{nev}(F)<1$ is assumed there exists to begin with
+some $g\in H_0^\infty(T)$ with $|F-g|_\infty\leq 1-\delta$.
+for some $\delta>0$. Hence $\mathcal H_F$ contains
+the functions $g(z)+\delta$ which is $\neq 0$ at the origin.
+\medskip
+
+
+\noindent
+\emph{Sublemma.} \emph{One has the equality}
+\[
+|F-h^*-\phi|_\infty\geq 1\quad\colon\quad \phi\in H_0^\infty(T)
+\]
+
+
+\noindent
+\emph{Proof.}
+Suppose there exists 
+$\phi\in H_0^\infty(T)$
+with $|F-h^*-\phi|_\infty=1-\delta$ for some
+$\delta>0$. If $a>0$ it follows that
+\[ 
+|F-(1+a)h^*-\phi|\leq 1-\delta+a|h^*|_\infty\leq 1-\delta+2a
+\]
+So $h_1=(1+\delta/2)h^*+\phi$ belongs to $\mathcal H_F$.
+Here $h_1(0)>h^*(0)$ which contradicts the maximality of
+$h^*(0)$ and the Sublemma follows.
+
+
+
+
+\bigskip
+
+
+\noindent
+\emph{Proof continued.} 
+Put $G=F-h^*$.
+The Sublemma means that
+the norm of the $G$-image in the Banach space
+$\mathcal B$ is  at least 1. At the same time the $L^\infty(T)$-norm of
+$G$ is one since $h^*\in \mathcal H_F$.
+It follows that the 
+$\mathcal B$-norm of $G$ is 1.
+Next, by the duality between
+$H_0^\infty(T)$
+and $H^1(T)$ from
+ XX
+$G$ yields a linear functional on the Hardy space $H^1(T)$ of norm
+one. Hence there exists  a sequence $\{\phi_n\}$
+in $H^1(T)$ with $L^1$-norms equal to one such that:
+\[ 
+\lim_{n\to\infty}\, \int_0^{2\pi}\,
+G\cdot \phi_n\cdot d\theta=1\tag{1}
+\]
+Put $c_n=\phi_n(0)$.
+Since $h^*\in H^\infty(T)$ we notice that
+\[
+\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+h^*\cdot \phi_n\cdot d\theta=h^*(0)\cdot c_n\tag{2}
+\]
+
+
+\noindent
+\emph{Sublemma 2. There exists some positive constant
+$a$ such that}
+\[ 
+|c_n|\geq a\quad\colon\quad n=1,2,\ldots
+\]
+
+
+\noindent
+\emph{Proof.}
+Assume the contrary. If $c_n\to 0$ then (1) and (2)  give
+\medskip
+\[
+\lim_{n\to\infty}\, \frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+F\cdot \phi_n\cdot d\theta=1\tag{3}
+\]
+But this is impossible since  $\mathfrak{nev}(F)<1$.
+Indeed, this gives the existence of some
+$\psi\in H^\infty(T)$ with $[F-\psi|_\infty=1-\delta$
+for some $\delta>0$.
+At the same time $c_n\to 0$ implies that
+\[
+\lim_{n\to\infty}\, \frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\psi\cdot \phi_n\cdot d\theta=0
+\]
+Now we get a contradiction, i.e. (3) cannot hold since
+\[
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+|F-\psi|\cdot \phi_n\cdot d\theta\leq |F-\psi|_\infty\cdot |\phi_n|_1=
+1-\delta
+\] 
+\medskip
+
+\noindent
+{\emph{Proof continued.}}
+Now we may assume that there is some
+$a>0$ such that
+\[
+|\phi_n(0)|\geq a\quad\colon\quad n=1,2,\ldots\tag{*}
+\]
+
+
+\medskip
+
+\noindent
+At the same time (1) above holds and
+we also know that
+$|G|_\infty=1$.
+Using  this we will show that 
+\[
+|G(e^{i\theta})|= 1\quad\colon\,\text{holds almost everywhere}\tag{**}
+\]
+
+
+\noindent
+To prove (**) we use Jensen's inequality from XX
+which by (*) for every $n$ gives:
+\[
+2\pi\cdot\text{Log}\,|a|\leq
+\int_0^{2\pi}\, \text{Log}\, \bigl |\phi_n(e^{i\theta})\bigr |\cdot d\theta\tag{***}
+\]
+
+
+\noindent 
+Suppose  that (**) does not hold. This gives
+the existence of some
+$\rho<1$ and a  set $E$ of 
+positive Lesbesgue measure such that 
+the maximum norm $|G|_E \leq \rho$.
+Since $|G|_\infty=1$ it follows that
+\[
+\int_0^{2\pi}\,
+G\cdot \phi_n\cdot d\theta
+\leq \rho\cdot \int_E\,|\phi_n|\cdot d\theta
++\int_{T\setminus E}\,|\phi_n|\cdot d\theta
+\]
+By (1) above  the left hand side tends to one  and since
+the $L^1$-norms of $\phi_n$ are all equal to one, we conclude that
+\[
+\lim_{n\to\infty}\,
+\int_E\,|\phi_n|\cdot d\theta=0\tag{****}
+\]
+But this  contradicts  (1) by the Nevanlinna-Jensen theory in
+XX. Namely, (****) first entails that
+\[
+\lim_{n\to\infty}\,
+\int_E\,\text{Log}\,|\phi_n|\cdot d\theta=-\infty\tag{1}
+\]
+At the same time $\phi_n$ have finite $L^1$-norms
+which by the material from XXX  gives a constant $C$ which is independent of
+$n$ so that
+\[
+\int_0^{2\pi}\,\text{Log}^+\,|\phi_n|\cdot d\theta\leq C
+\]
+Then we see that (1) violates (***) and hence 
+(**) must hold which finishes the proof of Nevanlinna's theorem.
+\medskip
+
+\noindent {\bf{Remark.}} Notice that the proof also shows how to find
+$h^*$, i.e. it is  the extremal function in the family $\mathcal H_F$ 
+which maximizes the value at $z=0$.
+
+
+
+
+\bigskip
+
+
+
+
+
+
+\noindent
+{\bf 3.2 A consequence of Nevanlinna's Theorem.}
+Let 
+$g\in H^\infty(T)$. If 
+$\mathcal J$ is an inner function then
+$\frac{g}{\mathcal J}$
+belongs to $L^\infty(T)$.
+But in general this quotient does not belong to
+$H^\infty(T)$.
+To compensate for this we study its deviation from
+$H^\infty(T)$ and obtain:
+\bigskip
+
+\noindent
+{\bf 3.3 Theorem.} \emph{Let  $0<\epsilon<|g|_\infty$ be such that
+there exists $f\in H^\infty(T)$
+of norm one for which}
+\[
+\bigl |f-\frac{g}{\mathcal J}\bigr |_\infty=\epsilon\tag{*}
+\]
+\emph{Then there exists an inner function $w$ such that}
+\[
+\frac{\epsilon\cdot w+g}{\mathcal J}\in H^\infty(T)\tag{**}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Nevanlinna's Theorem gives some
+$h^*\in H^\infty(T)$
+such that
+\[ 
+|\frac{g}{\mathcal J}-h^*|=\epsilon \quad\colon\,\, \text{almost everywhere}
+\]
+\medskip
+
+
+\noindent
+Since the inner function $\mathcal J$ has absolute value one
+almost everywhere, it follows that
+the analytic function $g-h^*\mathcal J$
+has absolute value $\epsilon$ almost everywhere on
+$T$.
+This  this gives an inner function $w$ such that
+\[
+\mathcal J\cdot h^*-g=\epsilon\cdot w\tag{iii}
+\]
+After division with
+$\mathcal J$ we get (**) in Theorem 3.3
+
+\newpage
+
+
+
+
+\centerline{4. \bf{Marshall's Approximation Lemma}}
+
+\bigskip
+Consider  a  function $g\in H^\infty(T)$
+expressed as
+\[ 
+g=\sum_{k=1}^{k=N}\, a_k\cdot \frac{w_k}{J}\tag{*}
+\]
+where $w_1,\ldots,w_N$ and $J$ 
+are inner functions while 
+$a_1,\ldots,a_N$ are some real numbers. Here we do not assume that
+they are $\geq 0$ or that the sum is one. But we assume that
+the maximum norm
+$|g|_\infty<1$. 
+\medskip
+
+\noindent
+{\bf 4.1 Proposition.} \emph{For every
+$\epsilon>0$ there exists a convex
+sum of inner
+functions $V$ such that}
+\[ 
+\bigl|g-V\bigr|_\infty<\epsilon
+\]
+
+
+
+\noindent
+\emph{Proof.}
+For the inner functions $\{w\uuu k\}$ and
+$J$
+we have the equalities below on $T$:
+\[
+\frac{1}{w_k}=\bar w_k\quad\colon \frac{1}{J}=\bar J\tag{i}
+\]
+It follows that almost everywhere on $T$:
+\[ 
+\bar g(e^{i\theta})=\sum_{k=1}^{k=N}\, a_k\cdot \frac{J(e^{i\theta})}{ w_k
+(e^{i\theta})}\tag{ii}
+\]
+Next, $W=w_1\cdots w_N$ is an inner function and (ii)
+implies that the product 
+\[
+W\cdot \bar g\in H^\infty(T)\tag{iii}
+\]
+
+
+\noindent
+Now we shall use (iii) to get
+another expression for $g$.
+By assumption
+$|g|_\infty\leq 1-\delta$  for some
+$\delta>0$.
+Since $\int_0^{2\pi}\, e^{i\nu t}dt=0$
+for every $\nu\geq 1$ we have the  equality below for every
+complex number $\lambda$ of absolute value $< 1$:
+\[
+g(z)= \frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{\lambda e^{it}+g(z)}{1+\lambda e^{it}\bar g(z)}\cdot dt\tag{iv}
+\]
+
+
+\noindent
+Next, for each $z\in D$ we can take
+$\lambda=W(z)$ and obtain
+\[
+g(z)= \frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{W(z) e^{it}+g(z)}{1+e^{it}\cdot W(z)\cdot \bar g(z)}\cdot dt
+\quad\colon\quad z\in D
+\]
+The family of functions
+\[
+t\mapsto \Phi\uuu t(z)=
+\frac{W(z) e^{it}+g(z)}{1+e^{it}\cdot W(z)\cdot \bar g(z)}\quad
+\]
+is equi-continuous with respect to $t$ since
+$|g|_\infty<1-\epsilon$ is assumed.
+So we can evaluate the  integral which defines $g(z)$
+by Riemann sums in a uniform
+manner, i.e. to every $\epsilon>0$
+there exists a finite set
+$0\leq t_1<\ldots t_M<2\pi$
+and positive numbers
+$\{b_\nu\}$ with $\sum\, b_\nu=1$ such that
+\[
+\bigl |g(z)-\sum\, b_\nu\cdot 
+\frac{W(z)e^{it_\nu}+g(z)}{1+e^{it_\nu}W(z)\cdot \bar g(z)}\,\bigr|\tag{v}
+<\epsilon
+\]
+
+
+\noindent
+Next, since $W(z)$ is inner we notice that the functions
+\[
+\phi_\nu(z)= 
+\frac{W(z)e^{it_\nu}+g(z)}{1+e^{it_\nu}W(z)\cdot \bar g(z)}
+\quad\colon1\leq\nu\leq M
+\]
+are all inner.
+Since $\epsilon>0$ can be made arbitrary small it follows  that
+$g(z)$ can be uniformly approximated by a convex combination of
+inner functions.
+
+
+
+\newpage
+
+\centerline{\bf 5. Proof of Theorem 0.3}
+\bigskip
+
+
+
+\noindent
+Let $\mathcal{U}(T)$
+be the unimodular functions on $T$, i.e.
+$L^\infty$-functions with absolute value one almost
+everywhere.
+Elementary geometry shows that the convex hull of
+$\mathcal U(T)$ is dense in the unit ball of
+$L^\infty(T)$, i.e. to every $G$ with
+$|G|_\infty\leq 1$ there exist
+$g_1,\ldots,g_M$ in $\mathcal{U}(T)$
+such that
+\[ 
+|G-\sum a_\nu\cdot g_\nu|_\infty<\epsilon\quad\colon\, a_1+\ldots+a_M=1\tag{*}
+\]
+Since products of inner functions are inner, 
+Theorem 0.3 follows if we  show that
+every $g\in\mathcal{U}(T)$
+can be uniformly approximated
+by convex combinations of quotients of inner functions.
+Again, since products of inner functions again are inner, it suffices to
+achieve this approximation for a generating set in the
+multiplicative group of  unimodular functions on $T$.
+Hence it suffices to consider $g$-functions which only take two values. 
+After a rotation
+we may assume that they are +1 and -1. So now we have a measurable set
+$E$ where $g=1$ on $E$ and $g=-1$ on $T\setminus E$.
+Let $K$ be some positive number.
+Solving the Dirichlet problem with a real valued function
+$u$ which is K on $E$ and and 0 on $T\setminus E$
+we take the bounded analytic function
+\[ 
+f(z)=e^{\vvv (u+iv)}
+\]
+where $v$ is the harmonic conjugate of $u$.
+Here the absolute value $|f|=e^{\vvv K}$ on $E$ and $|f|=1$ on $T\setminus E$.
+To be precise, equality holds almost everywhere in the
+sense of Lebesgue.
+Next, let $\epsilon>0$. Let ${\bf{C}}^e$
+denote the extended complex plane. 
+By the general result from XX
+there exists for a suitable $K$
+a conformal map
+$\Phi$ from the annulus $1<|z|<e$
+to the doubly connected domain
+\[ 
+\Omega={\bf{C}}^e\setminus [\vvv \epsilon,0]\cup
+[\ell,\ell*]
+\] 
+where 
+$\ell$ can be made large and $\ell^*\leq \ell+\epsilon$.
+Here $\Phi(z_0)=\infty $  for some
+$e^{\vvv K}<|z_0|<1$. Now we put
+\[
+\Psi=\frac{i+\Phi\circ f}{i\vvv\Phi\circ f}
+\]
+This yields a  meromorphic in $D$ with poles at the points $a\in D$ for which
+$f(a)=z_0$.
+On 
+$T$ the composed function $\Phi\circ f$
+takes values in the union of the real intervals
+$[\vvv \epsilon,0]$ and $[\ell,\ell^*]$ which implies that
+$|\Psi|=1$ holds almost everywhere on $T$.
+With $\epsilon$ small we see that
+$\Psi\simeq 1$ holds on
+$E$ and when $\ell$ is large we have
+$\Psi\simeq \vvv 1$ on $T\setminus E$.
+So the $\Psi$\vvv function approximates the given unimodular 
+function uniformly up to a small number of order $\epsilon$.
+Now $\Psi$ may have some poles and w take the Blaschke product $B$ for this so that
+$B\cdot \Psi$ is analytic in $D$ and since $|B|=1$ holds almost
+everywhere this yields an inner function denoted by $\psi$.
+Now
+\[ 
+\Psi=\frac{\psi}{B}
+\]
+is a quotient of inner functions which
+gives the requested approximation.
+
+
+\bigskip
+
+\centerline{\bf{6. Proof of Theorem 0.2}}
+\bigskip
+
+\noindent
+Consider some
+$f\in H^\infty(T)$ of  norm $1$.
+Theorem 0.3 gives a convex combination of quotients of
+inner functions such that:
+
+\[ 
+\bigl|f-\sum_{\nu=1}^{\nu=k} a_\nu\cdot\frac{w_1^\nu}{w_2^\nu}\bigr|_\infty<\epsilon
+\]
+Set
+\[ 
+\mathcal J=\prod\, w_\nu^2
+\]
+This is an inner function and we also get the inner functions
+
+\[ 
+W_\nu= \frac{w_1^\nu}{w_2^\nu}\cdot\mathcal J\implies
+\bigl|f-\sum_{\nu=1}^{\nu=k} a_\nu\cdot\frac{W_\nu}{\mathcal J}
+\bigr|_\infty<\epsilon\tag{1}
+\]
+
+
+\medskip
+
+
+
+
+\noindent
+Theorem 3.3 applies to the pair $f$ and $g=\sum\, a_\nu W_\nu$
+and gives an inner function $W_*$ such that 
+\[ 
+\sum_{\nu=1}^{\nu=k} a_\nu\cdot\frac{W_\nu}{\mathcal J}+\epsilon\cdot\frac {W_*}{\mathcal J}\in
+H^\infty(T)\tag{2}
+\]
+Let $g$ be this analytic function. From (1) and the triangle inequality we have
+\[
+|f-g|_\infty<2\cdot \epsilon\tag{3}
+\]
+
+\noindent
+Finally, with $N=k+1$ we can apply Marshall's lemma to
+the function $\frac{1}{1+\epsilon}\cdot g$
+which is expressed by a convex combination
+(*) from (4).
+This gives a convex sum $V$ formed by inner functions such that
+\[ 
+|V-g|_\infty<2\cdot\epsilon\tag{4}
+\]
+Since $\epsilon>0$ is arbitrary
+we get Theorem 0.1 via (3) and (4) above.
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

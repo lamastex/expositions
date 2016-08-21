@@ -1,0 +1,1020 @@
+%\documentclass{amsart}
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+
+%\def\uuu{_}
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+
+\centerline{\bf\large XII. A system of infinite linear equations.}
+
+\bigskip
+\noindent
+{\bf Introduction.}
+The main issue in this section is
+the construction of a unique solution to
+the system
+\[ 
+\sum\uuu{q\neq p}\,\frac{x\uuu q}{p\vvv q}=0\tag{*}
+\] 
+where (*) hold for all positive integers $p$ and
+$\{x\uuu q\}$ is a sequence of real numbers for which the series
+\[ 
+\sum\uuu{q=1}^\infty\,\frac{x\uuu q}{q}\tag{**}
+\] 
+is convergent. The fact that (*) ha a non\vvv trivial solution is
+far from evident.
+Before the study of (*)  in Section 1 we
+discuss a  general situation  described
+by Carleman in his major lecture at
+the international congress in ZŸrich 1932 where
+one of his
+topics was devoted to linear 
+systems of equations in an infinite number of variables.
+A homogeneous system takes the form
+\[
+\sum_{q=1}^\infty\, c_{pq}x_q=a_p
+\quad\colon\quad p=1,2,\ldots\tag{***}
+\]
+where $\{c_{pq}\}$ is a matrix with an infinite number of elements.
+A sequence $\{x_q\}$
+of complex numbers
+is a solution to (***) if
+the sum  in the left hand side converges for each $p$ and has  value $a_p$.
+Notice that one does not
+require that the series are  absolutely convergent.
+
+\medskip
+
+\noindent
+{\bf{The generic case.}}
+To every $p\geq 1$
+we have the linear form $L_p$
+defined on finite sequences
+$\{x_1,x_2,\ldots\} $, i.e. where  $x_q=0$ when $q>>0$ by:
+\[ 
+L_p(x_\bullet)=\sum_{q\geq 1}\, c_{pq}\cdot x_q
+\]
+The generic case occurs when
+$c_{1q}\neq 0$ for every $q$ and
+the linear forms
+$\{L_p\}_1^\infty$ are linearly independent.
+The last condition means that for every positive integer
+$M$ there exists a strictly increasing sequence
+$q_1<\ldots <q_M$ so that the
+$M\times M$-matrix with elements
+$a_{p\nu}= c_{pq_\nu}$ has a non-zero determinant.
+
+\medskip
+
+\noindent
+{\bf{The $R$-functions.}}
+Assume that the system (***) is generic
+and let $\{a_p\}$ be a given sequence
+for which we seek a solution $\{x_q\}$.
+The necessary and sufficient condition for
+this existence  goes as follows:
+Consider
+$n$-tuples of positive integers $m_1,\ldots,m_n$
+where $n\geq 2$. For every such  $n$-tuple and  $1\leq k\leq n-1$
+we set
+\[ 
+\mathcal D(k)=
+\{\nu\colon\, m_1+\ldots+m_k<\nu\leq m_1+\ldots+m_{k+1}\}
+\]
+Next, with $M=m_1+\ldots+m_N$ we denote by
+$\mathcal F(m_1,\ldots,m_n)$ the family of sequences $(x_1,\ldots,x_M)$ such that
+the following inequalities hold for every $1\leq k\leq n-1$:
+\[
+\bigl|\sum_{q=1}^{q=\nu}\, c_{pq}x_q-a_q\bigr|\leq
+\frac{1}{k}\quad\colon\,\nu\in\mathcal D(k)\quad\text{and}\quad
+1\leq p\leq k
+\]
+
+
+\noindent
+The generic assumption implies that the set $\mathcal F(m_1,\ldots,m_n)$
+is non-empty provided that we start with a sufficiently large $m_1$
+and for
+every  such $n$-tuple we set
+\[
+R(m_1,\ldots,m_n)=\min\sum_{\nu=1}^{m_1}\, x_\nu^2
+\]
+where  the minimum is taken
+over
+sequences $x_1,\ldots,x_{m_1}$ which give the starting terms of some
+sequence 
+$x_1,\ldots,x_M\in \mathcal F(m_1,\ldots,m_n)$.
+\medskip
+
+
+
+
+
+
+\noindent
+{\bf Theorem.} \emph{The necessary and sufficient condition in order that
+(***) has a least one  solution is that there exists
+a constant $K$ and  an infinite
+sequence of positive integers $\mu_1,\mu_2,\ldots$ such that }
+\[
+R(\mu_1,\mu_2,\ldots,\mu_r)\leq K\quad \text{hold for every $r$}
+\]
+
+\medskip
+
+\noindent
+{\bf Remark.}
+The reader may consult [Carleman] for  further remarks
+about this result  and also comments upon
+the more involved
+criterion for non-generic linear systems.
+From now on we  study  linear systems which arise
+as follows:
+Consider a rational function of two variables $x,y$:
+\[
+f(x,y)=\frac{a_0(x)+a_1(x)y+\ldots a_n(x)y^n}
+{b_0(x)+b_1(x)y+\ldots b_m(x)y^m}
+\]
+Here $n$ and $m$ are positive integers and
+$a_\nu(x)$ and $b_j(x)$ polynomials in $x$.
+No special assumptions are imposed on these polynomials except
+that $b_m(x)$ and $a_n(x)$ are not identically zero.
+For example, it is not neccesary that the degree of $b_m$ is
+$\geq\text{deg}(b_j)$ for all $0\leq j\leq m-1$.
+\medskip
+
+\noindent
+{\bf 0.1 Proposition }\emph{ Let $b_m^{-1}(0)$ be the finite set of zeros of $b_m$.
+Let $\zeta_0\in {\bf{C}}\setminus b_m^{-1}(0)$ be such that}
+\[
+\sum_{j=0}^{j=m}\, b_j(\zeta_0)\cdot q^j=0
+\]
+\emph{holds for some finite set of
+positive integers, say $1\leq q_1<\ldots<q_k$.
+Then there exists $\delta>0$ such that }
+\[ 
+\sum_{j=0}^{j=m}\, b_j(\zeta)q^j\neq 0\quad\colon
+\text{for all positive integers}\,\, q\, \quad\colon\quad 
+0<|\zeta-\zeta_0|<\delta
+\]
+
+
+
+\noindent
+{\bf{Exercise.}}
+Prove this result.
+
+\medskip
+
+\noindent
+Next, consider the sequence of polynomials
+of the complex $\zeta$-variable given by:
+\[ 
+B_q(\zeta)=b_0(\zeta)+b_1(\zeta)q+\ldots+b_m(\zeta)q^m\,\quad\colon
+q=1,2,\ldots
+\]
+
+\medskip
+
+\noindent
+{\bf 0.2 Proposition} \emph{Put}
+\[ 
+W=b_m^{-1}(0)\,\bigcup_{q\geq 1}\, B_q^{-1}(0)
+\]
+\emph{Then $W$ is a discrete subset of ${\bf{C}}$, 
+i.e its intersection with any
+bounded disc is finite.}
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Prove this result where a hint
+is 
+to apply Rouche's theorem.
+\medskip
+
+\noindent
+Next, put  $W^*=W\cup a_n^{-1}(0)$, i.e. add the zeros of the polynomial $a_n$
+to  $W$.
+\bigskip
+
+\noindent
+{\bf 0.3 Proposition.}
+\emph{Let $\zeta_0\in C\setminus W^*$
+and suppose that $\{x_q\}$ is a sequence such that the series}
+\[ 
+\sum_{q=1}^\infty\,
+f(\zeta_0,q)\cdot x_q\tag{i}
+\] 
+\emph{is convergent. 
+Then  the series}
+\[
+\sum_{q=1}^\infty\,
+f(\zeta,q)\cdot x_q\quad\text{converges for every}\,\,\zeta\in
+C\setminus W^*\tag{ii}
+\] 
+\emph{Moreover, the series sum is a meromorphic function of $\zeta$
+whose poles are contained in $W^*$.}
+
+\medskip
+
+\noindent 
+{\bf Remark.}
+Proposition 0.3 gives a procedure to find solutions 
+$\{x_q\}$ which is not the trivial null solution to a homogeneous system:
+\[ 
+\sum_{q\neq p}\, f(p,q)\cdot x_q=0\quad\colon\quad
+p=1,2,\ldots\tag{*}
+\]
+
+
+\noindent
+More precisely, assume that the rational function
+$f(x,y)$ is such that
+$f(p,q)\neq 0$ when $p$ and $q$ are distinct positive integers.
+To get a solution $\{x_q\}$ to (iii)
+it suffices to begin with to verify (i) in Proposition 0.3  for some
+$\zeta_0$ and  then also try to find
+$\{ x_q\}$
+so that the meromorphic
+function
+\[ 
+\zeta\mapsto 
+\sum_{q=1}^\infty x_q\cdot f(\zeta,q)\tag{**}
+\]
+has zeros at every positive integer. Using this criterium for
+a solution we can show the following:
+\medskip
+
+\noindent
+{\bf({Theorem.}}\emph{For every complex number
+$a\in{\bf{C}}\setminus(-\infty,0\,]$ the system}
+\[ 
+\sum\uuu{q=1}^\infty \frac{x\uuu q}{p+aq}=0
+\quad\colon\quad p=1,2,\ldots
+\]
+\emph{has no non\vvv trivial solution $\{x\uuu q\}$.}
+\bigskip
+
+\noindent
+There remains to analyze the case
+when $a$ is real and $<0$. In this case
+complete answers about possible  
+when $f$ is the  rational function have 
+been established by K. Dagerholm starting from his
+Ph.D-thesis at Uppsala University in 1938
+with
+Beurling as  supervisor.
+The hardest case occurs hen $a=1$
+which will be studied in the next section.
+
+
+
+
+
+\bigskip
+
+
+
+
+
+\centerline{\bf 1. The Dagerholm series.}
+
+\bigskip
+\noindent
+Let $\mathcal F$ be the family
+of all sequences of
+real numbers $x_1,x_2,\ldots$ such that the series
+\[ 
+\sum_{q=1}^\infty\,\frac{x_q}{q}<\infty\tag{i}
+\]
+We only require that the series is convergent, i.e. it need  not be
+absolutely convergent. 
+\bigskip
+
+\noindent {\bf 1.1 Theorem.} \emph{Up to a multiple with a real constant
+there exists a unique
+sequence $\{x_q\}$ in $\mathcal F$ such that}
+\[
+\sum_{q\neq p}\, \frac{x_q}{p-q}=0\quad\colon\quad p=1,2,\ldots
+\]
+\medskip
+
+\noindent
+The proof of  uniquenss relies upon Jensen's formula and
+the existence  upon  a  solution to a specific Wiener-Hopf
+equation.
+We begin to describe the strategy  to obtain
+Theorem 1.1.To begin with there exists
+a meromorphic function $h(z)$ defined by
+
+\[ 
+h(z)=\sum_{q=1}^\infty\,\frac{x_q}{z-q}\tag {ii}
+\]
+To see  that $h(z)$ is defined
+we notice that if
+$s_*$ is the series sum in (i) then
+\[
+h(z)+s_*=\sum_{q=1}^\infty\,x_q\cdot [\frac{1}{z-q}+\frac{1}{q}]=
+z\cdot \sum_{q=1}^\infty\frac{x_q}{q(z-q)}\tag{iii}
+\]
+It is clear that 
+the right hand side
+is 
+a meromorphic function
+with poles confined to  the set of positive integers. 
+Hence we obtain the 
+entire function:
+
+\[ 
+H(z)=\frac{1}{\pi}\cdot \text{sin}(\pi z)\cdot h(z)
+\]
+\medskip
+
+\noindent
+{\bf{1.2 Proposition.}}
+\emph{The following hold for each positive integer:}
+\[ 
+H(p)= (\vvv 1)^p\cdot x\uuu p\tag{i}
+\]
+\[ 
+H'(p)= (\vvv 1)^q\cdot 
+\sum_{q\neq p}\, \frac{x_q}{p-q}=0\tag{ii}
+\]
+
+
+\medskip
+
+
+
+\noindent 
+\emph{Proof.}
+Let $p\geq 1$ be an integer. With $\zeta$ small we have
+\[
+H(p+\zeta)=\frac{1}{\pi}\cdot\text{sin}(\,\pi p+\pi\zeta)\cdot 
+\bigl [\frac{x_p}{\zeta}+
+\sum_{q\neq p}\,\frac{x_q}{p+\zeta-q}\bigr ]
+\]
+A series expansion of the complex sine-function at
+$\pi p$ gives
+\[
+\frac{1}{\pi}\cdot\text{sin}(\,\pi p+\pi\zeta)=
+[\zeta\cdot \text{cos}(\pi p)+O(\zeta^3)]\cdot \bigl [\frac{x_p}{\zeta}+
+\sum_{q\neq p}\,\frac{x_q}{p+\zeta-q}\bigr ]
+\]
+Proposition 1.2  follow since
+$\text{cos}\,\pi p=(-1)^p$.
+
+
+\bigskip
+
+\noindent
+{\bf{Remark.}}
+Proposition 1.2 shows that
+$\{x_p\}$ solves the homogeneous system in Theorem 1.1 
+if the complex derivative of the  entire $H$-function
+has zeros on all positive
+integers. This observation is the gateway towards the
+proof of Dagerholm's Theorem  First we establish the uniqueness part.
+
+
+\bigskip
+
+\centerline{\bf 2. Proof of uniqueness}
+
+\bigskip
+
+\noindent
+Let   $\{x_q\}$ be a
+sequence in $\mathcal F$.
+From the constructions in above
+it is clear that the  meromorphic function
+$h(z)$ satisfies the following in the left half-plane
+$\mathfrak{Re}(z)\leq 0$:
+\[
+\lim_{x\to -\infty}\,h(x)=0
+\colon\quad
+|h(x+iy)|\leq C_*\quad\colon\,x\leq 0\tag{i}
+\]
+where $C_*$ is a constant.
+Moreover, in the right half-plane there exists  a constant $C^*$ such that
+\[
+|h(x+iy)|\leq C^*\cdot \frac{|x|}{1+|y|}\quad\colon\, |x-q|\geq \frac{1}{2}\,\,
+\text{for all positive integers}\tag{ii}
+\]
+
+\noindent
+To $h(z)$ we get the entire function $H(z)$ 
+and  (i-ii) above give the two
+the estimates below in the right half-plane:
+\[ 
+|f(x+iy)|\leq Ce^{\pi|y|}\,\,\colon\, x\leq 0\quad\colon\,\quad
+|f(x+iy)|\leq C\frac{|x|}{1+|y|}\cdot e^{\pi|y|}\tag{iii}
+\]
+Moreover, the first limit formula in (i) gives
+\[
+\lim_{x\to-\infty}\, f(x)=0\tag{iv}
+\]
+
+
+\noindent
+It is easily seen that the same upper bounds hold
+for the entire function $H'(z)$ and a straightforward application
+of
+the  PhragmŽn-Lindelšf theorem 
+gives:
+\medskip
+
+\noindent
+{\bf 2.1 Proposition.}
+\emph{The complex derivative of
+$H(z)$ 
+satisfies the growth condition:}
+\[
+\lim_{r\to\infty}\,
+e^{-\pi r\cdot |\text{sin}\,\phi|}\cdot |H'(re^{i\theta}\,|=0
+\quad\colon\,\text{holds uniformly when}\,\,\, 0\leq\theta\leq 2\pi
+\]
+\medskip
+
+\noindent
+Now we are prepared to prove the uniqueness part in Theorem 0.1.
+For suppose that we have two  sequences
+$\{x_q\}$ and $\{x_q^*\}$ which both give solutions to 
+(*) are not equal up to a constant multiple of each other.
+The two sequences  give entire functions $H\uuu 1$ and $H\uuu 2$. Since
+both are constructed via real sequences 
+their  Taylor coefficients  are real.
+We can choose a  linear combination
+\[
+G=aH\uuu 1+bH\uuu 2=G
+\] 
+where $a,b$ are real numbers and
+the complex derivative
+$G'(0)=0$. The hypothesis that there exists
+two ${\bf{R}}$-linearly independent solutions to (*)
+leads to a contradiction once we have proved the following
+\medskip
+
+\noindent
+{\bf{2.2 Lemma}} \emph{The entire function $G'(z)$ is identically zero.}
+\medskip
+
+\noindent
+\emph{Proof.}
+To simplify notations we set
+$g(z)=G'(z)$.
+To show that $g=0$ we first  consider the series expansion
+\[ 
+g(z)= a_pz^p+a_{p+1}z^{p+1}+\ldots
+\]
+where $a_p$ ia the first non-vanishing coefficient. Since $g(0)=G'(0)=0$
+we have $p\geq 1$ and since
+the two $x$-sequences both are solutions to
+(*) it follows from (ii) in Proposition 0.2 that
+\[ 
+g(p)=0\quad\colon\, p=1,2,\ldots\tag{i}
+\]
+
+\noindent
+Next,  the primitive function $G$
+is real-valued $G(x)$  on
+$x\leq 0$ and since the $H$\vvv functions are zero for every integer $\leq 0$ the
+same holds for $G$.
+Then \emph{Rolle's theorem} implies
+that for every $n\geq1 $
+there exists
+\[ 
+-n<\lambda_n<-n+1\quad\colon\, g(\lambda_n)=0\tag{i}
+\]
+
+
+\noindent
+So if $\mathcal N$ is the counting function for the
+zeros of the entire $g$-function  one has
+the inequality
+\[ 
+\mathcal N(r)\geq [2r]\tag{iii}
+\]
+where $[2r]$ is the largest integer $\leq 2r$.
+Next, recall that  $a_p$ is the first non-zero term in the series
+expansion of $g$. Hence Jensen's formula gives:
+
+
+\[
+\text{log}\,|a_p|+p\cdot\log\, r+
+\int_0^r\,\frac{\mathcal N(t)\cdot dt}{t}=
+\frac{1}{2\pi}\int_0^{2\pi}\, \text{Log}\, |g(re^{i\theta}\,|\,\cdot d\theta
+\tag{*}
+\]
+
+
+\noindent
+Proposition 2.1 applied to $g(z)$ gives:
+\[
+\int_0^{2\pi}\, \text{Log}\, |g(re^{i\theta}\,|\,\cdot d\theta
+=2r-m(r)\quad\text{where}\,\lim_{r\to\infty}\, m(r)=+\infty\tag{iv}
+\]
+
+
+\noindent
+At this stage we get the contradiction 
+as follows. First (iii) gives
+\[
+\int_0^r\,\frac{\mathcal N(t)\cdot dt}{t}
+\geq 2r-\text{Log}(r)-1
+\]
+Now (*) and   (iii) give the inequality
+\[
+\text{log}\,|a_p|+p\cdot\log\, r+2r-1-\text{log}\, r\leq
+2r-m(r)\quad\colon\,r\geq 1\tag{vi}
+\]
+
+
+\noindent
+Here $p\geq 1$ which therefore would give:
+\[
+\text{log}\,|a_p|-1+m(r)\leq 0
+\]
+But this is impossible since
+we have seen that
+$m(r)\to+\infty$.
+
+\bigskip
+
+\centerline{\bf 3. Proof of existence}
+\bigskip
+
+\noindent
+We start with a general construction.
+Let $\phi(z)$ be analytic in the unit disc $D$ which
+extends to a continuous function on
+$T$ except at the point $z=1$.
+We also assume that
+there exists some $0<\beta<2$ and a constant $C$ such that
+\[ 
+|\phi(\zeta)|\leq C|1-\zeta|^{-\beta}\tag{1}
+\]
+This implies that
+the function
+\[ 
+\theta\mapsto \theta\cdot \phi(e^{i\theta})
+\]
+is integrable on the unit circle. Hence
+there exists the entire function
+\[
+f(z)=\frac{-i}{2\pi}\int_{-\pi}^{\pi}
+e^{-i\theta z}\cdot \theta\cdot \phi(e^{i\theta})\cdot d\theta\tag{2}
+\]
+\medskip
+
+\noindent 
+Next, with $\epsilon>0$ small we let $\gamma_\epsilon$ be the interval of
+the circle $|z-1|=\epsilon$ with  end-points at the intersection with
+$|z|=1$. So on $\gamma_\epsilon$ we have 
+\[
+z= 1+\epsilon\cdot e^{i\theta}\quad\colon\,
+-\frac{\pi}{2}+\epsilon\uuu *<\theta<\frac{\pi}{2}-\epsilon\uuu *
+\]
+where $\epsilon_*$ is small with $\epsilon$.
+We obtain
+the entire function
+\medskip
+\[
+F(z)=  \frac{1}{2\pi}\,\int_{\epsilon}^\pi
+e^{-i\theta\cdot z}\cdot \phi(e^{i\theta})d\theta+
+\frac{1}{2\pi}\, \int_{-\pi}^{-\epsilon}
+e^{-i\theta\cdot z}\cdot \phi(e^{i\theta})d\theta+
+\frac{1}{2\pi i}\int_{\gamma_\epsilon}\,
+\frac{e^{-z\cdot\text{Log}\zeta}\cdot 
+\phi(\zeta)d\zeta}{\zeta}
+\]
+\medskip
+
+\noindent
+If $z=n$ is an integer we
+have 
+\[
+e^{-in\theta}=\zeta^{-n}\quad\colon\quad
+e^{-n\cdot\text{Log}\zeta}=\zeta^{-n}
+\]
+
+\noindent 
+Hence we get
+\[
+F(n)=\frac{1}{2\pi i}\cdot
+\int_{\Gamma_\epsilon}\,\frac{\phi(\zeta)\cdot d\zeta}{\zeta^{n+1}}\tag{*}
+\]
+\medskip
+
+\noindent
+where $\Gamma_\epsilon$ is the closed curve
+given as the union of $\gamma_\epsilon$ and the
+interval of $T$ where
+$|\theta|\geq\epsilon$.
+Cauchy's formula applied to $\phi$ gives:
+
+\medskip
+
+\noindent {\bf 2.1 Proposition.} \emph{Let $\phi(\zeta)=\sum c_n\zeta^n$.
+Then} 
+\[
+F(n)=c_n\quad\colon\,n\geq 0\quad\text{and}\quad  F(n)=0
+\quad\, n\leq -1
+\]
+
+
+\noindent
+Next, using (i) above we also have:
+\medskip
+
+
+\noindent 
+{\bf 2.2 Proposition.} \emph{The complex derivative of $F$ is equal to $f$.}
+
+\medskip
+
+\noindent
+\emph{Proof.}
+With $\epsilon>0$ the derivative of the sum of first
+two terms from the construction of $F(z)$ above
+become
+\[
+\frac{1}{2\pi}\,\int_{|\theta|\geq\epsilon}\,
+-i\theta\cdot e^{-iz\theta} \phi(e^{i\theta})d\theta\tag{i}
+\]
+\medskip
+
+\noindent
+In the last integral derivation with respect to $z$ gives
+\[
+-\frac{1}{2\pi i}\int_{\gamma_\epsilon}\,
+\frac{e^{-z\cdot\text{Log}\zeta}\cdot\phi(\zeta)d\zeta}{\zeta}
+ \tag{ii}
+\]
+Now $\zeta=1+\epsilon\cdot e^{i\theta}$ during the
+integration along $\gamma_\epsilon$ which gives:
+\[ 
+|\text{Log}\,(1+\epsilon\cdot e^{i\theta})|\leq\epsilon
+\]
+At the same time the circle interval $\gamma_\epsilon$ has length
+$\leq\epsilon$
+and hence the growth condition  (i)
+shows that the integral  (iii) tends to zero when
+$\epsilon\to 0$.
+Finally, since we assumed that 
+the function $\theta\mapsto \theta\cdot\phi(e^{i\theta})$ 
+is absoutely integrable on $T$ a passage to the limit as
+$\epsilon\to 0$ gives $F'=f$ as requested.
+
+
+\medskip
+
+\noindent 
+{\bf 2.3 Conclusion.}
+If $n$ is a positive integer in Proposition 2.3 we have:
+\[ 
+F'(n)=
+\frac{-i}{2\pi}\int_{-\pi}^{\pi}
+e^{-in \theta }\cdot \theta\cdot \phi(e^{i\theta})\cdot d\theta\tag{**}
+\]
+
+
+\noindent
+These integrals are zero for every
+$n\geq 1$ if and only if
+$\theta\cdot \phi(e^{i\theta})$ is the boundary value function of
+some $\psi(z)$ which is analytic in the exterior disc
+$|z|>1$. In 2.X we will show that
+this is true for a specific $\phi$\vvv function 
+satisfying the growth condition (1) above and in addition
+the series
+
+\[ 
+\sum\uuu{n=1}^\infty\, (\vvv 1)^n\cdot \frac{c\uuu n}{n}
+\]
+converges.
+\bigskip
+
+\noindent
+{\bf{2.4 How to deduce a solution $\{x\uuu p\}$.}}
+Suppose we have found $\phi$ satisfying the conditions above
+which gives the entire function $F(z)$
+whose derivatives are zero for all $n\geq 1$.
+Now we set
+
+\[ 
+x\uuu p=(\vvv 1)^p\cdot c\uuu p
+\]
+By (***) this sequence belongs to $\mathcal F$ and we construct the 
+associated entire function $H(z)$.
+From (i) in Proposition  0.1 and Proposition 2.1 we get
+
+\[ 
+H(p)=(\vvv 1)^p\cdot x\uuu p=c\uuu p=F(p)
+\]
+In addition both $H$ and $F$ have zeros at all integers $\leq 0$.
+Next, by the construction of $F$ it is clear that this 
+is an entire function of exponential
+type and by the above the entire function $G=H\vvv F$
+has zeros at all integers.
+We leave as an exercise to the reader to show that
+$G$ must be identically zero. The hint is to use similar
+methods as in the proof of
+the uniqueness.
+It follows that
+\[ 
+H'(q)= F'(q)=0
+\]
+for all $q\geq 1$.
+By (ii) in Proposition 0.2 this means precisely that
+$\{x\uuu p\}$ is a solution to the requested equations in (*)
+which gives the existence in Dagerholm's  Theorem.
+
+\bigskip
+
+
+\centerline {\bf{2.5 The construction of $\phi$.}}
+\medskip
+
+
+\noindent
+There remains to find $\phi$ such that the conditions above hold.
+To obtain $\phi$ we start with the integrable function
+on $T$ defined by:
+\[ 
+u(\theta)=\frac{1}{2}\cdot \log \,\frac{1}{|\theta|}
+\quad\colon\, -\pi<\theta<\pi
+\]
+We get the analytic function
+\[ 
+g(\zeta)=\frac{1}{2\pi}\int_{-\pi}^\pi\,
+\frac{e^{i\theta}-\zeta}{e^{i\theta}+\zeta}\cdot
+u(\theta)\cdot d\theta
+\]
+
+
+\noindent
+In the exterior disc
+we find the analytic function
+\[
+\psi(\zeta)=\text{exp}\,\, -\bar g(\frac{1}{\bar\zeta})
+\]
+
+
+\noindent
+Let us also put
+$\phi\uuu *(\zeta)=e^{g(\zeta)}$.
+Now we have
+
+\[
+\log |\phi(e^{i\theta})|=\mathfrak{Re}\, g(e^{i\theta})=
+u(\theta)
+\]
+In the same way we see that
+\[
+\log |\psi(e^{i\theta})|=\vvv \mathfrak{Re}\, g(e^{i\theta})=
+\vvv u(\theta)
+\]
+Since $2u(\theta)= \vvv \log\,|\theta|$
+it follows that
+\[
+\log\,|\theta|+\log |\phi\uuu *(e^{i\theta})|=\log |\psi(e^{i\theta})|
+\]
+Taking exponentials  we obtain
+\[
+|\theta|\cdot|\phi\uuu *(e^{i\theta})|= |\psi(e^{i\theta})|
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Check also arguments and verify that
+we can remove
+absolute values in the last equality to attain
+\[
+|\theta|\cdot \phi\uuu *(e^{i\theta})= \psi(e^{i\theta})\tag{*}
+\]
+
+\medskip
+
+\noindent
+Here (*) is not precisely what we want since
+our aim was to construct $\phi$ so that
+$\theta|\cdot \phi(e^{i\theta})$ is equal to the boundary
+value of an analytic function in
+$|z|>1$.
+So in order to get rid of the absolute value for $\theta$ in
+(*) we modify $\phi\uuu *$ as follows: Set
+\medskip
+
+\noindent 
+\[
+\rho(\theta)=\frac{\pi i}{2}\cdot
+\text{sign}\,\theta\cdot e^{-i\theta}\quad\colon 
+-\pi<\theta<\pi
+\]
+\medskip
+
+\noindent 
+Next, consider the two analytic functions
+in $D$, respectively in $|z|>1$ defined by:
+
+\[ \phi\uuu 1(z)=
+\frac{1}{\sqrt{1-z^2}}\quad\text{and}\quad \, \psi\uuu 1(z)=
+\frac{1}{\sqrt{1-z^{-2}}}
+\]
+\medskip
+
+\noindent {\bf {Exercise.}}
+Show that one has the equality
+
+\[
+\rho(\theta)=\frac{\phi\uuu 1(e^{i\theta})}
+{\psi\uuu 1(e^{i\theta})}
+\] 
+when $\vvv \pi<\theta <\pi$ and $\theta\neq 0$.
+
+\medskip
+
+\noindent
+{\bf{The $\phi$\vvv function.}}
+it is defined by
+\[ 
+\phi(z)=\frac{z}{\sqrt{1\vvv z^2}}\cdot \phi\uuu *(z)
+\]
+From (*) above and the construction of $\rho$
+it follows that
+\[ 
+\theta\cdot \phi(e^{i\theta})=
+\frac{\pi}{2}\cdot  \psi\uuu 1(e^{i\theta})\cdot\psi(e^{i\theta})
+\]
+The right hand side is the boundary function of an
+analytic function in $|z|>1$ and hence $\phi$ satisfies (**) from
+XX.
+Consider its Taylor expansion
+\[ 
+\phi(z)=\sum\, c\uuu n\cdot z^n
+\]
+There remains to verify that the series (**) converges and
+that $\phi$ satisfies the growth condition in XX.
+To prove this
+we begin to analyze the function
+\[ 
+\phi\uuu *(z)= e^{g(z)}\tag{i}
+\]
+
+
+
+
+
+
+
+\noindent
+Rewrite the $u$ function as a sum
+\[
+u(\theta)=
+\frac{1}{2}\log\,\bigl |\frac{1}{1-e^{i\theta}}\bigr |+
+k(\theta)\quad\text{where}\quad \, k(\theta)=
+\frac{1}{2}\log\,\bigl  |\frac{1-e^{i\theta}}{\theta}\bigr |\tag{ii}
+\]
+
+
+\noindent
+When $\theta$ is small we have an expansion
+\[
+\frac{1-e^{i\theta}}{\theta}=-i+\theta/2+\ldots\tag{iii}
+\] 
+From this we conclude that the $k$-function is
+at least twice differentiable as a function of $\theta$. So  the Fourier
+coefficients in the expansion
+\[ 
+k(e^{i\theta})=\sum\, b_\nu e^{i\nu \theta}\tag{iv}
+\]
+have a good decay. For example, there is a constant $C$ such that
+\[
+ |b_\nu|\leq \frac{C}{\nu^2}\quad\colon\, \nu\neq 0\tag{v}
+\]
+This implies that the analytic function
+\[
+\mathcal{K}(z)=
+\frac{1}{2\pi}\cdot\int_{-\pi}^{\pi}\,
+\frac{e^{i\theta}+z}{e^{i\theta}-z}\cdot k(e^{i\theta})\cdot d\theta\tag{vi}
+\]
+yields a 
+bounded analytic function in the unit disc.
+Next, the construction of the $g$-function gives:
+
+\[
+g(z)= \frac{1}{2}\cdot \log\,\frac{1}{1-z}+
+\sum\, b_\nu z^\nu\implies\tag{vii}
+\]
+\[ 
+\phi\uuu *(z)=\frac{1}{\sqrt{1-z)}}\cdot e^{\mathcal K(z)}
+\]
+\medskip
+
+\noindent
+We conclude that
+
+\[
+\phi(z)= 
+\frac{z}{1\vvv z}\cdot
+\frac{1}{\sqrt{1+z)}}\cdot e^{\mathcal K(z)}
+\]
+Since $\mathcal K(z)$ extends to a continuous function on the closed disc
+it follows that $\phi$ satisfies the growth condition (1) with $\beta=1$.
+Moreover, the function $\theta\cdot \phi(e^{i\theta})$ belongs to $L^1(T)$
+since
+$\frac{1}{\sqrt{1+e^{i\theta}}}$ is integrable. 
+There remains only to prove:
+
+\medskip
+
+\noindent
+{\bf{Lemma.}} The series
+\[
+\sum\uuu{p=1}^\infty\, (\vvv 1)^n\cdot\frac{c\uuu n}{n}
+\]
+is convergent.
+\medskip
+
+\noindent
+\emph{Proof.}
+let us put
+
+\[
+A(z)= 
+\frac{z}{\sqrt{1+z)}}\cdot e^{\mathcal K(z)}
+\]
+This gives
+
+\[
+\phi(z)=\frac{A(1)}{1\vvv z}+\frac{A(z)\vvv A(1)}{1\vvv z}
+\]
+From (v) it follows that $K(z)$, and hence also
+$e^{K(z)}$ is differentiable at $z01$
+which gives the existence of a constant $C$ such that
+
+\[
+\bigl|\frac{A(z)\vvv 1}{1\vvv z}\bigr|\leq
+C\cdot \frac{1}{|\sqrt{1+z}|}
+\]
+Here the function $\theta\mapsto \frac{1}{|\sqrt{1+e^{i\theta}}|}$
+belongs to $L^p(T)$ for each $p<2$ which by the  inequality for 
+$L^p$\vvv norms between functions and their Fourier coefficients
+in XX
+for example implies that
+if $\{c\uuu \nu^*\}$ give the Taylor series for
+$\frac{A(z)\vvv 1}{1\vvv z}$ then
+\[
+\sum\, |c^*\uuu\nu|^3<\infty
+\]
+Now Hšlder's inequality gives
+
+
+
+
+
+\[
+\sum\, \frac{|c^*_\nu|}{\nu}\leq \bigl(\sum\,|c_\nu^*|^3\bigr)^{\frac{1}{3}}\cdot
+\bigl(\sum\,\nu^{-3/2}\bigr)^{\frac{2}{3}}<\infty\tag{8}
+\]
+
+\noindent
+We conclude that the Taylor series for $\phi$ becomes
+
+
+\[
+A(1)\cdot(1+z+z^2+\ldots)+\sum c_\nu^*z^\nu
+\]
+Hence $c\uuu n=A(1)+c^*\uuu\nu$ and now
+Lemma xx follows since the alternating series
+$\sum\,(-1)^n\frac{1}{n}$ is convergent
+and we have the absolute convergence in XX above.
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+%\end{document}

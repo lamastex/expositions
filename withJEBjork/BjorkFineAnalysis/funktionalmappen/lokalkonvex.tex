@@ -1,0 +1,1211 @@
+
+
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+
+\centerline {\bf{ Fixed point theorems.}}
+\medskip
+
+\noindent
+A compact topological space $S$ has the fixed point property
+if every continuous map $T\colon S\to S$
+has at least one fixed point.
+An example is the closed unit ball in ${\bf{R}}^n$ whose  fixed-point
+property is proved in § 5.xx.
+More generally, consider
+a locally convex vector space $X$ whose dual space is denoted by
+$X^*$.
+Now one equips $X$  with the weak
+topology whose open sets are generated
+by pairs
+$x^*\in X^*$ and positive numbers
+$\delta)$ of the form:
+\[
+B_\delta(x^*)= \{ x\in X\,\colon\, |x^*(x)|\leq \delta\}
+\]
+Denote by $\mathcal K(X)$   the family of
+convex subsets  of $X$ which are
+compact
+with respect to
+the $X^*$-topology. 
+
+\medskip
+
+\noindent
+{\bf{The Schauder-Tychonoff fixed point theorem.}}\emph{
+Each $K$ in $\mathcal K(X)$ has the fixed point property.}
+
+\medskip
+
+\noindent
+The merit of this result is of course that one allows
+non-linear maps. The next
+result is  due to Kakutani and  goes as follows:
+By a group of linear transformations
+$\bf{G}$ on a real vector space $X$ we mean a family of bijective linear maps
+$g\colon X\to X$ such that composed maps $g_2\circ g_1$
+again belong to the group as well as  the inverse of every $g$.
+\medskip
+
+\noindent
+{\bf{Kakutani's theorem.}} \emph{Let $K\in\mathcal K(X)$ be 
+$\bf {G}$-invariant,  i.e. $g(K)\subset K$ hold for every
+$g\in{\bf {G}}$. 
+Assume in addition that the family of the restricted
+${\bf{G}}$-maps to $K$ is equicontinuous.
+Then there exists at least some
+vector $k\in K$ such that $g(k)=k$ for every
+$g\in{\bf{G}}$.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The equicontinuous assumption means that to each pair
+every $(x^*,\epsilon)$ with $x^*\in X^*$ and $\epsilon>0$ , there exists a finite
+family $x^*_1,\ldots,x^*_M$ and some $\delta>0$
+such
+that the following hold: If
+$p$ and $q$ is a pair of points in $K$ such that
+$p-q$ belongs to $\cap\, B_\delta(x^*_\nu)$, then
+\[
+g(p)-g(q)\in B_\epsilon(x^*)
+\] 
+hold for all $g\in {\bf{G}}$.
+\medskip
+
+\noindent
+{\bf{Haar measures.}}
+Let $G$ be a compact topological group which
+means that the  group is equipped with a Hausdorff topology where
+the group operations are continuous, i.e the map from
+$G\times G$ into $G$ which sends a pair of group elements $g,h$ to
+the product $gh$ is continuous, and  the inverse map $g\mapsto g^{-1}$
+is bi-continuous.
+Now there exists  the  Banach apace
+$C^0(G)$ of continuous real-valued functions on $G$.
+Recall from basic measure theory that
+the dual space
+consists of Riesz measures. Denote by $P(G)$ the family of non-negative measures with
+total mass one, i.e. probability measures on $G$.
+If $\phi\in C^0(G)$
+and $g\in G$ we get the new continuous function
+$S_g(\phi)$ defined by
+\[ 
+S_g(\phi)(h)=\phi(gh)\quad\colon h\in G
+\]
+Next, if  $\mu\in P(G)$ we get the new probability measure
+$T_g(\mu)$ given by the linear functional
+\[
+\phi\mapsto \int_G\, S_g(\phi)\, d\mu
+\]
+In this way $G$ is identified with a group of
+transformations on $P(G)$.
+Next,  $P(G)$ is equipped with the weak-star topology
+where  open neighborhoods of
+a given $\mu\in P(G)$ consists of
+finite intersections of sets
+$\{\gamma\in P(G)\,\colon |\gamma(\phi)-\mu(\phi)|<\delta\}$
+for pairs $\delta>0$ and $\phi\in C^0(G)$.
+The  uniform continuity of every $\phi \in C^0(G)$
+entails that
+that the group action on
+$P(G)$ is equi-continuous on $P(G)$
+with respect to the weak-star topology.
+As explained in § xx, Kakutani's theorem also applies 
+in this situation which yields
+a fixed point. Hence  there is a probability measure
+$\mu$ such that
+\[
+\int_G\, \phi(gh)\, d\mu(h)=\int_G\,\phi(h)\, d\mu(h)\tag{*}
+\] 
+hold for every pair $g\in G$ and
+$\phi \in C^0(G)$.
+In § xx we show
+that $\mu$ is uniquely determined by (*), i.e.
+only one probability measure enjoys the invariance above.
+Moreover,  starting with the operators
+\[ 
+S^*_g(\phi)(h)=\phi(hg)\quad\colon h\in G
+\]
+one finds a probability measure $\mu^*$ such that
+\[
+\int_G\,\phi(hg)\, d\mu(h)=\int_G\,\phi(h)\, d\mu(h)\tag{**}
+\] 
+hold for every pair $g\in G$ and
+$\phi \in C^0(G)$.
+In § xx we prove that $\mu=\mu^*$ which 
+means that the unique Haar measure
+is both left and right invariant.
+
+
+\bigskip
+
+\centerline{\bf{§ 1. Convex sets and their $\rho$-functions.}}
+\medskip
+
+
+\noindent
+Let $E$ be a real vector space.
+A convex  set $U$ which contains the origin is said to be
+absorbing if there for  
+each vector
+$x\in E$  exists some
+real $s>0$ such that
+$s\cdot x \in U$.
+It may occur that
+the whole line
+${\bf{R}}x$ is contained in $U$, and then  we say that
+$x$ is fully absorbed by $U$.
+The convexity of $U$ entails that
+the set of fully absorbed vectors is a linear subspace of $E$ which we denote by
+$\mathcal L_U$.
+\medskip
+
+
+\noindent
+{\bf{1.1 The function
+$\rho_U$.}}
+Let $x$ be a  non-absorbed vector $x$. Then there exists a positive real number 
+\[
+\mu(x)=\max\{ s\,\colon sx\in U\}
+\]
+If $x$ is absorbed we put $\mu(x)=+\infty$ and
+for every non-zero vector $x$
+we set
+\[ 
+\rho_U(x)=\frac{1}{\mu(x)}
+\]
+it is clear that if $x\in U$ then
+$\mu(x)\geq 1$ and hence $\rho_U(x)\leq 1$.
+Notice that we also have
+\[
+\rho_U(x)=\min\{s\, \colon\,x\in s^{-1}U\}
+\]
+\medskip
+
+
+
+\noindent
+{\bf{1.2 Exercise.}}
+Show that the convexity of $U$ entails that
+$\rho_U$ satisfies the triangle inequlity
+\[
+\rho_U(x_1+x_2)\leq \rho_U(x_1)+\rho_U(x_2)\tag{1.2.1}
+\]
+for all pairs of vectors in $E$.
+Moreover, check also that
+$\rho_U(x)=0$ if and only if
+$x$ belongs to
+$\mathcal L_U$ and that $\rho_U$ is positively homogeneous, i.e.
+the equality below holds when $a$ is real and positive:
+\[
+\rho_U(ax)= a\rho_U(x)\quad\colon a>0\tag{1.2.2}
+\]
+
+\noindent
+{\bf{1.3 The Hahn-Banach theorem.}}
+Keeping $U$ fixed we set $\rho(x)= \rho_U(x)$.
+An ${\bf{R}}$-linear map
+$\lambda$ from $E$ to the 1-dimensional real line
+is majorised by $\rho$ if
+\[
+\lambda(x)\leq \rho(x)\tag{1.3.1}
+\]
+hold for every vector $x$.
+More generally, let $E_0$ be a subspace of $E$ and
+$\lambda_0\colon E_0\to {\bf{R}}$ a linear map such that
+(1.3.1) hold for vectors in $E_0$.
+Then there exists a linear map
+$\lambda\colon E\to {\bf{R}}$ which extends 
+$\lambda_0$ and is again majorised by $\rho$.
+To prove this we use Zorn's Lemma which
+gives a maximal extension, i.e. we find
+a subspace $E_*$ which contains $E_0$ and
+a linear map $\lambda_*\colon E_*\to {\bf{R}}$
+which is majorised by $\rho$ and extends $\lambda_0$.
+If $E_*\neq E$ we pick a non-zero vector
+$y\in E\setminus E_*$ and consider the linear space
+$E_{**}= E_*+{\bf{R}}y$.
+For each pair of vectors $x$ and $\xi$ in $E_*$
+the triangle inequality from (1.2.1) gives
+\[
+\rho(\xi+x)\leq  \rho(y+x)+\rho(\xi-y)
+\]
+Next, put
+\[
+\alpha=\min_{x\in E}\, \rho(x+y)-\lambda(x)
+\quad\colon \beta=\max_{\xi\in E}\,\lambda(\xi)-\rho(\xi-y)
+\]
+It follows that when $x$ and $\xi$ are vectors in $E$, then
+\[
+\alpha-\beta\geq \rho(x+y)-\lambda(x)-\lambda(\xi)+\rho(\xi-y)
+=\rho(x+y)+\rho(\xi-y)- \lambda(x+\xi)\tag{i}
+\]
+Next,
+the triangle inequality applied to the vectors $x-y$ and $\xi+y$ gives
+\[
+\rho(x+\xi)=\rho((x+y)+(\xi-y))\leq \rho(x+y)+\rho(\xi-y)\tag{ii}
+\]
+Moreover, since
+$\rho$ majorises $\lambda$ on $E_*$ we have
+\[
+ \lambda(x+\xi)\leq \rho(x+\xi)\tag{iii}
+\]
+ it follows from (i-iii) that
+\[
+ \alpha\geq \beta\tag{iv}
+\]
+Let us then take a real number $a$ such that
+$\beta\leq a\leq \alpha$ and extend $\lambda$ to $E_{**}$ by
+\[
+\lambda(x+sy)=\lambda(x)+ sa
+\]
+where $x\in E_*$ and $s$ are real numbers.
+if $s>0$ we have
+\[
+\lambda(x+sy)= s\lambda(s^{-1}x+y)=s((\lambda(s^{-1}x+a)\leq
+s((\lambda(s^{-1}x+\alpha)\leq s\rho(s^{-1}x+y)
+\]
+where the last inequality follos from the defintion of $\alpha$ in
+(x) applied to the vector $s^{-1}x\in E_*$.
+Finally, since $\rho$ is positively homogeneous the last term is
+equal to $\rho(x+sy)$. Hence we have proved the inequality
+\[
+\lambda(x+sy)\leq \rho(x+sy)
+\] 
+when $s>0$.
+Next, since $a\geq\beta$, the reader can check by a similar method as above that
+\[
+\lambda(x+sy)\leq \rho(x+sy)
+\] 
+hold when $s<0$.
+This  proves that the choice of $a$ above gives an extension of $\lambda$ to
+$E_{**}$ which again is majorised by
+$\rho$ and via Zorn's Lemma we get the Hahn-Banach theorem.
+
+
+
+
+\bigskip
+
+
+
+\centerline {\bf{2 Locally convex topologies.}}
+\bigskip
+
+
+\noindent
+Denote by $\mathcal C_E$ the family of convex sets $U$ as in § 1.
+Let
+$\mathfrak{U}= \{U_\alpha\}$ be a family in  $\mathcal C_E$ such that
+\[
+\bigcap\,\mathcal L_{U_\alpha}=\{0\}
+\]
+i.e. the intersction is reduced to the origin.
+Now there exists a topology on $E$
+where a basic for open neighborhoods of the origin
+consists of sets:
+\[
+\cap\, \{\rho_{U_{\alpha_i}}(x)<\epsilon\}\tag{1}
+\] 
+where $\epsilon>0$ and $\{\alpha_1,\ldots,\alpha_k\}$ is a finite set
+of indices defining the  $U$-family.
+If $x_0$ is a vector in $XS$, then
+a basis for its open neihghborhoods
+are given by
+sets of the for $x_0+U$ where $U$ is a set from (1).
+In general, a subset $\Omega$ in $E$ is open if
+there to eah $x_0\in\Omega$ exists some
+$U$ from (1) such that
+$x_0+U\subset \Omega$.
+it is clear that this gives a topology and (1) entaills that it is separated, i.e. a Huasdorff topology on
+$E$.
+Notice also that eqch set in 82) is convex. One therefore
+refers to a locally con vex
+topology on $E$.
+\medskip
+ 
+ \noindent
+ {\bf{2.1  Remark.}}
+ The locally convex topology above depends upon the family
+ $\mathfrak{U}$-toplogy. Its topology  is not changed if we enlarge 
+ the family to consist of all finite intersection of its
+ convex subsets. When this has been done
+ we notice that if $U_1,\ldots, U_n$ is a finite family in
+ $\mathfrak{U}$ then the norm defined by
+ $U=U_1|\cap\ldots\,\cap U_n$ is stronger than
+ the individual $\rho_{U_i}$-norms. Hence
+ a fundamental system of neighborhoods 
+ consists of single $\rho$-balls:
+  \[
+ \Omega=\{\rho_U<\epsilon \}    \quad\colon U\in\mathfrak {U}
+ \]
+ 
+ \medskip
+ 
+ \noindent
+ {\bf{2.2 The dual space $E^*$}}.
+Let $E$ be equipped with a locally convex $\mathfrak{U}$-topology.
+As above $\mathfrak{U}$ has been enlarged so that
+the balls above  give a basis for neighborhoods of the origin.
+A linear functional  $\phi$ on $E$
+is $\mathfrak{U}$-continuous if  there
+exists some
+$U\in\mathfrak{U}$ and a
+constant $C$ such that
+\[
+|\phi(x)||\leq C\cdot \rho_U(x)
+\]
+\medskip
+
+
+\noindent
+{\bf{2.3 Closed half-spaces.}}
+To each pair 
+$\phi\in E^*$ and a real number $a$ one assigns the
+closed half-space
+\[
+H=\{x\in X\,\colon\, \phi(x)\leq a\}
+\]
+Notice that $a<0$ can occur in which case
+$H$ does not contain the origin.
+\medskip
+
+\noindent
+{\bf{2.4 The separation  theorem.}}
+\emph{Each closed convex set $K$ in $E$ is the intersection of closed half-spaces.}
+
+
+
+\medskip
+\noindent
+{\bf{2.5 Exercise.}}
+Show (2.4)  using the Hahn-Banach theorem.
+\medskip
+
+
+\noindent
+Next, let $K_1$ and $K_2$ be a pair of closed and disjoint convex sets.
+Then they can be spearated by a hyperplane. More precisley, there
+exists some $\phi\in E^*$ and a positive number $\delta$ such that
+\[
+\max_{x\in K_1}\, \phi(x)+\delta\leq
+\min_{x\in K_2}\, \phi(x)\tag{2.6}
+\]
+Again we leave the proof as an exercise to the reader.
+
+\bigskip
+
+
+\centerline {\bf{3. Support functions of convex sets.}}
+\medskip
+
+
+\noindent
+Let $E$ be a locally convex space as above.
+Vectors in $E$ are denoted by  $x$, while $y$ denote  vectors in $E^*$.
+To each closed and convex subset $K$ of $E$
+we define a function $\mathcal H_K$ on the dual $E^*$ by:
+\[ 
+\mathcal H_K(y)=\sup_{x\in K}\,y(x)
+\]
+
+
+\noindent
+Notice that  $\mathcal H_K$
+take values in $(-\infty,+\infty]$, i.e. it may be $+\infty$ 
+for some vectors $y\in E^*$.
+For example, let $K=\{{\bf{R}}^+x_0$ be a half-line.
+Then $\mathcal H_K(y)=+\infty$ when
+$y(x_0)>0$
+and otherwise zero. So here the range consisists of 0 and $+\infty$.
+It is clear that
+\[
+\mathcal H_K(sy)= s\mathcal H_K(y)
+\] 
+hold when $s$ is a positive real number, i.e
+$\mathcal H_K$ is positively homogeneous.
+
+
+
+\medskip
+
+\noindent
+{\bf{3.1 Exercise.}}
+Show that the convexity of $K$ entails that
+\[
+\mathcal H_K(y_1+y_2)\leq 
+\mathcal H_K(y_1)+
+\mathcal H_K(y_2)
+\]
+for each pair of vectors in $E^*$.
+\medskip
+
+
+
+
+\noindent
+{\bf{3.2 Upper semi-continuity.}}
+For each fixed vector $x\in E$
+the function 
+\[ 
+y\mapsto y(x)
+\]
+is weak-star continuous on $E^*$.
+Since
+the supremum function attached to
+an arbitrary family of weak-star continuoes functions is upper
+semi-continuous, it follows that $\mathcal H_K$ is upper semi-contiuous.
+\medskip
+
+\noindent
+{\bf{3.4 Exercise.}}
+Let $K$ and $K_1$ be a pair of closed convex sets such that
+$\mathcal H_K=\mathcal H_{K_1}$. Show that this entails that $K=K_1$.
+The hint is to use the separation theorem.
+\medskip
+
+\noindent
+{\bf{3.5 The class $\mathcal S(E)$}}.
+It consids of all  
+all upper semi-continuous functions
+$G$ on $E^*$ with values in $(-\infty,+\infty]$
+which satisfy (x) and (xx).
+The next result 
+was proved by   Hörmander 
+in the article
+\emph{Sur la fonction d'appui des ensembles convexes dans un espaces
+localementt convexe} [Arkiv för mat. Vol 3: 1954].
+
+\medskip
+
+\noindent
+{\bf{3.6 Theorem.}}
+\emph{Each $G\in\mathcal S(E)$ is of the form
+$\mathcal H_K$ for a unique closed convex subset $K$ in $E$.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+As pointed out by Hörmander in [ibid] this result
+is closely related to  earlier studies by
+Fenchel in the article \emph{On conjugate convex functions}
+Canadian Journ. of math. Vol 1 p. 73-77) 
+where  Legendre transforms are
+studied in infinite dimensional topological vector spaces.
+The novely in Theorem 3.3 is the generality and we
+remark that various separation theorems 
+in text-books dealing with notions of convexity
+are easy consequences of Theorem 5.C.2.
+
+
+\bigskip
+
+
+
+\noindent{\emph{Proof of Theorem 3.6 }}
+Put $F=E\oplus{\bf{R}}$ which is a new vector space where
+the 1-dimensional real line is added. It dual space
+$F^*=E^*\oplus{\bf{R}}$.
+We are given $G\in\mathcal S(E)$ and 
+put
+\[
+G_*=\{(y,\eta)\in E^*\oplus {\bf{R}}\quad\colon\, G(y)\leq \eta\}\tag{i}
+\]
+Condition in (*) entails that $G_*$ is a convex cone
+in $F^*$ and the semi-continuous hypothesis on $G$
+implies that  $G_*$ is closed with respect to the weak-star toplogy on $F^*$.
+Next, in $F$ we define the set
+\[ 
+G_{**}=\{(x,t)\in E\oplus{\bf{R}}^+\,\colon\, y(x)\leq \eta t\,\colon\, (y,\eta)\in G_*\}\tag{ii}
+\]
+This gives a set
+$\widehat C$ in 
+$F^*$ which consists of vectors  $(y,\eta)$ such that
+\[
+\max_{(x,t)\in 
+G_{**}}\,y(x)- \eta t\leq 0
+\]
+It is clear that
+$G_*\subset \widehat C$. Now we prove the equality
+
+\[
+G_*= \widehat C\tag{*}
+\]
+To get (*) we use Theorem 2.4.
+Namely, since
+the two sets in (*)  are weak-star closed a strict inequality
+gives a separating
+vector $(x_*,t_*)\in E$, i.e.  there exists $(y_*,\eta_*)\in \widehat C$
+and a real number $\alpha$ such that 
+\[
+y_*(x_*)-\eta _* t_*>\alpha
+\quad\text{and}\quad (y,\eta)\in D_K\implies y(x_*)-\eta t_*\leq \alpha\tag{iv}
+\]
+Since $G_*$ contains $(0,0$ we  have $\alpha\leq 0$.
+and since it also is a cone the last implication  gives
+$(x_*,t_*)\in G_{**}$. Now
+the construction of $\widehat{C}$ in (iii) contradicts the strict inequality in
+the left hand side of (iv).
+Hence there cannot exist
+a separating vector and  (*) follows.
+\medskip
+
+\noindent
+Next, in  $E$ we consider  the convex set
+\[
+K=\{ x\,\colon (x,1)\in G_{**}\}
+\]
+Using (*) the reader can check that
+\[
+\mathcal H_K(y)=G(y)
+\]
+ for all $y\in E^*$ which proves that $G$ has the requested form.
+ The uniqueness of $K$ follows from Exercise 3.4.
+ 
+ 
+
+\bigskip
+
+\noindent
+{\bf{3.7  The case of normed spaces.}}
+If $X$ is a normed vector space Theorem 3.6 
+leads to a certain isomorphism of two families.
+Denote by $\mathcal K$ the family of all convex
+subsets of $E$ which are closed with respect to the norm topology.
+A topology on $\mathcal K$ is defined
+when we for each $K_0\in\mathcal K$ and $\epsilon>0$
+declare an open neighborhod
+\[ 
+U_\epsilon(K_0)=\{ K\in\mathcal K\,\colon\,
+\text{dist}(K,K_0)<\epsilon\}
+\] 
+where the norm defines the distance between
+$K$ and $K_0$ in the usual way.
+Denote by $\mathfrak{H}$ the family of all
+functions $G$ on $E^*$ which satisfy (*) in 5.B.1 and are continuous
+with respect to the norm topology on $E^*$.
+A subset $M$ of $\mathfrak{H}$ is equi-continuous if there
+to
+each $\epsilon>0$ exists $\delta>0$ such that
+\[
+||y_2-y_1||<\delta \implies ||G(y_2)-G(y_1)||<\epsilon
+\] 
+for every $G\in M$ and 
+all pairs $y_1,y_2$ in $E^*$.
+The topology on $\mathfrak{H}$ is  defined
+by  uniform convergence on equi-continuous subsets.
+
+\medskip
+
+
+
+
+\noindent
+{\bf{3.8 Theorem.}}
+\emph{If $E$ is a normed vector space
+the set-theoretic bijective map $K\to \mathcal H_K$ is
+a homeomorphism when
+$\mathcal K$ and
+$\mathfrak {H}$ are equipped with the described topologies.}
+\medskip
+
+\noindent
+{\bf{3.9 Exercise.}} Deduce this  result 
+from     Theorem 3.6
+\newpage
+
+
+\centerline
+{\bf{4. The Krein-Smulian theorem.}}
+\bigskip
+
+
+\noindent
+Let $X$ be a Banach space and $X^*$ its dual.
+The weak-star topology on $X^*$ was defined in § 5.4.
+We have also the bounded weak-star topology desrcibed in § xx from
+the introduction.
+So now we have a pair of  locally convex spaces 
+$X^*_w$ and $X^*_{bw}$.
+Open sets in the weak-star topology are
+by definition also open in
+the bounded weak-star topology, i.e. the latter topology 
+contains more open sets and is therefore stronger than the ordinary weak-star topology.
+Hence  there is a natural inclusion of   dual spaces:
+\[
+(X_w^*)^*\subset
+(X_{bw}^*)^*\tag{*}
+\]
+The Krein-Smulian theoren assers that eqaulity holds in (*).
+To prove this we proceed as follows.
+For  each finite
+subset $A$ of  $X$ we put
+\[ 
+\widehat{A}=\{x^*\,\colon\, \max_{x\in A}\,|x^*(x)|\leq 1\}
+\]
+Let $U$ be an open set in $X^*_{bw}$
+which contains the origin
+and $S^*$ is the closed unit ball in
+$X^*$.
+The construction of the bounded weak-star topology gives
+a finite set $A_1$ in $X$ such that
+\[
+S^*\,\cap \widehat{A}^0\subset U\tag{i}
+\]
+Next, let $n\geq 1$ and suppose we have constructed
+a finite set $A_n$ where
+\[
+nS^*\,\cap \,\widehat{A_n}\subset U\tag{ii}
+\]
+To each finite set $B$ of vectors 
+in $X$ with norm $\leq n^{-1}$
+we notice that   
+\[
+ \widehat{A_n\cup\, B}\subset \widehat{A_n}\tag{iii}
+\]
+Put
+\[
+ F(B)=(n+1)S^*\cap \,\widehat{A_n\cup\, B} \,\cap (X^*\setminus U)
+\]
+It is clear that $F(B)$  is weak-star closed
+for
+every finite set $B$ as above. If these sets are non-empty for all $B$,
+it follows from 
+the weak-star compactness of $(n+1)S^*$
+ that the whole intersection is non-empty. So we find a vector
+ \[
+ x^*\in \bigcap_B\, F(B)
+ \]
+Notice that $F(B)\subset \widehat{B}$ for every finite set $B$ as above
+which means that  
+$|x^*(x)||leq 1$ for every  vector $x$ in 
+in $X$ of norm $\leq n^{-1}$. 
+Hence the norm
+\[
+||x^*||\leq n
+\]
+ But then (iii) gives the inclusion
+\[
+ x^*\in nS^*\,\widehat{ A_n}\bigr)\, \cap (X\setminus U)\tag{iv}
+\]
+This contradicts (ii) and hence we have proved that there exists a finite set
+$B$ of vectors with norm
+$\leq n^{-1}$ such that 
+$F(B)=\emptyset$.
+\medskip
+
+\noindent
+From the above it is clear that an induction over $n$ gives
+a sequence of sets $\{A_n\}$ such that  (ii) hold
+for each $n$ and
+\[ 
+A_{n+1}=A_n\,\cup B_n\tag{v}
+\]
+where
+$B_n$ is a finite set of vectors of norm
+$\leq n^{-1}$.
+\bigskip
+
+\centerline{\emph{Proof of the Krein-Smulian theorem.}}
+
+\bigskip
+
+\noindent
+Let $\theta$ be a linear functional on $X^*$ which is
+continuous with respect to the bounded weak-star topology.
+This gives an open neighborhood
+$U$ in
+$X^*_{bw}$ such that
+\[
+|\theta(x^*)\leq 1\quad\colon\,  x^*\in U\tag{i}
+\]
+To the set $U$
+we find a sequence $\{A_n\}$ as above.
+Let us enumerate the vectors in this sequence of finite sets by
+$x_1,x_2,\ldots$, i.e.
+start with the finite string of vectors in $A_1$, and so on.
+By the inductive construction of the $A$-sets we have
+$||x_n||\to 0$ as $n\to \infty$.
+If $x^*$ is a vector in $X^*$ we 
+associate the complex sequence
+\[
+\ell(x^*)= \{x^*(x_n)\}
+\]
+which tends to zero since
+$||x_n||\to 0$ as $n\to \infty$.
+Then
+\[ 
+x^*\mapsto \ell(x^*)
+\]
+is a linear map from $X^*$ into the 
+Banach space ${\bf{c}}_0$.
+If
+\[
+\max_n\, |x^*(x_n)|\leq 1
+\]
+we have by definition $x^*\in A_n^0$ for each $n$.
+Choose  a positive integer $N$ so  that $||x^*||\leq n$. Thus entails that
+\[
+x^*\in NS^*\cap A_N^0
+\]
+From (ii) during the inductive construction of the $A$-.sets,
+the last set is contained in $U$. Hence
+$x^*\in U$
+which by (i) gives
+$\theta(x^*)|\leq 1$.
+We conclude that $\theta$ yields
+a linear functional on
+on the image space of the $\rho$-map  with norm one at most.
+The 
+Hahn-Banach theoren gives
+$\lambda\in{\bf{c}}_0^*$
+of norm one at most such that
+\[
+\theta(x^*)= \lambda(\ell(x^*))
+\]
+Next,  by a wellknown result due to
+Banach the dual of ${\bf{c}}_0$ is $\ell^1$. Hence there exists
+a sequence $\{\alpha_n\}$ in $\ell^1$ such that
+\[
+\theta(x^*)= \sum\,\alpha_n\cdot x^*(x_n)
+\]
+In $X$ we find the vector $x=\sum\, \alpha_n\cdot x_n$
+and conclude that
+$\theta=\widehat{x}$ which proves the Krein-Smulian theorem.
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{5. Fixed point theorems.}}
+\bigskip
+
+
+\medskip
+\noindent
+A topological space $S$ has the fixed-point property if every
+continuous map $f\colon S\to S$ has at least one fixed point.
+\medskip
+
+
+\noindent
+{\bf{5.1 Theorem.}}
+\emph{The closed unit ball in ${\bf{R}}^n$ has the fixed point property
+for every $n\geq 2$.}
+
+
+\medskip
+
+
+\noindent
+\emph{Proof.}
+By Weierstrass approximation theorem
+every continuous map from $B$ into itself can be approximated unifomly by
+a $C^\infty$-map. Together with the compactness of $B$ the reader
+should conclude that it suffices to prove every $C^\infty$-map, 
+$\phi\colon B\to B$  has at least one fixed point.
+We  argue by  contradiction, i.e suppose that
+$\phi(x)\neq x$ for all $x\in B$.
+Each fixed  $x\in B$ gives a quadratic equation  of  the variable $a$
+\[
+1= |x+a(x-\phi(x)|^2=|x|^2+2a(1-\langle x,\phi(x)\rangle )+a^2|x-\phi(x)|^2\tag{i}
+\]
+
+
+\noindent
+{\bf{Exercise 1.}}
+Use that $\phi(x)\neq x$,
+to show that
+(i) has two simple real roots for
+each $x\in S$, and if $a(x)$ is the larger then
+the function $x\mapsto a(x)$
+belongs to $C^\infty(B)$. Moreover
+\[
+a(x)=0\quad\colon x\in S\tag{E.1}
+\]
+Next,  for each real number $t$ we set
+\[
+f(x,t)= x+ta(x)(x-\phi(x))
+\]
+This is a vector-valued function of the $n+1$ variables $t,x_1,\dots,x_n$
+where $x$ varies in $B$.
+Put
+\[
+g_i(x)=a(x)(x_i-\phi_i(x)\implies  f_i)x,t)= x_i+tg_i(x)
+\]
+Taking partial derivatives
+with respect to $x$ we get
+\[
+\frac{\partial f_i}{\partial x_k}= e_{ik}+t\frac{\partial g_i}{\partial x_k}\tag{ii}
+\]
+where $e_{ii}=1$ and $e_{ik}=0$ if $i\neq k$.
+Let $D(x;t)$ be the determinant of the $n\times n$-matrix
+whose elements are the partial derivatives in (ii) and put
+\[ 
+J(t)=\int_B\, D(x;t)\, dx\tag{iii}
+\]
+When $t=0$ we notice that the $n\times n$-matrix above
+is the identy matrix and hence
+$D(x;0)$ has constant value one so that  $J(0)$ is the volume of $B$.
+Next, (i) entails that 
+$x\mapsto f(x;1)$ satisfies the functional equation
+\[
+|f(x;1)|^2=1\implies
+\sum_{i=1}^{i=n}\, f_i(x,1)\cdot
+\partial f_i(x,1)/\partial x_k(x,1)=0
+\] 
+for every $1\leq k\leq n$.
+Since the $n$-vector $f(x,1)\neq 0$
+it means that
+the columns of the matrix are linearly independent for every $x\in B$ and hence
+$D(x;1)=0$ holds in $B$ so that   
+$J(1)=0$.
+The  contradiction follows if we show that 
+$t\mapsto J(t)$
+is  a constant function of $t$. 
+\medskip
+
+\noindent
+{\bf{2. Exercise.}}
+Use Leibniz's rule and that determinants of matrices with
+two equal columns are zero to conclude that
+\[
+\frac{d}{dt}(D(x;t)= \sum\sum\, (-1)^{j+k}\cdot
+\frac{\partial g_i}{\partial x_k}\tag{E.2}
+\] 
+where the double sum extends over all pairs $\leq j,k\leq n$.
+Next, Stokes Theorem gives
+\[
+\int_B\, \frac{\partial g_i}{\partial x_k}\, dx=
+\int_S\, g_i\cdot {\bf{n}}_k\, d\omega\quad\colon\quad 1\leq i,k\leq n\tag{iv}
+\]
+where  $\omega$ is the area measure on $S$.
+From (E.1)  we have $g_i=0$ on $S$ for each $i$.
+Hence (E.2)   gives
+\[
+\frac{dJ}{dt}=\int_B\, \frac{d}{dt}(D(x;t)\, dx=0
+\]
+So $t\mapsto J(t)$ is constant which is impossible  because
+$J(0)=1$ and $J(1)=0$ which  finishes  the proof.
+
+
+
+\newpage
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{5.2 The Hilbert cube $\mathcal H_\square$}}.
+It is the closed subset of
+the Hilbert space $\ell^2$ 
+which consists of vectors $x=(x_1,x_2,\ldots)$ such that
+$|x_k|\leq 1/k$ for each $k$.
+\medskip
+
+
+
+\noindent
+{\bf{5.3 Proposition.}}
+\emph{Every closed and convex subset of
+$\mathcal C$ has the fixed point property.}
+\medskip
+
+\noindent
+{\bf{5.4 Exercise.}} Deduce this result from Theorem 5.1.
+
+\bigskip
+
+\noindent
+Next, let $X$ be a locally convex vector space and $X^*$ its dual.
+Denote by  $\mathcal K(X)$ the family of convex subsets 
+which are compact with respect to the  weak topology on $X$. 
+Let $K\in \mathcal K(X)$ and $T\colon K\to K$
+a continuous map with respect to the weak topology.
+For each fixed  $f\in X^*$,  it follows from our assumptions that 
+the complex-valued function on $K$ defined by
+\[
+p\mapsto f(T(p))
+\]
+is uniformly contnuus with respect to the weak topology.
+So for each positive integer $n$ there exists a finite set
+$G_n=(x^*_1,\ldots,x^*_N)$ and some $\delta>0$
+such that the following implication holds for each pair of points
+$p,q$  in $K$:
+\[
+p-q\in\cap \, B_\delta(x^*_\nu)\implies 
+|f(T(p))-f(T(q))|\leq n^{-1}\tag{i}
+\]
+We can attain this for each positive integer  $n$ and get a denumerable set
+\[
+G=\,\cup \, G_n
+\]
+From (i)  it is clear that if
+$p,q$ is a pair in $K$ and $g(p)=g(q)$ hold for every $g\in G$, then
+$x^*(T(p))=x^*(T(q)$.
+We refer to $G$ as a determining set for the map $T$.
+In a similar way we find a denumerable
+determining set
+$G^{1)}$
+for $g_1$, By a standard diagonal argument the
+reader may verify the following:
+\medskip
+
+
+\noindent
+{\bf{5.5 Proposition.}}
+\emph{There exists a denumerable subset
+$G$ in $X^*$ which contains $f$ and  is self-determining in the sense that
+it determines each of its vectors as above}.
+
+\bigskip
+
+
+\noindent
+{\bf{5.6 An embedding into the Hilbert cube.}}
+During the construction of the finite $G_m$-sets which
+give (i), we can choose small $\delta$-numbers and
+take $\{x^*_\nu\}$  such that the maximum values
+\[
+\max_{p\in K}\, |x^*_\nu(p)|
+\] 
+are small.
+From this observation the reader should confirm that
+in Proposition 5.5 we can construct 
+the sequence
+ $G=(g_1,g_2,\ldots)$  in such a way that
+ \[
+ \max_{p\in K}\, |g_n(p)|\leq n^{-1}
+\]
+hold for every $n$.
+Hence each $p\in K$ gives the vector
+$\xi(p)=(g_1(p),g_2(p),\ldots)$ in the Hilbert cube
+and now 
+\[
+K_*=\{\xi(p)\,\colon\, p\in K\}
+\]
+yields a convex subset of $\mathcal C$.
+Since $G$ is self-determininig we have
+$T(p)=T(q)$ whenever $\xi(p)=\xi(q)$. Hence
+there exists a  map from
+$K_*$ into itself defined by
+\[
+T_*(\xi(p))= \xi(T(p)\tag{4.1}
+\]
+\medskip
+
+\noindent
+{\bf{5.7 Exercise.}}
+Use the compact property of $K$ to show that
+$K_*$ is closed in the Hibert cube and that
+$T_*$ is a continuous map with respect to the induced 
+strong norm topology on $K_*$ derived from the
+complete norm on $\ell^2$.
+\medskip
+
+\noindent
+{\bf{5.8 Consequence.}}
+Suppose from the start that
+we are given a pair of points $p_1,p_2$  in $K$ and some
+$f\in X^*$ where $f(p_1)\neq f(p_2)$.
+From the above $f$ appears in the $G$-sequence and put
+\[
+K_0=\{p\in K\colon\, \xi(p)=\xi (p_1)\}
+\]
+Then $K_0$ is a 
+convex subset of $K$, and since
+$f$ appears in the $G$-sequence it follows that
+$p_2$ does not belong to $K_0$.
+Moreover, since $G$ is self-determining with respect to $T$ it 
+is clear that 
+\[
+T(K_0)\subset K_0
+\]
+Hence we have proved:
+
+\medskip
+
+\noindent
+{\bf{5.9 Proposition.}} \emph{For each pair
+$K$ and $T$  as above where $K$ is not reduced to a single point, there
+exists a proper and $X^*$-closed convex subset $K_0$ of $K$ such that
+$T(K_0)\subset K_0$.}
+\bigskip
+
+
+\centerline {\bf{5.10 Proof of the Schauder-Tychonoff theorem.}}
+\bigskip
+
+\noindent
+Let $T\colon K\to K$
+be a continuous map where $K$ belongs to $\mathcal K(X)$.
+Consider the family  $\mathcal F$
+of all closed and convex subsets
+which are $T$-invariant. It is clear that
+intersections of such sets enjoy the same property. So we find
+the minimal set
+\[
+K_*= \bigcap\, K_0
+\]
+given by the intersection of all sets $K_0$
+in
+$\mathcal F$.
+If $K_*$ is not reduced to a single point then Proposition  5.9
+gives a proper closed subset which again belongs to
+$\mathcal F$. This is contradicts the minimal property.
+Hence $K_*=\{p\}$ is a singleton set and $p$ 
+gives the requested fixed point for $T$.
+\bigskip
+
+
+\centerline{\bf{5.11 Proof of Kakutani's theorem.}}
+\bigskip
+
+\noindent
+With the notations from the introduction we are given a group
+${\bf{G}}$ where each element $g$ preserves the convex set
+$K$ in $\mathcal K(X)$.
+Zorn's lemma gives a minimal 
+closed and convex subset $K_*$ of $K$ which again is invariant under the group.
+Kakutani's theorem follows if $K_*$ is a singleton set.
+To prove that this indeed is the case we  argue by contradiction.
+For  $K_*$ is not a singleton set then
+\[
+K_*-K_*=\{p-q\colon p,q\in K_*\}
+\] 
+contains points outside the origin, and we find  
+a convex open neighborhood $V$ of the origin such that
+\[
+(K_*-K_*)\setminus\overline{V}\neq\emptyset\tag{i}
+\]
+Since
+${\bf{G}}$ is equicontinuous on $K$ and hence also on $K_*$ there
+exists an open convex neighborhood $U$ of the origin such that
+whenever $k_1,k_2$ is a pair in $K_*$
+such that $k_1-k_2\in U$, then  the  orbit
+\[
+{\bf{G}}(k_1-k_2)\subset V\tag{ii}
+\]
+Set
+\[
+U^*=\text{convex hull of }\,\,{\bf{G}}(U)
+\]
+Since the ${\bf{G}}$-maps are linear, the set 
+$U^*$ is invariant and  continuity entails  the equality
+\[
+{\bf{G}}\overline{U^*})=\overline{U^*}\tag{iii}
+\]
+We find the unique positive number $\delta$ such that
+the following hold for every $\epsilon>0$:
+\[
+K_*-K_*\subset (1+\epsilon)\cdot U^*
+\quad\colon\, (K_*-K_*)\setminus (1-\epsilon)\cdot \delta\cdot\overline{U^*}\neq\emptyset\tag{iv}
+\]
+Next,  $\{k+\frac{\delta}{2}\cdot U\colon\, k\in K_*\}$ 
+is an open covering of the compact set $K_*$.
+Hence Heine-Borel's Lemma gives 
+ a finite set 
+$k_1,\ldots,k_n$ in $K_*$ such that
+\[
+K_*\subset\ \cup\, (k_\nu+\frac{\delta}{2}\cdot U)\tag{v}
+\]
+Put
+\[
+K_{**}= K_*\cap\, \bigcup_{k\in K_*}
+(k+(1-1/4n)\delta\cdot \overline{U})\tag{vi}
+\]
+Since
+ $\overline{U}$ is 
+${\bf{G}}$-invariant and the intersection above is taken over all $k$ in the
+invariant  set $K_*$, we see that 
+$K_{**}$ is  a closed convex  and ${\bf{G}}$-invariant set.
+The requested contradiction follows if we prove that
+$K_{**}$ is non-empty
+and
+is strictly contained in $K_*$.
+To get the  strict inclusion follows  we take some
+$0< \epsilon<1/4n$. Then   (iv)  gives
+a pair $k_1,k_2$ in $K_*$ such that
+$k_1-k_2$ does not belong to
+$(1-\epsilon) \delta\cdot\overline{U^*}$.
+At the same time the inclusion $k_1\in K_{**}$ entails that
+\[
+k_1\in (k_2+(1-1/4n)\delta\cdot \overline{U})
+\implies k_1-k_2\in  (1-1/4n)\delta\cdot \overline{U}\tag{v}
+\]
+which cannot hold since   $1-1/4n<1-\epsilon$.
+The proof of Kakutani's theorem is therefore finished if we have shown that
+\[
+p\in K_{**}\tag{vi}
+\]
+To see this
+we take an arbitrary $k\in K_*$.
+From (v) we find some $1\leq i\leq n$ such that
+\[
+k_i-k\in \frac{\delta}{2}\cdot U\tag{vii}
+\]
+Without loss of generality we can assume that $i=1$
+and get  a vector $u\in U$ such that
+\[
+k_1= k+\frac{\delta}{2}\cdot u\tag {viii}
+\]
+It follows that
+\[
+p=\frac{k_1+\ldots+k_n}{n}=k+\frac{\delta}{2n}\cdot u+
+\sum_{i=2}^{i=n}\, \frac{1}{n}(k_i-k)\tag {ix}
+\]
+Next, for  each $\epsilon>0$ the left hand inclusion in (iv) and the 
+convexity of $U$ give
+\[
+\sum_{i=2}^{i=n}\, \frac{1}{n}(k_i-k)\subset
+\frac{n-1}{n}(1+\epsilon)\cdot \delta \cdot U\tag{x}
+\]
+It follows   that
+\[
+\frac{\delta}{2n}\cdot u+
+\sum_{i=2}^{i=n}\, \frac{1}{n}(k_i-k)\in
+(\frac{n-1}{n}(1+\epsilon)\delta +\frac{\delta}{2n})\cdot U\tag{xi}
+\]
+Above we can choose $\epsilon $ so small that
+\[
+\frac{n-1}{n}(1+\epsilon)+\frac{1}{2n})<1-1/4n
+\]
+and then we see that
+\[
+p\in k+(1-1/4n)\delta\cdot \overline{U}
+\]
+Since $k\in K_*$ was arbitrary the requested inclusion
+$p\in K_{**}$ follows.
+
+
+
+\end{document}
+
+
+
+
+
+

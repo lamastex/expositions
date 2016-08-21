@@ -1,0 +1,3849 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+
+
+
+\centerline{\bf\large {Chapter 7. Residue calculus.}}
+
+
+\bigskip
+
+\noindent
+\centerline{\emph{Contents}}
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+\emph{0: Introduction}
+
+\medskip
+
+
+\noindent
+\emph{0.A Four examples of residue calculus }
+
+\medskip
+
+
+\noindent
+\emph{0:B Summation formulas}
+\medskip
+
+
+\noindent
+\emph{0:C Asymptotic expansions}
+\medskip
+
+
+\noindent
+\emph{0:D Ugly examples}
+
+
+
+\medskip
+
+
+\noindent
+\emph{0:E Fractional decomposition}
+
+
+\medskip
+
+
+\noindent
+\emph{0:F Computing local residues}
+
+
+
+\medskip
+
+
+\noindent
+\emph{0.G Line integrals of multi-valued functions}
+\medskip
+
+
+\noindent
+\emph{0:H Solving a differential equation}
+
+
+\medskip
+
+
+\noindent
+\emph{0:I More involved integrals}
+\medskip
+
+
+\noindent
+\emph{0:J  Abel integrals and equations}
+
+\medskip
+
+
+\noindent
+\emph{0:K  Location of zeros of polynomials}
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\emph{Special integrals.}}
+\bigskip
+
+\noindent
+\emph{A: The integral $e^{-x^2}$}
+
+
+\medskip
+
+\noindent
+\emph{B: Integrals of rational functions}
+
+
+\medskip
+
+\noindent
+\emph{C: The integral $\int_0^\infty\,\frac{dx}{P(x)}$}
+
+\medskip
+
+\noindent
+\emph{D: The integrals $\int_{-\infty}^\infty\,\frac{e^{iax}\cdot dx}{P(x)}$}
+
+\medskip
+
+\noindent
+\emph{E: Principal value integrals}
+\medskip
+
+\noindent
+\emph{F: The integral $\int_0^\infty\,\frac{T(\sin x)}{P(x)}\cdot dx$}
+
+\medskip
+
+\noindent
+\emph{G: Adding complex zeros to $P$}
+
+
+\medskip
+
+\noindent
+\emph{H: The integral $\int_0^\infty\, \frac{x^a}{1+x^2}\cdot dx$}
+
+
+
+
+
+\medskip
+
+\noindent
+\emph{I: The use of the log-function}
+
+
+
+\medskip
+\noindent
+\emph{J: Trigonometric integrals}
+
+
+\medskip
+
+\noindent
+\emph{K: Summation formulas.}
+
+\medskip
+
+\noindent
+\emph{L:  Fourier integral}
+\medskip
+
+\noindent
+\emph{M: Multi-valued Laplace integrals}
+
+\bigskip
+
+\centerline{\bf{Introduction}}
+
+\bigskip
+
+
+
+\noindent
+The
+examples  in 0.A - 0.J describe  general  methods which often appear
+in  residue calculus. A more extensive discussion about 
+zeros of polynomials
+appears in section 0.K.
+The second part, listed by  sections A-M
+and are devoted to  specific examples.
+We shall often  study   integrals
+where multi\vvv valued functions  appear as integrands and refer to
+elementary
+text\vvv books
+for more standard examples. Let us remark that
+the first extensive use of multi-valued integrands 
+appeared in Abel's pioneering work \emph{xxx} from 1827.
+The interested reader may consult [Abel legacy] 
+where several articles give for an account about Abel's discoveries and
+the usefulness of complex line integrals in other areas such as
+algebraic geometry. 
+\medskip
+
+\noindent
+{\bf{Solutions to differential equations.}}
+One  application of residue calculus is the construction
+of solutions to ordinary differential equations.
+Prior to Abel's work  specific multi-valued integrands were
+used by Cauchy, Legendre and Laplace
+to obtain solutions of differential equations.
+An example due to Laplace
+goes as follows: Consider a differential operator
+of the form
+\[
+P(x,\partial)=x\cdot \partial^m+\sum_{\nu=0}^{\nu=m-1}\, 
+(a_\nu+b_\nu x)\partial^\nu
+\]
+where $\partial=\frac{d}{dx}$
+and $m\geq 2$, while $\{a_\nu\}$ and $\{b_\nu\}$ are complex numbers.
+To find solutions we consider the polynomials
+\[
+Q(t)=t^m+\sum_{\nu=0}^{\nu=m-1}\,b_\nu t^\nu\quad\colon\quad
+P(t)=\sum_{\nu=0}^{\nu=m-1}\,a_\nu t^\nu
+\]
+Assume  that $Q$ has simple zeros $\beta_1,\ldots,\beta_m$ which 
+in general are complex numbers.
+Newton's fractional decomposition gives
+\[
+\frac{P}{Q}=
+\sum\, \frac{c_\nu}{t-\beta_\nu}\quad\colon\,
+c_\nu= \frac{P(\beta_\nu)}{Q'(\beta_\nu)}
+\]
+Set
+\[
+Z(t)= \frac{1}{Q(t)}\cdot e^{\int\, \frac{P}{Q}}=
+\frac{1}{Q(t)}\cdot\prod\, (t-\beta_\nu)^{c_\nu}\tag{i}
+\]
+Let $\gamma$ be a simple and rectifiable
+curve in the complex $t$-plane which avoids the zeros of $Q$.
+Along $\gamma$ there exists a single-valued branch of $Z$ and
+we try to define the function
+\[ 
+y(x)= \int_\gamma\, Z(t)\cdot e^{xt}\, dt
+\]
+Let $t_*$ and $t^*$ be the end-points of the oriented
+curve $\gamma$.
+Now
+\[
+P(x,\partial)(y)=\int_\gamma\, (xQ(t)+P(t))Z(t)\cdot e^{xt}\,dt\tag{ii}
+\]
+Since the $t$-derivative of  $e^{xt}$ is  $xe^{xt}$, a  partial integration identifies
+(ii) with
+\[
+Q(t)Z(t) \cdot e^{xt} \bigr|\, _{t_*}^{t^*}+
+\int_\gamma\, (-\frac{d}{dt}(Q(t)Z(t))+P(t))Z(t))\cdot e^{xt}\,dt
+\]
+From (i) it is clear that $\frac{d}{dt}(Q(t)Z(t))=P(t))Z(t)$ and hence
+(ii) is zero if
+\[
+Q(t_*)Z(t_*) \cdot e^{xt_*}=Q(t^*)Z(t^*) \cdot e^{xt^*}\tag{iii}
+\]
+This gives a method to find solutions to the equation (*), i.e. one seeks
+$\gamma$-curves such that (iii) hold.
+Here one can take unbounded and non-closed $\gamma$-curves.
+For example, if $x<0$ we notice that if $t_*=t^*$
+and this common number has a large postive real parti, then
+the absolute value of $e^{xt_*}$ is small compared to
+$Q(t_*)Z(t_*))+P(t_*))Z(t_*))$. In particular (iii) holds if
+$\gamma$ is an infinite simple curve which starts at $+\infty$ and moves for a while in
+the negative direction on the positive real $t$-line to some
+number
+$t_0$,and then continues via a simple closed curve
+$\gamma_0$ and the final piece of  $\gamma$ 
+is $[t_0,+\infty)$.
+Thus, every such $\gamma$-curve gives a solution $y(x)$ defined for
+$x<0$. 
+
+
+\medskip
+
+\noindent
+If we instead seek solutions defined when $x>0$ one picks 
+$\gamma$-curves which 
+start at $-\infty$ and move to $-t_0$ and continues along a closed curve
+$\gamma_0$, and return to $-\infty$ in the negative diretion on
+the interval $t\leq -t_0$.
+In the first consstruction we notice that
+the solutions $y(x)$ actually become analytic functions of the 
+complex variable $z=x+iy$ which are defined in the half-plane $\mathfrak{Re}(z)<0$.
+Since $P$ has order $m$ it follows from general facts that
+the number of ${\bf{C}}$-linearly independent solutions 
+which are analytic in this half-space is an $m$-dimensional 
+complex vector space.
+So in spite  of the  general constructons via a choice of
+$\gamma$-curves above, the resuting $y$-functions can only generate
+an $m$-dimensional vector space.
+The merit  of the Laplace construction is that there actually exists
+an $m$tuple of $\gamma$ -curves as above  whose 
+the resulting $y$-functions give a basis for the 
+solution space in
+the half-plane
+$\mathfrak{Re}(z)<0$. A similar result  holds for 
+solutions in
+the left half-plane.
+Of course, after this has been achieved there still remains  to
+find global solutions to (*).
+It turns out that they exist but
+since $x$ appears as a factor for the highest differential
+$\partial^m$, the solutions are not always entire functions, i.e one should
+also allow  distribution solutions.
+We shall discuss this in more detail in ¤ xx and mention only that
+the space of distribution solutions to (*) is a complex vecotr space of dimension $m+1$
+and there exist distribution solutions  supported by
+the half-line $x\leq 0$.
+So the Laplace constructions give a start,  but not 
+the whole story about solutions to 
+(*). A more favourable case occurs when
+$P(x,\partial)=\partial^m+P_*(x,\partial)$ where
+$P_*$ has order $\leq m-1$. In this case the solutions 
+extend to entire functions and
+form an $m$-dimensional complex vector space.
+See ¤ xx for some specifix exampes where we shall employ the Laplace construction.
+
+\bigskip
+
+
+\noindent
+{\bf{A  calculation by Riemann.}}
+In the complex $z$\vvv plane we consider the line
+\[
+\Gamma=\{ z=a+se^{3\pi i/4}\}
+\] 
+where $0<a<1$ and $\vvv \infty <s<\infty$.
+Along $\Gamma$ we have
+\[ 
+z^2=a^2+2as \cdot e^{3\pi i/4}\vvv is^2
+\]
+We get an entire function
+$\Phi(w)$ of a new complex variable defined by
+\[
+\Phi(w)= 
+\int\uuu\Gamma\, \frac{e^{\vvv \pi iz^2+2\pi i w s}}
+{e^{\pi iz}\vvv e^{\vvv \pi iz}}\,
+dz\tag{*}
+\]
+In fact, this holds since 
+the integrand contains 
+$e^{- s^2}$ as a factor which  ensures the convergence for all complex $w$.
+In ¤ xx we dexribe how  Riemann obtained   the equation:
+\[
+\Phi(w)=\frac{e^{\pi iw}\vvv e^{\pi iw^2}}{e^{\pi iw}\vvv
+e^{\vvv \pi i w}}\tag{**}
+\]
+More generally, if $\tau$ is another complex variable one has the analytic function
+\[
+\Theta(w,\tau)=
+\int\uuu\Gamma\, \frac{e^{\pi i\tau z^2+2\pi i w s}}
+{e^{\pi iz}\vvv e^{\vvv \pi iz}}\,
+dz\tag{***}
+\]
+which is analytic when
+$\mathfrak{Re}\,\tau<0$ and
+$w\in {\bf{C}}$.
+Residue calculus is used  while the integration contour is changed to
+discover certain functional equations and attain
+formulas for the $\Theta$\vvv function.
+Let
+us  remark that formulas such as (**) led Riemann to
+his famous hypothesis about zeros of
+the zeta\vvv function. See ¤ x in Chapter VI for further comments.
+Studies of more involved integrals 
+were later  carried out by Weierstrass. 
+
+
+\medskip
+
+
+
+
+
+
+
+
+\noindent
+{\bf{Multi\vvv valued integrands.}}
+The complex log\vvv function and fractional powers $z^\alpha$ where
+$\alpha$ is not an integer appear often as integrands
+and during
+integrations. 
+A typical case is when $\sqrt{1\vvv x^2}$ appears in the integrand
+and  
+integration is  over the real interval $[\vvv 1,1]$.
+Here one  starts from the
+single\vvv valued analytic function
+$g(z)$ defined  in ${\bf{C}}\setminus [\vvv 1,1]$
+by
+\[ 
+g(z)= z\cdot\sqrt{1\vvv z^{\vvv 2}}
+\]
+To be precise,  consider the extended complex plane
+where the point at infinity is added and then
+$\Omega={\bf{C}}\cup\infty\setminus [\vvv 1,1]$
+is simply connected which implies that there exists the
+single\vvv valued branch of the square root of 
+$1\vvv z^{\vvv 2}$, i.e.
+\[ 
+g(z)=z\cdot \sqrt{1\vvv z^{\vvv 2}}
+\] 
+is defined in the whole of $\Omega$ where $g$
+has a simple pole at $\infty$.
+If $z=iy$ is purely imaginary
+then
+\[
+g(iy)= iy\cdot \sqrt{1+y^{\vvv 2}}
+\]
+This implies that
+\[ 
+g(iy)= i\cdot \sqrt{1+y^2}\quad\text{when}\quad y>0
+\] 
+while $g(iy)=- i\sqrt{1+y^2}$ when $y<0$.
+The change of sign is crucial when
+reside calculus is employed.
+For example, consider
+the  integral 
+\[ 
+J=\int\uuu{\vvv 1}^1\, \frac{dx}{\sqrt{1\vvv x^2}}\tag{*}
+\]
+Take  the $g$\vvv function above and
+construct  the complex line integral over
+the closed curve $\gamma$ which consists of the two line
+segments from $\vvv 1+i\epsilon$ to $1+i\epsilon$ respectively
+$\vvv i\epsilon$ to $1\vvv i\epsilon$ together with
+two small half\vvv circles. See figure XX.
+Using the change of sign and passing to the limit as $\epsilon\to 0$
+it follows that
+\[ 
+2J=\vvv i\cdot \int\uuu {|z|=R}\, \frac{dz}{g(z)}
+\] 
+where we have taken a line integral over circles of radius $R>1$.
+Passing to the limit as $R\to+\infty$ one easily verifies that
+\[
+J=\pi\tag{**}
+\]
+Let us remark that the last equality can be proved directly since
+\[
+2J=\int \uuu 0^1\, \frac{dx}{\sqrt{1\vvv x^2}}\tag{***}
+\]
+and here (***)  is computed via the variable substitution
+$x\to\sin\,\theta$ which gives (**).
+This example has   served to illustrate a method. In more involved cases
+residue calculus is needed  to attain exact formulas.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Let $0<a<1$ and consider the integral
+\[ 
+J=\int\uuu 0^1\, \frac{dx}{(1\vvv x)^a\cdot x^{1\vvv a}}
+\]
+In the domain ${\bf{C}}\setminus [0,1]$ there exists
+the analytic function
+\[ g(z)=z(1\vvv\frac{1}{z})^a
+\]
+Use that
+$(\vvv 1)^a= e^{\pi i a}$ to show that
+\[
+J=\frac{\pi}{\sin (\pi  a)}
+\]
+Next, let $m\geq 3$ be an integer and put
+\[ 
+J\uuu m=\int\uuu 0^1\, \frac{dx}{1\vvv x^m)^{1/m}}
+\] 
+The substitution $x\mapsto t^{1/m}$
+gives
+\[
+J\uuu m=\frac{1}{m}\int\uuu 0^1\, \frac{dt}{t^{1/m\vvv 1}\cdot (1\vvv t)^{1/m}}=
+\frac{\pi}{m\cdot \sin(\pi/m)}
+\]
+Notice that the last term converges to 1 as $m\to+\infty$. The reader should
+discover that  this limit is a consequence of Neper's limit formula for $e$.
+
+\bigskip
+
+\noindent
+{\bf{Complex line integrals and homotopy.}}
+Remove the three  points $0,1,\infty$ from 
+the Riemann sphere. The  open complement $\Omega$
+is not simply connected and  has a fundamental group
+generated by a pair of closed and simple curves
+$\Gamma\uuu 1,\Gamma\uuu 0$
+where $\Gamma\uuu 1=\{|z\vvv 1|= 1/2$ and
+$\Gamma\uuu 2=\{ |z|= 1/2\}$.
+In algebraic topology one learns that
+the fundamental group $\pi\uuu 1(\Omega$ is a free group generated
+by the homotopy classes of these two curves.
+It means for example that the composed curve
+\[ 
+\Gamma\uuu 1^{\vvv 1}\circ \Gamma\uuu 0^{\vvv 1}
+\circ \Gamma\uuu 1\circ \Gamma\uuu 0\tag{*}
+\]
+is not homotopic to a trivial curve.
+Even though this assertion is intuitively clear the formal proof
+is not so easy. While algebraic topology was developed
+by PoincarŽ and his contemporaries, a convincing method to prove
+that (*) is not homotopic to a trivial curve 
+is to perform a complex line integral of a suitable mult\vvv valued
+analytic function and pursue its analytic continuation
+by the Weierstrass' procedure.
+In ¤ xx we expose how this is done by an
+explicit calculation of
+a complex line integral along (*) using a special
+multi\vvv valued function as integrand.
+
+\bigskip
+
+
+\noindent
+{\bf{Example from physics.}}
+Historically many residue formulas were established via equations 
+derived by physical laws.
+So here  one  encounters important  situations  where residue calculus
+is needed. 
+For example, Gauss used residue calculus  to establish 
+equations in 
+electro\vvv magnetic fields  governed by
+the Biot\vvv Savart Law.
+Another area where residue calculus appears naturally is hydromechanics.
+The interested reader should consult the excellent text\vvv book 
+[XXX]
+by Horace Lamb which contains 
+many instructive examples with  physical  background. For 
+more advanced material related to quantum mechnaics
+the reader will find applications of residue calculus in
+the text\vvv book series by   L.D Landau and 
+E.M. Lifschitz.
+\medskip
+
+\noindent
+{\bf{The simple pendelum.}}
+A fundamental   function  
+appears  during the motion of
+a simple pendelum.
+Consider a particle $p$ of unit mass  attached at the end\vvv point of a 
+rigid bar of some length $\ell$ whose other end is suspended at a fixed point while the bar and
+$p$ oscillates in a vertical plane where gravity is the sole external force.
+The system has one degree of freedom expressed by  the angle
+$\theta$ between the bar and the vertical line which is directed downwards.
+The kinetic energy of the one\vvv point system becomes
+\[ 
+T=\frac{\ell^2}{2}\cdot \dot\theta^2
+\]
+The equation of motion becomes
+\[ 
+\ell^2\ddot\theta=\vvv g\ell\cdot \sin\theta
+\]
+With  initial conditions $\theta(0)=0$ and $\dot\theta(0)= v>0$
+the time\vvv dependent $\theta$\vvv function satisfies
+the differential equation
+\[
+\dot\theta^2=
+\frac{2g}{\ell}
+\cdot (\cos \theta\vvv 1) +v^2
+\]
+We assume that $v$ us not to large, i.e.
+\[ 
+v^2<\frac{2g}{\ell}
+\]
+Then there exists $0<\theta^*<\pi/2$ such that
+\[
+\cos \theta^*=1\vvv \frac{\ell v^2}{2g}
+\]
+Now $t\mapsto \theta(t)$ oscillates between $ \vvv \theta^*$ and $\theta^*$.
+The time for a quarter of the whole period, i.e. the time to reach
+$\theta^*$ becomes
+\[ 
+T=\int\uuu 0^{\theta^*}\, \frac{d\theta}{\sqrt{\frac{2g}{\ell}
+\cdot (\cos \theta\vvv 1) +v^2}}
+\]
+This formula shows that the determination of exact $T$\vvv values 
+with varying intial velocity $v$ boils down to study the function
+\[ \theta^*\mapsto
+\int\uuu 0^{\theta^*}\, \frac{d\theta}{\sqrt{\cos\theta\vvv \cos\theta^*}}
+\]
+
+\noindent
+Admitting the inverse $\arccos$\vvv function as "elementary" and using the 
+substitution $\cos\theta\to x$ we are led to consider integrals of the form
+\[ 
+J(a)=\int\uuu a^1\, \frac{dx}{\sqrt{(1\vvv x^2)\cdot (x\vvv a)}}
+\] 
+where  $0<a<1$.
+This $J$\vvv function belongs to  a 
+class of functions   which 
+were investigated
+by   Legendre and Jacobi.
+Let us also remark that not only the numerical value of $J(a)$ as 
+$0<a<1$ is of interest here.
+It turns out that this real\vvv analytic function defined on $(0,1)$ extends to
+a multi\vvv valued analytic function in ${\bf{C}}\setminus \{0,1\}$
+where it satisfies a  Fuchsian  differential equation
+which  gives a further motivation for including $J(a)$ in a class of
+"elementary functions".
+\medskip
+
+\noindent
+{\bf{Example by Huyghens}}.
+Let $p$ be a particle of unit mass which  moves on
+the horizontal $(x,y)$\vvv plane where no friction is present and
+gravity does not affect
+the motion.
+The particle slides on an infinite bar suspended at the origin which
+can rotate and the bar has no mass. So
+we have a particle systems with two degrees of freedom
+where  the position of the mass point 
+is given in polar coordinates
+$(r,\theta)$. 
+Here $\theta$ is the angle between the bar and the positive
+$x$\vvv axis. At time $t=0$ we suppose the initial conditions are
+\[ 
+\theta(0)=0\quad\colon \dot \theta(0)=\omega\quad\colon
+r(0)=A\quad\colon \dot r(0)=0
+\] 
+where $\omega$ and $A$ are positive.
+in this situation we have Kepler's identity
+\[
+r^2\cdot \dot \theta=A^2\omega\tag{1}
+\]
+We also get the differential equation
+\[
+\dot r^2+\frac{A^4\omega^2}{r^2}=A^2\omega^2\tag{2}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Express $\theta$ as a function of $r$ and use this to prove that
+the increasing time dependent function $\theta(t)$ has a limit
+as $t\to+\infty$. More precisely a calculation gives the formula
+
+\[ 
+\lim\uuu {t\to\infty}\, \theta(t)=\int\uuu 1^\infty\,\frac{ds}{s\cdot \sqrt{s\vvv 1}}\tag{3}
+\]
+Huyghens, Newton and Wallis performed  used
+series expansions to show that (3) is equal to $\pi$.
+The reader is invited to prove this equality using residue calculus.
+Thus, as time increases the bar moves from the position along the $x$\vvv axis to
+positions which come closer to the positive $y$axis.
+Notice that the limit formula is independent of the pair $\omega$ 
+and $A$. The reader should contemplate upon this by reflecting over
+daily life experience of  the centrifugal force.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{Fourier transforms.}}
+On
+the real $x$ line we have the  function
+$\frac{1}{x\vvv  i}$. It is not integrable but
+defines a tempered distribution $\mu$ whose  Fourier transform
+is defined when $\xi\neq 0$ by the integral
+\[ 
+\widehat \mu(\xi)=
+\int\uuu {\vvv \infty}^\infty\, \frac{e^{\vvv i\xi x}}{x\vvv i}\cdot dx\tag{1}
+\]
+If $\xi<0$ and $z=x+iy$ with $y>0$ the absolute value 
+$|e^{\vvv i\xi z}|= e^{\xi y}$ decreases when
+$y\to+\infty$. Using this fact the reader can verify that
+\[
+\widehat\mu(\xi)=2\pi i\cdot e^\xi
+\] 
+holds when $\xi<0$ and reversing the sign  verify that
+$\widehat\mu (\xi)=0$ when $\xi>0$.
+On the reader $\xi$\vvv line we have the tempered distribution defined by
+$e^\xi$ when $\xi<0$ and zero if $\xi\geq 0$. Its inverse Fourier transform
+becomes
+\[
+\frac{1}{2\pi}\cdot 2\pi i\int\uuu {\vvv \infty}^0\, e^{ix\xi}\cdot e^{\xi}\cdot d\xi=
+\frac{i}{ix+1}=\frac{1}{x\vvv i}
+\]
+This confirms the calculations using
+residues via Fourier's inversion formula.
+\medskip
+
+\noindent
+{\bf{Fourier transforms on ${\bf{R}}^+$.}}
+Let $0<a<1$ and $\beta$ is a complex number outside the
+non\vvv negative real line.
+When $\zeta=\alpha+is$ is complex
+we set
+\[ 
+J(\zeta)= \int \uuu 0^\infty\, x^\zeta\cdot
+\frac{x^a}{x\vvv \beta}\cdot \frac{dx}{x}\tag{*}
+\]
+Sincc $|x^{\alpha+is}|= x^\alpha$ when $x$ is real and positive
+we see that (*) converges when
+\[
+a<\alpha<1\vvv a\tag{1}
+\]
+After the reader has become familiar with this calculus
+it is an easy exercise to verify the equation:
+\[ 
+J\cdot \bigl[1\vvv e ^{2\pi i(\zeta+a\vvv 1)}\bigr]=
+2\pi i\cdot \beta^{\zeta+a\vvv 1}
+\]
+
+\noindent{\bf{Specific examples.}}
+Let $\beta=b$ where $b>0$ which gives
+\[
+\beta^{\zeta+a\vvv 1}= b^{\zeta+a\vvv 1}\cdot e^{\pi i(\zeta+a\vvv 1)}
+\] 
+where we used that $\vvv 1= e^{\pi i}$.
+Suppose also that $\zeta=\alpha$ is real  which gives
+\[
+J\cdot \bigl[1\vvv e ^{2\pi i(\alpha+a\vvv 1)}\bigr]=
+2\pi i\cdot b^{\alpha+a\vvv 1}\cdot e^{\pi i(\zeta+a\vvv 1)}
+\]
+Using the formula for the complex sine\vvv function the reader may verify that
+\[
+J=\pi\cdot \frac{b^{\alpha+a\vvv 1}}{\sin\, \pi(1\vvv a\vvv \alpha)}
+\]
+Since $1\vvv a\vvv\alpha>0$ is assumed the formula shows that
+$J$ is real and positive which it should  be since the choice gives
+\[
+J=\int\uuu 0^\infty\,\frac{x^{\alpha+a}}{x+b}\cdot \frac{dx}{x}
+\]
+where the integrand is real and positive.
+Next,  consider the case where $\zeta=is$ is purely imaginary
+and $\beta=b$ with $b>0$ while $a=1/2$.
+The general formula (xx) gives
+
+\[ 
+J\cdot [1\vvv e^{\vvv 2\pi s}\cdot e^{\vvv 2\pi i/2}]
+=2\pi i\cdot b^{is\vvv 1/2}\cdot e^{\pi s}\cdot e^{\vvv \pi i/2}
+\]
+Since $e^{\vvv \pi i}=1$ and $e^{\vvv \pi/2}=i$ while $i^2=\vvv 1$
+it follows that
+\[
+J(1+e^{\vvv 2\pi s})=
+e^{\vvv \pi s}\cdot 2\pi\cdot b^{is\vvv 1/2}
+\]
+Introducing the complex cosine\vvv function we get the formula
+\[
+\int\uuu 0^\infty\, x^{is}\cdot \frac{\sqrt x}{x+b}\cdot \frac{dx}{x}=
+\pi\cdot b^{is\vvv 1/2}\frac{1}{\cos(\pi i s)}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The last equation yields a formula for the Fourier transform
+of the $L^1$\vvv function  $\frac{\sqrt{x}}{x+b}$
+on the multiplicative line ${\bf{R}}^+$ where $\frac{dx}{x}$ is the Haar measure.
+Replace $is$  by the complex variable $\zeta$
+and set
+\[ 
+J(\zeta)= \int\uuu 0^\infty\, x^\zeta\cdot \frac{\sqrt x}{x+b}\cdot \frac{dx}{x}
+\]
+Then the computations above show that
+\[ 
+J(\zeta)= \frac{\pi\cdot b^{\zeta\vvv 1/2}}{\cos (\pi \zeta )}
+\]
+Notice that the right hand side is an analytic function in the strip domain
+$1/2<\mathfrak{Re} \zeta <1/2$ while we encounter
+poles when
+$\zeta=1/2$ or $\vvv 1/2$ whose appearance is clear from the integral which defines
+$J(\zeta)$ because we get divergent integrals in these two cases.
+At the same time (xx) gives a meaning to the integral (xx) for al complex
+$\zeta$, i.e. the result is a globally defined meromorphic functions
+with simple poles at the zeros of the complex cosine\vvv function.
+This illustrates the usefulness of residue calculus since it was 
+needed to get the precise formula (xx) above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent{\bf{Principal values}}.
+Consider the  
+integral 
+\[ 
+J(a)=\int_0^1\frac{dx}{x-a}\tag{*}
+\] 
+where $0<a<1$.
+The principal value 
+is defined by:
+\[ \lim_{\epsilon\to 0}\,\bigl[
+\int_0^{a-\epsilon}\frac{dx}{x-a}
++
+\int_{a+\epsilon}^1\frac{dx}{x-a}\,\bigr]\tag{**}
+\]
+When $0<\epsilon<a$ and $a+\epsilon<1$
+we can evaluate both integrals and get:
+\[
+\int_0^{a-\epsilon}\frac{dx}{x-a}= -\log \epsilon+\log a
+\quad\colon \quad
+\int_{a+\epsilon}^1\frac{dx}{x-a}=
+\log \epsilon-\log (1-a)
+\]
+where it is not even necessary
+to perform a limit since
+(**) takes the same value for all 
+$0<\epsilon<a$.
+In particular we get
+the formula
+\[ 
+J(a)=\log \frac{1-a}{a}\tag{***}
+\]
+The construction  (**)
+can be understood by complex integrals.
+Namely,  for any real number $a>0$
+there exists the complex log-function
+\[ 
+\log(z-a)
+\] 
+with a single valued branch
+in the upper half-plane $\mathfrak{Im}(z)>0$
+whose complex derivative is $\frac{1}{z-a}$.
+For $\epsilon>0$
+we can take the line integral on the horizontal line
+from $i\epsilon$ to $1+i\epsilon$ which gives:
+\[
+\int_0^1\,\frac{dx}{x-a+i\epsilon}=\log{1-a+i\epsilon}-
+\log{(-a+i\epsilon)}\tag{1}
+\] 
+Passing to the limit as $\epsilon\to 0$ the right hand side
+becomes
+\[ 
+\log(1-a)-\log a-\pi i=\log\,\frac{1-a}{a}-\pi i\tag{2}
+\]
+To clarify this limit formula we
+rewrite the left hand side in (1) which amounts to compute
+\[
+\int_0^1\,\frac{(x-a-i\epsilon)\cdot dx}{(x-a)^2+\epsilon^2}\tag{3}
+\]
+Separating real and imaginary parts it follows from (1) that
+one has the two limit formulas:
+\[
+\lim_{\epsilon\to 0}
+\int_0^1\,\frac{(x-a)\cdot dx}{(x-a)^2+\epsilon^2}=\log\,\frac{1-a}{a}
+\quad\text{and}\quad
+\lim_{\epsilon\to 0}
+\int_0^1\,\frac{\epsilon\cdot dx}{(x-a)^2+\epsilon^2}=\pi\tag{4}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Clarify  why
+the first formula in (4) agrees with the previously defined
+principal value integral.
+Prove also the second formula using the arctan-function.
+
+\medskip
+
+
+\noindent
+{\bf{Another example.}}
+Consider the  integral:
+\[
+J=\int_0^\infty\frac{1}{x}\cdot \log\bigl(\frac {|x+1|}{|x-1|}\bigr)\cdot dx\tag{1}
+\]
+The reader may  verify that the integrand in (1)
+is a continuous function whose
+value at $x=0$ is equal to $2$ and when
+$|x|\to\infty$  the integrand decays as
+$x^{-2}$.  So   we have an absolutely convergent integral.
+Residue calculus  is used to compute the integral.
+The idea is to consider the function
+\[
+ g(z)=\frac{1}{z}\cdot \log\,\frac{z+1}{z-1}
+\] 
+which is analytic in the upper half-plane.
+\medskip
+
+\noindent{\bf{Exercise.}}
+For a large $R$ and a small $\epsilon>0$
+we take the complex line integral of $g$
+along the closed curve $\Gamma$
+which consists of the real interval $[\epsilon,R]$, the
+quarter circle $\{z=Re^{i\theta}$ where
+$0\leq\theta\leq \pi/2$ and the imaginary interval $[i\epsilon,iR]$
+and finally the small quarter circle of radius $\epsilon$.
+Since $g(z)$ is analytic the
+complex line integral over $\Gamma$ is
+zero.
+The reader may verify that
+\[ 
+\lim_{R\to\infty}\, \int_0^{\pi/2} g(Re^{i\theta})\cdot iRe^{i\theta}\cdot d\theta=0\tag{2}
+\]
+Next, the integral along the imaginary  line $\epsilon\leq y\leq R$
+where the line integral taken in the opposite direction becomes
+\[
+-\int_\epsilon^R\, \log(\frac{iy+1}{iy-1})\cdot \frac{dy}{y}
+\]
+Since $|iy+1|=|iy-1|$ this integral is purely imaginary.
+Regarding the real part and using (2) above the reader should verify that:
+\[ 
+J=\lim_{R,\epsilon}\, \int_\epsilon^R\,\frac{1}{x}\cdot \log\bigl(\frac {|x+1|}{|x-1|}\cdot dx
+=\lim_{\epsilon\to 0}
+\mathfrak{Re}\,\int_0^{\pi/2}\, 
+g(\epsilon e^{i\theta})\cdot i\epsilon e^{i\theta}\cdot d\theta
+\]
+Notice that
+
+\[
+i\epsilon e^{i\theta}\cdot
+g(\epsilon e^{i\theta})=
+i\cdot \log\,\frac{\epsilon e^{i\theta}+1}{\epsilon e^{i\theta}-1}=
+i\cdot \log\,1+\epsilon e^{i\theta})-i\cdot \log(-1+\epsilon e^{i\theta})=
+\]
+Now
+\[ 
+\lim_{\epsilon\to 0}\,\log\,(-1+e^{i\theta})=\pi\cdot i
+\quad\text{and}\quad
+\lim_{\epsilon\to 0}\,\log\,{\epsilon (1+e^{i\theta}-1})=0
+\]
+It follows that
+\[
+\lim_{\epsilon\to 0}\,
+\int_0^{\pi/2}\, g(\epsilon e^{i\theta})\cdot i\epsilon e^{i\theta}
+=\pi^2/2
+\]
+Hence the integral from (1) has the value:
+\[
+J=\frac{\pi^2}{2}
+\]
+
+
+
+\newpage
+
+
+\centerline
+{\bf{0:A Four  examples of residue calculcus.}}
+
+
+
+\medskip
+
+\noindent {\bf{0.1 Example.}}
+Let $P(z)$ and $Q$ be two polynomials where
+$\deg(P)\geq \deg(Q)+1$ and $-1<a<0$ is a real number.
+Assume that $P$ has no zeros on the 
+non-negative real axis and set:
+\[
+ J=\int_0^\infty\, \frac{x^a\cdot Q(x)}{P(x)}\cdot dx
+\]
+To find $J$  we consider the function $g(z)=\frac{z^a\cdot Q(z)}{P(z)}$
+which is multi-valued outside the origin. The trick is to integrate
+$g$ over a contour starting from
+$x=\epsilon>0$ until $x=R$ is reached, followed by an integral taken over
+the circle $|z|=R$ and after one returns from $R$ to $\epsilon$ on the $x$-axis and finish by 
+an integral over the circle $|z|=\epsilon$ which  is performed clock-wise, i.e. in the negative direction. Passing to the limit as $R\to+\infty$ and
+$\epsilon\to 0$ one uses the multi-valued behaviour of $z^\alpha$
+and get
+\[
+(1-e^{2\pi i a})\cdot J=2\pi i\cdot
+\sum\,\mathfrak{res}(g:\alpha_\nu)\tag{*}
+\] 
+where the sum is taken over the zeros of $P$.
+
+\medskip
+
+\noindent
+{\bf{0.1.1 Exercise.}} Take $Q=1$ and $P=z-i$ above.
+Then we get
+\[
+(1-e^{2\pi i a})\cdot J=2\pi i\cdot i^a= 2\pi i\cdot e^{\pi ia/2}
+\]
+
+
+\noindent
+Consider   the case $a=-\epsilon$ with a  positive $\epsilon$.
+Since $\frac{1}{z-i}= \frac{z+i}{z^2+1}$ 
+we get
+\[
+J=\int_0^\infty\,\frac{x^{-\epsilon}(x+i)}{1+x^2}\cdot dx
+\]
+It is instructive to
+check the equation (*) via (xx).
+Separating the real and imaginary part the reader may verify the formula
+\[
+\int_0^\infty\,\frac{x^{1-\epsilon}}{1+x^2}\cdot dx=
+\pi \cdot \frac{1+\cos (\pi\epsilon)}{(2+2\cos(\pi \epsilon)\cdot 
+\sin(\pi \epsilon/2)}
+\]
+To check this formula we consider a limit as $\epsilon\to 1$.
+Since $\cos \pi=0$ the reader may verify that the limit in the right hand side
+becomes $\frac{\pi}{2}$ which is okay since we know from calculus that
+\[
+ \lim\uuu{\epsilon\to 0}\, 
+ \int_0^\infty\,\frac{x^{1-\epsilon}}{1+x^2}\cdot dx=
+ \int_0^\infty\,\frac{1}{1+x^2}\cdot dx=\frac{\pi}{2}
+\]
+
+
+\medskip
+
+\noindent {\bf{0.2 Example.}}
+Let $P,Q$ be a pair of polynomials where
+$\deg(P)\geq \deg(Q)+2$
+and consider the integral
+\[
+ J=\int_0^\infty\, \frac{Q(x)}{P(x)}\cdot dx
+\]
+To overcome the lack of a multi-valued integrand we use the complex 
+log-function $\log z$ and define 
+\[ 
+g(z)=\frac{Q(z)}{P(z)}\cdot\log z
+\]
+Perform an integral of $g$ over the same contour as in the previous example.
+After one turn around
+$|z|=R$  $\log z$ has changed its branch with the constant
+$2\pi i$ and since the "home run" is the integral from $R$ back to the origin
+we get:
+\[ 
+J=-\sum\,\mathfrak{res}(g:\alpha_\nu)\tag{*}
+\]
+where the sum is taken over the zeros of $P$.
+For example, take $Q=1$ and $P(z)=(z+a)(z+b)$ where $a> b>0$ are positive real numbers.
+Then the  right hand side in (*) becomes
+\[
+-\bigl[\frac{\log a+\pi i}{b-a}+\frac{\log b+\pi i}{a-b}\bigr ]=
+\frac{\log (a/b)}{a-b}
+\]
+It is always good to confirm a general formula. Take $b=1$ while $a=1+\epsilon$
+and pass to the limit as $\epsilon\to 0$ which gives: 
+\[ 
+\int_0^\infty\frac{dx}{(x+1)^2}=
+\lim_{\epsilon\to 0}\, \frac{\log (1+\epsilon)}{\epsilon}=1
+\]
+Next, consider the integral
+\[
+J=\int_0^\infty\frac{dx}{1+x^3}
+\]
+The polynomial $1+z^3$ has simple roots
+$j\uuu 1=e^{\pi/3}, j\uuu 2=1,j\uuu 3= e^{5\pi/3}$.
+The formula (*) above gives
+
+\[
+J=\vvv \frac{1}{3}\cdot \sum \frac{\log j\uuu \nu}{j\uuu \nu^2}
+= \frac{1}{3}\cdot \sum j\uuu \nu\cdot \log j\uuu \nu
+\]
+where the last equality holds since $j\uuu \nu^3=1$ for each $\nu$.
+The reader should check that the last sum becomes
+\[
+\frac{i}{3}(j\uuu 1\cdot \pi/3+j\uuu 2\cdot \pi+
+j\uuu 3\cdot 5\pi/3)=\frac{i}{3}\cdot (i\sqrt{3}/2\cdot \pi/3\vvv 
+i\sqrt{3}/2\cdot 5\pi/3)=\frac{2\pi}{3\cdot\sqrt{3}}
+\]
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.3 Example.}}
+Let $a>0$  be real and put
+\[
+J=\int_{-1}^1\,\frac{dx}{(1+ax^2)\sqrt{1-x^2}}\tag{0.1}
+\]
+To compute this integral we use the analytic function
+defined in the complement of the real interval $-1\leq x\leq 1$
+by
+\[ 
+g(z)= z\cdot \sqrt{1-z^{-2}}
+\]
+The reader should verify the two limit formulas:
+\[ 
+\lim\uuu{\epsilon\to 0}\, g(x+i\epsilon)=
+\cdot \sqrt{1\vvv x^2}\quad\colon\quad 1<x<1\tag{2}
+\]
+\[
+\lim\uuu{\epsilon\to 0}\, g(x\vvv i\epsilon)=
+\vvv i\cdot \sqrt{1\vvv x^2}\quad\colon\quad 1<x<1\tag{3}
+\]
+Now we consider the function
+\[
+f(z)= \frac{1}{(1+az^2)\cdot g(z)}
+\]
+It has to simple poles when $1+az^2=0$, i.e. we find purely imaginary
+poles at plus and minus $i\cdot a^{\vvv 1/2}$.
+Notice also that 
+\[ 
+\lim\uuu{R\to\infty}\, \int\uuu {|z|=R}\,
+f(z)\cdot dz=0\tag{4}
+\]
+We use (4) and apply residue calculus while we integrate
+over closed curves around $[\vvv 1,1]$ as illustrated by figure XX.
+Using (2\vvv 3) it follows  that
+
+\[
+\frac{2}{i}\cdot J= 2\pi\cdot i\cdot \frac{2}{2a\alpha\cdot g(\alpha)}\tag{5}
+\]
+where $\alpha=i\cdot a^{\vvv 1/2}$ and we used that $g$ is odd when the two residues are
+added. At this stage the reader can verify that
+\[ 
+J=\frac{\pi}{\sqrt{1+a}}
+\]
+
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{0.4 Example.}}
+Consider the integral
+\[ 
+J=\int_{-\infty}^\infty\,\frac{e^{ax}}{e^x-iA}\cdot dx\tag{0.4}
+\]
+where $0<a<1$ and $A>0$ is real.
+To find $J$ we use  the meromorphic function
+$g(z)=\frac{e^{az}}{e^z-iA}$
+which has simple poles when
+$e^z=iA$. 
+Consider the complex line integral taken over the boundary of 
+a rectangle 
+\[
+\square= \{-R\leq x\leq R\}\times \{0\leq y\leq 2\pi\}
+\]
+The reader should verify that
+$e^z\vvv iA$ has a simple zero at the point
+$\log A+i\pi/2$
+which therefore gives a simple pole of $g(z)$.
+We have also $g(x+2\pi i)= e^{2\pi ia}\cdot g(x)$ when $x$ is real.
+When $R\to+\infty$ we get a limit where  residue calculus  gives:
+\[ 
+(1-e^{2\pi i a})\cdot J=
+2\pi i\cdot \mathfrak{res}\bigl(g(z):\log A+i\pi/2\bigr)=
+2\pi i\cdot \frac{A^a\cdot i^a}{iA}=2\pi A^{a-1}\cdot e^{a\pi i/2}\tag{*}
+\]
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+\centerline {\bf{0:B  Summation formulas.}}
+
+\medskip
+
+\noindent
+Various sums are often computed  using 
+the meromorphic function:
+\[ 
+g(z)=\frac{\cos\pi z}{\sin \pi z}\tag{*}
+\]
+It has simple poles at all integers with
+the common residue  $\frac{1}{\pi}$.
+Consider a pair of polynomials $P,Q$ 
+where $\deg{P}\geq 2+\deg(Q)$ and $P(n)\neq 0$
+hold at all integers.
+Residue calculus gives the summation formula
+\[
+\frac{1}{\pi}\cdot \sum_{-\infty}^\infty\,\frac{Q(k)}{P(k)}=
+\sum\,\mathfrak{res}(g(z)\cdot\frac{Q(z)}{P(z)}:\alpha_\nu)\tag{**}
+\] 
+where the right hand is the sum of residues over all zeros of $P$.
+As an illustration we  take $P(z)=z^2+1$ which has simple zeros at
+$i$ and $-i$. Since
+\[ 
+g(z)= i\cdot \frac{e^{iz}+e^{-iz}}{e^{iz}-e^{-iz}}
+\]
+a  computation shows that the right hand side in (**) becomes
+$\frac{e^\pi+e^{-\pi}}{e^\pi-e^{-\pi}}$. Hence
+\[ 
+\sum_{-\infty}^\infty\, \frac{1}{1+k^2}=\pi\cdot 
+\frac{e^\pi+e^{-\pi}}{e^\pi-e^{-\pi}}
+\]
+{\bf{0.B.1 Exercise.}}
+Let $\alpha$ be a complex number which is not an integer.
+Show that
+\[\sum_{k=-\infty}^{\infty}\, \frac{1}{k+\alpha)^2}=
+\frac{\pi^2}{\sin^2\pi\alpha}
+\]
+{\bf{0.B.2 Exercise.}}
+Certain summation formulas can  be established directly without residue calculus.
+Consider the meromorphic function 
+\[ 
+g_*(z)=\frac{\pi}{\sin\pi z}
+\]
+It has simple poles at all integers and we can write out an
+infinite sum of rational functions which will match these poles.
+Namely, consider
+\[
+g(z)=\frac{1}{z}+
+\sum_{n=1}^\infty\,(\frac{1}{z-2n}+\frac{1}{z+2n})-
+\sum_{n=0}^\infty\,(\frac{1}{z-2n-1}+\frac{1}{z+2n+1})
+\]
+It is easily seen that $g_*-g$ has no poles
+and the reader should verify that this entire
+is bounded and hence a constant and
+finally that this constant is zero.
+We can
+express $g$ via a series where the convergence for $z$-values outside the set of integers
+is expressed more directly, i.e. one has
+\[
+\frac{\pi}{\sin\pi z}
+=\frac{1}{z}+
+\sum_{n=1}^\infty\,\frac{2z}{z^2-4n^2}-
+\sum_{n=0}^\infty\,\frac{2z}{z^2-(2n+1)^2}\tag{***}
+\]
+For example, with $z=1/4$ one gets
+\[
+\sqrt{2}\cdot\pi=4-\sum_{n=1}^\infty\,\frac{8}{48n^2-1}+
+ \sum_{n=0}^\infty\,\frac{8}{48(2n+1)^2-1}
+\]
+The right hand side is an infinite sum of
+rational numbers while the trancendental number $\pi$ appears in the left
+hand side. So the formula  is quite remarkable.
+\medskip
+
+\noindent
+{\bf{0.B.3 Wallis limit formula.}}
+There exists a meromorphic function with simple poles at all integers
+defined by the series
+\[ 
+g_*(z)=\frac{1}{z}+\sum_{n=1}^\infty\, \frac{2z}{z^2-j^2}
+\]
+At the same time we have the function
+from (*) which also has simple poles at the integers
+with residues $\frac{1}{\pi}$.
+
+\medskip
+
+\noindent
+{\bf{0.B.4 Exercise.}} Show that
+\[
+\frac{\cos \pi z}{\sin\pi z}=\frac{1}{\pi}\cdot g_*(z)\tag{i}
+\]
+Next, use that the derivative of $\sin \pi z$ is 
+equal to $\cos\pi z$ and deduce the product formula
+\[
+\sin\pi z=\pi z\cdot \prod_{n=1}^\infty\, \bigl(1-\frac{z^2}{n^2}\bigr )\tag{ii}
+\]
+Next, take $z=1/2$ in (ii).
+If $N\geq 2$ we consider partial products in the right hand side
+which gives the limit formula
+\[ 
+\lim_{N\to\infty}\, 
+ \prod_{n=1}^{n=N}\, \bigl(1-\frac{1}{4\cdot n^2}\bigr)=
+ \frac{2}{\pi}\tag{iii}
+ \]
+{\bf{0.B.5 Exercise.}} Rewrite the product and show that (iii) entails Wallis' limit formula:
+
+\[
+\sqrt{\frac{\pi}{2}}= \lim_{N\to\infty}\, \frac{2\cdot 4\cdots 2N}{1\cdot 3\cdot 5\cdots(2N-1)}
+ \cdot \frac{1}{\sqrt{2N+1}}
+ \]
+ 
+
+ 
+
+
+
+\medskip
+
+
+
+
+\centerline{\bf{0.C Asymptotic expansions.}}
+\medskip
+
+\noindent
+Residue calculus is often 
+used to find  asymptotic formulas. 
+We describe a result of this nature.
+Let $\{\lambda_\nu\}$ 
+be a strictly increasing sequence of positive real numbers
+and $\{a_\nu\}$ some sequence of positive real numbers.
+Assume that there exists some positive number $r_*$ such that 
+\[ 
+f(x)=\sum_{\nu=1}^\infty\,\frac{a_\nu}{\lambda_\nu+x}
+\] 
+is convergent for all $x>r_*$. 
+To each $x>0$ we denote by $\omega(x)$
+the largest integer $\nu$ such that $\lambda_\nu<x$.
+\medskip
+
+\noindent
+{\bf{0.C.1 Theorem.}}
+\emph{Suppose  that
+the following limit formula holds for some
+$0<\alpha<1$ and a constant $A$:}
+\[ 
+\lim_{x\to+\infty}\, x^{-\alpha}\cdot f(x)=A\tag{1}
+\]
+\emph{Then it follows that}
+\[ 
+\lim_{x\to+\infty}\, x^{1-\alpha}\cdot \sum_{\nu=1}^{\nu=\omega(x)}\,a_\nu=
+\frac{A}{\pi}\cdot \frac{\sin \pi\alpha}{1-\alpha}\tag {2}
+\]
+
+\noindent
+The proof  requires 
+Fourier analysis and  Wiener's
+general Tauberian theorem.
+So here more advanced methods are needed but
+residue calculus is used to compute
+the  value of this limit.
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf{0.D Ugly examples.}}
+\medskip
+
+\noindent
+There are  situations where
+an integral cannot be expressed in an elementary fashion even
+if it is defined by elementary
+functions. For example,  consider
+the integral
+\[
+\int_0^1\, \frac{e^x}{1+x}\cdot dx\tag{1}
+\]
+With $z=x+iy$
+the function $g(z)= \frac{e^z}{z+1}$
+is analytic in the half space
+$\mathfrak{Re} z >-1$.
+The line integral of $g$ along rectangles
+$\{0\leq x\leq 1\}\times0\leq y\leq R\}$ is zero and
+after a passage to the limit when $R\to+\infty$ we see that (1) is equal to
+\[
+\int_0^\infty\,\frac{e^{is}}{1+is}\cdot ids-
+\int_0^\infty\,\frac{e^{1+ is}}{2+is}\cdot ids\tag{2}
+\]
+The conclusion is that (1) can be calculated by an "exact formula"
+ if we can handle the integrals:
+\[ 
+ J(a)=
+ \int_0^\infty\,\frac{e^{is}}{s-ia}\cdot ds\quad\colon a>0\tag{3}
+\]
+Here one encounters an annoying
+fact. If we instead consider the integral
+\[ 
+J^*(a)=  \int_{-\infty}^\infty\,\frac{e^{is}}{s-ia}\cdot ds\quad\colon a>0\tag{4}
+\] 
+then there is no problem to compute it. In fact, we shall learn that 
+the value of (4)
+is found by ordinary residue calculus and  becomes
+$2\pi i\cdot e^{-a}$,
+obtained from a residue at $z=ia$ when we consider the
+function $g(z)=\frac{e^{iz}}{z-ia}$ in the upper half-plane where it has a simple pole
+at $z=ia$.
+But (3) cannot be found in this simple fashion.
+After  the substitution $s\mapsto a\xi$ we see that (3) is equal to
+\[
+J(a)=\int_ 0^\infty\frac{e^{ia\xi}}{\xi-i}\cdot d\xi\tag{5}
+\] 
+Apart from the factor $\frac{1}{2\pi}$
+this is an inverse Fourier transform of the tempered
+distribution on the real $\xi$-line which is supported by $\{\xi\geq 0\}$
+given by the density
+$\frac{1}{\xi-i}$ on $\xi>0$.
+This illustrates a close interplay between
+Fourier transforms
+and the 
+calculations of various integrals.
+Let $a$ be replaced by $x$ to
+indicate that $J(x)$ is a function of $x$ 
+which  is defined on $x>0$ but becomes
+a tempered distribution on the real $x$-line
+via Fourier's inversion formula.
+It follows for example that the distribution $J$ satisfies
+the differential equation
+\[ 
+\partial_x(J)+J=2\pi i\cdot H^*\tag{6}
+\] 
+where $H^*$ 
+is the inverse Fourier transform of the Heaviside distribtution on the $\xi$-line
+which is 1 if $\xi\geq 0$ and zero on $\{\xi<0\}$.
+In XX we  return to a study of
+the $J$-distribution and get a certain formula for
+the evaluation of the integral in (4).
+
+\medskip
+
+
+\noindent
+Let us now turn to  "nice" situations and begin with
+some general formulas which are
+used  in residue calculus.
+
+
+ 
+
+
+\bigskip
+
+\centerline {\bf{0:E Fractional decompostion}}
+\medskip
+
+\noindent
+The vanishing
+below  holds for every pair of polynomials
+$p,q$
+if
+$\deg(p)\geq\deg(q)+2$:
+\[ 
+\lim_{R\to\infty}\, \int_{|z|=R}\, \frac{q(z)\cdot dz}{p(z)}=0\tag{*}
+\]
+
+
+\noindent
+A second useful formula 
+is  the fractional decomposition:
+\[
+\frac{1}{p(z)}=\sum_{k=1}^{k=n}\, \frac{c_k}{z-\alpha_k}
+\quad\text{where}\quad
+c_k=\frac{1}{p'(\alpha_k)}
+\]
+where
+\[ 
+p(z)=\prod_{k=1}^{k=n} \,(z-\alpha_k)\quad\text{has simple zeros}
+\] 
+
+
+\medskip
+
+\noindent
+{\bf{0.E.1 Exercise.}}
+Show that (*) applied with $q(z)=1$ gives:
+\[ 
+c_1+\ldots+c_n=0 \tag{1}
+\]
+Next, let $1\leq \nu\leq n-1$ and show that one has the fractional decomposition
+\[
+\frac{z^\nu}{p(z)}=\sum_{k=1}^{k=n}\, \frac{\alpha_k^\nu}{p'(\alpha_k)}
+\cdot\frac{1}{z-\alpha_k}\tag{2}
+\]
+
+\bigskip
+
+
+
+
+
+
+
+
+\centerline {\bf{0:F Computing local residues.}}
+
+\medskip
+
+\noindent
+When multiple zeros occur  local calculations are needed to find  residues.
+The typical case is as follows: We have an analytic function $f(z)$
+defined in disc centered at $\{z=0\}$
+and with a zero of order $k\geq 2$ at the origin.
+Now
+\[ 
+\frac{1}{f(z)}= c_kz^{-k}+\ldots+c_1z^{-1}+d_0+d_1z+\ldots
+\]
+Here $c_1$ is the residue coefficient.
+In practice an expansion
+\[
+f=bz^k(1-(b_1z+b_2z^2+\ldots))
+\]
+is known from the start. To find $c_1$ therefore amounts to find
+the coefficient of $z^{k-1}$ in the power series 
+\[
+\frac{1}{1-(b_1z+b_2z^2+\ldots)}= 1+w_1z+w_2z^2+\ldots\tag{*}
+\]
+In (*) we can take $\{b_\nu\}$ to be arbitrary
+and seek for algebraic expressions of the $w$-numbers.
+This leads to every integer $k\geq 1$ to a certain polynomial 
+$R_k$ of the $b$-variables.
+We see for example that
+\[
+b_1=w_1\quad \colon\quad b_1^2+b_2=w_2
+\quad \colon \quad b_1^3+b_1b_2+b_3=w_3\tag{1}
+\]
+
+
+\noindent
+{\bf{0.F.1 Exercise.}} 
+Show that for every $k\geq 1$ there exists a
+polynomial of the form
+\[ 
+R_k(b_\bullet)= \sum\, \rho_{i_1\ldots i_m}b_1^{i_1}\cdot b_m^{i_m}\tag{**}
+\]
+where $1\leq m\leq k$ holds in each term and
+\[ 
+i_1+2i_2+\ldots+ki_k=k
+\] 
+hold for every $k$-tuple of the non-negative
+$i$-numbers.
+Use also  (**)  to continue the computations in (1) above
+for higher $k$-values. One has for example
+\[
+b_1^4+3b^2_1b_2+b_1b_3+b_2^2+b_4=w_4
+\]
+
+
+\noindent
+Employ a computer to 
+extend the result to get exact formulas for
+a  set of positive integers, say up to $k=50$. Notice that
+all the $\rho$-coefficients in (**) are positive integers.
+\medskip
+
+\noindent
+{\bf{0.F.2 Exercise.}}
+Let $g(z)$ be a meromorphic function with a pole of
+order $k$ at $z=0$. Then $z^k\cdot g(z)$ is holomorphic
+at the origin. Show that the residue of $g$ given by the coefficient
+$c_1$ of $z^{-1}$ in the Laurent expansion is given by
+\[ 
+\frac{1}{(k-1)!}\cdot \partial^{k-1}(z^k\cdot g)(0)\tag{1}
+\]
+
+\noindent
+Take for example $g(z)=\frac{1}{\sin^3 z}$ which has a triple pole a
+$z=0$. We write
+
+\[ 
+\sin z=z(1-z^2/3!+z^4/5 !-\ldots)) z\cdot \rho(z)
+\]
+By (1) the residue becomes
+
+\[
+\frac{1}{2}\partial^2(\frac{1}{\rho(z)}=
+-\frac{1}{2}\cdot\partial (\frac{\rho'(z)}{\rho^2(z)})
+\] 
+Now the reader can verify that the residue becomes $\frac{1}{6}$.
+
+
+
+
+\newpage
+
+\centerline
+{\bf{0.G Line integrals of multi-valued functions.}}
+\bigskip
+
+\noindent
+Let $\Omega$ be a connected domain in
+${\bf{C}}$
+and $f_*$ is a germ of a multi-valued analytic 
+function at some point $z_*\in\Omega$. Let
+$\gamma$ be a curve which starts at $z_*$ and stays in
+$\Omega$. The end-point $z^*$ of $\gamma$
+can be equal, to $z_*$, i.e. we do not exclude the case when
+$\gamma$ is closed.
+Now $f_*$ can be extended 
+in the sense of Weierstrass along 
+ $\gamma$ and
+using  its analytic continuation along $\gamma$ the line integral below is defined:
+\[ 
+\int_\gamma\ f\cdot dz\tag{1}
+\] 
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Use the monodromy theorem to show that
+if $\gamma$ and $\gamma^*$ are 
+curves
+starting at $z_*$ with the same end-point $z^*$ and   homotopic in 
+a  family of curves which stay in $\Omega$ and have
+end-points at $z_*$ and $z^*$,
+then the integral (1) taken 
+over $\gamma$ or $\gamma^*$ are equal.
+\medskip
+
+\noindent
+{\bf{0.G.1 An application.}}
+Remove  the to points $-1$ and $+1$ from
+${\bf{C}}$  which gives the domain
+$\Omega={\bf{C}}\setminus\{-1,1\}$ and
+consider the multi-valued function
+\[ 
+f(z)= \sqrt{1+z}\cdot (1-z)^a\quad\text{where}\quad 0<a<1
+\]
+whose   local branch $f_*$ at the origin is chosen so that $f_*(0)=1$.
+Let $\gamma_1$ be the closed curve
+at the origin which follows the circle $\{z-1|=1\}$
+and is oriented in the counter-clockwise direction.
+Similarly, $\gamma_2$ is the closed curve which now follows the
+circle $\{|z+1|=1\}$ in the counter clock-wise direction.
+We have also the closed curves $\gamma_1^{-1}$ and $\gamma_2^{-1}$
+with reversed orientation.
+Now we get the composed closed curve
+\[ 
+\gamma= \gamma_2^{-1}\circ\gamma_1^{-1}\circ \gamma_2\circ\gamma_1\tag{1}
+\]
+\noindent
+Along $\gamma_1$ we have $z=1+e^{i\theta}$
+and the line integral  becomes
+\[
+J_1=\int_0^{2\pi}\, \sqrt{2+e^{i\theta}}\cdot e^{ia\theta}\cdot ie^{i\theta}\cdot d\theta\tag{i}
+\]
+Next, when the integral over $\gamma_2$ is computed we have
+performed an analytic continuation of $f$ along $\gamma_1$
+which means that we have a new local branch of $f$ at $z=0$ which takes the value 
+$e^{2\pi ia}$.
+So along $\gamma_2$ we get
+the contribution
+\[
+J_2=
+e^{2\pi ia} \cdot \int_0^{2\pi}\, e^{ia\theta}\cdot
+\sqrt{-2-e^{i\theta}}\cdot ie^{i\theta}\cdot d\theta=
+\]
+\[
+i\cdot e^{2\pi ia} \cdot \int_0^{2\pi}\, e^{ia\theta}\cdot
+\sqrt{2+e^{i\theta}}\cdot ie^{i\theta}\cdot d\theta=i\cdot e^{2\pi ia} \cdot J_1
+\tag{ii}
+\]
+For the integral along $\gamma_1^{-1}$
+we  start with a local branch where $f(0)=-e^{2\pi i a}$
+and since this line integral  performed in the
+clockwise direction the contribution becomes
+\[
+J_3=e^{2\pi i a}\cdot J_1
+\]
+Finally, the local branch of $f$ at $z=0$ when we start integration along $\gamma_2^{-2}$
+is minus one
+and we see  the contribution of the last line integral becomes
+\[
+J_4=e^{-2\pi i a}J_2=i \cdot J_1
+\]
+From this we conclude that
+the line integral of $f$ taken over $\gamma$ is equal to
+\[
+(1+i)(1+e^{2\pi i\alpha})\cdot J_1\tag{*}
+\]
+The reader may verify that
+$J_1\neq 0$ and hence the line integral of $f$ over the closed curve
+$\gamma$ is non-zero.
+The exercise above therefore shows that $\gamma$ cannot be homotopic to
+the trivial curve which stays at the origin in $\Omega$.
+This means
+that the image
+$\{\gamma\}$ in the fundamental group
+$\pi_1(\Omega)$ is non-zero, i.e.
+the homotopy classes $\{\gamma_1\}$ and $\{\gamma_2\}$ do not commute in  this group.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The example above  shows how  to
+a classic result in topology using
+complex line integrals. The topological result  is that
+the fundamental group $\pi_1(\Omega)$ is a free group generated
+by
+the homotopy classes of $\gamma_1$ and $\gamma_2$.
+That this indeed holds can be proved integrating
+ multi-valued functions of the form along composed closed $\gamma$-curves.
+ \[ f(z)=(z-1)^a\cdot (z+1)^b
+\] 
+where $a,b$ can be arbitrary pairs of complex numbers.
+\medskip
+
+\noindent{\bf{0.G.2 Exercise.}}
+Let $0<a<1$ be a real number. Consider the multi-valued function
+$f(z)= z^a\cdot\log z$ defined outside the two points 0 and 1.
+Let $R>1$ and at $z=R$ we choose the local branch $f_*$ where
+$f_*(R)= R^a\cdot \log R$ is real and positive.
+Calculate the line integral
+\[
+\int_\gamma\, f\cdot dz
+\] 
+where $\gamma$ is the circle $\{|z|=R\}$
+oriented in the counter-clock wise sense.
+
+\medskip
+
+
+\noindent
+{\bf{0.G.3 Example.}} Let $a>0$ be real and consider the integral:
+\[
+J=\int_0^1\,\frac{dx}{(1+ax^2)\sqrt{1-x^2}}\tag{*}
+\]
+To evaluate this integral we use the fact that
+there exists a \emph{single-valued} analytic function
+$\sqrt{1-z^2}$ in ${\bf{C}}\setminus [0,1]$.
+Choose a closed contour formed by a 
+the line segment where $y=\epsilon$ and $0\leq x\leq 1$
+plus a small half circle around $1$ and  return along the line
+$y=-\epsilon$ while $x$ moves from 1 to zero and finish with a small half-cirlce from
+$-i\epsilon$ to $i\epsilon$. Notice
+that the line integral over
+large circles $|z|=R$ of
+$\frac{1}{(1+az^2)\sqrt{1-z^2}}$ tend to zero. Now Cauchy's
+residue formula  gives
+\[
+(1-i)\cdot J=
+2\pi i\cdot\mathfrak{res}((1+az^2)\sqrt{1-z^2}:\frac{i}{a})+
+2\pi i\cdot \mathfrak{res}((1+az^2)\sqrt{1-z^2}:\frac{-i}{a})
+\]
+Here a computation gives the equality:
+\[
+J=\frac{\pi}{2\sqrt{1+a}}
+\]
+\medskip
+
+
+\centerline {\bf{0.H Solving a differential equation.}}
+\medskip
+
+\noindent
+Line integrals of multi-valued functions
+are also used in other situations. 
+Here follows an  example
+from chapter VII in the text-book [Cartan]
+where we remark that the original constructions are due to Laplace.
+Let $n\geq 2$ and consider the differential equation
+\[
+(a_nz+b_n)\cdot y^{(n)}(z)+\ldots+ (a_1z+b_1)\cdot y'(z)+ (a_0z+b_0)\cdot y(z)=0\tag{*}
+\]
+
+\noindent
+Here $\{a_k\}$ and $\{b_k\}$ are complex constants with $a_n\neq 0$.
+Define the two polynomials
+\[ 
+A(z)= \sum\, a_kz^k\quad\text{and}\quad B(z)=\sum\, b_kz^k\tag{1}
+\]
+
+\noindent
+Assume that the zeros of $A$ are simple and denote them by
+$c_1,\ldots,c_n$.
+Under this assumption 
+the set of entire functions which solve (*) is a complex vector space of dimension
+$(n-1)$.
+To find these solutions we use the fractional decomposition and write
+\[
+\frac{B(z)}{A(z)}= \alpha+\frac{\alpha_1}{z-c_1}+\ldots+
+\frac{\alpha_n}{z-c_n}\tag{2}
+\]
+Next, define the function
+\[ 
+U(z)= e^{\alpha z}\cdot \prod\, (z-c_k)^{\alpha_k}\tag{3}
+\]
+Since $\{\alpha_k\}$ in general are not integers this $U$-function is multi-valued.
+Outside the zeros of $A$ we notice that
+one has the equality
+\[
+\frac{U'(z)}{U(z)}= \frac{B(z)}{A(z)}\tag{4}
+\]
+This will be used to construct solutions to (*).
+Namely,  fix a point $z_0\in {\bf{C}}\setminus \{c_k\}$
+and
+in a small disc centered at $z_0$ we choose a local branch of $U$.
+Next, let $\gamma$ be a closed curve which stays
+in 
+${\bf{C}}\setminus \{c_k\}$ and has $z_0$ as a common start and end-point.
+For each complex number $z$
+we can evaluate the
+line integral and get a function
+\[
+f(z)=\int_\gamma\, e^{z\zeta}\cdot \, \frac{U(\zeta)}{A(\zeta)}\cdot d\zeta\tag{5}
+\]
+It is clear that $f$ is an entire function of $z$
+and each complex derivative is given by:
+\[
+f^{(k)}(z)=\int_\gamma\, e^{z\zeta}\cdot \, \zeta^k\cdot \frac{U(\zeta)}{A(\zeta)}\cdot d\zeta
+\]
+So the  construction of the polynomials $A$ and $B$
+show that $f$ is a solution to the differential equation (*) if
+\[
+\int_\gamma\, e^{z\zeta}\cdot [z\cdot A(\zeta)+B(\zeta)]
+\cdot \frac{U}{A}(\zeta)\cdot d\zeta=0\tag{**}
+\] 
+where the equality holds for all $z$.
+\medskip
+
+\noindent
+{\bf{A partial integration.}}
+Since $\partial_\zeta(e^{z\zeta})= z\cdot e^{z\zeta}$
+it follows that
+\[
+\int_\gamma\, e^{z\zeta}\cdot z
+\cdot U(\zeta)\cdot d\zeta=
+e^{z\zeta}\cdot U(\zeta)|
+_{\gamma_*}^{\gamma^*}-
+\int_\gamma\, e^{z\zeta}\cdot  U'(\zeta)\cdot d\zeta\tag{6}
+\]
+
+
+\noindent
+At the same time
+(4) above gives the equality $U'=\frac{BU}{A}$ and we conclude that
+(**) holds if and only if
+\[
+e^{z\zeta}\cdot U(\zeta)|
+_{\gamma_*}^{\gamma^*}=0\tag{7}
+\]
+By the construction of the line integral  where the multi-valued function
+$U$ appears, (7) means  that
+the after analytic continuation along $\gamma$ one has the equality
+\[
+T_\gamma(U)(z_0)=U(z_0)\tag{***}
+\]
+
+\noindent
+If we want that the $f$-function in (5) is not identically zero
+we must choose closed curves $\gamma$ which are not trivial, i.e.
+homotopic to the constant curve at $z_0$, and at the same time
+(***) should hold.
+To achieve this we
+consider for each $1\leq k\leq n$
+a simple closed curve
+$\gamma_k$ at $z_0$ whose winding number with respect to
+$c_k$ is equal to one, while the winding number with respect to the remaining
+$c$-rots are zero.
+This means that the homotopy classes of $\gamma_1,\ldots,\gamma_n$ 
+generate the free group $\pi_1({\bf{C}}\setminus\{c_k\})$.
+Notice also that
+\[ 
+T_{\gamma_k}(U)(z_0)= e^{2\pi i\cdot \alpha_k}\cdot U(z_0)\tag{8}
+\] 
+hold for every $k$.
+To satisfy (***) we introduce the following $(n-1)$-tuple of closed curves:
+\[ 
+\gamma^*_k=\gamma_k^{-1}\circ\gamma_1^{-1}\circ
+\gamma_k\circ\gamma_1\quad\colon\, 1\leq k\leq n\tag{9}
+\]
+With this choice we have
+\[
+T_{\gamma^*_k}(U)(z_0)= e^{-2\pi i\cdot \alpha_k}\cdot
+e^{-2\pi i\cdot \alpha_1}\cdot e^{2\pi i\cdot \alpha_k}\cdot e^{2\pi i\cdot \alpha_1}\cdot
+U(z_0)=U(c_0)\tag{10}
+\]
+Hence the differential equation is solved by the functions
+\[
+f_k(z)=\int_{\gamma^*_k}\, e^{z\zeta}\cdot \, \frac{U(\zeta)}{A(\zeta)}\cdot d\zeta
+\quad\colon 2\leq k\leq n\tag{11}
+\]
+\medskip
+
+\noindent
+There remains to prove that
+the functions above are ${\bf{C}}$-linearly independent
+and give a basis
+for the entire solutions to (*). The fact that the 
+complex vector space of entire 
+solutions to (*) has dimension $n-1$ at most
+can be proved in several ways. One is to apply results from
+$\mathcal D$-module theory. See (xx).
+Less obvious that $f_2,\ldots,f_n$  are ${\bf{C}}$-linearly independent.
+To see this we suppose that one has a relation
+$q_2f_2(z)+\ldots+q_nf_n(z)=0$ where $\{q_k\}$ are complex constants.
+This is an identity for all $z$ and by expanding $e^{z\zeta}$
+it would follow that:
+\[
+\sum_{k=2}^{k=n}\, q_k\cdot \int_{\gamma^*_k}\, 
+\zeta^m\cdot \frac{U(\zeta)}{A(\zeta)}\cdot d\zeta=0
+\quad\text{for all}\quad m=0,1,\ldots\tag{12}
+\]
+
+\medskip
+
+
+\noindent
+Now the homotopy classes of the $\gamma^*$-curves are
+different in the fundamental group and using this
+one can show that (12) implies that all the $q$-numbers are zero which gives
+the requested
+${\bf{C}}$-linear independence of the $f$-functions.
+See also ¤ xx where we go further and construct distribution solutions to (*) which
+in partocular calrifies the calim that
+the space of entire solutions is $(m-1)$-dimensional.
+
+ 
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+\centerline {\bf{0:I. More involved integrals.}}
+
+\bigskip
+
+\noindent
+Even though standard residue calculus settles 
+a quite extensive family of integrals there remain integrals where the
+evaluation is more cumbersome and eventually force us to employ numerical calculations.
+Consider for example the integral
+\[
+J(a)=\int_0^1\frac{dx}{x^a\cdot (1+x)^a}\tag{*}
+\] 
+where $0<a<1$.
+We find a series for the solution using the expansion
+\[ 
+(1+x)^{-a}=\sum_{n=0}^\infty c_n(a)\cdot x^n\quad\colon 0<x<1\implies
+\]
+\[ 
+J(a)=\sum_{n=0}^\infty c_n(a)\cdot\frac{1}{n+1-a}\tag{**}
+\]
+Recall also that
+\[
+c_n(a)= (-1)^n\cdot \frac{a(a+1)\cdots(a+n-1)}{n !}\quad\colon
+n=1,2,\ldots
+\]
+So above we have an explicit series and it is a matter of taste if one includes the $J$-function
+which evaluates the integral among the "elementary functions".
+The $J$-integral above is related to  integrals of the form
+\[
+I(a)= \int_{-\infty}^\infty\, \frac{dx}{(1+x^2)^a}\tag{***}
+\]
+which exist when $a$ is real and $>1/2$.
+To solve (***) it is tempting to consider the multi-valued analytic function
+$g(z)=(1+z^2)^{-a}$.
+If $R>1$ we get the simply connected domain
+$\Omega_R$ which is the upper disc $\{|z|<R\}$
+where $\mathfrak{Im}(z)>0$ and the imaginary interval 
+$[0,i]$ is removed.
+In this domain there exists a single-valued branch of the
+$g$-function which admits a factorisation
+\[ 
+g(z)= (z+i)^{-a}\cdot (z-i)^{-a}
+\]
+The whole line integral
+\[
+\int_{\partial\Omega_R}\, g(z)\cdot dz=0
+\]
+On the portion of $\partial\Omega_R$ given by the half-circle of radius $R$
+we get a vanishing integral as $R\to+\infty$.
+On the portion on the real $x$-axis we must
+take into the account that the restriction of $g$ to the negative real axis has changed.
+More precisely we have performed an analytic continuation of
+$(z-i)^{-a}= e^{-a\log(z-i)}$
+and the effect is that 
+\[
+ g(x)= e^{-\pi a i}\cdot\frac{1}{1+x^2}\quad\colon x<0
+ \]
+
+
+
+
+\noindent
+{\bf{0.I.1 Exercise.}}
+Conclude from the above that
+\[
+ (1+e^{-\pi a i})\cdot \frac{I(a)}{2}=\int_\Gamma\, g(z)\cdot dz\tag{1}
+ \] 
+
+\noindent
+where $\Gamma$ is the contour give by two copies of the imaginary
+ interval $[0,i]$.
+As illustrated by a picture
+the portion of the complex line integral of $g(z)\cdot dz$
+on the "positive side"  is taken in the negative direction
+and therefore contributes with the term:
+\[ 
+ -\int_0^1\, \frac{idy}{(1-y^2)^a}\tag{2}
+ \]
+ On the "negative side" the $g$-function has a new branch
+and taking the negative direction into the account
+ the contribution to  the complex line integral $\int_\Gamma\, g(z)\cdot dz$
+becomes
+ \[
+e^{-\pi a i}\cdot \int_0^1\,\frac{idy}{(1-y^2)^a}\tag{3}
+\]
+
+
+\medskip
+
+\noindent
+{\bf{Conclusion.}}
+From (1-3) above we obtain
+ \[
+(1+e^{-\pi a i})\cdot \frac{I(a)}{2}=(1-e^{-\pi a i})\cdot i\cdot
+\int_0^1\,\frac{dy}{(1-y^2)^a}
+ \]
+Multiply both sides with $e^{\pi i a/2}$. Then the reader can verify that
+\[ 
+\cos(\pi a/2)\cdot I(a)= 2\cdot\sin(\pi a/2)\cdot \int_0^1\frac{dy}{(1-y^2)^a}\tag{*}
+\]
+
+\medskip
+
+
+\noindent
+{\bf{0.I.2 Exercise.}}
+To each $0<a<1$
+we have the integral
+\[
+L(a)=\int_0^1\,\frac{dy}{(1-y^2)^a}
+\]
+By the substitution $y\mapsto\cos\theta$ the integral becomes
+\[
+\int_0^1\,(\cos \theta)^{(1-a}\cdot d\theta
+\]
+From a numerical point of view this is a robust integral since
+the integrand is a continuous function and
+the reader should check numerical values with a computer
+as $0<a<1$ varies.
+
+
+
+\bigskip
+
+
+
+\centerline{\bf{0.J Abel integrals and equations}}
+\medskip
+
+\noindent
+Residue calculus can be used to
+solve   integral equations.
+Given $0<a<1$ we consider the  equation
+\[ 
+\int_0^1\, \frac{\phi(y)}{|x-y|^a}\cdot dy=f(x)\tag{*}
+\]
+
+
+\noindent
+Here $f(x)$ is a given function which at least is continuous
+and one seeks $\phi$.
+A complete solution was 
+given by Carleman in an article entitled
+\emph{†ber die Abelsche Integralgleichung mit konstanter
+Integrationsgrenzen} from 1922. 
+To begin with $f$ yields the function
+\[ 
+F(t)=-\frac{1}{\pi}\cos\,\frac{a\pi}{2}\cdot \int_0^1\,
+\frac{1}{s-t}\cdot f(s)\bigl[(s(1-s)\bigr]^{\frac{a-1}{a}}\cdot ds\tag{1}
+\]
+
+
+\noindent
+The unique solution $\phi(x)$ is found given via
+a complex contour integral where $\Gamma_x$
+for each $0<x<1$ is a simple closed curve 
+whose intersection with the positive real axis is the singleton set
+$\{x\}$ and one has;
+\[
+\phi(x)= \frac{1}{2\pi i}\int_{\Gamma_x}\, \frac{1}{(t-x)^{1-a}}
+\cdot \bigl[t(t-1)\bigr]^{\frac{1-a}{2}}\cdot F(t) dt\tag{2}
+\]
+
+
+
+\medskip
+
+\noindent
+Another  integral equation is
+\[ 
+\int_0^1\, \log\,|x-y|\cdot \phi(y)\cdot dy=f(x)\tag{**}
+\]
+In Carleman's article is is proved the $\phi$-solution is
+unique and determined by the  formula:
+\[
+\frac{1}{\pi^2}\cdot \frac{1}{\sqrt{x(1-x)}}\cdot
+\int_0^1\,\frac{f'(s)\sqrt{s(1-s)}}{s-x}\cdot ds-
+\frac{1}{2\pi^2\log 2\cdot \sqrt{x(1-x)}}\cdot
+\int_0^1\,\frac{f(s)}{\sqrt{s(1-s)}}\cdot ds
+\]
+\medskip
+
+\noindent
+In Chapter XX we shall prove the inversion formula above
+using  results about  distributions and boundary
+values of analytic functions.
+
+
+\newpage
+
+
+\centerline{\bf{0.K Location of zeros of polynomials.}}
+
+\medskip
+
+\noindent
+In the article [xx] from 1876, Eduard Routh
+applied Cauchy's residue calculus to analyze positions of roots to polynomials.
+For applications to dynamical systems the main concern is to
+determine zeros in a half\vvv plane such as
+$\mathfrak{Re}(z)>0$.
+We shall discuss some examples.
+Consider a polynomial 
+
+\[ 
+P(z)= z^{2m}+c\uuu{2m\vvv 1}z^{2m\vvv 1}+\ldots + c\uuu 1 z+c\uuu 0
+\]
+whose coefficients are real numbers.
+We assume also that $P$ has no zeros in the imaginay axis and  the zeros of
+\[ 
+y\mapsto \mathfrak{Re}\, P(iy)
+\] 
+are simple.
+When $|y|$ is large we have
+\[
+P(iy)\simeq (\vvv 1)^m\cdot y^{2m}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}} 
+Assume that  $m$ is even
+and $\mathfrak{Re}(P(iy))$ has at least one zero. Show
+that there exists a positive  integer $k$
+and a strictly increasing sequence 
+\[ 
+\alpha\uuu 1<\beta\uuu 1<\ldots<\alpha\uuu k<\beta\uuu k
+\]
+where $\{i\alpha\uuu\nu\}$ and $\{i\beta\uuu\nu\}$ are the zeros of
+$\mathfrak{Re}(P)$ on the imaginary axis.
+By assumption $\mathfrak{Im}\,P\neq 0$ hold at these simple zeros of the real part..
+With these notations   Routh's formula gives:
+\medskip
+
+\noindent
+{\bf{K.1 Theorem.}}
+\emph{The number of zeros of $P$ counted with multiplicity in the right
+half\vvv plane is equal to}
+\[
+m\vvv\frac{1}{2}\sum\uuu {\nu=1}^{\nu=k}\,\bigl[
+\text{sign}(\mathfrak{Im}\,P(i\alpha\uuu \nu)\vvv
+\text{sign}(\mathfrak{Im}\, P(i\beta\uuu \nu)\bigr]
+\]
+\medskip
+
+\noindent
+{\emph{Proof.}}
+We  use  the argument principle and
+study the  the function
+\[
+y\mapsto \text{arg}\,P(iy)
+\] 
+as $y$ decreases from $+\infty$ to $\vvv\infty$ on the real $y$\vvv line.
+An induction over $k$ gives:
+\[
+\lim\uuu {R\to\infty}\, [\text{arg}\,P(iR)\vvv\text{arg}\,P(\vvv iR)]
+=\vvv \pi\cdot \sum\uuu {\nu=0=}^{\nu=k}
+\,[\text{sign}\,\mathfrak{Im}\,P(i\alpha\uuu \nu)\vvv
+\text{sign}\,\mathfrak{Im}\,P(i\beta\uuu \nu)\bigr]
+\]
+At the same time
+the argument of $P$ along a 
+half\vvv circle $z=Re^{i\theta}$ with $\vvv \pi/2<\theta<\pi/2$
+increases by the term $\simeq 2m\pi$ when $R$ is large.
+Now Routh's theorem follows from the argument principle in
+Chapter IV.
+\medskip
+
+\noindent
+{\bf{K.2 Example.}}
+Consider the case $m=2$ and a polynomial of the form
+\[ 
+P(z)= z^4+ 2Az^2+Bz+Cz^3\vvv 1
+\]
+where $A,B,C$ are real.
+We get
+\[ 
+\mathfrak{Re} P(iy)= y^4\vvv 2Ay^2\vvv 1=(y^2\vvv A)^2\vvv A^2\vvv 1
+\]
+Here two 
+real roots appear via the equation
+\[ 
+y^2=A+ \sqrt{A^2+1}
+\]
+More precisely, we get two roots $\vvv\rho$ and $\rho$ where
+
+\[
+\rho=\sqrt{\sqrt{A^2+1}+A}
+\]
+At the same time
+\[
+\mathfrak{Im}\,P(iy)= By\vvv Cy^3
+\]
+With the notations in  Theorem K.1
+we have $\alpha\uuu 1=\vvv \rho$ and $\beta\uuu 1=\rho$.
+Here the   difference
+\[
+\text{sign}(B\cdot \vvv\rho + C\rho^3\vvv
+\text{sign}(B\cdot \rho \vvv C\rho^3=
+2\cdot \text{sign}(C\rho^3\vvv B\rho)
+\]
+Taking the minus sign into the account in Routh's formula
+we conclude that $P$ has one zero in
+the right half\vvv plane if
+\[
+C\rho^2> B\tag{i}
+\]
+while it has 3 zeros in this half\vvv plane when
+\[
+C\rho^2< B\tag{ii}
+\]
+where $\rho=A+\sqrt{A^2+1}$.
+Notice that when $P$ is restricted to the real axis
+then it is $<0$ when $|x|$ is small and $>0$ when
+$|x|$ is large so $P$ has always at least one real zero on
+$x>0$ and one on $x<0$ while (i\vvv ii) determine the real part 
+of the two remaining zeros
+which are conjugate since the coefficients of $P$ are real.
+
+
+
+\medskip
+
+\noindent
+{\bf{The case when $P$ has odd degree.}}
+Consider the case of a cubic polynomial
+\[ 
+P(z)= z^3+a\uuu 2z^2+a\uuu 1z+a\uuu 0
+\] 
+where 
+each $a$\vvv number is real and positive.
+Now
+\[ 
+P(iy)=\vvv iy^3\vvv a\uuu 2y^2+ia\uuu 1y+a\uuu 0
+\]
+We assume in addition that $P$ has no zeros on the imaginary axis.
+The real part has two zeros $\rho>0$ and $\vvv\rho$ where
+\[
+\rho=\sqrt{\frac{a\uuu 0}{a\uuu 2}}
+\]
+Let us  pursue the variation of $\text{arg}\,P(iy)$ while 
+$y$ descreases from $+\infty$ to $\vvv \infty$.
+On the positive real axis $P(x)$ is real and positive
+and it follows that
+\[
+\lim\uuu {R\to\infty}\, \text{arg}\,P(iR)=3\pi/2
+\]
+Next, the real part of $P(iy)$ is $<0$ as long as $y>\rho$
+and when $y=\rho$ the imaginary part becomes
+\[
+\rho(a\uuu 1\vvv \rho^2)
+\]
+Suppose that this  term is $>0$. Then a figure shows that
+the argument has decreased from
+$3\pi/2$ to $\pi/2$.
+Next, while $\vvv\rho<y<\rho$ the real part is $>0$
+so $P(iy)$ moves in the right  half\vvv plane and
+when $y=\vvv \rho$
+the imaginary part gets a reversed sign
+to (1) which means that the argument now has decreased from
+$\pi/2$ to $\vvv \pi/2$. So up to $y=\vvv\rho$ the 
+decrease of the  argument is $\vvv 2\pi$.
+Finally, when $y<\vvv\rho$ then
+the real part is again $<0$ while $\mathfrak{Im}\, P(\vvv i\rho)<0$
+and after we see that
+the imaginary part
+increases  when $y\to\vvv \infty$
+which means that the argument of $P$ continues to decrease and the total effect is that
+\[
+\lim\uuu {R\to\infty}\, [\text{arg}\,P(iR)\vvv\text{arg}\,P(\vvv iR)]=
+\vvv 3\pi
+\]
+At the same time
+$P(Re^{i\theta}\simeq R^3e^8{i\theta}$ when $R>>1$ so the argument increases by
+$3\pi$ along the half\vvv circle of radius $R$ in the right half\vvv plane.
+From this we conclude that $P$ has no zeros in half\vvv discs
+$\{|z|<R\cap \mathfrak{Re}\, z>0\}$
+which mens that the zero of the cubic polynomial are confined to the 
+left half\vvv plane.
+hence we have proved
+
+\medskip
+
+\noindent {\bf{Theorem.}}
+\emph{Let $P(z)$ be a cubic polynomial
+where $\{a\uuu k\}$ are real and positive and $P$ has no zeros on the imaginary axis.
+Then all roots belong to the left half\vvv plane if}
+\[
+a\uuu 1a\uuu 2>a\uuu 0
+\]
+\bigskip
+
+
+\noindent
+{\bf{Exercise.}}
+Show that if 
+$a\uuu 1a\uuu 2<a\uuu 0$ then $P$ has exactly one root in
+the right half\vvv plane.
+\bigskip
+
+
+\noindent
+{\bf{Some other examples.}}
+Consider a polynomial of degree 3:
+\[ 
+P(z)=z^3+Az\vvv 1
+\]
+where $A>0$. Hence  the derivative 
+$P'(x)= 3x^2+A>0$ on the real $x$\vvv axis so 
+$P(x)$ has at most one real zero and since $P(0)=\vvv 1$ this zero $\rho$
+must be $>0$.
+The two remaining roots appear in a conjugate pair $\xi,\bar\xi$
+and since $z^2$ is missing in $P$ we have
+\[
+\xi+\bar\xi+\rho=0
+\]
+Since $\rho>0$ we conclude that
+$\mathfrak{Re}\,\xi<0$, i.e, $P$ has one root in the right
+half\vvv plane. It is instructive
+to check this via
+the argument  principle.
+On the imaginary axis we notice that
+$\mathfrak{Re} \,P(iy)=\vvv1$ is constant so
+$y\mapsto P(iy)$ moves in the left half\vvv plane and when
+$R>>0 $ 
+we see that
+\[ 
+\text{arg} P(iR)\simeq \vvv \pi/2
+\]
+A figure shows that
+the argument of $P(iy)$  decreases from $\vvv\pi/2$ to $\vvv 3\pi/2$.
+At the same time the argument increases by the factor $3\pi$ as we move on a circle from 
+$\vvv iR$ to $iR$.
+The total  variation of the argument along a large half\vvv circle
+becomes $3\pi\vvv\pi=2\pi$ which
+reflects the fact that $P$ has one root in the right half\vvv plane.
+\medskip
+
+
+\noindent
+{\bf{Another case.}}
+Consider a polynomial of the form
+\[ 
+P(z)= z^3+Az+1
+\] 
+where $A$ is  real.
+Here $y\to P(iy)$ moves in the right half-plane
+and we have
+\[ 
+\arg P(-iR)\simeq\pi/2\quad\text{and}\quad
+\arg P(iR)\simeq-\pi/2
+\]
+So  the variation of the argument
+as $y$ moves from $R$ to $\vvv R$ 
+increases by the factor $\pi$. From this we can conclude that $P$ has two zeros in
+the right half\vvv plane.
+Notice that $P(0)=B>0$ which implies that $P(x)$ has a real zero 
+$\rho$ on the negative axis.
+The two remaining roots appear in a conjugate pair $\xi,\bar\xi$
+and since $z^2$ is missing we have
+\[ 
+2\xi+\rho=0
+\] 
+which implies that $\mathfrak{Re}\,\rho>0$
+in accordance with the previous verification via
+the argument principle.
+
+\medskip
+
+\noindent
+{\bf{The case $P(z)= z^5+z+1$.}}
+Here we get
+\[ 
+P(iy)= i(y^5+y)+1
+\]
+The variation of $\arg(P)(iy)$
+as $y$ moves from $R$ to $\vvv R$
+is now $\pi$
+while that along the half-circle is $5\pi$. The conclusion is that
+$P(z)$ has two roots in the right half-plane.
+Notice that in this example
+\[ 
+P'(x)= 5x^4+1>0
+\] 
+So $x\mapsto P(x)$ is strictly increasing on the real $x$-line 
+where it has a simple zero $x_*<0$
+since $P(0)=1>0$.
+We have seen that two complex roots $\alpha$ and $\bar\alpha$ appear
+with a common real part $>0$ while the two other complex roots
+$\beta$ and $\bar\beta$ have a negative real part.
+The reader should find numerical values for these complex roots
+and confirm the assertion that two roots appear in the right
+half-plane.
+Let us remark that the polynomial above appears in Abel's article [Abel] where 
+he demonstrated that his specific
+algebraic equation of degree five cannot be solved by
+roots and radicals.
+\bigskip
+
+\noindent
+{\bf{K.3 The Hurwitz-Routh theorem.}}
+Consider a polynomial
+\[ 
+P(z)= z^4+a_1z^3+a_2z^2+a_3z+a_4
+\]
+whose coefficients are real numbers.
+We assign the $4\times 4$-matrix
+
+\[
+A=\begin{pmatrix} a_1&a_3&0&0\\
+1&a_2&a_4&0\\
+0&a_1&a_3&0\\
+0&1&a_2&a_4\end{pmatrix}
+\]
+The matrix has four principal minors. The first is just $a_1$, the second
+$a_1a_2-a_3$ and the third
+\[
+a_4(a_1(a_2a_3-a_1a_4)-a_3^2)
+\]
+The last minor is $\det(A)$.
+With these notations the Hurwitz-Routh theorem for polynomials of degree
+4 asserts that the roots of $P(z)$ all belong to
+the left half-plane if and only if the four minors above are all $>0$.
+A similar criterion holds for polynomials of arbitrary high degree. More precisely,
+consider a polynomial
+
+\[ 
+P(z)= z^n+a_1z^{n-1}+\ldots a_{n-1}z+a_n
+\] 
+with real coefficients.
+The necessary and sufficient condition in order that all roots belong to the 
+half-plane $\mathfrak{Re}(z)<0$
+is expressed by minors of an $n\times n$-matrix $A$
+with elements
+\[
+\alpha_{ik}=a _{2k-i}\tag{*}
+\]
+where $a_0=01$ while $a_\nu=0$ when $\nu<0$ or $\nu>n$.
+For example, with $k=n$ we get a non-zero element in the $n$:th column
+if and only if $2n-i\leq n$ which means that only $i=n$
+is possible, i.e. $\alpha_{nn}=1$ while $\alpha_{in}=0$ when
+$1\leq i\leq n-1$.
+The Hurwitz-Routh theorem asserts that the roots of $P$ belong to the right half-plane
+if and only if all principal minors of the $A$-matrix are positive.
+For a proof we refer to Chapter 11 in [xx] which in addition to 
+this criterion expressed by signs of minors contains w ealth of other results and
+also an extensive historic account where one 
+major contributions in addition to those of Routh and Hurwitz are due to
+Sturm.
+Let us also mention that instead of using the argument principle 
+which involves complex computations, one can
+consider the so called Cauchy index which
+arises when one pursues the real\vvv valued function
+\[
+\frac{\mathfrak {Re}\, P(iy)}{\mathfrak {Im}\, P(iy}
+\]
+where jumps at zeros of the imaginary part
+leads to sign\vvv chains and makes it possible to
+apply the rule of Descartes for zeros of real\vvv valued functions.
+here a very efficient algorithm was discovered and developed by Sturm
+which can be used to determine the number of zeros of a polynomial with
+real
+coefficients in the right and the left
+half\vvv plane. The interested reader should consult chapter 10 in
+the excellent text\vvv book [XX] for further details and
+which in addition gives a very complete account of the extensive 
+theory dealing with positions of zeros of
+polynomials which in general can have complex coefficients.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf\large {Special Integrals.}}
+
+
+\bigskip
+
+
+
+\centerline {\bf{A. The integral of  $e^{-x^2}$}}.
+
+\medskip
+
+\noindent
+Recall that one can use a trick in calculus to evaluate:
+\[ 
+J=\int_0^\infty\, e^{-x^2}\cdot dx\tag{1}
+\]
+Namely,  use polar coordinates
+in the first quadrant which gives
+\[ 
+J^2=\int_0^{\pi/2}\,[\int_0^\infty\, r\cdot e^{-r^2}dr] d\theta=\pi/4
+\]
+Hence we get $J=\sqrt{\pi}/2$.
+If we instead take the
+substitution $x^2\to t$ one gets:
+\[
+ J=\frac{1}{2}\cdot \int_0^\infty  t^{-1/2}\cdot e^{-t}\cdot dt
+\]
+
+ 
+ \noindent
+In general we consider an integral of the form
+\[ 
+J_a=\int_0^\infty t^{-a}\cdot e^{-t}\quad\colon\quad 0<a<1\tag{1}
+\]
+
+
+\noindent
+In (1) we recognize the $\Gamma$-function and conclude that:
+\[ 
+J_a=\Gamma(1-a)\tag{*}
+\]
+
+\medskip
+
+
+\noindent
+This is admitted as an "analytic formula". More precisely
+one should include the
+$\Gamma$-functions in the family of 
+"elementary functions". Of course a computer is needed for numerical values
+as $a$ varies. 
+
+
+
+\bigskip
+
+\centerline {\bf{B. Integrals of rational functions.}}
+
+\medskip
+
+\noindent
+Let $P(z)$ be a polynomial of degree $n\geq 2$ and 
+assume that it has no real zeros which implies that the integral below exists:
+\[ 
+J=\int_{-\infty}^\infty\, \frac{dx}{P(x)}\tag{1}
+\]
+
+\noindent
+Consider the case when the roots of $P(z)$ are simple. Newton's formula gives:
+\[ 
+\frac{1}{P(z)}= \sum_{k=1}^{k=n}\, \frac{1}{P'(\alpha_k)}
+\cdot\frac{1}{z-\alpha_k}\tag{2}
+\] 
+where the sum extends over the roots $\alpha_1,\ldots,\alpha_n$.
+The absolute convergence of (1) implies that we have a limit
+as we integrate over 
+$-R\leq x\leq R$. 
+
+\medskip
+
+\noindent
+{\bf{Exercise.}} Show that
+\[ 
+J=2\pi i\cdot \sum^*\, \frac{1}{P'(\alpha_k)}=
+-2\pi i\cdot \sum_*\, \frac{1}{P'(\alpha_k)}
+\] 
+where the sum is taken over the zero of $P$ in the upper, respectively the lower
+half-plane.
+Conclude that
+one always has
+\[
+\sum_{k=1}^{k=n}\, \frac{1}{P'(\alpha_k)}=0\tag{*}
+\]
+ 
+\medskip
+
+\noindent
+\emph{Hint.}
+Let $\alpha=a+ib$ be a complex number with $b\neq 0$.
+If $b>0$
+there exists a single-valued branch of
+$\log(z-\alpha)$ along the real axis where
+\[
+-\pi<\arg(x-\alpha)<0\tag{1}
+\]
+while $-\alpha$ moves in the lower half-plane.
+It follows that
+\[
+\int_{-R}^R\, \frac{dx}{x-\alpha}=
+\log(R-\alpha)-\log(-R-\alpha)=
+\log\,\frac{|R-\alpha|}{(R+\alpha|}+
+i\cdot (\arg(R-\alpha)-\arg(-R-\alpha))
+\]
+From (1) the reader may verify that
+\[ 
+\lim_{R\to\infty}\, \arg(R-\alpha)=0\quad\text{and}\quad
+\lim_{R\to\infty}\, \arg(-R-\alpha)=-\pi
+\]
+At the same time we notice that
+\[
+\lim_{R\to\infty}\,\log\,\frac{|R-\alpha|}{(R+\alpha|}=0
+\]
+It follows that
+\[
+\lim_{R\to\infty}\, \int_{-R}^R\, \frac{dx}{x-\alpha}= \pi i
+\]
+In the case $\alpha=a+ib$ where $b<0$ the reader can verify that
+the limit integral instead takes the value $-\pi i$.
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf{C. The integral $\int_0^\infty\, \frac{dx}{P(x)}$}}
+\bigskip
+
+\noindent
+Assume as above that the zeros of $P$ are simple and non-real.
+Removing the half-line $0\leq x<\infty$
+from the complex plane we obtain  a single value branch of $\log z$
+whose imaginary part stays in $(0,2\pi)$.
+Now we apply residue calculus to the function
+\[ 
+g(z)=\log z\cdot \frac{1}{P(z)}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Explain how to choose suitable contours and use that
+$\log z$ after one positive turn around the origin changes
+the branch by adding $2\pi i$ to get the formula:
+\[
+-2\pi i\cdot \int_0^\infty\, \frac{dx}{P(x)}=2\pi i\cdot
+\sum\,\mathfrak{res}_{z=\alpha_k}(\log z\cdot \frac{1}{P(z)})\tag{*}
+\]
+where the residue sum is taken over all zeros of $P$.
+
+\medskip
+
+
+
+
+
+
+\noindent
+{\bf{C.1 Example.}} Consider  the special case $P(z)= z^2+1$. Now
+\[ 
+\frac{1}{xz^2+1}=\frac{1}{2i}\cdot [\frac{1}{z-i}-\frac{1}{z+i}]
+\]
+It follows tha the residue sum becomes
+\[ 
+\frac{1}{2i}\cdot 
+(\log i-\log (-i))=\frac{1}{2i}\cdot (\pi i/2-3\pi i/2)=
+-\pi/2
+\]
+Taking the minus sign into the account in (*) we conclude that
+\[ \int_0^\infty\,\frac{dx}{1+x^2}=\pi/2
+\] 
+which confirms  a wellknown formula in calculus.
+
+
+
+
+\bigskip
+
+\centerline{\bf{D. The integrals $\int_{-\infty}^\infty\, \frac{e^{ia x}\cdot dx}{P(x)}$}}
+\bigskip
+
+\noindent
+Assume that $P$ has no real zeros and of degree $\geq 2$.
+When $a$ is a real number it is clear that  the integral above exists.
+Let us consider  the case $a>0$.
+The entire  analytic function
+$e^{iaz}$ is small in the upper half-plane since
+\[
+|e^{ia(x+iy)}|= e^{-ay}
+\]
+Assume that the complex roots
+of $P$ are simple
+and consider its fractional decomposition.
+Then  the integral in (D) becomes
+\[ 
+\lim_{R\to\infty}\, \sum\, \frac{1}{P'(\alpha_k)}
+\cdot \int_{-R}^R\, \frac{e^{iax}\cdot dx}{x-\alpha_k}
+\tag{1}
+\]
+\medskip
+
+\noindent
+{\bf{D.1 Exercise.}}
+Show that (1) is equal to
+\[ 
+2\pi i\cdot \sum^*\, \frac{e^{ia\cdot \alpha_k}}{P'(\alpha_k)}
+\tag{2}
+\]
+where $\sum^*$ extends over those $k$ for which
+$\mathfrak{Im}(\alpha_k)>0$.
+\medskip
+
+\noindent
+{\bf{D.2 Example.}}
+Consider the case $P(x)=x^2+1$.
+Then $\alpha_1=i$ is the sole simple root in the upper half-plane and we get
+\[ 
+\int_{-\infty}^\infty\, \frac{e^{iax}\cdot dx}{1+x^2}=
+2\pi i\cdot c_1\cdot e^{-a}=\pi\cdot e^{-a}
+\] 
+
+
+\medskip
+
+
+\noindent
+{\bf{D.4 Exercise.}} Let $a<0$ and assume that  
+the zeros of $P(z)$ which belong to
+the lower half-plane are all simple.
+Show that in this case the integral (1) becomes
+\[
+-2\pi i\cdot \sum_*
+\, \frac{e^{ia\cdot \alpha_k}}{P'(\alpha_k)}
+\]
+where the sum extends over zeros with
+$\mathfrak{Im}(\alpha_k)<0$.
+The reader should explain why a minus sign  occurs
+by the aid of a figure and the orientation of the
+continuous which is used when the residue formula is applied.
+
+
+\medskip
+
+
+
+
+
+
+\centerline{\bf{E. Principal value integrals.}}
+\bigskip
+
+\noindent
+Outside $x=0$ we have the odd function $\frac{1}{x}$
+which entails that
+\[
+\int_{-1}^{-\epsilon}\,\frac{dx}{x}+
+\int_\epsilon ^1\frac{dx}{x}=0
+\]
+From this it is clear that the limit below exists for
+every $C^1$-function
+$g(x)$ on $[0,1]$:
+\[ 
+\lim_{\epsilon\to 0}\, \int_{\epsilon<|x|<1}\, \frac{g(x)\cdot dx}{x}
+\]
+
+
+\noindent
+In general, let $P(x)$ be a polynomial of some degree
+$k\geq $ whose zeros are all real and simple.
+Using principal values we can define the integral
+\[ 
+\text{PV}\, \int_{-\infty}^\infty\, \frac{dx}{P(x)}\tag{1}
+\]
+To compute (1) we consider the
+function $g(z)=\frac{1}{P(z)}$ which is analytic in the upper half-plane
+and integrated along
+a large half-circle  of radius $R$,
+and along the real axis where small intervals around each real root
+are replaced by half-circles of radius $\epsilon$.
+\medskip
+
+\noindent
+{\bf{E.1 Exercise.}}
+Draw a figure to illustrate the contour integral of $g(z)$ which is used above.
+Next, the complex line integral of $g$ along this contour is zero.
+The definition of the principal value integral shows that
+(1) is equal to the limit
+\[
+\sum\,\int_0^\pi\, \epsilon\cdot \frac{e^{i\theta}\cdot i d\theta}
+{P(a_k+\epsilon\cdot e^{i\theta})}=\pi\cdot \sum\, \frac{1}{P'(a_k)}\tag{*}
+\]
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline {\bf{F. The integral $J=\int_0^\infty\,\frac{T(\sin x)}{P(x)}\cdot dx$}}
+
+\bigskip
+
+\noindent
+Let $P(x)$ be a polynomial of  degree $N\geq 2$
+whose zeros are all real and simple. Set
+\[ 
+T(x)=\sum_{\nu=1}^{\nu=m}\, c_\nu\cdot \sin(\nu x)
+\]
+where $\{c_\nu\}$ are real and 
+assume that $T(a_k)=0$ holds for each
+real zero of $P$.
+To compute the integral in (F)
+we consider the analytic function
+\[
+g(z)=\sum\, c_\nu\cdot e^{i\nu z}\cdot \frac{1}{P(z)}\tag{1}
+\]
+Take a complex line integral over a contour
+which consists of a large half-circle $\{|z|=R\}$
+in the upper half-plane  and on $-R\leq x\leq R$ we replace small 
+intervals around the zeros $\{a_k\}$ by small half-circles.
+If $\Gamma_{R,\epsilon}$ denotes the contour we get
+\[
+0=\int_{\Gamma_{R,\epsilon}}\, g(z)\cdot dz\tag{2}
+\]
+Next, in the upper half plane
+the imaginary part of $g$  is small which  implies that
+\[ 
+\lim_{R\to+\infty}\, \int_0^\pi g(Re^{i\theta})\cdot iRe^{i\theta}\cdot d\theta=0\tag{3}
+\]
+
+
+\noindent
+{\bf{F.1 Exercise.}}
+Conclude from the above that one has
+the formula
+\[
+\int_{-\infty}^\infty\, 
+\frac{T(\sin x)}{P(x)}\cdot dx=
+\lim_{\epsilon\to 0}\mathfrak{Im}\,[
+\sum_{k=1}^{k=N}\, \int_0^\pi\, g(a_k+\epsilon\cdot e^{i\theta})\cdot
+i\epsilon\cdot e^{i\theta}\cdot d\theta\,]\tag{1}
+\]
+
+
+\noindent
+Show also that
+for each real zero $a_K$ one has
+the formula
+\[
+\lim_{\epsilon\to 0}\mathfrak{Im}\,[
+\int_0^\pi\, g(a_k+\epsilon\cdot e^{i\theta})\cdot
+i\epsilon\cdot e^{i\theta}\cdot d\theta\,]=
+\mathfrak{Im}\bigl [\,\sum\, c_\nu e^{i\nu a_k}\cdot\frac{1}{P'(a_k)}\cdot \pi i\bigr ]\tag{2}
+\]
+
+
+\noindent
+Finally, since $\{c_\nu\}$ are real and $P'(a_k)$ also is real
+we see that the last term becomes
+\[
+\frac{\pi}{P'(a_k)}\cdot \sum\, c_\nu\cdot \cos(\nu a_k)\tag{3}
+\]
+
+
+\noindent
+Hence we have established the formula
+\[
+\int_{-\infty}^\infty\,\frac{T(\sin x)}{P(x)}\cdot dx=
+\sum_{k=1}^{k=N}\, \frac{\pi}{P'(a_k)}\cdot T(\cos a_k)\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{F.2 Exercise.}}
+Above we assumed that the degree of $P$ is $\geq 2$. Show that the same formula
+as in (*)  holds if
+$P$ is linear, i.e is of the from
+$x-a_1$ for some real $a_1$.
+In particular consider the case   $a_1=0$ and the sine-function $\sin x$. 
+Then the general formula (*)  gives
+\[
+\int_{-\infty}^\infty\,\frac{\sin x}{x}\cdot dx=\pi
+\]
+
+
+\bigskip
+
+\centerline{\bf{G. Adding complex zeros to $P$}}
+
+\bigskip
+
+\noindent
+Above the zeros of $P$ were  real and simple.
+Suppose now that $P$  has some  non-real roots occur 
+which 
+appear in conjugate pairs.
+In this case the calculation are the similar to those   in (F),  except that we
+also get residues from zeros of $P$ in the upper half-plane.
+More precisely, the line integrals of $g$ over
+$\Gamma_{R,\epsilon}$ from (F:1) are no longer zero.
+With $R$ large and $\epsilon$ small the contour
+$\Gamma_{R,\epsilon}$ contains all
+zeros of $P(z)$ i the open upper half-plane.
+Let us assume that  these zeros are simple and denote them
+by
+$\beta_1,\ldots,\beta_M$. So here
+$\mathfrak{Im}(\beta_\nu)>0$ for each $\nu$.
+Each $\beta$-root gives a residue
+\[ 
+2\pi i\cdot 
+\frac{1}{P'(\beta_j)}\cdot
+\sum\, c_\nu e^{i\nu\cdot\beta_j}\tag{1}
+\]
+Here we shall take the imaginary part
+to get a contribution.
+The result is that in the
+formula (*) from (F)  one adds a term in the right hand side which becomes
+\[
+2\pi\sum_{j=1}^{j=M}\, 
+\mathfrak{Re}[\frac{1}{P'(\beta_j)}\cdot
+\sum\, c_\nu e^{i\nu\cdot\beta_j}]\tag{**}
+\]
+
+\medskip
+
+\noindent
+{\bf{G.1 Example.}}
+Consider the case $P(x)=x(x^2+1)$ and $T(x)=\sin x$.
+We get the root $\beta_1=i$ and  notice that
+$\frac{1}{P'(\beta_1)}\cdot
+e^{i\cdot\beta_1}=\frac{1}{2i^2}\cdot e^{-1}=-\frac{1}{2e}$ which gives
+\[ 
+\int_{-\infty}^\infty\, \frac{\sin x\cdot dx}{x(1+x^2)}=
+\pi-\frac{\pi}{e}
+\]
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{H. The integral $\int_0^\infty\, \frac{x^a}{1+x^2}\cdot dx$}}.
+
+
+\noindent
+Let $0<a<1$. To find the integral above
+use the
+function $z^a$ 
+which under analytic continuation in the upper half-plane reaches the negative real
+axis where we have
+\[
+ (-x)^a=x\cdot e^{\pi i a}\quad\colon\quad x>0\tag{1}
+ \]
+At the same time $\frac{1}{1+z^2}$ has a simple pole at $z=i$.
+So if $J$ is the value of the integral in (H:1) we obtain:
+\[
+ J(1-e^{\pi ia})=2\pi i\cdot \mathfrak{res}(\frac{z^a}{1+z^2}:i)
+\]
+At $z=i$ we use that $i= e^{\pi i/2}$ so that $z^a=e^{a\pi i/2}$
+and find that the right hand side above becomes:
+\[ 
+ 2\pi i\cdot \frac{e^{a\pi i/2}}{2i}=\pi\cdot e^{a\pi i/2}\implies
+ \]
+\[ 
+J=\pi\cdot\frac{e^{a\pi i/2}}{1-e^{\pi ia})}=
+2\cdot \pi\cdot\sin\, (\pi a/2)\tag{*}
+\]
+
+
+
+\noindent
+{\bf{H.1 Exercise.}}
+Use the methods from XX and explain a formula for the integral
+\[
+\int_0^\infty\,\frac{x^a\cdot dx}{P(x)}
+\]
+when $P$ is a polynomial of degree $\geq 2$ and without
+real zeros.
+\medskip
+
+\noindent
+{\bf{H.2 The case when $P$ has negative real zeros.}}
+If this occurs one uses another method. The strategy
+is to take a complex integral of
+$g(z)=\frac{z^a}{P(z)}$ which starts with the interval $[\epsilon,R]$ 
+where $\epsilon$ is small and $R$ is large.
+Then one
+takes the circle $|z|=R$ and after one turn
+one integrates back from $x=R$ to $x=\epsilon$.
+Finally a small integral is taken over $|z|=\epsilon$ and  the reader should illustrate
+the whole construction by a figure.
+\medskip
+
+\noindent{\bf{H.3 Exercise.}}
+If $\Gamma_{\epsilon,R}$ is the contour described above then
+it borders a simply connected domain where a single-valued branch of $z^a$ exists.
+Then we can apply the residue formula  and the reader should verify that
+\[
+(1-e^{2\pi a i})\cdot J= 2\pi i\sum\,\mathfrak{res}(g(z):\alpha_k)
+\] 
+where the sum is taken over all zeros of $P$.
+
+
+\noindent{\bf{H.4 Exercise }}
+Consider the case $P(x)=(x+1)^2$ which  has a double zero at $x=-1$.
+Use the formula above to show that
+
+\[ 
+\int_0^\infty\, \frac{x^a \cdot dx}{(x+1)^2}=\frac{\pi a}{\sin(\pi a)}
+\]
+
+
+
+
+
+\bigskip
+
+\centerline {\bf{I. Use of the Log-function.}}
+
+
+\medskip
+
+\noindent
+Consider the integral
+\[
+J=\int_0^\infty\,\frac{dx}{1+x+x^5}
+\]
+To compute it  we consider the multi-valued analytic function
+\[ 
+g(z)= \frac{\log z}{1+z+z^5}
+\]
+Start the integration on the real $x$-axis from
+0 to $R$ and continue the complex line integral over
+the large circle $|z|=R$ and after one returns from $R$ to $x=0$
+in the negative direction. While this is done we have a new branch of the log-function, i.e.
+it is now $\log x+2\pi\cdot i$.
+Taking the negative direction into the account during the
+last integration along the non-negative $x$-axis it follows that
+\[ 
+2\pi i\cdot J=-2\pi i\cdot \sum\,\mathfrak{res}\bigl( \frac{\log z}{1+z+z^5}\bigr)\tag{*}
+\]
+
+
+\noindent
+Notice the minus sign above !
+\medskip
+
+\noindent
+{\bf{I.1 A simpler example.}} Suppose above that 
+we instead take the polynomial $1+z^2$. It has simple roots at i and $-i$.
+Now
+
+\[ 
+\log i=\pi\cdot i/2\quad\text{and}\quad \log -i=3\pi\cdot i/2
+\]
+The sum of residues therefore becomes
+
+\[
+\frac{\pi\cdot i/2}{2i}+ \frac{3\pi\cdot i/2}{-2i}=\frac{\pi}{2}
+\]
+Thanks to the minus sign in (*) above we conclude that
+
+\[
+\int_0^\infty\,\frac{dx}{1+x^2}= \frac{\pi}{2}
+\]
+This reflects a wellknown formula which can be established directly, i.e
+use that $\frac{1}{1+x^2}$ is the derivative of the arctg-function.
+But it is 
+illuminating to see that the general procedure using the multi-valued log-function works.
+
+\bigskip
+
+\centerline{\bf{J. Trigonometric integrals.}}
+
+\medskip
+
+\noindent
+A  trigonometric  polynomial is
+of  the form
+$P(\theta)= \sum\, c_k\cdot e^{ik\theta}$
+where the coefficients $\{c\uuu k\}$ in general are complex numbers
+and the
+sum extends over a finite set of integers which may be both positive and
+negative.
+Consider a quotient of two such trigonometric polynomials
+\[ 
+R(\theta)=\frac{P(\theta)}{Q(\theta)}
+\] 
+
+
+\noindent
+Assume that $Q(\theta)\neq 0$ for all $0\leq\theta\leq 2\pi$
+and put:
+\[ 
+J_R=\int_0^{2\pi} R(\theta)\cdot d\theta\tag{*}
+\]
+To find (*) we use the substitutions
+$e^{ik\theta}\mapsto z^k$ and obtain:
+\[ 
+J_P=\int_{|z|=1}\, \frac{P(z)}{Q(z)}\cdot \frac{dz}{iz}\tag{**}
+\]
+
+\noindent One must not forget $\frac{1}{iz}$ which appears since
+\[
+ie^{i\theta}\cdot d\theta=dz\implies d\theta=\frac{dz}{iz}
+\]
+
+\noindent
+If $M$ is a sufficiently large integer then
+\[
+Q(z)=z^{-M}\cdot Q_*(z)\quad\text{and}\quad P(z)=z^{-M}\cdot P_*(z)\tag{1}
+\] 
+where $P_*$ and $Q_*$ are polynomials in $z$.
+Using (1) there remains to evaluate
+\[ 
+\int_{|z|=1}\, \frac{P_*(z)}{Q_*(z)}\cdot \frac{dz}{iz}\tag{2}
+\]
+
+\noindent
+Usually one picks residues in the open unit disc $D$. However, there are cases when
+$Q_*$ has many zeros in $D$ and then one can 
+use residue calculus in the exterior disc.
+More precisely, choose a large positive number $r$
+so that
+$\{|z|<r\}$ contains all zeros of $P_*$ and $Q_*$.
+Let $m(P_*)$ and $m(Q_*)$ be the degrees of the polynomials.
+If $m(P\uuu *)<m(Q\uuu *)$
+the 
+the integral (*) becomes
+\[
+2\pi\cdot \sum\,\mathfrak{res}(R(\alpha\uuu k)
+\]
+with the sum taken over zeros of $Q*$ in the exterior disc $|z|>1$.
+
+
+\newpage
+
+\noindent
+{\bf{J.1 Experiment with a computer.}}
+It is instructive to perform a calculation via residues and 
+compare the result by  a  computer which provides a
+numerical  answer within a fraction of
+a
+second.
+Consider for example the integral
+\[
+J=\int_0^{2\pi}\,\frac{d\theta}{1+a\cdot\cos\theta}
+\] 
+where $a$ is a complex number with absolute value $<1$. Then
+\[ 
+J=\frac{1}{i}\cdot \int_{|z|=1}\,\frac{2z dz}{2z+az^2+a}
+\]
+The quadratic polynomial has a simple zero $\alpha\in D$ and
+residue calculus gives the formula below which after can be solved numerically for
+different values of $0<a<1$.
+\[ 
+J=2\pi \cdot \frac{\alpha }{1+a\alpha}
+\]
+
+
+\medskip
+
+
+\centerline {\bf{K. Summation formulas.}}
+\medskip
+
+\noindent
+Consider the meromorphic function
+\[ 
+g(z)=\frac{\cos\pi z}{\sin\pi z}\tag{1}
+\]
+It has simple poles at all integers.
+Notice that $g$ can be written as
+\[
+i\cdot\frac{e^{i\pi z}+e^{-i\pi z}}{e^{i\pi z}-e^{-i\pi z}}\tag{2}
+\]
+
+
+\noindent
+{\bf{K.1 Exercise.}}
+Show that there exists a constant $A_1$ such that
+the following  holds for all integers $N$ and every
+real number $s$:
+\[ 
+\bigl|g((N+1/2)i+is)\bigr|\leq A_1\tag{*}
+\]
+\noindent
+Show also that there exists a positive constant $A_2$
+such that the following hold when
+$z=x+iy$ and  $|y|\geq 1$:
+\[ 
+|g(x+iy)\leq A\quad\tag{**}
+\]
+Thus, the $g$-function is bounded when we stay away a bit from the real axis.
+Using (*) and (**) 
+we can establish various summation formulas.
+In general, let $p$ and $q$ be two polynomials where we assume
+that $\deg(p)\geq \deg(q)+1$ and that $p$ has no real zeros.
+If $N$ is a positive integer
+and $R>\geq 1$ we consider the rectangle
+\[
+\square_{R,A}=
+\{-N-1/2<x< N+1/2\}\times \{-R<y<R\}
+\]
+Here $N$ and $R$ are chosen so that this rectangle contains all  zeros
+$\{\alpha_\nu\}$
+of
+$p$.
+Then Cauchy's residue formula is applied when we integrate
+$\frac{q}{p}\cdot g$ over the boundary of this rectangle.
+The result is
+\[
+\frac{1}{2\pi i}\int_{\partial\square_{R,A}}\,\frac{q(z)}{p(z)}\cdot g(z)\cdot dz=
+\pi\cdot \sum_{k=-N}^{k=N}\,  \frac{q(k)}{p(k)}
++\sum \mathfrak{res}(\frac{q}{p}\cdot g: \alpha_\nu)\tag{***}
+\]
+\medskip
+
+
+\noindent
+{\bf{K.2 Exercise.}}
+Assume that $\deg(p)\geq\det(q)+1$.
+Show that the line integrals over $\partial\square_{A,R}$ tend to zero when
+$A>>R>>1$ and conclude that one has the general summation formula:
+\[
+\pi\sum_{k=-\infty}^{k=\infty}\,  \frac{q(k)}{p(k)}=
+-\mathfrak{res}(\frac{q}{p}\cdot g: \alpha_\nu)\tag{****}
+\]
+
+
+\noindent
+{\bf{Remark.}}
+Consider as an example the case $p(z)=z-i$.
+Then the left hand side becomes
+
+\[ 
+\pi[-\frac{1}{i}+\sum_{k=1}^\infty\, (\frac{1}{k-i}-\frac{1}{k+i})]=
+-\cot(i)=i\cdot\frac{e^\pi+e^{-\pi}}{e^{\pi}-e^{-\pi}}\implies
+\]
+\[
+\pi\cdot [1+\sum_{k=1}^\infty\frac{2}{1+k^2}]=\frac{e^\pi+e^{-\pi}}{e^{\pi}-e^{-\pi}}\
+\]
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf{L. A Fourier integral.}}
+
+\medskip
+
+\noindent
+We shall calculate an integral which is used in
+certain Tauberian  theorems. 
+The  formula in (**) below  
+is used to calculate certain Fourier transforms 
+and gives rise to highly non-trivial limit formulas in
+Wiener's study of
+Tauberian theorems.
+The computations below illustrate
+that one is sometimes confronted with extra difficulties
+in order to handle singular log-functions.
+Our aim is to find a formula for the  integral:
+\[
+J(s)=
+\int_0^\infty \frac{\log\,|1-x^2|}{x^2}\cdot x^{is}dt\quad\colon\quad s>0\tag{*}
+\]
+Since the absolute value $|x^{is}|=1$ and
+$\log(1-x^2)\simeq -x^2$ when $x$ is small we see that the integral converges.
+But it is not clear how to compute
+it via residue calculus. However, we shall see that this can be done after a number of steps.
+In the upper half-plane  there exists an analytic function
+defined by:
+\[ 
+g(z)=
+\frac{\log\,(1-z^2)}{z^2}
+\cdot z^{is}\tag{1}
+\]
+Here the single valued branch of $\log\,(1-z^2)$
+is chosen so that its argument belongs to $(-\pi,0)$.
+We have also
+$z^{is}= e^{is\log z}$ 
+where the single valued branch of
+$\log z$ has an argument in $(0,\pi)$ as usual.
+On the positive imaginary axis we get 
+\[
+g(iy)=
+\frac{\log\,(1+y^2)}{y^2}
+\cdot (iy)^{is}=\frac{\log\,(1+y^2)}{y^2}\cdot y^{is}\cdot e^{-\pi s/2}\tag{2}
+\]
+
+\noindent
+After these preparations
+we
+consider the complex line integral of the $g$-function over the closed curve
+given by the real interval $0\leq x\leq R$, the
+quarter-circle $\{z=Re^{i\theta}\colon\, 0\leq\theta\leq \pi/2\}$
+and the imaginary interval from $iR$ to $0$.
+Along the real axis the argument of the log-function changes.
+More precisely we notice that
+the imaginary part of $\log(1-x^2)$ is zero when $0<x<1$ and is $-\pi$
+if $x>1$. From this we obtain
+\[ 
+\lim_{R\to\infty}\, \int_0^R\, g(x)\cdot dx=
+\int_0^\infty \frac{\log\,|1-x^2|}{x^2}
+\cdot x^{is}\cdot dx-
+i\pi\cdot \int_1^\infty\frac{x^{is}\cdot dx}{x^2}\tag{3}
+\]
+
+
+\noindent
+Next,  with $s$ real and positive 
+the absolute value
+$|z^{is}|$ is bounded in the upper half-plane and
+the reader can verify that the line integral of $g$ along the quarter circle tends to zero
+when $R\to+\infty$.
+There remains to consider the line integral along the imaginary
+axis which on the closed contour above is taken in the negative direction.
+Taking this sign into the account together with  (2)  and the vanishing of
+the complex line integral over the whole closed contour we see that (3) is equal to
+\[
+\int_0^\infty\,\frac{\log(1+y^2)}{(iy)^2}
+\cdot y^{is}\cdot idy\tag{4}
+\]
+After a partial integration (4) becomes
+\[
+\frac{1}{is-1}\cdot i\cdot 
+\int_0^\infty \frac{2y}{1+y^2}\cdot y^{is-1}\cdot dy
+=\frac{2}{s+i}\cdot\int_0^\infty \frac{y^{is}\cdot dy}{1+y^2}\tag{5}
+\]
+To calculate the last integral we use that $(-1)^{is}=e^{\pi i\cdot is}=e^{-\pi s}$
+and conclude that
+\[
+(1+e^{-\pi s})\cdot \int_0^\infty \frac{y^{is}\cdot dy}{1+y^2}=
+\int_{-\infty}^\infty \frac{y^{is}\cdot dy}{1+y^2}\tag{6}
+\]
+The last integral is found by residue calculus and 
+as a consequence the reader may verify that (4) becomes
+\[
+\frac{2}{s+i}\cdot \frac{1}{1+e^{-\pi s}}\cdot
+2\pi i\cdot \frac{i^{is}}{2i}=\frac{2}{s+i}\cdot \frac{1}{1+e^{-\pi s}}\cdot
+\pi\cdot e^{-\pi s/2}\tag{7}
+\]
+\medskip
+
+\noindent
+{\bf{Conclusion.}} One has the equality
+
+\[
+\int_0^\infty \frac{\log\,|1-x^2|}{x^2}
+\cdot x^{is}\cdot dx
+=\frac{i\pi}{1-is}+\frac{2\pi}{s+i}\cdot\frac{1}{
+e^{\pi s}+e^{-\pi s}}\tag{**}
+\]
+Notice that the right hand side is zero when $s=0$
+which  gives
+\[
+\int_0^\infty \frac{\log\,|1-x^2|}{x^2}
+\cdot dx=0\tag{**}
+\]
+
+\bigskip
+
+
+\centerline{\bf{M. Multi-valued integrands.}}
+
+\medskip
+
+\noindent
+A more involved study arises 
+when
+the integrands are branches of multi-valued functions 
+and one seeks values which depend upon parameters.
+Let us give an example.
+\[
+J(z)=\int_0^1\, \frac{dt}{\sqrt{t(z-t)}}\tag{*}
+\]
+When $z$ is real and $>1$ we can evaluate the integral as in ordinary
+calculus. In the half-plane $\mathfrak{Re}(z)>1$ we see that
+$J(z)$ is an analytic function of $z$
+whose complex derivative becomes
+\[
+J'(z)=-\frac{1}{2}\cdot \int_0^1\, \frac{dt}{\sqrt{t(z-t)^3}}\tag{**}
+\]
+
+
+\noindent
+It turns out
+that  $J(z)$ extends to an analytic function
+where the sole branch points are 0 and 1.
+To begin with we  can choose a single valued branch of $\sqrt{z-t}$ when
+$\mathfrak{Im}(z)>0$ so that $J(z)$ is analytic in the upper half-plane.
+Less obvious is that $J$ extends analytically across the open real interval $0<x<1$.
+One can prove this using a deformation of the contour  which defines $J$, i.e. replace
+$[0,1]$ by curves in the complex $t$-plane which joint 0 and 1.
+Examples of  deformation   the
+contour
+during the analytic continuation
+of the $J$-function
+appear in the classic literature. It was for example used by Hermite and
+appears in many text-books devoted to
+algebraic functions. See for example the
+excellent
+material in
+Paul Appel's books which  contains
+a wealth of examples related to integrals on algebraic curves and
+especially so called hyper-elliptic integrals.
+\medskip
+
+\noindent{\bf{Use of $\mathcal D$-module theory.}}
+A method which avoids the rather involved deformation of contours
+to achieve the analytic continuation
+goes back to
+Fuchs, and was  later
+put forward in a much wider context
+in lectures by Pierre Deligne at Harvard University in 1967,
+inspired by  deep  studies by Nils Nilsson
+from the article  [Nilsson-1965]
+which
+deals with  
+integrals over algebraic chains in
+higher dimensions and
+leads to the notion of  Nilsson class functions.
+Here we stay in dimension one and begin to  seek a 
+differential operator $Q(z,\partial_z)$ with polynomial coefficients
+which annihilates the $J$-function.
+Set $\nabla=z\partial_z$ which gives
+
+\[
+-\nabla(J)=
+\frac{1}{2}\cdot \int_0^1\, \frac{(z-t)dt}{\sqrt{t(z-t)^3}}+
+\frac{1}{2}\cdot \int_0^1\, \frac{t\cdot dt}{\sqrt{t(z-t)^3}}=
+\frac{J}{2}+\frac{1}{2}\int_0^1\, \frac{\sqrt{t}\cdot dt}{(z-t)^\frac{3}{2}}
+\]
+\medskip
+
+\noindent
+In the last integral  we perform a partial integration with respect to $t$
+and obtain
+\[
+\sqrt{t}\cdot\frac{1}{\sqrt{z-t}}|_0^1
+- \frac{1}{2}\int_0^1\, \frac{dt}{\sqrt{t\cdot (z-t)}}\implies
+\nabla(J)=-\frac{1}{\sqrt{z-1}}\tag{*}
+\]
+It follows that $J$
+extends to a multi-valued function outside 0 and 1. Since
+\[
+(z-1)\partial(z-1)^a=a(z-1)^a
+\] 
+for all $a$ it follows from (*) that
+\[
+[(z-1)\partial+1/2]\cdot \nabla(J)=0\implies
+\]
+\[
+(z-1)z\cdot \partial^2(J)+\frac{3}{2}\cdot \nabla(J)-\partial(J)=0\tag{*}
+\] 
+
+\medskip
+
+\noindent
+{\bf{Exercise}}
+Investigate the multi-valued
+behavior of $J$ around 0 and 1.
+More precisely, $J$ generates a Nilsson class function of rank
+2 and as described in Chapter 4 this leads to
+the local monodromy expressed by $2\times 2$-matrices
+at each of these ramification points.
+
+\bigskip
+
+\centerline{\bf{L. Multi\vvv valued Laplace integrals.}}
+
+\bigskip
+
+\noindent
+Let $k\geq 1$ and  $a\uuu 1,\ldots,a\uuu k$ is some
+$k$\vvv tuple of distinct points in
+${\bf{C}}$. Let us also consider another $k$\vvv tuple of non-zero complex numbers
+$\lambda\uuu 1,\ldots,\lambda\uuu k$.
+In the complex $w$-plane
+we have the multi-valued analytic function
+\[
+g(w)=\prod\, (w\vvv a\uuu \nu)^{\lambda\uuu\nu}
+\]
+defined in the complement of the set of $a$-points.
+If say $\lambda_1$ is not an integer then analytic continuation of
+$g$ along a small circle centered at $a_1$
+changes local branch....
+Let us now consider a simple curve
+$C$ in $\Omega$
+which contains two infinite pieces
+$w=t+ib^*$ and $w=t+ib_*$ where $-\infty<t\leq a$.
+Along $C$ we choose some  single valued branch of the function in (*)
+denoted by $g_C(w)$.
+If $z$ is a new complex variabve whose real part is $<0$
+we get an absolutely convergent integral
+cand it is clear that $J(z)$ is analytic in
+$\mathfrak{Re}(z)>0$.
+Moreover, the complex derivative
+\[
+ J_C(z)=
+ \int\uuu {C\uuu R}\, e^{zw}\cdot g_C(w)\, dw\tag{1}
+\]
+\[
+ J_C'(z)=
+ \int\uuu {C\uuu R}\, e^{zw}\cdot w\cdot g_C(w)\, dw\tag{2}
+\]
+We can also perform a partial
+integration and the reader may check that
+\[
+-z\cdot J(z)= \int\uuu {C\uuu R}\, e^{zw}\cdot \partial_w(g_C)(w)\, dw\tag{3}
+\]
+We can also replace the unbounded curves above by
+closed Jordan curves $\Gamma$ as long as they do not contain any
+$a$-point. Here it is obvious that 
+\[
+ J_\Gamma(z)=
+ \int\uuu {\Gamma}\, e^{zw}\cdot g_\Gamma(w)\, dw
+\]
+is an entire function of $z$.
+However,
+during the analytic continuation of
+$g$ along $\Gamma$, it may occur that
+it takes distinct values after one full turn.
+In this case (3) does not hold.
+ 
+
+
+
+
+
+
+
+Next, the multi-valued function in (*) is a solution to a first
+order differential equation. More precisely, in the
+Weyl algebra of differential operators in the
+$w$-variable we set
+\[
+Q(w,\partial_w)=q(w)\partial_w+\sum\,\lambda_\nu\cdot f_\nu(\lambda)
+\]
+and then $Q(g_C)=0$ holds.
+Int the Weyl algebra  of the $z$-variable we associate the
+differential operator
+\[
+Q^*(z,\partial_z)=-q(\partial_z)\circ z+\sum\,\lambda_\nu\cdot f_\nu(\partial_z)
+\]
+Then (x-xx) entail that
+$Q^*(J)=0$.
+From the algebraic calculations with differential operators in
+¤xx we can write
+\[
+Q^*(z,\partial_z)=-zq(\partial_z)+q'(-\partial_z)+\sum\,\lambda_\nu\cdot f_\nu(\partial_z)
+\]
+\medskip
+
+\noindent
+{\bf{Example. }}
+Let $\alpha$  and $\gamma$ 
+be a pair of non\vvv zero complex numbers and set
+\[
+ Q(w,\partial\uuu w)=(w+w^2)\partial\uuu w+2w\vvv\gamma w+1
+ \vvv\alpha
+ \]
+Then we obtain 
+\[
+Q^*(z,\partial\uuu z)=z\cdot \partial^2+(\gamma\vvv z)\partial \vvv \alpha
+\]
+Starting with the $z$-variable we seek null solutions to the second order
+differential operator $Q^*$.
+To get such solutions we
+first introduce the $g$-function which is a null solution to $Q$.
+We try
+\[
+g(w)= w^a(1+w)^b
+\]
+Then we obtain
+\[
+Q(g)=(a(1+w)+bw+2w\vvv\gamma w+1-\alpha)g
+\]
+and this is zero for a unique pair $a,b$.
+With this choice it follows that
+the second order differential operator
+$Q^*$ annihilates $J(z)$.
+From the general results in ¤ xx it follows that
+each choice of $C$ and a branch of (xx) along this 
+curve yields a $J$- function which from the start is analytic in
+the left half-plane and after has an analytic contionuation to
+the punctured $z$-plane where it satisfies the
+equation $Q^*(J)=0$.
+So one is led to analyze the null solutions of $Q^*$.
+ 
+
+
+
+In as complex $w$\vvv plane we consider the simple curve
+$C\uuu R$ which consists of the half circle
+$\{w= Re^{i\theta}\quad \vvv \pi/2\leq \theta\leq \pi/2\}$
+and the two horizontal  lines 
+\[
+\ell*(R)= w=
+\{t\vvv iR\quad \vvv \infty<t\leq 0\}\quad\text{and}\quad
+\ell^*(R)= \{t+iR\quad \vvv \infty<t\leq 0\}
+\]
+Her $R$ is chosen so large that the absolute values
+$|a\uuu \nu|<R$  for each $\nu$.
+In a neighborhood of $w=R$ we get local branches of the complex powers
+$w^{\lambda\uuu \nu}$, i.e. with $w=R+\zeta$ and $\zeta$ small one has
+\[
+(R+\zeta)^{\lambda\uuu\nu}= e^{\lambda\uuu\nu\cdot \log(R+\zeta)}
+\]
+and the branch is chosen so that the value when $\zeta=0$ is
+the ordinary complex exponential
+$e^{\lambda\uuu\nu\cdot \log(R}$ where $\log R$ is real.
+Now each function $w^{\lambda\nu}$ extends analytically along $C\uuu R$
+and if $z$ is another complex variable whose real part is $<0$
+we see that there exists a convergent integral
+
+\[
+ J(z)=
+ \int\uuu {C\uuu R}\, e^{zw}\cdot
+ \prod\, (w\vvv a\uuu \nu)^{\lambda\uuu\nu}
+ \cdot dw\tag{*}
+\]
+It is clear that this $J$\vvv function is analytic in the half\vvv plane
+$\mathfrak{Re}\, z>0$. 
+In general $J(z)$ does not extend to an entire function.
+Consider as an example the case $k=1$ with $a\uuu 1=0$
+and set $\lambda=\lambda\uuu 1$. So here
+\[ 
+J(z)=\int\uuu {C\uuu R}\, e^{zw}\cdot w^\lambda\cdot dw
+\]
+When $z=x$ is real and positive we can perform the
+variable substitution $w\mapsto u/x$ and get
+\[ 
+J(x)=
+x^{\vvv \lambda\vvv 1}
+\int\uuu {C\uuu {Rx}} e^u\cdot u^\lambda\cdot du
+\]
+The integral above is expressed  via the
+$\Gamma$\vvv function, i.e. 
+\[
+J(x)=
+x^{\vvv \lambda\vvv 1}\cdot \frac{2\pi i}{\Gamma(\vvv \lambda)}
+\]
+Hence  $J(z)$ extends to the function
+$z^{\vvv\lambda\vvv 1}$ times
+the constant $\frac{2\pi i}{\Gamma(\vvv \lambda)}$.
+So unless $\lambda$ is an integer we get a multi\vvv valued $J$\vvv function.
+For the general case (*) one has
+
+\medskip
+
+\noindent
+{\bf{L.1 Theorem.}} \emph{The $J$\vvv integral extends to
+${\bf{C}}\setminus (a\uuu 1,\ldots,a\uuu k)$
+as  an analytic function
+which in general is multi\vvv valued with ramification points
+or poles  at
+$a\uuu 1,\ldots,a\uuu k$.}
+\medskip
+
+\noindent
+To prove this result one finds a differential 
+equation with polynomial
+coefficients satisfied by $J$, i.e. the efficient procedure is to use
+$\mathcal D$\vvv module technique.
+More precisely, suppose we have found a differential operator
+\[
+Q(w,\partial\uuu w)=\sum\, q\uuu j(w)\cdot \partial^j\uuu w
+\]
+in the Weyl algebra $A\uuu 1$ with respect to the $w$\vvv variable such that
+\[ 
+Q\bigl(  \prod\, (w\vvv a\uuu \nu)^{\lambda\uuu\nu})=0
+\]
+Then we associate the differential operator $Q^*$ in the $z$\vvv variable given by
+\[
+Q^*(z,\partial\uuu z)= \sum\, q\uuu j(\vvv \partial \uuu z)\cdot z^j
+\] 
+\medskip
+
+\noindent
+{\bf{Exercise.}} Show that we get $Q^*(J(z))=0$.
+Then hint is that a partial integration gives
+\[
+zJ(z)= \vvv
+ \int\uuu {C\uuu R}\, e^{zw}\cdot
+\partial\uuu w\bigl( \prod\, (w\vvv a\uuu \nu)^{\lambda\uuu\nu}\,\bigr)
+ \cdot dw\tag{i}
+\]
+At the same time we notice that
+\[
+\partial\uuu z(J)= \int\uuu {C\uuu R}\, e^{zw}\cdot
+w\cdot \prod\, (w\vvv a\uuu \nu)^{\lambda\uuu\nu}\,\bigr)
+ \cdot dw\tag{ii} 
+ \]
+ 
+\noindent
+A computation will show that the differential operator
+$Q^*$ has order $k$ and that the polynomial coefficient in front of
+$\partial\uuu z^k$
+is given by $\prod (z\vvv a\uuu\nu)$ from which
+Theorem L.1 follows.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The computations above can be reversed and lead to integral representations of
+functions which are solution to a differential equation defined by
+$Q^*(z,\partial\uuu z)$ for a suitable $Q^*$.
+A classic case are the confluent hypergeometric functions
+which  are solutions
+to certain differential equations.
+More precisely, let $\alpha$  and $\gamma$ 
+be a pair of non\vvv zero complex numbers. One
+seeks solutions $f(z)$ to the second order equation
+\[ 
+z\cdot \partial^2(f)+(\gamma\vvv z)\dot \partial(f)\vvv \alpha\cdot f=0
+\]
+So here
+\[ 
+Q^*= 
+z\cdot \partial^2+(\gamma\vvv z)\partial \vvv \alpha
+\]
+which in the non\vvv commutative Weyl algebra  can be written in the form
+\[
+\partial^2\cdot z\vvv 2\partial+ \gamma\partial\vvv
+\partial \cdot z+1\vvv \alpha
+\]
+Hence $Q^*$ is associated to the differential operator
+\[
+ Q(w,\partial\uuu w)=w^2\partial\uuu w+2w\vvv\gamma w+w\partial\uuu w+1
+ \vvv\alpha
+ \]
+
+
+
+\newpage
+
+
+
+ 
+
+
+
+\end{document}

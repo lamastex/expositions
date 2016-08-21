@@ -1,0 +1,916 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+
+
+\centerline
+{\bf{On spectra of some compact operators.}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+We shall establish some scattered results aobut
+spectra of linear operators.
+A crucual tool is Carleman's inequality for norms of resolvents
+of matrices, expressed by their Hilbert-Schmidt norm.
+Since this important result is seldom treated in text-books
+devoted to "abstract linear algebra" we have included
+details in a separate appendix.
+In § xx we give an application where one regards
+compact operators on Hlbert spaces.
+In § xx we study a specific case where 
+the positviity of a kernel for an integral and compact operator on
+$L^2[0,1)$ implies that
+the spectral values are qyite ample.
+In § 3 we prove  the Fredolm's resolvents
+yiled entire analytic function whose growth
+is controlled in an optimal fashgion. Here analytic function theory
+intervenes, i.e. the proof relies upon several
+basic results, foremost due to Lindelöf, Phragmén and Wiman.
+
+
+\bigskip
+
+\centerline{\bf{§ 1. On the spectra of compact operators on Hilbert spaces.}}
+\bigskip
+
+\noindent
+Let $\mathcal H$ be a Hilbert space.
+Recall that if  $T$ is a compact operator on 
+$\mathcal H$, then there exists the compact self-adjoint operator
+$\sqrt{T^*T}$. Denote by
+$\{\mu_n(T)\}$ its discrete spectrum
+arranged so that sequence 
+$\{\mu_n(T)\}$ is non-increasing, where eventual 
+multiplicitiesare counted as usual.
+\medskip
+
+\noindent
+{\bf{1.1 Definition.}} \emph{For each $p>0$ we denote by
+$\mathcal C_p$ the class of compact operators on
+$\mathcal H$ such that}
+\[
+\bigl(\sum_{n=1}^\infty \, \mu_n(T)^p\,\bigr) ^{\frac{1}{p}}<\infty
+\]
+\medskip
+
+\noindent
+Next, denote by $\text{sp}(T)$ the set of all vectors
+$x\in\mathcal H$ for which there
+exists some non-zero complex number
+$\lambda$ and some integer $n\geq 1$ such that
+\[
+(\lambda E-T)^n(x)=0\tag{*}
+\]
+\medskip
+
+\noindent
+For  every positive integer $N$ we have operator $T^N$
+and get the image space
+ $T^N(\mathcal H)$.
+We shall find sufficient conditions in order that
+\[
+T^N\mathcal H\subset\text{sp}(T)\tag{**}
+\] 
+holds for some positive integer $N$. To achieve this we shall study 
+the resolvent operator
+\[ 
+R(\lambda)=(\lambda\cdot E-T)^{-1}
+\]
+defined outside the discrete spectrum of $T$.
+Let $\gamma$ be a simple Jordan arc
+which has the origin as one end-point while
+$\gamma^*=\gamma\setminus\{0\}$ stays outside the spectrum of $T$.
+Now  $R(\lambda)$ exists for every $\lambda\in \gamma^*$
+and we can compute  operator norms which leads to:
+\medskip
+
+\noindent
+{\bf{1.2 Definition.}}
+\emph{A Jordan arc $\gamma$ as above is called $T$-escaping of order
+$N$ if there exists a constant $C$ such that}
+\[
+||R(\lambda)||\leq C\cdot |\lambda|^{-N}\quad\colon\quad 
+\lambda\in \gamma_*
+\]
+\medskip
+
+\noindent
+Next, let 
+$\gamma_1,\ldots,\gamma_s$ be a finite family of Jordan arcs as above
+whose  intersections 
+with a small  punctured disc $D^*(\delta)=\{0<|z|<\delta\}$
+gives a disjoint famlily of curves
+$\{\gamma^*_\nu\}$.
+Then 
+$D^*(\delta)$
+is decomposed into  $s$ many pairwise disjoint
+Jordan domains, each of which is bordered by a pair of
+$\gamma^*$-curves.
+Let  $\rho>0$ be some positive number.
+We impose the geometric condition that every  Jordan
+domain above is contained
+in a sector where $\text{arg}(z)$ stays in an interval of
+length
+$<\rho$ as $z$ varies in the Jordan domain.
+Denote by $\mathcal J(\rho)$ the class of all finite families of
+Jordan curves for which
+these sector conditions hold.
+\medskip
+
+
+\noindent
+{\bf{1.3 Theorem.}}
+\emph{Let $T$  be a  compact
+operator of class $C_p$ for some $p>0$ and
+suppose there exists
+a family  $\{\gamma_\nu\}$  
+which belongs to $\mathcal J(\pi/p)$
+where  each $\gamma_\nu$ is $T$-escaping
+order $N$. Then  one has the inclusion}
+
+\[ 
+T^N(\mathcal H)\subset \text{sp}(T)
+\]
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+This theorem  is announced and proved in
+[Dunford-Schwartz: Theorem XI.9.29 on page 1115].
+The first step in the proof  is  straightforward
+reduces the proof to the case
+when the compact operator $T$ is of Hilbert-Schmidt type.
+We remark only that for this reduction one uses
+the fact that $T$ belongs to $C_p$ for some $p>0$.
+The major step is
+to extend 
+Carleman's inequality for matrices from the appendix 
+to  Hilbert-Schmidt operators acting on infinite-dimensional 
+Hilbert spaces. After this one easily finishes 
+the proof is by standard applications of the
+Phragmén-Lindelöf inequalities.
+
+\medskip
+
+\noindent
+{\bf{Example and a question.}}
+Let
+$\mathcal H=L^2[0,1]$ and consider the operator
+$T$  defined by
+\[ 
+T_u(x)=\int_0^1\,
+\frac{k(x,y)\cdot u(y)}{|x-y|^\alpha}\,dy
+\]
+where $1/2<\alpha<1$
+and $k(x,y)$ is a real-valued continuous function on
+the closed unit square.
+Then  $T$ is
+compact and we leave to the reader to verify
+the existence of a $p$-number which depend upon $\alpha$
+such that
+$T$ belongs to the class $C_p$.
+It would be interesting to investigate
+how one can produce integers $N$ to get the inclusion
+in
+Theorem 1.3.
+In such an investigations one can   try 
+specified $k$-functions and in particular regard  the symmetric 
+case when $k(x,y)= k(y,x)$. 
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\centerline{\bf{§ 2. Distribution of eigenvalues for a class of singular operators.}}
+\bigskip
+
+
+\noindent
+Let $f(x,y)$ be a continuous function on the unit square
+$0\leq x,y\leq1 $ which is symmetric, i.e.
+$f(x,y)=f(y,x)$.
+When $0<\alpha<1$
+we set
+\[
+k(x,y)= 
+\frac{f(x,y)}{|x-y|^\alpha}
+\]
+and get the linear operator
+\[
+K_\alpha(u)(x)=\int_0^1\, k(x,y)u(y)\, dy
+\]
+Obne easily verifies that 
+$K_\alpha$ is a compact operator on the
+Hilbert space
+$L^2[0,1]$, and 
+since $k$ is symmetric the eigenvalues are real and non-zero.
+Let $\{\lambda_n^+\}$ be the positive eigenvalues arranged in a non-decreasing order.
+Similarly $\{\lambda_n^-\}$ is the set of negative eigenvalues where
+the sequence $\{-\lambda^-_n\}$ is non-decreasing. 
+The eigenvalues correspond eigenfunctions
+$\{\phi_n^+\}$ and $\phi_n^-\}$. In particular 
+\[ 
+K_\alpha(\phi_n^+)=\lambda_n^+\cdot \phi_n^+
+\]
+
+
+\medskip
+
+\noindent
+{\bf{2.1  Theorem.}} \emph{If $f(x,x)>0$ hold on some open interval $x_0<x<x_1$
+ it follows that}
+ \[ 
+ \sum_{n=1}^\infty\,\bigl(\frac{1}{\lambda_n^+}\bigr)^{\frac{1}{1-\alpha}}=
+ +\infty
+\]
+\medskip
+
+\noindent
+During the proof
+we use the following notation for real-valued functions $u$ in $L^2[0,1]$:
+\[
+\langle K_\alpha u,u\rangle=
+\iint f(x,y)u(x)u(y)\, dxdy
+\]
+and for  a pair of real-valued $L^2$-functions $u,v$ we set
+\[
+\langle u,v\rangle=\int_0^1\, u(x)v(x)\, dx
+\]
+ 
+\medskip
+
+\noindent
+We shall need the following result whose proof is left as an exercise to the reader:
+\bigskip
+
+\noindent
+{\bf{2.2 Proposition.}}
+\emph{For each $u\in L^2[0,1]$ one has the equality}
+\[
+\langle Ku,u\rangle=
+\sum\, \frac{1}{\lambda_n^+}\cdot
+\langle u,\phi_n^+\rangle^2+
+\sum\, \frac{1}{\lambda_n^-}\cdot
+\langle u,\phi_n^-\rangle^2\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof of Theorem 2.1.}
+Let $m$ be a positive integer. Since $\{\lambda_n^-\}$ are negative
+(*) gives:
+\[
+\langle Ku,u\rangle\leq
+\sum_{n=1}^m\, 
+\frac{1}{\lambda_n^+}\cdot
+\langle u,\phi_n^+\rangle^2+
+\sum_{n=m+1}^\infty\, 
+\frac{1}{\lambda_n^+}\cdot
+\langle u,\phi_n^+\rangle^2
+\]
+
+
+\noindent
+Since $\{\lambda_n^+\}$ is non-decreasing the last sum above is majorized by
+\[
+\frac{1}{\lambda_m^+}\cdot
+\sum_{n=m+1}^\infty\, 
+\langle u,\phi_n^+\rangle^2\leq \frac{1}{\lambda_{m+1}^+}\cdot \langle u,u\rangle
+\]
+where the last inequality follows from Bessel's inequality since
+the eigenfunctions $\{\phi_n^+\}$ form an orthonormal family.
+Hence the following inequality holds for every positive integer $m$:
+\[
+\langle Ku,u\rangle\leq
+\sum_{n=1}^m\, 
+\frac{1}{\lambda_n^+}\cdot
+\langle u,\phi_n^+\rangle^2+\frac{\langle u,u\rangle}{\lambda_{m+1}^+}\tag{i}
+\]
+\medskip
+
+\noindent
+Let $\psi_1,\ldots,\psi_m$ be some
+orthonormal $m$-tuple in $L^2[0,1]$.
+We can apply (i) to each $\psi$-function and a summation over 
+$1\leq k\leq m$ gives:
+
+\[
+\sum_{k=1}^{k=m}\, 
+\langle K\psi_k,\psi_k\rangle\leq
+\sum_{k=1}^{k=m}  \sum_{n=1}^{n=m}\, 
+\frac{1}{\lambda_n^+}\cdot
+\langle \psi_k,\phi_n^+\rangle^2+
+\frac{m}{\lambda_{m+1}^+} \tag{ii}
+\]
+Another application of Bessel's inequality gives for each
+$1\leq n\leq m$:
+
+\[
+\sum_{k=1}^{k=m}\,
+ \langle \psi_k,\phi_n^+\rangle^2\leq \langle\phi_n^+,\phi_n^+\rangle=1
+\] 
+Hence (ii) entails that
+
+\[
+\sum_{k=1}^{k=m}\, 
+\langle K\psi_k,\psi_k\rangle\leq
+\sum_{n=1}^{n=m}\, \frac{1}{\lambda_n^+}+\frac{m}{\lambda_{m+1}^+}\tag{iii}
+\]
+\medskip
+
+\noindent
+\emph{A choice of $\psi$-functions.}
+By assumption we find an interval $[x_0,x_1]$ where
+$f(x,x)>0$. Set $d=x_1-x_0$ and when
+$m$ is a  positive integer we 
+define $\psi_1,\ldots,\psi_m$ where
+\[
+\psi_k(x)=\sqrt{\frac{m}{d}} \quad\text{when}\quad
+x_0+(k-1)\frac{d}{m}<x<x_0+k\frac{d}{m}
+\]
+\medskip
+
+\noindent
+while $\psi_k=0$ outside the intervals above.
+The  continuity of $f$ gives
+some large integer $m_*$
+and a positive constant $\delta$ such that
+if $m\geq m_*$ then
+$f(x,y)\geq \delta$ on each  small square
+where 
+$\psi_k(y)\cdot\psi_k(x)\neq 0$. Denote this small square by
+$\square_k$ which gives  the inequality below 
+for each $1\leq k\leq m$:
+\[
+\langle K\psi_k,\psi_k\rangle
+\geq \delta\cdot\frac{m}{d} \cdot 
+\iint_{\square_k} \frac{dxdy}{|x-y|^\alpha}
+\]
+An easy calculation shows that the double integral
+over $\square_k$ becomes
+\[
+\frac{2}{(1-\alpha)(2-\alpha)}\cdot \bigl( \frac{d}{m}\bigr)^{2-\alpha}
+\]
+So with $A=\delta\cdot \frac{2}{(1-\alpha)(2-\alpha)}$ one has the inequality
+\[
+\sum_{k=1}^{k=m}\, 
+\langle K\psi_k,\psi_k\rangle
+\geq A\cdot \bigl( \frac{d}{m}\bigr)^{1-\alpha}\cdot m= Ad^{1-\alpha}\cdot m^\alpha
+\tag{iv}\]
+\medskip
+
+\noindent
+By  construction  $\psi_1,\dots,\psi_m$ is an orthonormal family
+and hence (iii) holds which together with (iv)
+gives the inequality below for every  $m\geq m_*$:
+\[
+Ad^{1-\alpha}\cdot m^\alpha\leq 
+\sum_{n=1}^{n=m}\, \frac{1}{\lambda_n^+}+\frac{m}{\lambda_{m+1}^+}\tag{v}
+\]
+
+
+\noindent
+At this stage we shall argue by a contradiction, i.e. we  prove that
+(v) prevents that the positive  series in Theorem 1 converges.
+Namely, suppose that
+\[ 
+\sum\, \bigl(\frac{1}{\lambda_n^+}\,\bigr)^{\frac{1}{1-\alpha}}<\infty
+\]
+Since the terms in this positive series decrease with $n$ it follows 
+that
+\[
+\lim_{m\to \infty}\, 
+m\cdot \bigl(\frac{1}{\lambda_m^+}\,\bigr)^{\frac{1}{1-\alpha}}=0
+\]
+So if $\epsilon>0$ we can find $m^*\geq m_*$ such that
+
+\[
+m\cdot \bigl(\frac{1}{\lambda_m^+}\,\bigr)^{\frac{1}{1-\alpha}}<\epsilon
+\implies \frac{1}{\lambda_m^+}<\bigl(\frac{\epsilon}{m}\bigr)^{1-\alpha}
+\]
+Hence (v) gives the following when $m>m^*$:
+
+\[
+Ad^{1-\alpha}\cdot m^\alpha\leq
+\sum_{n=1}^{n=m^*}\, \frac{1}{\lambda_n^+}+
+\sum_{\nu=m^*+1}^{n=m}
+(\frac{\epsilon}{\nu}\bigr)^{1-\alpha}+m\cdot (\frac{\epsilon}{m+1}\bigr)^{1-\alpha}
+\]
+
+\noindent
+The middle sum above is majorized by 
+
+\[
+\epsilon^{1-\alpha}\cdot\int_{m^*}^m\, \frac{dx}{x^{1-\alpha}}
+=\frac{\epsilon^{1-\alpha}}{\alpha}\cdot m^\alpha
+\]
+At the same time we notice that the last term is $\leq \epsilon^{1-\alpha}\cdot m^\alpha$
+and after a division with $m^\alpha$ we  obtain
+\[
+Ad^{1-\alpha}\leq m^{-\alpha}\cdot 
+\sum_{n=1}^{n=m^*}\, \frac{1}{\lambda_n^+}+\epsilon^{1-\alpha}(
+\frac{1}{\alpha}+1)
+\]
+Above $A$ and $d$ are fixed positive constants 
+while we can choose arbitary large $m$ and arbitrary small $\epsilon$. 
+This gives a contradiction
+and Theorem 2.1 is proved.
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{§ 3. An entire spectral function.}}
+
+
+
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}} Theorem 1 was proved by 
+Carleman in the article
+\emph{Sur le genre du dénominateur $D(\lambda)$
+de Fredholm}. The proof uses some basic results about entire functions 
+due to Poincaré, Lindelöf, Phragmén  and Wiman and offers an instructive lesson
+in analytic function theory.
+Let $k(x,y)$ be a continuous function on the unit square
+$\{0\leq x,y\leq 1\}$.
+We do not assume that $k$ is symmetric, i.e. $k(x,y)\neq k(y,x)$
+can hold.
+To each $n$-tuple of points $\{s_\nu\}$ on
+$[0,1]$ we assign the determinant function
+\[ 
+K(s_1 ,\ldots,s_n)
+=\text{det}
+\begin{pmatrix}
+k(s\uuu 1,s_1)&\cdots&k(s_1,s_n)\\
+\cdots &\cdots&\cdots \\
+\cdots &\cdots&\cdots\\
+k(s_n,s_1)&\cdots &k(s_n,s_n)\\
+\end{pmatrix}
+\]
+Set
+\[ 
+c_n= \int_{\square_n}\,
+K(s_1 ,\ldots,s_n)\cdot ds_1\cdots ds_n
+\]
+
+\medskip
+
+\noindent
+where the integral is taken over the $n$-dimensional unit cube.
+
+\medskip
+
+\noindent
+{\bf{3.1. Theorem.}} \emph{Put}
+\[ 
+D(\lambda)=1+ \sum_{n=1}^ \infty\, \frac{(-1)^n}{n!}\cdot c_n\cdot \lambda^n
+\]
+\emph{Then $D$ is an entire function of the form}
+\[ 
+D(\lambda)= e^{a\lambda}\prod\,(1-\frac{\lambda}{\lambda_\nu})
+\cdot e^{\frac{\lambda_\nu}{\lambda}}
+\] 
+\emph{where $a$ is some complex constant and}
+\[ 
+\sum\, \frac{1}{|\lambda_\nu|^2}<\infty
+\]
+
+
+
+\noindent
+{\bf{Remark.}} 
+Prior to Carleman's result above, 
+Schur proved that $D(\lambda)$ is an entire function
+of the form
+\[
+D(\lambda)= e^{a\lambda+b\lambda^2}\prod\,(1-\frac{\lambda}{\lambda_\nu})
+\cdot e^{\frac{\lambda_\nu}{\lambda}}
+\]
+for some second constant $b$.
+The novelty in [Carleman] is that $b=0$ always holds.
+Above we assumed that $k$ is a continuous kernel.
+This condition was later relaxed by Carelan in  the article [§ xx. 1919]
+which gives
+Theorem 1 when 
+$k(x,y)$  is a kernel of the Hilbert-Schmidt type, i.e. it suffices to assume that 
+\[
+\iint\, |k(x,y)|^2\, dxdy<\infty
+\]
+
+\newpage
+
+
+
+\centerline{\bf{Proof of Theorem 3.1 }}
+
+\medskip
+
+\noindent
+First we 
+approximate $k$ by polynomials. If $\epsilon>0$ we find a 
+polynomial $P(x,y)$ such that the maximum norm of $k-P$ over
+the unit square is $<\epsilon$. Write
+\[ 
+k(x,y)= P(x,y)+B(x,y)
+\] 
+So now $|B(x,y)|<\epsilon$ for all $0\leq x,y\leq 1$.
+To each pair $0\leq p\leq n$ we set
+
+\[ 
+B_p(s_1,\ldots,s_n)
+=\text{det}
+\begin{pmatrix}
+P(s\uuu 1,s_1)&\cdots&k(s_1,s_n)\\
+\cdots &\cdots&\cdots \\
+P(s_p,s_1)&\cdot&P(s_p,s_n)\\
+B(s_{p+1},s_1)&\cdots& B(s_{p+1},s_n)\\
+\cdots &\cdots&\cdots\\
+B(s_n,s_1)&\cdots &B(s_n,s_n)\\
+\end{pmatrix}
+\]
+It is easily seen that
+\[ 
+c_n=
+\sum_{p=0}^{p=n}\,
+\binom {n}{p}\cdot  \int_{\square_n}\, B_p(s_1,\ldots,s_n)\cdot ds_1\cdots ds_n\tag{i}
+\]
+\medskip
+
+\noindent
+Next, let $N$ be the degree of the polynomial $P(x,y)$.
+The reader can verify that
+the first $p$ row vectors in the matrix which
+defines
+$B_p(s_1,\dots,s_n)$ are linearly independent as soon as $p>N$
+which therefore gives $B_p=0$. So for every $n\geq N$ one has the equality
+\[
+c_n=\sum_{p=0}^{p=N}\,
+\binom {n}{p}\cdot  \int_{\square_n}\, B_p(s_1,\ldots,s_n)\cdot ds_1\cdots ds_n\tag{ii}
+\]
+Next, if $M$ is the maximum norm of $k(x,y)$,
+and $\epsilon<M$  the maximum norm of
+$P$ is $\leq 2M$.  Hadamard's
+determinant inequality in § xx gives
+\[
+|B_p(s_1,\ldots,s_n)|\leq (2M)^p\epsilon^{n-p}\cdot n^{\frac{n}{2}}\tag{iii}
+\]
+Next, when $n\geq p$ and $0\leq p\leq n$ we set
+
+\[
+c_n(p)=
+\binom {n}{p}\cdot  \int_{\square_n}\, B_p(s_1,\ldots,s_n)\cdot ds_1\cdots ds_n
+\]
+Then (iii) gives:
+\[ 
+|c_n(p)|\leq\binom {n}{p}\cdot(2M)^p\epsilon^{n-p}\cdot n^{\frac{n}{2}}\tag{iv}
+\]
+Next, recall that
+$\binom{n}{p}\leq \frac{n^p}{p !}$ and hence (iv) gives
+\[ 
+|c_n(p)|\leq \frac{(2M)^p}{p !}\cdot \epsilon^{n-p}\cdot n^{\frac{n}{2}+p}\tag{v}
+\]
+\medskip
+
+\noindent
+At this stage we return to the $D$-function. To each $0\leq p\leq N$
+we set
+\[ 
+D_p(\lambda)=\sum_{n=p}^\infty\, \frac{-1)^n}{n !}\cdot c_n(p)\lambda^n
+\]
+
+
+
+\medskip
+
+\noindent
+{\bf{Sublemma.}}
+\emph{For each $p$  we have}
+\[ 
+\lim_{|\lambda|\to +\infty}\,
+e^{-4\epsilon|\lambda|^2}\cdot D_p(\lambda)=0\tag{*}
+\]
+
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove (*). The hint is to 
+use (v) above and Lindelöf's wellknown 
+asymptotic formula for entire functions. See my notes in analytic 
+function theory if necessary.
+
+\medskip
+
+\noindent
+Next, we notice that
+(ii) gives an equation
+\[ 
+D(\lambda)=q(\lambda)+ \sum_{p=0}^{p=N}\,D_p(\lambda)\tag{vi}
+\] 
+where $q(\lambda)$ is a polynomial of degre $N-1$ at most.
+This 
+entails that the entire function
+$D(\lambda)$ also satisfies (*) in the Sublemma.
+Let $\{\lambda\uuu\nu\}$ be the zeros of $D(\lambda)$. Then (*) and 
+a classic result due to Poincaré  gives  the entire function
+\[ 
+F(\lambda)=
+\prod\,(1-\frac{\lambda}{\lambda_\nu})\cdot e^{\frac{\lambda}{\lambda_\nu}}
+\quad\&\quad
+\lim_{|\lambda|\to +\infty}\,
+e^{-\delta|\lambda|^2}\cdot F(\lambda)=0
+\quad\text{for all}\quad \delta>0\tag{**}
+\]
+
+
+\noindent
+To profit upon (**) we use a device introduced by Lindelöf.
+Let $\omega= e^{2\pi i/5}$ which  gives
+the entire function 
+\[ 
+G(\zeta)= F(\zeta^5)\cdot F(\omega\zeta^5)\cdots F(\omega^4\zeta^5)\tag{vii}
+\]
+\medskip
+
+
+
+\noindent
+The right hand side in  (**) entails  
+that the entire function $G$ has order
+$<1/2$. Then a result due to   Wiman  gives the existence of 
+an increasing  sequence 
+$\{R_k\}$ which tends to $+\infty$  such that
+\[
+\min_\theta\, |G(R_ke^{i\theta})|\geq 1
+\quad\colon\,k=1,2,\ldots
+\tag{viii}
+\]
+<Choose  $\lambda$-circles with $r_k^5=R_k$
+and  Poincaré's limit  from (**). Then it is clear
+that (vii) and (viii)
+entail that for every $\delta>0$ there exist some  $k_*$ such that
+\[ 
+k\geq k_*\implies
+\max_\theta\, \frac{1}{|F(r_ke^{i\theta})}|\leq e^{\delta r_k^2}\tag{ix}
+\]
+Finally, we have the zero-free entire function
+\[ 
+H(\lambda)= \frac{D(\lambda)}{F(\lambda)}
+\]
+In (ix) we can  take $\delta=\epsilon$ which gives
+\[
+\limsup_{k\to +\infty}\, e^{-5\epsilon\cdot r_k^2}\cdot 
+\max_\theta\, |H(r_ke^{i\theta})|=0
+\]
+\medskip
+
+\noindent
+Liouville's theorem entails that the entire function
+$\log H(z)$ must be a linear polynomial and since
+$D(0)=1$ we
+conclude that
+\[ 
+D(\lambda)= e^{a\lambda}\cdot F(\lambda)
+\] 
+for a constant $a$ which finishes the proof of Theorem 1.
+\bigskip
+
+
+\noindent
+{\bf{Remark.}} Above we took several facts from analytic function
+theory for granted.
+At the end we appealed to the classic Liouiville Theorem.
+A much stronger version was proved by Carleman and
+for readers who are not so familiar with analytic function
+theory
+we include this result together with some details of the proof.
+\medskip
+
+
+\centerline{\bf{The general Liouville theorem.}}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+\medskip
+
+\noindent
+{\bf{9.1 Theorem.}}
+\emph{The function $\lambda\mapsto u\uuu\lambda(x)$ with values in the Banach space
+$B=C^0[0,1]$ extends to a meromorphic $B$\vvv valued 
+function in the whole
+$\lambda$\vvv plane.}
+\bigskip
+
+\noindent
+This result is due to Carleman in[Carleman].
+Notice that we have only assumed that the maximum norm of
+$k$ is $<1$ while the kernel in general can be non\vvv symmetric, i.e.
+$k(x,y)=k(y,x)$ is not assumed.
+
+
+To establish Theorem 9.1 we use Hadamard's theorem, i.e for each
+$0\leq x\leq 1$ we take $\{f\uuu n(x)\}$ and obtain
+for a given $p\geq 2$ the matrix $C\uuu n^{(p)}(x)$ as above.
+With these notations we shall prove
+
+\medskip
+
+\noindent
+{\bf{Proposition 9.2}} \emph{For every $p\geq 2$ and $0\leq x\leq 1$ onr has
+the inequality}
+
+\[
+\bigl |\,  \text{det}( C\uuu n^{(p)}(x))\,\bigr|\leq 
+(p\, !)^{\vvv n}\cdot \bigl( p^{\frac{p}{2}}) ^n\cdot \frac{p^p}{p\,!}
+\]
+\medskip
+
+\noindent
+The inequality (*) entails that
+
+\[ \limsup\uuu{n\to \infty}\, \bigl[\text{det}( C\uuu n^{(p)}(x))\,\bigr|\,\bigr )^{1/n}
+\leq 
+\frac{p^{p/2}}{p\,!}
+\]
+Passing to the $p$:th roots the reader may using Stirling's formula that
+\[
+\lim\uuu{p\to \infty}\frac{p^{1/2}}{p\,!}^{\vvv 1/p}=0
+\]
+Hence Hadamard's theorem gives
+Theorem 8.2.
+\bigskip
+
+\noindent{\bf{8.4 Proof of Proposition 8.3.}}
+To prove this inequality we shall use some 
+general determinant formulas of independent interest.
+Let $\phi\uuu x),\ldots,\phi\uuu p(x)$ and
+ $\psi\uuu x),\ldots,\psi\uuu p(x)$
+be a pair of $p$\vvv tuples of continuous functions on
+$[0,1]$.
+For each point $(s\uuu 1,\ldots,s\uuu p)$ in
+$[0,1]^p$ we put
+
+\[ 
+D\uuu\phi(s\uuu 1,\ldots,s\uuu p)=
+\Phi(x\uuu 1,\ldots,x\uuu p)
+=\text{det}
+\begin{pmatrix}
+\phi\uuu 1(x\uuu 1)&\cdots&\phi\uuu 1(x\uuu p)\\
+\cdots &\cdots&\cdots \\
+\cdots &\cdots&\cdots\\
+\phi\uuu p(x\uuu 1)&\cdots &\phi\uuu 1(x\uuu p)\\
+\end{pmatrix}\quad\colon\quad
+\]
+In the same way we define $D\uuu\psi(s\uuu 1,\ldots,s\uuu p)$.
+We also get the $p\times p$\vvv matrix with elements
+
+\[
+a\uuu{jk}= \int\uuu 0^1\, \phi\uuu j(x)\cdot \psi\uuu k(x)\cdot dx
+\]
+With these notations we have
+
+\medskip
+
+\noindent {\bf{Lemma.}}\emph{One has the equality}
+\[
+\text{det}(a\uuu{jk})=
+\frac{1}{p\,!}\int\uuu {[0,1] ^p}\,
+D\uuu\phi(s\uuu 1,\ldots,s\uuu p)\cdot 
+D\uuu\psi(s\uuu 1,\ldots,s\uuu p)\cdot ds\uuu 1\cdots ds\uuu p
+\]
+
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this result using standard formulas for
+determinants.
+
+\medskip
+
+\noindent
+The next step towards the proof of Proposition xx 
+uses the following equality below. First, inductively
+we get the sequence $\{k^{(m)}(x)\}$
+starting with $k=k^{(1)}$ we put:
+\[
+k^{(m)}(x)= \int\uuu 0^1\, k^{(m\vvv 1)}(x,s)\ddot k(s)\cdot ds
+\quad\colon\quad m\geq 2
+\]
+Now the reader can verify that
+
+\[
+f\uuu{n+m}(x)= \int\uuu 0^1\, k^{m)}(x,s)\cdot f\uuu n(s)\cdot ds
+\]
+hold for all pairs $m\geq 1$ and $n\geq 0$.
+\medskip
+
+\noindent
+On $[0,1]^{p+1}$ we
+define the function
+
+\[ 
+\mathcal K(x,s\uuu 1,\ldots,s\uuu p)
+=\text{det}(XXXX)
+\]
+next, on $[0,1]^p$ we define for every pair $n,p$ the function
+\[
+\mathcal F\uuu n^{(p)}(s\uuu 1,\ldots,s\uuu p)
+=\text{det}(XXXX)
+\]
+\bigskip
+
+\noindent
+{\bf{Exercise.}}
+Use Lemma XX and (xx) above to show the two equalities:
+
+\[
+\mathcal F\uuu n^{(p)}(s\uuu 1,\ldots,s\uuu p)=
+\frac{1}{p\,!}\cdot
+\cdot \int\uuu{[0,1]^p}\,{\bf {K}}(s\uuu 1,\ldots,s\uuu p,t\uuu 1,
+\ldots ,t\uuu p)\cdot \mathcal F\uuu {n\vvv 1}^{(p)}(t\uuu 1,\ldots,t\uuu p)
+\cdot dt\uuu 1\cdots d t\uuu p
+\]
+
+
+\[
+\text{det}(\mathcal C\uuu n^{(p)}(x))=
+\frac{1}{p\,!}\cdot \int\uuu{[0,1]^p}\, 
+\mathcal F\uuu n^{(p)}(s\uuu 1,\ldots,s\uuu p)\cdot 
+\mathcal K(s\uuu 1,\ldots,s\uuu p)
+\cdot ds\uuu 1\cdots ds\uuu p
+\]
+\medskip
+
+NOW easy to finish ....
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

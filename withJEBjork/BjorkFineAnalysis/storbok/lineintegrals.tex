@@ -1,0 +1,3271 @@
+
+
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+\centerline{\bf\large Chapter II: Stokes Theorem}
+
+\bigskip
+
+
+\medskip
+
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+0: A. Calculus in ${\bf{R}}^2$.
+
+\medskip
+
+
+\noindent
+1. Some physical explanations
+
+\medskip
+
+
+\noindent
+2. Stokes Theorem in ${\bf{R^2}}$
+\medskip
+
+
+\noindent
+3. Line integrals via differentials
+\medskip
+
+
+\noindent
+4. Green's formula and the Dirichlet problem
+\medskip
+
+
+\noindent
+5. Exact versus closed 1-forms
+
+\medskip
+
+
+\noindent
+6. An integral formula for the Laplace operator
+
+
+
+
+
+
+\bigskip
+
+\noindent
+\centerline {\bf 0. Introduction.}
+\bigskip
+
+\noindent
+The results in ¤ 0:A    cover  the basic
+integral formulas which appear
+in analytic function theory.
+However, these results 
+require certain regularity assumptions and 
+we  give therefore
+another proof of Stokes Theorem under relaxed
+regularity conditions in ¤ 2.
+Stokes theorem in the plane follows from
+Fermat's descriptions of normals 
+and the arc-length of a  plane curve
+and the fundamental theorem of calculus.
+More precisely, let $f(x)$ be a positive and continuously differentiable function 
+defined on some closed interval $[a,b]$.
+Let $\Omega$ be the domain bordered
+by
+$\{y=0\}$ and the graph of $f$, i.e.
+\[ 
+\Omega=\{x,y)\colon 0<y<f(x)\colon b< x<b\}
+\]
+Let $g(x,y)$ be a $C^1$-function in $\Omega$ which
+extends to a continuous function on its closure. Set
+\[
+J(x)=\int_0^{f(x)}\, g(x,y)\, dy\quad\colon a\leq x\leq b
+\]
+Rules for derivation give
+\[
+J'(x)=\int_0^{f(x)}\, g_x(x,y)\, dy+ g(x,f(x))\cdot f'(x)\tag{i}
+\]
+where $g_x$ is the partial derivative with respect to $x$.
+The fundamental
+theorem of calculus gives
+\[
+J(b)-J(a)= \int_a^b\, J'(x)\, dx\tag{ii}
+\]
+The right hand side in  (ii) is the sum of two integrals. The first is 
+the double integral
+\[
+\iint_\Omega\, g_x(x,y)\,dxdy\tag{iii}
+\]
+The second becomes
+\[
+\int_a^b\, g(x,f(x))\cdot f'(x)\,dx\tag{iv}
+\]
+The crucial fact is Fermat's  formula:
+\[
+-\frac{f'(x)}{\sqrt{1+f'(x)^2}}={\bf{n}}_x\tag{v}
+\]
+where ${\bf{n}}_x$ is the 
+ $x$-component of the outer normal
+to the plane curve
+$\gamma=\{y=f(x)\}$.
+The reader should check the minus sign in (v) with the aid of a figure.
+Moreover, Pythagoras' theorem
+entails that  the arc-length along the curve is 
+$\sqrt{1+f'(x)^2}\cdot dx$ and
+the equations above give
+\[
+\iint_\Omega\, g_x(x,y)\,dxdy=J(b)-J(a)+
+\int_\gamma\, g\cdot {\bf{n}}_x\, ds\tag{vi}
+\]
+Finally $J(b)$ and $J(a)$ can be expressed as line integrals along
+the pair of vertical lines in the boundary of
+$\Omega$. Along $\{x=b\}$
+the outer normal ${\bf{n}}=e_x$
+and $ds=dy$ and along
+$\{x=a\}$ 
+${\bf{n}}=-e_x$ and $ds=dy$.
+ The right hand side in (vi) can therefore be written as
+ \[
+ \int_{\partial\Omega}\, g\cdot {\bf{n}}_x\, ds\tag{*}
+\]
+The equality between the line integral (*) and the area integral of
+$g_x$ is a special case of
+Stokes theorem.
+In ¤ xx we establish   the general case   using partitions of
+the unity
+which reduce the proof to the case described above.
+\medskip
+
+
+\noindent
+{\bf{The use of differential forms.}}
+Line integrals are often  expressed via  differential 1-forms
+which lead 
+to alternative 
+expressions of  Stokes Theorem
+in ¤ 3 and ¤ 5.
+An important result appears in
+Theorem 10 from   ¤ 2 where a pair of functions appear 
+in integral formulas.
+This will be  applied
+in  ¤ 4 where
+integral formulas related to the Laplace operator occurs.
+Here is an  example  which will
+be used later to study harmonic  and more generally subharmonic functions.
+Let $u(x,y)$ be a $C^2$-function defined in some
+open disc of radius $R$ centered at the origin in
+${\bf{R}}^2$. Then the following hold for all pairs
+$0<s<R$:
+\[ 
+u(0)=\frac{1}{2\pi}\int_0^{2\pi}\, u(s,\theta)\cdot d\theta+
+\iint_{D(s)}\, \text{log}(\frac{s}{\sqrt{x^2+y^2}})\cdot \Delta u(x,y)\cdot dxdy\tag{1}
+\]
+where $D(s)$ is the disc of radius $s$ centered at the origin.
+After another integration while (1) is applied as  $0<s<r<R$ we obtain:
+\[
+u(0)= \frac{1}{\pi r^2}\cdot \iint_{D(r)}\, u(x,y)\cdot dxdy-
+\int_0^r\,K(r,s)\cdot \bigl [\int_0^{2\pi}  \Delta(u)(s,\theta)\cdot d\theta\bigr]\cdot ds\tag{2}
+\]
+where $K_r(s)$ is a  kernel function defined 
+for pairs $0<s\leq r$ by:
+\[ 
+K(r,s)=s^3\cdot \int_1^{\frac{r}{s}}\, u\cdot \text{Log}(u)\cdot du\tag{3}
+\]
+
+
+\noindent
+In (2) the first double integral in the right hand side is the mean-value of
+$u$ over the disc $D(r)$. The second double integral
+describes the
+difference between this mean-value and the value of $u$ at the center
+of the disc.
+If the function $\Delta(u)$
+is non-negative in the whole disc $D(R)$
+we get
+the mean-value inequality
+\[
+u(0)\leq  \frac{1}{\pi r^2}\cdot \iint_{D(r)}\, u(x,y)\cdot dxdy
+\] 
+for every $0<r<R$.
+In Chapter V:B we shall learn that this gives  the starting point for
+a study of subharmonic functions.
+\bigskip
+
+\noindent
+{\bf{Polar coordinates.}} Set
+\[ 
+x=r\cdot \cos\theta\quad\text{and}\quad
+y=r\cdot \sin\theta
+\]
+Looking at the first order partial derivatives outside the origin we have
+\[
+\partial\uuu r=\cos\theta\cdot \partial\uuu x+\sin\theta\cdot \partial\uuu y
+\quad\text{and}\quad
+\frac{1}{r}\cdot \partial\uuu \theta
+=\vvv \sin \theta\cdot \partial\uuu x+\cos\theta\cdot \partial\uuu y
+\]
+It follows that
+\[
+\partial\uuu x=\cos\theta\cdot \partial\uuu r\vvv \frac{1}{r}\cdot
+\sin \theta\quad\text{and}\quad
+\partial\uuu y=\sin\theta\cdot \partial\uuu r+ \frac{1}{r}\cdot\cos\theta
+\]
+\medskip
+
+\noindent
+We have the Laplace operator $\Delta=\partial^2\uuu x+\partial^2\uuu y$
+and leave it to the reader to verify that
+\[
+\Delta=\partial\uuu r^2+\frac{1}{r}\cdot\partial\uuu r+
+\frac{1}{r^2}\cdot \partial\uuu\theta^2\tag{*}
+\]
+
+
+\noindent
+Next, consider a $C^2$\vvv function $F(x,y)$
+defined in the unit disc $D=\{x^2+y^2<1\}$ with $F(0,0)=0$.
+
+\medskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph{The 
+following equality holds for every $0<r<1$:}
+\[ 
+\int\uuu 0^{2\pi}\,\bigl[\, r^2\cdot (\partial\uuu r(F))^2\vvv
+(\partial\uuu\theta(F))^2\bigr]\cdot d\theta=
+2\cdot \int\uuu 0^r\,\bigl[\, \int\uuu 0^{2\pi}\, s^2\partial\uuu s(F)\cdot\Delta(F)
+\cdot d\theta \,\bigr]\dot ds\tag{*}
+\]
+\medskip
+
+\noindent
+To prove this via Stokes or Green's theorem would be cumbersome.
+Instead on employs a Fourier series expansion. Namely, 
+we can write
+\[
+F(r,\theta)= 
+\sum\uuu{k=1}^\infty
+a\uuu k(r)\cdot \cos\, k\theta+
+b\uuu k(r)\cdot \sin\, k\theta
+\] 
+where $\{a\uuu k(r)\}$ and $\{b\uuu k(r)\}$ are two sequences of
+functions which only depend on $r$.
+\medskip
+
+\noindent
+{\bf{0.2 Exercise.}} Use the familiar vanishing results for integrals of
+sine\vvv and cosine\vvv functions
+to conclude that it suffices to prove
+(*) in the special case when
+$F= a\uuu k(r)\cdot \cos\, k\theta$ or $F= b\uuu k(r)\cdot \sin\, k\theta$
+for a single integer $k$.
+Next, consider the case when
+\[ 
+F=a(r)\cdot \cos\, k\theta
+\] 
+for some positive integer $k$.
+Using the polar formula for $\Delta$  the right hand side
+in (*) becomes
+
+\[
+\int\uuu 0^r\,\bigl[\, \int\uuu 0^{2\pi}
+\, s^2\cdot a'(s)\cdot(a''(s)+\frac{1}{s}\cdot a'(s)\vvv
+\frac{k^2}{s^2}a(s)\bigr]\cdot \cos^2 k\theta\cdot d\theta
+\,\bigr]\cdot ds
+\]
+Notice that partial integration gives
+
+\[
+\int\uuu 0^r\, \, s^2\cdot a'(s)\cdot(a''(s)+\frac{1}{s}\cdot a'(s)\vvv
+\frac{k^2}{s^2}a(s)\bigr]\cdot ds=\frac{r^2a'(r)^2\vvv k^2a(r)^2}{2}
+\]
+It follows that the right hand side in (*) is equal to
+\[
+\bigl[r^2a'(r)^2\vvv k^2a(r)^2\,\bigr]\cdot \int\uuu 0^{2\pi}\, \cos^2\,k\theta\cdot d\theta
+\tag{1} 
+\]
+At this stage the reader can confirm that (1) is equal to the right hand side in
+(*).
+\medskip
+
+
+\noindent
+{\bf{0.3 Remark.}}
+The integral formula in Theorem 0.1 will be
+used to study subharmonic functions, i.e functions
+$f$ for which $\Delta(F)\geq 0$. For example, if 
+$\partial\uuu r(F)\geq 0$ holds in the disc, then
+the right hand side in (*) is $\geq 0$ which gives the inequality
+\[
+\int\uuu 0^{2\pi}\,\partial\uuu\theta(F)^2\cdot d\theta\leq
+r^2\cdot \int\uuu 0^{2\pi}\,\, \partial\uuu r(F)^2\cdot d\theta
+\quad\text{for every}\quad 0<r<1\tag{**}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{0:A. Calculus in ${\bf{R}}^2$}}
+\medskip
+
+\noindent
+A parametrised curve $\gamma$ 
+in
+${\bf{R}}^2$ is defined by
+a vector-valued function
+\[ 
+\gamma\colon\quad t\mapsto(x(t),y(t))\quad\colon\quad 0\leq t\leq T\tag{*}
+\]
+The  curve is of class $C^2$ if 
+$x(t)$ and $y(t)$ are both of class $C^2$. 
+We do not assume that (*)
+is 1-1 so  the parametrized curve can have self\vvv intersections.
+Line integrals are constructed as follows:
+Let $u(x,y)$ and $v(x,y)$ be a pair of continuous functions
+and
+set
+\[
+\int_\gamma\, u\cdot dx=\int_0^T\, u(x(t),y(t))\cdot  x'(t)\, dt\tag{1}
+\]
+\[
+\int_\gamma\, v\cdot dy=\int_0^T\, v(x(t),y(t))\cdot y'(t)\, dt\tag{2}
+\]
+We refer to (1) as a line integral in the 
+$x$-direction and  (2) as a 
+line integral in the $y$-direction.
+The notation $\int\uuu\gamma$
+is consolidated by the fact that if
+$s\mapsto t(s)$ is some strictly increasing $C^1$-function from
+an interval $0\leq s\leq S$ onto
+$[0,T]$ then the  $s$-parametrisation does not change
+the integrals since
+\[
+\int_0^T\, u(x(t),y(t)\cdot x'(t)\, dt=\int_0^S\, u(x(t(s)),y(t(s))
+\cdot \frac{d}{ds}(x(t(s))\, ds
+\] 
+where we used the  differential equality
+\[
+\frac{d}{ds}(x(t(s))=x'(t(s))\cdot t'(s)
+\]
+However, the orientation is essential.
+One moves from the initial point $\gamma(0)=P$ to the end\vvv point
+$\gamma(T)=Q$  where
+an arrow along the  curve is used to indicate the
+direction during the integration. Thus, 
+up to a sign the  line integrals depend upon the chosen orientation.
+\medskip
+
+\noindent
+{\bf{A.1 Homotopy.}}
+Consider a family of  $C^2$-curves
+$\{\gamma_s\,\colon 0\leq s\leq 1\}$
+where each single $\gamma_s$
+is parametrised over an interval $[0,T]$ as above and
+the curves have common end-points
+$P=(x_*,y_*)$ and $Q=(x^*,y^*)$.
+So when $t\mapsto (x(t,s),y(t,s))$ is a 
+parametrisation of $\gamma_s$, then
+\[
+x(0,s)=x_*\quad\text{and}\quad x(T,s)= x^*
+\quad\text{for all}\quad 0\leq s\leq 1\tag{1}
+\]
+and similarly for the $y$-function.
+No further assumption is imposed, i.e. the
+$\gamma$ curves in the family need not be simple and
+it may occur that $P=Q$ or that $P\neq Q$.
+Concerning the  functions $x(t,s)$ and $y(t,s)$ we impose the
+condition that both are of class $C^2$. 
+In particular the mixed second order derivatives  are equal.
+\[
+ x''_{ts}=x''_{st}\quad\text{and}\quad y''_{ts}=y''_{st}\tag{2}
+\]
+
+
+\noindent
+{\bf{A.2 Theorem.}} \emph{Let $u(x,y)$ and $v(x,y)$ be  $C^1$-functions.
+Then one has
+the two equalities}
+\[
+\int_{\gamma_1}\, u\cdot dx-
+\int_{\gamma_0}\, u\cdot dx
+=\iint_\square\, u'_y\cdot (y'_s\cdot x'_t-y'_t\cdot x'_s)\, dsdt\tag{*}
+\]
+\[
+\int_{\gamma_1}\, v\cdot dy-
+\int_{\gamma_0}\, v\cdot dy
+=\iint_\square\, v'_x\cdot (x'_s\cdot y'_t-x'_t\cdot y'_s)\, dsdt\tag{**}
+\]
+
+
+\noindent
+\emph{Proof.}
+We prove (*) while (**)  is left to the reader since
+the proof is the same when $x$ and $y$ are interchanged.
+The fundamental theorem of calculus  gives
+\[
+\int_{\gamma_1}\, u\, dx-
+\int_{\gamma_0}\, u\, dx=\int_0^1\,\frac{d}{ds}\bigl(\int_0^T\, u\cdot x'_t\, dt
+\bigr)
+\,ds=
+\]
+\[
+\iint_\square\, \bigl[ u'_x\cdot x'_sx'_t+u'_y\cdot y'_sx'_t+ u\cdot x''_{st}\bigr]
+\,dsdt\tag{i}
+\]
+Next, consider for each \emph{fixed} $0\leq s\leq 1$
+the integral
+\[
+\int_0^T\frac{d}{dt}(u(x(t,s),y(t,s))\cdot x'_s(t,s))\cdot dt\tag{ii}
+\]
+By (1) 
+the functions
+$s\mapsto x(0,s)$ and $s\mapsto x(T,s)$ are constant
+and therefore
+\[ 
+x'_s(0,s)=x'_s(T,s)=0\quad\text{for each}\quad 0\leq s\leq 1\tag{iii}
+\]
+Hence the integral  (ii) is zero
+for every $s$.
+At the same time  we can differentiate the
+function under the integral sign  and conclude that
+\[
+\int_0^T\,
+(u'_x\cdot x'_t\cdot x'_s+u'_y\cdot y'_t\cdot x'_s+
+u\cdot x''_{ts})\cdot dt=0\tag{iv}
+\]
+Since (iv) holds for every $s$  we get a vanishing double integral
+\[
+\iint_\square\,
+(u'_x\cdot x'_t\cdot x'_s+u'_y\cdot y'_t\cdot x'_s+
+u\cdot x''_{ts})\cdot ds dt=0\tag{v}
+\]
+
+
+\noindent
+Finally, since $x(t,s)$ is assumed to be a $C^2$-function
+the mixed derivatives
+$x''_{ts}$ and  $x''_{st}$ are equal.
+Subtracting the zero integral in (v) from (i)
+we conclude that  (i) is equal to the double integral
+
+\[
+\iint_\square\, \bigl[ u'_y\cdot (y'_s\cdot x'_t-x'_t\cdot y'_s)\cdot dsdt
+\]
+which gives  (*) in Theorem A.2.
+\bigskip
+
+
+\noindent
+{\bf{A.3 Application.}}
+If the
+partial derivatives $u'_y$ and $v'_x$ are equal,
+then the reversed signs for  $y'_sx'_t-y'_tx'_s$
+which appear in (*) and (**) give the
+equality
+
+\[
+\int_{\gamma_1}\, (u\cdot dx+v\cdot dy)=
+\int_{\gamma_0}\, (u\cdot dx+v\cdot dy)\tag{***}
+\]
+
+\noindent
+{\bf{A.4 Remark.}}
+Given the pair $(u,v)$ one refers to
+$u\cdot dx+v\cdot dy=0$ as a differential 1-form.
+By definition it is closed if and only if
+\[
+u'_y=v'_x
+\]
+So Theorem A.2  shows that the line integral of a closed
+1-form
+is not changed under a homotopy deformation where
+the end-points are kept fixed.
+\medskip
+
+\noindent
+{\bf{The case of closed curves.}}
+The same proof as in  Theorem A.2 shows that if $\{\gamma\uuu s\}$
+is a homotopic family of closed curves
+and $u'\uuu y=v'\uuu x$ then we also have the equality
+(***) above.
+
+\bigskip
+
+\noindent
+{\bf{A.5 Stokes Theorem.}}
+Consider  a map $\Phi$ from
+a rectangle 
+\[
+\square=\{0\leq t\leq T\}\times
+\{0\leq s\leq 1\}
+\]
+into ${\bf{R}}^2$. 
+We  write
+$\Phi(t,s)=(x(t,s),y(t,s))$
+and  assume that $x(t,s)$ and $y(t,s)$ are $C^2$.-functions.
+The  \emph{Jacobian} of $\Phi$ becomes
+
+\[ 
+\mathcal J_\Phi= y'_t\cdot x'_s-x'_t\cdot y'_s
+\]
+So if $u(x,y)$ is some $C^1$-function  then the double integral
+\[
+\iint_
+{ \Phi(\square)}\, u'_y\cdot dxdy=
+\iint_\square\, u'_y(x(t,s),y(t,s)\cdot 
+[ y'_t\cdot x'_s-x'_t\cdot y'_s]\dot dsdt\tag{1}
+\]
+By Theorem A.2 the  double integral
+is a difference of two line integrals
+taken over $s=0$ and $s=1$ respectively.
+Suppose now that $\Phi$ is 1-1 so that $\square$ is mapped to a Jordan domain
+$\Omega$ whose boundary $\partial\Omega$
+is a simple Jordan curve $\Gamma$. 
+Here it may occur that $\Gamma$ has corner points at
+the images of the four corner points of $\square$. But
+in any case the situation is sufficiently regular in order that
+we get a well defined line integral
+\[
+\int_\Gamma\, u\cdot dx
+\]
+Inspecting the sign of $y'_sx'_t-y'_tx'_s$ which appears in
+the Jacobian $\mathcal J_\Phi$ respectively in (*) from Theorem A.2
+we conclude that one has a minus sign in the equation below:
+
+\[
+\iint_\Omega
+\, u'_y\cdot dxdy=-\int_{\partial\Omega}\, u\cdot dx\tag{2}
+\]
+Here the simple closed Jordan curve
+$\partial\Omega$ is oriented in the positive direction, i.e. one moves
+counter-clockwise
+as this curve encloses $\Omega$. The reader should illustrate this by
+drawing a figure.
+In  similar fashion one derives the formula
+\[
+\iint_\Omega
+\, v'_x\cdot dxdy=\int_{\partial\Omega}\, v\cdot dy\tag{3}
+\]
+\bigskip
+
+
+\noindent
+{\bf{A.5 Remark.}}
+The results above are in principle all we need to move directly to Chapter 3 and 
+study analytic functions where the Cauchy-Riemann equations are
+used to ensure
+that we are in "favourable situations" such as  (***)
+above.
+But for the reader's convenience we shall
+repeat certain arguments and
+give
+another proof  in ¤ 2  which has the merit that
+regularity conditions can be relaxed.
+
+\medskip
+
+
+\noindent
+{\bf{A result by Schwarz}}.
+Above we used the equality of second order mixed derivatives.
+A sufficient condition   for its validity is due to Schwarz
+where the notable point is that one only requires that one 
+of the mixed derivatives exists as a continuous function.
+Consider a function $f(x,y)$ of two real variables whose
+first order partial derivatives
+$f\uuu x$ and $f\uuu y$ exist as continuous functions. Then one has:
+
+\medskip
+
+\noindent
+{\bf{A.6 Theorem.}}
+\emph{Assume that the mixed second order derivative
+$f\uuu{xy}$ exists as a continuos function. Then the
+mixed derivative $f\uuu{yx}$ exists and is equal to $f\uuu{yx}$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+With $y$ kept fixed and
+some chosen constant $k$  we consider the function
+\[ 
+\phi(x)= f(x,y+k)\vvv f(x,y)
+\]
+Taylor expansion up to order two with
+the usual mean\vvv value taken as second term gives
+for every $h$ a pair $0<\theta,\theta'<1$ such that
+
+\[
+\phi(x+h)\vvv \phi(x)= h\bigl(f\uuu x(x+\theta h,y+k)\vvv
+f\uuu x(x+\theta h,y)\,\bigr)=
+hkf\uuu{xy}(x+\theta h,y+\theta' k)\tag{1}
+\]
+The continuity of $f\uuu {xy}$ entails that
+\[
+f\uuu{xy}(x+\theta h,y+\theta' k)=f\uuu{x,y}(x,y)+\epsilon(h,k)
+\] 
+where the $\epsilon$\vvv function tends to zero as
+$(h,k)\to (0,0)$.
+Next, division with $k$ in (1) and a passage to the limit as $k\to 0$
+gives
+\[ f\uuu y(x+h,y)\vvv
+f\uuu y(x,y)=
+h(f\uuu{xy}(x+\theta h,y)+\epsilon(h,0))\tag{2}
+\]
+Since $\epsilon(h,0)\to 0$ when $h\to 0$
+it follows from (2) that 
+\[ 
+\lim\uuu{h\to 0}\,  
+\frac{f\uuu y(x+h,y)\vvv f\uuu(x,y)}{h}= f\uuu{xy}(x,y)
+\]
+By definition the left hand side yields the mixed derivative
+$f\uuu{yx}$ and Schwarz' theorem is proved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf{1. Some physical explanations.}}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+The material in this section
+is not necessary in the sequel. It is included to give a perspective upon
+Stokes Theorem and we also discuss results  in dimension 3.
+The first lessons about line integrals,
+area integrals and volume integrals go back to Archimedes.
+The beginner should first of all
+understand how Archimedes computed the volume
+of a pyramid $\Delta$.
+Start in the $(x,y)$-plane from
+a bounded and convex domain $U$ bordered by a piecewise
+linear boundary $\partial U$ with some finite set
+of corner points $\{p_k=(x_k,y_k)\}$.
+They are arranged so that a line $\ell_k$ joints $p_k$ to $p_{k+1}$
+when $1\leq k\leq N-1$ and  a line 
+$\ell_N$ joins $p_N$ with $p_1$.
+Next, consider a point $p^*=(x_0,y_0,z_0)$ where
+$z_0>0$.
+We obtain the pyramid $\Omega$ by joining $p^*$ to each
+corner point. It is clear  that
+ $\partial\Omega$ consists of 
+has $N$ many planar pieces plus
+lines when a pair intersect and a number of corner points.
+The reader may illustrate this by a figure
+when  $U$ is  a square.
+With the notations above  
+Arkimedes' proved the formula:
+\[ 
+\text{Vol}\, \Omega=\frac{z_0}{3}\cdot \text{Area}(U)\tag{*}
+\]
+
+
+\noindent
+{\bf{Remark.}}
+The proof relies upon the fundamental
+fact that under dilation  expressed by some $s>0$ areas change with
+the scale factor $s^2$ and volumes by $s^3$.
+Then (*) follows when we regard portions of $\Omega$
+where the $z$-coordinate is restricted to
+small intervals $\{\frac{k}{N}\leq z\leq \frac{k+1}{N}\}$.
+Taking a limit as $N\to\infty$
+the scale principles give
+\[
+\text{Vol}\, \Omega=
+\text{Area}(U)\cdot\int_0^{z_0}\,
+(z_0-z)^2\cdot dz=\frac{z_0}{3}\cdot \text{Area}(U)
+\]
+A more involved case  compared with a pyramid
+arises when we consider a bounded open set
+$\Omega$ where $\partial\Omega$
+consists of $N$ many planar sets $U_1,\ldots,U_N$ and each
+intersection between two such planar sets is a line segment. 
+Several $U$-sets may also intersect at corner points
+on the boundary.
+Now we have the \emph{area measure}
+$dA_\nu$ on  every $U_\nu$ and the
+\emph{outer normal} vector
+${\bf{n}}_\nu$ to $U_\nu$, i.e. the unit vector which is $\perp$
+to $U_\nu$ and points out from $\Omega$.
+If ${\bf{n}}_\nu(x)$ denotes the $x$-component of this unit vector
+one has the formula
+\[
+\text{Vol}\, (\Omega)=\sum_{\nu=1}^N\,
+\iint_{U_\nu}\, x\cdot
+{\bf{n}}_\nu(x)\cdot dA_\nu\tag{***}
+\]
+Above we can replace $x$ by $y$ or $z$ using
+the components
+${\bf{n}}_\nu(y)$ or ${\bf{n}}_\nu(z)$ when we compute   area 
+integrals over $\{U\uuu\nu\}$.
+This  volume formula  goes back to Archimedes via 
+physical considerations.
+\medskip
+
+\noindent
+{\bf{The principle of Arkimedes.}}
+An experience  which every child less than five years
+has already discovered,  is that a body which is gently placed in water
+eventually comes to
+a position at rest when   there are no
+waves or streams.
+The shape of the body can be highly irregular. Imagine
+a piece of a broken tree with
+several branches where some of them may
+be above the waterline in the  floating position.
+The intersection with
+the free water line $z=0$ and the boundary of the tree need not even be connected.
+In ¤ 1.3  we explain
+how the principle of Arkimedes
+confirms the validity of (***) even for domains
+$\Omega$ with a highly irregular boundary.
+The equation (***)
+is therefore a Law of Nature rather than a "theorem"
+derived in mathematics.
+\medskip
+
+\noindent
+{\bf{1.1 Stokes Theorem.}}
+Let us  describe
+how Newton  and his contemporaries   Boyle and Hooke 
+were aware of a \emph{conceptual  proof}
+of Stokes formula in three dimensions.  Newton
+attributes the basic ideas 
+below  to  DŽscartes in his work 
+\emph{Principia} from 1687 
+when  he argues as follows to confirm Stokes theorem:
+\medskip
+
+\noindent
+A bounded connected domain $\Omega$ is given in
+${\bf{R}}^3$. The boundary may consist of several pairwise disjoint closed surfaces
+of class $C^1$ at least,
+i.e. sufficiently regular in order  that we can refer to surface
+area measure and the outer normal along every component of
+$\partial\Omega$. Inside $\Omega$ a large number of small particles - think of small balls - are moving. They have equal mass and
+when they impinge with each other the impact is elastic.
+At a point $p=(x,y,z)$ the "mean neighbor velocity" of balls close to 
+$p$ is a vector valued function $v(p)=(f(p),g(p),h(p))$, i.e.
+$f(p)$ is the velocity in the $x$-direction and so on.
+The interior of $\Omega$ is divided into small pairwise disjoint cubes 
+$\{\square_\alpha\}$ with sides parallell to the coordinate axes.
+The effect of all impacts from  balls inside  one cube $\square_\alpha$
+which hit the boundary of
+$\square_\alpha$
+during a small time interval is a force vector which approximately will
+be
+\[
+F_\alpha=\rho\cdot (f_x,g_y,h_z)\cdot
+\text{vol}(\square_\alpha)
+\]
+Here $f_x,g_y,h_z$Êare  the partial 
+derivatives inside $\square_\alpha$, $\rho$ a constant density of mass
+and
+$\text{vol}(\square)_\alpha$ the volume of the square.
+The boundary of each   cube is   some hard material so that
+via the force vectors $F_\alpha$, each cube 
+"pushes" - or alternatively gets a push -
+from some of its
+six  many neighbor cubes with which it has a common side.
+For example, if $f_x>0$ in a given cube
+$\square_\alpha$ then $\square_\alpha$
+tends to
+push on the cube next to the right.
+Along the boundary the impact is
+expressed by the area integral
+\[ 
+\int_{\partial\Omega}
+\rho\cdot (fn_x+gn_y+hn_z)dA\quad\colon\quad dA=\,\text{area measure}\tag{*}
+\] 
+where  $(n_x,n_y,n_z)$ the outer normal.
+Since the balls cannot escape the  container $\Omega$ 
+the \emph{principle of reaction forces} implies that we must have the equality
+\[
+\sum\,F_\alpha=
+\int_{\partial\Omega}
+\rho\cdot (fn_x+gn_y+hn_z)dA\tag{**}
+\]
+The sum to the left approximates the volume integral
+of the function $\rho\cdot(f_x+g_z+h_z)$. Dividing out
+$\rho$ we get
+the equality
+\[ 
+\int\int\int\,
+(f_x+g_y+h_z)dxdydz=
+\int_{\partial\Omega}
+(fn_x+gn_y+hn_z)dA\tag{***}
+\]
+\medskip
+
+\noindent {\bf Remark.}
+In (***) we  encounter an arbitrary  triple of functions and hence one has three
+equations:
+
+
+\[
+\iiint f_x\cdot dxdydz=
+\iint_{\partial\Omega}
+fn_x\cdot dA
+\] 
+\[
+\iiint g_y\cdot dxdydz=
+\iint_{\partial\Omega}
+gn_y\cdot dA
+\] 
+\[
+\iiint h_z\cdot dxdydz=
+\iint_{\partial\Omega}
+hn_z\cdot dA\,,
+\]
+\medskip
+
+\noindent
+Personally I  find Newton's proof  convincing.
+Advancements in  mathematics rely upon ideas as above.
+
+
+
+\bigskip
+
+
+\centerline{\bf 1.2. The principle of Archimedes}
+
+\bigskip
+
+
+\noindent
+Consider a 3-dimensional  body $K$ 
+placed in
+${\bf{R}}^3$
+where $(x,y,z)$ are the coordinates and $z$ is vertical so that
+the force of gravity is $-g\cdot e_z$.
+The body has some   distribution of mass which need not have
+a constant density. Imagine a ship where
+the density is large in the machine room and considerably lighter
+in the lounge bar. In any case, 
+the body has a specific weight $0<s<1$, i.e. if 
+$V$
+is the volume then
+the mass of $K$ is $s\cdot V$. 
+Now $K$ is gently put into the water
+by a five year old child
+in the middle of a  reasonably large lake
+at a time when there are no winds or waves.
+A  child predicts correctly that $K$  will float  and 
+after a short time  even come to rest.
+The problem is to determine the floating position 
+using  the
+force of gravity and the law of momentum in statics.
+This was solved by
+the the genius Archimedes. His studies about floating bodies
+were reconsidered by Stevin  around 1600 after original work by Archimedes'
+had been rediscovered. Like
+Galilei in Pisa, Stevin  also
+performed experiments in Amsterdam
+to show that  velocities of falling bodes
+are independent of their specific weight or total mass and he is
+regarded as the creator of  modern statics.
+Let
+$\mathfrak{o}$ be the center of mass in 
+$K$. 
+Notice that $\mathfrak{o}$
+need not be contained in $K$. A typical example is an oil-platform.
+Let $K_*$ be the portion of
+$K$ below the free waterline determined by the equation $z=0$.
+In general $K_*$ can be
+a disconnected set.
+But connected components of $K_*$
+are bounded by a surface below the free
+waterline
+and some
+area domain in the plane $z=0$ which serves as a  "roof" for this component.
+The reader should  illustrate  this by a figure.
+Now there
+exists the point $\mathfrak{0}^*$
+which corresponds to the center of mass which is determined when
+$K_*$ has a uniform density of mass.
+With these notations Archimedes stated that when the body
+has a resting floating position, then
+the mass $M$ of the body is equal to the mass of water
+which would fill the portion of $K$ below the free
+waterline. So with $0<s<1$ it means that
+\[
+\text{vol}(K_*)=s\cdot M
+\]
+Moreover, the vector $\mathfrak{o}-\mathfrak{o}^*$
+is $\perp$ to the horizontal water line, i.e. parallell to the direction where
+the force of gravity acts. Finally,
+these two conditions are both necessary and sufficient for
+a floating  position at rest.
+That the two conditions are \emph{necessary} seem likely while the
+\emph{sufficiency} is more subtle. The reason is that there may exist
+\emph{several floating positions} where
+the two conditions above hold.
+For example, let
+$K$ be a solid cube with $\mathfrak{o}$ placed in the center and 
+constant density of mass which gives some 
+specific
+ weight
+$0<s<1$.
+The reader should discover that there exist several positions 
+where Arhimedes' conditions hold. Take for example
+$s=0.4$ and draw figures to find different solutions where
+$\mathfrak{o}-\mathfrak{o}^*$ is vertical.
+This leads to the question of \emph{stability}.
+Stability conditions were found by
+Christian Huyghens.
+But his 
+subtle  analysis  goes beyond
+the scope of these notes. Let us only mention that when
+$\Omega$ is a square the floating position where
+the free waterline is parallel to a pair of   sides of
+$\Omega$, then Huyghens proved that this floating position is stable
+if and only 
+$0<s<2-\sqrt{3}$ or  $\sqrt{3}-1<s<1$.
+So we have an unstable 
+equilibrium when $2-\sqrt{3}<s<\sqrt{3}-1$. To obtain
+stable floating positions
+$\Omega$ must be tilted.
+For example when $s=\frac{1}{2}$
+one gets 
+a stable position where the sides of the cube  have the angle $\pi/4$ to the free waterline. 
+\bigskip
+
+\noindent {\bf 1.23 Proof of Archimedes' theorem}.
+To begin with we must understand why the body can float at rest. This amounts
+to determine the \emph{forces of lifting}
+on the part of $K$ below the waterline.
+Following Stevin - and the later refinement by Huyghens -
+the force of lifting is found as follows. 
+From the inside close to a point
+$p\in\partial K_*$ placed at some distance
+$h$ below the waterline
+one makes a small circular hole 
+of radius $\epsilon$. A cylinder of equal radius is 
+pressed a small  bit $\ell$
+outside the surface of the submarine.
+The effect is that a volume of water equal to
+$\pi\ell\epsilon^2$ is lifted to the free waterline. This requires 
+a work equal to $gh\cdot\pi\ell\epsilon^2$.
+Then, if $P$ is the force of \emph{pressure} on the submarine close to $p$
+the work to push the cylinder  is equal to
+$P\cdot \ell$. At the same time the area removed from the surface
+of the submarine is $\pi\epsilon^2$. The result is that the 
+infinitesmal lifting force becomes
+\[
+F=gh
+\]
+Next, the force of pressure at $p$  from the outside water on the surface of the submarine is parallell to the normal $\mathfrak{n}$
+of $\partial K_*$
+where the reader by the aid of a figure realizes that
+one uses the \emph{inward normal}.
+Thus, if $\mathfrak{n}$ denotes the \emph{outer normal} to
+$\partial K_*$ the  discussion gives:
+\medskip
+
+\noindent {\bf 1.3 Proposition.} \emph{The total lifting force
+on the floating body is}
+\[ 
+-g\cdot \int_
+{\partial K_*}\,  h(p)\cdot \mathfrak{n}(p) d\sigma
+\]
+\emph{where $d\sigma$ is the area measure on
+$\partial K_*$.}
+\medskip
+
+\noindent
+Next, Archimedes' first principle 
+asserts that
+the vertical component of the vector valued integral
+above is equal to
+$g$ times the volume
+of $K_*$.
+Since
+$z=0$ on the free waterline, this  gives
+the equality
+\[ 
+\iint_{K_*}\, dxdydz=
+\int_{\partial K_*}\, z\cdot\mathfrak{n}_z\cdot d\sigma
+\]
+where $h=-z$ above since we stay  below the free waterline.
+As we shall see later on this equation corresponds to
+Stokes applied
+to the $z$-component of
+the normal vector $\mathfrak{n}$. 
+
+
+
+
+
+\medskip
+
+
+
+
+
+\noindent {\bf 1.4 A vanishing result.} Since $K$ comes to rest it cannot behave like a
+moving fish, i.e. the two horisontal
+components of the total lifting force must be zero. This means that
+\[
+\int_{K_*}\,  z\cdot \mathfrak{n}_x\cdot  d\sigma=
+\int_{K_*}\,  z\cdot \mathfrak{n}_y \cdot d\sigma=0\tag{1}
+\]
+
+
+
+\noindent Again we shall learn that these 
+two area integrals are zero by Stokes formula.
+Hence we have consolidated the first principle of Archimedes, and
+conversely    this principle already
+predicted  general  integration formulas  since
+the shape of $K_*$ can be   arbitrary. 
+
+\medskip
+
+
+\noindent 
+\emph{1.5 Proof that
+$\mathfrak{o}-\mathfrak{o}^*$ is vertical.}
+To show this we analyze the force of momentum.
+We may assume that coordinates are chosen so that
+$\mathfrak{0}=(0,b)$ for some $b$ on the $y$-axis.
+The \emph{Law of Momentum}
+gives
+\[ \mathcal M=g\cdot
+\int_{\partial K_*}\, (x,y-b)\times
+(-y\mathfrak{n}(x,y))\cdot ds\tag{2}
+\]
+Here the minus sign for $y$ appears since the force of pressure  was
+found via the distance $h$ from a point below the  water line up to $y=0$.
+In (2) we
+decompose
+the vector
+${\bf{n}}$ and expanding the
+vector product it follows that:
+\[
+\mathcal M=g\cdot
+\int_{\partial K_*}\, -xy\cdot \mathfrak{n}_y(x,y))\cdot ds-
+\int_{\partial K_*}\, y(y-b)\cdot
+\mathfrak{n}_x(x,y)\cdot ds
+\]
+\medskip
+
+\noindent
+Now Stokes formula entails that
+\[
+\cdot \int_{\partial K_*}\, y\cdot
+\mathfrak{n}_x(x,y)\cdot ds=
+\int_{\partial K_*}\, y^2\cdot
+\mathfrak{n}_x(x,y)\cdot ds=0\implies
+\]
+\[ \mathcal M=
+-g\cdot \int_{\partial K_*}\, xy\cdot \mathfrak{n}_y(x,y))\cdot ds\tag{3}
+\]
+By Stokes formula (3)  is equal to
+the area integral 
+\[ 
+-g\int_{K_*}\,x dxdy\tag{*}
+\]
+This integral must be zero when the body is at rest. This means precisely that the
+$x$-component of $\mathfrak{o}^*$ is zero and 
+Archimedes' second assertion follows.
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf 1.5 Curvature and arc-length.}
+\bigskip
+
+\noindent
+Arc length measure of curves in the $(x,y)$-plane and
+the curvature occur frequently in complex analysis.
+Following Huyghens we explain  how to
+determine  curvature by  dynamical considerations.
+Let a plane curve be defined by an equation $y=y(x)$ where
+$y''(x)>0$ for $x>0$ and $y(0)=y'(0)=0$.
+Up to translation and rotation this is a general
+situation. So we have a convex curve  which we follow as 
+$x$ increases.
+To  express the curvature Huyghen's 
+considered a particle of unit mass which
+can slide on the curve, say on the side just above
+the curve.
+No gravity occurs, i.e. imagine that 
+a vertical wall is placed along the curve which prevents the particle to leave
+the curve. At time zero it has  velocity $v$.
+No friction forces are present which
+means that the force acting on the particle at every  moment is
+directed along the normal to the plane curve.
+Let $t$ be the time variable which gives   a time
+dependent function $t\mapsto (x(t),y(x(t))$.
+At a  moment $t$ we denote by $\rho(t)$  the 
+reaction force on the particle, i.e. the force which 
+keeps the particle to move on along the curve.
+Our assumptions imply that  $\rho(t)$ is normal to the curve
+and directed upwards in the
+$y$-direction. Regarding a figure the
+reader discovers that the components are given by:
+\[ 
+\rho_x(t)=\rho(t)\cdot\frac{-y'(x(t))}{\sqrt{1+y'(x(t))^2}}
+\quad\colon\,
+\rho_y(t)=\rho(t)\cdot\frac{1}{\sqrt{1+y'(x(t))^2}}
+\]
+Newton's Law that
+"force=mass times acceleration" gives:
+\[
+\ddot x=\rho(t)\frac{-y'(x(t))}{\sqrt{1+y'(x(t))^2}}
+\quad\text{and}\quad
+\ddot y=\rho(t)\cdot\frac{1}{\sqrt{1+y'(x(t))^2}}
+\]
+Let us now notice that $\dot y=y'(x(t))\cdot\dot x$.
+Hence
+\[
+\dot x\cdot\ddot x=
+\rho(t)\frac{-\dot y}{\sqrt{1+y'(x(t))^2}}=-\dot y\dot\ddot y
+\]
+It follows that  $\dot x\ddot x+\dot y\ddot y=0$ which means that
+$v^2=\dot x^2+\dot y^2$ is constant. This proves  the
+preservation of kinetic energy which is  valid  since
+no other forces than the normal pressure acts on the particle. 
+\medskip
+
+\noindent 
+{\bf 1.6 Determination of $\rho$.}
+To find $\rho$ we start with
+$\dot y=y'(x(t))\cdot\dot x$ and  taking the time derivative once more
+it follows that
+\[
+\ddot y=y''(x(t))\cdot\dot x^2+y'(x(t))\cdot \ddot x
+\]
+Inserting the two formulas above for $\ddot x$ and $\ddot y$
+it follows that
+\[
+{\sqrt{1+y'(x(t))^2}}\cdot\rho(t)=
+y''(x(t))\cdot \dot x^2
+\]
+Now we also have $v^2=\dot x^2+\dot y^2=
+\dot x^2+(1+y'(x(t))^2\cdot \dot x^2$. We conclude that
+
+
+\[
+\rho(t)=\frac{y''(x(t))}{[1+y'(x(t))^2]^{\frac{3}{2}}}\cdot v^2
+\]
+\bigskip
+
+\noindent
+This is gives the formula for the \emph{centrifugal force}.
+The term
+\[ 
+\mathfrak{c}(x)=
+\frac{y''(x)}{[1+y'(x)^2]^{\frac{3}{2}}}
+\] 
+is the \emph{geometric curvature} of the plane curve.
+Huyghen's conclusion was that the centrifugal force 
+is the quotient of $v^2$ with the curvature expressed as above.
+Having attained this one may give a geometric description of
+$\mathfrak{c}(x)$. Namely, 
+$\frac{1}{\mathfrak{c}(x)}$
+is the radius of a circle placed along the normal to the curve
+passing through $x$ which has \emph{best contact} with the curve at the point 
+$(x,y(x))$. This geometric description of the curvature could of course
+have been given from the start. But the dynamical consideration gives
+a better insight and is  extremely important in mechanics.
+Moreover, Huyghens clarified  why the geometric 
+description must be valid by computing  the centrifugal force 
+when a particle is constrained to move
+along a circular wall  of some radius $R$. Namely, 
+in this case
+the centrifugal force is constant during the 
+motion and given by
+\[
+\mathcal C= \frac{v^2}{R}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf 1.7 Huyghen's proof in the circular case.}
+His  proof to obtain th centrifugal force
+under a circular motion is extremely elegant. To begin with 
+Huyhens  regards a particle which
+moves along a \emph{regular polygon} with $N$ corners inscribed in the circle of radius $R$
+with constant velocity $v$ and hits the circle $N$ times
+during one full turn.
+The \emph{impact force} each time the particle of unit mass
+hits the circle is given by:
+\[ 
+2\cdot \text{sin}\frac{\pi}{N}\cdot v\tag{**}
+\]
+The reader should draw a figure and use that
+the corners of the polygon give rise to $N$ many triangles
+with angle $2\pi/N$ at the center and 
+discover that the sudden direction of the velocity vector is changed
+by
+$2\pi/N$ at every impact. Then (**)  follows by decomposing
+the reaction force and  the definition of the sine-function.
+Next, the total length of the polygon is
+$N\cdot 2\cdot\text{sin}\frac{\pi}{N}$.
+Hence the time $T$ to perform a full circular turn is
+\[ 
+T=\frac{N\cdot 2\cdot\text{sin}\frac{\pi}{N}}{v}
+\]
+Finally, we have $N$ many instants when impact takes place. So
+after one circular turn we get
+\[ 
+F_{\text{imp}}=N\cdot 
+2\cdot \text{sin}\frac{\pi}{N}\cdot v\implies
+\frac{F_{\text{imp}}}{T}=
+\frac{v^2}{R}
+\]
+
+\noindent
+The left hand side expresses
+the effect of impact while the particle impinges the circle at
+the corner points and the effect of force per unit time does 
+not depend on $N$. When $N\to\infty$ we 
+get the "continuous formula" expressed by
+(*) above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf 2. Stokes Theorem in $\bf R^2$}
+\bigskip
+
+\noindent
+{\bf Introduction}
+\emph{Stokes Theorem} 
+is often proved in an "intuitive fashion"
+where figures  illustrate how one divides a  domain into simpler so that
+repeated double integrals can be used.
+We     give a proof without such artificial constructions. 
+In the long run this is
+essential since the cutting  of domains becomes messy
+when the number of its boundary components increases.
+This section may appear to be  "overkilling"
+for the beginner. But my opinion is that the subsequent material  belongs to  the
+foundation for complex analysis and learning a
+proof 
+of Stokes Theorem  is both important
+and instructive. In ¤ X from  the appendix about measure theory
+we derive Stokes theorem in every dimension $n\geq 2$. Here we present the results when $n=2$.
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf\large 2.A. The case of graphic domains}
+
+\bigskip
+
+\noindent
+The FCT = fundamental theorem of calculus -
+asserts that if $g(x)$ is a function 
+whose derivative exists as a continuous function, then
+\[ 
+g(x)=g(a)+\int_a^x\, g'(t)dt
+\]
+
+
+\noindent
+Next, consider ${\bf{ R}}^2$ where $(x,y)$ are the coordinates.
+A real valued function $f(x,y)$ is of class $C^1$ when the two partial derivatives
+$f_x$ and $f_y$ both exist as continuous functions.
+Consider a $C^1$-function $\phi(x)$ which depends on $x$ only
+and is defined on a closed interval $0\leq x\leq A$. Assume that
+$\phi(x)>0$ which gives the open set
+\[
+\Omega=\{(x,y)\colon\,0<x<A\quad\, 0<y<\phi(x)\}
+\]
+Now we  have the  double integrals
+\[
+\iint_\Omega\,f_x\cdot dxdy\quad\colon\quad
+\iint_\Omega\,f_y\cdot dxdy\tag{*}
+\]
+We shall express these by certain line integrals. 
+The second double integral is easy to handle
+since  it is 
+a repeated integral:
+\[
+\iint_\Omega\,f_y\cdot dxdy=\int_0^A\,[\int_0^{\phi(x)}\,
+f_y(x,y)dy] \,dx=\int_0^A\,[f(x,\phi(x)-f(x,0)]dx\tag{1}
+\]
+\medskip
+
+\noindent
+Later  we  explain the intrinsic nature of this formula.
+Let us turn to the double integral in the left hand side of (*).
+Here we cannot find a  repeated integral when 
+horizontal lines $\{x=a\}$  cut the domain $\Omega$
+so that the sets $\Omega\cap\{x<a\}$ and $\Omega\cap\{x>a\}$ 
+have several connected components. The reader should illustrate this by drawing some figures using an "ugly" $\phi$-function.
+However, we can express 
+the double integral as a sum of line integrals !
+\medskip
+
+\noindent
+{\bf 1. A clever construction of  line integrals.} Put
+\medskip
+
+\noindent
+\[
+J(f)=\iint_\Omega\, f_x\cdot dxdy
+\]
+Consider the following function
+$\psi$ of a single variable
+\[
+\psi(x)=\int_0^{\phi(x)}\, f(x,y)dy\implies
+\]
+\[ 
+\psi'(x)=f(x,\phi(x))\phi'(x)+
+\int_0^{\phi(x)}\, f_x(x,y)dy
+\]
+The FTC gives
+\[ 
+\psi(A)-\psi(0)=
+\int_0^A\, \psi'(x)dx=
+\int_0^A\, f(x,\phi(x)\phi'(x)+
+\int_0^A[\int_0^{\phi(x)}\, f_x(x,y)dy\,]\cdot dy
+\]
+The last term is $J(f)$ and hence we get
+\[
+J(f)=\int_0^{\phi(A)}\, f(A,y)dy-\int_0^{\phi(0)}\, f(0,y)dy\
+-\int_0^A\, f(x,\phi(x)\phi'(x)dx\tag{*}
+\]
+In (*) three line integrals appear. The first is taken along the vertical line 
+$x=A$, the second along $x=0$  in the negative direction and
+the last  along the curve $y=\phi(x)$.
+Now we explain  their
+geometric meaning.
+\medskip
+
+\noindent
+\emph{First}, the vertical line $L_+=\{x=A\quad 0\leq y\leq \phi(A)\}$ is  part of 
+the boundary
+$\partial\Omega$. On this line the \emph{arc-length measure} is equal to $dy$
+and 
+ \emph{the outward normal} along $L_+$ is 
+parallell to the $x$-axis so its component $n_x=1$. Hence we can write
+\[
+\int_0^{\phi(A)}\, f(A,y)dy=\int_{L_+}\, f n_x\cdot  ds\tag{1}
+\]
+\emph{Second}, consider $L_-=\{x=0\quad 0\leq y\leq \phi(0)\}$.
+Again $dy$ is the arc-length measure while  the outer normal 
+is directed in the negative $x$-direction, i.e.  $n_x=-1$.
+Hence:
+\[
+-\int_0^{\phi(0)}\, f(0,y)dy=\int_{L_-}\, fn_x\cdot dy\tag{2}
+\]
+\emph{Third}.  On the curve $\Gamma=\{y=\phi(x)\}$ the arc-length is 
+$ds=\sqrt{1+\phi'(x)^2}\cdot dx$ and
+the $x$-component of 
+the outer normal is 
+\[
+n_x=\frac{-\phi'(x)}{\sqrt{1+\phi'(x)^2}}
+\]
+Here the minus sign  becomes clear by inspecting a figure of the curve 
+$y=\phi(x)$ where you discover that $n_x>0$ if
+$\phi'<0$ and vice versa !
+Hence we obtain
+\[
+-\int_0^A\, f(x,\phi(x)\phi'(x)dx=
+\int_\Gamma\, f n_x ds\tag{3}
+\]
+where the first minus sign  reflects the sign-rule for $n_x$ along the boundary curve $\Gamma$.
+Putting all this together we have proved the equality
+\medskip
+\[
+J(f)=\int_\Gamma f n_x ds+
+\int_{L_+} f n_x ds+\int_{L_-} f n_x ds\tag{**}
+\]
+No "ackward signs" occur in the line integrals above since
+arc-length measure is always defined and  the
+outer normal along the boundary of an open set is clarified by a picture.
+There remains the portion of $\partial\Omega$ defined by
+$I=\{ 0\leq x\leq A\quad y=0\}$.
+Here  the outer normal is in the negative 
+$y$-direction and  hence $n_x=0$. Therefore we only add a zero term by
+$\int_I\, f n_x ds$ and
+arrive at
+\medskip
+
+\noindent {\bf 2. Theorem. } \emph{One has
+the equality}
+\[
+\iint_\Omega\, f_x\cdot  dxdy=\int_{\partial\Omega} f n_x\cdot  ds
+\]
+\medskip
+
+\noindent
+{\bf 3. An area formula.} 
+Let $\phi(x)$ be  a piecewise linear function which is positive when
+$0<x<A$  while $\phi(0)=\phi(A)=0$.
+So we have corner points 
+\[ p_\nu=(x_\nu,y_\nu)\,\quad 0=x_0<x_1\ldots <x_N=A
+\]
+while the $y_1,\ldots,y_{N-1}$ is any sequence of positive numbers.
+Apply Theorem 2 with $f(x,y)=x$. The double integral is the area of 
+$\Omega$, i.e. the domain bounded by the piecewise linear curve
+$\Gamma$ and the interval $[0,A]$ on the $x$-axis. On the line segment
+$\ell\uuu\nu$ which joins
+$(x\uuu\nu,y\uuu\nu)$ with
+$(x\uuu{\nu+1},y\uuu{\nu+1})$ the reader may verify by figure and
+Pythagoras's theorem that along  $\ell\nu$ one has:
+
+\[
+n_x=\frac{y_\nu-y_{\nu+1}}
+{\sqrt{(x_{\nu+1}-x_\nu)^2+
+(y_{\nu+1}-y_\nu)^2}}
+\quad\text{and}\quad
+ds=\frac{\sqrt{(x_{\nu+1}-x_\nu)^2 +(y_{\nu+1}-y_\nu)^2}}{x\uuu{\nu+1}\vvv x\uuu\nu}\cdot dx
+\]
+It follows that
+
+\[
+\int\uuu{\partial\Omega}\, xn\uuu x\cdot ds=
+\sum\, \frac{y\uuu\nu\vvv y\uuu{\nu+1}}{x\uuu{\nu+1}\vvv x\uuu\nu}\cdot
+\int\uuu{x\uuu\nu}^{x\uuu{\nu+1}}\, x\,dx
+=
+\]
+on each linear piece of $\Gamma$. 
+After a summation  the line integral becomes
+\[
+\frac{1}{2}\cdot \sum_{\nu=0}^{\nu=N-1}\, 
+(x_{\nu+1}^2-x_\nu^2)(y_\nu-y_{\nu+1})=\frac{1}{2}\cdot
+\sum\, (y_\nu-y_{\nu+1})\cdot (x_{\nu+1}+x_\nu)\tag{*}
+\]
+
+\noindent
+{\bf{Example.}}
+Consider  the simplest case
+where just one corner point appears at $(A/2,H)$.
+So here $\Omega$ is a triangle whose  area is  $AH/2$. The formula gives on the other hand 
+\[
+\frac{1}{2}\cdot[\vvv H\cdot A/2+H\cdot (A+A/2))= AH/2
+\] 
+which confirms (*).
+The reader should continue to test the area formula (*) in 
+more complicated situations where the picewise linear curve has several negative and positive slopes.
+\medskip
+ 
+\noindent 
+{\bf 4. Expression of the first double integral}
+Consider the component $n_y$ of the outer normal to $\Omega$.
+On the piece $I=\{0\leq x\leq A\colon\quad y=0\}$ we see that $n_y=-1$.
+On the curve $y=\phi(x)$  a picture shows that
+\[ 
+n_y=\frac{1}{\sqrt{1+\phi'(x)^2}}
+\]
+\medskip
+
+\noindent 
+At the same time
+$dx=\frac{1}{\sqrt{1+\phi'(x)^2}}ds$ and hence 
+$n_yds=dx$ holds on the curve. Finally, the outer normal is in the $x$-direction 
+on the two vertical lines of $\partial\Omega$. Hence we have proved:
+
+\medskip
+
+\noindent 
+{\bf 5. Theorem.}
+\emph{One has}
+\[
+\iint_\Omega\,f_y\cdot dxdy=\int_{\partial\Omega}\,
+f n_y \cdot ds
+\]
+\medskip
+
+\noindent
+Thus, we have a similar formula as in Theorem 2 for the $y$-coordinate.
+There remains to extend these two formulas to 
+general domains which even may have several disjoint closed boundary curves.
+But first we  resume our special case a bit further.
+Consider an open cube $\square$ in ${\bf{ R}}^2$ where we after a translation may 
+assume that it is centered at the origin.
+Let $\psi(x,y)$ be a $C^1$-function whose gradient is $\neq 0$ at the origin and
+to make a choice we assume that $\psi_y(0,0)<0$.
+The \emph{implicit function theorem} gives
+a $C^1$-function $\phi(x)$ and a positive function $h(x,y)$ such that
+\[
+\psi(x,y)=(\phi(x)-y)h(x,y)
+\]
+Shrinking $\square$ if necessary we may assume that $h>0$ in the whole of
+$\square$. Put
+\[
+\Omega=\square\cap\,\{\psi>0\}=
+\square\cap\,\{y<\phi(x)\}
+\]
+The previous results show that if $f$ is a $C^1$-function with a compact support in 
+$\square$, then the two FCT-formulas hold for $\Omega$.
+We refer to $\Omega$ as a \emph{graphic domain}. Next, 
+the 
+validity of the FCT-theorem
+is  obviously invariant under a \emph{linear change of coordinates}. Hence
+we   can start with a cube
+whose sides are not parallell to the coordinate axis and use some direction of the gradient of $\psi$ when the implicit function theorem is used to obtain a graphic domain.
+With  this kept in mind we  begin the proof in the general case.
+\bigskip
+
+
+
+
+
+\centerline{\bf {6. The case of domains in $\mathcal D(C^1)$.}}
+\medskip
+
+
+
+
+\noindent 
+First we give
+
+\medskip
+
+\noindent
+{\bf 7. Definition.} \emph{A bounded open and connected
+subset $\Omega$ of ${\bf{ R}}^2$ has a 
+$C^1$-boundary  if $\partial\Omega$ is the disjoint union of a finite family of 
+simple and closed curves $\Gamma_1,\ldots,\Gamma_k$
+each of which are of class $C^1$. 
+The family  of   such domains is denoted by 
+$\mathcal D(C^1)$.}
+\bigskip
+
+\noindent {\bf 8. Remark about the arc-length.}
+A simple closed curve $\Gamma$ of class $C^1$ is  the image of a vector-valued function
+\[
+t\mapsto \gamma(t)= (x(t),y(t))\quad 0\leq t\leq T
+\]
+which is 1-1 except that $\gamma(0)=\gamma(T)$.
+Moreover, the functions $x(t)$ and $y(t)$ are both of class $C^1$ and
+$\gamma(t)$ is "moving" which means that
+$\dot\gamma(t)\neq 0$ for all $t$, or equivalently 
+$\dot x^2(t)+\dot y^2(t)>0$ for all $0\leq t\leq T$.
+The curve $\Gamma$ can be parametrized in several ways. Among those one has the 
+\emph{parametrization by arc-length}. In this case we use $s$ as parameter and then 
+\[ 
+(\frac{dx}{ds})^2+
+(\frac{dy}{ds})^2=1\quad\colon\, 0\leq s\leq L
+\]
+where $L$  is the total arc-length of $\Gamma$.
+The arc-length measure along $\Gamma$ is denoted by $ds$.
+\medskip
+
+\noindent 
+{\bf  9. The normal to $\Gamma$.} Let $\Gamma$ be a $C^1$-curve.
+To each point $p\in\Gamma$ we find a unit vector 
+$n(p)$ which is normal to $\Gamma$. Given a parametrization by
+arc-length we have:
+\[
+n=(n_x,n_y)\quad\colon\quad n_x=\frac{dy}{ds}\quad\text{and}\quad
+n_y=-\frac{dx}{ds}
+\]
+\medskip
+\noindent
+However, the \emph{sign} of the normal depends on the chosen 
+\emph{orientation} of $\Gamma$.
+For example, let $\Gamma$ be a circle of radius $R$ centered at the origin.
+Its arc-lengtth is $2\pi R$ and it has the parametrisation
+\[ 
+s\mapsto (R\cos(s),R\sin(s))\quad 0\leq s\leq 2\pi
+\]
+Given this  orientation we see that
+\[ 
+n_x=\cos(s)\quad n_y=\sin(s)
+\] 
+
+\bigskip
+
+\noindent 
+Now we can announce the fundamental result called the FTC in dimension 2.
+\bigskip
+
+\noindent
+{\bf 10. Theorem.} \emph{Let $\Omega\in\mathcal D(C^1)$. For each 
+function $f(x,y)$ of class $C^1$ one has }
+\[ 
+\iint_\Omega\, f_x\cdot dxdy=
+\int_{\partial\Omega}\, f n_x\cdot  ds\quad\colon\quad
+\iint_\Omega\, f_y\cdot dxdy=
+\int_{\partial\Omega}\, f n_y\cdot  ds
+\]
+
+\noindent
+\emph{where $n$ is the outward normal to $\Omega$ along each 
+boundary curve.}
+\bigskip
+
+\noindent
+{\bf Proof.} The theorem asserts that the formula
+holds for every $C^1$-function. Following the
+proof in the introduction by  DŽscartes and Newton
+we 
+\emph{decompose} 
+a given $C^1$-function $f$ and represent it by a sum of $C^1$-functions
+where each function of the sum has a small support which enable us to apply the previous result for \emph{graphic domains}.
+To achieve such a decomposition we first consider some boundary point 
+$p\in\partial\Omega$. It belongs to some boundary curve $\Gamma$. 
+Let $L$ be the tangent line to $\Gamma$ passing through $p$.
+Then we construct a small square $\square(p)$ centered at $p$
+and with two sides parallel to $L$ while the other are $\perp$ to $L$.
+Here $\Gamma$ is locally defined by an equation $\phi(x,y)=0$ close to $p$
+where $\phi$ is chosen so that 
+\[ 
+\Omega\cap\,\square(p)=\{\phi>0\}
+\]
+Regarding a picture - which the reader should draw - it is clear that
+$\Omega\cap\,\square(p)$ is a graphic domain if the 
+sides of $\square(p)$ are sufficiently
+small.
+By  the \emph{Heine-Borel Lemma} we can cover 
+the compact boundary $\partial\Omega$
+by a finite set of such squares, say $\square(p_1),\ldots,
+\square(p_N)$. Notice that $p_1,\ldots,p_N$ are boundary points chosen from
+different boundary curves but the cubes are so small that
+\[ 
+\square(p_\nu)\cap\,
+\square(p_j)=\emptyset\quad\colon\quad \, p_\nu,p_j\,\,\, \text{belong to different boundary curves}
+\]
+\medskip  
+\noindent
+Next, consider the complementary set
+\[
+K=\Omega\setminus\,\cup\,\square(p_\nu)
+\]
+This becomes a compact subset of $\Omega$. By the \emph{Heine-Borel Lemma}
+it can
+be covered by a finite set of open cubes
+$W_1,\ldots,W_m$ chosen so small that each closure $\bar W_i$ stays inside
+$\Omega$.
+\medskip
+
+\noindent 
+\emph{Partition of the unity.}
+We have the finite family of cubes $\{\square(p_\nu),W_j\}$.
+By the result in XXX there exist $C^1$-functions 
+$g_1,\ldots,g_N,h_1,\ldots,h_m$ such that
+\[ 
+\sum g_\nu+\sum h_i=1\quad\,\colon\quad 
+\text{Supp}(g_\nu)\subset\square(p_\nu)\quad
+\text{Supp}(h_i)\subset W_i 
+\]
+where the first equality holds in some open neighborhood
+$U$ of $\bar\Omega$.
+
+\bigskip
+
+\noindent 
+\emph{Final part of the proof.}
+We treat the first formula expressing the double integral of $f_x$ by line integral. Replacing $x$ by $y$ is  proved in the same way.
+Given a $C^1$-function $f$
+it is expressed by a sum:
+\[ 
+f=\sum\, fg_\nu+\sum\, fh_i
+\]
+Since the sum of partial derivatives $\partial_x(\sum g_\nu+\sum h_i)$ and
+$\partial_y(\sum g_\nu+\sum h_i)$ both vanish  we get
+\[
+\iint_\Omega\, f_x\cdot dxdy=
+\sum\iint_\Omega\, (fg_\nu)_x\cdot dxdy+
+\sum\iint_\Omega\, (fh_i)_x\cdot dxdy
+\]
+and similarly 
+\[ 
+\int_{\partial \Omega}\, f n_x \cdot ds=
+\sum \int_{\partial \Omega}\, fg_\nu n_x \cdot ds+
+\sum \int_{\partial \Omega}\, fh_i n_x \cdot ds
+\]
+Hence it suffices to prove Theorem 10 for each term separately, i.e. for 
+the functions $fg_\nu$ or $fh_i$. Here $fg_\nu$ has compact support in
+$\square(p_\nu)$ and the graphic case applies, i.e. the required formula 
+in Theorem 10 holds in this case. Next, consider $fh_i$. 
+This function has compact support in
+$\Omega$ so no boundary terms, i.e. no line integral appears. But at the same
+time XX shows that
+\[ 
+\iint_\Omega\, (fh_i)_x\cdot dxdy=0
+\] 
+So these double integrals give no contribution and 
+Theorem 10
+is proved.
+
+
+
+\bigskip
+
+
+
+\centerline {\bf 11. Boundary with corner points}
+\medskip
+
+
+\noindent
+Consider a  connected and bounded open set $\Omega$. 
+Its boundary is a compact set. A point $p\in\partial\Omega$
+is called regular if there exists a small disc $D$ centered at $p$
+and a $C^1$-function $\phi$ in $D$ whose gradient vector is $\neq 0$ in $D$ such that
+\[ 
+\Omega\cap D=\{\phi<0\}\quad\colon\,\quad \phi(p)=0
+\]
+It is obvious that the set of regular points is an open 
+subset of $\partial\Omega$ to be denoted by
+$\text{reg}(\partial\Omega)$.
+We assume that the set is non-empty,
+i.e. we ignore to consider open sets with a very ugly boundary.
+On the regular part of $\partial\Omega$ the arc-length measure $ds$ and the outer normal are defined.
+Next, put 
+\[
+\sigma_\Omega=\partial\Omega\setminus
+\text{reg}(\partial\Omega)
+\]
+So this is a compact set and we shall
+impose a condition  on its size.
+\medskip  
+
+\noindent
+{\bf 12. Federer's conditions.} First one requires that
+the two projected images of $\sigma\uuu\Omega$
+on the $x$-line respectively the $y$-line
+are null sets
+in the sense of Lebesgue. 
+Thus, the condition is that to every $\epsilon>0$ there exists a finite family of disjoint open intervals
+$J_\nu=(a_\nu,b_\nu)$ on the $x$-line such that
+\[
+\sum\,(b_\nu-a_\nu)<\epsilon\quad\colon\,\quad
+(x,y)\in\sigma_\Omega\implies x\in\,\cup J_\nu
+\]
+and with a similar condition for the $y$-interval.
+The second condition is  that the 
+arc-length of the regular part is finite, i.e. that
+\[ 
+\int_{\text{reg}(\partial\Omega)} ds<\infty
+\]
+\medskip
+
+
+
+\noindent
+{\bf 13. Theorem} \emph{Assume that $\partial\Omega$ satisfies Federer's conditions.
+Then}
+\[ 
+\iint_\Omega f_y \,dxdy=
+\int_{\text{reg}(\partial\Omega)}\, f n_y \cdot ds
+\] 
+\emph{and similarly with $x$ replaced by $y$.}
+\medskip
+
+\noindent
+\emph{ Proof.}
+Let $\epsilon>0$ and choose intervals $J_\nu$ of total length $<\epsilon$ to satisfy Federer's condition for $x$-coordinates of points in $\sigma_\Omega$.
+Choose a $C^1$-function $g(x)$ where $0\leq g\leq 1$
+and
+$g=1$ outside $\cup \,J_\nu$ while $g(x)=0$ in a neighbourhood
+of the compact set 
+\[
+\{x\colon\,\exists\,y\colon \,(x,y)\in\sigma_\Omega\}
+\]
+Set
+\[
+h=gf
+\]
+By the choice of $g$
+the support of $h$ avoids $\sigma_\Omega$.
+Repeating the  proof of Theorem 10 for domains with
+regular boundaries we obtain
+\[
+\iint_\Omega h_y dxdy=
+\int_{\text{reg}(\partial\Omega)}\, h n_y ds\tag{1}
+\]
+Here $h_y=g(x)f_y$ and hence
+\[
+\iint_\Omega f_y dxdy-
+\iint_\Omega h_y dxdy=
+\iint_\Omega (1-g(x))f_y(x,y) dxdy\tag{2}
+\]
+The last double integral is estimated as follows.
+By the choice of $g$ we have $1-g=0$ outside
+a union of intervals of length $\leq\epsilon$.
+So if $M$ is the maximum norm of $f_y$ taken over $\bar\Omega$ and 
+$L$ is the maximum of two $y-$-coordinates for 
+points in $\Omega$ with the same $x$-coordinate,
+then we get
+\[
+|\iint_\Omega (1-g(x))f_y(x,y) dxdy|\leq ML\epsilon\tag{3}
+\]
+\
+
+\noindent 
+{\bf 14. Estimate of 
+$\int_{\text{reg}(\partial\Omega)}\, f(1-g) n_y ds$.}
+Here we  need a more delicate argument where the reader - as always when it comes to a more involved proof in analysis - should make suitable
+pictures to discover the geometry. 
+Let $\delta>0$ and consider the subset 
+$W(\delta)$ of
+$\text{reg}(\partial\Omega)$ where $|n_y|\geq\delta$.
+On this set we notice that the arc-length is majorised by $|dx|$:
+\[
+|n_y|\geq\delta|\implies ds\leq\frac{1}{\delta}|dx|\tag{i}
+\]
+Moreover, the projection
+$(x,y)\to x$ restricted to $W(\delta)$ has \emph{discrete fibers}, i.e. it is locally 1-1 as you see by drawing a figure with a small curve passing through any point in 
+$W(\delta)$.
+However, the set $W(\delta)$ need not be compact so we must 
+perform another reduction. Namely, by hypothesis the total length of 
+$\text{reg}(\partial\Omega)$ is finite. So with $\epsilon>0$ we can find a 
+\emph{compact} set $K\subset\text{reg}(\partial\Omega)$
+such that 
+\[ 
+\int_{\text{reg}(\partial\Omega)\setminus K}\, ds<\epsilon\tag{ii}
+\]
+Next, restrict the projection map $\pi$ defined by
+$(x,y)\to x$ to $W(\delta)\cap K$.
+Since this set 
+is \emph{compact} and the projection is locally 1-1,
+\emph{Heine-Borel Lemma} gives
+an integer $M_\delta$ such that
+the inverse fibers
+\[
+\pi^{-1}\cap W(\delta)\cap K\tag{iii}
+\]
+contain at most $M_\delta $ points for every $x$. 
+Notice  that $M_\delta$   depends on $\delta$ but not upon $\epsilon$.
+Using the above we obtain
+\[
+\int_{W(\delta)\cap K}\, (1-g)ds\leq 
+\frac{1}{\delta}\int_{W(\delta)\cap K}\, (1-g)d|x|\leq 
+\frac{M_\delta}{\delta}\cdot \int(1-g) dx\leq \frac{M_\delta}{\delta}\cdot\epsilon\tag{*}
+\]
+where the last inequality follows from the choice of $g$ in XX above.
+We have also to other estimates. Let $|f[_K$
+be the maximum norm of $f$ over $K$.
+On
+On $K\setminus W(\delta)$ we have $|n_y|\leq\delta$ and hence
+\[
+|\int_{K\setminus W(\delta)}\,f(1-g)n_y\cdot ds|\leq
+\delta\cdot \int_{K\setminus W(\delta)}\,f(1-g)ds\leq \delta\cdot |f|_K\cdot
+\int_{\partial\Omega_{\text{reg}}}ds
+\tag{**}
+\]  
+Next, using (iii) above we have
+\[
+|\int_{[\text{reg}(\partial\Omega)\setminus K]}\, f(1-g)ds|\leq
+|f|_{\partial\Omega}\cdot 
+\int_{[\text{reg}(\partial\Omega)\setminus K]}\, ds\leq |f|_{\partial\Omega}\cdot 
+\epsilon\tag{***}
+\]
+
+
+
+
+\noindent
+Finally, notice that
+\[ 
+\text{reg}(\partial\Omega)=[ W(\delta)\cap K]\cup\,
+[\text{reg}(\partial\Omega)\setminus K]\cup [K\setminus W(\delta)]\tag{v}
+\]
+Putting all this together we obtain the inequality
+
+\[
+|\int_{\text{reg}(\partial\Omega)}\, f(1-g) n_y ds|\leq
+\frac{M_\delta\epsilon}{\delta}+A\cdot |f|_K\cdot \delta+|f|_{\partial\Omega}\cdot \epsilon\tag{vi}
+\]
+Here (vi) hold for all pairs $\delta,\epsilon)$.
+To finish the proof
+of Theorem 13 we choose an arbitrary small$\delta>0$ and
+after $\epsilon$ is chosen so small that we first
+have $\epsilon\leq\delta$ and also
+
+\[
+\frac{M_\delta\epsilon}{\delta}<\delta
+\]
+Then the left hand side is majorised by
+\[ 
+(1+A\cdot |f|_{\partial\Omega}+|f|_{\partial\Omega})\cdot\delta
+\]
+Since $\delta>0$ is arbitrary we get
+Theorem 13.
+
+
+\newpage
+
+\centerline{\bf\large 3. Line integrals via differentials}
+
+\bigskip
+
+\noindent 
+In  ¤ 2 
+arc-length and the outer normal were used to construct line integrals. 
+One may also introduce the  differentials $dx$ and $dy$.
+The construction of the outer normal shows that
+\[
+n_x\cdot ds=dy\quad\, n_y\cdot ds=-dx\tag{*}
+\]
+Hence one can express  Stokes Theorem  in the form
+\[ 
+\iint_\Omega\, f_x \cdot dxdy=\int_{\partial\Omega}\, fdy
+\quad\colon\quad
+\iint_\Omega\, f_y \cdot dxdy=-\int_{\partial\Omega}\, fdx
+\]
+\medskip
+
+
+\noindent {\bf A Warning.}
+When Stokes Theorem
+is expressed in this way one must be careful with the orientation. 
+The \emph{rule of thumbs} is used whenever $\partial\Omega$ borders an open set.
+Personally I prefer to express line integrals by $n_x ds$ or $n_y ds$ 
+since the geometric picture becomes  transparent.
+However,  differentials have  an   advantage when
+calculus is performed on \emph{manifolds} rather 
+than the euclidian plane 
+${\bf{ R}}^2$, since here arc-length and normal derivatives are not even 
+defined until
+the manifold has been equipped with a metric.
+Thus, complex analysis on \emph{Riemann surfaces}
+employs  differential forms.
+\bigskip
+
+
+\noindent
+{\bf 3.0 Transformation laws.}
+Let $(\xi,\eta)$ be the coordinate functions in another copy
+of ${\bf{R^2}}$.
+Let $\Omega$ be a domain in the $(x,y)$-plane and
+consider a bijective map
+\[
+Q\colon\,(x,y)\to(\phi(x,y),\psi(x,y))\quad\colon\xi=\phi(x,y)\quad
+\eta=\psi(x,y)\tag{1}
+\]
+defined in some neighborhood of $\bar\Omega$.
+Here $\phi$ and $\psi$ are $C^1$-functions and we get the domain
+$Q(\Omega)$ in the $(\xi,\eta)$-space.
+Now we have
+\[ 
+d\xi=\phi_x\cdot dx+\phi_y\cdot dy\quad\colon\,
+d\eta=\psi_x\cdot dx+\psi_y\cdot dy\quad\colon\tag{2}
+\]
+The \emph{Jacobian} of the $Q$-map is defined by the equation
+\[
+\mathcal J=\phi_x\cdot\psi_y-\phi_x\cdot\psi_y\tag{3}
+\]
+The $Q$-map preserves orientation when
+$\mathcal J>0$ and from now on this is assumed.
+The Jacobian changes area which is expressed by
+\[ 
+d\xi d\eta=J\cdot dxdy\tag{3}
+\]
+
+
+\noindent
+Now we take some $C^1$-function $g(\xi,\eta)$ defined in the
+$(\xi,\eta$-space.
+In the $(x,y)$-space we get the function
+\[ 
+g_*(x,y)= g(\phi(x,y),\psi(x,y))\tag{4}
+\]
+
+
+\noindent
+Let us  study the effect of the transformation when Stokes formula is
+applied. Put $\Omega^*=Q(\Omega)$. We have the obvious equality:
+\bigskip
+\[
+\int_{\partial \Omega^*}\, gd\xi=
+\int_{\partial\Omega}\, g_\ast\cdot(\phi_xdx+\phi_y dy)\tag{5}
+\]
+Stokes formula applied to the right hand side gives
+\[
+\iint_\Omega\,
+-(g_\ast\phi_x)_y+(g_\ast\phi_y)_x\cdot dxdy\tag {6}
+\]
+\medskip
+
+\noindent
+Here we get a cancellation since the mixed derivatives
+$\phi_{xy}$ and $\phi_{yx}$ are equal. Hence (6) becomes:
+\[\iint_\Omega\,
+\,\bigl[-(g_\ast)_y\cdot\phi_x+(g_\ast)_x\cdot \phi_y\bigr ]\cdot dxdy\tag{7}
+\]
+\medskip
+
+\noindent
+If Stokes formula is applied to the left hand side in
+(5) we get the area integral
+\[
+\iint_{\Omega^*}\, -g_\eta\cdot d\xi d\eta\tag{8}
+\]
+\medskip
+
+\noindent
+{\bf{3.1 Theorem.}} \emph{The integrals (7) and (8) are equal.}
+
+
+\medskip
+
+\noindent 
+\emph{Proof.}
+The equality follows using
+transformation rules for
+partial derivatives. Namely, from (4) we get
+\[
+(g_*)_x=\phi_x\cdot g_\xi+\psi_x\cdot g_\eta
+\quad\colon\,
+(g_*)_y=\phi_y\cdot g_\xi+\psi_y\cdot g_\eta\tag{9}
+\]
+Here we can solve out $g_\eta$ and find
+\[
+(\phi_x\psi_y-\phi_y\psi_x)\cdot g_\eta=
+(g_*)_y\cdot\phi_x-
+(g_*)_x\cdot\phi_y\tag{10}
+\]
+
+
+\noindent
+In (10) we discover the Jacobian
+as a factor for $g_\eta$.
+Hence the  rule for area transformation in (3) and  the two minus signs
+in (7) and (8) show that  
+(7)=(8).
+\bigskip
+
+\noindent
+{\bf 3.2 The pull-back of differential forms.}
+The efficient way to analyze transforms  which   can be
+extended to maps between manifolds goes as follows:
+Let
+\[ 
+Q\colon\,(\xi,\eta)\mapsto (x,y)\quad\colon\, x=\phi(\xi,\eta)\quad
+y=\psi(\xi,\eta)\tag{1}
+\]
+
+
+\noindent
+The differential 1-forms $dx$ and $dy$
+have inverse images  defined by
+\[
+(dx)^*=\phi_\xi\cdot d\xi+\phi_\eta\cdot d\eta\quad\colon\,\,\,
+ (dy)^*=\psi_\xi\cdot d\xi+\psi_\eta\cdot d\eta\tag{2}
+\]
+
+
+
+\noindent
+More generally,  to each pair of $C^1$-functions
+$A(x,y),B(x,y)$ we get the
+1-form
+$\alpha=A(x,y)\dot dx+B(x,y)\cdot dy$. Its pull-back is
+\[ 
+\alpha^*=A^*(\xi,\eta)\cdot(dx)^*+
+B^*(\xi,\eta)\cdot(dy)^*\tag{3}
+\]
+where $A^*(\xi,\eta)= A(\phi(x,y),\psi(x,y))$
+and similarly for $B^*$.
+\medskip
+
+\noindent
+{\bf 3.3 Exterior differentials.}
+If $\alpha=A\cdot dx+B\cdot dy$ is a 1-form its exterior differential
+is defined as
+\[ 
+d\alpha=-A_y\cdot dx\wedge dy+B_x\cdot \wedge dy\tag{4}
+\]
+\medskip
+
+\noindent
+The minus sign in front of $A_y$ is compatible with
+Stokes formula is expressed in (3.0),i.e. we get
+\[
+\iint_\Omega\, d\alpha=\int_\Omega\,\alpha\tag{5}
+\]
+\medskip
+
+\noindent
+The formula in (5) summarizes the whole content of
+Stokes formula.
+It becomes especaily useful because of the following fundamental fact.
+\bigskip
+
+\noindent {\bf 3.4 Theorem.}
+\emph{The pull-back of differential forms commutes
+with exterior differential.}
+\bigskip
+
+\noindent
+{\bf 3.5 Remark.} Theorem 3.4  asserts that
+if we start from $\alpha$
+and get $\alpha^*$ then
+the 2-form $d(\alpha^*)$ in the $\xi,\eta)$-space is equal to
+the pull-back of the 2-form $d\alpha$.
+The reader should verify this or consult some text-book in calculus.
+Passing to Stokes formula the result is
+that if $\alpha$ is a 1-form in the $(x,y)$-space
+then one has equality for  the area integrals
+\[
+\iint_\Omega\, d\alpha=\iint_{\Omega^*}\, d\alpha^*\tag{6}
+\]
+\bigskip
+
+\noindent
+{\bf 3.6 Currents.}
+Above we recalled classic notions which  extend to
+manifolds in dimension 2 and using some calculations with 
+multi\vvv linear forms
+one introduces differential forms of higher
+degree  to manifolds in any dimension.
+However, the classic approach has a drawback since
+an equality like (6) assumes that one has a 1-1 map from  the
+$(\xi,\eta)$-plane  into the $(x,y)$-plane.
+The modern procedure
+is to use distribution theory.
+For example, consider a map
+\[
+Q\colon (\xi,\eta)\mapsto (\phi(x,y),\psi(x,y))
+\]
+where
+$\phi$ and $\psi$ are $C^\infty$-functions.
+Here the map $Q$  need not be 1-1.
+Let $\gamma$ be a Jordan arc in the $(\xi,\eta)$-space. For example, an 
+interval on some circle or a line segment.
+The image set $Q(\gamma)$ can be a curve with self-intersections and so on.
+A typical case is that for 
+points $p\in Q(\gamma)$ the inverse set
+$Q^{-1}(p)\cap\gamma$ is a finite set of points on
+$\gamma$ but  the number may change as $p$
+moves in $Q(\gamma)$.
+So one should regard the image of $\gamma$ under the $Q$-map as a \emph{current}
+acting as a linear form on 1-forms in the
+$(x,y)$-space by the rule
+\[
+\alpha\mapsto \int_\gamma\,\alpha^*\tag {1}
+\]
+\medskip
+
+\noindent The point is  that the pull-back $\alpha^*$ is defined even
+if $Q$ is not 1-1, i.e. it is  given
+by
+\[ 
+A^*(\xi,\eta)\cdot[\phi_x^*\cdot d\xi+\phi_x^*\cdot d\eta]+
+B^*(\xi,\eta)\cdot[\psi_x^*\cdot d\xi+\psi_x^*\cdot d\eta]\tag{2}
+\]
+\medskip
+
+\noindent
+The current defined by (1) is denoted by $Q_*(\gamma)$ and called the
+direct image of the integration current defined by
+$\gamma$ in the $(\xi,\eta)$-space.
+Here it is essential that we have given  an orientation on
+$\gamma$ its direct image current is constructed.
+The current $Q_*(\gamma)$ has distribution coefficients when
+we specialize the 1-form $\alpha$. That is, there exists a map
+\[ 
+A(x,y)\in C^\infty({\bf{R^2}})\mapsto
+\int_\gamma\, A^*(\xi,\eta)\cdot (dx)^*
+\] 
+
+\bigskip
+
+\noindent
+{\bf 3.7 Stokes formula in higher dimension}
+For readers who  already are a bit familiar with 
+differential geometry, the FCT in any dimension goes as follows: Let $X$ be an oriented manifold of some dimension $n\geq 2$ and of class $C^2$ at least.
+Let $V$ be a locally closed and oriented submanifold 
+of some dimension $1\leq k\leq n-1$.
+Assume  that $\bar V$ is compact and that the boundary $\partial V$ 
+satisfies Federer's condition, i.e. it contains an open part $\text{reg}(\partial V)$ which is an oriented $k-1$-dimensional manifold whose $(k-1)$-dimensional volume is finite,
+and the $k-1$-dimensional Haussdorff measure of 
+$\partial V\setminus \text{reg}(\partial V)$ is zero. Then the following hold for every 
+differential $(k-1)$-form $\alpha$ of class $C^1$ defined in some open 
+neighborhood of $\bar V$:
+\[
+\int_V\, d\alpha=\int_{\text{reg}(\partial V)}\,\alpha 
+\]
+
+\medskip
+
+\noindent
+{\bf An example} Let $n\geq 3$ and $1\leq k\leq n-1$. Suppose that
+$P_1(x),\ldots,P_k(x)$ is a $k$-tuple of real valued polynomials 
+of $n$ variables such that the set where the $k\times k$-matrix whose 
+elements are 
+\[
+\partial P_i/\partial x_\nu(x)\quad\colon\,\quad 1\leq i,\nu\leq k
+\] 
+is invertible in some non-empty open set $U$ of $\bf R^n$, i.e. the
+polynomial defined by the determinant of this matrix is not identically zero.
+Then we obtain a locally closed submanifold of $\bf R^n$ defined by
+\[ 
+W=\{x\colon\, P_1(x)=\ldots=P_k(x)=0\}\,\cap U
+\]
+Next, let $Q_(x),\ldots,Q_m(x)$ be some $m$-tuple of polynomials
+and put 
+\[
+\mathfrak{Q}=\{x\colon\, Q_\nu(x)<0\,\colon
+1\leq\nu\leq m\}
+\]
+Assume also that the open set
+$\mathfrak{Q}$ is bounded in $\bf R^n$, i.e. contained in
+some open ball with sufficiently large radius centered at the origin.
+Then the general Stokes Theorem holds for the locally closed
+$k$-dimensional submanifold $V=W\cap\mathfrak{Q}$.
+The proof that Federer's conditions hold  follows from a
+result about \emph{semi-algebraic sets} due to Tarski and Seidenberg. The reader may consult the appendix in  Hšrmander's text-book [Hš:1] or his more
+recent text-book series [Hš] for an account about semi-algebraic sets which 
+verify
+Federer's conditions.
+We remark that the resulting boundary integrals may become quite involved
+since no extra conditions are imposed upon the $Q$-functions so the boundary
+$\partial V$ may have "corners" which in the case $n\geq 3$ of course are hard to
+vizualise.
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf 4.  Green's formula and Dirichlet's problem}
+\bigskip
+
+\noindent
+Let $\Omega\in\mathcal D(C^1)$
+and $f$ is  a function of class $C^2$ which means that $f_x$ and $f_y$
+are of class $C^1$. Stokes Theorem  applied to $f_x$ and $f_y$ give
+\[
+ \iint_\Omega\, f_{xx}dxdy=
+\int_{\partial\Omega}\, f_x n_x ds\quad\colon\quad
+\iint_\Omega\, f_{yy}dxdy=
+\int_{\partial\Omega}\, f_y n_y ds
+\]
+\medskip  
+
+\noindent
+Adding the two equalities we obtain
+\[
+ \iint_\Omega\,( f_{xx}+f_{yy})dxdy=
+\int_{\partial\Omega}\, (f_x n_x+f_y n_y) ds
+\]
+\medskip
+
+\noindent
+Here  $f_x n_x+f_y n_y$ is  the
+\emph{directional derivative} of $f$ along the outer 
+normal $n$  which we denote by $f_n$.
+Next, $f_{xx}+f_{yy}$ is  the 
+\emph{Laplacian} of $f$ and is denoted by
+$\Delta(f)$. Hence we have proved
+\medskip
+
+\noindent {\bf 4.1 Theorem} \emph{Let $\Omega\in\mathcal D(C^1)$. For each $f$ of
+class $C^2$ we have}
+\[
+ \iint_\Omega\,\Delta(f)\,dxdy=
+\int_{\partial\Omega}\, f_n\, ds
+\]
+\medskip
+
+\noindent {\bf 4.2 Remark.} Stokes Theorem
+applied to the functions $f_x$ and $f_y$  gives the two formulas
+
+\[
+ \iint_\Omega\, f_{yx}dxdy=
+\int_{\partial\Omega}\, f_x n_y ds\quad\colon\quad
+\iint_\Omega\, f_{xy}dxdy=
+\int_{\partial\Omega}\, f_y n_x ds
+\]
+When $f$ is of class $C^2$, the mixed
+derivatives $f_{yx}$ and $f_{xy}$ are equal.
+Hence we obtain the following equality for line integrals
+\[
+\int_{\partial\Omega}\, f_x n_y ds=
+\int_{\partial\Omega}\, f_y n_x ds
+\]
+Notice that this equality is obvious using differentials to express the line integrals, i.e. 
+since $dx=-n_y ds$ and $dy= n_x ds$ the equality above is expressed by
+\[
+\int_{\partial\Omega}\, f_xdx+f_y dy=0
+\]
+The vanishing of this line integral follows trivally since each
+boundary curve of $\partial\Omega$ is closed.
+However, the two equalities above have a non-trivial consequence. Namely, 
+let $f$ be of class $C^2$ and consider its \emph{gradient vector}
+\[
+\nabla(f)=(f_x,f_y)= f_x\cdot e_x+f_y\cdot e_y
+\]
+where $e_x$ and $e_y$ are the euclidian basis vectors in
+$\bf R^2$.
+Subtracting the two equalities above we get 
+\[
+\int_{\partial\Omega}\, (f_x n_y-f_y n_x) ds=0
+\]
+Here  $f_x n_y-f_x n_x$ is equal to the \emph{vector product}
+$\nabla\times n$. Hence we have proved
+\medskip
+
+
+\noindent
+{\bf 4.3 Theorem} \emph{Let $\Omega\in\mathcal D(C^1)$. For each $f$ of
+class $C^2$ we have}
+\[
+\int_{\partial\Omega}\, \nabla(f)\times n \cdot ds=0
+\]
+\medskip
+\noindent
+{\bf 4.4 Mean value integrals}
+Consider the  case when $\Omega$ is an open disc. 
+Without loss of generality we may assume its center is at the origin and 
+let $R$ be the radius.
+Denote the disc by $D_R$.
+Here $\partial D_R$ is parametrized by
+\[ 
+\theta\mapsto R(\text{cos}(\theta),\text{sin}(\theta))\quad
+\colon\quad 0\leq\theta\leq 2\pi
+\]
+Let $f$ be a $C^2$-function defined in some open neighbourhood of the closed
+disc $\bar D_R$. Put
+\[
+M_f(R)=\frac{1}{2\pi}\int_0^{2\pi}\, f(R\cdot
+\text{cos}\,\theta,R\cdot\text{sin}\,\theta)\,d\theta
+\]
+As $R$ varies we can take the derivative and rules of 
+differentiation yield the following equality for each $0<r<R$:
+
+\[
+\frac{d}{dr}(M_f(r))=
+\frac{1}{2\pi}\int_0^{2\pi}
+\, [f_x(r
+\text{cos}\,\theta,r\text{sin}\,\theta)\text{cos}(\theta)+
+f_y(r
+\text{cos}\,\theta,r\text{sin}\,\theta)\text{sin}(\theta)\,]
+\,d\theta\quad
+\]
+
+\bigskip
+
+\noindent
+Since $rd\theta=ds$ and $n=(\text{cos}\,\theta,\text{sin}\,\theta)$
+we can express the equation by
+\[
+\frac{d}{dr}(M_f(r))=\frac{1}{2\pi r}\int_{\partial D_r}\,
+f_n ds
+\]
+Hence Theorem 4.1 gives:
+
+\medskip
+
+
+\noindent
+{\bf 4.5 Theorem} \emph{For each $0<r<R$ one has}
+\[
+\int_{D_r}\Delta(f) dxdy=2\pi r\cdot \frac{d}{dr}(M_f(r))
+\]
+\medskip
+
+\noindent
+In particular, suppose that $f$ is a \emph{harmonic function}
+which  means that it satisfies the Laplace equation, i.e. 
+$\Delta(f)=0$. Then the left hand side is zero above and hence the mean-value
+function $M_f(r)$ is constant. By continuity at the origin we see that
+\[
+\lim_{\epsilon\to 0}\, M_f(\epsilon)=f(0,0)
+\]
+Hence we get
+
+\medskip
+
+\noindent
+{\bf 4.6 Theorem} \emph{Let $f$ be a harmonic function in disc $D_R$. Then}
+\[ 
+f(0,0)=M_f(r)\quad\colon\quad 0<r< R
+\]
+Staying with harmonic functions we also notice that Theorem 4.1 gives
+\medskip
+
+\noindent {\bf 4.7 Theorem}. \emph{Let $\Omega\in\mathcal D(C^1)$. For each 
+$C^1$-function $h$ 
+which is harmonic in  $\Omega$ one has}
+\[ 
+\int_{\partial\Omega}\, h_n ds=0
+\]
+\medskip
+
+\noindent
+{\bf 4.8 Formulas with two functions.} Let $\Omega\in\,\mathcal D(C^1)$ 
+and $f,g$ is a pair of $C^2$-functions.
+Applying Theorem 2.4 to $f_xg$ and $f_yg$ gives after a summation
+\medskip
+
+\[
+ \iint_\Omega\, [\Delta(f)\cdot g+ f_xg_x+f_yg_y]\,
+ dxdy=
+\int_{\partial\Omega}\, f_n\cdot g \cdot ds
+\]
+\medskip
+
+\noindent
+Here $f_xg_x+f_yg_y$
+is the \emph{inner product} of the gradient vectors of $f$ and $g$.
+Since this term  is  symmetric  for the pair, we obtain the following  when the same formula a above is applied with $f$ and $g$
+interchanged:
+\bigskip
+
+\noindent {\bf 4.9 Theorem} \emph{For each pair of $C^2$-functions $f,g$ one has:}
+\[
+ \iint_\Omega\, \bigl[\Delta(f)\cdot g-f\cdot \Delta(g)\bigr]\,
+ dxdy=
+\int_{\partial\Omega}\,\bigl[ f_n\cdot g-f g_n\bigr] \cdot ds
+\]
+\medskip
+
+\noindent 
+{\bf 4.10 Application.} Let $\Omega=D_R$ be a disc centered
+at the origin. Let $f$ be harmonic in $D_R$. Given a point
+$(a,b)\in D_R$ we define the $g$-function
+\[
+g(x,y)=\text{Log}(\sqrt{(x-a)^2+(y-b)^2})
+\]
+An easy  computation  which is left to
+the reader shows that $g$ is a harmonic
+function in $\bf R^2$ outsidee the point
+$(a,b)$. With $\epsilon>0$ small we remove the open disc $D_\epsilon(a,b)$
+and apply 
+Green's formula to the domain
+$\Omega_\epsilon=D_R\setminus \bar D_\epsilon(a,b)$.
+Since both $f$ and $g$ are harmonic in $\Omega_\epsilon$ we obtain:
+\[
+\int_{\partial\Omega_\epsilon}\,f_n g\, ds=
+\int_{\partial\Omega_\epsilon }\,f g_n \, ds
+\]
+This equality yields an interesting formula when 
+$\epsilon\to 0$. First, $\partial \Omega_\epsilon=
+\partial\Omega\cup\,\partial D_\epsilon$. For the line integrals over 
+$D_\epsilon$
+the following two
+limit formulas hold:
+\[
+\lim_{\epsilon\to 0}\,
+\int_{\partial D_\epsilon}\,f_n g\, ds=0\quad\colon\,
+\lim_{\epsilon\to 0}\,\int_{\partial D_\epsilon}\,f g_n\, ds=
+-2\pi f(a,b)\tag{*}
+\]
+where the last minus sign appears since $\partial D_\epsilon$
+is a boundary component of $\Omega_\epsilon$ so that the
+outward normal points into the disc $D_\epsilon$.
+\medskip
+
+\noindent {\bf 4.11 Exercise.} Prove the last limit formula in (*).
+The hint is: We may assume that $(a,b)$ is the origin and 
+since $\frac{d}{dr}\text{Log}\, r=\frac{1}{r}$
+we find that the outer normal $g_n=-\frac{1}{\epsilon}$. At 
+the same time $ds=\epsilon d\theta$ and now the reader 
+verifies the second limit formula.
+\medskip
+
+\noindent
+Using these two limit formulas we obtain
+\[
+2\pi f(a,b)=\int_{\partial D_R }\,f g_n \, ds-
+\int_{\partial D_R }\,f_n g\,ds\tag{**}
+\]
+Hence the value of the harmonic function $f$  at $(a,b)$
+can be
+expressed by  sum of two line integrals on $\partial D_R$ where $f$ and $f_n$ appear.
+Later on
+we 
+shall find \emph{Poisson's  formula} where the value of $f$ is expressed by a
+line integral where only $f$ appears.
+
+\bigskip
+
+
+
+
+
+
+\centerline  {\bf 4.12 The Dirichlet problem}
+\medskip
+
+\noindent
+The formula 4.8 with two functions
+was the starting point when 
+Dirichlet around 1840 posed the following 
+problem:
+\bigskip
+\[
+\text{Given}\,\,h\in C^0(\partial \Omega)\,\,\, \text{find}\,\,\,
+f\in C^0(\bar\Omega)\quad\colon\,\, f|\partial\Omega=h\quad \Delta(f)|\Omega=0
+\]
+\bigskip
+
+\noindent
+To solve this Dirichlet considered the following \emph{variational problem}
+
+\[
+V(f)=\,\iint_\Omega\, (f_x^2+f_y^2) \cdot dxdy\quad\colon\quad f|\partial\Omega=h
+\]
+Now one seeks
+\[
+V_*=\min_f\, V(f)
+\]
+If $V(f)=V_*$ one has:
+\[ 
+\lim_{\epsilon\to 0}\, \frac{V(f+\epsilon g)-V(f)}{\epsilon}=0\quad\,\colon\quad 
+\forall\, g\,\,\text{such that}\,\, g|\partial\Omega=0\tag{i}
+\]
+Now we notice that
+\[ 
+V(f+\epsilon g)-V(f)=2\epsilon\,\iint (f_xg_x+f_yg_y)dxdy
++\epsilon^2\iint (g^2_x+g^2_y)dxdy=
+\]
+\[
+-2\epsilon\iint \Delta(f)g\,dxdy+\epsilon^2\iint (g^2_x+g^2_y)dxdy
+\]
+Passing to the limit when $\epsilon\to 0$
+we conclude that if $f$ minimizes  $V$ then
+\[
+\iint \Delta(f)g\,dxdy=0\tag{ii}
+\]
+Since this hold for all $g$ vanishing on $\partial\Omega$
+it follows that   $\Delta(f)=0$ in $\Omega$. 
+Hence $f$ solves Dirichlet's problem.
+\medskip
+
+\noindent
+{\bf 4.13 An obstacle.}
+Dirichlet's solution is correct but
+his proof became "shaky" when Weierstrass
+discovered that there exist variational problems
+of a similar nature as  above which \emph{fail} to have
+an extremal
+solution. In 1923  O. Perron gave a rigorous proof  using
+subharmonic functions which 
+answers  the question  when
+Dirichlet's problem has a solution for every continuous boundary
+function.
+
+\bigskip
+
+\noindent
+{\bf 4.14 Theorem.} \emph{Let $\Omega$ be a bounded open  set such that for
+every point $a\in\partial\Omega$
+the connected component of the set
+${\bf{C}}\setminus\Omega$ which contains $a$
+is not reduced to the singleton set $\{a\}$. Then
+each $h\in C^0(\partial\Omega)$
+has a unique harmonic extension to
+$\bar\Omega$.}
+\bigskip
+
+\noindent
+{\bf Remark.}
+We prove this in Chapter V.
+Notice that 
+Theorem 4.14 applies  when
+$\Omega$ is of class $\mathcal D(C^1)$.
+
+\medskip
+
+
+
+\noindent
+{\bf 4.15 Probabilistic solution.}
+Theorem  4.14  can be  proved
+by  
+\emph{probabilistic considerations}. 
+Let us describe this under the assumption that
+$\partial\Omega$ is "nice".
+Pick some 
+arc $\gamma$ from the boundary, i.e. $\gamma$ is a simple 
+closed curve contained in one of the closed boundary curves $\Gamma$.
+Now one seeks a harmonic function $f$ in $\Omega$ such that its boundary value is equal to 1 at interior points of $\gamma$ and zero on 
+$\partial\Omega\setminus\gamma$. So the boundary values of $f$ are determined 
+except at the the two end-points of  
+the closed $C^1$-curve $\gamma$.
+\medskip
+
+\noindent {\bf 4.16 The harmonic measure.} Let $p\in\Omega$.
+Starting from $p$ we consider the \emph{Brownian motion}, i.e. 
+perform a 2-dimensional random walk which may be approximated by regarding
+small consequtive steps of length $\delta$ which moves the particle
+with probability $1/4$ in each direction - i.e.  changing  $x$ or $y$
+by + or \vvv $\delta$. With probability one the discrete random walk eventually crosses the boundary
+$\partial\Omega$. Some of these cross $\gamma$ and this gives a number 
+$0<\pi_\gamma(p)<1$ which is the probability for a random walk 
+to cross $\gamma$. To be precise, one gets this number in the limit when
+$\delta\to 0$.
+Next, we use the fact that a function is harmonic if and only if
+it satisfies a local \emph{mean-value condition}, i.e. a function $f$ is harmonic in 
+$\Omega$ if and only if its value at point $q\in\Omega$ is equal to its mean-value over small discs centered at $q$. From this it follows easily that the function
+\[ 
+p\mapsto \pi_\gamma(p)
+\] 
+is harmonic in $\Omega$ and yields the solution to Dirichlet's
+problem with boundary values as above.
+Finally, since this is achieved for boundary arc  $\gamma$
+one can deduce Theorem 4.14 by approximating a continuous function $h$ on 
+$\partial\Omega$ with functions which are piecewise constant
+\medskip
+
+\noindent 
+{\bf Remark} 
+The probability expressed by  $\pi_\gamma(p)$
+plays an important role later on since it is equal to the \emph{harmonic
+measure} defined as the value at $p$ of the harmonic function in
+$\Omega$ with boundary value zero on
+$\partial\Omega\setminus\gamma$ and equal to one  on $\gamma$.
+This probabilistic interpretation of the harmonic measure
+gives also an intuitive
+feeling for the harmonic measure.
+
+\medskip
+
+\noindent
+A notable point is that  the probabilistic solution makes it possible to
+use \emph{Monte Carlo simulations}  in order to  obtain good 
+approximative solutions to Dirichlet's problem
+which in general have
+no "analytic solutions".
+For example,  presence of several boundary components of
+$\partial\Omega$ 
+does not in principle cause any  problem when a  Monte Carlo simulation
+is used.
+A drawback is that  Monte Carlo simulations tend to be rather
+time consuming since one must repeat random walks several times over small grids.
+In an impressive \emph{Examensarbete by Oskar Sandberg} (2003)
+at the Mathematics Department in Stockholm, a quite rapid Monte Carlo
+simulation was developed . Here
+one takes  larger random steps in each simulation 
+using the \emph{mean-value property} for harmonic functions. The
+interested reader may consult Sandberg's work  for  further details
+where numerical solutions
+to the Dirichlet problem
+in dimension $\geq 3$ also are obtained by  Monte Carlo simulations.
+See also the section about the material about
+the  \emph{Brownian motion}  in
+Chapter XX for further comments.
+
+\bigskip
+
+\centerline {\bf 4.18 The Dirichlet problem in a half-space.}
+\medskip
+
+
+\noindent
+Consider the half space in ${\bf{ R}}^2$ defined by $U=\{(x,y)\colon \,y>0\}$.
+So here $\partial U$ is the $x$-axis.
+We construct harmonic a class of harmonic 
+functions in $U$ by the following procedure:
+\medskip
+
+\noindent {\bf  4.19 Definition} \emph{To each pair of real numbers $a<b$ we let
+$H_{a,b}(x,y)$ be the function in $U$ whose value at $(x,y)$ is the angle at 
+this point in the triangle with corners at $(a,0),(b,0),(x,y)$}.
+\medskip
+
+\noindent
+The reader should draw a figure which explains why 
+$0<H_{a,b}(x,y)<\pi$ for all $(x,y)\in U$. Moreover one has the limit formulas
+\medskip
+\[
+\lim_{y\to 0}\,H_{a,b}(x,y)=\pi\quad\,a<x<b
+\quad\colon\quad
+\lim_{y\to 0}\,H_{a,b}(x,y)=\pi\quad\,x<a\quad b<x
+\]
+Finally we also have
+\[
+\lim_{x^2+y^2\to\infty}\,H_{a,b}(x,y)=0
+\]
+Less obvious is that $H$ is  a \emph{harmonic} function in $U$.
+So let us give:
+\medskip
+
+
+\noindent
+\emph{Proof} Recall that the sum of the angles of a triangle is $\pi$.
+Given the poins $a<b$ a figure shows that the angle
+$H_{a,b}(x,y)$ is equal to
+$\beta -\alpha$ where $\alpha$ is the angle between the vector from $a$ to $(x,y)$ and the positive $x$-axis, and similarly  $\beta$ is the angle
+between the vector from $b$ to $(x,y)$  and the positive $x$-axis.
+Since the sum of harmonic functions is again harmonic, i suffices to show that
+the functions $\alpha(x,y)$ and $\beta(x,y)$ are harmonic.
+Now it is clear - again   by a figure - that
+\[
+\text{tg}(\alpha)=\frac{y}{x-a}\implies
+\alpha(x,y)=\text{arctg}\bigl(\frac{y}{x-a}\bigr)
+\]
+When $y>0$ and $x=a$ the $\alpha$-function is $\pi/2$. Outside this vertical line
+we can take irs derivatives. Using the wellknown formula for the derivative of the 
+arctg-function the reader may verify
+that $\Delta(\alpha)=0$. 
+\medskip  
+
+\noindent {\bf 4.20 Remark}
+See also XX where we give an alternative proof
+that $H$
+is harmonic using  complex valued  Log-functions. 
+The  $H_{a,b}$-functions can be used to  solve the Dirichlet
+problem since the two limit formulas after Definition 4.19
+settle the case when the boundary function
+is the characteristic function of an interval. To proceed further we need to 
+study the $H$-functions when $b-a\to 0$.
+Given $(x,y)\in U$ and some  $a$ on the $x$-axis we consider
+for a small positive $\Delta$
+the triangle with corners at $(x,y),(a,0),(a+\Delta,0)$. Let $\alpha$ 
+be the angle at $(x,y)$
+which therefore gets small with $\Delta$.
+By wellknown results about the 
+cosine- and the sine-function - especially that
+$\frac{\text{sin}\,\alpha}{\alpha}\to 1$ as $\alpha\to 0$, the reader can easily verify 
+that:
+\[
+\lim_{\Delta\to 0}\frac{\alpha}{\Delta}=\frac{y}{(x-a)^2+y^2}\tag{*}
+\]
+Armed this result 
+we solve the
+Dirichlet problem when $f(x)$ is a continuous function which
+vanishes outside a bounded interval $[-A,A]$.
+To keep variables distinct we use $\xi$ as the coordinate on the 
+$x$-axis. Let $\{\xi_\nu\}$ be a finite and strictly increasing sequence
+where the differences $\xi_{\nu+1}-\xi_\nu$ are small. Here
+$\xi_0=-A$ and $\xi_N=A$ for some $A>0$.
+Define the function
+\[ 
+G_N(x,y)=\sum\, f(\xi_\nu)\cdot H_{\xi_\nu,\xi_\nu+1}(x,y)\tag{i}
+\]
+Since $f$ is continuous the limit formulas for the $H$-functions above show that
+\[
+\lim_{y\to 0}\,G_N(a,y)\simeq \pi\cdot f(a)\tag{ii}
+\] 
+for every real $a$ where this approximative equality becomes more and
+more accurate as the
+maximum of the differences
+$\xi_{\nu+1}-\xi_\nu$ tends to zero.
+At the same time  the limit formulas for the $H$-functions imply
+that the $G_N$-fuction is approximated by the \emph{Riemann sum}
+\[
+\sum\, f(\xi_\nu)\cdot (\xi_{\nu+1}-\xi_\nu)\cdot
+\frac{y}{(x-\xi_\nu)^2+y^2}
+\]
+Next, by the construction of the Riemann integral of $f$ over $[-A,A]$
+we also have
+\[ 
+G_N(x,y)\simeq\int_{-A}^A \frac{y}{(x-\xi)^2+y^2}f(\xi)d\xi\tag{iii}
+\]
+Passing to a limit where we take
+refined $\xi$-partitions, the sequence $\{G_N(x,y)$ converges to a limit function
+$G(x,y)$ which is harmonic in the upper half-plane and
+\[
+\lim_{y\to 0}\,G(a,y)= \pi\cdot f(a)\quad\colon\quad -A<a<A
+\] 
+If $a$ is outside the interval
+$[-A,A]$ 
+we see that
+$\lim_{y\to 0}\,G(a,y)=0$.
+Hence we have arrived at Poisson's solution:
+
+\medskip
+
+
+\noindent
+{\bf 4.21 Theorem} \emph{Let $f(\xi)$ be a continuous function on the real 
+$x$-axis which is zero outside a bounded interval.
+Then the function}
+\[ G(x,y)=\frac{1}{\pi}\int_{-\infty}^\infty \frac{y}{(x-\xi)^2+y^2}\dot f(\xi)d\xi
+\]
+\emph{is harmonic in the upper half plane and 
+$G(\xi,0)=f(\xi)$ holds on the boundary.} 
+\bigskip
+
+
+
+
+\centerline{\bf{5. Exact versus closed 1-forms}}
+\bigskip
+
+
+\noindent
+In this section a domain $\Omega$ in $\mathcal D(C^1)$ is given. It is connected 
+and $\partial\Omega$ has $p$ many boundary curves for some $p\geq 1$.
+The functions and other objects below are defined in
+$\Omega$ and when integrals are taken over the boundary
+it is assumed that the functions have
+been extended to the closure of $\Omega$ in order that
+boundary integrals are defined.
+A differential 1-form is given by:
+\[
+W=f(x,y)\cdot dx+g(x,y)\cdot dy\tag{1}
+\]
+Here $f$ and $g$ are supposed to be of class $C^1$ at least.
+The 1-form is closed if
+\[ 
+f'_y=g'_x\tag{2}
+\]
+Suppose there exists a $C^2$-function $U(x,y)$ such that
+\[
+U'_x=f\quad\text{and}\quad 
+U'_y=g\tag{3}
+\]
+Since the mixed second order derivatives
+$U''_{xy}$ and $U''_{yx}$ are equal we see that (3) gives (2).
+When $U$ exists we say that the 1-form $W$ is exact and $U$ is called
+the potential function of $W$.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In mechanics one refers to a 1-form $W$ as a field of forces, i.e.
+to every point one assigns the force vector
+$F=(f,g)$. If (3) holds we have the equality
+$\nabla(U)=F$ and one says that $F$ is a potential field where
+$U$ is its potential function. Notice that $U$ is determined up to a constant.
+\medskip
+
+\noindent
+Let $\Gamma$ be  $C^1$-curve
+with end-points $A=(x_0,y_0)$ and $B=(x_1,y_1)$.
+For every 1-form $W$ we get the line integral
+\[ 
+\int_\Gamma\, W=\int_0^T\, 
+\bigl[f(x(t),y(t))\cdot \dot x+g(x(t),y(t))\cdot \dot y
+\bigr ]\cdot dt\tag{i}
+\]
+If $W$ is exact with a potential function $U$ we notice that
+\[ 
+\frac{d}{dt}(U(x(t),y(t))=
+f(x(t),y(t))\cdot \dot x+g(x(t),y(t))\cdot \dot y
+\]
+
+
+\noindent
+Hence (i) is equal to $U(B)-U(A)$. In other words, when
+$W$ is exact then the line integral along a curve
+$\Gamma$ only depends upon the two end-points and  it is
+expressed by
+the difference $U(B)-U(A)$.
+\medskip
+
+
+\noindent
+{\bf{5.1 Exercise.}} Let $W$ be a closed 1-form and assume that
+the line integral along every curve $\Gamma$
+only depends on the end-points. Show that $W$ is exact.
+\medskip
+
+\noindent
+{\bf{5.2 Non-exact 1-forms.}}
+The standard example of a closed but non-exact 1-form occurs when
+$\Omega$ is an annulus $r^2<x^2+y^2<R^2$
+and we take
+
+\[ 
+W=\frac{ydx}{x^2+y^2}-\frac{xdy}{x^2+y2}
+\]
+
+
+\noindent
+{\bf{5.3 Starshaped domains.}}
+We say that $\Omega$ is star-shaped with respect to the origin
+if the line from 0 to every point $p\in\Omega$ is contained in
+$\Omega$.
+In this case every closed 1-form is exact. To see this
+we define the function $U(x,y)$ in $\Omega$ by
+\[ 
+U(x,y)=\int_0^1\,\bigl[ x\cdot f(tx,ty)+y\cdot g(tx,ty)]\cdot dt
+\]
+Now we get
+\[ U'_x=\int_0^1\,f(tx,ty)+
+\int_0^1\,\bigl[ tx\cdot f'_x(tx,ty)+ty\cdot g'_x(tx,ty)]\cdot dt\tag{1}
+\]
+Next, $g'_x=f'_y$ is assumed 
+and we notice that
+\[
+\frac{d}{dt}(f(tx,ty))=x\cdot f'_x(tx,ty)+y\cdot f'_y(tx,ty)
+\]
+It follows that the last integral in (1) becomes
+
+\[
+\int_0^1\,t\cdot \frac{d}{dt}(f(tx,ty))\cdot dt=
+f(x,y)-\int_0^1\,f(tx,ty))\cdot dt
+\]
+The last integral is cancelled via (1) and hence $U'_x=f$. In the same way one
+shows that $U'_y=g$ and hence the 1-form is exact.
+
+\medskip
+
+\noindent
+{\bf{5.4 The deformation theorem.}}
+Let $A$ and $B$ be two given points in $\Omega$.
+Consider a family of curves
+$\{\Gamma_s\}$
+where each $\Gamma_s$ has $A$ and $B$ as endpoints and
+we are given a vector valued function
+\[ 
+\rho\colon\, (s,t)\mapsto (x(s,t),y(s,t)\quad
+\colon 0\leq s\leq 1\quad
+\text{and}\quad 0\leq t\leq T\tag{*}
+\]
+Here $t\mapsto (x(s,t),y(s,t))$Êis the parametrization of
+$\Gamma_s$.
+With these notations we have
+
+\medskip
+
+
+\noindent
+{\bf{5.5 Theorem.}} \emph{For every closed 1-form $W$ the function
+below is a constant}
+\[ 
+s\mapsto \int_{\Gamma_s}\, W\tag{1}
+\] 
+
+
+
+
+\noindent
+{\bf{Remark.}} We have essentially proved this in
+the introduction, i.e. see Theorem A.X.
+But we give another proof below which involves less calculations and 
+at the same time illustrates the efficiency when the calculus of
+differential forms is used.
+
+
+
+
+\medskip
+
+\noindent
+\emph{Proof.} 
+To begin with, we can restrict $s$ to some interval $[0,s_*]$ for every
+$0<s_*\leq 1$ and therefore it suffices to prove that
+(1) takes the same value of $\Gamma_1$ and $\Gamma_0$.
+To achieve this we first consider an arbitrary
+$C^1$-function $f$ and the 1-form $f\cdot dx$. We shall now find an
+expression of the difference
+\[ 
+ \int_{\Gamma_1}\, f\cdot dx-
+\int_{\Gamma_0}\, f\cdot dx\tag{3}
+\]
+For this purpose we consider the $\rho$-map in (*) and construct the inverse function
+\[ 
+f^*(s,t)= f(x(s,t),y(s,t))
+\]
+ We have also the inverse 1-form 
+\[ 
+\rho^*(dx)= x'_s\cdot ds+x'_t\cdot dt
+ \]
+Put $\square=\{ (s,t)\quad\colon \{0\leq s\leq 1\}\cap\{0\leq t\leq T\}\}$.
+Since the end-points of the curves
+$\{\Gamma_s\}$ are equal
+it follows that (3) is equal to the boundary integral
+
+\[ 
+\int_{\partial\square}\, f^*\cdot \rho^*(dx)\tag{4}
+\]
+Stokes theorem applied to $\square$ implies that (4) is equal to
+\[ 
+\iint_\square\, df^*\cdot \rho^*(dx)=\iint_\square\, \rho^*(f\cdot dx)=
+\iint_\square\, \rho^*(f'_y\cdot dy\wedge \cdot dx)
+\tag{5}
+\]
+Let us remark that the last integral becomes
+\[ 
+\iint_\square\, (f'_y)^*\cdot (y'_s\cdot x'_t-y'_t\cdot x'_s)\cdot ds\wedge dt\tag{6}
+\]
+If we instead start with a 1-form $g\cdot dy$
+then the same calculation gives
+\[
+ \int_{\Gamma_1}\, g\cdot dy-
+\int_{\Gamma_0}\, g\cdot dy=
+\iint_\square\, \rho^*(g'_x\cdot dx\wedge \cdot dy)
+\tag{7}
+\]
+Finally, using the equality $dy\wedge dx=dx\wedge dy$ we obtain
+the following equality which is valid for an \emph{arbitrary}
+1-form $W=f\cdot dx+g\cdot dy$ which need not be closed:
+\bigskip
+
+\[
+ \int_{\Gamma_1}\, W-
+\int_{\Gamma_0}\, W=
+\iint_\square\, \rho^*((g'_x-f'_y)\cdot dx\wedge \cdot dy)\tag{**}
+\]
+In the special case when $f'_y=g'_x$ the last integral is zero and
+hence  
+$\int_{\Gamma_1}\, W=\int_{\Gamma_0}\, W$ holds, i.e. Theorem 5.3 
+is a special case of (**).
+\bigskip
+
+\noindent
+{\bf{5.6 When is a 1-form exact.}}
+If $p=1$, i.e. if $\Omega$ is a Jordan domain then topology
+learns that every closed curve in $\Omega$ can be deformed to a point. 
+Hence Theorem 5.3 implies that if $W$ is a closed 1-form
+then its  line integral over every closed curve
+is zero. It follows from Exercise 5.1 that $W$ is exact.
+If $p>1$ topology learns that there exist $p-1$ many closed curves
+$\Gamma_1,\ldots,\Gamma_{p-1}$ which give a basis for the homology of
+the multiple connected domain.
+If $W$ is a closed 1-form one assigns the period numbers
+\[ 
+\int_{\Gamma_k}\, W\quad\colon\,\, 1\leq k\leq p-1\tag{*}
+\]
+Now $W$ is exact if and only if all the period numbers are zero.
+Suppose $W_1,\dots,W_{p-1}$
+is some $(p-1)$-tuple of closed 1-forms
+such that the $(p-1)\times(p-1)$-matrix with elements
+\[ 
+a_{ik}=\int_{\Gamma_k}\, W_i
+\] 
+is invertible.
+Then, for every closed 1-form $W$ we can find $c_1,\ldots,c_{p-1}$ 
+such that the periods
+of $W-(c_1W_1+\ldots+c_{p-1}W_{p-1})$ vanish
+and hence there exists a potential function $U$ such that
+\[
+W=c_1W_1+\ldots+c_{p-1}W_{p-1}+dU
+\]
+
+
+
+\newpage
+
+\centerline{\bf{6. An integral formula for the Laplace operator.}}
+\medskip
+
+
+\noindent
+Consider a $C^2$-function $f(x,y)$ defined in
+the open disc $D(R)$ of radius $R$ centered at the origin.
+Let $0<r<R$ and choose also a small $\epsilon>0$ and consider the annulus
+$\Omega=\{\epsilon^2<x^2+y^2<r^2\}$.
+In $\Omega$ we have  the function
+\[ 
+g_r(x,y)=\text{Log}(\frac{r}{\sqrt{x^2+y^2}})\tag{1}
+\]
+We have already seen that $g$ is harmonic in $\Omega$.
+The boundary $\partial\Omega$ consists of the circle 
+$x^2+y^2=\epsilon^2$ and the circe of radius $r$ and
+we leave it to the reader to verify that Theorem 4.9 applied to $f$ and $g$
+give the formula
+\[
+\iint_\Omega\, \Delta(f)(x,y)\cdot g_r(x,y)\cdot dxdy=
+\int_0^{2\pi}\, f(r,\theta)\cdot d\theta -
+\int_0^{2\pi}\,f(\epsilon,\theta)\cdot d\theta\tag{2}
+\]
+\medskip
+
+\noindent
+Keeping $r$ fixed while $\epsilon\to 0$
+the continuity of $f$ at the origin gives:
+\[
+f(0)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\, f(r,\theta)\cdot d\theta -
+\frac{1}{2\pi}\cdot\iint_{D(r)}\, \Delta(f)(x,y)\cdot g(x,y)\cdot dxdy\tag{3}
+\]
+
+
+\noindent
+With $0<r_*<R$ we can apply (3) to every $0<r<r^*$
+and after an integration
+using polar coordinates we obtain:
+\[
+f(0)=\frac{1}{\pi\cdot r_*^2}\cdot \iint_{D(r_*)}\,
+f(x,y)\cdot dxdy-
+\frac{1}{2\pi}\cdot\int_0^{r_*}\, [
+\iint_{D(r)}\,  \Delta(f)(x,y)\cdot g_r(x,y)\cdot dxdy\bigr]\cdot dr
+\]
+\medskip
+
+\noindent
+The last double integral is evaluated via polar coordinates
+and
+the result is the formula from the introduction, i.e. the reader may verify that
+the double integral becomes
+\[
+\int_0^{r_*}\,K(r^*,s)\cdot \bigl [\int_0^{2\pi}  \Delta(f)(s,\theta)\cdot d\theta\bigr]\cdot ds\tag{i}
+\]
+where  we for each pair $0<s\leq r^*$ have:
+\[ 
+K(r^*,s)=s^3\cdot \int_1^{\frac{r}{s}}\, u\cdot \text{Log}(u)\cdot du\tag{ii}
+\]
+
+
+\end{document}
+
+
+\newpage
+
+
+Let $\mathcal C$
+be a simple closed curve of class $C^1$, i.e. a differentiable closed Jordan curve
+which borders a Jordan domain $\Omega$.
+As $z$ varies in $\Omega$ we obtain
+the function
+\[ 
+J(z)= \int_\mathcal C\, \log\frac{1}{|z-q|}\cdot ds(q)
+\] 
+where $q$ denote points on $\mathcal C$ and $ds$ is the arc-length measure.
+here $J(z)$ is a harmonic function in
+$\Omega$ and it extends to a continuous function on
+the closure. The reasoin is that
+if $p\in\mathcal C$ then the functiion
+\[
+q\mapsto   \log\frac{1}{|z-q|}
+\] 
+is integrable with respect to the arc-length measure.
+Less evident is the behaviour of normal derivatives of $J$
+along the boundary curve.
+This, when $p\in\mathcal C$ is given
+we first have a defined integral value
+\[
+J(p)= \int_\mathcal C\, \log\frac{1}{|z-q|}\cdot ds(q)
+\]
+At $p$ we also have the inner normal ${\bf{n}}_i(p)$
+which by definition is a vector of unit length
+which is  $\perp$ to $\mathcal C$ at $p$ and
+points into $\Omega$.
+Then we seek
+\[ 
+\lim_{h\to  0}\,\frac{J(p-h{\bf{n}}_i(p))-J(p)}{h}
+\]
+It turns out that (x) has a limit
+and we get a function on  $\mathcal C$ defined by
+\[
+\frac{\partial J}{\partial{\bf{n}}_i}(p)=
+\lim_{h\to  0}\,\frac{J(p-h{\bf{n}}_i(p))-J(p)}{h}
+\]
+Another procedure when we evaluate normal derivatives with respect
+to $q$ while $p\in\Omega$ is kept fixed.
+Not so easy....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+

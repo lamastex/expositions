@@ -1,0 +1,3498 @@
+
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+
+\centerline{\bf\large Chapter III. Complex analytic functions}
+
+\bigskip
+
+
+\centerline{\emph{ Contents}}
+
+\bigskip
+
+\noindent
+0. Introduction
+\medskip
+
+
+\noindent
+1. Complex line integrals
+\medskip
+
+\noindent
+2. The Cauchy-Riemann equations
+\medskip
+
+\noindent
+3. The $\bar\partial$-operator
+\medskip
+
+
+\noindent
+4. The complex derivative
+\medskip
+
+\noindent
+5. Theorems by Morera and Goursat
+\medskip
+
+
+
+
+
+\noindent
+6. Cauchy's Formula
+\medskip
+
+\noindent
+7. Complex differentials 
+\medskip
+
+\noindent
+8. The Pompieu formula
+\medskip
+
+
+\noindent
+9. Normal families
+\medskip
+
+\noindent
+10. Laurent series
+\medskip
+
+\noindent
+11. An area formula
+\medskip
+
+
+
+\noindent
+12. A theorem by Jentsch
+\medskip
+
+\noindent
+13. An inequality by Siegel 
+\medskip
+
+\noindent
+14. Zeros of product series.
+\medskip
+
+
+
+\noindent
+15. Hadamard products 
+\medskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\noindent {\bf Introduction.}
+Expressing a complex number  by $z=x+iy$ we  identify
+$\bf C$ with ${\bf{ R}}^2$.
+Consider a complex valued function
+$f(z)=u(x,y)+iv(x,y)$ where   
+$\mathfrak{Re}(f)=u$ is  the real part and 
+$\mathfrak{Im}(f)=v$  the imaginary part.
+Let
+$f$ be defined in a domain
+$\Omega\in\mathcal D(C^1)$ which
+extends continuously to the
+closure $\bar\Omega$ where
+$u$ and $v$ are $C^1$-functions in
+$\Omega$, i.e. the four partial derivatives
+$u_x,u_y,v_x,v_y$ exist as continuous functions in
+$\Omega$.
+Now there exists 
+complex line integral
+\[
+\int_{\partial\Omega}\, f(z)\cdot dz=
+\int_{\partial\Omega}\,udx \vvv v dy+
+i\cdot \int_{\partial\Omega}\, udy+vdx
+\tag{*}
+\]
+Theorem 2.4 in Chapter II shows that 
+both integrals are  zero
+if the pair $u,v)$ satisfies
+the following two differential equations  in  $\Omega$:
+\[
+u_x=v_y\quad\colon\quad u_y=-v_x\tag {**}
+\]
+
+
+\noindent
+We refer to (**) as  the \emph{Cauchy-Riemann equations} and 
+$(u,v)$ is  called a $CR$-pair  when (**) holds and then we say that
+$f=u+iv$ is an analytic function of the complex variable $z$.
+In ¤ 6 we 
+establish  
+\emph{Cauchy's formula}:
+
+\[
+f(z_0)=\frac{1}{2\pi i}\cdot
+\int_{\partial\Omega}\,\frac{f(z)dz}{z-z_0}\,\quad\text{for all}\,\,
+z_0\in\Omega\,.\tag{***}
+\]
+\medskip
+
+\noindent 
+We will use
+(***) to prove
+that
+when $(u,v)$ is a CR-pair in some open set $\Omega$, then
+they are not only of class $C^1$ but have continuous derivatives of
+any order, i.e. both $u$ and $v$
+are
+$C^\infty$-functions.
+\medskip
+
+
+\noindent
+{\bf{A notation.}}
+Let $\Omega$ be an  open set in
+${\bf{C}}$. The family of $C^1$-functions $f=u+iv$
+for which $(u,v)$ is a CR-pair in $\Omega$ is denoted by
+$\mathcal O(\Omega)$. We refer to this as the class of analytic
+functions in $\Omega$ and remark that one also
+refers to the class of \emph{holomorphic functions}, i.e. the notion of 
+complex analytic functions and holomorphic functions are the same.
+\newpage
+
+\noindent Next follows a brief account of the material in this chapter.
+
+
+\medskip
+
+\noindent
+{\bf{ 0.1 Complex derivatives}}.
+Consider a  $C^1$-function $f(z)=u(x,y)+iv(x,y)$ 
+defined in some open set 
+$\Omega$. If $z_0\in\Omega$  there exist  complex difference quotients
+\[ 
+\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}\quad\colon \quad z_0\in\Omega
+\]
+We say that $f$ has a \emph{complex derivative} at $z_0$ if
+these complex difference quotients have a limit as
+$\Delta z=\Delta x+i\Delta y\to 0$. During
+the
+passage to
+the limit
+$\Delta x$ and $\Delta y$ are not constrained, i.e. it is only
+required that both $\Delta$-numbers tend to zero. For example, we can
+allow that $\Delta x$ tends much faster to zero than
+$\Delta y$, or vice versa. 
+In ¤ 4 we show that the existence of a complex derivative
+at a point $z_0=x_0+iy_0$ is \emph{equivalent} to the condition that
+$u_x(x_0,y_0)=v_y(x_0,y_0)$ and
+$u_y(x_0,y_0)=-v_x(x_0,y_0)$  hold. Hence the
+$C^1$-function $f(z)$ in $\Omega$ has a complex derivative everywhere if and
+only if $(u,v)$ is a $CR$-pair.
+\medskip
+
+\noindent
+In  ¤ 5 we  relax the regularity hypothesis that
+$f$ from the start is of class $C^1$. More precisely, assume only that
+$f(z)$ is continuous in $\Omega$ and that the
+pointwise defined complex derivative exists for 
+every $z_0\in\Omega$.
+\emph{Goursat's theorem} shows that
+$f$ is automatically of class $C^1$ and hence
+$(u,v)$ is a CR-pair and they even become $C^\infty$-functions in
+$\Omega$.
+\medskip
+
+\noindent
+{\bf{0.2 Schwarz' reflection.}}
+Let $f(z)$ be analytic in an open rectangle
+\[ 
+\square_+=\{ (x,y)\quad\colon\, 0<y<b\quad
+\text{and}\quad -A<x<A\}
+\]
+A reflection in the real $x$-axis gives the rectangle
+\[
+\square_-=\{ (x,y)\quad\colon\, -b<y<0\quad
+\text{and}\quad -A<x<A\}
+\]
+In $\square_-$ we define the complex valued function
+\[ 
+g(z)=\bar f(\bar z)=u(x,-y)-iv(x,-y)
+\]
+One verifies easily that
+$g(z)$ becomes analytic in $\square_-$.
+Suppose now that 
+$f(z)$ extends continuously 
+to the $x$-axis, i.e.  
+\[ 
+\lim_{\epsilon\to 0}\, f(x+i\epsilon)=f_*(x)
+\] 
+exists uniformly with respect to $x$.
+If $f_*(x)$ is \emph{real-valued}
+then $f$ and $g$ attain the same boundary
+values on the real $x$-interval. In ¤ 5 we prove that
+under this assumption the pair $f,g$
+not only match each other as continuous functions
+on the $x$-interval but there exists an analytic function
+$F(z)$ defined in the whole open square
+\[
+\square=\{ (x,y)\quad\colon\, -b<y<b\quad
+\text{and}\quad -A<x<A\}
+\] 
+such that $F=f$ in $\square_+$ and $F=g$ in $\square_-$.
+This result is due to Hermann Schwarz who
+applied the reflection principle 
+to establish many other results, such as
+the existence of a conformal map from the unit disc
+to a domain bordered by a piecewise linear Jordan curve.
+
+\medskip
+
+\noindent
+{\bf{0.3 A more general reflection.}}
+Let $\square_+$ and $\square_-$
+be as in (0.2).
+Consider a
+pair $f\in\mathcal O(\square_+)$ and
+$g\in\mathcal O(\square_-)$.
+Then the following extension of Schwarz's result holds:
+
+
+\medskip
+
+\noindent
+{\bf{0.4 Theorem.}}
+\emph{Assume that}
+\[ \lim_{\epsilon\to 0}
+\int_{-A}^A\, \bigl|f(x+i\epsilon)-g(x-i\epsilon)\bigr|\cdot dx=0
+\]
+\emph{Then there exists $F\in\mathcal O(\square)$ which gives an analytic
+extension of the pair $(f,g)$.}
+\medskip
+
+\noindent
+This result  is due to Carleman in [Car]. 
+The proof relies upon properties of
+subharmonic functions and is given in
+the Appendix about Distributions. 
+Notice that no
+growth conditions on $f$ and $g$ are imposed
+from the start in the theorem above.
+
+
+
+\medskip
+
+
+
+
+\noindent
+{\bf{0.5 An inequality by Schwarz}}.
+Let $D$ be the unit disc $|z|<1$ and $f$  
+an analytic function in
+$D$ whose maximumn norm is at most one, i.e.
+\[
+|f(z)|\leq 1\quad\colon\, z\in D\tag{i}
+\]
+Consider a bounded and connected subset 
+$\Omega$ of the upper half-disc $D_+$
+whose boundary intersects
+the real axis in some interval $(a,b)$. Now
+$\partial\Omega$ is the union of $[a,b]$
+and the remaining portion of the boundary is denoted by
+$\Gamma$ which  is a subset of
+$D_+$ and the points
+$a$ and $b$ belong to
+the closure of $\Gamma$. Put
+\[
+\Omega_*=\{z\,\,\colon\, \bar z\in \Omega\}
+\]
+and assume that
+$\Omega\cup\Omega_*\cup(a,b)$  is an open subset of $D$.
+Under this condition one has:
+\[
+\max_{a\leq x\leq b}\, |f(x)|\leq \sqrt{|f|_\Gamma}\tag{*}
+\]
+To prove this  Schwarz considered the function
+\[
+ F(z)=f(z)\cdot \bar f(\bar z)
+\]
+which to begin with is analytic
+in $\Omega\cup\Omega_*$. The reflection principle entails that
+$F$ extends to an analytic set in the open set
+$U=\Omega\cup\Omega_*\cup(a,b)$. Here we notice that 
+the boundary
+$\partial U=\Gamma\cup\Gamma_*$. From (i) it is clear that
+\[
+|F|_{\partial U}\leq |f|_\Gamma
+\]
+In ¤ xx we establish the maximum principle for analytic functions
+which entails  that
+when $a\leq x\leq b$ then
+\[
+|f(x)|^2= |F(x)|\leq  |f|_\Gamma
+\]
+and (*) follows when we take the square root.
+
+
+
+\bigskip
+
+\noindent
+{\bf{0.6 The $\bar\partial$-operator}}.
+The Cauchy-Riemann equations can
+be expressed by a
+a single first order differential equation. Namely,   introduce
+the differential operator
+\[
+\bar\partial=\frac{1}{2}(\partial_x+i\partial_y)
+\]
+If $f=u+iv$ is a complex-valued function it is clear
+that $(u,v)$ is a CR-pair if and only if
+$f$ satisfies the homogeneous $\bar\partial$-equation:
+\[
+\bar\partial(f)=
+\frac{1}{2}[f_x+if_y)=0
+\]
+An important result is the \emph{Pompieu formula}
+which shows how to solve the
+\emph{inhomogeneous}
+$\bar\partial$-equation
+\[ 
+\bar\partial (f)=g
+\]
+when $g$ is a continuous function with compact suppoprt. See ¤ 8 for details.
+ \medskip
+
+\noindent
+{\bf{0.7 Normal families.}}
+Cauchy's integral  formula  is used to show
+that an analytic function $f$ defined in
+an open disc
+$D_R(z_0)=\{|z-z_0|<R\}$  is represented by
+a power series
+\[ 
+\sum\, c_n(z-z_0)^n\tag{*}
+\] 
+whose radius of convergence is $\geq R$.
+In this way $\mathcal O(D_R(z_0))$ is identified with
+the set of power series
+whose radius of convergence  is $\geq R$.
+Moreover, the
+coefficients $\{c_n\}$ are determined by the formula
+\[ 
+c_k=
+\frac{1}{k!}\cdot f^{(k)}(z_0)\quad\colon\, k=0,1,2, \ldots
+\]
+
+
+\noindent
+Using  power series we establish  results due to Montel 
+concerned with the topology on
+$\mathcal O(\Omega)$.
+Of special importance is the following result: 
+
+\medskip
+
+\noindent
+\emph{Let
+$\{f_\nu\}$ be a sequence of
+analytic functions in a domain
+$\Omega$ whose maximum norms are
+uniformly bounded, i.e. there is a constant $M$ such that
+$|f_\nu(z)|\leq M$ hold for all $z\in\Omega$ and every
+$\nu$.
+Then the sequence contains at least one subsequence
+$\{g_k=f_{\nu_k}\}$ which  converges uniformly to
+an analytic  function $g_*$ in every relatively compact subset of
+$\Omega$. Moreover, if there exists an integer $N$ such that
+every $g_k$ has at most $N$ zeros counted with multiplicity in
+$\Omega$, then the same hold for
+the limit function $g_*$, unless it is
+identically zero.}
+\medskip
+
+\noindent
+This result will be used frequently later on. For example in 
+the study of conformal mappings in Chapter VI.
+
+\medskip
+
+\noindent
+{\bf{0.8 Laurent series.}}
+In ¤ 10 we study analytic functions defined
+in
+domains 
+$\{r<|z|<R\}$.
+Here the boundary consists of the inner circle $|z|=r$ and the
+outer circle $|z|=R$.
+Let  $f(z)$ be analytic in such an annulus which extends to a continuous
+function on
+the boundary. Then we can
+apply Cauchy's formula from (***)  and obtain  
+a series representation of $f$
+where one part of the series is an expansion with
+\emph{negative} powers of $z$.
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{0.9 Conformal properties}}
+Let $f(z)$ be  an analytic function with non-zero complex derivative 
+defined in some domain $\Omega$.
+We can regard  $f$  as 
+a map from the complex $z$-plane into another
+complex plane and put
+\[
+\zeta=f(z) 
+\]
+where $\zeta=\xi+i\eta$.
+Consider some point $z_0\in\Omega$ and with
+$f=u+iv$ we have
+$\xi=u(x,y)$ and $\eta=v(x,y)$.
+The complex-valued function $f$ is now identified with a
+vector-valued function from
+the real $(x,y)$-space to the real $(\xi,\eta)$-space whose 
+\emph{Jacobian} 
+is the $2\times 2$-matrix
+\[ 
+J=\bigl(\begin{matrix}u_x&v_x\\u_y&v_y
+\end{matrix}\bigr)
+\]
+\medskip
+
+\noindent
+The Cauchy-Riemann equations imply that
+the two column vectors are orthogonal, i.e. 
+\[
+u_xv_x+u_yv_y=0
+\]
+holds at every point in $\Omega$. We have also the determinant formula:
+\[
+ \text{det}(J)= u_xv_y-u_yv_x=u_x^2+u_y^2=|f'(z)|^2\tag{*}
+ \]
+By a wellknown result in Calculus this implies that
+the vector valued map 
+is  infinitesmally a  rotation times
+a dilation  with the factor $|f'(z)|^2$
+at every point $z\in\Omega$.
+This implies that the map is locally conformal.
+Namely, let $z_0\in\Omega$
+and consider a pair of $C^1$-curves
+$\gamma_1,\gamma_2$ which pass $z_0$ and let
+$\alpha$ be the angle between them.
+Then the angle between the
+image curves $f(\gamma_1)$ and $f(\gamma_2)$
+is  equal to $\alpha$.
+This  means that infinitesmal angles are preserved and is 
+expressed by saying that
+$f$ yields a conformal map.
+  
+\medskip
+
+
+
+\noindent
+{\bf{Remark on quasi-conformal mappings.}}
+In  the 
+theory about quasi-conformal mappings
+many "magical phenomena" occur.
+See the text-books [Ahl] by Ahlfors and
+[L-V] by Lehto and Virtanen for the
+quasi-conformal  theory.
+Let us  recall that a differentiable 
+function $f=u+iv$
+which locally is an orientation preserving
+homeomorphism is     quasi-conformal of 
+order $\leq K$ for some number $K\geq 1$ if
+the first order derivative of $f$ satisfy:
+\[
+\bigl|\bar\partial(f)\bigr|\leq
+\frac{K-1}{K+1}\cdot \bigl|\partial(f)\bigr|
+\]
+When $K=1$ this means that $\bar\partial(f)=0$, i.e. $f$
+is complex analytic. 
+Consider as an example
+the linear function 
+$f(z)=z+\frac{\bar z}{2}$. Here we require that
+$2(K-1)\geq K+1$, i.e.  take $K=3$.
+Notice that  the linear map: 
+\[ 
+(x,y)\mapsto  (3x/2,y/2)
+\] 
+sends  small circles centered at the origin to
+small ellipses. So the geometry is more involved 
+when quasi-confomal mappings are studied.
+ 
+\medskip
+
+\noindent{\bf{0.10 Area formulas.}}
+Let $\Omega$ be a domain in $\mathcal D(C^1)$ where
+$\partial\Omega$ consists
+of simple and closed boundary
+curves
+$\gamma_1,\ldots,\gamma_p$.
+Let $f(z)\in \mathcal O(\Omega)$ and suppose  it extends to
+a continuous function on $\bar\Omega$. Assume also
+that $f$ is bijective on $\bar\Omega$ and that the image domain
+$f(\Omega)$ also belongs to $\mathcal D(C^1)$.
+Then $f(\Omega)$
+is  bordered by
+a $p$-tuple of disjoint boundary curves
+$f(\gamma_1),\ldots,f(\gamma_p)$.
+Write  $f=u+iv$ and
+to each $1\leq k\leq p$
+we consider a parametrisation by arc-length along
+$\gamma_k$ and  evaluate
+the line integral
+\[ 
+J(k)=\int_0^{\ell(\gamma_k)}\,
+u(z_k(s))\cdot \frac{dv(z_k(s))}{ds}\cdot ds\tag{*}
+\]
+where $\gamma_k\colon s\mapsto z_k(s)$ and 
+$\ell(\gamma_k)$ is the arc-length of $\gamma_k$.
+With these notations  Stokes Theorem from Chapter II
+gives the following area formula:
+\medskip
+
+\noindent
+{\bf{0.11 Theorem}} 
+\emph{The area of $f(\Omega)$ is equal to $J(1)+\ldots+J(p)$.}
+
+
+\medskip
+
+\noindent{\bf{Remark.}} Since
+the absolute value of $f'(z)$ changes the area measure 
+we have also the equality:
+\[
+\text{Area}[f(\Omega)]=
+\iint_\Omega\, |f'(z)|^2\cdot dxdy\tag{**}
+\]
+
+
+\noindent
+In Section XX we establish a third area formula using
+complex line integrals along the boundary curves of $\Omega$:
+\[
+\text{Area}[f(\Omega)]=\int_{\partial\Omega}\, 
+\bar f(z)\cdot f'(z)\cdot dz\tag{***}
+\]
+
+
+\noindent
+The fact that one disposes  these
+three   area formulas is  
+quite useful.
+
+\bigskip
+
+
+\noindent
+{\bf{0.12 A local limit formula.}}
+If $f(z)$ is analytic in a bounded domain
+it suffices to know its values on a small portion of the boundary.
+Following  the 
+introduction in Carleman's book [Quasianalytic]
+we shall illuminate this in a special case where formulas are 
+quite explicit. Here is the set-up.
+Let $0<\alpha<1/2$ be a real number and 
+let $\ell_*$ be the ray
+along
+the non-negativel real axis
+$\ell_*$ and the second ray $\ell^*=\{ re^{i\alpha}\,\colon\, r\geq 0\}$.
+Let $\Gamma$ be a Jordan arc with end-points
+$A\in\ell_*$ and $B\in \ell^*$ while the remaining part of
+$\Gamma$ is in the interior of
+the open sector bordered by the two rays. So here $A$ is a 
+positive real number and $B=b\cdot e^{i\alpha}$ for some $b>0$.
+Let $\Omega$ be the Jordan domain bordered by
+$\Gamma$ and the straight lines
+$0A$ and $0B$ which intersect at the origin.
+Consider a point $\zeta=r\cdot e^{i\alpha/2}$
+which belongs to $\Omega$.
+The Jordan arc $\Gamma$ is assumed to be rectifiable so that  complex line integrals along
+$\Gamma$ are defined.
+Let us now consider an analytic function
+$f$
+in $\Omega$ which  extends to a continuous function on
+the closure $\bar\Omega$.
+\medskip
+
+\noindent
+{\bf{0.13 Theorem.}}
+\emph{The value of $f$ at $\zeta$ is obtained by the limit formula}
+\[ 
+f(\zeta)= \lim_{\sigma\to\infty}\,
+\frac{e^{-\sigma}}{2\pi i}\cdot \int_\Gamma
+\frac{f(z)\cdot e^{\sigma\bigl(\frac{z}{\zeta}\bigr)^{\frac{1}{\alpha}}}}{z-\zeta}\cdot dz
+\tag{*}
+\]
+
+
+\noindent
+\emph{Proof.}
+For each positive real number $\sigma$ we have the function
+\[ 
+F_\sigma(z)= f(z)\cdot e^{\sigma\bigl(\frac{z}{\zeta}\bigr)^{\frac{1}{\alpha}}}\tag{1}
+\]
+When  $0\leq s\leq A$
+we have
+\[
+\bigl(\frac{s}{\zeta}\bigr)^{\frac{1}{\alpha}}
+=\bigl(\frac{s}{r}\bigr)^{\frac{1}{\alpha}}\cdot e^{-\pi i/2}=
+-i\cdot\bigl( \frac{s}{r}\bigr)^{\frac{1}{\alpha}}
+\]
+Since exponentials of purely imaginary numbers have absolute value  we get
+\[
+|F_\sigma(s)|= |f(s)|
+\]
+On the ray $OB$ we find
+a similar formula.
+Hence $F_\sigma(z)$ is bounded on $OA$ and $OB$. We also notice that
+\[ 
+F_\sigma(\zeta)=e^\sigma\cdot f(\zeta)
+\]
+Cauchy's integral formula applied to $F_\sigma$ gives
+\[
+ f(\zeta)= e^{-\sigma}\cdot F_\sigma(\zeta)=
+e^{-\sigma}\cdot
+\frac{1}{2\pi i}\cdot \int_{\partial\Omega}
+\frac{F_\sigma(z)}{z-\zeta}\cdot dz
+\]
+
+
+
+\noindent
+The last line integral is the sum over $\Gamma$ and the two line integrals along
+$0A$ and $0B$.
+Since $F_\sigma $ is bounded on the line segments and $e^{-\sigma}\to 0$
+as $\sigma\to+\infty$
+we conclude that
+\[
+f(z)=\lim_{\sigma\to\infty}\, 
+\frac{e^{-\sigma}}{2\pi i}\cdot \int_\Gamma 
+\frac{F_\sigma(z)}{z-\zeta}\cdot dz
+\]
+By the construction of the $F$-functions this entails
+the limit formula (*).
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+If $f$ from the start is defined in some domain $U$ which
+is starshaped with respect to the origin then
+we pick $0­\zeta\in U$
+and
+after a rotation we may assume that
+$\zeta$ is real and positive. With a very small $\alpha$
+we can consider the rays from the origin
+where $\text{arg}(z)$ is $\alpha$ or $-\alpha$
+and by a picture the
+reader can see that $f(\zeta)$ via Theorem  0.13 is expressed by a limit where
+the integral is taken over a small portion of
+$\partial U$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline {\bf 1. Complex Line Integrals}
+
+\bigskip
+
+\noindent
+Consider a complex valued $C^1$-function of a real $t$-variable:
+\[ 
+t\mapsto z(t)=x(t)+iy(t)\quad\colon\quad 0\leq t\leq T
+\]
+The $C^1$-condition means that both $x(t)$ and $y(t)$ are
+continuously differentiable functions of $t$. The $t$-derivative becomes:
+\[ 
+\dot z(t)=\dot x(t)+i\cdot \dot y(t)
+\]
+If $f=u+iv$ is a complex valued continuous function we
+get the line integral
+\[
+\int_0^T\, f(z(t))\dot z(t)dt=\int_0^T\,
+[u(x(t),y(t))+iv(x(t),y(t))](\dot x(t)+i\cdot \dot y(t))\cdot dt
+\]
+or expressed in a more abbreviated form:
+\[
+\int_0^T\, f(z)\dot z\cdot dt=\int_0^T\, 
+[u(x,y)+iv(x,y)](\dot x+i\dot y)\cdot dt\tag{0.1}
+\]
+The right hand side
+is a  sum of line integrals with
+respect to $x$ and $y$ respectively.
+By the general result in XX,
+(0.1) does not depend on the
+chosen parametrization of the oriented image 
+$\Gamma$.
+So we can therefore write (0.1) as
+\[
+\int_\Gamma\,fdz=\int_\Gamma\,u+iv)(dx+idy)\tag{0.2}
+\]
+When the right hand side is decomposed into its real and  imaginary parts
+we get:
+\[
+\int_\Gamma\,fdz=\int_\Gamma\,udx-vdy+
+i\cdot \int_\Gamma\, u dy+iv dx\tag{0.3}
+\]
+We refer to (0.2) as
+the complex line integral along 
+$\Gamma$. Recall that the \emph{choice of orientation}
+is essential, i.e. if the orientation on $\Gamma$ is 
+opposite the line integral changes sign.
+
+\bigskip
+\noindent
+{\bf 1.1 Complex line integrals as Riemann sums.}
+Consider as above a
+curve $\Gamma$ with end points $a$  and
+$b$. Following the  orientation we choose a 
+finite sequence of points $a=z_0,z_1,\ldots,z_N=b$
+where each $z_\nu\in \Gamma$ and take the Riemann sum
+\[ 
+\sum_{\nu=0}^{N-1}\, f(z_\nu)(z_{\nu+1}-z_\nu)\tag{i}
+\]
+When $\text{max}\,|z_{\nu+1}-z_\nu|\to 0$ these sums converge to the line
+integral of $f$ along $\Gamma$. To see this we use the hypothesis
+that $\Gamma$ has a $C^1$-parametrisation,
+say $t\mapsto z(t)$.
+Now $z_\nu=z(t_\nu)$ with $0=t_0<t_1<\ldots <t_N=T$.
+Since $f$ is continuous the function
+$t\mapsto f(z(t))$ is continuous. From the previous definition of
+the line integral we have
+\[ 
+\int_\Gamma\, f\cdot dz=
+\int_0^T\,f(z(t))\cdot \dot z(t)dt  \tag{ii}
+\]
+Here (ii) is approximated just as in Calculus by a Riemann sum:
+\[
+\sum\, f(z(t_\nu))\cdot \dot z(t_\nu)\cdot (t_{\nu+1}-t_\nu)\tag{iii}
+\]
+The continuity of the $t$-derivative $t\mapsto \dot z(t)$
+give accurate approximations
+\[
+\dot z(t_\nu)\cdot (t_{\nu+1}-t_\nu)\simeq z_{\nu+1}-z_\nu
+\] 
+for every $\nu$. Hence
+the Riemann sums in (iii) converge to
+(ii) when
+\[
+\max \{(t_{\nu+1}-t_\nu)_{\nu=1}^N\}\quad \text{tends to zero}
+\]
+
+
+
+\bigskip
+
+\noindent {\bf 1.2 Integration on rectifiable curves.}
+The approximative sums in (1)
+appear in the construction of Riemann-Stieltjes integrals.
+Since the complex integral is decomposed into a real and an
+imaginary part we can therefore use the
+result from XX where we proved
+the existence of integrals
+of the Riemann-Stieltjes type. More precisely, if $\Gamma$ has a
+parametrisation $t\mapsto z(t)=x(t)+iy(t)$
+where both $x(t)$ and $y(t)$ are continuous functions with
+bounded variation, then we can define Stieltjes' line integral
+\[
+\int_\Gamma\, f(z)\cdot dz
+\]
+where we only have to assume that
+$f(z)$ is a bounded Borel function.
+See Measure Appendix for details about this construction of
+general line integrals.
+
+\bigskip
+
+\noindent {\bf 1.3 The case when
+$\Gamma$ is a circle.}
+Let $R>0$ and  $\Gamma$ is the circle $|z|=R$ 
+equipped with its usual positive orientation.
+Since $z\neq 0$ on $\Gamma$ we can divide a function 
+$f$ with $z$ and get the line integral
+\[ 
+\int_\Gamma\,\frac{f(z)dz}{z}\tag{i}
+\]
+Using the parametrisation $\theta\mapsto Re^{i\theta}$ this line
+integral becomes
+\[ 
+\int_0^{2\pi}\,
+\frac{f(Re^{i\theta})\cdot iRe^{i\theta}d\theta}{Re^{i\theta}}=
+i\cdot \int_0^{2\pi}\,
+f(Re^{i\theta})d\theta\tag{ii}
+\]
+This formula plays a crucial role later on when
+we derive Cauchy's formula and develop residue calculus.
+Under the sole assumption that $f$ is a continuous function
+defined in some open disc centered at the origin, we use the
+equality above when $R=\epsilon$ and $\epsilon\to 0$. Namely,
+since
+$f$ is continuous at the origin we get  the limit formula:
+
+\[
+f(0)=\frac{1}{2\pi}\cdot \lim_{\epsilon\to 0}\,
+\int_0^{2\pi}\,
+f(\epsilon e^{i\theta})d\theta=
+\frac{1}{2\pi i}\cdot \lim_{\epsilon\to 0}\, \int_{|z|=\epsilon}\,
+\frac{f(z)dz}{z}\tag{iii}
+\]
+The origin can be replaced by any other point
+$z_0$.
+Since the limit formula above
+is so important  for the subsequent residue calculus
+we state it separately:
+\bigskip
+
+\noindent {\bf 1.4 Theorem} \emph{Let $f(z)$ be a continuous function in some open set
+$\Omega$. Then}
+\[
+f(z_0)=\frac{1}{2\pi i}\cdot \lim_{\epsilon\to 0}\, \int_{|z-z_0|=\epsilon}\,
+\frac{f(z)dz}{z-z_0}\quad\colon\quad z_0\in\Omega
+\]
+\medskip
+
+\noindent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf ¤  2. The Cauchy-Riemann equations}
+\bigskip
+
+\noindent
+Consider a complex-valued function
+$f(z)=f(x+iy)=u(x,y)+iv(x,y)$.
+We assume that $f$ is of class $C^1$
+and let
+$\Omega\in\mathcal D(C^1)$. From ¤ 1 we have
+\[ 
+\int_{\partial\Omega}\, fdz=
+\int_{\partial\Omega}\, udx-vdy+i\dot \int_{\partial\Omega}\,udy+vdx
+\]
+\medskip
+Apply Theorem 2.4 in Chapter I to each term in the right hand side.
+This gives:
+\[
+\int_{\partial\Omega}\, fdz=\iint_\Omega\,(-(u_y+v_x)\cdot dxdy+
+i\cdot \iint_\Omega\,(u_x-v_y)\cdot dxdy\tag{i}
+\]
+\medskip
+
+\noindent
+The right hand side is zero if the real and
+the imaginary part vanish which obviously follows
+if 
+the following equations hold in the whole of $\Omega$:
+\[
+u_x(x,y)=v_y(x,y)\,\quad\colon\,\quad u_y(x,y)=-v_x(x,y)\quad\colon\quad
+(x,y)\in\Omega\tag{*}
+\]
+Hence we have proved the following
+\bigskip 
+
+ \noindent {\bf 2.1 Theorem}\emph{ Let $f=u+iv$ be a complex-valued
+$C^1$- function such that the pair $(u,v)$ satisfies (*). 
+Then}
+\[ \int_{\partial\Omega}\, fdz=0\quad\colon\quad\Omega\in\mathcal D(C^1)
+\]
+
+
+\noindent
+Theorem 2.1 suggests the following
+\medskip
+
+\noindent
+{\bf 2.2 Definition} \emph{A pair of real-valued $C^1$-functions
+$(u,v)$ satisfying $u_x=v_y$ and $u_y=-v_x$ is called a 
+Cauchy-Riemann pair and
+in this case $f=u+iv$ is called an analytic function.}
+\bigskip
+
+
+
+
+
+ 
+\centerline {\bf ¤ 3. The $\bar\partial$-operator}
+\medskip
+
+\noindent
+The  Cauchy-Riemann equations can be
+described by a single first order differential operator.
+Namely,  set
+\[
+\bar\partial=\frac{1}{2}(\partial_x+i\partial_y)\tag{i}
+\]
+If $f=u+iv$ is a $C^1$-function we get:
+\[
+\bar\partial(f)=
+\frac{1}{2}[\partial_x(f)+i\partial_y(f)]=
+\frac{1}{2}[u_x+iv_x+iu_y-v_y]=\frac{1}{2}(u_x-v_y)+
+\frac{i}{2}(u_y+v_x)
+\]
+We conclude that $\bar\partial(f)=0$ if and only if
+$(u,v)$ is a $CR$-pair.
+One refers to $\bar\partial$ as the \emph{Cauchy-Riemann operator}
+since it determines when $(u,v)$ becomes a $CR$-pair.
+\medskip
+
+\noindent 
+{\bf 3.1 Example} Let $f=\bar z=x-iy$ be the conjugate function.
+Here 
+$\bar\partial(\bar z)=1$ and 
+hence the pair $u=x$ and $v=-y$ is not $CR$. 
+On the other hand, let $m\geq 1$ and consider $f(z)=z^m$.
+Since $\bar\partial$ is a first order differential 
+operator, Leibniz' s rule from Calculus gives
+\[
+\bar\partial(z^m)=mz^{m-1}\bar\partial(z)
+\]
+Next, we have
+\[ 
+\bar\partial(x+iy)=\frac{1}{2}[1+i^2]=\frac{1}{2}[1-1]=0
+\]
+So with $z^m=u+iv$ it follows that $(u,v)$ is a $CR$-pair. 
+Take as an example the
+case $m=3$ where
+$u=x^3-3x\cdot y^2$ and
+$v=3x^2\cdot y-y^3$.
+\medskip
+
+
+\noindent
+{\bf 3.2 Remark} If $f,g$ is a a pair of $C^1$-functions then
+Leibniz's rule for the first order differential operator
+gives
+\[ 
+\bar\partial(fg)= f
+\bar\partial(g) +g
+\bar\partial(f)
+\]
+It follows that
+if both $f$ and $g$ are analytic so is $fg$. 
+Hence the class of analytic functions is stable under products.
+Next, let $f_1,\ldots,f_m$ a  finite set of analytic functions.
+Put
+\[ 
+\phi=\bar z\cdot f_1(z)+\ldots+\bar z^m\cdot f_m(z) 
+\]
+Then $\phi$ cannot be analytic unless every $f_\nu$ is zero.
+To see this one proceeds by induction over $m$. Namely, for each
+$m\geq 2$ we get the $m$:th order differential operator
+$\bar\partial^m$ which satisfies
+\[
+\bar\partial^m(\bar z^\nu)=0\quad\colon\,\nu<m\quad\colon\quad
+\bar\partial^m(\bar z^m)=m\!
+\]
+Using this the reader may verify the assertion about the
+$\phi$-function.
+\medskip
+
+\noindent {\bf 3.3 Analytic polynomials.}
+Since 
+$x=\frac{z+\bar z}{2}$ and
+$y=\frac{z-\bar z}{2i}$, every
+polynomial  in  the two variables $(x,y)$ can be expressed as 
+a polynomial in 
+$z$ and $\bar z$.
+Let $m\geq 1$ and denote by $H_\text{Pol}(m)$
+the space of homogeneous polynomial of degree $m$ with complex coefficients.
+Such a polynomial can be uniquely written in the form
+\[
+P(z,\bar z)=\sum_{\nu=0}^{\nu=m}
+c_\nu \cdot z^{m-\nu}\bar z^\nu\quad \colon\quad c_0,\ldots,c_m \,\, \text{complex constants}
+\]
+The observation in 3.2 shows that
+$P$ is analytic if and only if the sole term is $z^m$.
+Hence $H_\text{Pol}(m)$ is 1-dimensional complex vector space generated by the 
+monomial $z^m$. This shows that the class of analytic functions is quite sparse.
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf  ¤ 4. The  Complex Derivative}
+\bigskip
+
+\noindent
+Let $f(z)=u(x,y)+iv(x,y)$ be a complex-valued function
+of class $C^1$ in a domain $\Omega$.
+Given a point $z_0=x_0+iy_0$ and a small complex number
+$\Delta z=\Delta x+i\Delta y$ we regard the difference
+\[
+f(z_0+\Delta z)-f(z_0)=
+u(x_0+\Delta x,y_0+\Delta y)+
+iv(x_0+\Delta x,y_0+\Delta y)
+\]
+Keeping $\Delta x$ and $\Delta y$ fixed for a while we have the function
+\[
+\phi(s)=
+u(x_0+s\Delta x,y_0+s\Delta y)+
+iv(x_0+s\Delta x,y_0+s\Delta y)\quad\colon\quad 0\leq s\leq 1
+\]
+\emph{Rolle's mean value theorem} gives a pair 
+$0<\theta_1,\theta_2<1$ such that the sum
+
+
+\[
+\Delta x\cdot u'_x(x_0+\theta_1\Delta x,y_0+\theta_1\Delta y)+
+\Delta y\cdot u'_y(x_0+\theta_1\Delta x,y_0+\theta_1\Delta y)+
+\]
+\[
+i[\Delta x\cdot v'_x(x_0+\theta_2\Delta x,y_0+\theta_2\Delta y)+
+\Delta y\cdot u'_y(x_0+\theta_2\Delta x,y_0+\theta_2\Delta y)]\tag{1}
+\]
+
+
+\noindent
+is equal  to $\phi(1)-\phi(0)=f(z_0+\Delta z)-f(z_0)$.
+In this sum the four first order partial derivatives are evaluated at points close to 
+$(x_0,y_0)$ when 
+\[
+|\Delta z|=\sqrt{(\Delta x^2+(\Delta y)^2} \to 0
+\]
+The continuity of the partial derivatives and the 
+imply that the sum from (1)  becomes
+\[
+\Delta x\cdot u'_x(x_0,y_0)+
+\Delta y\cdot u'_y(x_0,y_0)+
+i\Delta x\cdot v'_x(x_0,y_0)+
+i\Delta y\cdot v'_y(x_0,y_0)+\text{small ordo}(|\Delta z|)\tag{2}
+\]
+\medskip
+
+\noindent
+The  remainder term $o(|\Delta z|)$  
+comes  from the continuity of
+first order derivatives.
+If we  \emph{assume} that $u,v$ is a Cauchy-Riemann pair
+we can replace $v'_y$ with $u'_x$ and $u'_y$ with $-v'_x$. Then (2)
+becomes
+\[
+(\Delta x+i\Delta y)u'_x+i(\Delta x+i\Delta y)v'_x+\text{small ordo}(\delta)\tag{3}
+\]
+
+
+
+\noindent 
+Here $\Delta z=\Delta x+i\Delta y$ appears as a common factor.
+The small ordo-term gives the limit formula:
+\[
+\lim_{\Delta z\to 0}\,
+\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}=u'_x(x_0,y_0)++iv'_x(x_0,y_0)\tag{4}
+\]
+\medskip
+
+\noindent
+So when $(u,v)$ is a $CR$-pair the complex difference quotients
+$\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}$ have a limit as $\Delta z\to 0$. The limit is called the \emph{complex derivative} of $f$ at the point $z_0$. Put
+\[
+f'(z_0)=
+\lim_{\Delta z\to 0}\,
+\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf   A converse.} Assume that $f=u+iv$ has a complex derivative at
+$z_0=x_0+iy_0$. We can approach this point in two ways -  along the $x$ axis 
+or along the $y$-axis. With $\Delta z=\Delta x$ we get
+from the definition of partial derivatives 
+\[
+f'(z_0)=
+\lim_{\Delta x\to 0}\,
+\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}=u_x(x_0,y_0)+iv_x(x_0,y_o)
+\]
+If we instead take $\Delta z=i\Delta y$ we have
+\[
+f'(z_0)=
+\lim_{i\Delta y\to 0}\,
+\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}=\frac{1}{i}u_y(x_0,y_0)+v_y(x_0,y_o)
+\]
+Identifying the real and the imaginary parts of the two expressions for the complex derivative $f'(z_0)$ we recover the Cauchy-Riemann equations.
+Hence we have proved the following
+\medskip
+
+\noindent {\bf 4.1 Theorem.} \emph{ A $C^1$-function $f=u+iv$ defined in a domain
+$\Omega$ has a complex derivative at every point
+if and only if $(u,v)$ is a $CR$-pair.}
+
+\medskip
+
+\noindent {\bf 4.2 The space $\mathcal O(\Omega)$.}
+Let $\Omega$ be an open subset of $\bf C$. The class of analytic functions in
+$\Omega$ is denoted by $\mathcal O(\Omega)$. From the result in 2.7 this gives a 
+subalgebra of all complex valued $C^1$-functions
+in $\Omega$.
+
+
+\newpage
+
+\centerline {\bf ¤ 5. Morera's and Goursat's theorems.}
+\medskip
+
+\noindent
+Let $f(z)$ be a continuous 
+and complex-valued function defined in an open square
+$\square=\{-A<x,y<A\}$.
+To every  point $p=(a,b)\in \square$ we get the rectangle
+$\Gamma$ with corners at the origin, $(a,0),(a,b),(0,b)$.
+Suppose that $\int_\Gamma\,f(z)dz=0$ for
+every such rectangle.
+Define a function $F(z)$ by
+\[ 
+F(x+iy)=\int_0^x\, f(t,0)dt+\int_0^y\, f(a,s)ids
+\]
+It is obvious that $F'_y=if$. Next, the hypothesis on $f$ implies that we also have
+\[
+F(x+iy)=-\int_0^y\, f(0,s)ids-\int_0^x\, f(t,y)dt
+\] 
+From this we see that $F'_x=-f$. Hence
+$F'_x=F_y$ and since $F$ also is a $C^1$-function this implies that
+$F(z)$ is analytic  by the result in 2.5.
+Next, if we \emph{knew} that $F$ is of class $C^2$
+we can take the mixed second order derivatives and obtain
+\[
+-f'_y=F''_{yx}=F''_{xy}=if'_x
+\]
+This gives $f'_x=if'_y$ and 2.5 proves that $f$ is analytic.
+in the next section we show that
+$F$ actually is of class $C^2$ and hence 
+it follows that $f$ is analytic. Of course, allowing more
+rectangles we can conclude:
+\medskip
+
+\noindent
+{\bf 5.1 Theorem.}
+\emph {Let $f(z)$ be continuous in an open set
+$\Omega$. Assume that $\int_\Gamma\,f(z)dz=0$
+for every rectangle inside
+$\Omega$ with sides parallell to the coordinate
+axes. Then $f$ is analytic in
+$\Omega$.}
+\bigskip
+
+\noindent 
+{\bf 5.2 Some estimates}. We begin with some preliminary results which
+will be used to prove Theorem 5.3 below.
+A
+rectangle $\Gamma$
+gives four smaller rectangles
+$\gamma_1,\gamma_2,\gamma_3,\gamma_4$
+which arise when we  join the parallell sides with lines from
+their opposed mid-points.
+Now $\gamma_1,\gamma_2$ has one side in common and so on.
+By drawing a figure and keeping in mind how
+the orientation is chosen along each small rectangle we see that:
+\[
+\int_\Gamma\, f(z)dz=
+\sum_{\nu=1}^{\nu=4}\, f(z)dz
+\]
+This process can be continued.
+Suppose now that $f(z)$ is a bounded function which is
+no essential restriction since we otherwise may replace
+$\Omega$ by a smaller set. if $|f(z)|\leq M$ in $\Omega$
+the construction of a complex line integral gives
+\[ 
+|\int_\Gamma\, f(z)dz\,|\leq \ell(\Gamma)\cdot M
+\quad\colon\,\ell(\Gamma)=\text{sum of lengths of the sides}
+\]
+Suppose now  that we have a rectangle $\Gamma$ where
+$\int_\Gamma\, f(z)\neq 0$.
+Let us put
+\[
+|\int_\Gamma\, f(z)|=A\cdot|\ell(\Gamma)
+\] 
+where $A$ now is $>0$.
+Dividing $\Gamma$ in four
+smaller portions we see that the equality
+above gives
+\[ 
+\max_\nu\,|
+\int_{\gamma_\nu}\, f(z)dz|\geq
+\frac{1}{4}\cdot |\int_\Gamma\, f(z)dz| =\frac{A}{4}\cdot\ell(\Gamma)
+\]
+At the same time 
+$\ell(\gamma_\nu)=\frac{1}{2}\cdot \ell(\Gamma)$.
+Hence we find at least one small $\gamma$-rectangle where
+\[
+\int_{\gamma_\nu}\, f(z)dz|\geq
+\frac{A}{2}\cdot\ell(\gamma_\nu)
+\]
+Starting from one such $\gamma$-rectangle it is decomposed in four pieces and so
+on. In this way we obtain a nested descreasing sequence of
+rectangles $\{\gamma_\nu\}\,\colon\,\nu=1,2,\ldots\}$
+such that
+\[
+\int_{\gamma_\nu}\, f(z)dz|\geq
+\frac{A}{2^\nu}\cdot\ell(\gamma_\nu)\quad\colon\nu\geq 1\quad\colon\,
+\ell(\gamma_\nu)= 2^{-\nu}\ell(\Gamma)
+\]
+At this stage we are prepared to prove:
+
+\medskip
+
+\noindent
+{\bf 5.3 Goursat's theorem.}
+\emph{Let $f(z)$ be a continuous function in
+$\Omega$ and assume it has a complex derivative at
+every point. Then $f$ is analytic.}
+
+\medskip
+
+\noindent 
+\emph{Proof.}
+It suffices to work locally and we may take
+$\Omega=\square$ as above.
+If $f$ fails to be analytic we find $\Gamma$ and $A>0$ where
+\[
+|\int_\Gamma\, f(z)dz\,|=A\cdot  \ell(\Gamma)\cdot M
+\]
+Then there exists a nested sequence $\{\gamma_\nu\}$
+and since there sides tend to zero, it follows by
+Bolzano's theorem that
+there is a limit point $z_0=\cap\,\gamma_\nu$.
+By assumption $f$ has a complex derivative
+at $z_0$. It means that for every $\epsilon>0$ there
+exists $\delta>0$ such that
+\[
+|f(z)-f(z_0)-f'(z_0)(z-z_0)|\leq\epsilon |z-z_0|
+\quad\colon\quad |z-z_0|<\delta
+\]
+If $\nu$ is sufficiently large then $\gamma_\nu$
+is contained in the disc $D_\delta(z_0)$.
+Next, we notice that
+\[ 
+\int_{\gamma_\nu}\,[f(z_0)+(z-z_0)f'(z_0)]dz=0
+\]
+Next, when $z\in\gamma_\nu$ we notice that
+$|z-z_0|\leq \ell(\gamma_\nu)/2$.
+Hence by the vanishing in XX and
+the inequality XX above, the triangle inequality gives
+\[
+|\int_{\gamma_\nu}\,f(z)dz\,|
+\leq\frac{1}{2}\epsilon\,\ell(\gamma_\nu)^2=
+\frac{1}{2}\cdot \epsilon\cdot 4^{-\nu}\ell(\Gamma)
+\]
+
+
+\noindent
+At the same time, during the construction of the nested sequence
+we have 
+\[
+\int_{\gamma_\nu}\, f(z)dz|\geq
+\frac{A}{2^\nu}\cdot\ell(\gamma_\nu)= A\cdot 4^{-\nu}\cdot
+\ell(\Gamma)
+\]
+Now we get a contradiction since we take $\epsilon$ arbitrary small , i.e. 
+it would even be sufficient
+to take $\epsilon<2A$ and then the contradiction will follow
+as soon as  $\nu$
+is so large that $\gamma_\nu\subset D_\delta(z_0)$.
+
+
+\bigskip
+
+\noindent{\bf 5.4 A result by Carleman.}
+Analytic functions
+are also characterized by a local mean value condition.
+\medskip
+
+
+\noindent {\bf 5.5 Theorem} \emph{Let $f$ be a continuous function in $\Omega$ such that}
+$\int_{\partial D}\, f(z) dz=0$ for ever disc $D\subset\Omega$. 
+\emph{Then
+$f\in\mathcal O(\Omega)$.}
+
+\medskip
+
+\noindent 
+\emph{Proof.} Let $r>0$ be small and put 
+\[
+\Omega_r=\{z\in\Omega\,\,\colon\,\text{dist}(z,\partial\Omega)>r\}
+\]
+To each $z\in \Omega_r$ we define the mean value
+\[ 
+F_r(z)=\iint_{|\zeta-z|\leq r}\, f(z)dxdy=
+\int_0^r\int_0^{2\pi}\, f(z+se^{i\theta}) s ds d\theta
+\]
+Now we prove that $F_r\in\mathcal(\Omega_r)$.
+To see this we consider its partial derivatives with respect to $x$ and $y$.
+With $z=x+iy$ and $\Delta x$ small, $F(x+\Delta x+iy)$
+is the area integral over a disc centered at $(x+\delta x,y)$. Drawing a figure for
+computing area integrals the reader should discover that we obtain
+\[ 
+F_x(z)=\int_0^{2\pi}\,\text{cos}(\theta)f(z+re^{i\theta}d\theta
+\quad\text{and}\quad  
+F_y(z)=\int_0^{2\pi}\,\text{sin}(\theta)f(z+re^{i\theta}d\theta
+\]
+It follows that
+\[ 
+F_x+iF_y=\int_0^{2\pi}\,e^{i\theta}f(z+re^{i\theta}d\theta=0
+\] 
+where the last equality follows from the mean value assumption.
+Hence $F$ satisfies the $\bar\partial$-quation from XX and is therefore
+analytic. Now this holds for any $r>0$ and  the continuity of $f$ gives:
+\[ 
+f(z)=\lim_{r\to 0}\frac{1}{\pi r^2}\cdot  F_r(z)
+\]
+Hence $f$ is the limit of a sequence of analytic functions and therefore analytic by the result to be proved in XXX.
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf ¤ 6. Cauchy's integral formula}
+\bigskip
+
+\noindent
+{\bf 6.1 The local residue.} Let us repeat the result which led to Theorem 1.2
+once more since it plays such a fundamental role.
+Let $z_0\in\bf C$
+and let $g(z)$ be a continuous function defined
+in some open disc of radious $r$ centered at $z_0$.
+To each $0<\epsilon<r$ we set
+\[
+R_\epsilon(g)=\frac{1}{2\pi i}\int_{|z-z_0|=\epsilon}\,\frac{g(z)dz}{z-z_0}
+\]
+Using polar coordinates we get
+\[ R_\epsilon(g)=\int_0^{2\pi i}\, \frac{g(z_0+\epsilon e^{i\theta}i d\theta}
+{e^{i\theta}}=\int_0^{2\pi}\,\int_0^{2\pi}
+g(z_0+\epsilon e^{i\theta}d\theta
+\]
+By continuity of $g$ at $z_0$ it follows that
+\[ 
+\lim_{\epsilon\to 0}\, R_\epsilon(g)=g(z_0)\tag{*}
+\]
+This local limit formula will now be applied
+below   when $g(z)$ is an analytic function.
+\bigskip
+
+\noindent
+{\bf 6.2 Cauchy's formula}
+Let $f(z)\in \mathcal O(\bar\Omega)$ where $\Omega\in\mathcal D(C^1)$.
+Let $z_0\in\Omega$ and with $\epsilon>0$ is 
+small we remove the open disc of radius 
+$\epsilon$ centered at $z_0$. Put
+\[
+\Omega_\epsilon=\Omega\setminus\{ |z-z_0|\leq\epsilon\}
+\]
+Now $\partial\Omega_\epsilon=\partial\Omega\cup\,\partial D_\epsilon$
+where $D_\epsilon=\{z-z_0|<\epsilon\}$.
+We get the function
+\[
+g(z)=\frac{f(z)}{z-z_0}\in\mathcal O(\bar\Omega_\epsilon)
+\]
+Applying Theorem 2.1  we get 
+\medskip
+\[
+\int_{\partial\Omega}\,\frac{f(z)dz}{z-z_0}=
+\int_{\partial D_\epsilon}\,\frac{f(z)dz}{z-z_0}
+\]
+Here $\epsilon$ can be arbitrarily small. The limit formula in (*) from
+4.1 
+shows that
+the last term is equal to $2\pi if(z_0)$. Hence we have proved
+\medskip
+
+\noindent {\bf 6.3 Theorem.} \emph{Let $ f\in\mathcal O(\bar\Omega)$. Then}
+\[ 
+f(z_0)=
+\frac{1}{2\pi i}\int
+\int_{\partial\Omega}\,\frac{f(z)dz}{z-z_0}\quad\, \colon\quad z_0\in \Omega
+\]
+\bigskip
+
+\noindent
+{\bf 6.4 Expressions for derivatives}
+Cauchys formula represents $f(z)$ inside $\Omega$
+in the same way as in 3.3. Hence we can take derivative of any order, i.e. 
+for each $m\geq 1$ we get
+\[
+f^{(m)}(z)=\frac{m\,!}{2\pi i}\int
+\int_{\partial\Omega}\,\frac{f(z)dz}{(z-z_0)^{m+1}}\quad\, \colon\quad z_0\in \Omega
+\]
+This proves in particular that when $f$ is analytic, then it has 
+complex derivatives. Moreover,
+$f^{(m)}(z)$ yield now analytic functions in
+$\Omega$.
+In
+XXX  we study  power series representations
+and obtain even more information about regularity of
+$f$ as well as of its real and imaginary parts.
+Notice  that the conclusion above applies to the
+function $F(z)$ from section 5 and hence Theorem 6.3 above
+finishes the proof of \emph{Morera's Theorem.}
+
+
+
+
+\bigskip
+
+
+
+
+\noindent
+{\bf 6.5 The case when $\Omega$ is a disc}
+Let $\Omega=D_R$ be the disc of radius $R$ centered at the origin
+and  $f(z)$ is an analytic function defined in a neighborhood of the closed disc
+$\bar D_R$.
+Using the parametrisation $\theta\mapsto Re^{i\theta}$
+which gives  $dz=iRe^{i\theta}d\theta$.  Cauchy's formula gives:
+\[
+f(z)=\frac{1}{2\pi }\cdot
+\int_0^{2\pi}\,
+\frac{f(Re^{i\theta})\cdot Re^{i\theta}d\theta}{
+Re^{i\theta}-z}\quad\, \colon\quad z\in D_R\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf Remark.} Now (*) yields a series
+representation of $f$.
+First 
+division with $Re^{i\theta}$ gives
+\[
+f(z)=
+\frac{1}{2\pi }\cdot
+\int_0^{2\pi}\,
+\frac{f(Re^{i\theta})\cdot d\theta}{1-\frac{z}{R}\cdot  e^{-i \theta}}\tag{i}
+\]
+Since $|z|<R$ we can expand the denominator in a convergent
+geometric series:
+\[
+\frac{1}{1-\frac{z}{R}\cdot  e^{-i \theta}}=
+\sum_{\nu=0}^\infty\,
+R^{-\nu}e^{-i\nu\theta}\cdot z^\nu\tag{ii}
+\]
+\medskip
+
+\noindent
+Put
+\[
+c_\nu=\frac{1}{2\pi }\cdot R^{-\nu}
+\int_0^{2\pi}\,f(Re^{i\theta})\cdot e^{-i\nu\theta}d\theta\quad\colon\quad
+\nu=0,1,\ldots\tag{iii}
+\]
+Then we obtain the series representation
+\[ 
+f(z)=\sum_{\nu=0}^\infty\, c_\nu\cdot z^\nu\tag{iv}
+\]
+\medskip
+
+\noindent
+{\bf Remark.} The convergence of this series when $|z|<R$ is clear.  For if
+$M$ is the maximum of $|f(Re^{i\theta})|$ as $0\leq\theta\leq 2\pi$ we
+see that
+\[ 
+|c_\nu|\leq M\cdot R^{-\nu}\tag{*}
+\]
+The coefficients $c_\nu$ 
+correspond to \emph{Fourier series coefficients} of the periodic function 
+of $\theta$ defined by
+\[ 
+\theta\mapsto 
+f(Re^{i\theta})
+\]
+The  interplay between Fourier series and
+analytic functions will  be discussed in   XXX.
+\bigskip
+
+\noindent
+{\bf{6.6 Exercise.}}
+Consider a power series $f(z)=\sum\, c_\nu \cdot z^\nu$ as above where
+(*) holds for a pair $M$ and $R$. Now we also get a convergent power series
+\[ 
+g(z)=\sum_{\nu=1}^\infty \nu \cdot c_\nu\cdot z^{\nu-1}
+\]
+It turns out that $g$ is the derivative of $f$.
+To show this we consider a
+point $z_0$ in the disc $D_R$.
+With a small $\Delta z$ we have the difference quotient:
+\[ 
+\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}
+\]
+Now the reader should verify the inequality:
+\medskip
+
+\[
+\bigl|\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}-g(z_0)\bigr|
+\leq |\Delta z|\cdot 
+\sum_{\nu=2}^\infty\, |c_\nu|\cdot
+\]
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf  ¤ 7. Complex differentials}
+
+\bigskip
+
+\noindent
+{\bf 1. Calculus with differential forms.}
+With $z=x+iy$ we get the differential 1-form
+\[ dz=dx+idy
+\]
+Similarly, $\bar z=x-iy$ gives $d\bar z= dx-idy$. Hence we obtain
+
+\[ dx=
+\frac{1}{2}(dz+d\bar z)\quad\colon
+dy=\frac{1}{2i}(dz-d\bar z)
+\]
+So
+every differential 1-form $Adx+Bdy$ where $A,B$ say are complex-valued
+$C^1$-functions can  be expressed by $dz$ and $d\bar z$:
+\[ 
+Adx+Bdy=
+\frac{1}{2}(A-iB)dz+\frac{1}{2}(iA+B)d\bar  z
+\]
+\medskip
+
+\noindent 
+{\bf 2. Exterior derivatives.}
+If $Adx+Bdy$ is a 1-form its exterior derivative is the 2-form
+\[ 
+d(Adx+Bdy)=(A_y-B_x)\cdot dx\wedge dy
+\]
+With these notations Stokes formula for a domain
+$\Omega\in\mathcal D(C^1)$ can be expressed by
+\[
+\iint_\Omega\,
+d(Adx+Bdy)=\int_{\partial\Omega}\, Adx+Bdy
+\]
+In the left hand side one integrates a function
+times the 2-form $dx\wedge dy$ over $\Omega$
+which is the same thing as taking
+the usual area integral. Thus, the left hand side in
+Stokes formula becomes
+\[
+\iint_\Omega\, (-A_y+B_x)dxdy
+\]
+Regarding $A$ and $B$ separately we recover the formula in XXX.
+\medskip
+
+\noindent
+{\bf 3. Complex expressions.}
+Consider now a 1-form expressed as $fdz$ where $f$ is a complex-valued
+$C^1$-function. We get
+\[ 
+d(fdz)=df\wedge dz=\bar\partial(f) d\bar z\wedge dz
+\quad\colon\quad
+\bar\partial(f)=\frac{1}{2}(f_x+if_y)\tag{*}
+\]
+It is  both illumminating and essential to 
+confirm (*) using differentials expressed by  $dx$ and $dy$. To begin with
+we have
+\[ 
+dx\wedge dx=dy\wedge d y=0\quad\colon\quad
+dy\wedge dx=-dx\wedge dx\tag{i}
+\]
+From this we get
+\[ d\bar z\wedge dz=2i dx\wedge dy\quad\colon
+\quad 
+dz\wedge d\bar z=-2i dx\wedge dy\tag{ii}
+\]
+Hence (*) is equivalent to
+\[
+d(fdx+ifdy)=
+(-f_y+if_x)dx\wedge dy=\frac{1}{2}(f_x+if_y)\cdot
+2i dx\wedge dy\tag{**}
+\]
+The reader may discover that (**) holds.
+Next, let us start with a 1-form $gd\bar z$. Then we get
+
+\[ d(g d\bar z)= \partial(g)dz\wedge d\bar z\quad\colon\quad
+\partial(g)=\bar\partial(f)=\frac{1}{2}(g_x-if_y)\tag{***}
+\]
+\bigskip
+
+
+\noindent
+{\bf 4. Stokes formula in complex form.}
+Using (*) and (***) together with (ii) above the real version of
+Stokes formula from II:XX gives the following two formulas:
+\[ 
+\iint
+d(fdz)=
+\iint
+\bar\partial(f)d\bar z\wedge dz=\int_{\partial\Omega}\, fdz\tag{*}
+\]
+\[
+\iint
+d(gd\bar z)=
+\iint
+\partial(g)dz\wedge d\bar z=\int_{\partial\Omega}\, g d\bar z\tag{**}
+\]
+\bigskip
+
+\noindent
+{\bf 5. Example.}
+Let $\Omega\in\mathcal D(C^1)$  and let $f(z)$ is an
+analytic function in $\Omega$ which extends to a $C^1$-function on its closure.
+With $\epsilon>0$ we get the $C^1$-function
+\[ 
+u_\epsilon=\text{Log}\,|f|^2+\epsilon
+\]
+We see that
+\[ \partial(u_\epsilon)=
+\frac{\bar f\cdot f'}{|f|^2+\epsilon}\tag{i}
+\]
+where $f'$ is the complex derivative of the analytic function $f$.
+Stokes formula applied to the 1-form $\partial(u_\epsilon)dz$
+gives:
+
+\[ 
+\iint_\Omega\,
+\bar\partial(
+\frac{\bar f\cdot f'}{|f|^2+\epsilon})\cdot d\bar z\wedge dz=
+\int_{\partial\Omega}\,
+\frac{\bar f\cdot f'}{|f|^2+\epsilon}\cdot dz\tag{ii}
+\]
+\medskip
+
+\noindent
+A computation left to the reader shows that the left hand side becomes
+\[
+2i\cdot \iint_\Omega\, \frac{\epsilon\cdot |f'|^2}{(|f|^2+\epsilon)^2}
+dxdy
+\]
+Assume that $f$ has no zeros on
+$\partial\Omega$. Then we get the limit formula
+\[
+\lim_{\epsilon\to 0}\,
+\int_{\partial\Omega}\,
+\frac{\bar f\cdot f'}{|f|^2+\epsilon}\cdot dz=
+\int_{\partial\Omega}
+\frac{ f'dz}{f}\tag{iii}
+\]
+\medskip
+
+\noindent 
+Hence the left hand side in (i) has a limit, i.e. there exists
+\[
+\lim_{\epsilon\to 0}
+2i\cdot \iint_\Omega\, \frac{\epsilon\cdot |f'|^2}{(|f|^2+\epsilon)^2}
+dxdy\tag{iv}
+\]
+Since
+$\epsilon$ appears  in the numerator this area integral
+tends to zero outside zeros of $f$. But when
+$f(\alpha)=$ for some $\alpha\in\Omega$ we get a contribution.
+Suppose for example that $\alpha=0$ and close to the
+origin $f(z)=az^m(1+b_1z+\ldots+)$ where $a\neq 0$ and
+$m\geq 1$.
+Taking an area integral over a small disc $D_\delta$
+centered at the origin we  see that
+
+\[
+\lim_{\epsilon\to 0}\,
+\iint_{D_\delta}\,
+\frac{\epsilon|f'|^2}{
+(|f|^2+\epsilon)^2})\cdot dxdy=
+\lim_{\epsilon\to 0}\,
+\iint_{D_\delta}\,
+\frac{\epsilon \cdot m^2 |a|^2 |z|^{2m-2}}{
+(|a|^2|z|^{2m}+\epsilon)^2})\cdot dxdy\tag{iv}
+\]
+Integrating in polar coordinates the last  term becomes
+\[
+\lim_{\epsilon\to 0}\,
+2\pi\cdot\int_0^\delta\,
+\frac{\epsilon \cdot m^2 |a|^2 r^{2m-2}}{
+(|a|^2 r|^{2m}+\epsilon)^2})\cdot rdr\tag{v}
+\]
+A easy computation which is left to the reader
+shows that this limit is $\pi\cdot m$.
+Performing this limit in small discs around each zero of $f$ in $\Omega$
+we conclude the following:
+\bigskip
+
+\noindent
+{\bf 5.1 Theorem.}
+\emph{Let $\mathcal {N}_f(\Omega)$ denote the
+integer equal to the sum of zeros of $f$ in
+$\Omega$ counted with their multiplicities, while
+$f\neq 0$ on $\partial\Omega$. Then we have the equality:}
+\[ 
+\mathcal{N}_\Omega(t)
+= \frac{1}{2\pi i}
+\int_{\partial\Omega}
+\frac{ f'(z)}{f(z)}\cdot dz
+\]
+\bigskip
+
+
+
+
+
+\noindent
+{\bf Another example.} Let $f$ be as above and let $g$
+be some $C^1$-function in $\Omega$ which vanishes
+the zeros of  $f$ which we assume are all simple.
+With $u_\epsilon$ defined as in the previous example
+we  apply Stokes formula to the
+1-form $g\partial(u_\epsilon)dz$. Computing $d(g\partial(u_\epsilon)dz$ gives
+a sum of two area integrals
+\[
+2i\cdot \iint_\Omega\, \frac{\epsilon\cdot g\cdot |f'|^2}{(|f|^2+\epsilon)^2}
+dxdy+2i\cdot \iint_\Omega\, 
+\frac{\bar\partial(g)\bar f\cdot f'}{|f|^2+\epsilon}
+dxdy\tag{i}
+\]
+The last double integral has a limit. The reason is that
+\[
+\lim_{\epsilon\to 0}\,
+\frac{\bar f\cdot f'}{|f|^2+\epsilon}=\frac{f'}{f}\tag{1}
+\]
+exists in the space of integrable functions, i.e. we use that
+$\frac{1}{f}$ is locally integrable when $f$ has simple zeros.
+So the limit hen $\epsilon\to 0$ of the second double integral becomes
+\[
+2i\cdot \iint_\Omega\, 
+\frac{\bar\partial(g)\cdot f'}{f}dxdy\tag{2}
+\]
+\medskip
+
+\noindent
+In the first integral $\epsilon$ is in the denominator so
+the area integral tends to zero outside zeros of $f$.
+To analyze the situation at a zero taken as the origin where
+we may take $f(z)=z$ since $f$ by assumoption has simple zeros
+there remains to regard
+\[
+\lim_{\epsilon\to 0}\, \cdot \iint_{D_\delta}\, 
+\frac{\epsilon\cdot g}{(|z|^2+\epsilon)^2}
+dxdy\quad\colon\quad g(0)=0\tag{3}
+\]
+We leave it as an exercise to show that this limit is zero
+for every $g$ vanish at the origin. The hint is to integrate in polar coordinates.
+Hence we have established
+\medskip
+
+
+\noindent
+{\bf 5.2 Theorem.}
+\emph{Assume that $f$ has simple zeros in
+$\Omega$ and $g$
+is a $C^1$-function which vanishes at these zeros.
+Then}
+
+
+\[
+2i\cdot \iint_\Omega\, 
+\frac{\bar\partial(g)\cdot f'}{f}dxdy=
+\int_{\partial \Omega}\, 
+\frac{g\cdot f'}{f}dz
+\]
+\medskip
+
+\noindent {\bf{6.  An area formula.}}
+Recall that $dz=dx+idy$. It follows that
+\[ 
+\bar z\cdot dz= 
+i(xdy-ydx)+ xdx+ydy
+\]
+If $\Omega$ is a domain in $\mathcal D(C^1)$ we proved in
+Chapter XX the two area formulas:
+
+\[
+\int_{\partial\Omega}\, x\cdot dy=
+-\int_{\partial\Omega}\, y\cdot dx=\text{Area}(\Omega)
+\]
+At the same time the line integrals of $xdx$ and $ydy$ are zero.
+We conclude that
+
+
+\[
+2i\cdot \text{Area}(\Omega)=\int_{\partial\Omega}\, \bar z\cdot dz\tag{*}
+\]
+
+
+\noindent
+This area formula is often used.
+Consider for example an analytic function $f(z)$
+in $\Omega$ which extends to a $C^1$-function to the closure and
+assume that the map $f\colon\bar\Omega\to \bar U$
+is a homeomorphism where $U$ is another domain in
+$\mathcal D(C^1)$.
+So here $f$ yields a con formal map from
+$\Omega$ onto $U$ and
+it  sends each of the $p$ many boundary curves to
+$\Omega$ onto boundary curves of $U$.
+With $w=f(z)$ as a new complex variable
+the area formula applied to the image domain gives:
+\medskip
+
+\[
+2i\cdot \text{Area}(f(\Omega))=
+\int_{\partial U}\, \bar w\cdot dw
+\]
+Here the last line integral is equal to
+
+\[
+\int_{\partial \Omega}\, \bar f(z)\cdot f'(z)\cdot dz
+\]
+
+\noindent
+Hence we have found  an elegant formula to express the area of the image domain 
+$f(\Omega)$ via
+a line integral along $\partial\Omega$.
+
+
+
+\newpage
+
+
+
+
+
+\centerline {\bf{¤ 8. The equation $\bar\partial(f)=a\cdot f+b\cdot \bar f$.}}
+\medskip
+
+
+\noindent
+Let $a(x,y)$ and $b(x,y)$ be a pair of continuous and complex-valued function
+defined in some open and connected domain
+$\Omega$ and 
+suppose that $f(z)$ is a solution to the differential equation
+in (8.2).
+The Pompeiu formula  entails that if
+$z_0\in\Omega$ and $R>0$ is chosen so that the disc
+$D_R$ centered at $z_0$ is contained in
+$\Omega$, then the following holds 
+when $|z-z_0|<R$:
+\[ 
+f(z)=
+\frac{1}{2\pi i}\cdot \int_{\partial D_R}\, 
+\frac{f(\zeta)d\zeta}{\zeta-z}-
+\frac{1}{\pi}\iint_{D_R}\,
+[af+b\bar f]\cdot \frac{d\xi d\eta}{\zeta-z}\tag{*}
+\]
+
+\noindent
+These locally defined integral equations
+lead to a  uniqueness theorem.
+Let us say that a continuous function $g(z)$ in $\Omega$
+is flat at a point $z_0$ if
+\[
+\lim_{z\to z_0}\, \frac{g(z)}{[z-z_0)^n}=0\quad\text{hold for every}\quad
+n\geq 1
+\]
+
+\medskip
+
+\noindent
+{\bf{7.1 Theorem.}}
+\emph{Let  $f$ be a continuous solution to the differential equation
+$\bar\partial(f)= af+b\bar f$  in $\Omega$. Then
+$f$ cannot be flat at any point in $\Omega$ unless $f$ is identically zero.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+Suppose that $f$ is flat at some
+$z_0\in\Omega$. After a translation we may assume that
+$z_0$ is the origin.
+For each integer $n\geq 1$ we set:
+\[ 
+f_n(z)= \frac{f(z)}{z^n}
+\]
+Then we see that $f_n$ satisfies the equation
+\[
+\bar\partial(f_n)= af_n+ b\cdot \bigl(\frac{\bar z}{z}\bigr)^n\cdot f_n
+\]
+
+
+\noindent
+The Pompeiu formula shows
+that $f_n$ satisfies the integral equation
+\[
+f_n(z)=
+\frac{1}{2\pi}\cdot \int_{\partial D_R}\,\frac{f_n(\zeta)\cdot d\zeta}{\zeta-z}+
+\frac{1}{\pi}\iint_{D_R}\,
+[af_n+b_nf_n]\cdot\frac{ d\xi d\eta}{\zeta-z}\tag{*}
+\]
+The triangle inequality gives:
+\[
+|f_n(z)|\leq 
+\frac{1}{2\pi}\cdot \int_{\partial D_R}\,\frac{|f_n(\zeta)|\cdot |d\zeta|}{|\zeta-z|}+
+\frac{1}{\pi}\iint_{D_R}\,
+|af_n+b_n\bar f_n|\cdot \frac{d\xi d\eta}{|\zeta-z|}\tag{**}
+\]
+
+\noindent
+Next, for each $z\in D_R$ we notice
+the inequality
+\[
+\frac{1}{2\pi}\cdot \iint_{D_R}\frac{dxdy}{|\zeta-z|}\leq
+2R\tag{1}
+\]
+
+\noindent
+Using (**) and (1) an integration with respect to $z$ over
+the disc $|z-z_0|<R$ gives:
+\[
+\iint_{D_R}\, |f(z)|dxdy\leq 
+2R\cdot \int_{\partial D_R}\, 
+|f_n(\zeta)|\cdot |d\zeta|+
+4R\cdot 
+\iint_{D_R}
+|af_n+b_n\bar f_n|
+\cdot d\xi d\eta\tag{2}
+\]
+\medskip
+
+
+\noindent
+Let $M$ be the maximum norm of $|a|+|b|$ over $D_R$.
+Changing the integration variables $\zeta=\xi+i\eta$ in the last integral above
+it follows that
+
+\[
+\iint_{D_R}\, |f_n(z)|\cdot dxdy\leq 
+2R\cdot 
+\int_{\partial D_R}\, 
+|f_n(\zeta)|\cdot |d\zeta|+
+4MR\cdot 
+\iint_{D_R}\,|f_n(z)|
+\cdot dx dy\tag{3}
+\]
+\medskip
+
+\noindent
+Above (3) holds for every $R$ such that the disc of radius $R$ centered at 
+$z_0$ stays in $\Omega$.
+We can choose $R$ so small that
+$4MR<1$ and replacing $f_n$ by $\frac{f}{z^n}$ we get
+
+
+\[
+\iint_{D_R}\, \frac{|f(z)|}{|z|^n}\cdot dxdy\leq 
+\frac{2R}{1-4MR}\cdot R^{-n}\cdot  \int_{\partial D_R}\, 
+|f(\zeta)|\cdot |d\zeta|\tag{4}
+\]
+This inequality holds for every $n\geq 1$.
+if $f$ is not identically zero in the disc $D_R$ we find some
+$z_*\in D_R$ and a small $\delta>0$ such that
+$|z_*|+\delta=\rho<R$ and $f(z)\neq 0$ in the closed
+disc $\{|z-z_*|\leq\delta\}$.
+If $m_*$ is the minimum of $|f(z)|$ in this disc
+we get from (4):
+
+\[
+\rho^{-n}m_*\cdot \pi\delta^2\leq 
+\frac{2R}{1-4MR}\cdot R^{-n}\cdot  \int_{\partial D_R}\, 
+|f(\zeta)|\cdot |d\zeta|\tag{5}
+\]
+Since $\rho<R$ this inequality cannot hold for all $n$. Hence we have established a 
+contradiction
+and conclude that $f$ must be identically zero in the disc $D_R$.
+Finally, since the domain is connected we can continue from new flat points
+in neighborhoods where $f$ is identically zero and conclude that
+$f=0$ holds in the whole domain $\Omega$.
+\bigskip
+
+
+\noindent
+{\bf{Exercise.}}
+Use similar methods as in the proof above to show that if $f$ is a solution to 
+the differential equation in 8.2 which is not identically zero, then the set of zeros must be a
+\emph{discrete} subset of $\Omega$, i.e. there cannot exist
+$z_*\in\Omega$ and a sequence of distinct
+points $\{z_\nu\}$ such that $z_\nu\to z_*$ and $f(z_\nu)=0$ for all $\nu$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf {¤ 9. Normal families.}}
+
+\bigskip
+
+
+\noindent{\bf Introduction.}
+Cauchys integral formula for a disc $D$
+gives the existence of power series expansions for 
+analytic functions $f(z)$. Moreover, we obtain
+bounds for higher order derivatives.
+For example, suppose that $f(z)\in\mathcal O(D_r)$ where 
+$D_r$ is centered at the origin and has radius
+$r$. Assume that $f$ extends to a continuous function on the closed disc
+$\bar D_r$.
+If $|z|<r$ we have seen that:
+\[ 
+f'(z)=\frac{1}{2\pi i}\int_{|z|=r}\,\frac{f(\zeta)d\zeta}{(\zeta-z)^2}\tag{*}
+\]
+Let  $|z|\leq r/2$ and with $\zeta=re^{i\theta}$ during the integration, the
+triangle inequality gives
+
+\[ |f'(z)|\leq
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\frac{|f(re^{i\theta}|\cdot r \cdot d\theta}
+{(r-|z|)^2}
+\]
+So if  $M=\max\,|f(re^{i\theta})|$
+and $|z|\leq r/2$ we get
+\[ 
+\max_{|z|\leq r/2}\, |f'(z)| \leq \frac{4M}{r}
+\]
+
+
+\noindent
+Thus, we obtain a uniform bound for the derivative via 
+the maximum norm of $f$ over a larger disc.
+From this one gets useful convergence principle.
+\bigskip
+
+\noindent {\bf 9.1. Theorem.}
+\emph{Let $\Omega$ be an open set and
+$\{f_\nu\in\mathcal O(\Omega)\}$ a sequence with uniform bounded maximum
+norms, i.e. $|f_\nu|_\Omega\leq M$ hold for all $\nu$
+and some constant $M$.
+Then there exists at least one subsequence
+$\{g_j=f_{\nu_j}\}$ such that $g_j\to g_*$ holds uniformly over compact subsets of
+$\Omega$ where the  limit function $g_*$  is analytic i $\Omega$.}
+\bigskip
+
+\noindent The proof uses 
+\emph{Arzela's Theorem}. Namely, by the local estimate for first
+order derivatives above, the uniform bound
+for maximum norms implies that
+$\{f_\nu\}$ yields an \emph{equi-continuous} family of continuous functions over every compact subset of $\Omega$.  Next, one exhausts $\Omega$
+by some increasing sequence of compact subsets to get the theorem above.
+We leave the details  as an exercise. Bu we  shall 
+give a more detailed account  in
+the case when $\Omega$ is a disc where one discovers how
+to obtain convergent subsequences.
+In addition to Theorem 9.1 the following  result is often used: 
+\medskip
+
+
+
+\noindent {\bf {9.2. Theorem.}}
+\emph{Let $\Omega$ be an open set and
+$\{f_\nu\in\mathcal O(\Omega)\}$ a sequence
+which converges uniformly to a limit function
+$g_*$ over each compact subset of
+$\Omega$. Assume also that there exists
+a relatively compact subset $\Omega_0$ of
+$\Omega$ and an integer $k\geq 1$,
+such that every $f_\nu$ has exactly $k$ zeros 
+in $\Omega_0$ - as usual counted with multiplicity, while no zeros occur outside 
+$\Omega_0$. Then the limit function 
+$g_*$ is either identically zero or it has exactly
+$k$ zeros in $\Omega$ counted with multiplicity
+and they all  belong to the closure
+$\bar\Omega_0$.}
+
+
+\bigskip
+\noindent
+{\bf Remark.} The proof uses
+\emph{Rouche's
+theorem} which is proved  in Chapter IV.
+Once we have a convergence 
+$f_\nu\to g_*$, it follows that
+the sequence of complex derivatives also converges, i.e. following
+implication holds:
+\[ 
+f_\nu\to g_*\implies f'_\nu\to g'_*\tag{*}
+\]
+This will be used in the proof of \emph{Riemann's Mapping Theorem} in
+XX where one regards a convergent sequence $f_\nu\to g_*$
+and assume that the derivatives $f'_\nu$ have no zeros. For in this situation
+the discussion above 
+shows that $g_*$ is either identically a constant or else
+$g'_*$ never has zeros.
+
+
+
+\medskip
+
+\noindent{\bf {9.3  Convergence in discs}}
+Let $\delta_0>0$ and denote by $D^*$ 
+the open disc centered at the origin
+of radius $1+\delta_0$. If $f\in\mathcal O(D^*)$ we obtain the
+the series representation from 4.5:
+\[ 
+f(z)=\sum c_\nu z^\nu
+\]
+Assume that  $f$ is bounded, i.e. there is a constant $M$ such that
+$|f(z)|\leq M$ for all $z\in D^*$.
+For any $0<\delta<\delta_0$ we then have
+\[ c_\nu=
+\frac{1}{2\pi}\cdot (1+\delta)^{-\nu}\int_0^{2\pi}\, f((1+\delta)e^{i\theta})
+e^{-i\nu\theta}d\theta
+\]
+The triangle inequality gives
+\[ 
+|c_\nu|\leq M\cdot (1+\delta)^{-\nu}\quad\colon\, \nu=0,1,2,\ldots
+\]
+These upper bounds for the coefficients of $f$ depend on
+$M$ only. The inequality holds for every 
+$\delta<\delta_0$ and with  $\delta=\delta_0$ we  still
+have the estimates of $\{c_\nu\}$.
+Suppose now that $N$ is a positive integer and
+$\epsilon>0$ some positive number such that
+
+\[ |c_\nu|\leq\epsilon\quad\colon\,0\leq\nu\leq N
+\]
+Then, if $0<r<1$ we have
+
+\[ f(re^{i\theta})=
+ \sum_{\nu=0}^{\nu=N}\, 
+c_\nu r^\nu\cdot e^{i\nu\theta}+
+ \sum_{\nu=N+1}^{\infty}\, 
+c_\nu r^\nu\cdot e^{i\nu\theta}
+\]
+By the triangle inequality we can estimate both sums. The result is
+\[
+f(re^{i\theta})|\leq \epsilon\cdot 
+ \sum_{\nu=0}^{\nu=N}\, 
+r^\nu+
+M\cdot  \sum_{\nu=N+1}^{\infty}\, 
+\frac{r^\nu}{(1+\delta_0)^\nu}
+\]
+Taking the whole sum over the two geometric series above we get
+\medskip
+
+\noindent 
+{\bf 9.4 Proposition.} \emph{One has}
+\[
+\max_\theta\,
+|f(re^{i\theta})|\leq \epsilon\cdot\frac{1}{1-r}+
+M\frac{ r^{N+1}}{(1+\delta_0)^{N+1}}
+\cdot\frac{1}{1-\frac{r}{1+\delta_0}}
+\]
+\medskip
+
+\noindent {\bf
+9.5 Application.}
+Let $\{f_k\}$ be a sequence in
+$\mathcal O(D^*)$ where the maximum norm of every
+$f_k$ is $\leq M$.
+Each $f_k$ has a series expansion $\sum\, c_\nu(k)z^\nu$.
+For each fixed $\nu$ we have a bounded  sequence
+$\{c_\nu(1),c_\nu(2),\ldots\}$
+of complex numbers. By the diagonal procedure we can find 
+a subsequence $k_1<k_2<\ldots$ such that there exists
+\[
+\lim_{j\to \infty} c_\nu(k_j)=c_\nu^*\quad\colon\, \nu=0,1,\ldots
+\]
+The uniform estimates for the $c_\nu(k)$-coefficents give
+\[ 
+|c_\nu^*|\leq M\cdot(1+\delta_0)^{-\nu}
+\]
+Hence there exists the analytic function in $D^*$:
+\[
+g(z)=\sum c_\nu^*\cdot z^\nu
+\]
+Renumber the $f$-functions by setting $g_j=f_{k_j}$.
+The convergence entails  that
+for each  pair 
+$\epsilon>0$ and  $N\geq 1$, there exists
+some integer $N^*$ such that
+\[
+|c_\nu(k_j)-c_\nu^*|\leq\epsilon\quad\colon\, 0\leq\nu\leq N\quad\colon\, j\geq N^*
+\]
+\medskip
+
+\noindent
+Now we can apply Proposition 9.4 to estimate the maximum norm
+of $|g_j-g^*|$ over discs of radius $r<1$.
+In particular we obtain
+\bigskip
+
+\noindent {\bf 9.6 Proposition.}
+\emph{The sequence $\{g_j=f_{k_j}\}$ converges uniformly to the
+limit function
+$g^*$ over each disc $|z|\leq r$ with $r<1$.}
+\bigskip
+
+\noindent
+{\bf 9.7 Convergene in the whole of $D^*$.}
+The rate of convergence for maximum norms over
+discs $|z|\leq r<1$
+in Proposition 9.6 are well controlled. By relaxing the
+estimates a bit it is still true that $g_j\to g^*$ holds
+uniformly in discs $|z|\leq r$ for \emph{any} $r<1+\delta_0$.
+To see this one  applies the "$(\epsilon,\delta)$ - yoga".
+So let $\epsilon>0$ and $r<1+\delta_0$ be given.
+We first find a large $N$ so that
+\[
+M\frac{ r^{N+1}}{(1+\delta_0)^{N+1}}
+\cdot\frac{1}{1-\frac{r}{1+\delta_0}}\leq\epsilon
+\]
+Then, if $|z|\leq r$,Proposition 9.4 and the
+triangle inequality yield:
+\[ 
+|g_j(z)-g^*(z)|\leq\
+\sum_{\nu=0}^{\nu=N}\,
+|c_\nu(k_j)-c_\nu^*|\cdot r^\nu+2\epsilon\quad\colon\, j\geq N^*
+\]
+Since $\lim_{j\to\infty}\,c_\nu(k_j)\to c_\nu^*$
+hold for each $0\leq\nu\leq N$  we find some large $N^{**}>N^*$
+such that
+\[
+\sum_{\nu=0}^{\nu=N}\,
+|c_\nu(k_j)-c_\nu^*|\cdot r^\nu\leq \epsilon\cdot\frac{1}{(1+\delta_0)^N}
+\]
+Then we see that maximum norms of $g_j-g^*$ are $\leq 3\epsilon$
+if $j\geq N^{**}$. This proves that uniform convergence holds
+over all discs inside $D^*$.
+\bigskip
+
+\noindent{\bf 9.8  Remark.}
+The conclusion above is
+quite striking since we from the start only assume that
+the coefficients begin to converge and after conclude that
+one gets uniform convergence to the limit function
+$g^*$ over every compact disc inside $D^*$.
+
+\newpage  
+
+\centerline{\bf {¤ 10. Laurent series.}}
+
+\bigskip
+
+\noindent
+Let $R^*>1$ and consider the open domain
+\[ 
+\Omega=\{z\quad\colon\, 1<|z|<R^*\}
+\]
+We refer to $\Omega$ as an open annulus where
+$|z|=1$ is the inner circle and
+$|z|=R^*$ is the outer circle.
+Let $f(z)$ be analytic in
+$\Omega$. When $1<|z|<R$ is fixed we can choose
+a pair $r,R$ such that
+\[
+1<r<|z|<R<R^*
+\]
+Cauchy's formula applies to the domain
+$r<|z|<R$ and gives the equality:
+
+\[ 
+f(z)=\frac{1}{2\pi i}\cdot
+\int_{|\zeta|=R}\,
+\frac{f(\zeta)\cdot d\zeta}{\zeta-z}
+-\frac{1}{2\pi i}\cdot
+\int_{|\zeta|=r}\,
+\frac{f(\zeta)\cdot d\zeta}{\zeta-z}\tag{*}
+\]
+\medskip
+
+\noindent
+The idea is now to expand $\zeta-z$ in a geometric series.
+When $|\zeta|=R>|z|$ we have
+\[
+\frac{1}{\zeta-z}=\frac{1}{\zeta}\cdot\sum_{\nu=0}^\infty
+\frac{z^\nu}{\zeta^\nu}
+\]
+Let us put
+\[ 
+a_\nu=
+\frac{1}{2\pi i}\cdot \int_{|\zeta|=R}\,
+\frac{f(\zeta)\cdot d\zeta}{\zeta^{\nu+1}}\quad\colon\quad \nu=0,1,2,\ldots
+\]
+
+\noindent
+Then the first integral in (*) becomes
+\[ 
+f^*(z)= 
+\sum\, a_\nu\cdot z^\nu\tag{1}
+\]
+
+
+\noindent
+Next, when $|\zeta|= r<|z|$ we have the series expansion
+\[
+\frac{1}{\zeta-z}=-\frac{1}{z}\cdot\sum\,\frac{\zeta^\nu}{z^\nu}
+\]
+Put
+\[
+b_\nu=\frac{1}{2\pi i}\cdot \int_{|\zeta|=R}\,
+f(\zeta)\cdot \zeta^{\nu-1}\cdot
+d\quad\colon\quad \nu=1,2,\ldots
+\]
+Taking the negative sign into the account in (*) we see that
+the second integral becomes
+\[ 
+f_*(z)=\sum_{\nu=1}^\infty\,\frac{b_\nu}{z^\nu}\tag{2}
+\]
+
+
+\noindent
+{\bf {1. Definition.}}
+\emph{The function $f^*(z)$ is called the positive part of $f$ and
+$f_*(z)$ the lower part of $f$.}
+\medskip
+
+\noindent
+{\bf Remark.}
+In the construction above 
+$R$ can be chosen arbitrarily close to $R^*$.
+With $R=R^*-\epsilon$ we get the finite maximum norm
+\[ 
+||f||_{R_*-\epsilon}=\max_{\zeta|= R_*-\epsilon}\, |f(\zeta)|
+\]
+The triangle inequality gives
+\[ 
+|a_\nu|\leq\frac
+{||f||_{R^*-\epsilon}}{(R^*-\epsilon)^\nu}
+\]
+Since $\epsilon$ can be made arbitrary small we conclude that
+the radiius of convergence for the series (1) is $\geq 1$. Hence we have
+proved:
+\medskip
+
+\noindent
+{\bf 2. Proposition.}
+\emph{The positive part $f^*(z)$ is analytic in the disc
+$|z|<R^*$.}
+\medskip
+
+\noindent
+In a similar way the reader may verify the following:
+\medskip
+
+\noindent
+{\bf {3. Proposition.}}
+\emph{The inner part $f_*(z)$ is analytic in the exterior disc
+$|z|>1$.}
+\bigskip
+
+\noindent
+{\bf 4. The Laurent series.} The analytic function $f(z)$ in the annulus can be written
+as a sum
+$f^*(z)+f_*(z)$. Here
+$f^*\in\mathcal O(D_{R^*})$ while  $f_*$ is  analytic in the exterior disc
+$|z|>1$. We can take the two series together and hence $f(z)$ is represented by
+
+\[ 
+f(z)=
+\sum_{\nu=0}^\infty\,a_\nu\cdot z^\nu
++\sum_{\nu=1}^\infty\,\frac{b_\nu}{z^\nu}
+\]
+This is called the Laurent series of $f(z)$.
+\medskip
+
+\noindent
+{\bf 5. The residue coefficient $b_1$.}
+From the construction above we have
+\[ 
+b_1=\frac{1}{2\pi i}\int_{|\zeta|=R}\, f(\zeta)\cdot d\zeta
+\]
+Notice that we can perform the integral over any
+circle, i.e. above we can take any
+$1<R<R*$.
+The special role of $b_1$ is that $b_1=0$  holds if and only if
+$f(z)$ has a primitive analytic function in the annulus .
+\medskip
+
+\noindent
+{\bf 6. Exercise.}
+Prove the assertion above, i.e. that
+there exists an analytic function
+$F(z)$ in the annulus such that
+$F'(z)=f(z)$ if and only if $b_1=0$.
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf 7. Example.}
+Consider the analytic function in the annulus
+$1<|z|<R$ defined by
+\[ 
+\phi(z)=\frac{1}{z+1}-\frac{1}{z-1}
+\]
+Here $\phi(z)$ has the Laurent series expansion
+\[ 
+\phi(z)=-2\cdot(\frac{1}{z^2}+\frac{1}{z^4}+\ldots)
+\]
+Hence there exists the primitive function
+\medskip
+
+\noindent
+\[
+\Phi(z)= 2\cdot\bigl(\frac{1}{z}+\frac{1}{3z^3} +\frac{1}{5z^5}+\ldots\bigr)
+\]
+Next, we notice that
+$\Phi(z)$ can be expressed by  the complex Log-function
+
+
+\[ 
+\log\,\bigl(\frac{z+1}{z-1}\bigr)\tag{*}
+\]
+Here some care must be taken. First it is clear that
+(*) is  defined when
+$z=x$ is real with
+$x>1$.
+ So on the real interval $(1,+\infty)$ we have the equality
+ \[ 
+G(x)=\log\,\bigl(\frac{x+1}{x-1}\bigr)
+\]
+
+
+\noindent
+{\bf 8. Exercise.}
+Let $R>1$ and consider an analytic function
+\[
+g(z)=\sum\, c_\nu\cdot z^\nu
+\]
+in the open  disc
+$D_R$.
+It can be restricted to the real line
+$[-1,1]$. Set
+\[ 
+K_g(z)=\int_{-1}^1\, \frac{g(z)-g(s)}{z-s}\cdot ds
+\]
+The algebraic identity $z^\nu-s^\nu=(z-s)(z^{\nu-1}+\ldots+s^{\nu-1})$
+gives
+\[
+K_g(z)=2c_1+
+\sum_{\nu=2}^\infty\, c_\nu\cdot \int_{-1}^1\,\bigl[ z^{\nu-1}+
+z^{\nu-2}s+\ldots+s^{\nu-1}\bigr]\cdot ds
+\]
+Since we integrate over $[-1,1]$ the integrals taken over
+odd $s$-powers are all zero and a computation gives:
+\[
+K_g(z)= 2c_1+
+2\cdot \sum_{\nu=2}^\infty\, c_\nu\cdot \bigl[
+z^{\nu-1}+\frac{z^{\nu-3}}{3}+
+\frac{z^{\nu-5}}{5}+\ldots\bigr]\tag{1}
+\]
+
+
+\noindent
+Notice
+that  the sum in each bracket is finite.
+Show that $K_g(z)$ is analytic in the disc $|z|>R$ and using
+the $\Phi$-function from Example 7 the reader should verify that
+$K_g(z)$ is equal to the positive part of the Laurent series defined by
+$g(z)\cdot \Phi(z)$ in $1<|z|<R$.
+
+\newpage
+
+
+
+
+
+
+
+
+\centerline {\bf ¤ 11. An area formula.}
+\medskip
+
+\noindent
+Consider a Laurent series
+\[ 
+f(z)=\sum_{-\infty}^\infty\, c_\nu\cdot z^\nu
+\]
+which represents the analytic function
+defined in $\{R_*<|z|<R^*\}$.
+If $R_*<r<R^*$
+we get the parametrised  curve
+
+\[
+\theta\mapsto \theta\mapsto f(re^{i\theta})\tag{*}
+\]
+
+\noindent
+Consider the situation where (*) is bijective so that
+the image is a closed
+Jordan curve $J_r$ in the complex $\zeta$-plane
+which borders a bounded Jordan domain $\Omega_r$.
+We shall express the area of $\Omega_r$
+with the the coefficients in Laurent series of $f$.
+The formula depends upon the orientation in the map (*) which may be
+either positive or negative.
+
+
+
+\bigskip
+
+\noindent
+{\bf 1. Theorem.} \emph{One has has the equality}
+\[ 
+\text{area}(\Omega_r)=\text{sign}(*)\cdot \pi\cdot
+\sum_{-\infty}^\infty\, n\cdot |c_n|^2\cdot r^{2n}
+\]
+\emph{where $\text{sign}(*)$ is +1 or -1 depending upon the 
+orientation in (*).}
+
+
+\medskip
+
+\noindent
+{\bf{2. Example.}}
+If $f(z)=z$ the orientation is positive and here
+$\Omega_r$ is the disc of radius $r$ and the formula is okay since
+its area is $\pi\cdot r^2$. On the other hand, if
+$f(z)=\frac{1}{z}$ the orientation is negative and  the sign-rule
+in Theorem 1 gives a correct formula.
+\bigskip
+
+
+\noindent
+emph{Proof of Theorem 1.}
+Set $w=f(z)$ and suppose  that
+(*) is positively oriented. The
+area formula from XX gives:
+
+\[
+\text{area}(\Omega_r)=\int_{J_r}\,
+\bar w\cdot dw=\int_{|z|=r}\, \bar f(z)\cdot f'(z)\cdot dz
+\]
+\medskip
+
+\noindent 
+The right hand side
+is a double sum
+\[
+\sum\sum\, \bar c_k\cdot m\cdot c_m\cdot \int_{|z|=r}\, \bar z^k\cdot z^{m-1}\cdot dz
+\]
+extended over all pairs of integers.
+Since $\bar z^k=\frac{r^{2k}}{z^k}$
+holds on $|z|=r$ we have
+\medskip
+
+\[
+\int_{|z|=r}\, \bar z^k\cdot z^{m-1}\cdot dz=
+r^{2k}\cdot \int_{|z|=r}\, z^{-k}\cdot z^{m-1}\cdot dz
+\]
+By Cauchy's residue formula the last integrals are zero for when $k\neq m$
+and become $r^{2k}\cdot 2\pi i$ if $k=m$. Now we can read off the formula
+in
+Theorem 1. The proof  when (*) has a negative orientation 
+is the same after signs have been  reversed.
+\bigskip
+
+\noindent
+{\bf{3. A special case}}. Let
+\[ 
+f(z)=\frac{1}{z}+\sum_{n=0}^\infty\, c_n\cdot z^n
+\]
+where the positive series represents an analytic function
+in some disc $|z|<R$.Suppose that (*) holds for some
+$0<r<R$ where the bijective map from (*) has a negative
+orientation which gives:
+\[ 
+\text{area}(\Omega_r)=\pi\cdot \bigl[\frac{1}{r}-\sum_{n=1}^\infty\, 
+n\cdot |c_n|^2\cdot r^{2n}\bigr]
+\]
+Since the area is a positive number we get 
+the inequality 
+\[
+\sum_{n=1}^\infty\,
+n\cdot |c_n|^2\cdot r^{2n}\leq \frac{1}{r}\tag{1}
+\]
+\medskip
+
+\noindent
+{\bf{4. Koebe's inequality.}}
+Let $\phi$
+be an analytic function  in 
+the unit disc where $\phi(0)=0$ and $\phi'(0)=1$ 
+and $\phi$ is a conformal map from 
+$D$ onto some simply connected
+domain in ${\bf{C}}$. Put
+\[
+f(z)=\frac{1}{\phi(z)}
+\]
+Now $f$ is analytic in the punctured disc $0<|z|<1$
+and since $\phi$ is a conformal map
+it follows that $f$ maps circles $|z|=r$ onto closed Jordan curves
+where the orientation now is negative for each $0<r<1$.
+Moreover $f$ has a  Laurent series
+\[
+\frac {1}{z}+\sum_{n=0}^\infty\, c_n\cdot z^n
+\]
+and since  the inequality (1) holds for every
+$r<1$ we have
+\[ 
+\sum_{n=1}^\infty\,
+n\cdot |c_n|^2\cdot r^{2n}\leq 1\tag{i}
+\]
+At the same time the given $\phi$-function has a
+series expansion
+\[ 
+\phi(z)= z+d_2z^2+d_3z^3+\ldots
+\]
+Let us assume that $\phi$ is an \emph{odd} function
+which to begin with gives $d_2=0$ and 
+\[
+\frac{1}{\phi}= \frac{1}{z}\cdot \frac{1}{1+d_3z^2+d_4z^3+\ldots}
+\]
+From this we conclude that
+\[ 
+c_1=-d_3
+\]
+and the inequality (i) gives
+\[ 
+|d_3|\leq 1\tag{ii}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Use (i) above to show
+that equality  holds in (ii) if and only if
+\[ 
+\phi(z)=\frac{z}{1-\lambda z^2}
+\] 
+for some $\lambda$ whose absolute value is one.
+
+
+\medskip
+
+\noindent
+Next,
+consider a conformal map $\psi$ from $D$ to a simply connected
+domain whose
+Taylor series at $z=0$ is of the form
+\[ 
+\psi(z)= z+a_2z^2+\ldots
+\]
+\medskip
+
+\noindent
+{\bf{5. Theorem.}}
+\emph{One has the inequality}
+$ |a_2|\leq  2$.
+
+
+\medskip
+
+\noindent
+\emph{Proof.} 
+To begin with
+$\psi(z^2)$ is analytic in $D$ and starts with $z^2$ which gives
+the analytic function
+\[
+\frac{\psi(z^2)}{z^2}=1+ a_2\cdot z^2+\sum_{m\geq 2}\, b_m\cdot z^{2m}\tag{i}
+\]
+Since $\psi(z)\neq 0$
+when $z\neq 0$
+the analytic function in (i) is also
+$\neq 0$ in $D$. Now
+the unit disc is simply connected and hence
+there exists an analytic  square root function:
+\[
+\phi(z)=z\cdot\sqrt{\frac{\psi(z^2)}{z^2}}\tag{ii}
+\]
+\medskip
+
+\noindent
+\emph{Sublemma} The function
+$\phi$ is  odd function and yields a conformal mapping, i.e. 
+$\phi$ is 1-1 in $D$.
+\medskip
+
+
+\noindent
+The proof of this Sublemma is left as an exercise.
+In particular we have a  series expansion:
+\[ 
+\phi(z)= z+d_3\cdot z^3+\ldots\tag{iii}
+\]
+Notice that the square root in (i) has a series expansion
+\[
+1+\frac{a_2}{2}\cdot z^2+\text{higher order terms}\tag{iv}
+\] 
+It follows that 
+\[
+d_3=\frac{a_2}{2}\tag{v}
+\]
+Then (ii) from  (4)
+above gives $|a_2\leq 2$ as required.
+\medskip
+
+\noindent
+{\bf{6. Exercise.}} Show
+that the equality 
+$|a_2|=2$ holds in Theorem 5 if and only if
+$\psi$ is of the form
+
+\[ 
+\psi(z)=\frac{z}{(1-\lambda z)^2}\quad\text{for some}\quad |\lambda|=1
+\]
+Show also that every such function indeed yields a conformal map from
+$D$ onto a simply connected domain which 
+becomes a  \emph{radial slit domain}.
+For example, take $\lambda=1$ and show that
+the $\psi$-image of $D$  becomes
+\[ 
+{\bf{C})}\setminus\bigl[-1/4,+\infty\bigl)
+\]
+
+
+\bigskip
+
+
+\centerline {\bf ¤ 12. A theorem by Jentzsch}
+\bigskip
+
+\noindent
+{\bf Introduction.} Let $\sum\, c_nz^n$ b a convergent series
+in the unit disc $D$ whose
+radius of convergence is one.
+To each $n\geq 1$ we get the Taylor polynomials
+\[ 
+s_n(z)=c_0+c_1z+\ldots+c_nz^n
+\]
+Denote by
+$\mathcal N(s_n)$ the zero set  of  $s_n$.
+\medskip
+
+\noindent
+{\bf 12.1 Theorem.}
+\emph{For each  point $e^{i\theta}$ on  the unit circle there
+exists a strictly increasing sequence
+$1\leq n_1<n_2<\ldots$ and points $z_k\in\mathcal N(s_{n_k})$
+such that $\lim_{k\to\infty}\, z_k= e^{i\theta}$.}
+\bigskip
+
+\noindent
+{\bf Remark.} This result was proved by   X. Jentzsch in the article [Jen: 
+Acta mathematica 1918].
+To illustrate the theorem we consider the analytic function
+$f=\frac{1}{1-z}$.
+It has no zeros in $D$ but the zeros of
+\[
+s_n(z)= 1+\ldots+z^n
+\]
+are roots of unity which cluster on the whole unit circle as
+$n\to\infty$.
+The fact that a similar clustering of zeros occur
+for partial sums of a function of the form
+\[ 
+f(z)=\sum\, z^{\nu_k}
+\] 
+where $1\leq \nu_1<\nu_2<\ldots$ is an arbitrary increasing sequence of
+integers is less evident but has an affirmative answer by
+the theorem above.
+\bigskip
+
+\noindent
+\centerline {\emph{Proof of Theorem  12.1}}
+
+\medskip
+
+\noindent
+We argue  by contradiction. Suppose that some point on
+$T$ is not a cluster point for zeros of the
+$s$-functions. After a rotation we may assume that this point is
+$z=1$. So now  there exists  $0<\delta<1$ 
+and a positive integer $k_*$ such that
+\[ 
+s_k(z)\neq 0\quad\colon\, |z-1|<\delta
+\quad\colon k\geq k^*\tag{1}
+\]
+There remains to derive a contradiction.
+Since $s_k\to f$ holds uniformly inside the unit disc
+and $f$ is not reduced to a constant, it follows from
+XX and (1)  that
+$f(z)\neq 0$ in the domain
+\[
+\Omega=D\cap\{ |z-1|<\delta\}
+\]
+Since $\Omega$ is simply connected there exists
+$h\in\mathcal O(\Omega)$
+where
+\[ 
+f(z)= e^{h(z)}
+\]
+We also find a sequence 
+$\{g_k\in\mathcal O(D_\delta(1))\}$
+such that
+\[ 
+s_k(z)= e^{g_k(z)}\quad\colon\quad z\in D_\delta(1)
+\]
+Cnosider the fixed point  $\xi=1-\delta/8$.
+Now $s_k(\xi)\to f(\xi)$ and we can theefore choose  
+branches of $\{g_k\}$ so that
+\[ 
+\lim_{k\to\infty}\ g_k(\xi)= h(\xi)\tag{2}
+\]
+
+
+\noindent
+Since $s_k(z)\to f(z)$ holds uniformly on
+compact subsets of  $\Omega$
+it follows that $g_k(z)\to h(z)$  holds with uniform
+convergence  over compact subsets of
+$\Omega$.
+Next, consider  the functions
+\[
+\phi_k(z)=e^{\frac{g_k(z)}{k}}-1\tag{3}
+\]
+
+
+\noindent
+The convergence $g_k\to h$ in $\Omega$
+entails that 
+\[
+\phi_k(z)\to 0\tag{4}
+\]
+where this convergence is uniform over compact subsets of
+$\Omega$. Next we have
+
+\medskip
+
+
+
+
+\noindent {\bf Lemma.} \emph{The $\phi$-functions are uniformly bounded in
+$D_\delta(1)$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+First it is clear that there 
+exists a constant $A$  such that
+\[ 
+|c_n|\leq A\cdot 2^n
+\]
+With $\delta<1$ and $|z|\leq 1+\delta$ 
+the
+triangle inequality gives
+\[ 
+|s_k(z)|\leq  A\cdot 2^{k+1}\cdot (1+\delta)^k
+\quad\colon\quad k=1,2\ldots\tag{i}
+\]
+Since
+$e^{\mathfrak{Re}(g_k)(z)}=|s_k(z)|$
+we see that (i) gives:
+\[
+\mathfrak{Re}(g_k)(z)\leq (k+1)\cdot\log 2+
+k(1+\delta)+\log^+ A\tag{ii}
+\]
+Dividing by $k$
+we see that
+$\{\frac{\mathfrak{Re}(g_k)(z)}{k}\}$ are uniformly bounded
+above when
+$z\in D_\delta(1)$ and Lemma 1 follows since
+\[ 
+|\phi_k(z)|\leq e^{\frac{\mathfrak{Re}\, g_k(z)}{k}}+1
+\]
+\bigskip
+
+\noindent
+\emph{Final part of the proof}: 
+The uniform bound in the Lemma and the convergence from (4) imply that
+$\{\phi_k(z)\}$ converges uniformly to zero in
+compact subsets of $D_\delta(1)$. In particular we can find some
+$0<\epsilon<\delta$ such that 
+\[ 
+|\phi_k(1+\epsilon)|<\epsilon/2
+\]
+hold for all large $k$. It follows that
+\[
+ |s_k(1+\epsilon)|=|1+\phi_k(1+\epsilon)|^k\leq(1+\epsilon/2)^k\tag{*}
+\]
+holds when $k$ large and then 
+\[ 
+|c_k(1+\epsilon)^k|=|s_k(1+\epsilon)-s_{k-1}(1+\epsilon)|
+\leq |s_k(1+\epsilon)|+|s_{k-1}(1+\epsilon)|\leq
+2\cdot (1+\epsilon/2)^k\implies
+\]
+\[ 
+\limsup\uuu{k\to\infty}\,
+|c_k|^{\frac{1}{k}}\leq \lim 2^{\frac{1}{k}} \cdot \frac{1+\epsilon/2}{1+\epsilon}
+=
+\frac{1+\epsilon/2}{1+\epsilon}
+\]
+The last term is $<1$ which
+contradicts
+that the  radius of convergence of $\sum\, c_kz^k$ is one and hence 
+Theorem 12.1 is proved.
+
+
+
+\newpage
+
+
+
+\centerline{\bf ¤ 13. An inequality by Siegel}
+\bigskip
+
+\noindent 
+The  result below was proved by C. Siegel in
+Math. Zeitschrift Bd. 10 page 175 (1921)
+Let $n\geq 2$ and $p(z)$ is a monic polynomial
+\[
+p(z)=z^n+a_1z^{n-1}+\ldots+a_n
+\]
+Let $\alpha_1,\ldots\alpha_n$ be the roots where
+eventual multiple roots are repeated.
+\medskip
+
+\noindent {\bf Theorem.}
+\[ 
+\prod_{\nu=1}^{\nu=n}\, (1+|\alpha_\nu|)
+\leq 2^n\cdot \sqrt{1+|a_1|^2+\ldots+|a_n|^2}
+\]
+
+
+
+
+\noindent \emph{Proof.}
+For every complex number the formula from XXX gives
+
+\[ 
+1+|z|\leq 2\cdot\text{max}(1,|z|)=
+2\cdot 
+\text{exp}\bigl[\,\frac{1}{2\pi}\cdot \,\int_0^{2\pi}\,\text{Log}\bigl|e^{i\theta}-z|d\theta\,\bigr]\tag{*}
+\]
+ 
+
+\noindent
+Apply this to each root of $p$ and take the product. This gives
+\[
+\prod_{\nu=1}^{\nu=n}\, (1+|\alpha_\nu|)
+\leq 2^n\cdot
+\text{exp}\bigl [\,\frac{1}{2\pi}\cdot \,\int_0^{2\pi}\,
+\,\sum_{\nu=1}^{\nu=n}\,
+\,\text{Log}\bigl|e^{i\theta}-\alpha_\nu\, \bigr|\cdot d\theta\,\bigr]=
+\]
+\[
+2^n\cdot
+\text{exp}\bigl[\,\frac{1}{2\pi}\cdot \,
+\int_0^{2\pi}\,
+\text{Log}|p(e^{i\theta})|\,d\theta\,\bigr]
+\]
+
+
+\noindent To estimate the last term we employ 
+Blascke's factorization of $p(z)$ in the unit disc $|z|<1$:
+\[
+p(e^{i\theta})=B(e^{i\theta})\cdot e^{\phi(e^{i\theta})}\quad\colon
+|B(e^{i\theta}|=1\quad\colon\,
+\phi(z)\in \mathcal O(D)\implies
+\]
+
+\[
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,
+\text{Log}|p(e^{i\theta})|\,d\theta=
+\frac{1}{2\pi}\cdot\int_0^{2\pi}\,\mathfrak{Re}(\phi(e^{i\theta}))d\theta=
+\mathfrak{Re}(\phi)(0)
+\]
+\medskip
+
+\noindent
+where the last equality holds since $\mathfrak{Re}(\phi)$ is harmonic.
+Hence there only remains to show the inequality
+\[
+e^{\mathfrak{Re}(\phi)(0)}\leq
+\sqrt{1+|a_1|^2+\ldots+|a_n|^2}\tag{i}
+\]
+
+
+\noindent
+To show this we use the Plancherel formula which gives
+\[
+\int_0^{2\pi}\,|p(e^{i\theta})|^2d\theta=2\pi\cdot(1+|a_1|^2+\ldots+|a_n|^2)\tag{ii}
+\]
+In addition, we have
+\[
+|p(e^{i\theta})|^2=
+e^{2\cdot \mathfrak{Re}(\phi(e^{i\theta}))}\tag{iii}
+\]
+Now we can finish the proof as follows:
+Since $e^{\phi(z)}$ is analytic  the mean value formula gives:
+\[
+e^{\phi(0)}=\frac{1}{2\pi}\cdot
+\int_0^{2\pi}\,
+e^{\phi(e^{i\theta})}\cdot d\theta\tag{iv}
+\]
+Since the absolute value $|e^{\phi(z)}|= e^{\mathfrak{Re}(\phi)(z)}$
+hold for all $z$, the triangle inequality gives
+\[
+e^{\mathfrak{Re}(\phi)(0)}\leq\frac{1}{2\pi}\cdot
+\int_0^{2\pi}\,
+e^{\mathfrak{Re}(\phi(e^{i\theta}))}\cdot d\theta\tag{v}
+\]
+The Cauchy-Schwarz inequality applied to (v) gives:
+\[
+e^{\mathfrak{Re}(\phi)(0)}\leq\frac{1}{\sqrt{2\pi}}
+\cdot
+[\int_0^{2\pi}\,
+e^{2\mathfrak{Re}(\phi(e^{i\theta}))}\cdot d\theta\,[^{\frac{1}{2}}\tag{vi}
+\]
+Now (ii) and (iii) give the requested inequality (i).
+
+\newpage
+
+
+
+\centerline {\bf{¤ 14. Zeros of product series.}}
+\bigskip
+
+\noindent
+Let $\{\lambda\uuu k\}$ be a non\vvv decreasing sequence of
+positive real number
+where  $\lambda\uuu 1\geq 2$ and
+\[
+ \sum\,\lambda\uuu k^{\vvv (1+\epsilon)}<\infty 
+\quad \text{hold for every}\quad \epsilon>0
+\tag{1}
+\]
+This gives  the analytic function
+$\phi(z)$ defined in $\mathfrak{Re}\, z>1$
+by
+\[ 
+\phi(z)=\prod\, (1\vvv \lambda\uuu k^{\vvv z})\tag{*}
+\]
+The logarithmic  derivative becomes
+\[
+\frac{\phi'(z)}{\phi(z)}=
+\vvv \sum\, \log \lambda\uuu k\cdot
+\frac{\lambda\uuu k^{\vvv z}}{1\vvv\lambda\uuu k^{\vvv z}}
+\]
+Expanding
+the denominator $1\vvv\lambda\uuu k^{\vvv z}$ into a geometric series
+we obtain:
+
+\[
+\frac{\phi'(z)}{\phi(z)}=
+\vvv \sum \uuu{n=1}^\infty
+\sum\uuu{k=1}^\infty\, \log \lambda\uuu k\cdot\lambda\uuu k^{\vvv nz}
+\]
+\medskip
+
+\noindent
+If $z=1+\epsilon+iy$
+for some $\epsilon>0$ and a real $y$ we set
+\[
+\rho\uuu\epsilon(n;y)=
+\sum\uuu{k=1}^\infty\, \log \lambda\uuu k\cdot\lambda\uuu k^{\vvv n(1+\epsilon)}
+\cdot \lambda\uuu k^{\vvv iny}
+\]
+\medskip
+
+\noindent
+{\bf{14.1 A remarkable positive sum.}}
+Let $y\uuu 0\neq 0$
+and  consider the sum
+\[
+S\uuu\epsilon(n)=
+3\cdot \rho\uuu\epsilon(n;0)+4\cdot \rho\uuu\epsilon(n;y\uuu 0)+
+\rho\uuu\epsilon(n;2y\uuu 0)
+\]
+Taking  real parts we obtain
+\[
+\mathfrak{Re}\, S\uuu\epsilon(n)=
+\sum\uuu{k=1}^\infty\,
+\sum\uuu{n=1}^\infty
+ \log \lambda\uuu k\cdot\lambda\uuu k^{\vvv n(1+\epsilon)}
+\cdot\,\bigl[
+3+4\cdot \mathfrak{Re}\, \lambda\uuu k^{\vvv iny\uuu 0}+
+\mathfrak{Re}\, \lambda\uuu k^{\vvv iny\uuu 0}\,\bigr]\tag{i}
+\]
+In this double sum the terms inside the brackets become
+\[
+3+
+4\cdot \cos\, n\cdot \lambda\uuu k\cdot y\uuu 0+
+\cos\, 2n\cdot \lambda\uuu k\cdot y\uuu 0
+= 2\bigl( 1+\cos\, n\cdot \lambda\uuu k\cdot y\uuu 0)^2
+\] 
+where the last equality follows from the trigonometric formula
+$\cos 2a= 2\cos^2\vvv 1$.
+Hence we have the formula
+\[
+\mathfrak{Re}\bigl[\, 
+3\cdot \frac{\phi'(1+\epsilon)}{\phi(1+\epsilon)}+
+4\cdot \frac{\phi'(1+\epsilon+iy\uuu 0)}{\phi(1+\epsilon+iy\uuu 0)}+
+\frac{\phi'(1+\epsilon+2i y\uuu 0)}{\phi(1+\epsilon+2iy\uuu 0)}\,\bigr]=
+\]
+\[
+\vvv \sum\uuu{n=1}^\infty \sum\uuu {k=1}^\infty
+\log \lambda\uuu k\cdot\lambda\uuu k^{\vvv n(1+\epsilon)}
+\cdot  2\bigl( 1+\cos\, n\cdot \lambda\uuu k+\cdot y\uuu 0)^2\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{14.2 Conclusion.}}
+Keeping $y\uuu 0$ fixed we get the following for each $\epsilon>0$:
+\[
+\mathfrak{Re}\bigl[\, 
+3\cdot \frac{\phi'(1+\epsilon)}{\phi(1+\epsilon)}+
+4\cdot \frac{\phi'(1+\epsilon+iy\uuu 0)}{\phi(1+\epsilon+iy\uuu 0)}+
+\frac{\phi'(1+\epsilon+2i y\uuu 0)}{\phi(1+\epsilon+2iy\uuu 0)}\bigr]<0
+\] 
+
+\bigskip
+
+\noindent
+{\bf{14.3 Absence of asymptotic zeros.}}
+Let $y\uuu 0>0$  
+and assume that one has three limit expansions:
+\[
+\phi(1+\epsilon)=\epsilon^\alpha\cdot \gamma\uuu 0(\epsilon)
+\]
+\[
+\phi(1+\epsilon+iy\uuu 0))=\epsilon^{\beta}
+\cdot \gamma\uuu 1(\epsilon)
+\]
+\[
+\phi(1+\epsilon+2iy\uuu 0))=\epsilon^\kappa\cdot \gamma\uuu 2(\epsilon)
+\]
+where $\alpha,\beta,\kappa$ are real constants
+and each $\gamma$\vvv function is 
+$\neq 0$ for small positive $\epsilon$ and together with their  derivatives  satisfy
+\[
+\lim\uuu{\epsilon\to 0}\, \epsilon\cdot 
+\frac{\gamma\uuu j'(\epsilon)}
+{\gamma\uuu j(\epsilon)}=0\quad\colon\quad 0\leq j\leq 2
+\]
+
+\medskip
+
+\noindent
+Under the conditions above we see
+that the function
+\[ 
+\epsilon\mapsto
+\mathfrak{Re}\bigl[\, 
+3\cdot \frac{\phi'(1+\epsilon)}{\phi(1+\epsilon)}+
+4\cdot \frac{\phi'(1+\epsilon+iy\uuu 0)}{\phi(1+\epsilon+iy\uuu 0)}+
+\frac{\phi'(1+\epsilon+2i y\uuu 0)}{\phi(1+\epsilon+2iy\uuu 0)}\,\bigr]
+\]
+has an asymptotic expansion of the form
+\[
+\frac{3\cdot \mathfrak{Re}\,\alpha+
+4\cdot \mathfrak{Re}\,\beta+\mathfrak{Re}\,\kappa}{\epsilon}
++\gamma^*(\epsilon)
+\]
+where $\epsilon\cdot \gamma^*(\epsilon)\to 0$.
+\bigskip
+
+\noindent
+At the same time we have the inequality from 14.2
+and
+checking signs we have the following result:
+
+\medskip
+
+\noindent
+{\bf{14.4 Theorem.}}
+\emph{If $\phi(z)$ has the three  asymptotic expansions above
+for some $y\uuu 0\neq 0$ then the following inequality must hold:}
+\[
+3\cdot \mathfrak{Re}\,\alpha+4\cdot \mathfrak{Re}\,\beta +
+\mathfrak{Re}\,\kappa<0
+\]
+\medskip
+
+\noindent
+{\bf{14.5 The case when
+$\phi$ has a meromorphic extension.}}
+When
+$\phi(z)$ has a meromorphic extension
+across $\mathfrak{Re}(z)=1$ the
+asymptotic expansions in (14.3) exist for every $y_0>0$
+and 
+$\alpha,\beta,\kappa$ are integers.
+Suppose also that $\phi$ has a simple pole at
+$z=1$ which gives
+$\alpha=- 1$. If
+$\phi(1+iy_0)=$ for some
+$y_0>0$ the corresponding
+$\beta$-integer is $\geq 1$
+and
+Theorem 14.4  implies that $\kappa\leq -1$ which means that
+$\phi$ must have a pole
+at $1+2iy\uuu 0$. In particular we 
+have the following:
+
+\medskip
+
+\noindent
+{\bf{14.6 Theorem}}\emph{ If
+$\phi$ has a simple pole at $z=1$ and
+extends to a meromorphic function to an  open domain
+$\Omega$ which contains the closed  half-space
+$\mathfrak{Re}\, z\geq 1$ with no further poles on
+$\mathfrak{Re}\, z=1$ then}
+\[ 
+\phi(1+iy)\neq 0\quad\text{for all}\quad y> 0
+\]
+
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The idea   to employ positive cosine\vvv functions
+to investigate zeros and poles of Dirichlet series was introduced by de Valle Poussin
+in his proof of the Prime Number Theorem.
+Above we   used the positivity
+of the function $a\mapsto 3+4\cos \,a+\cos 2a$. Other
+cosine\vvv sums which  produce functions which are everywhere
+$\geq 0$ can be used to
+obt<ain
+more involved relations about  poles and zeros of Dirichlet series on
+the  critical line of convergence.
+
+\newpage
+
+
+\centerline{\bf{¤ 15. Hadamard products.}}
+\medskip
+
+\noindent
+We expose material from the article \emph{Les series entires} 
+(Acta Math. 1899) by Hadamard and start with some geometric considerations.
+Let $U$ and $V$ be two Jordan domains
+which both contain the origin. Put $\sigma=\partial U$ and
+$\gamma=\partial V$.
+The inversion  map $z\mapsto z^{\vvv 1}$
+maps every closed Jordan curve which does not pass the origin to a similar closed Jordan curve. In particular, each $z\neq 0$
+yields a closed Jordan curve
+$\gamma(z)$ whose points are $\frac{z}{w},\colon\, w\in \gamma\}$.
+Following Hadamard we give
+
+\medskip
+
+
+\noindent
+{\bf{15.1 Definition.}}
+\emph{Denote by $\mathcal H(U,V)$ the set of 
+$z$ such that the closed Jordan curve $\gamma(z)$ is contained in $U$.}
+\medskip
+
+\noindent
+It is clear that $\mathcal H(U,V)$ is an open set which contains
+a neighborhood of the origin since this by hypothesis is  a common interior point of
+$U$ and $V$.
+\medskip
+
+
+\noindent
+{\bf{15.2 Exercise.}}
+Show that the open set
+$\mathcal H(U,V)$ is connected and  the equality
+\[
+\mathcal H(U,V)=\mathcal H(V,U)
+\] where the right hand side is constructed when we instead
+consider
+the closed Jordan curves
+$\sigma(z)$ and require that they are contained in $V$.
+\medskip
+
+\noindent 
+Next, let $f\in\mathcal O(U)$ and $g\in \mathcal O(V)$ 
+which
+extend continuously up to the boundaries
+of $U$ and $V$ respectively.
+If $z\in \mathcal H(U,V)$
+we can take a complex line integral along $\gamma$ and define
+\[ 
+\psi(z)=\frac{1}{2\pi i}\int\uuu\gamma\,
+f(\frac{z}{\zeta})\cdot g(\zeta)\, d\zeta
+\]
+\medskip
+
+\noindent
+{\bf{15.3 Exercise.}} Show that $\psi(z)$ is analytic in $\mathcal H(U,V)$.
+\medskip
+
+\noindent
+We refer to $\psi$ as the Hadamard convolution of the pair $f,g$ and write
+$\psi=f*g$. The equality in Exercise 15.2 gives
+$f*g=g*f$ which me ns that we also have
+\[ 
+\psi(z)=\frac{1}{2\pi i}\int\uuu\sigma\,
+g(\frac{z}{\zeta})\cdot f(\zeta)\, d\zeta
+\] 
+\medskip
+
+\noindent
+{\bf{Example.}}
+Let $U$ and $V$ be discs of radius $R$ and $r$ centered at the origin
+where $R\geq r$.
+In this case $\mathcal H(U,V)$ is the disc of radius $rR$
+and the reader can verify that
+the Taylor series of $\psi$ becomes
+\[
+\psi(z)=\sum\, a\uuu n\cdot b\uuu n\cdot z^n
+\]
+where $f=\sum\, a\uuu nz^n$ and
+$g=\sum\, b\uuu nz^n$.
+\bigskip
+
+\noindent
+{\bf{A study of poles.}}
+Suppose that $f$ and $g$ both are rational functions
+and let $\alpha\uuu 1,\ldots,\alpha\uuu m$ be the poles of $f$ and
+$\beta\uuu 1,\ldots,\beta\uuu k$ the poles of $g$.
+We assume that both $f$ and $g$ are analytic in a neighborhood of 
+the origin and taking 
+their Taylor series we construct $\psi(z)$ as above.
+Then the following result was proved by Hadamard in ibid]:
+
+\medskip
+
+\noindent
+{\bf{15.4 Theorem.}}
+\emph{The function $\psi(z)$ extends to a meromorphic function in
+the complex plane with  poles contained in the set
+$\{\alpha\uuu\nu\cdot \beta\uuu j\}$.}
+\medskip
+
+
+\noindent
+{\bf{Exercise.}} Prove this theorem. The hint is to use
+Newton's frational decomposition of the rational functions $f$ and $g$.
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+

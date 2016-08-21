@@ -1,0 +1,686 @@
+%\documentclass{amsart}
+%\usepackage[applemac]{inputenc}
+
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+ 
+%\begin{document}
+
+\centerline{\bf\large {VI. Lindelšf functions.}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+For each real number $0<a\leq 1$
+there exists the entire  function
+\[ 
+Ea_(z)=\sum_{n=0}^\infty\,\frac{z^n}{\Gamma(1+na)}
+\]
+which for $a=1$ gives the exponential function $e^z$.
+Growth properties of the $E$-functions were investigated
+in a series of articles by
+Mittag-Leffler between 1900-1904 using 
+integral formulas  for the entire function
+$\frac{1}{\Gamma}$.
+This inspired
+PhragmŽn
+to study 
+entire functions $f(z)$ such that
+there are constants $C$ and $0<a<1$ with:
+\[
+\log|f(re^{i\theta})| \leq C\cdot (1+|r|)^a)\quad\colon
+-\alpha<\theta<\alpha
+\] 
+for some $0<\alpha<\pi/2$ while
+$f(z)|\leq C$ for all $z\in{\bf{C}}\setminus S$.
+When this holds  we get the entire function
+\[ 
+g(z)=\int_0^\infty\, f(sz)\cdot e^{-s}\cdot ds
+\]
+If $z$ is outside the sector $S$ it is clear that
+$|g(z)|$ is bounded by $C\cdot \int_0^\infty e^{-s}ds=C$.
+When $z=re^{i\theta}$ is in the sector we 
+still
+get a  bound from (1) since $0<a<1$
+and conclude that the entire function $g$ is bounded and hence a constant.
+Since the Taylor coefficients of
+$f$
+are recaptured from $g$ it follows that
+$f$ must be  constant.
+More general  results of this kind were obtained in
+the joint article [PL] by PhragmŽn and Lindelšf from 1908
+and led to what is called the PhragmŽn-Linedlšf principle.
+Here we   discuss a continuation of [PL]
+from the article
+\emph{Remarques sur la croissance
+de la fonction $\zeta(s)$} where  Lindelšf employed
+results in collaboration with PhragmŽn  to investigate
+the growth of Riemann's $\zeta$-function along vertical lines 
+in the strip $0<\mathfrak{Re}(z)<1$.
+This  leads to the study of  various  indicator functions
+attached to analytic functions.
+Here is the  set-up:
+Consider a strip domain
+in the complex $s$-plane:
+\[
+\Omega=\{ s=\sigma+it\quad
+\colon t>0\quad\text{and}\quad 0\leq a<\sigma<b\}
+\]
+
+\medskip
+
+\noindent
+An analytic function
+$f(z)$ in $\Omega$ is of
+\emph{finite type} if
+there exists some
+integer $k$, a constant  $C$ and some $t_0>0$ such that
+\[ 
+|f(\sigma+it)|\leq C\cdot t^k\quad\text{hold for}\quad t\geq t_0
+\] 
+To every such $f$ we define the Lindelšf function
+\[
+\mu_f(\sigma)
+=
+\limsup_{t\to\infty}\,
+\frac{\text{Log}\, |f(\sigma+it)|}{\text{Log}\, t}\tag{*}
+\]
+Lindelšf and PhragmŽn proved  that $\mu_f$ is a continuous and convex
+function on $(a,b)$. No further restrictions
+occur on the $\mu$-function because one has:
+\bigskip
+
+\noindent
+{\bf{1. Theorem.}} \emph{For every convex and continuous function
+$\mu(\sigma)$ defined in $[a,b]$
+there exists an analytic function $f(z)$ without zeros in
+$\Omega$ such that
+$\mu_f=\mu$.}
+\medskip
+
+\noindent
+{\bf{2. Exercise.}} Prove this result using the
+$\Gamma$-function. First, to a pair of real numbers
+$(\rho,\alpha)$ we set
+\[
+ f(s)=e^{-\frac{\pi i\cdot\rho s}{2}}\cdot\Gamma (\rho(s-a)+\frac{1}{2})\tag{i}
+ \]
+Use properties of the $\Gamma$-function to show that
+$f$ has finite type in
+$\Omega$ and its indicator function becomes 
+a linear function:
+\[ 
+\mu_f(\sigma)= \rho\cdot (\sigma-a)
+\]
+
+\noindent
+More generally one gets a function  $f$ where
+$\mu_f$Êis piecewise linear by:
+\[ 
+f= \sum_{k=1}^{k=m}\, c_ke^{-\frac{\pi i\cdot\rho_\nu s}{2}} \Gamma(\rho_k(s-a_k)+
+\frac{1}{2})\tag{ii}
+\]
+where $\{c_k\}$, $\{\rho_k\}$ and $\{a_k\}$ are $m$-tuples of real numbers.
+Finally, starting from
+an arbitrary
+convex curve we can 
+choose  some dense and  enumerable set of enveloping tangents to
+this curve. Then
+an infinite series of the form above gives an analytic function
+$f(s)$ such that
+\[
+ \sigma\mapsto\mu_f(\sigma)
+\] 
+yields an arbitrarily
+given convex $\mu$-function on $(a,b)$.
+
+\medskip
+
+
+\centerline{\bf{1. A relation to  harmonic functions.}}
+\medskip
+
+\noindent
+Let $U(x,y)$ be a bounded harmonic function in the strip domain
+$\Omega$
+and $V$  its harmonic conjugate. Set
+\[
+ f(s)=\text{exp}\,\bigl[\text{(log}(s)-\frac{\pi i}{2})(U(s)+iV(s))\bigr]\tag{*}
+ \]
+
+
+\noindent
+It is easily see that
+$f(z)$ has finite type in
+$\Omega$.
+With $s=\sigma+it$ we have
+\[
+|f(\sigma+it)|= 
+\]
+\[
+\text{exp}(\frac{1}{2}\log(\sigma^2+t^2)\cdot U(\sigma+it)\cdot
+\text{exp}(-(\frac{\pi}{2}- \text{arg}(\sigma+it))\cdot V(\sigma+it))
+\]
+It follows that 
+\[ 
+\frac{ \log\, |f(\sigma+it)|}{t}=
+ \frac{\log\, \sqrt{\sigma^2+t^2}\cdot U(\sigma+it)]}{\log t}
++\frac {(\text{arg}(\sigma+it)-\frac{\pi i}{2})\cdot V(\sigma+it)}{t}
+\]
+ 
+ 
+
+\noindent{\bf{Exercise.}}
+With $\sigma$ kept fixed one has
+\[
+\text{arg}(\sigma+it)=\tan\,\frac{t}{s}
+\] 
+which tends to $\pi/2$ as $t\to +\infty$.
+Next,  $V(\sigma+it)$ is for large $t>0$
+up to a constant the primitive of 
+\[
+\int\uuu 1^t\, \frac{\partial V}{\partial u}(\sigma+iu)\cdot du
+\]
+Here the partial derivative of $V$ is equal to the partial derivative
+$\partial U/\partial\sigma(\sigma,u)$ taken along
+$\mathfrak{Re}\, s=\sigma$.
+Since $U$ is bounded in the strip domain
+it follows from
+Harnack's inequalities that
+this partial derivative stays bounded when $1\leq u\leq t$
+by a constant which is independent of $t$.
+Putting this together the reader can verify that
+\[ 
+\lim_{t\to +\infty}\, 
+\frac {(\text{arg}(\sigma+it)-\frac{\pi i}{2})\cdot 
+V(\sigma+it)}{t}=0\tag{1}
+\]
+
+\bigskip
+
+\noindent
+From (1) in the Exercise  we obtain the equality
+\[
+\mu\uuu f(\sigma)=\limsup_{t\to\infty}\, U(\sigma+it)\tag{*}
+\]
+This suggests that we study
+growth properties of bounded harmonic functions in strip domains.
+
+
+\bigskip
+
+
+\centerline {\bf{2. The $M$ and the $m$-functions.}}
+
+\medskip
+
+\noindent
+To a bounded harmonic function $U$ in
+$\Omega$  we associate the maximum and the minimum
+functions:
+\[ 
+M(\sigma)=\limsup_{t\to\infty}
+\, U(\sigma+it)
+\quad\text{and}\quad\liminf_{t\to\infty}
+\,U(\sigma+it)
+\]
+
+
+\noindent
+{\bf{2.1 Proposition.}}
+\emph{$M(\sigma)$ is a convex function while
+$m(\sigma)$ is concave.}
+\medskip
+
+\noindent
+We prove the convexity of $M(\sigma)$. The concavity of $m$
+follows when we replace $U$ by $\vvv U$.
+Consider a pair $\alpha,\beta$ with $a<\alpha<\beta<b$.
+Replacing $U$ b $U+ A+\cdot Bx$ for suitable constants
+$A$ and $B$ we may assume that
+$M(\alpha)=M(\beta)=0$
+and the requested convexity follows if we can show that
+\[ 
+M(\sigma)\leq 0\quad\colon\quad \alpha<\sigma<\beta
+\]
+To see this we consider
+rectangles 
+\[
+\mathcal R[T\uuu *,T^*]
+=\{\sigma+it\quad \alpha \leq \sigma\leq \beta
+\quad\text{and}\quad  T\uuu *\leq t\leq T^*\}
+\]
+Let $\epsilon>0$ and start with
+a large $T\uuu *$ so that
+\[
+t\geq T\uuu *\implies
+U(\alpha+it)\leq \epsilon
+\] 
+and similarly with $\alpha$ replaced by $\beta$.
+Next, we have a constant $M$ such that
+$|U|\uuu\Omega\leq M$.
+If $z=\sigma+it$ is an interior point of the rectangle above
+it follows by harmonic majorisation that
+
+\[
+U(\sigma+it)\leq \epsilon+ M\cdot \mathfrak m\uuu z(J\uuu *\cup J^*)
+\]
+where the last term  is the harmonic measure at $z$
+which evaluates the harmonic function in
+the rectangle at $z$ with boundary values zero on the two verical lines
+of the rectangle which it is equal to 1 on the horizontal intervals 
+$J^*=(\alpha,\beta)+iT^*$ and 
+$J\uuu *=(\alpha,\beta)+iT\uuu *$
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show (via the aid of figure that with $T^*=2T\uuu *$
+one has
+\[
+\lim\uuu{T\uuu *\to +\infty}\,
+\mathfrak m\uuu {\sigma+3i T\uuu */2}(J\uuu *\cup J^*)=0
+\] 
+where this limit is uniform when $\alpha\leq \sigma\leq \beta$.
+Since $\epsilon>0$ is arbitrary in (xx) the reader can now conclude that
+$M(\sigma)\leq 0$ for every $\sigma\in(\alpha,\beta)$.
+\bigskip
+
+\noindent
+{\bf{A special case.}}
+Suppose that we have the equalities
+\[
+m(\alpha)=M(\alpha)\quad\text{and}\quad
+m(\beta)=M(\beta)\tag{1}
+\]
+using rectangles as above and harmonic majorization the
+reader can verify that this implies that
+\[
+m(\sigma)=M(\sigma)\quad\colon\quad \alpha<\sigma<\beta
+\]
+This result is due to Hardy and Littlewood in [H\vvv L].
+
+
+
+
+\bigskip
+
+\noindent
+{\bf{The case when $M(\sigma)-m(\sigma)$ has
+a tangential zero}}.
+Put $\phi(\sigma)=M(\sigma)-m(\sigma)$ and suppose that this non\vvv 
+negative
+function in $(a,b)$
+has a zero at some $a<sigma\uuu 0<b$
+whose graph has a tangent at $\sigma_0$.
+This means that if:
+\[ 
+h(r)=\max_{-r\leq|\sigma\vvv \sigma\uuu 0|\leq r}\, \phi(\sigma)
+\] 
+then
+\[
+\lim_{r\to 0}\, \frac{h(r)}{r}=0\tag{*}
+\]
+
+
+\noindent
+Under this hypothesis the following result is proved in
+[Carleman].
+\medskip
+
+
+\noindent
+{\bf{2.2 Theorem.}} \emph{When (*) holds we have}
+\[ 
+m(\sigma)=M(\sigma)\quad\text{holds for all}\quad
+a<\sigma<b
+\]
+
+\medskip
+
+\noindent
+The subsequent proof from [Carleman]
+was given
+at 
+a lecture by Carleman  in Copenhagen 1931 which
+has the merit that a similar reasoning 
+can be applied in dimension $\geq 3$.
+Adding some linear function to $U$ we may assume that
+$M(\sigma_0)=m(\sigma_0)=0$ which mans that
+\[
+\limsup_{t\to\infty}\,
+U(\sigma_0,t)=0\tag{1}
+\]
+
+\noindent
+Next,
+consider the function
+\[ 
+\phi\colon t\mapsto \partial U/\partial \sigma(\sigma_0,t)\tag{1}
+\]
+The assumption (*) and the result in XXX gives:
+\[
+\lim\uuu{t\to\infty}\,
+\partial U/\partial \sigma(\sigma_0,t)=0\tag{2}
+\]
+
+
+\noindent
+Next, consider some 
+$a<\sigma<b$ and let $\epsilon>0$.
+By the  result from XX there exist
+finite tuples of constants $\{a_1,\ldots,a_N\}$ and
+$\{b_1,\ldots,b_N\}$ and 
+some $N$-tuple $\{\tau_\nu\}$ which
+stays in a $[0,1]$ such that
+\[
+\bigl| U(\sigma,t)-\sum\, a_\nu\cdot U(\sigma_0, t_\nu+t)
+-\sum\, b_\nu\cdot \partial U/\partial\sigma(\sigma_0, t_\nu+t)\bigr|<\epsilon\quad
+\text{hold for all}
+\quad t\geq 1\tag{5}
+\]
+Since $\epsilon$ is arbitrary it follows from (1\vvv 2)  
+that
+\[
+\lim_{t\to\infty}\, U(\sigma,t)=0\tag{5}
+\]
+for every $a<\sigma<b$ which obviously gives
+the requested equality
+in
+Theorem 2.2.
+
+
+
+\bigskip
+
+\noindent
+\centerline {\bf{2.3. Integral  indicator funtions.}}
+\medskip
+
+\noindent
+Let $f(s)$   be an analytic function of finite order
+in the strip domain $\Omega$ and fix some $t_0>0$ which does not affect
+the subsequent constructions.
+For a 
+pair  $(\sigma,p)$ where
+$a<\sigma<b$ and $p>0$
+we  associate the set of
+of positive numbers $\chi$ such that the integral
+\[ 
+\int_{t_0}^\infty\, \frac{|f(\sigma+it)\bigl|^p}{t^\chi}\cdot dt<\infty\tag{*}
+\]
+
+
+
+\noindent
+We get a critical smallest non-negative number  
+$\chi_*(\sigma,p)$ such that (*) converges when
+$\chi>\chi_*(\sigma,p)$.
+In the case $p=1$ 
+a  result due to Landau
+asserts that 
+$\chi(\sigma,1)$ determines the half-plane of the complex $z$-plane where
+the function
+\[ 
+\gamma(z)=\int_{t_0}^\infty\, \frac{f(\sigma+it)}{t^z}\cdot dt
+\] 
+is  analytic and
+$\sigma\mapsto \chi(\sigma,1)$
+is a convex function on  $(a,b)$.
+A more general  convexity
+result holds when $p$  also varies.
+\medskip
+
+\noindent
+{\bf{2.4 Theorem.}} \emph{Define the $\omega$-function by}:
+\[ 
+\omega(\sigma,\eta)= \eta\cdot \chi(\sigma,\frac{1}{\eta})\quad\colon
+a<\sigma<b\quad\colon \eta>0
+\]
+\emph{Then $\omega$ is a continuous and convex function of the 
+two variables $(\sigma,\eta)$
+in the product set $(a,b)\times {\bf{R}}^+$.}
+\medskip
+
+\noindent
+{\bf{2.5 Remark.}}
+Theorem 2.4 is proved using 
+Hšlder inequalities and
+factorisations of analytic functions which
+reduces the proof to the case when
+$f$ has no zeros.
+The reader is invited to supply details of the proof or 
+consult [Carleman].
+
+
+\bigskip
+
+
+
+
+\centerline{\bf {3.  Lindelšf estimates in the unit disc.}}
+
+\bigskip
+
+\noindent
+Let $f(z)$ be analytic in the open unit disc given by a power series
+
+\[ f(z)=\sum a_n\cdot z^n
+\]
+We assume that the sequence $\{a_n\}$ has temperate growth, i.e. there exists
+some integer $N\geq 0$ and a constant $K$ such that
+\[ 
+|a_n|\leq K\cdot n^N\quad\colon\quad n=1,2,\ldots
+\]
+In addition we assume that the sequence
+$\{a_n\}$ is not too small in the sense that
+\[ 
+\sum_{n=1}^\infty\, |a_n|^2\cdot n^{s}=+\infty\quad\colon
+\quad\,\forall\, s>0\tag{*}
+\]
+Now there exists  the smallest number $s_*\geq 0$ such that
+the Dirichlet series
+
+\[ 
+\sum_{n=1}^\infty\, |a_n|^2\cdot \frac{1}{n^s}<\infty,\quad
+\text{for all}\,\, s>s_*
+\]
+\medskip
+
+\noindent
+To each
+$0\leq\theta\leq 2\pi$ we set
+\[ 
+\chi(\theta)=\min_s\, \int_0^1\, \bigl|f(re^{i\theta})\bigr|\cdot(1-r)^{s-1}\cdot dr<\infty\tag{1}
+\]
+\[
+\mu(\theta) =\text{Lim.sup}_{r\to 1}\,
+\frac{\text{Log}\, |f(re^{i\theta})|}{ \text{Log}\,\frac{1}{1-r}}
+\tag{2}
+\]
+\medskip
+
+\noindent
+We shall study the two functions $\chi$ and $\mu$.
+The first result is left as an exercise.
+
+\medskip
+
+
+\noindent
+{\bf {3.1. Theorem.}} \emph{The inequality}
+\[
+\chi(\theta)\leq\frac{s^*}{2}
+\] 
+\emph{holds almost everywhere, i.e. for all $0\leq\theta\leq 2\pi$ outside a null set on
+$[0,2\pi]$.}
+
+\medskip
+
+\noindent
+\emph{Hint.} Use the formula
+
+\[ 
+\frac{1}{2\pi}\cdot \int_=^{2\pi}\, |f(re^{i\theta})|^2\cdot d\theta=
+\sum\, |a_n|^2
+\]
+
+
+\bigskip
+
+\noindent 
+For the $\mu$-function a corresponding result holds:
+
+
+
+\medskip
+\noindent
+{\bf {3.2. Theorem.}} \emph{The inequality below holds almost everywhere.}
+\[
+\mu(\theta)\leq\frac{s^*}{2}
+\] 
+
+
+\noindent
+\emph{Proof.}
+Let $\epsilon>0$ and introduce the function
+\[ 
+\Phi(z)=\sum\, a_n\cdot \frac{\Gamma(n+1)}{\Gamma(n+1+\frac{s^*}{2}+\epsilon)}
+\cdot z^n=\sum\, c_n\cdot z^n
+\]
+
+
+\noindent
+It is clear that
+the construction of
+$s^*$ entails
+\[ 
+\sum\, |c_n|^2<\infty
+\]
+
+
+\noindent
+Next, set $\Phi_0=\Phi$ and define inductively the sequence
+$\Phi_0,\Phi_1,\ldots$ by
+\[ \Phi_\nu(z)=
+z^{\nu-1}\cdot \frac{d}{dz}\bigl[ z^\nu\cdot \Phi_{\nu-1}(z)\bigr)
+\quad\colon\quad \nu=1,2,\ldots
+\]
+
+
+\noindent
+{\bf 3.3 Exercise.} Show that for almost every
+$0\leq\theta\leq2\pi$ there exists a constant
+$K=K(\theta)$ such that
+\[
+|\Phi_\nu(re^{i\theta})|\leq K(\theta)\cdot \frac{1}{1-r)^\nu}\quad\colon
+0<r<1
+\]
+
+
+\noindent
+Next, with  $s^*$ and $\epsilon$ given we
+define
+the integers $\nu$ and $\rho$:
+\medskip
+\[ 
+\nu=\bigl[\,\frac{s^*}{2}+\epsilon\,\bigr]+1\quad\colon\quad
+\rho=\frac{s^*}{2}+\epsilon- \bigl[\,\frac{s^*}{2}+\epsilon\,\bigr]
+\]
+where the bracket term is the usual notation for the
+smallest integer $\geq \frac{s^*}{2}+1$.
+\medskip
+
+\noindent
+{\bf Exercise} Show that with
+$\nu$ and $\rho$ chosen  as above one has
+\[\Phi_\nu(z)=\sum\, a_n\cdot \frac{\Gamma(n+1+\nu)}{\Gamma(n+1+\rho-1)}
+\cdot z^n
+\]
+
+\noindent
+and use  this to show the inversion formula
+\[ 
+f(z)=\frac{1}{z^\nu\cdot\Gamma(1-\rho)}\cdot
+\int_0^z\, (z-\zeta)^{-\rho}\dot \zeta^{\nu+\rho-1}\cdot
+\Phi_\nu(\zeta)\cdot d\zeta\tag{*}
+\]
+
+\medskip
+
+\noindent
+{\bf 3.4 Exercise.} Deduce from the above that for almost every
+$\theta$ there exists a constant $K(\theta)$ such that
+\[
+|f(re^{i\theta})|\leq K(\theta)\cdot\frac{1}{ (1-r)^{\nu+\rho-1}}\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf Conclusion.}
+From (**) and the construction of
+$\nu$ and $\rho$ the reader can confirm
+Theorem  3. 2.
+
+\bigskip
+
+\noindent
+{\bf 3.5 Example.} Consider the function
+\[ 
+f(z)=\sum_{n=1}^\infty\, z^{n^2}
+\]
+Show that $s^*=\frac{1}{2}$ holds in  this case. Hence
+Theorem  B.2 shows that for each $\epsilon>0$ one has 
+\[
+\max_r\, (1-r)^{\frac{1}{4}+\epsilon}\cdot |f(re^{i\theta}|<\infty\tag{E}
+\]
+for almost every $\theta$. 
+\medskip
+
+\noindent
+{\bf 3.6 Exercise.}
+Use the inequality above to show the following:
+For a complex number
+$x+iy$ with $y>0$ we set
+\[
+q= e^{\pi ix-\pi y}
+\]
+Define the function
+\[
+\Theta(x+iy)= 1+q+q^2+\ldots
+\]
+Show that when $\epsilon>0$
+then there exists a constant $K=K(\epsilon,x)$ for almost all
+$x$ such that
+\[
+y^{\frac{1}{4}+\epsilon}\cdot |\theta(x+iy)|\leq K\quad\colon\quad y>0
+\]
+
+
+\newpage
+
+
+%\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+

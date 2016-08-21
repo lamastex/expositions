@@ -1,0 +1,1033 @@
+%\documentclass{amsart}
+
+
+%\usepackage[applemac]{inputenc}
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+
+\centerline{\bf\large{I. The disc algebra $A(D)$}}
+
+\bigskip
+
+\centerline{\emph{Contents}}
+\bigskip
+
+\noindent
+\emph{0. Introduction.}
+
+\bigskip
+
+\noindent
+\emph{1. Theorem of Brothers Riesz.}
+
+
+\bigskip
+
+\noindent
+\emph{2. Ideals in the disc algebra}
+\bigskip
+
+\noindent
+\emph{3. A maximality theorem for uniform algebras.}
+\bigskip
+
+\centerline{\bf{Introduction.}}
+
+\bigskip
+
+\noindent
+Denote by $A(D)$ the subalgebra of continuous functions on the closed
+unit disc $\bar D$ which are analytic in the open disc.
+One refers to $A(D)$ as the \emph{disc-algebra}.
+If $f\in A(D)$
+we have the Poisson representation
+
+\[ 
+f(z)=\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{1-|z|^2}{|e^{i\theta}-z|^2}\cdot f(e^{i\theta})\cdot d\theta
+\quad \colon z\in D
+\]
+Since the polynomials in $z$ is a dense subalgebra of $A(D)$
+it follows
+that a Riesz measure $\mu$ on $T$
+is $\perp$ to $A(D)$ if and only if
+\[
+\int_0^{2\pi}\,e^{ i n\theta}\cdot d\mu(\theta)=0\quad\colon\quad \, n=0,1,2,\ldots\tag{0.1}
+\]
+In Section 1 we will show that (*) implies that $\mu$ is
+absolutely continuous and deduce some facts about boundary
+values of analytic functions in the open disc.
+Section 2 is devoted to properties of the disc algebra.
+Theorem 3.1 in the last section
+shows that the disc algebra is maximal in a quite strong sense.
+The proof relies upon results  from several complex variables and  has
+been inserted to give the reader a perspective upon the
+relevance of analytic functions in several variables even for problems which
+from the start are formulated in ${\bf{C}}$.
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf 1. Theorem of the Brothers Riesz}
+\bigskip
+
+
+\noindent
+At the 4:th Scandinavian Congres held in Stockholm 1916,
+Friedrich and Marcel Riesz proved the following:
+
+
+\medskip
+
+\noindent
+{\bf 1.1 Theorem}
+\emph{Let $E\subset T$ be a closed null set.  Then there exists
+$\phi\in A(D)$ such that
+$\phi(e^{i\theta})=1$ when $e^{i\theta}\in E$ while $|\phi(z)|<1$ for 
+every $z\in\bar D\setminus E$.}
+
+
+\bigskip
+
+
+\noindent
+Before the construction of  such peak functions
+we
+draw  a consequence.
+
+
+\medskip
+
+\noindent {\bf 1.2. Theorem}
+\emph{Let $\mu$ be a   Riesz-measure on $T$  
+such that}
+\[ 
+\int_0^{2\pi}\,e^{ i n\theta}\cdot d\mu(\theta)=\quad\colon\, n=1,2,\ldots
+\]
+\emph{Then $\mu$ is absolutely continuous.}
+\medskip
+
+
+
+
+
+\noindent
+\emph{Proof.} 
+Assume the contrary. Then there exists
+a closed null set $E$ in $T$ 
+such that
+\[ 
+\int_E\, d\mu(\theta)\neq 0\tag{i}
+\]
+Theorem 1.1 gives   $\phi\in A(D)$ which is a peak function for 
+$E$.
+For each positive  integer $m$ we have
+$\phi^m\in A(D)$. The hypothesis in Theorem 1.2 and
+(0.1)  give:
+\[
+\int_0^{2\pi}\,
+\phi^m(e^{i\theta})\cdot d\mu(\theta)=0\quad\colon m=1,2,\ldots\tag{ii}
+\]
+Now we get a contraction since $\phi$ was a peak function for $E$.
+Namely, this implies that
+\[
+\lim_{m\to\infty}\, \phi^m(e^{i\theta})\to \chi_E
+\] 
+where $\chi_E$ is the characteristic function of $E$ and 
+the dominated convergence theorem applied to $L^1(\mu)$
+would give $\int_E\,d\mu=0$. But this was not the case by (i) above
+and  this
+contradiction gives Theorem 1.2.
+\bigskip
+
+\centerline
+{\emph{ Proof of Theorem 1.1}}
+
+\bigskip
+
+\noindent
+Let $E\subset T$ be a closed null set and $\{(\alpha_\nu,\beta_\nu)\}$
+is the family of open intervals in $T\setminus E$.
+Since $b_\nu-a_\nu\to 0$ as $\nu$ increases, we can choose 
+a sufficiently spare sequence of
+positive numbers
+$\{p_\nu\}$ such that
+\[ \sum\, p_\nu(\beta_\nu-\alpha_\nu)<\infty\quad\text{and}\quad
+\lim_{\nu\to\infty} p_\nu=+\infty
+\]
+
+
+\noindent
+To each $\nu$ we define a function $g_\nu(\theta)$ on the open interval
+$(\alpha_\nu,\beta_\nu)$ by
+\[ 
+g_\nu(\theta)=
+\frac {p_\nu(\beta_\nu-\alpha_\nu)}
+{\sqrt{\ell_\nu^2-(\theta-\gamma_\nu)^2}}
+\colon\quad\colon
+\ell_\nu=\frac{\beta_\nu-\alpha_\nu}{2}\quad\colon
+\gamma_\nu=\frac{\beta_\nu+\alpha_\nu}{2}\tag{1}
+\]
+
+
+\noindent
+Next, for each $\nu$ a variable substitution gives:
+\[
+\int_{\alpha_\nu}^{\beta_\nu}
+\frac{d\theta}{\sqrt{\ell_\nu^2-(\theta-\gamma_\nu)^2}}=
+\int_0^1
+\frac{ds}{\sqrt{\frac{1}{4}-(s-\frac{1}{2})^2}}=C\tag{2}
+\]
+where  $C$Êis a positive constant which the reader may compute.
+Next, (2) and the convergence of
+$\sum\,p_\nu(\beta_\nu-\alpha_\nu)$ imply
+the function 
+\[
+F(\theta)=\sum\, g_\nu(\theta)\tag{3}
+\]
+has a finite $L^1$-norm.
+Here $F$ is defined outside the null set $E$ and since
+each single $g_\nu$-function  restrics to
+a real analytic function on $(\alpha_\nu,\beta_\nu)$ the same holds for
+$F$. 
+Next, we notice that
+\[
+\theta\mapsto
+\frac{(\beta_\nu-\alpha_\nu)}{\sqrt{\ell_\nu^2-(\theta-\gamma_\nu)^2}}
+\geq 2\quad\text{for all}\quad \alpha_\nu<\theta<\beta_\nu\tag{4}
+\]
+In addition to this the reader can verify that
+
+\[
+\frac{(\beta_\nu-\alpha_\nu)}{\sqrt{\ell_\nu^2-(\alpha+s-\gamma_\nu)^2}}
+\geq \frac{\beta_\nu-\alpha_\nu}{\sqrt{s\cdot (\beta_\nu-\alpha_\nu-s)}}
+\quad \colon\quad 0<s<\beta_\nu- \alpha_\nu\tag{5}
+\]
+
+\medskip
+
+\noindent 
+From (4-5) we can show that $F(\theta)$ 
+gets large when we approach $E$.
+Namely, let $N$ be an arbitrary positive integer.
+Then we find $\nu_*$ such that
+\[
+\nu>\nu_*\implies p_\nu>N\tag{i}
+\]
+Next, let $\delta>0$ and 
+consider the open set 
+$E_\delta$ of points with distance $<\delta$ to $E$.
+If $\theta\in E_\delta$ we have $\alpha_\nu<\theta<\beta_\nu$ for some
+$\nu$.
+If $\nu>\nu*$ then (i) and (4) give
+\[ 
+F(\theta)> 2N\tag{ii}
+\]
+Next, set
+\[
+\gamma=\min_{1\leq\nu\leq \nu_*}\, \rho_\nu\cdot
+\sqrt{\beta_\nu-\alpha_\nu}
+\tag{iii}
+\]
+Let us now consider some  $1\leq\nu\leq\nu_*$
+and a point $\theta\in E_\delta$.
+which  belongs to $(\alpha_\nu,\beta_\nu)$.
+Since $E\cap(\alpha_\nu,\beta_\nu=\emptyset$ we see that
+
+\[
+\theta-\alpha_\nu<\delta\quad\text{or}\quad
+\beta_\nu-\theta<\delta\tag{iv}
+\] 
+must hold.
+In both cases  (4) gives:
+
+\[ g_\nu(\theta)\geq \frac{\rho_\nu\cdot\sqrt{(\beta-\nu-\alpha-\nu}}{\sqrt{\delta}}
+\geq \frac{\gamma}{\sqrt{\delta}}\tag{v}
+\]
+With $\gamma$ fixed we find a small $\delta$ such that
+the right hand side is $>N$ and together with (ii) it follows that
+\[
+\theta\in E_\delta\setminus E\implies
+F(\theta)>N\tag{vi}
+\]
+
+\noindent
+\medskip
+{\bf The construction of $\phi$}.
+The Poisson kernel gives the harmonic function: 
+\[ 
+U(re^{i\theta})=\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{1-r^2}{ 1+r^2+\text{cos}(\theta-t)}\cdot F(t) dt
+\quad\colon\quad re^{i\theta}\in D
+\]
+Since $F\geq 0$ we have $U$ it is $\geq 0$ in $D$ and by (vi)
+$U(z)$ increases to $+\infty$ as
+$z$ approaces $E$. More precisely, the following companion to (vi)
+holds:
+\medskip
+
+\noindent \emph{Sublemma }
+\emph{To every positive integer $N$ there exists $\delta>0$ such that}
+\[ 
+U(z)>N\quad\colon\quad z\in D\cap E^*_\delta
+\]
+\emph{where  $E^*_\delta=\{z\in D\,\colon\,\,
+\text{dist}(z,E)<\delta\}$.}
+\medskip
+
+\noindent
+Now we construct the harmonic conjugate:
+
+\[ 
+V(re^{i\theta})=\frac{1}{\pi}\int_0^{2\pi}\,
+\frac{r\cdot \text{sin}(\theta-t)}{ 1+r^2+\text{cos}(\theta-t)}\cdot F(t) dt
+\quad\colon\quad re^{i\theta}\in D
+\]
+\medskip
+
+\noindent
+We have no control for the
+limit behaviour of $V(re^{i\theta})$ as $r\to 1$
+and $e^{i\theta}\in E$.
+But on
+the open intervals $(\alpha_\nu,\beta_\nu)$ where
+$F$  restricts to a real analytic function there exists 
+a limit function $V^*$:
+
+\[
+\lim_{r\to 1}\,V(re^{i\theta})=V^*(e^{i\theta)})
+\quad\colon\quad \alpha_\nu<\theta<\beta_\nu
+\]
+Thus, $V^*$ is a function defined on $T\setminus E$.
+Similarly, $U(re^{i\theta})$ has a limit function $U^*(e^{i\theta})$
+defined on $T\setminus E$.
+Now we set
+\bigskip
+\[ 
+\phi(z)= \frac{U(z)+iV(z)}{U(z)+1 +iV(z)}\quad\colon\quad z\in D\tag{*}
+\]
+This is an analytic function in $D$. Outside $E$ we get the boundary value function
+\[
+\lim_{r\to 1}\,\phi(re^{i\theta})=
+\frac{U^*(e^{i\theta})+iV^*(e^{i\theta})}{U^*(e^{i\theta})+1 +iV^*(e^{i\theta})}
+\]
+\medskip
+
+\noindent 
+\emph{The limit on $E$}.
+Concerning the limit as $z\to E$ we have:
+
+\[ 
+[1-\phi(z)|=
+\frac{1}{|1+U(z)+iV(z)|}\leq \frac{1}{1+U(z)}
+\]
+By the Sublemma the last term tends to zero as $z\to E$.
+We conclude that $\phi\in A(D)$ and here $\phi=1$ on $E$ while 
+$|\phi(z)|<1$
+for al $z\in \bar D\setminus E$ which gives the requested peak function.
+
+\bigskip
+
+\noindent {\bf Remark.}
+The proof of Theorem 1.1 above
+was  constructive.
+There  exist  proofs using
+functional analysis and the Hilbert space $L^2(d\mu)$ attached to a
+Riesz measure on $T$.
+See the text-book [Koosis: p. 40-47] for such alternative proofs.
+\bigskip
+
+\centerline {\bf 1.3 An application of Theorem 1.1}
+
+
+\medskip
+
+\noindent
+Let $f(z)$ be analytic in the open unit disc and assume there exists
+a constant $M$ such that
+\[
+\int_0^{2\pi}\, |f(re^{i\theta})|\cdot d\theta\leq M\quad\colon\quad
+0<r<1
+\]
+Consider the family of measures on the unit circle
+defined by 
+\[
+\{\mu_r=f(re^{i\theta})\cdot d\theta\,\,\colon\,\, r<1\}
+\]
+The uniform upper bound for their
+total variation implies by compactness in the weak topology
+that
+there exists a sequence
+$\{r_\nu\}$ with $r_\nu\to 1$
+and a Riesz measure $\mu$
+such that
+$\mu_{r_\nu}\to\mu$ holds \emph{weakly}.
+In particular we have
+
+\[ 
+\int_0^{2\pi}\, e^{in\theta}\cdot d\mu(\theta)=
+\lim_{r_\nu\to 1}\int_0^{2\pi}\,e^{in\theta} f(r_\nu e^{i\theta})\cdot d\theta
+\]
+
+
+\noindent 
+for every integer $n$.
+Since $f$ is analytic the right hand side integrals  vanish whenever $n\geq 1$
+and 
+hence
+$\mu$ is absolutely continuous by
+Theorem 1.2.
+So we have  $\mu=f^*(\theta)d\theta$ for an $L^1$-function $f^*$. 
+Now we construct
+the analytic function
+\[ 
+F(z)=
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{f^*(\theta)\cdot e^{i\theta}d\theta} 
+{e^{i\theta}-z}
+\]
+
+
+\noindent
+When $z\in D$ is fixed the \emph{weak} convergence applies to the
+$\theta$-continuous function
+$\theta\mapsto
+\frac{e^{i\theta}} 
+{e^{i\theta}-z}$ and hence
+\[ 
+F(z)=\lim_{\nu\to\infty}\,
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{ f(r_\nu e^{i\theta})e^{i\theta}d\theta}
+{e^{i\theta}-z}
+\]
+At the same time, as soon as $|z|<r_\nu$
+one has  Cauchy's formula:
+
+\[
+f(z)=
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{ f(r_\nu e^{i\theta})\cdot r_\nu e^{i\theta}\cdot d\theta}
+{r_\nu\cdot e^{i\theta}-z}
+\]
+Since this hold for every large $\nu$  we can pass to
+the limit and conclude that
+$F(z)=f(z)$ olds in $D$. Hence $f(z)$ is represented by the Cauchy kernel of
+the $L^1(T)$-function $f^*(\theta)$.
+At this stage we apply \emph{Fatou's theorem}  to conclude that
+
+\[
+\lim_{r\to 1}\,
+f(re^{i\theta})=f^*(\theta)\quad\text{holds  almost everywhere}
+\]
+Moreover, one has convergence in the $L^1$-norms:
+\[
+\lim_{r\to 1}\,
+\int_0^{2\pi}\,
+|f(re^{i\theta}-f^*(\theta)|=0
+\]
+\medskip
+
+\noindent
+Thus, thanks to Theorem 1.2 
+the $L^1(T)$- sequence 
+defined by the functions $\theta\mapsto f(re^{i\theta})$
+converges  almost everywhere   to
+a unique limit  function $f^*(\theta)\in L^1(T)$.
+\medskip
+
+\noindent
+{\bf{1.4 Exercise.}}
+Show that for every Lebesgue point $\theta_0$ of 
+$f^*(\theta)$ there exists a radial  limit: 
+
+
+\[ 
+\lim_{r\to 1}\, f(re^{i\theta_0})= f^*(\theta_0)
+\]
+
+
+\bigskip
+
+\noindent
+{\bf{1.5 Exercise.}}
+In general, let $K$ be a compact subset of $D$
+and $\mu$ a Riesz measure supported by $K$ which is $\perp$ to analytic polynomials,  i.e.
+\[ 
+\int\, z^n\cdot d\mu(z)=0
+\] 
+hold for all $n\geq 0$.
+Use the existence of peaking functions in $A(D)$ to conclude that if
+$E\subset T$ is a null\vvv set for
+linear Lebesgue measure $d\theta$, then
+$E$ is a null\vvv set for $\mu$. In particular, if
+$K$ contains a relatively open set given by an arc $\alpha$
+on the unit circle, then the restriction of $\mu$ to $\alpha$
+is absolutely continuous
+
+
+
+
+
+
+\centerline{\bf{2. Principal ideals in the disc algebra.}}
+
+\bigskip
+
+
+\noindent
+LetÊ$A(D)$ be the disc algebra.
+The point $z=1$  gives
+a maximal ideal in $A(D)$:
+\[ 
+\mathfrak{m}=\{f\in A(D)\quad\colon f(1)=0\}
+\]
+Let $f\in A(D)$  be such that $f(z)\neq 0$ for all $z$
+in the closed disc except at the point $z=1$. 
+The question arises if the principal ideal generated by $f$
+is dense in 
+$\mathfrak{m}$. This is not always true. A counterexample is given by
+the function
+\[
+f(z)= e^{\frac{z+1}{z\vvv 1}}
+\]
+
+
+
+\noindent
+Following  the appendix in [Carleman: Note 3] we
+give  a sufficient condition on $f$ in order that its principal ideal is dense in
+$\mathfrak{m}$.
+Namely, since $f(z(\neq 0$ except when $z=1$
+there exists the analytic function
+
+\[
+f^*(z)=\text{exp}\bigl\{\, 
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{e^{i\theta}+z}{e^{i\theta}-z}\cdot \text{log}\, 
+\bigl |\frac{1}{f(e^{i\theta})}\bigr |\cdot d\theta\bigr\}
+\]
+\medskip
+
+\noindent
+We say that $f$ has no logarithmic reside a $z=1$ if $f=f*$ and now the following holds:
+
+
+\medskip
+
+ \noindent
+ {\bf{2.2 Theorem.}} \emph{If $f$ has no logarithmic 
+ residue 
+ then $A(D)f$ is dense in $\mathfrak{m}$.}
+\medskip
+
+
+
+\noindent
+\emph {Proof}.
+With  $\delta>0$ we choose a continuous
+function $\rho_\delta(\theta)$ on $T$
+which is equal to
+$\text{log}\, |\frac{1}{f(e^{i\theta})|}$ outside the interval $(-\delta,\delta)$
+while
+\[ 
+0<\rho_\delta(\theta)<\text{log}\, |\frac{1}{f(e^{i\theta})}\bigr|
+\quad\colon
+-\delta<\theta<\delta\tag{i}
+\]
+
+
+\noindent 
+Next, let  $\phi\in\mathfrak{m}$ and set
+\[
+\omega_\delta(z)= \phi(z)\cdot 
+\text{exp}\,\bigl\{\vvv\frac{1}{2\pi}\int_0^{2\pi}
+\frac{e^{i\theta}+z}{e^{i\theta}-z}\cdot 
+\rho_\delta(\theta)\cdot d\theta\bigr\}\tag{ii}
+\]
+It follows that
+\[
+\bigl|\omega_\delta(z)\cdot f(z)-\phi(z)\bigr|=|f(z)|\cdot |\phi(z)|\cdot
+\bigl|\, 1- \text{exp}\,\bigl\{
+\frac{1}{2\pi}\int_0^{2\pi}\,
+\frac{e^{i\theta}+z}{e^{i\theta}-z}\cdot 
+\bigl[\,\text{log}\, 
+\frac{1}{|f(e^{i\theta})|}-
+\rho_\delta(\theta)\,\bigr] \cdot d\theta\,\bigr\}\, |\tag{iii}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that the limit of the right hand side is zero when
+$\delta\to 0$ and conclude that
+$\phi$ belongs to the closure of the principal
+ideal generated by $f$.
+
+\bigskip
+
+\centerline{\bf{2.6 Some facts about $A(D)$}}
+\medskip
+
+\noindent
+The disc algebra $A(D)$ is a 
+uniform algebra,  
+where the spectral radius norm is equal to the 
+maximum over the closed disc.
+By the maximum principle for analytic functions in
+$D$ one has $|f|_D=|f|_T$.
+One therefore calls $T$ the \emph{Shilov boundary} of $A(D)$.
+A notable point is that $A(D)$ is a Dirichlet algebra which means
+that the linear space of real parts of functions
+restricted to $T$ is a dense subspace of all real-valued and
+continuous functions on $T$.
+From XX we recall that if $\rho(\theta)$ is real-valued and continuous on
+$T$
+then $\rho=\mathfrak{Re}(f)$ on $T$ for some
+$f\in A(D)$ if and only if
+the function
+\[ 
+z\mapsto 
+\int_0^{2\pi i}\, \frac{\mathfrak{Im}(ze^{-i\theta})}
+{|e^{i\theta}-z|^2}\cdot \rho(\theta)d\theta
+\] 
+extends to a continuous function on the closed disc.
+For example, every $C^1$-function on $T$ belongs to
+$\mathfrak{Re}(A(D))$.
+\medskip
+
+\noindent{\bf{2.7 Wermer's maximality theorem.}}
+A result due to J. Wermer asserts that
+$A(D)$ is a maximal uniform algebra. It means that
+if 
+$f\in C^0(T)$ is such that
+the 
+closed subalgebra of $C^0(T)$ generated by $f$ and $z$ is
+not equal to 
+$C^0(T)$, then $f$ must belong to $A(D)$.
+Another way to phrase the result is that whenever
+$f\in C^0(T)$ is such that
+\[
+\int_0^{2\pi}\, e^{ik\theta}\cdot f(e^{i\theta})\cdot d\theta\neq
+0
+\] 
+holds for at least one positive integer $k$, then
+$[z,f]_T= C^0(T)$.
+\medskip
+
+\noindent
+\emph{Outline of the proof.}
+Let $f\in C^0(T)$ and consider  the uniform algebra
+$B=[z,f]_T$ on the unit circle. Now there exists the 
+maximal ideal space 
+$\mathfrak{M}_B$ whose points correspond to
+multiplicative functionals on $B$. If
+$p\in \mathfrak{M}_B$ and $p^*$ is the corresponding
+multiplicative functional it is clear that there exists
+a unique point $z(p)\in D$
+such that 
+$p^*(f)=f(z(p))$ for every $f$ in the subalgebra $A(D)$ of $B$.
+If
+$z(p)\in T$ holds for every $p$ then the $B$-element $z$
+is invertible. But this means that $B$ contains both
+$e^{i\theta}$ and $e^{-i\theta}$ and by Weierstrass theorem they
+already generate a dense subalgebra of $C^0(T)$.
+So if $B\neq C^0(T)$ there must exist at least one point
+$p\in \mathfrak{M}_B$ such that $z(p)$
+stays in the open unit disc.
+In fact, \emph{every point} $z_0\in D$ is of the form $z(p)$ 
+for some $p$ for otherwise
+$\frac{1}{z-z_0}$
+belongs to $B$ and one verifies easily that
+the two functions on $T$ given by $e^{i\theta}$ and
+$\frac{1}{e^{i\theta}-z_0}$ also generate a dense subalgebra of
+$C^0(T)$. There remains to consider   the case
+when $p\mapsto z(p)$ sends $\mathfrak{M}_B$
+onto the closed disc.
+\medskip
+
+\noindent
+At this stage one employs a general result from
+uniform algebras. Namely, since every multiplicative functional has norm one
+it follows that that for every $p\in\mathfrak{M}_B$
+there exists a probability measure
+$\mu_p$ on the unit circle such that
+\[ 
+p^*(g)=
+\int_T\, g(e^{i\theta})\cdot d\mu_p(\theta)\quad\text{hold for all}\quad
+g\in B\tag{*}
+\]
+Now we use that $A(D)$ is a Dirichlet algebra. Namely,  (*) holds
+in particular  for $A(D)$-functions and since $\mu_p$
+is a real measure we conclude that it must be equal to
+the Poisson kernel of the point $z(p)$.
+This proves to begin with that the map $p\to z(p)$ is
+\emph{bijective}.
+So for every $g\in B$ we get a continuous function on the closed unit disc
+defined by
+\[
+g^*((z(p)=p^*(g)
+\] 
+But  (*) above means that $g^*$
+is the harmonic extension to $D$ of the boundary
+function $g$ on $T$.
+Finally, since $B$ is algebra one easily verifies that when 
+every $B$-function is harmonic in $D$, then $B$ consists
+of complex
+analytic functions only. This means
+precisely that
+$B=A(D)$.
+At this stage we  conclude
+that when
+$B=[z,f]_T$ and $B\neq C^0(T)$ is assumed, then $f\in A(D)$
+holds 
+which is 
+the assertion in Wermer's maximality theorem.
+
+\bigskip
+
+
+\centerline{\bf 3. Relatively maximal algebras}
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+An extension of Wermer's maximality theorem
+was proved in [Bjšrk] and goes as follows.
+Let $K$
+be a closed subset of $\bar D$
+whose  planar Lebesgue measure  is zero.
+We also assume that $K$ contains $T$ and that
+$\bar D\setminus K$ is connected. Finally we assume
+that there exists some
+some open interval on $T$ which does no belong to
+the closure of $K\setminus T$.
+In this situation the following holds:
+
+\bigskip
+
+
+\noindent
+{\bf {3.1. Theorem.}}
+\emph{Let $f\in C^0(K)$
+be such that the uniform algebra $[z,f]_K\neq C^0(K)$.
+Then  $f$ extends from $K$ to an analytic function in
+$D\setminus K$.}
+\bigskip
+
+\noindent {\bf Remark.}
+The case when
+$K$ is the union of $T$ and a finite set of Jordan arcs
+where each arc has one end-point on $T$ and the other
+in the open disc $D$ is of special interest. If these Jordan arcs
+are not too fat, then $f$ extends analytically across each arc
+which means that the restriction of $f$ to $T$ must belong to the
+disc-algebra.
+This case was a motivation for
+Theorem 3.1 since it is connected to
+the problem of finding conditions on a Jordan arc
+$J$ in order that it is locally a removable singularity for
+continuous functions $g$ which are analytic in
+open neighborhoods of $J$.
+The interested reader may consult [Bjšrk:x] for a further discussion about
+this problem where  comments are given by
+Harold Shapiro about the connection to
+between
+Theorem 3.1 and 
+results by Privalov concerning 
+analytic extensions across a Jordan arc.
+\bigskip
+
+\noindent{\emph{ Proof of Theorem 3.1}}.
+The proof 
+will employ the 
+\emph{Local maximum Principle} by Rossi which
+is a powerful tool to study  uniform  algebras whose
+Shilov boundary is a proper subset of the maximal ideal space.
+Let us then start the proof. Set
+\[ 
+B=[z,f]_K
+\]
+
+
+
+\noindent
+Since $B\neq C^0(K)$ is assumed there exists a non-zero Riesz measure
+$\mu$ on $K$ which annihilates $B$. 
+Notice that $\mu$ can  be complex-valued.
+Let $\pi$ be the projection from
+$\mathfrak{M}_B$ into $D$ which means that when
+$z$ is regarded as an element in $B$ then its Gelfand transform
+$\widehat z$ satisfies
+\[ 
+\widehat z(p)=\pi(p)\quad\colon\, p\in \mathfrak{M}_B
+\]
+As usual $K$ is identified with a compact subset
+of
+$\mathfrak{M}\uuu B$. If $e^{i\theta}\in T$
+we use that it
+is a peak point for
+$A(D)$ and hence also for $B$. This entails
+that
+the fiber
+$\pi^{\vvv 1}(e^{i\theta})$ is reduced to the natural point
+$e^{i\theta}\in K$.
+Next, since we assume that $K$ has planar measure zero we know from
+XX that the uniform algebra on $K$ generated
+by rational functions with
+poles outside $K$ is equal to $C^0(K)$.
+Since $z\in B$ and $B\neq C^0(K)$ it follows that
+$\pi^{\vvv 1}(D\setminus K)\neq \emptyset$.
+We are going to prove that the fiber above every point in
+$D\setminus K$ is reduced to a single point and for this purpose
+we 
+define the following two analytic functions in the
+open set $D\setminus K$:
+
+\[
+W(z)=\int_K\, \frac{f(\zeta)\cdot d\mu(\zeta}{\zeta-z}\quad\text{and}\,\,\,
+R(z)=\int_K\, \frac{d\mu(\zeta)}{\zeta-z}\tag{*}
+\]
+
+\noindent
+The main step in the proof is to show that if $z\in D\setminus K$
+and $\xi\in \pi^{\vvv 1}(z)$ then
+the Gelfand transform 
+$\widehat f$ satisfies:
+\[
+\widehat f(\xi)\cdot R(z)= W(z)\quad\colon\,\forall\,\, \xi\in \pi^{-1}(z)
+\tag{**}
+\]
+
+\medskip
+
+\noindent
+Here $R(z)$ it cannot be identically zero
+in $D\setminus K$ for then the Riesz measure $\mu$
+would be identically zero.
+If $R(z)\neq 0$ for some $z\in D\setminus K$
+then (**) entails that
+the fiber
+$\pi^{-1}(z)$ is reduced to a single point. This hold for
+all points outside the eventual discrete zero\vvv set of
+$R$ and when a fiber
+$\pi^{-1}(z)$ is reduced to a single point
+the meromorphic function $\frac{W}{R}$
+has a value taken by the continuous Gelfand transform of $f$ at this
+unique fiber\vvv point.
+This implies that
+$\frac{W}{R}$ is bounded outside the zeros of $R$ and therefore analytic in the whole set $D\setminus K$. From this it follows easily
+that
+(**) implies that
+al fibers are reduced to single points and the analytic function
+$\frac{W}{R}$ in $D\setminus K$ is identified with the restriction of $\widehat f$ to this open set in
+the maximal ideal space of $B$.
+So there remains to give:
+
+
+\bigskip
+
+
+\noindent{\emph{Proof of (**).}}
+Since
+$\mu$  annihilates  the functions 
+$z^N$ and  $z^N\cdot f(z)$ for every $N\geq 0$
+we have
+\medskip
+\[
+\int_K\, \frac{\bar z\cdot d\mu(\zeta)}{1-\bar z\cdot\zeta}=
+\int_K\, \frac{\bar z\cdot f(\zeta)\cdot d\mu(\zeta)}{1-\bar z\cdot\zeta}=
+0\quad\text{for every  }\,\,\, 
+ z\in D
+\]
+Adding these
+ zero-functions in (*)
+ it follows that
+ \medskip
+\[
+W(z)=
+\int_K\, \frac{(1-|z|^2|\cdot f(\zeta)\cdot d\mu(\zeta)}{
+(\zeta-z)(1-\bar z\zeta)}\quad\text{and}\,\,\,
+R(z)=\int_K\, \frac{(1-|z|^2\cdot  d\mu(\zeta)}{
+(\zeta-z)(1-\bar z\zeta)}\tag {1}
+\]
+\medskip
+
+\noindent
+The assumption that the closure of $K\setminus T$
+does not contain $T$ gives
+some open arc
+$\alpha=(\theta_0,\theta_1)$
+on $T$ which is disjoint from the closure of $K\setminus T$.
+The local version of the Brother's Riesz  theorem from Exercise 1.5 implies that
+the restriction of $\mu$ to $\alpha$ is absolutely continuous.
+Hence, by  Fatou's theorem
+there exist the two limits
+\[ 
+\lim_{r\to 1}
+W(re^{i\phi})=W(e^{i\phi})\quad\colon
+\lim_{r\to 1}
+R(re^{i\phi})=R(e^{i\phi})
+\tag{2}
+\]
+almost every on
+$\theta_0<\phi<\theta_1$.
+Let us fix $\theta_0<\phi_0<\phi_1<\theta_1$
+where the radial limits in (2) exist for $\phi_0$ and $\phi_1$.
+Next, consider a point  $z_0\in D\setminus K$ and choose a 
+closed Jordan curve
+$\Gamma$ which is the union of the $T$-interval $[\phi_0,\phi_1]$
+and a Jordan arc $\gamma$ which is disjoint to the closure of
+$K\setminus T$ while $z_0$ belongs to the Jordan domain
+$\Omega$ bordered by $\Gamma$. We can always   choose
+a nice arc $\Gamma$ which is of class $C^1$ and hits
+$T$ at $e^{i\phi_0}$ and $e^{i\phi_1}$ at right angles.
+Since $\Gamma$ has a positive distance from
+$K\setminus T$ there exists $r_*<1$ such that if $r_*<r<1$
+then the functions
+\[ 
+W_r(z)=W(rz)\quad\colon\, R_r(z)=R(rz)\tag{3}
+\] 
+are analytic
+in a neighborhood of the closure of $\Omega$.
+Now we consider  the set $\pi^{-1}(\Omega)=\Omega^*$ in
+$\mathcal M_B$ whose boundary in $\mathcal M_B$
+is contained in 
+$\pi^{-1}(\Gamma)=\Gamma^*$.
+If $Q(z)$ is an arbitrary  polynomial the\emph{ Local Maximum Principle} 
+gives
+\[
+|Q(z_0)|\cdot[ \hat g(\xi)\cdot R_r(z_0)-W_r(z_0)|\leq
+\bigl |Q\cdot( \widehat f\cdot R-W_r)\bigr |_{\Gamma^*}\tag{4}
+\]
+
+
+
+\noindent
+Recall that $\pi^{-1}(T)$ is a copy of $T$ 
+Identifying  the subinterval
+$[\phi_0,\phi_1]$
+with a closed subset of $\mathcal M_B$ we can write
+\[
+\Gamma^*=\gamma^*\cup\,[\phi_0,\phi_1]
+\quad\colon\,\gamma^*=
+\pi^{-1}(\Gamma\setminus(\phi_0,\phi_1))\tag{5}
+\]
+
+
+\noindent
+Now (4) and the continuity of the Gelfand transform
+$\widehat f$
+give a constant $M$ which is independent of
+$r$ such  that
+the maximum norms
+\[
+\bigl | \widehat f\cdot R-W_r)\bigr |_{\Gamma^*}\leq M\quad\colon
+r_*<r<1\tag {6}
+\]
+\medskip
+Since $\widehat f(e^{i\theta})=f(e^{i\theta})$
+holds on $T$ it follows from (2) that the maximum norms:
+\[
+\delta(r)=\bigl |\hat g\cdot R_r-W_r|_{[\phi_0,\phi_1]}=0\tag{7}
+\]
+
+
+\noindent
+tend to zero as $r\to 1$.
+Next, let $\epsilon>0$. Runge's theorem gives a
+polynomial $Q(z)$ such that
+\[
+Q(z_0)=1\quad\colon\, |Q|_\gamma<\frac{\epsilon}{M}\tag{8}
+\]
+When $\xi\in \pi^{\vvv 1}(z\uuu 0)$
+it follows from (6) that
+
+\[
+|\widehat f(\xi) R(z\uuu 0)\vvv W(z\uuu 0)|\leq
+\text{Max}\,(\epsilon,\bigl ||Q \bigr ||_{[\phi_0,\phi_1]}\cdot\delta(r))\tag{9}
+\]
+Passing to the limit as $r\to 1$ we use that $\delta(r)\to 0$
+together with the
+obvious limit formulas
+$R_r(z_0)\to R(z_0)$ and $W_r(z_0)\to W(z_0)$, and conclude that
+that
+\[
+\bigl |\widehat f(\xi)\cdot R(z_0)-W(z_0)\bigr |\leq\epsilon\tag{10}
+\]
+Since we can choose $\epsilon$ arbitrary small
+we get
+\[
+\widehat f(\xi)\cdot R(z_0)=W(z_0)\quad\colon\,\xi\in \pi^{-1}(z_0)\tag{11}
+\]
+Since $z\uuu 0\in D\setminus k$ was arbitrary we have proved (**)
+and as explained after (**) it follows that
+\[
+\pi^{-1}(D\setminus K)\simeq D\setminus K\tag{12}
+\]
+\bigskip
+
+\noindent
+{\bf 3.2 The extension to $K$.} 
+At this stage we can easily finish the proof of Theorem 3.1.
+We have already found the analytic function
+$\widehat f(z)$ in $D\setminus K$ and 
+it is clear that it extends to $f$ on the free circular arc
+$(\theta_0,\theta_1)$ of $T$.
+To see that $\widehat f$ extends to $K$ and gives a continuous function on
+the whole closed unit disc we  solve the Dirichlet problem
+for the continuous functions $\mathfrak{Re}\,f$ and
+$\mathfrak{Im}\,f$ on $K$ and conclude that
+$\widehat f$ extends and moreover its boundary value function on
+$K$ is equal to the restriction of $f$ to $K$.
+The proof of Theorem 3.1 is therefore finished if we have shown the equality:
+\[
+\mathcal M_B\simeq D
+\]
+To see that this  holds  we put $U=\pi^{-1}( \mathcal M_B\setminus D)$
+and notice that its boundary in
+$\mathcal M_B$ is contained in
+the closure of $K\setminus T$. Call, this compact set $K_*$.
+Since we have the free arc 
+$(\phi_0,\phi_1)$
+and $D\setminus K$
+is connected it follows that
+${\bf{C}}\setminus K_*$ is connected, i.e. only the unbounded
+component exists. So by Mergelyan's Theorem
+polynomials in $ z$ generate a dense subalgebra of
+$C^0(K_*)$.
+But then the Local  Maximum Principle implies that
+$U$ must be empty and the proof of Theorem 3.1 is finished.
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+%\end{document}
+
+
+

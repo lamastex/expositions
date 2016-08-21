@@ -1,0 +1,2234 @@
+
+
+\documentclass{amsart}
+
+
+\usepackage[applemac]{inputenc}
+
+
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\begin{document}
+
+
+\centerline{\bf{Hyperbolic PDE-equations.}}
+
+\medskip
+
+\noindent
+{\bf{Introduction.}}
+We shall expose
+a   result from Friedrichs' article \emph{xxx}
+dealing with boundary value problems
+for linear 
+symmetric hyperbolic systems.
+The  proof of our main result in Theorem 0.1
+teaches the usefulness of regarding 
+densely defined but unbounded linear operators on
+Hilbert spaces. 
+Theorem 0.1
+is announced for a symmetric hyperbolic first order system
+in any number of variables.
+The proof involves quite  technical
+steps.
+are  when one restricts  to
+the case of two variables and a single scalar function.
+For the reader's convenience we therefore include  a self-contained
+proof  in the restricted case  for systems in 
+two variables and a single scalar function.
+Here
+the
+Hilbert space methods are  transparent, and yet
+the methods which are used in this restricted situation
+are crucial, i.e. the general case is  verbatim the same except for
+various technical points.
+Before we announce the result by Firedrichs
+we recall some background about hyperbolic equations.
+
+\medskip
+
+
+\noindent
+A classic result due to Hadamard 
+gives a  vanishing principle for well-posed boundary
+value problems.
+With coordinates
+$(x,s)= (x_1,\ldots,x_n,s)$ in
+${\bf{R}}^{n+1}$
+we consider a differential operator of the form
+\[
+Q(x,s,\partial_x,\partial_s)=
+\partial_s^p+\sum_{\nu=0}^{p-1}\,
+P_\nu(x,s,\partial_x)\cdot \partial_s^\nu
+\]
+where $\{P_\nu(x,s,\partial_x)$ are differential operators which
+are independent of $\partial_s$ and  coefficients in
+$C^\infty({\bf{R}}^{n+1})$ 
+which in general are complex-valued.
+The Cauchy problem is well posed in Hadamard's sense
+if there
+to
+every $f(x)\in C^\infty({\bf{R}}^n)$
+exists a unique $C^\infty$-function $g(x,s)$
+in the half-space $\{s\geq 0\}$ such that
+$Q(g)(x,s)=0$ when $s>0$
+and
+on $s=0$ one has
+\[
+\partial_s^\nu(g)(x,0)=0\,\colon 0\leq \nu\leq p-1
+\quad\colon\quad 
+\partial_s^p(g)(x,0)=f(x)
+\]
+
+\medskip
+
+\noindent 
+Under the hypothesis that Cauchy's problem is well-posed one has:
+\medskip
+
+\noindent
+{\bf{Hadamard's Theorem.}}
+\emph{If $K$ is a compact subset in ${\bf{R}}^{n+1}$
+there exists a compact set $K$ in the $x$-space such that
+thre unique solution $f$ whose Cauchy data on $s=0$ vanishes on $k$
+must vanish on $K$.}
+\medskip
+
+\noindent This result 
+follows easily from Baire's category theorem. The reader may consult
+[D-S: Volume 2: page 1649-1652] for details.
+\medskip
+
+\noindent
+We shall not enter an extensive discussion about
+conditions for a PDE-operator to be hyperbolic.
+The reader may consult the text-book
+by Petrowsky for an account where  many examples of
+hyperbolic, elliptic and parabolic equations
+appear.
+
+\medskip
+
+
+\noindent
+{\bf{An ill-posed equation.}} 
+Let $n=1$ and consider the $2\times 2$-matrices
+\[ 
+A_1(x,s)=
+\begin{pmatrix} -e^{-x}&0\\0&1 \end{pmatrix}\quad\colon
+B(x,s)= \begin{pmatrix} 0&1\\0&0 \end{pmatrix}\quad\colon
+\]
+One seeks pairs of functions $(f_1(x,s),f_2(x,s)$
+which satisfy the first order system:
+\[
+\frac{\partial f_1}{\partial s}=
+-e^{-x}\cdot \frac{\partial f_1}{\partial x}+f_2
+\quad\colon\,
+\frac{\partial f_2}{\partial s}=
+\frac{\partial f_2}{\partial x}
+\]
+For any function $C^\infty$-function $h$ of a single variable 
+we see that
+\[ 
+f_1(x,s)= h(e^x-s)\quad\colon f_2=0
+\]
+solves the system above and here $f_1(x,0)= h(x)$.
+Consider the singleton set $\{0,1\}$ in ${\bf{R}}^2$.
+Then $f(A)=1$ for all $h$-functions
+such that $h(0)=0$. Fix a test-function $\phi(t)$ on the real $t$-line
+where $\phi(0)=1$ while $\phi(t)=0$ if $|t|\geq 1/2$.
+For every positive integer $N$
+we take $h(t)= \phi(Nt)$.
+If the Cauchy problem is well posed we get the unique solution
+with $f_1= h(s-e^x)$ and now
+\[ 
+f_1(x,0)= \phi (e^{Nx})
+\] 
+Since the support of $\phi$ is contained in $[-1/2,1/2]$
+we see that $f_1(x,0)\neq 0$ entails that
+\[
+e^{Nx}\leq 1/2\implies x\leq -N\cdot \log 2
+\]
+Since $N$ can be arbitrary large this violates Hadamard's
+vanishing principle and hence the Cauchy problem for this system is
+not well-posed.
+
+
+
+
+
+
+\medskip
+
+
+\centerline{\bf{The  wave operator.}}
+\medskip
+
+\noindent
+With two real variables we consider the PDE-operator
+\[ 
+P=\frac{\partial^2}{\partial x_1^2}-
+\frac{\partial^2}{\partial x_2^2}
+\]
+To each pair of functions $g(x_1),h(x_1)$ one seeks
+$f(x_1,x_2)$ such that $P(f)=0$ and
+Cauchy's boundary value conditions:
+\[
+f(x_1,0)= g(x_1)\quad\colon
+\frac{\partial f}{\partial x_2}(x_1,0)= h(x_1)\tag{i}
+\]
+
+
+\medskip
+
+
+\noindent
+This boundary value problem corresponds to
+a first order system where one seeks a pair
+$f_1(x_1,x_2)$ and $f_2(x_1,x_2)$ such that
+\[
+\frac{\partial f_1}{\partial x_1}=-
+\frac{\partial f_1}{\partial x_2}+f_2
+\quad\colon\quad 
+\frac{\partial f_2}{\partial x_1}=
+\frac{\partial f_2}{\partial x_2}\tag{ii}
+\]
+with boundary values 
+\[
+f_1(x_1,0)= g(x_1)\quad\colon\quad f_2(x_1,0)=g'(x_1)+h(x_1)\tag{iii}
+\]
+
+
+
+\noindent
+{\bf{Exercise.}}
+Show that if $f$ solves (i)
+then the boundary value
+system is solved by the pair
+\[
+ f_1=f\quad\colon f_2= \frac{\partial f}{\partial x_1}+
+\frac{\partial f}{\partial x_2}
+\]
+Show also that if $f_1,f_2$ solves the system then
+$f=f_1$ solves
+the original equation.
+Next, consider the matrices
+\[
+A=
+\begin{pmatrix}  -1&0\\0&1\end{pmatrix}\quad\colon\quad
+B=
+\begin{pmatrix}  0&0\\1&0
+\end{pmatrix}
+\]
+Then the system can be written in matrix form as
+\[
+\frac{\partial}{\partial x_1}
+\begin{pmatrix} f_1\\f_2\end{pmatrix}
+=A\,\frac{\partial}{\partial x_2}
+\begin{pmatrix}  f_1\\f_2\end{pmatrix}+ 
+B\begin{pmatrix}  f_1\\f_2\end{pmatrix}
+\]
+
+\medskip
+
+\noindent
+This clarifies that the  orginal equation is a first order symmetric
+system to be dsecribed in ¤ xx,
+\medskip
+
+\noindent
+{\bf{Higher order systems.}}
+Consider systems
+with  $n+1$ many  variables
+$x_1,\ldots,x_n,s$ where the variable $s$ is distinguished.
+In a first order scalar system 
+one seeks a function $f(x,s)$ such that
+\[
+\frac{\partial f}{\partial s}=
+\sum_{j=1}^{j=n}\, a_j(x,s)\cdot 
+\frac{\partial f}{\partial x_j}+b(x,s)
+\]
+satisfying  the boundary condition
+\[ f(x,0)= g(x)
+\] 
+where the $g$ function is given  in the $n$-dimensional $x$-space.
+In a vector-valued system of order $m\geq 2$
+the $a$-functions are replaced by $m\times m$-matrices and $b$ by
+some $m\times m$-matrix. Here 
+one seeks a vector-valued function 
+$f=(f_1,\ldots,f_m)$ such that
+\[
+\frac{\partial}{\partial s}
+\begin{pmatrix} f_1\\...\\f_m\end{pmatrix}=
+\sum_{j=1}^{j=n}\, A_j(x,s)\cdot 
+\frac{\partial }{\partial x_j}\begin{pmatrix} f_1\\...\\f_m\end{pmatrix}+
+B(x,s)\begin{pmatrix} f_1\\...\\f_m\end{pmatrix}\tag{*}
+\]
+The boundary conditions are expressed by an $m$-tuple of functions
+$\{g_\nu(x)\}$ such that $f_\nu(x,0)= g_\nu(x)$ hold for each $\nu$.
+The $A$-matrices and the $B$-matrix are in general complex valued.
+A famous  example is:
+\medskip
+
+\noindent
+{\bf{Maxwell's equations of electrodynamics}}.
+Let $n=m=3$ where  $\{A_\nu\}$ are constant $3\times 3$-matrices
+\[
+A_1=\begin{pmatrix} 0&0&0\\ 0&0&-i\\ 0&i&0 \end{pmatrix}
+\quad\colon\, 
+A_2=\begin{pmatrix} 0&0&i\\ 0&0&0\\ -i&0&0 \end{pmatrix}\quad\colon
+A_3=\begin{pmatrix} 0&-i&0\\ i&0&0\\ 0&0&0 \end{pmatrix}
+\]
+Moreover $B=0$ and 
+one seeks a vector-valued function $f_1,f_2,f_3$
+which satisfies (*) and boundary value conditions $f_\nu(x,0)= g_\nu(x)$
+\medskip
+
+
+
+\centerline{\bf{The symmetric case.}}
+\medskip
+
+
+\noindent
+The system (*) is  symmetric if
+the matrices $\{A_\nu(x,s)\}$ are Hermitian for each
+$1\leq\nu\leq n$.
+No special condition is imposed on $B$, i.e. it can be
+an arbitrary complex $m\times m$-matrix.
+Notice that  the $A$-matrices
+in Maxwell's equations are hermitian.
+The following result is due to  Friedrichs:
+\bigskip
+
+\noindent
+{\bf{0.1 Theorem.}}
+\emph {Assume that the $A$-matrices are hermitian and that
+the matrix elements of $A_1,\ldots,A_n$ and  $B$ are
+bounded functions in ${\bf{R}}^{n+1}$.
+Then Cauchy's boundary value problem has a unique $C^\infty$solution
+$f=(f_1,\ldots,f_m)$ for every $m$ tuple
+$g=(g_1,\ldots,g_m)$ of $C^\infty$-functions in the $n$-dimensional $x$-space.}
+
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+The example after Hadamard's result above 
+shows that this boundedness is needed in order that
+the  Cauchy problem  is well-posed.
+
+\medskip
+
+\noindent
+{\bf{0.2 On the uniqueness.}}
+Let us illustrate why the condition that the
+$A$-matrices are hermitian
+gives a certain vanishing principle.
+Let $\Omega$ be a bounded open set in the $n$-dimensional $x$-space
+and $-s_*<s<s_*$
+is some open $s$-interval.
+Let $\{A_j(x,s)\}$ be Hermitian $m\times m$-matrices whose elements as
+well as their first order partial
+derivatives are 
+bounded $C^\infty$-functions
+in $\Omega\times (-s_*,s_*)$. Similarly, assume
+that $B(x,s)$ is  an $m\times m$-matrix whose elements
+are bounded
+$C^\infty-$-functions in $\Omega$.
+Let $f=(f_1,\ldots,f_m)$ be a vector-valued solution to the system (*)
+where 
+\[
+f(x,0)=0\quad\colon x\in\Omega\tag{0.2.1}
+\]
+and assume 
+there is a compact subset $K$ of $\Omega$ and
+$f=0$ in $(\Omega\setminus K)\times (-s_*,s_*)$.
+Then (0.2.1) entails that
+$f=0$ in 
+$\Omega\times (-s_*,s_*)$.
+To prove this we introduce the function
+\[ 
+J(s)=
+\int_\Omega\, |f(x,s)|^2\,dx
+\]
+where $|f|^2=\sum\, f_\nu\cdot \bar f_\nu$.
+Taking the derivative with respect to $s$ we get
+\[
+\frac{dJ}{ds}=2\cdot \mathfrak{Re}\,
+\sum_{j=1}^{j_m}\int\, \partial_s(f_\nu)\cdot \bar f_\nu\, dx\tag{i}
+\]
+Since $f$ satisfies (*) we have
+\[
+\sum_{j=1}^{j_m}\int\, \partial_s(f_\nu)\cdot \bar f_\nu=
+\sum_{j=1}^{j=n}\, \langle A_j(\frac{\partial f}{\partial x_j}),f\rangle+
+\langle B(f),f\rangle
+\]
+Since $f_\nu(x,s)$
+vanish when $x\in\Omega\setminus K$  
+Stokes theorem gives
+\[
+0=\int\ \partial_{x_j}(\langle A_j(f),f\rangle)\, dx\quad\colon 1\leq j\leq n \tag{ii}
+\]
+Rules for differentiation identifies for each $j$
+the integrand with
+\[
+\langle  \frac{\partial A_j}{\partial x_j}(f),f\rangle
++
+\langle A_j(\partial_{x_j}(f),f\rangle+
+\langle A_j(f), \partial_{x_j}(f)\rangle
+\]
+Since  $A_j$ is hermitian we have
+\[
+\mathfrak{Re}\ \langle A_j(\partial_{x_j}(f),f\rangle=
+\mathfrak{Re}\, 
+\langle A_j(f), \partial_{x_j}(f)\rangle\tag{iii}
+\]
+Hence (ii) and (iii) give
+\[
+\mathfrak{Re} \int\,
+\langle A_j(\frac{\partial f}{\partial x_j}),f\rangle\, dx=-
+\frac{1}{2}\int
+\langle  \frac{\partial A_j}{\partial x_j}(f),f\rangle\,dx
+\]
+\medskip
+
+\noindent
+Introduce the matrix-valued function
+\[
+\text{div}(A)=
+\sum_{j=1}^{j=n}\,\frac{\partial A_j}{\partial x_j}
+\]
+From  the above we get
+the equation
+\[ 
+\frac{dJ}{ds}=\mathfrak{Re}\, \int\, \bigl[-\frac{1}{2}
+\langle 
+\text{div}(A)(f),f\rangle+
+\langle 
+B(f),f\rangle\,\bigr]\, dx\tag{iv}
+\]
+By assumption the elements of the matrices
+$\{A_j\}$  and of $B$ as well as $\{\frac{\partial A_j}{\partial x_j}\}$.
+are bounded $C^\infty$-functions.
+Hence  (iv) and the  Cauchy-Schwarz inequality gives a constant $C$
+such that the absolute
+value in
+the right hand side in (iv) is estimated above by 
+\[
+C\cdot \int\, |f(x,s)|^2\ dx\quad\colon -s_*\leq s< s^*
+\]
+It follows that 
+\[
+|\frac{dJ}{ds}|\leq C\cdot J(s)\quad\colon 0\leq s\leq s^*
+\]
+At the same time (i) means that $J(0)=0$. Hence
+Picard's uniquneness theorem to be exposed  in ¤ XX
+implies that 
+if $J(s)=0$ when $-s_*<s<s_*$, i.e.
+\[
+J(x,s)=0\quad
+\colon (x,s)\in \{|x|\leq r\}\times [0,s^*]\tag{0.3.1}
+\]
+So we have  
+\[ 
+\int_\Omega\, |f(x,s)|^2\, dx=0
+\]
+and  $\{f_\nu\}$ are continuous functions 
+they vanish identically in
+$\Omega\times(-s_*,s_*)$ as requested.
+
+
+
+\medskip
+
+\noindent
+{\bf{0.3 A semi-global uniqueness result.}}
+Let $\{A_j(x,s)\}$ be Hermitian matrices defined in the whole of
+${\bf{R}}^{n+1}$
+whose elements are bounded $C^\infty$-functions. 
+Similarly $B(x,s)$ is defined in the whole of
+${\bf{R}}^{n+1}$. 
+
+\medskip
+
+\noindent
+{\bf{0.3.1 Proposition.}}
+\emph{There exists a positive number $\rho$ which only depends on
+the
+matrices above such that if $R>0$ and
+a vector valued $C^\infty$-function $f(x,s)$
+is defined in the ball $\{|x|^2+s^2<R^2\}$
+where it is a solution to (*) and satisfies}
+\[ 
+f(x,0)=0\quad\colon |x|<R
+\]
+\emph{Then it follows that}
+\[ 
+f(x,s)= 0\quad\colon x^2+s^2<\rho\cdot R^2
+\]
+
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Choose a test-function $\psi(x)$ in ${\bf{R}}^n$
+such that $\psi=1$ when $|x|\leq 1$ and
+vanishes when $|x|>3/2$ while the values stay in $[0,1]$.
+Set
+\[
+\mu =\max_{1\leq j\leq m}\, \sup_{(x,s)}\, ||A_j(x,s)||\tag{i}
+\]
+where the supremum
+is taken over all $(x,s)$ in ${\bf{R}}^{n+1}$
+and we have taken the Hibert-Schmidt norms of
+the $A$-matrices.
+With $\epsilon>0$
+we set $\phi(x)=\psi(\epsilon\cdot x)$
+and construct the following $m\times m$-matrices
+\[
+H(x,s)= \sum_{j=1}^{j=n}\ \frac{\partial \phi}{\partial x_j}
+(x)\cdot
+A_j(x,s)
+\]
+\[ 
+\widehat{A_j}(x,s)= \phi(x)\cdot
+A_j(x,\phi(x)s)\quad\colon\quad
+\widehat{B}(x,s)= \phi(x)\cdot
+B(x,\phi(x)s)
+\]
+Put
+\[ 
+F(x,s)= f(x,\phi(x)s)
+\]
+Since $0\leq \phi(x)\leq 1$
+hold for all $x$ it follows that
+$F$ is defined
+in 
+$\{|x|^2+s^2<R^2\}$ and
+the construction of $\phi$  gives
+\[ 
+F(x,s)= f(x,s)\quad\colon |x|<\epsilon^{-1}\tag{ii}
+\]
+
+\noindent
+Rules for differentiation  show that
+$F$ satisfies the system
+\[
+(E-H(x,s))\partial_s(F)=\sum_{j=1}^{j=n} \widehat{A_j}(x,s)\partial_{x_j}(F)+
+\widehat{B}(x,s)F\quad\colon\, x^2+s^2<R^2
+\]
+where $E$ is the identity operator.
+\medskip
+
+\noindent
+{\bf{A choice of $\epsilon$.}}
+The partial derivatives of the test-function $\psi$ are bounded
+by some constant $C$ 
+and we set
+\[ 
+\epsilon^*=\frac{1}{2n\cdot C\mu}
+\]
+It follows that 
+\[
+|\frac{\partial \phi}{\partial x_j}|= \epsilon\cdot |\frac{\partial \psi}{\partial x_j}|
+\leq \frac{1}{2n\mu}
+\]
+By (i) this entails that  
+\[ 
+\sup_{(x,s)}||H(x,s]|\leq \frac{1}{2}\tag{iii}
+\]
+Next, the support of $\phi$ is contained in the ball 
+$\{|x|\leq \frac{3}{2\epsilon^*}$ so
+the vanishing
+in (xx)  entails that
+$F(x,s)=0$  when
+\[
+\frac{3}{2\epsilon^*}\leq |x|<R
+\]
+By the condition (xx) $R\geq R_*$ entails that
+\[
+\frac{3}{2\epsilon^*}=3nC\mu= R_*/2\leq R/2
+\]
+So $R\geq R_*$  implies that
+\[ 
+F_\epsilon(x,s)=0\quad \colon
+\frac{R}{2}\leq |x|<\sqrt{R^2-s^2}\tag{v}
+\]
+Now (iv) implies that
+the hermitian matrix
+$E-H(x,s)$ is invertible and
+by (iii) $F$ satisfies  system as in (0.2).
+The vanishing in (v)
+therefore implies that
+$F_\epsilon (x,s)=0$ hold when
+$x^2+s^2<R^2$.
+
+\medskip
+
+FINISH
+
+
+\newpage
+
+\centerline{\bf{¤ 1: Symmetric hyperbolic systems.}}
+
+
+\bigskip
+
+\noindent
+The main result in this section appears in
+Theorem 1.xx.
+Before it can be announced
+we need
+several preliminaries.
+We will  study periodic functions. 
+Let $n$ be a positive integer and 
+consider the $(n+1)$-dimensional torus $T^{n+1}$
+with variables $(x,s)= (x_1,\dots,x_n,s)$.
+Denote by $C^\infty(T^{n+1})$
+the space of complex-valued $C^\infty$-functions which
+are $2\pi$-periodic in all the variables.
+Passing to the $L^2$-norm
+the closure of these functions give
+the complex  Hilbert space $L^2(T^{n+1})$
+whose vectors are complex-valued functions
+$f(x,s)$ which are square integrable on the $(n+1)$-dimensional
+$2\pi$-periodic torus. 
+Next,
+to each multi-index $\alpha=(\alpha_1,\ldots,\alpha_{n+1})$
+one associates the differential operator
+\[ 
+\partial^\alpha=\partial_{x_1}^{\alpha_1}\cdots
+\partial_{x_n}^{\alpha_n}\cdot \partial_{s}^{\alpha_{n+1}}
+\]
+If $k$ is a positive integer
+an inner product is defined on
+$C^\infty(T^{n+1})$
+by
+\[ 
+\langle f,g\rangle_{(k)}=
+\sum_{|\alpha|\leq k}\, \int\, \partial^\alpha(f)\cdot \overline{\partial^\alpha(g)}\, dxds\tag{1.1}
+\]
+Passing to the closure we obtain a Hibert space denoted by
+$H^{(k)}$ whose 
+elements are $L^2$-functions 
+$g(x,s)$ such that the distribution derivatives
+$\partial^\alpha(g)$ are square integrable when
+$|\alpha|\leq k$.
+From ¤ XX we recall:
+
+\medskip
+
+\noindent
+{\bf{The Fourier-Sobolev  Lemma.}} \emph{If $k\geq xx$
+ every $g\in H^{(k)}$
+is a periodic function of class $C^1$ at least on
+${\bf{T}}^{n+1}$.}
+
+
+\medskip
+
+\noindent
+More generally, if $m\geq 2$ we consider vector-valued functions
+$f=(f_1,\ldots,f_m)$
+and get the Hilbert space $H^{(k)}[m]$
+whose vectors are $m$-tuples of functions in
+$H^{(k)}$.
+With $f=(f_1,\ldots,f_m)$ and $g=(g_1,\ldots,g_m)$
+the inner product is defined as in
+(1,1):
+\[
+\langle f,g\rangle_{(k)}=\sum_{\nu=1}^{\nu=m}
+\sum_{|\alpha|\leq k}\, \int\, \partial^\alpha(f_\nu)\cdot \overline{\partial^\alpha(g_\nu)}\, dxds
+\tag{1.2}
+\]
+With $m\geq 1$ we consider
+a matrix-valued functions
+$\{A_j(x,s)\ldots A_n(x,s)\}$
+where each $A_j(x,s)$ is an $m\times m$-matrix whose elements are
+periodic complex-valued $C^\infty$-functions on
+$T^{n+1}$.
+Let $B(x,s)$ be another matrix-valued functions whose elements also are
+periodic and of class $C^\infty$.
+Set 
+\[
+P(x,s,\partial_x,\partial_s)=
+E_m\cdot \partial_s-\sum_{j=1}^{j=n}\ A_j(x,s)\cdot \partial_{x_j}+ B(x,s)\tag{1.3}
+\]
+This differential operator acts on
+vector-valued functions $f$.
+Identifying
+the space of vector-valued and periodic $C^\infty$-functions
+with a subspace of $H^{(k)}[m]$
+one has the linear map
+\[ 
+P\colon f\to P(f)
+\] 
+from $C^\infty[m]$
+into
+$H^{(k)}[m]$.
+Keeping $k$ and $m$ fixed
+we denote this linear map by $T_0$. It means that
+$T_0$ is densely defined linear operator
+on
+$H^{[k)}[m]$
+whose  domain  of definition $\mathcal D(T_0)=
+C^\infty_[m]$.
+We have also
+the densely defined linear operator $T_1$
+where
+\[
+ \mathcal D(T_1)= \{f\in H^{(k)}[m]\,\colon P(f)\in  H^{[k)}[m]\}
+\]
+By the general result in ¤ XX the graph of $T_1$
+taken in
+the product 
+$H^{(k)}[m]\times H^{(k)}[m]$ is closed.
+Next, since $T_0$ is densely defined there exists
+the adjoint operator
+$T_0^*$. By definition 
+$\mathcal D(T_0^*)$ consists of 
+vectors $g\in  H^{(k)}[m]$ for which there exists a constant $C(g)$ such that
+\[
+|\langle T_0(f),g\rangle|\leq C(g)\dot ||f||_k
+\quad\colon f\in\mathcal D(T_0)
+\]
+and for such $g$-vectors we get
+a unique vector $T_0^*(g)$ such that
+\[
+\langle T_0(f),g\rangle=\langle f,T_0^*(g)\rangle
+\]
+\medskip
+
+\noindent
+{\bf{1.4 The case when
+$\{A_j\}$ are hermitian.}}
+An $m\times m$-matrix $A(x,s)=\{a_{\nu,\mu}(x,s)\}$
+whose elements are periodic $C^\infty$-functions
+is hermitian if
+\[
+a_{\mu,\nu}(x,s)=\overline {a_{\nu,\mu}(x,s)}
+\]
+hold for all pairs $1\leq \nu,\mu\leq m$.
+\medskip
+
+\noindent
+{\bf{1.5 Proposition.}}
+\emph{If  $A_1,\ldots,A_n$ are hermitian it follows that
+$\mathcal D(T_0^*)= \mathcal D(T_1)$
+and there exists a bounded and self-adjoint linear operator
+$\mathcal B$ on $H^{(k)}[m]$ such that}
+\[
+ T_0^*+T_1=\mathcal B\tag{*}
+ \]
+ \medskip
+ 
+ \noindent
+ Before we enter the proof we need
+ some constructions.
+Repeated use of Stokes Theorem gives the equality
+below for every pair of functions $f,g$ in $C^\infty(T^{n+1})$
+and every multi-index $\alpha$:
+\[
+(-1)^{|\alpha|}\cdot \int\,  \partial^{2\alpha}(f)\cdot \overline{g}\ dxds=
+\int\,  \partial^{\alpha}(f)\cdot \overline{\partial^\alpha(g)}\ dxds
+\]
+More generally, let
+$Q= Q(x,s,\partial_x,\partial_s)$ be a differential operator.
+With
+$Q$ given as
+\[ 
+Q= \sum\, q_\alpha(x,s)\cdot \partial^\alpha
+\]
+where  $q_\alpha\in C^\infty(T^{n+1})$
+one gets the differential operator
+\[ 
+Q^*=\sum\,(-1)^\alpha\cdot \partial^\alpha\circ q_\alpha(x,s)
+\]
+where  $\partial^\alpha\circ q_\alpha(x,s)$ is the product taken in the ring of
+differential operators with
+$\{q_\alpha(x,s)\}$ regarded as zero-order differential operators.
+Stokes theorem  gives
+\[
+\int Q(f)\cdot \bar g\, dxds=
+\int f\cdot Q^*(\bar g)\,dxds\tag{1.6}
+\]
+Let us write out  
+\[ 
+Q^*=\sum r_\alpha(x,s)\cdot \partial^\alpha
+\]
+We take the complex conjugates of the $r$-functions and put
+\[ 
+\overline{Q^*}=\sum \bar r_\alpha(x,s)\cdot \partial^\alpha
+\]
+Using the hermitian inner product on
+$L^2(T^{n+1})$ we can express (1.6) by the equation
+\[ 
+\langle Q(f),g\rangle=
+\langle f,\overline{Q^*}(g)\rangle\tag{1.7}
+\]
+\medskip
+
+\noindent
+{\bf{1.8 The $\Gamma$-operator.}}
+Let us  introduce the differential operator
+\[
+\Gamma=
+\sum_{|\alpha|\leq k} 
+(-1)^{|\alpha|}\cdot  \partial^{2\alpha}
+\]
+If $m\geq 2$ we denote by $\Gamma_m$
+the operator given by the diagonal $m\times$-matrix where
+whose diagonal elements are $\Gamma$.
+Stokes theorem
+entails
+that if $f$ and $g$ is a pair of
+vector-valued functions in
+$C^\infty(T^{n+1})$ then 
+\[ 
+\langle f,g\rangle_{(k)}=
+\int\,\Gamma_m(f)\cdot \overline{g}\, dxds\tag{1.9}
+\]
+\medskip
+
+\noindent
+{\bf{1.10 Exercise.}}
+Both sides in (1.9 ) are defined under the relaxed condition that 
+$g\in H^{(k)}[m]$
+while $f\in C^\infty[m]$.
+Show by continuity that
+(1.9) remains valid for such pairs.
+\medskip
+
+\noindent
+Next, in the algebra 
+of $m\times m$-matrices whose elements
+are
+differential operators
+we consider the product $\Gamma_m\cdot P$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that when $P$Êis as in (1.3)  where
+$\{A_j\}$ are hermitian then
+there exists an $m\times m$-matrix
+$Q$ whose elements
+are differential operators of order
+$\leq 2k$ such that the following hold in the algebra above:
+\[
+\Gamma_m\circ P+\overline{P^*}\circ\Gamma_m=Q\tag{1.11}
+\]
+ \medskip
+
+\noindent
+Now (xx) and (xx) give the equation
+\[
+\langle  T_0(f),g\rangle_{(k)} =\int  Q(f)\cdot \bar g\, dxds-
+\int  \overline{P^*}\circ\Gamma_m(f)\cdot \bar g\, dxds
+\]
+Apply (xx) to the pair of vector-valued functions
+$\Gamma_m(f)$ and $g$ and the differential operator
+$\overline{P^*}$.
+Notice that
+the complex conjugate of  the adjoint
+$(\overline{P^*})^*$ is equal to $P$ and from this the reader can check
+form the above that 
+the last term in (xx) is equal to
+\[
+-\int  \Gamma_m(f)\cdot \overline{P(g)} \, dxds
+\]
+Applying (xx) this entails that the following hold for each
+pair $f,g$ in $C^\infty(T^{n+1})$.
+\[
+\langle  T_0(f),g\rangle_{(k)}=-
+\langle  f,T_0(g)\rangle_{(k)}+\int  Q(f)\cdot \bar g\, dxds
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Since the differential operator
+$Q$ has degree $\leq 2k$ the reader should verify the
+existence a bounded linear operator $\mathcal B_k$ on
+the Hilbert space $H^{(k)}[m]$ such that
+\[
+\int  Q(f)\cdot \bar g\, dxds= 
+\langle  \mathcal B_k(f),g\rangle_{(k)}
+\]
+hold when $f$ is a  vector-valued $C^\infty$-function
+and
+$g\in H^{(k)}[m]$. In particular we can take a pair $f,g$ in
+$C^\infty$ and notice that
+\[ 
+(f,g)\mapsto
+\langle  T_0(f),g\rangle_{(k)}+\langle  T_0(g),f\rangle_{(k)}
+\] 
+is symmtric in $f$ and $g$. Form this the reader can conclude that
+the bounded operator $\mathcal B_k$ is self-adjoint.
+
+\newpage
+
+\centerline{\emph{Proof of Proposition 1.5}}
+\bigskip
+
+\noindent
+Assume first that
+$g\in \mathcal D(T_0)$ which gives
+\[
+\langle  T_0(f),g\rangle_{(k)}=
+\langle  f,T_0^*(g)\rangle_{(k)}
+\]
+Here $g\in H^{(k)}$
+and regarding $g$ as a distribution we get
+the vector-valued distribution $P(g)$. Now 
+xx hold for all vector-valued periodic $C^\infty$-functions $f$.
+From the above the trinsgle inequality and Cauchy-Schwarz gives
+\[
+\bigl|\langle  f),P(f)g\rangle_{(k)}\bigr|\leq
+(||g||_k+ ||\mathcal B_k(g)||_k)\cdot ||f||_k
+\]
+Since this inequslity hold for all $f$
+in the dense subspace $C^\infty[m]$
+it follows that the distribution
+$P(f)g$ belongs to $H^{(k)}[m]$
+so by the construction of $T_1$ one has $g\in\mathcal D(T_1)$.
+Hence one has the inclusion
+\[
+\mathcal D(T_1)\subset \mathcal D(T_0^*)\tag{i}
+\]
+Conveersley, if
+$g\in\mathcal D(T_1)$
+the absolute value in the right hand side of (xx) is
+majorized by
+\[
+||T_1(g)||_k+||\mathcal B_k(g)||_k)\cdot ||f||_k
+\]
+The  construction of $T_0^*$ entails that
+$g\in\mathcal D(T^*_0$ and hence equality holds in (i)
+Finally it is clear that this equality and
+(xxx) gives the operator equation
+\[ 
+T_0^*= -T_1+\mathcal B_k^*
+\]
+Since we already proved that
+$\mathcal B_k$ is self-adjoint
+the proof of Proposition 1.5 is finished.
+
+
+
+
+
+
+
+
+\bigskip
+
+\noindent
+\centerline {\bf{¤ 2. A study of $T_1$}}.
+\medskip
+
+\noindent
+In ¤ 1   we  constructed the densely defined and closed operator
+$T_1$ on  $H^{(k)}[m]$.
+Consider some
+$f\in C^\infty[m]$ and a real number $\lambda$.
+Now
+\[
+||T_1(f)+\lambda\cdot f-\frac{1}{2}\mathcal B_k^*(f)||^2_{(k)}=
+\]
+\[
+||T_1(f)-\frac{1}{2}\mathcal B_k^*(f)||^2_{(k)}+
+\lambda^2||f||_{(k)}^2+
+\lambda\cdot 
+\langle T_1(f)-\frac{1}{2}\mathcal B_k^*(f),f\rangle_{(k)}
++\lambda\cdot \langle f, T_1(f)-\frac{1}{2}\mathcal B_k^*(f)\rangle_{(k)}
+\]
+Since $f$ is $C^\infty$ we have
+$T_1(f)= T_0(f)$ and since $\mathcal B_k^*$ is self-adjoint it follows that
+the sum of  the last two terms above becomes
+\[
+\lambda\cdot( \langle\,f,T_0^*(f)-\frac{1}{2}\mathcal B_k^*(f)\rangle_{(k)}
++\langle f, T_0(f)-\frac{1}{2}\mathcal B_k^*(f) \rangle_{(k)})\tag{i}
+\]
+The operator equation in Proposition 1.5 gives
+\[
+ T_0(f)+T_0^*(f)=\mathcal B_k^*
+ \]
+ which proves that (i)  is zero.
+ Hence we have proved the equality
+ \[
+||T_1(f)+\lambda\cdot f-\frac{1}{2}\mathcal B_k^*(f)||^2_{(k)}=
+||T_1(f)-\frac{1}{2}\mathcal B_k^*(f)||^2_{(k)}+
+\lambda^2||f||_{(k)}^2\tag{2.1}
+\]
+\medskip
+
+\noindent
+Since
+$||T_1(f)-\frac{1}{2}\mathcal B_k^*(f)||_{(k)}\geq 0$ the triangle inequality gives
+the inequality below for every real number $\lambda$
+\[
+||T_1(f)+\lambda\cdot f||_{(k)}
+\geq |\lambda|\cdot ||f||_{(k)}-\frac{1}{2}\cdot
+||\mathcal B_k^*(f)||_{(k)}\quad\colon
+f\in C^\infty_{\text{per}}[m]\tag{2.2}
+\]
+Above the real number $\lambda$ can be both positive or negative
+and the inequality is of interest when
+$|\lambda|$ exceeds the operator norm
+of 
+$\frac{\mathcal B_k^*}{2}$. We have for example
+\[
+||T_1(f)+\lambda\cdot f||_{(k)}\geq \frac{|\lambda|}{2}\cdot ||
+||f||_{(k)}\quad\colon  |\lambda|\geq
+||\mathcal B_k^*||\tag{2.3}
+\]
+\medskip
+
+\noindent
+{\bf{2.4 The operator $\widehat{T_0}$}}.
+Recall that $T_1$ is closed and  extends $T_0$ in the
+sense that
+its graph contains that of $T_0$.
+Taking the closure of $\Gamma(T_0)$ we get the densely  defined and 
+closed operator
+$\widehat{T_0}$ whose graph is contained in $\Gamma(T_1)$.
+When $f$ are $C^\infty$-functions we have 
+$T_0(f)=\widehat{T_0}(f)= T_1(f)$
+so (2.3)  holds with
+$T_1$ replaced by $\widehat{T_0}$.
+Since
+$C^\infty[m]$
+is dense in $H^{(k)}[m]$
+the inequality below holds for every $g\in\mathcal D(\widehat{T_0})$:
+\[
+||\widehat{T_0}(g)+\lambda\cdot g||_{(k)}\geq \frac{|\lambda|}{2}\cdot ||
+||g||_{(k)}\quad\colon 
+ |\lambda|\geq
+||\mathcal B_k^*||\tag{2.4}
+\]
+Since $\widehat{T_0}$ is closed it follows  that
+the range of  
+$\widehat{T_0}(g)+\lambda\cdot E$
+is closed when 
+$ |\lambda|\geq||\mathcal B_k^*||$.
+\medskip
+
+\noindent
+{\bf{2.5 Density of the range.}}
+From now on $ |\lambda|\geq||\mathcal B_k^*||$.
+Recall from the general material in ¤ XX that the adjoint of
+$\widehat{T_0}$ is equal to $T_0^*$.
+If the  range of
+$\widehat{T_0}(g)+\lambda\cdot E$
+is not dense there exists $0\neq g\in H^{(k)}[m]$
+such that
+\[
+\langle
+\widehat{T_0}(f)+\lambda\cdot f,g\rangle_{(k)}=0
+\quad\colon f\in C^\infty[m]
+\]
+Here $\widehat{T_0}(f)= P(f)$ for $C^\infty$-functions
+and  (x) gives
+\[
+|\langle
+P(f),g\rangle_{(k)}|\leq |\lambda|\cdot
+|\langle
+f,g\rangle_{(k)}|
+\]
+It follows that $g\in\mathcal D(T_0^*)$
+so (i) in gives
+\[
+\langle
+f,T_0^*(g)\rangle_{(k)}+
+\lambda\cdot 
+\langle
+f,g\rangle_{(k)}=0
+\]
+This hold for all $f\in C^\infty[m]$
+and since $\lambda$ is real we get
+hence
+\[
+T_0^*(g)+\lambda\cdot g=0
+\]
+Now the operator equation in Proposition
+XX gives
+\[
+T_1(g)=\lambda\cdot g+\mathcal B_k^*(g)
+\]
+At this stage we assume that $k$ is so large that the Sobolev inequslity
+entails that
+$H^{(k)}[m]$
+consists of vector-valued functions of class $C^1$ at least
+which in addition are peridic on the whole torus 
+$T^{n+1}$.
+Now (xx) means that
+\[
+P(g)=\lambda\cdot g+\mathcal B_k^*(g)
+\]
+From this we shall prove that $g=0$ if
+the real number $\lambda$ is sufficiently large.
+To attin this we consider the function
+\[ 
+G(s)=\int_{T^n}\, |g(x,s)|^2\, dx
+\]
+It follows that
+\[
+\frac{dG}{ds}=
+2\cdot \mathfrak{Re}\, \int_{T^n}\, \partial_s(g)(x,s)
+\cdot \overline{g(x,s)}\, \, dx
+\]
+Then conclude...
+
+
+\bigskip
+
+\noindent 
+{\bf{2.6 Conclusive results.}}
+If $k\geq xxx$ we have proved that there exists
+a positive constant $\mu_k$
+such that if $|\lambda|\geq \mu_l$
+then the densely defined operator $\lambda\cdot E-\widehat{T_0}$
+is surjective and at the same time
+one has the inequality XX.
+This means that
+there exists the resolvent operator $R(\lambda;\overline{T_0})$
+for such real $\lambda$.
+Keeping $k$ fixed we get the closed
+spectrum of $\widehat{T_0}$ which by the general result in ¤ xx
+is  a closed subset of ${\bf{C}}$.
+Since $\widehat{T_0}$ is an unbounded
+operator one
+cannot expect that the spectrum is compact.
+Moreover in contrast to the more favourable cases for  elliptic equations
+the resolvent operators are in general not compact.
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{¤ 1.Differential inequalities.}}
+
+\bigskip
+
+\noindent
+Let $M(s)$ be a non-negative real-valued continuous function
+on a closed interval $[0,s^*]$.
+To each $0\leq s<s^*$
+we set
+\[
+d_M^+(s)=\limsup_{\Delta s\to 0}\, \frac{M(s+\Delta s)-M(s)}{\Delta s}
+\]
+where $\Delta s$ are positive during the limit.
+\medskip
+
+\noindent
+{\bf{1.1 Proposition.}} \emph{If there exists a real number
+$B$ such that
+$d_M^+(s)\leq B\cdot M(s)$ holds in $[0,s^*)$ then }
+\[ 
+M(s)\leq M(0)\cdot e^{Bs}\quad\colon 0<s\leq s^*
+\]
+\medskip
+
+\noindent
+The proof of this result is left as an exercise to the reader.
+The hint is to consider the function $N(s)= M(s)e^{-Bs}$
+and show that $d^+_N(s)\leq 0$ for all $s$.
+Notice that $B$ is an arbitrary real number, i.e. it may also be $<0$.
+
+\medskip
+
+\noindent
+More generally, let $k(s)$ be some  non-decreasing continuous function
+with $k(0)=0$. 
+suppose that
+\[
+d^+_M(s)\leq B\cdot M(s)+k(s)\quad \colon 0\leq s<s^*
+\]
+Now the reader may verify that
+\[
+M(s)\leq M(0)\cdot e^{Bs}+\int_0^s\, k(t)\, dt\tag{1.1.1}
+\]
+
+
+\medskip
+
+
+\noindent
+Next, consider
+a product set
+$\square=[0,\pi]\times [0,s^*]$
+where $0\leq x\leq\pi$ and consider functions
+$g(x,s)$ which are periodic in $x$, i.e.
+\[ 
+g(0,s)= g(\pi,s)\quad\colon 0\leq s\leq s^*
+\]
+A $C^1$-function
+$g$ is  periodic $C^1$-function when 
+$g$  and the partial derivatives
+$\partial_s(g)$ and $\partial_x(g)$  are  periodic in
+$x$.
+\medskip
+
+\noindent
+{\bf{1.2 Theorem.}}
+\emph{Let $g$ be a $C^1$-function which satisfies the PDE-equation}
+\[
+\partial_s(g)(x,s)= a\cdot \partial_x(g)+ b\cdot g\tag{*}
+\]
+\emph{in $\square$ where $a$ and $b$ are 
+$x$-periodic real-valued continuous functions. Set}
+\[
+M_g(s)= \max_x\, |g(x,s)|\quad\colon \,B=\max_{x,s}\, |b(x,s)|
+\]
+\emph{Then one has the inequality}
+\[
+M_g(s)\leq M_g(0)\cdot e^{Bs}
+\]
+
+
+\noindent
+\emph{Proof.}
+Consider some $0<s<s^*$ and let $\epsilon>0$.
+Put
+\[ 
+m^*(s)=\{ x\,\colon\, g(x,s)= M_g(s)\}
+\]
+The  continuity of $g$
+entials that the function $M(s)$ is continuous and
+the sets $m^*(s)$ are compact.
+If $x^*\in m^*(s)$ the periodicity of
+the
+$C^1$-function $x\mapsto g(x,s)$
+entails that
+$\partial_x(x^*,s)=0$ and (*) gives
+\[
+\partial_s(g)(x,s)=b(x,s)g(x,s)\quad\colon x\in m^*(s)
+\]
+Next, let $\epsilon>0$. We find an open neighborhood $U$
+of $m^*(s)$
+such that
+\[
+|\partial_x(g)(x,s)|\leq \epsilon\quad\colon x\in U
+\]
+Now there exists
+$\delta>0$ such that
+\[
+|g(x,s)|\leq M(s)-2\delta\quad\colon x\in [0,\pi]\setminus U
+\]
+Continuity gives  some
+$\rho>0$ such that
+if $0<\Delta s<\rho$ then  the inequalities below hold:
+\[
+|g(x,s+\Delta s)|\leq M(s)-\delta\quad\colon x\in [0,\pi]\setminus U
+\quad\colon\,M(s+\Delta s)>M(s)-\delta\tag{i}
+\]
+\[
+M(s+\Delta s)\leq M(s)+\epsilon\quad \colon\,
+|\partial_x(g)(x,s+\Delta s)|\leq 2\epsilon \quad\colon x\in m^*(s)\tag{ii}
+\]
+
+\noindent
+If $0<\Delta s<\rho$ we see that (i) gives
+$x\in m^*(s+\Delta s)\subset U$
+and for such $x$-values 
+Rolle's mean-value theorem and the PDe-equation give
+\[
+M_g(x,s+\Delta s)- g(x,s)=\Delta s\cdot \partial_s(g(x,s+\theta\cdot \Delta s)=
+\] 
+\[
+\Delta s\cdot \bigl[a(x,s+\Delta s)\cdot
+\partial_x(g)(x+\theta\cdot \Delta s)+
+b(x,s+\Delta s)\cdot
+g(x,s+\theta\cdot \Delta s)\bigr]\tag{iii}
+\]
+Let  $A$ be the maximum norm of $|a(x,s)|$ taken over
+$\square$.
+Since $|g(x,s)|\leq M(s)$
+the triangle inequality and (iii) give
+\[ 
+M(s+\Delta s)\leq M(s)+\Delta s[\cdot A\cdot 2\epsilon+
+B\cdot M(s+\theta\cdot \Delta s)]
+\]
+Since the function $s\mapsto M(s)$ is continuous
+it follows that
+\[
+\limsup_{\Delta s\to 0}\,
+\frac{M(s+\Delta s)-M(s)}{\Delta s}\leq
+A\cdot 2\epsilon+ BM(s)
+\]
+Above $\epsilon$ can be arbitrary small
+and hence
+\[ d^+(s)\leq B\cdot M(s)
+\]
+Then Proposition 1.1 gives (*) in the theorem.
+\medskip
+
+
+\noindent
+{\bf{1.3 Higher order derivatives.}}
+Supose that $g$ is a $C^2$-function satisfying the PDE-equation
+(*) where  $a$ and $b$ have a continuous partial $x$-derivative.
+Set  $h=\partial_x(g)$. Since the differential operators
+$\partial_x$ and $\partial_s$ commute
+we obtain
+\[
+\partial_s(h)=\partial_x(a\cdot h)+
+\partial_x(b\cdot g)=
+a\cdot\partial_xh+(\partial_x(a)+b)h+\partial_x(b)g\tag{1.3.1}
+\]
+
+
+\medskip
+
+\noindent
+{\bf{$L^2$-inequalities.}}
+Let $g(x,s)$ be a $C^1$-function satisfying (*)
+in
+Theorem 1.2.
+Set
+\[ 
+J_g(s)=\int_0^\pi\, g^2(x,s)\, dx
+\]
+Diffeernation with respect to $s$ and (*) give
+\[
+\frac{dJ_g}{ds}=2\cdot \int_0^\pi\, (a\partial_s(g)\cdot \partial g+ b\cdot g)\,dx
+\]
+By periodicity $\int_0^\pi\, \partial_x(ag^2)\, dx=0$
+which entials that the right hand side becomes
+\[
+\int_0^\pi\, (-\partial_x(a)+b)\cdot g^2\, dx
+\]
+So if $K$ is the maximum norm of
+$-\partial_x(a)+b$ over $\square$ it follows that
+\[
+\frac{dJ_g}{ds}(s)\leq K\cdot J(s)
+\]
+Hence Theorem xx gives
+\[
+\int_0^\pi\, g^2(x,s)\, dx\leq e^{Ks}\cdot
+\int_0^\pi\, g^2(x,0)\, dx\quad\colon 0<s\leq s^*
+\]
+Integration with respect to $s$ entails that
+\[ 
+\iint_\square\, g^2(x,s)\, dxds\leq
+\int_0^{s^*}\, e^{Ks}\,ds\cdot
+\int_0^\pi\, g^2(x,0)\, dx
+\]
+This, the $L^2$-integral of $x\to g(x,0)$
+majorizes both the area integral and each slice integral when
+$0<s\leq s^*$.
+\medskip
+
+\noindent
+{\bf{Higher order derivatives.}}
+Same procedure gives majorisations of these
+integrals when
+higher order $x$-derivatives are inserted.
+Simialrly we regard PDE-equations when $g$
+is replaced by $h=\partial_s(g)$ and so on.
+
+
+\newpage
+
+\centerline{\bf{¤ 2. A boundary value equation}}
+\bigskip
+
+\noindent
+Let $a(x,s)$ and $b(x,s)$ be real-valued $C^\infty$-functions on
+$\square$ which are periodic in $x$. Consider the PDE-operator
+\[ 
+P=\partial_s-a\cdot \partial_x-b
+\]
+Given a periodic $C^1$-function $f(x)$ on $[0,\pi]$
+we seek a function $g(x,s)$ in $\square$ which satisfies $P(g)=0$ and the
+initial condition
+\[ 
+g(x,0)= f(x)
+\]
+Above we  require that
+$g$ is at least of class $C^1$.
+From ¤ xx we see that $g$ is unique if it exists.
+There remains to prove existence.
+\medskip
+
+\noindent
+{\bf{2.1 Theorem.}}
+\emph{For every positive integer $p$ and each
+periodic $f\in C^p[0,\pi]$
+there exists a unique periodic $g\in C^p(\square)$ 
+where $P(g)=0$ and $g(x,0)= f(x)$.}
+
+\medskip
+
+\noindent
+The proof requires several steps and 
+employs Hilbert space methods.
+To each non-negtive integer $k$
+we get the complex Hilbert space
+$\mathcal H^{(k)}$
+from ¤ xx, i.e. we complete  the space
+of complex-valued
+$C^k$-functions on 
+$\square$ which are periodic with respect to $x$.
+By the Soboloev inequality from ¤ xx
+we know that if $k\geq 2$
+every function in
+$\mathcal H^{(k)}$ is continuous and more generally
+one has the inclusion
+\[
+\mathcal H^{(k)}\subset C^{k-2}(\square)\quad\colon k\geq 3
+\]
+Moreover, the  first order PDE-operator $P$ maps
+$\mathcal H^{(k+1)}$ into
+$\mathcal H^{(k)}$.
+From now on we only consider $k$-integers which are $\geq 2$.
+On the periodic $x$-interval $[0,\pi]$ we get the Hilbert spaces
+$\mathcal H^k[0,\pi]$.
+The result in ¤ xx shows that
+if
+$f(x)\in\mathcal H^k[0,\pi]$
+is such that there exists some
+$F(x,s)\in\mathcal H^{(k)}$
+such that $P(F)=0$ and $F(x,0)= f(x)$ then
+$F$ is unique and
+there exists a constant $C$ which only depends upon the
+$C^\infty$-functions $a$ and $b$ such that
+\[
+||F||_k\leq C\cdot ||f||_k
+\]
+where we have taken norms in
+$\mathcal H^{(k)}$
+$\mathcal H^k[0,\pi]$.
+Moreover (*) shows that $C$ can be chosen such that
+the
+function $f^*(x)=F(x,s^*)$ satisfies
+\[
+||f^*||_k\leq C\cdot ||f||_k
+\]
+Let $\mathcal D_k(P)$ be the set of all
+$f(x)\in\mathcal H^k[0,\pi]$ for which $F(x,s)$ above exists.
+\medskip
+
+\noindent
+{\bf{2.2 Density Lemma.}}
+\emph{If
+$\mathcal D_k(P)$  is dense in 
+$\mathcal H^k[0,\pi]$ then it is equal to this Hilbert space.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $f$ be in
+$\mathcal H^k[0,\pi]$ and by density we find a sequence
+$\{f_n\}$ in 
+$\mathcal D_k(P)$ where $||f_n-g||_k\to 0$.
+By xx above we have
+\[ 
+||F_n-F_m||_k\leq C||f_n-f_m||_k
+\]
+hence $\{F_n\}$ is a Cauchy sequence in
+the Hilbert space $\mathcal H^{(k)}$
+and converges to a limit $F$.
+Since each $P(F_n)=0$ it follows that
+$P(F)=0$
+and it is clear that the continuous boundary value function
+$F(x,0)=f(x)$ which entails that
+$f$ belongs to 
+$\mathcal D_k(P)$.
+\medskip
+
+\noindent
+{\bf{2.3 The operators $S_k$.}}
+To each $f\in \mathcal D_k(P)$ we get $F(x,\pi)$
+in $\mathcal H^k[0,\pi]$ and  set
+\[ 
+S_k(f)=F(x,\pi)
+\]
+So here the domain of definition of $S_k$ is equal to
+$\mathcal D_k(P)$ and by (xx) above there exists a conatant
+$M_k$ such that
+\[
+||S_k(f)||\leq M_k\cdot ||f||_k\quad\colon f\in  \mathcal D_k(P)
+\]
+\medskip
+
+\noindent
+{\bf{2.4 Proposition.}}
+\emph{For each $k$ there exists some
+$\alpha(k)<0$ such that
+the range of the operator $E-\alpha\cdot S_k$ contains
+all periodic $C^\infty$-functions on
+$[0,\pi]$.}
+\medskip
+
+\noindent
+We prove Propostion 2.4 in ¤ xx below. Let us
+now show that it gives the density of
+$\mathcal D_k(P)$.
+Namely, if $\mathcal D_k(P)$ fails to be dense there exists
+a non-zero $f_0\in\mathcal D_k(P)$ which is
+$\perp$ to $\mathcal D_k(P)$.
+In Proposition 2.4 we choose $0<\alpha\leq \alpha(k)$ so small that
+we also have
+\[
+\alpha<M_k/2\tag{i}
+\]
+Since periodic $C^\infty$-functions are dense in
+$\mathcal H^k[0,\pi]$
+it follows from Proposition 2.4 that there exists a sequence
+$\{h_n\}$ in $\mathcal D_k(P)$
+such that
+\[ 
+\lim_{n\to \infty}\, ||h_n-\alpha\cdot S_k(h_n)-f_0||_k\to 0\tag{ii}
+\]
+It follows that
+\[
+\langle f_0,f_0\rangle=1=\lim\, 
+\langle f_0,h_n-\alpha\cdot S_k(h_n)\rangle=
+-\alpha\cdot \lim\, \langle f_0,S_k(h_n)\rangle\tag{iii}
+\]
+Next, the triangle inequality and (ii) give
+\[
+||h_n||_k\leq 1+\alpha\cdot ||(S_k(h_n)||
+\leq 1+1/2\cdot||h_n||\implies
+||h_n||_k\leq 2\tag{iv}
+\]
+Funally, by the Cauchy-Schwarz inequality the absolute vašlue in
+the right hand side of (iii) is majorized by
+\[
+\alpha\cdot M_K\cdot 2<1
+\] 
+which contradicts (iii).
+Hence the orthogonal complement of $\mathcal D_k(P)$ is zero
+which proves the requiested density and by the above
+we get the following conclusive result:
+\medskip
+
+\noindent
+{\bf{2.5 Theorem.}}
+\emph{If $k\geq 2$
+and $f(x)\in \mathcal H^k[0,\pi]$
+there exists a unique $F(x,s)\in \mathcal H^{(k)}$
+such that $F(x,0)= f(x)$.}
+
+
+
+
+
+\newpage
+
+\centerline{\bf{¤ 3. A class of inhomogeneous PDE-equations.}}
+
+
+\medskip
+
+\noindent
+Before Theorem 3.1 is announced we introduce some notations.
+Put
+\[ 
+\square =\{ 0\leq x\leq \pi\}\times
+\{0\leq s\leq 2\pi\}
+\]
+We shall consider doubly periodic functions
+$g(x,s)$ on $\square$, i.e. 
+\[
+g(\pi,s)= g(0,s)\quad\colon g(x,0)= g(x,2\pi)
+\]
+If $k\geq 0$ we denote by $C^k(\square)$ the space of $k$-times
+doubly-periodic continuously differentiable functions. 
+If 
+$g\in C^k(\square)$
+we set
+\[ 
+||g||^2_{(k)}= \sum_{j,\nu}\, \int_\square
+\bigl|\frac{\partial^{j+\nu}g}{\partial x^j\partial s^\nu}(x,s)\bigr|^2\, dxds
+\]
+with the double sum extended  pairs  $j+\nu\leq k$.
+This gives the complex Hilbert space $\mathcal H^{(k)}$
+after a completion of $C^k(\square)$ with respect
+to the norm  above.
+Recall from ¤ xx that every function $g\in\mathcal H^{(2)}$
+is automatically continuous and doubly periodic  on
+the closed square.
+More generally, if $k\geq 3$ 
+each
+$g\in\mathcal H^{(k)}$ has continuous and doubly periodic derivatives
+up to order $k-2$.
+Next, consider a first order PDE-operator
+\[
+P=\partial_s-a(x,s)\partial_x-b(x,s)
+\]
+where $a$ andÊ$b$ are real-valued doubly 
+periodic $C^\infty$-functions.
+It is clear that
+$P$ maps
+$\mathcal H^{(k)}$ into $\mathcal H^{(k+1)}$
+for every $k\geq 2$.
+Keeping $k\geq 2$ fixed we set
+\[
+\mathcal D_k(P)=\{g\in\mathcal H^{(k)}\,\colon\,
+P(g)\in\mathcal H^{(k)}\}
+\]
+Since $C^\infty(\square)$
+is dense in
+$\mathcal H^{(k)}$ this yields for each $k\geq 2$ a densely defined operator
+\[
+P\colon \mathcal D_k(P)\to \mathcal H^{(k)}\tag{i}
+\]
+In
+$\mathcal H^{(k)}\times \mathcal H^{(k)}$ we get the graph
+\[
+\Gamma_k=\{(g,P(g)\colon\, g\in\mathcal D_k(P)\}
+\]
+Since $P$ is a differential operator the general result in
+¤ xx entails that
+$\Gamma_k$ is a closed subspace so the densely defined operator in
+(i)  has a closed graph. Thus. for each
+$k\geq 2$ we have a densely defined linear operator
+and closed operator on $\mathcal H^{(k)}$
+denoted by $\mathcal T_k$.
+So its domain of definition  $\mathcal D(T_k)= \mathcal D_k$.
+Next, we consider the graph
+\[
+\gamma_k=\{(g,P(g)\colon\, g\in C^\infty(\square)\}
+\]
+This is a subspace of
+$\Gamma_k$ and  the closure $\bar\gamma_k$
+yields the graph of another densely defined linear operator
+denoted by
+$T_k$.
+We remark that the inclusion
+\[
+\mathcal D(T_k)\subset\mathcal D(\mathcal T_k)
+\] 
+in general is strict.
+Let $E$ be the identity operator. With these notations one has
+
+\medskip
+
+\noindent 
+{\bf{3.1  Theorem.}}
+\emph{For each integer $k\geq 2$ there exists
+a positive real number $\rho(k)$ such that
+$T_k-\lambda\cdot E$ is surjective on
+$\mathcal H^{(k)}$ for every $\lambda>\rho(k)$
+and its kernel is zero.}
+\medskip
+
+
+\noindent
+{\bf{3.2 Remark.}}
+The result is  remarkable  since $T_k$ is only densely defined
+while Theorem 3.1 asserts that
+\[ 
+T_k-\lambda\cdot E\colon \mathcal D_k\to \mathcal H^{(k)}
+\] 
+is bijective.
+Hence 
+the closed and densely defined operator $T_k$
+has a non-empty resolvent set
+so by the general results in ¤¤ x there exists
+resolvent operators $R_k(\lambda)$ defined outside the
+closed specrum $\sigma(T_k)$
+where the composed operators 
+\[
+(\lambda\cdot E-T_k)\circ R_k(\lambda)=E
+\]
+for all $\lambda$ outside $\sigma(T_k)$.
+The determination of these spectra
+is unclear and most likely one needs extensive numerical studies
+to grasp these closed sets which in addition depend upon $k$.
+\medskip
+
+\noindent
+Next,R
+recall from ¤ xx
+that the closed and densely defined operator
+$T_k$ has an adjoint $T_k^*$.
+A crucial step in the proof of Theorem 3.1 is the following:
+\medskip
+
+\noindent
+{\bf{3.3  Proposition.}}
+\emph{One has the equality $\mathcal D(T_k^*)= \mathcal D_k$
+and there exists a bounded self-adjoint operator
+$B_k$ on
+ $\mathcal H^{(k)}$ such that}
+ \[
+ T_k^*=-\mathcal T_k+B_k
+ \]
+ 
+
+\medskip
+
+
+
+
+\centerline{\emph{Proof of Proposition 3.3}}
+\bigskip
+
+
+\noindent
+Keeping $k\geq 2$ fixed we set $\mathcal H=\mathcal H^{(k)}$.
+For each pair $g,f$ in $\mathcal H$
+their inner product is defined by
+\[
+\langle f,g\rangle=
+ \sum\, \int_\square
+\frac{\partial^{j+\nu}f}{\partial x^j\partial s^\nu}(x,s)
+\cdot
+\overline{\frac{\partial^{j+\nu}g} {\partial x^j\partial s^\nu}}(x,s)
+\, dxds
+\]
+where the sum is taken when
+$j+\nu\leq k$.
+Introduce the differential operator
+\[
+\Gamma= \sum_{j+\nu\leq  k}\, (-1)^{j+\nu}\cdot \partial_x^{2j}\cdot \partial_s^{2\nu}
+\]
+Partial integration gives
+\[
+\langle f,g\rangle=\int_\square\, f\cdot \Gamma(\bar g)\, dxds=
+\int_\square\, \Gamma(f)\cdot\bar g\, dxds
+\quad\colon\, f,g\in C^\infty
+\tag{i}
+\]
+Now we consider the operator
+$P=\partial_s-a\cdot\partial_x-b$ and 
+get 
+\[
+\langle P(f),g\rangle=\int_\square\, P(f)\cdot \Gamma(\bar g)\,dxds\tag{ii}
+\]
+Partial integration identifies (ii) with
+\[
+-\int_\square\, f\cdot \bigl(\partial_s-\partial_x(a)-a\cdot\partial_x-b)\circ\Gamma(\bar g)\,dxds\tag{iii}
+\]
+
+
+\noindent
+{\bf{1.1 Exercise.}}
+In (iii)  appears the composed differential operator
+\[
+\partial_s-\partial_x(a)-a\cdot\partial_x-b)\circ\Gamma
+\]
+Show that in the ring of differential operators with
+$C^\infty$-coefficients this differential operator can be written
+in the form
+\[
+\Gamma\circ(\partial_s-a\cdot\partial _x-b)+Q(x,s,\partial_x,\partial_s)
+\]
+where $Q$ is a differential of order $\leq 2k$ 
+with coefficients in $C^\infty(\square)$.
+Conclude from the above that
+\[
+\langle Pf,g\rangle=-
+\langle f,Pg\rangle+\int_\square\ f\cdot Q(\bar g)\,dxds\tag{1.1.1}
+\]
+\medskip
+
+\noindent
+{\bf{1.2 Exercise.}}
+With $Q$ as above we have a bilinear form which sends a pair
+$f,g$ in $C^\infty(\square)$ to 
+\[
+\int_\square\ f\cdot Q(\bar g)\,dxds\tag{1.2.1}
+\]
+Use partial integration and
+the
+Cauchy-Schwarz inequelity to show that
+there exists a conatant $C$ which depends on $Q$ only such that
+the absolute value of (1.2.1) is majorized by
+$C_Q\cdot ||f||_k\cdot ||g||_k$.
+Conclude that
+there exists a bounded linear operator 
+$B_k$ on $\mathcal H$ such that
+\[
+\langle f,B_k(g)\rangle=\int_\square\ f\cdot Q(\bar g)\,dxds\tag{1.2.2}
+\]
+
+\medskip
+
+\noindent
+{\bf{1.3 Proof that $B_k$ is self-adjoint}}
+From the above we have
+\[
+\langle Pf,g\rangle=
+-\langle f,Pg\rangle+
+\langle f,B_k(g)\rangle\tag{1.3.1}
+\]
+
+\noindent
+Keeping $f$ in $C^\infty(\square)$ we notice that
+$\langle f,B_k(g)\rangle$ is defined for every
+$g\in\mathcal H$.
+From this the reader can check that (1.3.1) remains valid when
+$g$ belongs to $\mathcal D(\mathcal T_k)$
+which means that
+\[
+\langle Pf,g\rangle=
+-\langle f,\mathcal T_kg\rangle+
+\langle f,B_k(g)\rangle\quad\colon f\in C^\infty(\square)\tag{1.3.2}
+\]
+
+\medskip
+
+\noindent
+Moreover, when both $f$ and $g$ belong to $C^\infty(\square)$
+we can
+reverse their positions in (*) which gives
+\[
+\langle Pg,f\rangle=
+-\langle g,Pf\rangle+
+\langle g,B_k(f)\rangle\tag{1.3.3}
+\]
+Since $a$ and $b$ are real-valued it is clear that
+\[
+\langle Pg,f\rangle=-\langle f,Pg\rangle\tag{1.3.4}
+\]
+It follows that
+\[
+\langle f,B_k(g)=\langle g,B_k(f)\quad\colon f,g\in C^\infty(\square)\tag{1.3.5}
+\]
+Since this hold for all pairs of $C^\infty$-functions and
+$B_k$ is a bounded linear operator on
+$\mathcal H$ the density of $C^\infty(\square)$ entails that
+$B_k$ is a bounded self-adjoint operator
+on $\mathcal H$.
+
+
+
+\medskip
+
+\noindent
+{\bf{1.4  The equality 
+$\mathcal D(T_k^*)=
+\mathcal D_k$.}}
+The density of $C^\infty(\square)$ in $\mathcal H$
+entails that  a function $g\in \mathcal H$ belongs to $\mathcal D(T_k^*)$  
+if and only if there exists a constant $C$ such that
+\[
+|\langle Pf,g\rangle|\leq C\cdot ||f||\quad\colon f\in C^\infty(\square)\tag{1.4.1}
+\]
+Since $B_k$ is a bounded operator,
+(1.3.2) gives the inclusion
+\[
+\mathcal D_k\subset
+\mathcal D(T_k^*)\tag{1.3.3}
+\]
+To prove the opposite inclusion we use that
+the $\Gamma$-operator is elliptic.
+If $g\in \mathcal D(T_k^*)$
+we have from (i) in ¤ 1.1:
+\[
+\langle Pf,g\rangle=\langle f,T_k^*g\rangle=
+\int\, \Gamma(f)\cdot \overline{T_k^*(g)}\, dxds
+\quad\colon f\in C^\infty(\square)
+\]
+Similarly
+\[
+\langle f,B_k(g)\rangle=
+\int\, \Gamma(f)\cdot \overline{B_k(g)}\, dxds
+\]
+Treating $\mathcal T_k(g)$ as a distribution the equation
+(1.3.2)  entails that
+the elliptic operator $\Gamma$ annihilates
+$T^*_k(g)-\mathcal T_k(g)+B_k(g)$.
+Since both
+$T^*_k(g)$ and $B_k(g)$ belong to $\mathcal H$
+this implies by the general result in ¤ xx that
+$\mathcal T_k(g)$  belongs to $\mathcal H$
+which proves the 
+requested equality (1.4) and at the same time the operator equation
+\[
+T_k^*=-\mathcal T_k(g)+B_k\tag{1.4.2}
+\] 
+
+\medskip
+
+\noindent
+{\bf{1.5 An inequality.}}
+Let $f\in C^\infty(\square)$
+and $\lambda$ is a positive real number.
+Then
+\[
+||\mathcal T_k(f)-\frac{1}{2}B_k(f)-\lambda\cdot f||^2=
+\]
+\[
+||\mathcal T_k(f)-\frac{1}{2}B_k(f)||^2+\lambda^2\cdot ||f||^2-
+\lambda\bigl(\langle \mathcal T_k(f)-\frac{1}{2}B_k(f),f\rangle+
+\langle f, \mathcal T_k(f)-\frac{1}{2}B_k(f)\rangle\bigr)
+\]
+The last term is $\lambda$ times
+\[
+\langle \mathcal T_k(f),f\rangle+
+\langle f,\mathcal T_k(f)\rangle-\langle f,B_kf\rangle\tag{i}
+\]
+where we used that $B_k$ is symmetric.
+Now $T_k=\mathcal T_k$ holds
+on $C^\infty(\square)$ and the definition of adjoint
+operators give
+\[
+\langle \mathcal T_k(f),f\rangle=
+\langle f,T_k^*\rangle\tag{ii}
+\]
+Then (1.4.2 ) implies that (i) is zero and hence we have
+proved 
+\[
+||T_k(f)-\frac{1}{2}B_k(f)-\lambda\cdot f||^2=
+\lambda^2\cdot ||f||^2+||T_k(f)-\frac{1}{2}B_k(f)||^2\geq \lambda^2\cdot ||f||^2\tag{iii}
+\]
+From (iii)  and the triangle inequality for norms we obtain
+\[
+||T_k(f)-\lambda\cdot f||\geq \lambda\cdot ||f||-
+\frac{1}{2}||B_k(f)||\tag{iv}
+\]
+Now $B_k$ has a finite operator norm and if
+$\lambda\geq ||B_k||$ we see that 
+\[
+||T_k(f)-\lambda\cdot f||\geq
+\frac{\lambda}{2}\cdot ||f||\tag{v}
+\]
+
+
+\noindent
+Finally, since $C^\infty(\square)$ is dense in $\mathcal D(T_k)$
+it is clear that (v) gives
+\[
+||T_k(f)-\lambda\cdot f||\geq
+\frac{\lambda}{2}\cdot ||f||\quad\colon f\in\mathcal D(T_k)\tag{1.5.1}
+\]
+\medskip
+
+\centerline{\emph{¤ 2. Proof of Theorem 3.1}}
+\bigskip
+
+\noindent
+Suppose we have found some
+$\lambda^*\geq \frac{1}{2}\cdot ||B||$
+such that
+$T_k-\lambda$  has a dense range in $\mathcal H$
+for every $\lambda\geq \lambda^*$.
+If this is so we fix $\lambda\geq \lambda^*$
+ and take some
+$g\in \mathcal H$. The hypothesis gives a
+sequence $\{f_n\in \mathcal D(T_k)$ such that
+\[
+\lim_{n\to\infty}\,||T(f_n)-\lambda\cdot f_n-g||=0
+\]
+In particular $\{||T_k(f_n)-\lambda\cdot f_n\}$ is a Cauchy sequence 
+in $\mathcal H$
+and (1.5.x )  implies that $\{f_n\}$ is a Cacuhy sequence 
+in the Hilbert space $\mathcal H$
+and hence converges to
+a limit $f_*$. Since the operator $T_k$ is closed we conclude that
+$f_*\in\mathcal D(T)$ and we get  the equality
+\[
+T(_kf_*)-\lambda\cdot f_*=g
+\]
+Finally, since the graph of $T$ is contained in $T_1$
+we have the requested equation 
+\[
+P(f_*)-\lambda\dot f_*=g
+\]
+Thus finishes the proof of Theorem 1.6  provided we
+have established the existence of $\lambda_*$ above
+\medskip
+
+\noindent{\bf{2.1 Density of the range.}}
+By the construction of adjoint operators the range of $T_k-\lambda\cdot E$
+fails to be dense
+if and ony if
+$T_k^*-\lambda$ has a non-zero kernel.
+So assume that
+\[ 
+T_k^*(f)-\lambda\cdot f=0\tag{i}
+\]
+for some $f\in\mathcal D(T_k^*)$ which is not identically zero.
+Notice that $T_k$ sends real-vašlued functions into real-valued
+functions. So above we can assume that
+$f$ is real-valued and 
+also  assume that
+$f$ is normalised so that
+\[
+\int_\square f^2(x,s)\, dxds=1
+\]
+By  (**) the equation (xx) gives
+\[
+\mathcal T_k(f)+\lambda\cdot f-B(f)=0\tag{ii}
+\]
+Let us then consider
+the function
+\[ 
+V(s)= \int_0^\pi\, f^2(x,s)\, dx
+\]
+Recall from ¤ xx that the $\mathcal H$-function $f$ is of class
+$C^1$.
+Now
+\[ 
+\frac{1}{2}\cdot V'(s)=  \int_0^\pi\, f\cdot \frac{\partial f}{\partial s}\, dx\tag{iii}
+\]
+By (ii) we have
+\[
+ \frac{\partial f}{\partial s}-
+a(x)\frac{\partial f}{\partial x}-b\cdot f=B(f)-\lambda\cdot f
+\]
+Hence the right hand side in (iii) becomes
+\[
+-\lambda\cdot V(s)+ \int_0^\pi\, f(x,s)\cdot B(f)(x,s)\,dx+
++ \int_0^\pi\,a(x,s)\cdot f(x,s)\cdot \frac{\partial f}{\partial x}(x,s)\,dx
+\]
+By partial integration the last term is equal to
+\[
+-\frac{1}{2}\int_0^\pi\, \partial_x(a)(x,s)\cdot f^2(x,s)\,dx
+\]
+Set
+\[
+M=\frac{1}{2}\cdot \max_{(x,s )\in\square}\,|\partial_x(a)(x,s)|
+\]
+Then we get the inequality
+\[
+\frac{1}{2}\cdot V'(s)\leq
+(M-\lambda)\cdot V(s)+\int_0^\pi\, f(x,s)\cdot B(f)(x,s)\,dx
+\]
+Set
+\[
+ \Phi(s)=\int_0^\pi\, |f(x,s)|\cdot |B(f)(x,s)|\,dx
+\]
+Since the $L^2$-norm of $f$ is one
+the Cauchy-Schwarz inequality 
+gives
+\[
+\int_{-\pi}^\pi \Phi(s)\,ds \leq
+\sqrt{\int_\square\,  |B(f)(x,s)|^2\, dx ds}\leq ||B(f)||
+\]
+where the last equality follows since
+the  squared integral of $B(f)$ is majorized by its squared
+norm in $\mathcal H$.
+When $\lambda>M$ it follows from  (xx) that
+\[
+(\lambda-M)\cdot V(s)+
+\frac{1}{2}\cdot V'(s)\leq\Phi(s)
+\]
+Next, since $f$ is double periodic we have  $V(-\pi)= V(\pi)$
+so after an integration (xx) gives
+\[
+(\lambda-M)\cdot \int_\pi^\pi V(s)\, ds=\int_{-\pi}^\pi \Phi(s)\,ds \leq ||B(f)||
+\]
+By (xx) we have
+$\int_\pi^\pi V(s)\, ds=1$ which gives  a contradiction if
+$\lambda>M+||B(f)||$.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+Set
+\[ 
+\tau=\min_f\,||B(f)||
+\] 
+with the minimum taken over
+funtions $f\in\mathcal D(T_0^*)$ whose $L^2-$integral is normalised by
+(xx). The proof has shown that
+the kernel of $T_0^*-\lambda$ is zero for all $\lambda>M+\tau$.
+
+\newpage
+
+
+\centerline{\bf{A special solution.}}
+\bigskip
+
+
+\noindent
+Let $f(x)$ be a periodic $C^\infty$-function 
+on $[0,\pi]$.
+Put
+\[ 
+Q= a(x,s)\cdot \frac{\partial}{\partial x}+ b(x,s)
+\]
+Let  $\eta(s)$ be a $C^\infty$-function of $s$ and 
+$m$ a postive integer
+If $\lambda>0 $ is a real number.
+we set
+\[ 
+g_\lambda(x,s)=\eta(s)\cdot f+\eta(s)\cdot\sum_{j=1}^{j=m}\,
+\frac{(s-\pi)^j}{j!}\cdot (Q-\lambda)^j(f)\quad\colon 0\leq s\leq \pi\tag{i}
+\]
+We choose $\eta$ to be a real-valued $C^\infty$-function
+such that
+$\eta(s)=0$ when $s\leq 1/4$ and -1 if $s\geq 1/2$.
+Hence $g_\lambda(x,s)=0$ in (i) when
+$0\leq  s\leq 1/4$
+and we extend the function to $[-\pi\leq s\leq \pi$ where
+$g_\lambda(x,-s)= g_\lambda(x,s)$ if $0\leq s\leq \pi$.
+So now $g_\lambda$ is $\pi$-periodic with respect to $s$
+and  vanishes when
+$|s|\leq 1/4$.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+If $1/2\leq s\leq \pi$ we have $\eta(s)=1$. Use (i) to show that 
+\[
+(P+\lambda)(g_\lambda)=
+\frac{\partial g_\lambda}{\partial s}
+-(Q-\lambda)(g_\lambda)=\frac{(s-\pi)^m}{m!}\cdot (Q-\lambda)^{m+1}(f)
+\]
+hold when
+$1/2\leq s\leq \pi$.
+At the same time
+$g_\lambda(s)=0$ when $0\leq s\leq 1/4$.
+So $(P+\lambda)(g)$
+is a function whose derivatives
+with respect to $s$ vasnish up to order
+$m$ at $s=0$ and $s=\pi$ and is therefore
+doubly periodic of class $C^m$ in
+$\square$.
+Now Theorem 2.2  applies. For a given $k\geq 2$
+we choose a sufficently large $m$
+and find $h(x,s)$ so that  
+\[ 
+P(h)+\lambda\cdot h=(P+\lambda)( g_\lambda)(x,s)
+\]
+where $h$ is $s$-periodic, i.e.
+\[ 
+h(x,0)= h(x,\pi)
+\]
+Notice also that
+$g_\lambda(x,0)=0$ while $g_\lambda(x,\pi)= f(x)$.
+Set
+\[ 
+g_*(x)=h-g_\lambda
+\]
+Then  $P(g_*)+\lambda\cdot g_*=0$
+and 
+\[ 
+g_*(x,0)-g_*(x,\pi)=f(x)
+\]
+\medskip
+
+\noindent
+Above we started with the $C^\infty$-function.
+Given $k\geq 2$
+we can take
+$m$ sufficiently large during the constructions above
+so that $g_*$ belongs to
+$\mathcal H^{(k)}(\square)$.
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3211 @@
+\documentclass{amsart}
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\begin{document}
+
+
+
+
+
+\centerline{\bf\large Chapter 5.B. Subharmonic functions }
+
+\bigskip
+
+\noindent 
+0. Introduction
+\medskip
+
+
+\noindent 
+1. The subharmonic Log-function
+\medskip
+
+
+\noindent 
+2. Basic facts about subharmonic functions
+\medskip
+
+\noindent 
+3. Riesz representation formula
+\medskip
+
+\noindent 
+4. Perron families
+
+\medskip
+
+\noindent
+5. Piecewise harmonic subharmonic functions
+
+\medskip
+
+\noindent
+6. On zero sets of subharmonic functions.
+\medskip
+
+\noindent
+7. A subharmonic majorization
+
+
+\medskip
+\noindent
+8. Subharmonic minorant of a given function
+
+
+\bigskip
+
+
+
+
+
+\centerline {\bf Introduction.}
+\medskip
+
+
+
+
+\noindent
+The  theory of subharmonic functions is foremost due to
+F. Riesz whose article
+[Ri] from 1926 contains the essential facts about
+subharmonic functions. 
+See also the text-book
+\emph{Subharmonic functions} by Rado from 1937
+for an  account 
+about subharmonic functions. 
+We shall not discuss subharmonic functions in
+${\bf{R}}^n$ when $n\geq 3$
+which  for example are treated in
+the text-book  [Hayman]. 
+The basic results about subharmonic functions appear
+in ¤ 1-4 while the remaining sections
+are devoted to  special topics.
+For example, a  delicate result due to Beurling appears
+in  Theorem 8.2 which 
+gives
+a sufficent  condition for the existence of a largest subharmonic minorant.
+\medskip
+
+\noindent
+{\bf{0.0 Subharmonic functions in complex domains.}}
+We identify ${\bf{R}}^2$ with ${\bf{C}}$
+where real-valued functions
+$u(x,y)$ become functions of the single complex
+variable $z=x+iy$.
+If $u(x,y)$ is a $C^2$-function defined in an open set $\Omega$
+then 
+the Laplacian $\Delta(u)$ is a non-negative  function if
+and only if $u$ satisfies the \emph{local mean-value  inequality}.
+In other words, for every point $p\in\Omega $ there exists
+some
+$\delta>0$ such that the disc $\{|z-p|<\delta\}\subset \Omega$
+and 
+\[ 
+u(p)\leq
+\frac{1}{\pi r^2}\cdot \iint_{D_r(p)}\,
+u(x,y)\cdot dxdy\quad\text{for all}\quad 0<r<\delta \tag{*}
+\] 
+where $D_r(p)$ is the disc of radius $r$ centered at $p$.
+These local mean-value inequalities  make sense for
+non-differentiable functions.
+Thus, let $u(x,y)$ be a real-valued and continuous function
+defined in some open set $\Omega$.
+We say that $u$ satisfies the
+local mean-value  inequality if  there for every
+$p\in\Omega$ exists some $\delta>0$ with
+$\delta < \text{dist}(p,\partial\Omega)$
+such that (*) above holds.
+This family of continuous 
+functions is denoted by 
+$\text{SH}_c(\Omega)$ where the prefix $c$ indicates that we 
+restrict the attention to 
+continuous functions.
+
+\medskip
+
+
+\noindent
+{\bf {0.1 The majorant principle.}}
+The local mean value inequality for a  function
+$u$ in $ \text{SH}_c(\Omega)$ gives the following  majorisation principle.
+Consider a pair $(U,h)$ where
+$U\subset\Omega$ is an open subset and
+$h$  a continuous function on the compact closure $\bar U$
+and harmonic in $U$.
+Then 
+\[ 
+u|\partial U\leq h|\partial U\implies
+u\leq h\quad\text{in the whole set}\,\, \,\bar U\tag{**}
+\]
+The  proof of (**) relies upon the mean-value equality for harmonic functions
+and solving the Dirichlet problm for a disc one gets 
+the converse result, i.e. a continuous function $u$ in
+$\Omega$ for which the majorisation  (**) holds belongs to
+$\text{SH}_c(\Omega)$.
+Hence there is     an equivalent condition for a
+continuous function to be subharmonic !
+\medskip
+
+\noindent
+{\bf{0.2 Logarithmic potentials.}}
+Let $\mu$
+be a non-negative Riesz measures with compact support in
+${\bf{C}}$.
+Since  the function
+$\log\,|z|$ is locally integrable
+there 
+exists the convolution
+integral:
+\[ 
+L_\mu(z)=\frac{1}{2\pi} \int\, \log \,|z-\zeta|\cdot d\mu(\zeta)\tag{***}
+\]
+We refer to $L_\mu$ as the logarithmic potential of $\mu$.
+It can be attained as the pointwise limit of a decreasing
+sequence of $C^\infty$-functions. Namely, when
+$\epsilon>0$ we set
+\[ 
+L^\epsilon_\mu(z)= 
+\frac{1}{4\pi}\int\, \log\bigl(|z-\zeta|^2+\epsilon\bigr )\cdot d\mu(\zeta)
+\]
+The reader should verify that
+these functions are of class $C^\infty$ and with
+$z$ kept fixed we have
+
+\[
+\frac{dL_\mu^\epsilon(z)}{d\epsilon}=
+\frac{1}{4\pi}\int\, \frac{1}{|z-\zeta|^2+\epsilon}
+\cdot d\mu(\zeta)
+\]
+It follows that $\{L_\mu^\epsilon\}$
+is a decreasing sequence of $C^\infty$-functions whose
+pointwise
+limit function is  $L_\mu$.
+Hence the $L^1_{\text{loc}}$-function $L_\mu$
+takes  values 
+in $[-\infty,+\infty)$.
+and is 
+upper semi-continuous.
+Put
+\[
+\text{Polar}(\mu)=\{ z\colon\, \,L_\mu(z)=-\infty\}
+\]
+This polar set is the intersection of
+the open sets
+$\{ L_\mu<-N\}$ taken over all positive integer $N$ and is
+therefore
+a so called $G_\delta$-set. Moreover, its
+2-dimensional Lebesgue measure is
+zero since
+$L_\mu$ is locally integrable.
+It turns out that the polar set of a given non-negative measure$\mu$  
+belongs to a more restricted family of sets than
+the family of  null sets in the sense of Lebesgue. See
+¤ XX from Special Topics which is devoted to
+complex potential theory.
+\medskip
+
+\noindent
+{\bf{0.3 A mean-value function.}}
+With $\mu$ fixed we define for a given $r>0$ 
+\[ 
+M_{\mu,r}(z)=\frac{\pi}{r^2}\, \int_0^r\int_0^{2\pi}\,
+ L_\mu(z+se^{i\theta})\cdot s  ds\cdot d\theta\tag{1}
+\]
+It means that we take the mean value of $U_\mu$ over the disc
+of radius $r$ centered at $z$. The function of $z$ in (1) is continuous
+for each fixed $r>0$.
+Set
+\[
+\Phi_r(z,\zeta)=
+\frac{\pi}{r^2}\, \int_0^r\int_0^{2\pi}\,
+\log |z+se^{i\theta}-\zeta|\cdot s  ds\cdot d\theta\tag{2}
+\]
+Fubini's theorem gives
+\[ 
+M_{\mu,r}(z)=
+\int\,\Phi_r(z,\zeta)\cdot d\mu(\zeta)\tag{3}
+\]
+It is clear that the $\phi$-function only depends upon $|z-\zeta|$. 
+If $a$ is real and positive we set
+\[
+\phi_r(a)= 
+\frac{\pi}{r^2}\, \int_0^r\int_0^{2\pi}\,
+\log \,|a+se^{i\theta}|\cdot s  ds\cdot d\theta=
+\]
+\[
+\log\,|a|+
+\frac{a^2\pi}{r^2}\, 
+\int_0^{\frac{r}{a}}\int_0^{2\pi}\,
+\log |1+te^{i\theta}|\cdot t  dt\cdot d\theta\tag{4}
+\]
+where the last equality follows after the variable substitution
+$s\to at$. Denote the last function in
+(4) by $\psi_r(a)$. Then we have
+\[ 
+M_{\mu,r}(z)-U_\mu(z)=
+\int\,\psi_r(|z-\zeta|)\cdot d\mu(\zeta)\tag{5}
+\]
+\medskip
+
+
+\noindent{\bf{Exercise.}}
+Consider the function defined for $s>0$ by
+\[
+g(s)=\frac{1}{\pi}\cdot \int_0^s\int_0^{2\pi}\,
+\log |1+te^{i\theta}|\cdot t  dt\cdot d\theta\tag{i}
+\]
+Show that $g(s)=$ when $s\leq 1$ and if $s>1$
+the reader may verify that 
+\[
+\frac{dg}{ds}=2\cdot s\log s\implies
+g(s)=s^2\cdot \log s-\frac{s^2}{2}+\frac{1}{2}\quad\colon s>1\tag{ii}
+\]
+Now 
+\[
+\psi_r(|z-\zeta|= \frac{|z-\zeta|^2}{r^2}\cdot g(\frac{r}{|z-\zeta|})\tag{iii}
+\]
+Together (5) and (ii-iii)  express the non-negative  difference
+$M_{\mu,r}(z)-U_\mu(z)$.
+The reader may  analyze the
+the non-decreasing function
+\[ 
+r\mapsto M_{\mu,r}(z)
+\]
+while $z$ is fixed. For example  use (ii) to
+find the derivative with respect to $r$.
+ 
+
+
+\bigskip
+
+\noindent
+Now we enlarge the class of  sub-harmonic functions to include
+$U_\mu$-functions which arise from  non-negative measures $\mu$.
+\medskip
+
+\noindent
+{\bf{0.4 Definition.}}
+\emph{Let $\Omega$ be an open set in
+${\bf{C}}$.
+The the family of functions
+$u\in L^1_{\text{loc}}(\Omega)$ for which the distribution
+$\Delta(u)$ is a non-negative Riesz measure is denoted by 
+$\text{SH}(\Omega)$.}
+
+
+
+
+\bigskip
+\noindent
+{\bf{Remark.}} The condition for a locally integrable function to
+be subharmonic can be phrased in another way where
+we do not use distribution derivatives.
+Namely, let 
+$u(x,y)$ be a function in $L^1_{\text{loc}}(\Omega)$.
+Denote by $\mathfrak{Leb}(u)$
+the set of its Lebesgue points.
+If $p\in\mathfrak{Leb}(u)$
+and $0<r<\text{dist}(p,\partial\Omega)$
+we consider  the mean value
+\[ 
+M_r(p)=\frac{1}{\pi r^2}\cdot \iint_{D_r(p)}\,
+u(x,y)\cdot dxdy\tag{1}
+\]
+
+
+\noindent
+We say that $u$ satisfies the local mean value inequality
+if there to every Lebesugue point $p$
+exists some $\delta>0$ such that
+\[
+u(p)\leq M_r(p)\quad\colon\quad 0<r<\delta\tag{2}
+\]
+
+
+
+\noindent
+In ¤ xx we prove that this is equivalent to the condition that
+$u$ is subharmonic in the sense of Definition 0.4.
+
+\medskip
+
+\noindent
+{\bf{0.5 The Riesz representation formula.}}
+It turns out that every subharmonic function in the sense of Definition 0.4
+is
+locally expressed by the logarithmic potential of 
+a Riesz measure plus some harmonic 
+function.
+More precisely, let $u$ be subharmonic in an open
+set $\Omega$ and put $\mu=\Delta(u)$.
+Let $\Omega_0$ be a relatively compact subset of $\Omega$
+and denote by $K$ its compact closure.
+Extending $\mu$ to be zero outside $K$ we get the compactly supported
+measure $\mu_K$ and its logarithmic potential $L_{\mu_K}$.
+In XXX we prove that there exists a harmonic function
+$H$ in $\Omega_0$ such that the equality below holds in $\Omega_0$:
+\[
+ u=L_{\mu_K}+ H\tag{*}
+\] 
+
+\bigskip
+
+\noindent
+{\bf{0.6 Rado's inequality.}}
+Riesz' representation formula gives an
+a priori inequality which goes as follows:
+Let $D$ be the open unit disc and
+denote by $\mathcal F$ the class of subharmonic functions
+$u$ in $D$ such that
+$u(0)=0$ and $u(z)<1$ for all $z\in D$. In ¤ xx we prove that
+there exists a constant $C$ such that
+\[ 
+\iint_{|z|\leq 1/2}\, e^{-u(z)}\, dxddy\leq C\tag{0.6.1}
+\]
+for every $u\in\mathcal F$.
+This gives a conrol on negative values taken by $u$.
+For example, set
+\[ 
+A_n=\{n |z|\leq 1/2\}\cap\, 
+\{-(n+1)\leq u(z)\leq -n\}
+\]
+Then
+\[ 
+\sum_{n=1}^\infty\, |A_n|_2\cdot e^n<\infty\tag{0.6.2}
+\]
+\medskip
+
+
+\noindent
+{\bf{0.7 Examples of subharmonic functions.}}
+Let $f(z)$ be analytic in
+the open unit disc where $f(0)=0$ and   $|f(z)|<1$
+for all $z\in D$. To each $0<r<1$ there exists the  function
+$\mathcal N_r(w)$ in the disc $|w|<1 $, defined by
+\[
+\mathcal N_r(w)=\sum\,\log\,\frac{r}{|\zeta|}\quad\colon
+\text{sum taken over all }\, \zeta\in D_r\quad\colon \, f(\zeta)=w\tag{0.7.1}
+\] 
+In the sum 
+one repeats zeros of $f(z)-w$ with their multiplicity.
+In XXX we show
+that $\mathcal N_r(w)$ is a subharmonic function in
+the unit disc of the complex $w$-plane.
+This class of  subharmonic functions
+was introduced  by  Nevanlinna when he
+developed the  value distribution theory for meromorphic functions.
+See  [Nev. page xx-xx] which describes  the usefulness of
+this class of subharmonic functions. 
+Extending the   construction of these $\mathcal N$-functions
+to
+universal covering spaces of the image domains $f(D_r)$
+these  subharmonic functions
+can be used in   value distribution theory on Riemann surfaces where the interested reader
+can consult
+the article [Lehto] by O. Lehto for details.
+
+
+
+
+
+
+
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline {\bf 1. The subharmonic  Log-function}
+\bigskip
+
+\noindent
+{\bf 1.0 The function $L_\epsilon$}.
+For each $\epsilon>0$
+we set
+\[ 
+F_\epsilon(x,y)=
+\log(x^2+y^2+\epsilon)
+\]
+
+\noindent
+The partial derivative with respect to $x$ becomes:
+\[
+\partial_x(F_\epsilon)=\frac{2x}{x^2+y^2+\epsilon}\quad\colon\quad
+\partial^2_x(F_\epsilon)=
+\frac{2}{x^2+y^2+\epsilon}-\frac{4x^2}{(x^2+y^2+\epsilon)^2}
+\]
+and similarly for the partial $y$-derivative. A summation of
+the second order partial derivatives gives:
+\[ 
+\Delta(F_\epsilon)=\frac{4\epsilon}{(x^2+y^2+\epsilon)^2}\tag{i}
+\]
+The double integral over
+$\bf R^2$ becomes:
+\[ \iint\, 
+\frac{4\epsilon}{(x^2+y^2+\epsilon)^2}\, dxdy=
+\int_0^\infty\int_0^{2\pi}\,
+\frac{4\epsilon}{(r^2+\epsilon)^2}\cdot rd\theta=
+\]
+\[
+4\pi \epsilon\cdot \int_0^\infty\, \frac{2r dr}{(r^2+\epsilon)^2}=
+-4\pi\epsilon \cdot \frac{1}{r^2+\epsilon}\bigr|_0^\infty=4\pi\tag{ii}
+\]
+Put
+\[
+L_\epsilon(x,y)= 
+\frac{1}{2\pi}\cdot
+\text{Log}\,\sqrt{x^2+y^2+\epsilon}=
+\frac{1}{4\pi}\cdot F_\epsilon(x,y)
+\]
+Then (ii) entails  that its double integral is equal to one and (i) gives
+\[
+\Delta(L_\epsilon)=\frac{1}{\pi}\frac{\epsilon}{(x^2+y^2+\epsilon)^2}\tag{iii}
+\]
+With $z=x+iy$ we can write
+\[
+L_\epsilon(z)= \frac{1}{2\pi}\cdot
+\log\,\sqrt{|z|^2+\epsilon}
+\]
+Outside the origin we get the limit formula:
+\[ \lim_{\epsilon\to 0}\,
+L_\epsilon(z)=
+\frac{1}{2\pi} \cdot \log\,|z|\tag{*}
+\]
+
+
+
+\noindent
+{\bf 1.1 $L_\epsilon$ as distributions.}
+Let $\phi\in C_0^\infty({\bf{R}}^2)$  be a test-function.
+Green's formula gives
+\[
+\iint \Delta(L_\epsilon)\cdot \phi\, dxdy=
+\iint L_\epsilon\cdot \Delta(\phi)\, dxdy\quad\colon\quad\epsilon>0\tag{1}
+\]
+The left hand side has a limit as $\epsilon\to 0$. Namely,
+(iii) above gives:
+\[ 
+\lim_{\epsilon\to 0}\,
+\frac{1}{2\pi}\iint
+\frac{\epsilon}{(x^2+y^2+\epsilon)^2}\cdot\phi(x,y) \,dxdy=
+\phi(0)\tag{ii}
+\] 
+The reader should confirm the limit formula (ii)
+by computing the integral in
+polar coordinates.
+In distribution theory this is expressed as follows:
+\bigskip
+
+\noindent {\bf 1.2 Theorem.}
+\emph{The distribution densities
+$\Delta(L_\epsilon)$ converge to the unit point mass}
+$\delta_0$. 
+\medskip
+
+\noindent
+{\bf Remark.} Above we  constructed a \emph{regularisation}
+of the Dirac measure.
+Using (*) it means that 
+the locally integrable function
+ $\log\,|z|$ considered as a distribution is such that
+ its Laplacian - taken in the distribution sense - is equal to
+ $2\pi i\cdot \delta_0$. 
+ One therefore says that
+ $\frac{1}{2\pi}\cdot \log |z|$ is a fundamental solution to the
+ $\Delta$-perator.
+ \medskip
+ 
+ 
+ \noindent
+ Next,
+ let $\mu$ be a Riesz measure in $\bf R^2$ with a compact support
+which
+defines a
+distribution by
+\[ 
+\phi\mapsto \int \phi\cdot d\mu
+\]
+To each $\epsilon>0$ we construct the convolution
+\[
+L_\epsilon*\mu(x,y)=
+\int\,
+L_\epsilon(x-t,y-s)\cdot d\mu(t,s)
+\]
+Here $L_\epsilon*\mu$ are $C^\infty$-functions and
+taking the Laplacian we get
+\[
+\Delta(L_\epsilon*\mu)(x,y)=
+\frac{1}{2\pi}\int\,\frac{\epsilon}{(x-t)^2+(y-s)^2+\epsilon}
+\cdot d\mu(t,s)
+\]
+Next, when $\phi\in C_0^\infty$ we perform integration with
+respect to $(x,y)$ and obtain
+\[
+\iint\,
+\Delta(L_\epsilon*\mu)(x,y)\cdot\phi(x,y)dxdy=
+\frac{1}{2\pi}\int\,\bigl[
+\iint\,\frac{\epsilon\cdot\phi(x,y)dxdy}{(x-t)^2+(y-s)^2+\epsilon}\,\bigr]
+\cdot d\mu(t,s)
+\]
+\medskip
+
+\noindent 
+Here
+the inner double intergal is a function of
+$(s,t)$ which converges uniformly to $\,\phi$
+as $\epsilon\to 0$. Hence a passage to the limit gives
+\[
+\lim_{\epsilon\to 0}\,
+\iint\,
+\Delta(L_\epsilon* \mu)(x,y)\cdot\phi(x,y)\,dxdy=
+\int\,\phi\cdot d\mu
+\]
+
+
+\noindent
+This is expressed by saying the the distribution
+densities
+$\Delta(L_\epsilon* \mu)$ converge to the distribution defined by
+$\mu$.
+Next, recall  from  distribution theory that convolution commutes
+with
+differentiation. Hence we get
+\[
+\lim_{\epsilon\to 0}\,
+\Delta(L_\epsilon*\mu)=
+\lim_{\epsilon\to 0}\,
+\Delta(L_\epsilon)*\mu
+=\mu\tag{*}
+\]
+where the last equality follows from Theorem 1.2.
+\bigskip
+
+\noindent
+{\bf 1.3 The logarithmic potential.}
+Recall  from measure theory that one can define the convolution of a compactly
+supported 
+Riesz measure $\mu$  with an $L^1$-functions. 
+We apply this with the locally integrable function
+$\log\sqrt{x^2+y^2}$ which in
+complex notation  is written as $\log\,|z|$.
+The convolution integral 
+\[
+U_\mu(z)=\frac{1}{2\pi}
+\int\,\log\,|z-\zeta|\cdot d\mu(\zeta)
+\]
+is called the logarithmic potential of the Riesz measure $\mu$. Notice that
+$U(z)$ belongs to 
+$L^1_{\text{loc}}{\bf{C}})$. 
+The  limit formulas from Theorem 1.2 and 
+(*) above   yield
+\medskip
+
+\noindent
+{\bf 1.4 Theorem.}
+\emph{The Laplacian of $U_\mu$ taken in the distribution sense is
+equal to $\mu$.}
+\bigskip
+
+\noindent
+{\bf Remark.}
+To confirm Theorem 1.4 we consider a test-function
+$g$. Fubini's theorem gives the equality
+\[
+\frac{1}{2\pi}\cdot \int\,\Delta\, g(z)\cdot\bigr]
+\,\int\,\log\,|z-\zeta|\cdot d\mu(\zeta)\,\bigr]\cdot dxdy=
+\frac{1}{2\pi}\cdot \bigl[\int\,\Delta\, g(z)\cdot\log\,|z-\zeta|\cdot dxdy\,\bigr]
+\cdot 
+d\mu(\zeta)
+\]
+By Theorem 1.2 the last term becomes
+\[ 
+\int\, g(\zeta)\cdot d\mu(\zeta)
+\]
+Hence the definition of distribution derivatives gives
+Theorem 1.4. 
+
+
+\noindent
+Next, recall that $\partial=\frac{1}{2}(\partial_x-i\partial_y)$.
+A differentiation gives:
+\medskip
+\[
+\partial(L_\epsilon)=
+\frac{1}{4\pi}\cdot\frac{x-iy}{x^2+y^2+\epsilon}=
+\frac{1}{4\pi}\cdot\frac{\bar z}{|z|^2+\epsilon}
+\]
+So outside the origin we get the limit formula
+\[ 
+\lim_{\epsilon\to 0}\,
+\partial(L_\epsilon)(z)=
+\frac{1}{4\pi z} \tag{**}
+\]
+
+
+
+
+\bigskip
+
+\centerline {\bf 1.5 The Cauchy transform.}
+\medskip
+
+\noindent
+The function $\frac{1}{z}$ is locally integrable
+and can therefore be convolved with
+a compactly supported Riesz measure.
+Put
+\[
+\mathcal C_\mu(z)=
+\int\,\frac{d\mu(\zeta)}{z-\zeta}
+\]
+Since this is a convolution of a measure 
+with compact support and the locally integrable function
+$\frac{1}{z}$
+it belongs to 
+$L^1_{\text{loc}}$. We refer to
+$\mathcal C_\mu$ as the Cauchy transform of $\mu$.
+Notice that $\mathcal C_\mu$
+is an analytic function outside the
+support of $\mu$. For example, its complex
+derivative becomes
+\[
+\frac {d\mathcal C_\mu(z)}{dz}=
+-\int\,\frac{d\mu(\zeta)}{(z-\zeta)^2}
+\]
+
+
+
+\centerline
+{\bf 1.6 The equality
+$\bar\partial(\mathcal C_\mu)=\pi\cdot \mu$.}
+\medskip
+
+\noindent
+Recall from XX that the Laplacian $\Delta$
+can be expressed as the product of the
+first
+order differential operators
+\[
+\partial=\frac{1}{2}(\partial_x-i\partial_y)\quad\colon\quad
+\bar \partial=\frac{1}{2}(\partial_x+i\partial_y)
+\]
+More precisely
+we have
+\[
+\Delta=4\cdot \bar \partial_z\cdot \partial_z
+\]
+
+\noindent
+{\bf{Exercise.}}
+Apply $\partial$ to the locally integrable function $U_\mu(z)$
+and show the equality
+\[
+\partial(U_\mu)=\frac{1}{4\pi}\cdot\mathcal C_\mu
+\]
+By Theorem 1 .2 we also have
+\[
+\mu=\Delta(U_\mu)=4\cdot\bar\partial(\partial U))=
+4\cdot \frac{1}{4\pi}\cdot \bar\partial(\mathcal C_\mu)
+\]
+\medskip
+
+\noindent
+From the above  the equality (1.6) follows.
+Since it
+is so important we state
+\medskip
+
+\noindent
+{\bf 1.7 Theorem.}
+\emph{One has the equality}
+\[
+\bar\partial(\mathcal C_\mu)=\pi\cdot\mu
+\]
+
+
+\noindent
+{\bf Example.}
+Let $\mu=\delta_0$ be the unit mass at the origin. In this case 
+$\mathcal C_\mu(z)= \frac{1}{z}$ and   the definition of
+distribution derivatives 
+means that
+\[
+g(0)=
+-\frac{1}{\pi}\int
+\frac{\bar\partial(g)\, dxdy}{z}\quad\colon\quad g\in C_0^\infty({\bf{C}})\tag{i}
+\]
+\medskip
+
+\noindent
+Recall from XX that $dz\wedge d\bar z=-2i\cdot dxdy$. So 
+the minus sign
+is changed and the right and side
+becomes
+\[
+\frac{1}{2\pi i}\int
+\frac{\bar\partial(g) \cdot dz\wedge d\bar z}{z}\quad\colon\quad g\in C_0^\infty({\bf{C}})\tag{ii}
+\]
+Since $\frac{1}{z}$ is locally integrable this integral is equal to
+\[
+\lim_{\epsilon\to 0}
+\frac{1}{2\pi i}\int_{|z|>\epsilon}
+\frac{\bar\partial(g) \cdot dz\wedge d\bar z}{z}\quad\colon\quad g\in C_0^\infty({\bf{C}})\tag{iii}
+\]
+Now we regard the differential 1-form
+$\alpha=\frac{g(z)\cdot dz}{z}$ and as explained in XX we have
+\[ 
+d\alpha=
+\frac{\bar\partial(g)\cdot d\bar z\wedge dz}{z}=
+-\frac{\bar\partial(g)\cdot dz\wedge d\bar z}{z}
+\tag{iv}
+\]
+where we used the the exterior product of two 1-forms
+is anti-commutative.
+When Stokes formula is applied
+the outer normal with respect to the exterior domain is minus the
+usual outer normal with respect to the open disc
+$|z|<\epsilon$. So when Stokes Theorem is applied to 
+differential $1$-form $\alpha$ we see that (iii) above is equal to
+\[
+-\frac{1}{2\pi i}\cdot \lim_{\epsilon\to 0}
+\int_{|z|>\epsilon}\,d\alpha=
+\frac{1}{2\pi i}\cdot \lim_{\epsilon\to 0}
+\int_{|z|=\epsilon}\,\frac{g(z)dz}{z}=g(0)\tag {v}
+\]
+This confirms the equality in Theorem 1.7 when
+$\mu=\delta_0$.
+
+
+
+\newpage
+
+
+\centerline {\bf 1.8 Approximation theorems}
+\medskip
+
+\noindent
+We shall apply Theorem 1.7 to deduce certain approximation theorems.
+Let $K$ be a compact null set in ${\bf{C}}$, i.e. its 2-dimensional Lebesgue measure is zero.
+We have the Banach space $C^0(K)$ of continuous and complex
+valued functions on $K$. If $z\in {\bf{C}}\setminus K$ the rational function
+$\frac{1}{z-\zeta}$ restricts to a continuous function on $K$.
+Taking finite linear combinations we get functions
+\[ 
+\zeta\mapsto\,\sum\, c_\nu\frac{1}{z_\nu-\zeta}\quad
+\colon z_1,\ldots,z_N\in {\bf{}}\setminus K\quad
+\colon c_1,\ldots,c_N\in {\bf{C}}
+\]
+Denote by $R(K)$ the closure of this linear subspace of
+$C^0(K)$. Thus, functions in $R(K)$ consist of continuous functions on
+$K$ which can be uniformly approximated by rational functions with poles
+outside $K$.
+\medskip
+
+\noindent {\bf 1.9 Theorem.}
+\emph{For every compact null set $K$ one has
+the equality $C^0(K)=R(K)$.}
+\medskip
+
+\noindent \emph{Proof.}
+Suppose that $R(K)\neq C^0(K$. Riesz' representation formula
+gives the existence of a non-zero  measure $\mu$ supported by
+$K$ such that $\mu\perp R(K)$.
+Consider the Cauchy transform
+
+\[
+\mathcal C_\mu(z)=
+\int_K\,\frac{d\mu(\zeta)}{z-\zeta}
+\]
+Since $\mu\perp R(K)$ it is identically zero outside $K$.
+Now $K$ is a null set so the $L^1_{\text{loc}}$-function
+$\mathcal C_\mu$ is identically zero and so is its distribution
+derivative $\bar\partial(\mathcal C_\mu)$. But then we get a contradiction from
+Theorem 1.7  since this distribution derivative must recapture $\pi\cdot \mu$.
+which by assumption is non-zero.
+
+\bigskip
+
+
+\noindent
+{\bf Remark.}
+The proof of Theorem 1.8 
+relies upon the Hahn-Banach theorem which
+gives the existence of a non-zero Riesz measure carried by
+$K$ when  $R(K)\neq C^0(K)$.
+The drawback of this proof 
+is that it does not give any hint about how one actually approximates
+a given continuous function on $K$ by rational 
+functions having poles in the complement.
+So instead of the easy proof above which
+is based on an "argument by contradiction"
+one would like to have a
+\emph{constructive proof} of Theorem 1.7, i.e.
+given a null-set $K$ one may ask for some sort of
+algorithm to approximate every given
+continuous function on $K$.
+This point of view was put forward by E. Bishop
+in his book [Bish]. His objection to
+the proof above  is not just a
+question of taste and philosophy. In fact, Erret Bishop
+is one of the most prominent analysists in complex function theory.
+It is therefore good to keep in mind
+that various theoretical results do not give the whole story if one really
+wants to apply them in more concrete situations.
+\bigskip
+
+
+\noindent {\bf 1.10 Megelyan's swiss-cheese.}
+Following [Merg] we  construct a compact set
+$K$ in $C$ with empty interior where
+$R(K)\neq C^0(K)$.
+Take the unit disc $D$ and remove
+a finite number of discs $D_1,\ldots,D_N$ inside
+$D$. They are chosen so that the closed discs $\{\bar D_\nu\}$
+are pairwise disjoint and stay inside $D$.
+For each $1\leq\nu\leq N$ we let $\mu_\nu$ be the measure
+supported by
+$\partial D_\nu$ and given by
+$d\zeta$, i.e. if $D_\nu$ has a radius $r_\nu$
+it is simply the measure whose Cauchy transform becomes
+\[ 
+\mathcal C_\nu(z)=\int_0^{2\pi}\,\frac {ir_\nu e^{i\theta}}
+{z-(a_\nu+r_\nu)e^{i\theta}}\cdot d\theta
+\]
+Notice that $\mathcal C_\nu(z)=0$ outside $\bar D_\nu$. Indeed, this follows from the trivial observation from XXX.
+Next, on $\partial D$
+we get the measure $\mu^*$ defined by $d\zeta$ restricted to $|\zeta|=1$.
+Let $\mathcal C^*(z)$ denote its Cauchy transform which now
+is identically zero outside $D$. In addition to this it has
+a compensating influence. For if $z_0\in D_\nu$ for some
+$\nu$, we have by Cauchys formula
+\[
+\int_{\partial D_\nu}\,\frac{d\zeta}{z_0-\zeta}=
+\int_{\partial D}\,\frac{d\zeta}{z_0-\zeta}
+\]
+Consider the measure
+\[ 
+\rho_N= \mu^*-(\mu_1+\ldots+\mu_N)
+\] 
+The previous observations  show that
+$\mathcal C_{\rho_N}$ is zero 
+in the set $\Omega_N= \cup\, D_\nu\,\cup \,|\zeta|>1$.
+In other words, if 
+\[
+K_N=\bar D\setminus\,D_1\cup\ldots\cup\,  D_N
+\] 
+then this compact set is the support of  the
+$L^1$-function $\mathcal C_{\rho_N}$.
+\medskip
+
+\noindent
+At this stage we see how one should proceed to construct a
+swiss-cheese. Namely, inside $D$ we construct a
+denumerable sequence of discs $D_1,D_2,\ldots$ so that
+the compact set
+
+\[
+K=\bar D\setminus\,\cup\,D_\nu
+\]
+has no interior points, i.e.
+just make sure that the center points of the discs
+$\{D_\nu\}$ appears as a dense subset of $D$. Moreover,
+let $r_\nu$ be the radius of  $D_\nu$ and perform the construction so that
+\[
+\sum\, r_\nu<\infty
+\]
+The total variation of $\mu_\nu$ becomes $2\pi \cdot r_\nu$ and hence we get
+a measure
+\[ 
+\rho_*=\mu^*-\sum_{\nu=1}^\infty\,\mu_\nu
+\]
+By the construction it is clear that $\rho_*\perp R(K)$
+and hence $R(K)\neq C^0(K)$.
+\medskip
+
+\noindent
+{\bf 1.11 Wermer's example.}
+In [We ] appears  a Jordan arc $\Gamma$ 
+whose 2-dimensional Lebesgue measure is positive whose
+ existence 
+goes back to work by Peano.
+The restriction of polynomial $P(z)$
+to  $\Gamma$ gives a ${\bf{C}}$-subalgebra of
+$C^0(\Gamma)$. Let $P(\Gamma)$ be its uniform closure.
+Then 
+\[ 
+P(\Gamma)\neq C^0(\Gamma)
+\]
+This inequality relies upon results
+about analytic capacity.
+The reader may consult the book [We] about uniform algebras for
+a detailed account about this example. 
+See also the text-book [Ga] by T. Gamelin which  is
+devoted to uniform algebras. 
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf \large 2. Subharmonic functions}
+\bigskip
+
+\noindent
+If $\Omega$ is an open subset of $\bf C$ we denote by
+$\text{SH}^2(\Omega)$ the class of 
+$C^2$-functions $u$  in
+$\Omega$ such that the continuous function
+$\Delta(u)$ is non\vvv negative.
+If $u\in \text{SH}^2(\Omega)$ and 
+$\Omega_0$ is a domain in the class
+$\mathcal D(C^1)$ which appears as a   relatively compact in $\Omega$, then
+Green's formula  gives:
+
+\[ \iint_{\Omega_0}\, \Delta(u)\,dxdx=
+\int_{\partial\Omega_0}\, u_{{\bf{n}}}\cdot  ds
+\]
+Hence the subharmonicity entails that the integral of the outer normal
+derivative  is $\geq 0$ for any such domain $\Omega_0$.
+Consider  the  case when $\Omega=D_R$ is a disc 
+centered at the origin and  $\Omega_0=D_r$ for some $r<R$.
+In polar coordinates we get
+\[
+\int_{\partial D_r}\, u_{{\bf{n}}}\cdot  ds=
+\int_0^{2\pi}\,
+[\text{cos}\,\theta\cdot u_x+\text{sin}\,\theta\cdot u_y]\cdot rd\theta
+\]
+Next, define the mean-value function
+\[ 
+M_u(r)=\frac{1}{2\pi}\cdot
+\int_0^{2\pi}\, u(r,\theta)\cdot d\theta
+\]
+Since $\frac{d}{dr}(u(r,\theta)=\text{cos}\,\theta\cdot u_x+\text{sin}\,\theta\cdot u_y$
+we obtain
+\[
+\frac{d}{dr}(M_u(r))=
+\frac{1}{\pi r}\int_{\partial D_r}\, u_n ds=
+\frac{1}{2\pi r}\cdot
+ \iint_{D_r}\, \Delta(u)dxdx
+\]
+\medskip
+
+\noindent
+Hence the function $r\mapsto M_u(r)$ is non-decreasing and
+when $\Delta(u)>0$ it is even strictly increasing.
+Since $u$ is continuos we have
+\[
+\lim_{r\to 0}\, M_u(r)=u(0,0)
+\] It follows that $u$ satisfies the mean-value inequality
+\[
+u(0)\leq M_u(r)\quad\colon\quad 0<r<R\tag{*}
+\]
+
+
+\noindent {\bf 2.1 Harmonic majorization.}
+Let $u\in\text{SH}^2(\Omega)$. If 
+$\delta>0$ and $u_\delta(x,y)=u(x,y)+\delta(x^2+y^2)$
+then $\Delta(u_\delta)=\Delta(u)+4\delta>0$.
+Since $u_\delta\to u$ when $\delta\to 0$ we can always
+approximate a subharmonic function by a 
+decreasing sequence of strictly subharmonic functions.
+Next, recall the following result from
+from \emph{Calculus}. Let  $f(x,y)$ be a 
+$C^2$-function defined in some open subset
+of $\bf R^2$  which has a (not necessarily strict)
+maximum at some point  $(x_0,y_0)$ , i.e. 
+\[ 
+f(x,y)\leq f(x_0,y_0)\quad\colon\quad (x-x_0)^2+(y-y_0)^2<\epsilon
+\] 
+hold for some small 
+$\epsilon$. Then the \emph{Hessian} of $f$ at $(x_0,y_0)$ must
+be negative semi-definite. In particular
+the trace 
+$f_{xx}+f_{yy}=\Delta(f)\leq 0$.
+This elementary facts gives
+\medskip
+
+\noindent {\bf 2.2 Proposition.}
+\emph{Let
+$u$ be a strictly subharmonic function of class $C^2$
+defined in  an open set
+$\Omega$. Then $u$ cannot have any
+local maximum in $\Omega$.
+Thus, if $U$ is a relatively compact subset of
+$\Omega$ then $u$ takes its maximum on the boundary of $U$, i.e.}
+\[
+\max_{\bar U}\, u=
+\max_{\partial U}\,u
+\]
+\bigskip
+
+
+\noindent
+Next, Proposition 2.2.  together with
+the mean-value property of harmonic functions give the following:
+\bigskip
+
+\noindent
+{\bf 2.3 Theorem.}
+\emph{Let
+$u\in\text{SH}^2(\Omega)$
+and let $h$ be a harmonic function in
+$\Omega$. Then the following implication hold
+for every relatively compact open subset $U$ of $\Omega$;}
+\[
+u\leq h\,\,\text{on}\,\, \partial U\,\,\implies
+u\leq h\,\,\text{on}\,\, U
+\]
+\medskip
+
+\noindent 
+\emph{Proof.}
+Follows from Proposition 2.2 since
+$u-h$ is subharmonic.
+We refer to this as the principle of
+\emph{harmonic majorization}.
+
+
+\newpage
+
+
+\centerline {\bf 2.4 Subharmonic functions in $L^1_{\text{loc}}$.}
+\medskip
+
+
+\noindent
+Now we  relax the $C^2$-hypothesis.
+Let $u\in L^1_{\text{loc}}(\Omega)$
+where  $u$ is real-valued.
+We get the distribution
+$\Delta(u)$ and
+impose the condition that it is equal to a non-negative
+Riesz measure $\mu$.
+By the definition of distribution derivatives
+this means that
+\[
+\iint _\Omega\, \Delta(\phi)\cdot udxdy=
+\iint _\Omega\, \phi\cdot d\mu\quad\colon\quad \phi\in C_0^\infty(\Omega)\tag{*}
+\]
+\medskip
+
+\noindent {\bf 2.5 Definition.}
+\emph{A function $u$ in 
+$L^1_{\text{loc}}(\Omega)$ is called subharmonic if
+the distribution $\Delta(u)\geq 0$. The class of subharmonic 
+functions in $\Omega$
+is denoted by
+$\text{SH}(\Omega)$.}
+\bigskip
+
+\centerline {\bf 2.6 Regularisations.} 
+\medskip
+
+\noindent
+Definition 2.5  is a bit abstract since it is not
+easy
+to discover the distribution $\Delta(u)$ when $u$ is 
+just assumed to be locally integrable.
+So we shall find other conditions in order that
+a function in $L^1_{\text{loc}}$ is subharmonic.
+For this  we  use  regularisations.  In general, let
+$u\in \text{SH}(\Omega)$ where $\Omega$ is a bounded
+open set.
+If $\delta>0$ we set
+\[ 
+\Omega[-\delta]=\{z\in\Omega\,\colon\,
+ \text{dist}(z,\partial\Omega)\geq\delta\}
+\]
+Notice that
+$\Omega[-\delta]$ is a compact subset of
+$\Omega$.
+For every test-function $\phi$ with compact support in
+the  disc $D_\delta$ the convolution
+$\phi*u$ exists in 
+ $\Omega[-\delta]$. By the general formula from
+ XXX we have
+\[
+ \Delta(\phi*u)= \phi*\Delta(u)=\phi*\mu
+ \]
+
+
+
+\noindent
+where $\mu$ by assumption is a non-negative Riesz measure.
+\medskip
+
+\noindent
+{\bf 2.7 The case when $\phi$ is radial.}
+We shall use
+test-functions which depend on
+$x^2+y^2$ only. Let us recall the construction.
+Start from a test-function $\phi_*(z)$
+which is $>0$ in $|z|<1$ and has compact support in $|z|\leq 1$
+and depends on $|z|$ only while
+\[ 
+\iint_D\, \phi_*(z)dxdy=1
+\]
+Then, to every $0<\delta<1$ we get the test-function
+\[
+\phi_\delta(z)=\frac{\phi_*(\frac{z}{\delta})}{\delta^2}
+\]
+which has support in  $\bar D_\delta$. Next, recall from XXX
+that
+for any
+$L^1_{\text{loc}}$-function $f$
+it follows that the convolution $\phi_\delta*f$ is a $C^\infty$.function.
+We apply this with
+$u$ above and conclude that 
+$\phi_\delta*u$ is a $C^\infty$-function defined in some open
+neighborhood of
+ $\Omega[-\delta]$. By (*) in 2.6 we have
+ \[ 
+ \Delta(\phi_\delta*u)= \phi_\delta*\mu\tag{i}
+ \]
+Since both $\mu$ and $\phi_\delta$ are $\geq 0$, it follows that
+the convolution is $\geq 0$. Hence
+the Laplacian of the $C^\infty$-function
+$\phi_\delta*u$ is $\geq 0$ so we can apply the results from
+the $C^2$-case. In particular
+$\phi_\delta*u$ satisfies the mean-value inequality
+\[
+\phi_\delta*u(p)\leq\,\frac{1}{\pi r^2}\cdot \int_{D_r(p)}
+\phi_\delta(z-p)\cdot u(z)\cdot dx dy
+\quad\colon\, p\in \Omega[-2\delta]\quad\colon\quad
+0<r<\delta
+\]
+
+
+\noindent
+If $p\in \Omega[-2\delta]$ is a Lebesgue point for
+$u$ we can pass to the limit as $\delta\to 0$
+and conclude that
+\[
+u(p)\leq\,\frac{1}{\pi r^2}\cdot \int_{D_r(p)}
+u(z)\cdot dx dy
+\quad\colon\, p\in \Omega[-2\delta]\quad\colon\quad
+0<r<\delta\tag{*}
+\]
+\medskip
+
+\noindent
+This shows that $u$ satisfies the local mean-value inequality in
+$\Omega[-\delta]$.
+Since $\delta$ an be arbitrary small, it follows that
+$u$ satisfies the local mean-value inequality in
+the whole of $\Omega$, i.e. we have proved:
+\medskip
+
+\noindent
+{\bf 2.8 Theorem.} \emph{Let $u\in\text{SH}(\Omega)$.
+Then the following holds for
+each Lebesgue point of $u$ in $\Omega$:}
+\[
+u(p)\leq \frac{1}{\pi r^2}\cdot \int_{D_r(p)}
+u(z)\cdot dx dy
+\quad\colon\, 0<r<\text{dist}(p,\partial\Omega)
+\tag{*}
+\]
+ 
+\newpage
+
+\noindent
+{\bf Remark.} Above  we have recovered the  definition of subharmonic
+functions from the introduction
+via 
+Definition 2.5.
+The \emph{converse} also holds, i.e. if we 
+from start assume that the $L^1_{\text{Loc}}$-function $u$
+satisfies the local mean value inequality then
+it is subharmonic in the sense of Theorem 2.8.
+\medskip
+
+
+\noindent{\bf 2.9 Exercise.}
+Prove the converse. The hint is that
+if
+$\phi_\delta$ as above are radial test-functions and
+(*) is assumed, then
+the local mean value inequality hold for
+$\phi_\delta*u$. Here we have $C^2$-functions and by
+Green's formula one shows that $\delta(\phi_\delta*u)\geq 0$
+follows. Finally one takes the limit as $\delta\to 0$
+and the reader should now confirm that
+$\delta(u)\geq 0$ holds in the distribution sense.
+Show also that
+this family of functions is monotone, i.e. verify the following:
+\medskip
+
+\noindent
+{\bf 2.10 Proposition.} \emph{Let $u\in\text{SH}(\Omega)$. 
+Then the sequence of functions $\{\phi_\delta*u\}$ decrease, i.e.}
+\[ 
+\phi_{\delta_1}*u(p)\leq
+\phi_{\delta_2}*u(p)\quad\colon\quad \delta_1<\delta_2
+\] 
+\emph{Moreover, this decreasing sequence converges almost everywhere to
+the measurable function $u$.}
+\medskip
+
+\noindent
+Proposition 2.10 implies 
+$u$ is almost everywhere equal to the pointwise limit if
+a monotone sequence of continuous functions and therefore
+we can always  take $u$ to be an upper semi-continuous function.
+The set where it  becomes $-\infty$ is a null set.
+Thus, every subharmonic function enjoys similar properties as
+logarithmic potentials from ¤ 1.
+
+
+
+\newpage
+
+\centerline{\bf 3. Riesz representation formula}
+
+\bigskip
+
+
+\noindent
+Let $u\in\text{SH}(\Omega)$ where 
+$\Omega$ is a bounded open set.
+Now $\Delta(u)$ exists as a distribution
+and we have by assumption 
+\[
+\iint\,\Delta(\phi)\cdot u\, dxdy\geq 0\quad\colon\,\phi\in C_0^\infty(\Omega)\tag{*}
+\]
+
+
+\noindent
+We can take regularisations of $u$ as in ¤ 2, i.e. construct
+convolutions
+$\phi_k*u$ where $\{\phi_k\}$ is a sequence of
+non-negative test functions with smaller and
+smaller compact support
+in some disc $|x|\leq\delta$ while their integrals are one for every $k$.
+Let $g\in C_0^\infty(\Omega)$  with compact support in
+$\Omega[-\delta]$.
+Green's formula gives:
+\[
+\iint\,\Delta(g)\cdot \phi_k*u\,dxdy=
+\iint g\cdot \Delta(\phi_k*u)\, dxdy\tag{**}
+\]
+Since $u$ is subharmonic the functions
+$\Delta(\phi_k*u)\geq 0$ in $\Omega[-\delta]$.
+Hence they become  non-negative measures. Let us fix a compact subset 
+$K$Êin $\Omega[-\delta]$. 
+For example, we can take
+\[
+K=\text{closure of}\,\,\Omega[-2\delta]
+\]
+Now we can regard the \emph{total mass}
+\[ 
+\rho_k=\iint_K\,
+\Delta(\phi_k*u)\, dxdy
+\]
+
+
+\noindent
+{\bf 3.1. An inequality.}
+Since $u$ is subharmonic the mean-value inequality from ¤ XX
+gives the inequality:
+\[ 
+\phi_k*u(z)\leq u(z)\quad\colon\quad z\in \Omega[-2\delta]
+\]
+From this we conclude that if $g\in C_0^\infty(\Omega)$
+is non-negative and identically one on
+$\Omega[-2\delta]$ then (**) above gives 
+\[
+\rho_k\leq \int\,\Delta(g)\cdot u\, dxdy\quad\colon\quad k=1,2,\ldots\tag{i}
+\]
+
+
+\noindent
+Together with a general result about
+positive distributions in to be proved in ¤ XX it follows that:
+
+\medskip
+
+\noindent
+{\bf 3.2. Proposition.}
+\emph{There exists 
+a constant $C_K$ such that}
+\[ 
+\rho_k\leq C_K\quad\colon, k=1,2,\ldots
+\]
+
+
+\noindent 
+The uniform bound in Proposition 3.2
+gives the existence of 
+a subsequence of the non-negative measures
+$\{\Delta(\phi_k*u)\}$
+which converges weakly to  non-negative 
+Riesz measure $\mu$ in $K$.
+At the same time we notice that
+\medskip
+\[ \lim_{k\to\infty}\,\phi_k*u\to u
+\] 
+where the
+limit holds in $L^1$. Hence we have proved:
+\bigskip
+
+\noindent
+{\bf 3.3. Proposition} \emph{For every
+test-function $g\in C_0^\infty(\Omega)$ with
+support contained in $K$ one has:}
+\[ 
+\iint \Delta(g)\cdot u\, dxdy=
+\int\, g\,d\mu
+\]
+\medskip
+
+\noindent 
+{\bf 3.4. Constructing  Log-potentials.}
+With $\delta>0$ we construct 
+a test-function $\chi$ satisfying
+\[
+\chi=1\,\,\text{in}\,\,\,\Omega[-3\delta]\quad\colon\,
+\chi\in C_0^\infty(\Omega[-\delta]
+\]
+
+\noindent
+Next,
+we use the $C^\infty$-functions
+$L_\epsilon$ from ¤ 2 in V:A and keeping  $\delta>0$ fixed we
+define the functions:
+\[ 
+g_\epsilon=\chi\cdot L_\epsilon\quad\colon\,\quad 0<\epsilon<\delta\,\quad
+\]
+
+\noindent 
+Passing to the
+limit as $\epsilon\to 0$ while
+$\chi$ is kept fixed, Proposition 3.3 and
+Theorem 1.4 imply that  the function
+\[ 
+w(z)=u(z)-\int\,\log \,|\zeta-z|\,\cdot d\mu(\zeta)
+\quad\colon\, z\in \Omega[-3\delta]
+\]
+has  a Laplacian in the \emph{distribution sense} which is
+equal to zero in $\Omega[-3\delta]$.
+\newpage
+
+\noindent{\bf 3.5. Conclusions.}
+So are we have not proved anything definitive.
+But we have demonstrated that
+one should regard two problems.
+The first  is to explain why the
+$\rho$-numbers stay bounded, i.e. to verify
+Proposition 3.2.  The second   is 
+to show that
+if $\phi$ is some $L^1_{\text{loc}}$-function such that
+$\Delta(\phi)=0$ holds in the distribution sense, then
+$\phi$ is \emph{automatically} a nice function, i.e. at 
+least $C^2$ and hence harmonic.
+If this has been achieved  
+the results  above show
+that the  subharmonic function $u$
+is represented as a logarithmic potential of a measure plus a
+harmonic functions inside $\Omega[-3\delta]$. Since $\delta>0$
+can be made arbitrary small this gives  a representation in any relatively
+compact subset of $\Omega$. So there remains to establish two
+general results from distribution theory.
+
+
+
+\bigskip
+
+\centerline {\bf 3.6. Positive distributions.}
+\medskip
+
+\noindent
+Consider an open  square $\square=\{(x,y)\colon\,\, 0< x,y<1\}$.
+Let $\mathcal L$ be a linear form on 
+$C_0^\infty(\square)$ and assume that there exists
+some 
+integer $k\geq 0$ and a constant $C$ such that
+\medskip
+\[ 
+|L(g)|\leq C\cdot ||g||_k\quad\colon\,g\in C_0^\infty(\square)\,\, \text{where}\,\,
+||g||_k=\text{norm in}\,\, C^k(\square)
+\]
+
+
+\noindent We say that $L$ is positive if
+\[ 
+g\geq 0\implies L(g)\geq 0
+\]
+
+
+\noindent {\bf 3.7 Theorem.}
+\emph{Let $L$ be defined and positive as above.
+Then, for every $0<r<1$
+there is a constant
+$C_r$ such that}
+\[
+|L(g)|\leq C_r\cdot ||g||_0\quad\colon\text{Supp}(g)\subset\square_r
+\]
+
+
+\noindent 
+\emph{Proof}
+Given $r<1$ we construct
+$\phi\in C_0^\infty(\square)$ where $\phi=1$ on
+$\square_r$ and is non-negative.
+Now, if $g$ ha support in $\square_r$
+it follows that the function
+\[ ||g||_0\cdot\phi-g\geq 0
+\]
+Since $L$ is positive we get
+\[ L(g)\leq ||g||_0\cdot L(\phi)
+\]
+So we can take $C_r=L(\phi)$ and  Theorem 3.7 follows.
+
+
+
+
+\bigskip
+
+\centerline{\bf 3.8. The elliptic property of $\Delta$.}
+\medskip
+
+\noindent
+Let $w\in L^1_{\text{loc}}(\Omega)$ for some bounded open set.
+Assume that
+\[
+\iint\,\Delta(g)\cdot w\, dxdy=0\quad\colon\, g\in C_0^\infty(\Omega)
+\]
+
+
+\noindent {\bf 3.9 Theorem.} \emph{Under the assumption above 
+$w$ is a harmonic function in $\Omega$.}
+
+
+\bigskip
+
+\noindent 
+\emph{Proof.} We use similar regularisations as above.
+With $\delta>0$
+we choose the sequence $\{\phi_k\}$
+and now 
+$\phi_k*w\in C^\infty(\Omega[-\delta]$.
+Since convolution commutes with
+$\Delta$, it follows that
+these functions are harmonic in
+$\Omega[-\delta]$.
+Moreover, since $w$ b assumption has a finite $L^1$-norm over
+the relatively compact subset $\Omega[-\delta]$,
+the $L^1$-norms of
+$\{\phi_k*w\}$ are uniformly bounded in
+$\Omega[-2\delta]$, i.e. we have a constant $C$ so that
+\[ 
+\iint_{\Omega(-2\delta)}
+|\phi_k*w|\,dxdy\leq C
+\]
+
+
+\noindent
+\emph{Poisson's formula} implies that we get a uniform bound for the
+\emph{maximum norms}
+in $\Omega[-3\delta]$, i.e. with another constant $C_1$ one has
+\[
+\max\,|\phi_k*w(z)|\leq C_1\quad\colon\, z\in\Omega[-3\delta]
+\]
+At this stage we apply Montel's results for normal families
+of harmonic functions in
+XX. Passing to a subsequence if necessary, it follows that
+\[ 
+\lim_{k\to\infty}\,\, \phi_k*w= G\,\,\text{holds uniformly
+in compact subsets of}\,\, \Omega[-3\delta]
+\]
+where the limit function $G$ is harmonic. At the same time
+$w\in L^1_{\text{loc}}$. From Lebesgue theory we know that
+$\phi_k*w\to w$ and hence $w$ must be equal to  the "true" harmonic function
+$G$ in $\Omega(-\delta)$. Since $\delta$ can be arbitrary small we conclude that
+$w$ is a true harmonic function in the whole of $\Omega$.
+
+
+
+\bigskip
+
+\noindent{\bf 3.10 Remark.}
+Above we gave a "pedestrian proof" which 
+could have been given
+in a quicker way if one admits further results
+in distribution theory. Moreover,
+the elliptic property of $\Delta$
+holds for distributions, i.e. if $w$ is replaced by \emph{any} distribution
+$\mu$ defined in some open set $\Omega$ where
+$\Delta(\mu)=0$  holds in the sense of distributions, then
+$\mu$ is a "true" harmonic function.
+Thus can be shown by using regularisations as above.
+Namely, exactly as above $\phi_k*\mu\in C^\infty(\Omega[-\delta]$.
+Next, the distribution   $\mu$ restricted to the relatively compact set
+$\Omega[-\delta]$ has a finite order $k$ say.
+Using this one can proceed exactly as in the proof
+of Theorem 3.9 except that
+one has to be a bit more careful and take into the account growth
+of the derivatives of the $\phi$-functions up to order $k$.
+We leave the details to the reader who also may consult
+text-books devoted to
+distribution theory which show that 
+Theorem 3.9 holds with $w$ replaced by a distribution.
+
+\bigskip
+
+
+\centerline{\bf {3.11 Analytic expansions of harmonic functions}}
+
+\medskip
+
+\noindent
+The elliptic character of
+$\Delta$ is made more precise
+by a result due to L. Ehrenpreis 
+which shows how to
+express distributions 
+via absolutely convergent integrals 
+taken in ${\bf{C}}^2$ via the Fourier transform of $\mu$.
+This result go beyond these notes
+since the proofs rely upon several complex variables.
+Ehrenpreis'
+integral formulas appear in [Bjšrk: Chapter 8 ] and 
+also in 
+[Hš-complex] as well as in [Hš:2 Chapter PDE].
+Let as explain the result for harmonic functions $w(x,y)$
+in the unit disc.
+\medskip
+
+\noindent
+{\bf 3.12 Integrals over harmonic exponentials}
+Let $\zeta$ and $w$ be two complex numbers and set:
+\[ 
+\mathfrak{e}(x,y)= e^{i (x\zeta+y\eta)}
+\]
+We see that $\Delta(\mathfrak{e})=-(\zeta^2+w^2)\cdot \mathfrak{e}$.
+Put
+\[
+ S=\{(\zeta,w)\in C^2\quad\colon\,\zeta^2+w^2=0\}
+\]
+Points on this algebraic hypersurface in ${\bf{C}}^2$ produce harmonic 
+${\bf{e}}$-functions in the  $(x,y)$-plane.
+It is therefore tempting to consider a complex-valued Riesz measure
+$\mu$ in the 4-dimensional real $(\zeta,w)$-space with support in $S$ and
+define the function 
+\[ 
+U(x,y)=\int_S\, e^{i(x\zeta+y w)}\cdot d\mu(\zeta,w)\tag{*}
+\]
+
+
+\noindent 
+With $\zeta=\xi+i\eta$ and $w=u+iv$
+we have 
+\[
+|e^{i(x\zeta+y w)}|= e^{-(x\eta+yv)}\tag{i}
+\]
+If $z=x+iy\in D$
+so that $x^2+y^2<1$,  the Cauchy-Schwartz inequality gives
+\[
+|x\eta+yv|\leq\sqrt{\eta^2+v^2}\tag{ii}
+\]
+Assume that the mass distribution of $\mu$ 
+satisfies
+\[
+\int_S\,e^{ \sqrt{\eta^2+v^2}}\cdot\,|d\mu(\zeta,w)|<\infty\tag{iii}
+\]
+Under this hypothesis we see from (i-iii) that
+the integral defining $U(x,y)$ in (*)
+converges for
+every point $(x,y)\in D$ and gives  a harmonic
+function.
+\medskip
+
+\noindent
+{\bf 3.13 Extension to the complex Levi ball.}
+From the real pair $(x,y)$ we can take pass to complex
+numbers
+$z_1,z_2$ with $\mathfrak{Re}(z_1)=x$ and
+$\mathfrak{Re}(z_2)=y$.
+Let us then try to evaluate the integral
+\[ 
+\mathcal U(z_1,z_2)=
+\int_S\, e^{i(z_1\zeta+z_2 w)}\cdot d\mu(\zeta,w)
+\]
+
+
+\noindent
+With $z_1=a_1+ib_1$ and $z_2=a_2+ib_2$
+we get 
+
+
+\[
+| e^{i(z_1\zeta+z_2 w)}|=
+e^{a_1\mathfrak{Re}(\zeta)-b_1\mathfrak{Im}(\zeta)+
+a_2\mathfrak{Re}(w)-b_2\mathfrak{Im}(w)}
+\]
+
+
+\noindent
+Let us put
+\medskip
+\[
+\mathcal L=\{(z_1,z_2)\quad\colon\, |z_1|+z_2|<1\}
+\]
+
+
+\noindent
+This open subset of ${\bf{C}}^2$ is called the Levi ball.
+Notice that its intersection with the real subspace 
+where $\mathfrak{Im}(z_1)=\mathfrak{Im}(z_2)$ is equal to the
+unit disc $D$ in the $(x,y)$-plane.
+The Cauchy-Schwartz inequality gives
+\[
+|a_1\mathfrak{Re}(\zeta)-b_1\mathfrak{Im}(\zeta)+
+a_2\mathfrak{Re}(w)-b_2\mathfrak{Im}(w)|
+\leq |z_1|\cdot\sqrt{\xi^2+\eta^2}+
+|z_2|\cdot\sqrt{u^2+v^2}
+\]
+
+
+\noindent
+At the same time we stay on $S$ so that
+$\zeta^2+w^2=0$. Regarding the real part this gives
+\[
+\xi^2-\eta^2+u^2-v^2=0
+\]
+At this stage  the reader discovers the picture. More precisely we
+obtain
+
+\medskip
+
+
+
+\noindent 
+{\bf 3.14 Lemma.} \emph{When $(z_1,z_2)\in\mathcal L$
+one has the inequality}
+\medskip
+\[
+|z_1|\cdot\sqrt{\xi^2+\eta^2}+
+|z_2|\cdot\sqrt{u^2+v^2}\leq\sqrt{\eta^2+v^2}
+\quad\colon\,(\xi+i\eta,u+iv)\in S
+\]
+
+
+\noindent
+The easy proof is left to the reader.
+Using this inequality and assuming that the integral (iii) above is finite, it
+follows that one has  \emph{absolutely convergent integrals}:
+\[ 
+\mathcal U(z_1,z_2)=
+\int_S\, e^{i(z_1\zeta+z_2 w)}\cdot d\mu(\zeta,w)
+\quad\colon\, (z_1,z_2)\in\mathcal L\tag{**}
+\]
+
+
+
+\noindent Moreover, when $|z_1|+|z_2|<1$, i.e. when we stay inside the 
+open Levi ball
+we can take complex derivatives with respect to $z_1$ and $z_2$ to conclude that
+$\mathcal U$ is an analytic function in the open Levi ball.
+Its restriction to the real subspace is the harmonic function $U(x,y)$
+which by (**)
+extends to an analytic function of two
+complex variables in the Levi ball.
+\medskip
+
+\noindent
+{\bf 3.15 Application.}
+For each integer $N\geq 0$ we put
+
+\[ 
+\mathcal H_N=\{ u\in C^N(\bar D)\quad\colon\,
+u\,\,\text{harmonic in}\,\, D\}
+\]
+This is a Banach space where the norm
+$||u||_N$ can be taken as the sum of the maximum norm of
+its derivatives up to order $N$ plus the maximum norm of $u$ itself.
+With this notation the following result holds - i.e. a special case
+from the $L^2$-estimates from [Hšr]. See also
+Chapter 4 in the text-book
+[Hšr:xx.]
+\bigskip
+
+\noindent
+{\bf 3.16 Theorem.}
+\emph{There exists a fixed integer $m^*$ and for   every $N\geq 0$
+a constant $C_N$ such that every  $u\in\mathcal H_N$ 
+can be represented inside $D$ by an absolutely convergent integral}
+\[ 
+u(x,y)=
+\int_S\,
+ e^{i(x\zeta+yw)}d\mu(\zeta,w)
+\]
+\emph{and the measure $\mu$ satisfies}
+\[
+\int_S\,
+[1+\sqrt{\eta^2+v^2}\,]^{m^*-N}\cdot e^{i\sqrt{\eta^2+v^2}}\cdot
+|d\mu(\zeta,w)|\leq
+C_N\cdot ||u||_N
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+Hšrmander's proof shows that the constants $C_N$ have 
+polynomial growth, i.e. there are constants $A,B$ such that
+\[ C_N\leq A(1+N)^B\quad\colon\, N=1,2,\ldots
+\]
+
+\medskip
+
+\noindent
+{\bf{3.17 Question.}}
+It would be interesting  to
+determine the best possible $m^*$ for which constants
+$C_N$ as above exist for all $N$. For this  
+question one
+need not insist that $m^*$ is an integer.
+\medskip
+
+\noindent 
+{\bf 3.18 Expansions  by Hayman} 
+The 
+analytic extension of a harmonic function $u(x,y)$ in $D$ to the Levi ball can also be proved 
+via
+expansions of  $u(x,y)$ into harmonic polynomials.
+This is done by Hayman in [xx] without any  use 
+complex analysis in several variables.
+Using Hayman's expansions it seems reasonable to get
+a good upper bound for $m^*$ and perhaps even find the best possible choice.
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf 4. Perron families.}
+\bigskip
+
+
+\noindent
+Le $\Omega$ be a bounded open set in
+${\bf{C}}$. No further assumptions are imposed, i.e.
+$\Omega$ need not be connected and its boundary
+can be "ugly". For example, it may  have
+positive two-dimensional Lebesgue measure.
+On $\partial\Omega$ we have a function $\phi(x)$
+which takes values between 0 and some $M>0$. No
+other conditions are imposed, i.e. $\phi$ need not even
+be measurable.
+Given $\phi$ we denote by $\mathcal P(\phi)$
+the family of all $u\in\text{SH}^0(\Omega)$
+for which
+
+\[
+\limsup_{z\to w}\, u(z)\leq \phi(w)\quad\colon\quad
+w\in\partial\Omega
+\]
+
+
+\noindent 
+In $\Omega$ we get the function
+\[ 
+H_\phi^*(z)=
+\max_{u\in\mathcal P(\phi)}\, u(z)
+\]
+It is called Perron's maximal function of $\phi$.
+With these notations one has
+\medskip
+
+\noindent
+{\bf 4.1 Theorem.}
+\emph{Perron's maximal function is harmonic in
+$\Omega$.}
+\bigskip
+
+\noindent
+\emph{Proof.}
+The constant functions 0 belons to
+$\mathcal P(\phi)$ and the maximum principle gives
+$u(z)\leq M$ for every $u\in\mathcal P(\phi)$.
+It suffices to show that $H^*_\phi(z)$ is harmonic in
+a disc $D$ inside $\Omega$.
+When $u\in\mathcal P(\phi)$
+its restriction to $\partial D$ is a continuous function
+where the solution to Dirichlet problem gives
+the harmonic function $u^*$ in $D$.
+The function defined as $u^*$ in $D$ and $u$ in
+$\Omega\setminus D$ belongs to $\mathcal P(\phi)$.
+At the same time
+$u\leq u^*$ holds in $D$.
+We conclude from this that the values of $H^*_\phi$ inside $D$
+are obtained when we take $u$:s from the restricted
+class of $\mathcal P(\phi)$ which are harmonic
+and $\geq 0$ in $D$.
+Denote this restricted class with
+$\mathcal P_*(\phi)$.
+So inside $D$
+we have
+\[
+H_\phi^*(z)=
+\max_{u\in\mathcal P_\ast(\phi)}\, u(z)\tag{i}
+\]
+The harmonic functions in $D$ which
+come from 
+$\mathcal P_\ast(\phi)$ take values between
+0 and M and hence their restrictions to $D$
+give a normal family of harmonic functions in $D$.
+Let $a$ be the center of $D$.
+The normal family property yields
+a sequence $\{u_n\}$ in
+$\mathcal P_*(\phi)$
+such that
+\[ 
+H^*(a)=\lim_n\, u_n(a)\tag{ii}
+\]
+and $\{u_n\}$ converge uniformly to a harmonic function
+$U(z)$ in $D$.
+We claim that
+\[ H^*(z)=U(z)\quad\colon\,z\in D\tag{iii}
+\]
+
+
+\noindent
+For assume the contrary. 
+To begin with, since $H^*(z)$
+is the maximal function it is clear that
+$U(z)\leq H^*(z)$ holds in $D$.
+So if (iii) fails there exists
+\[
+z_0=a+re^{\theta_0}\in D\quad\colon\quad
+U(z_0)<H_\phi^*(z_0)\tag {iv}
+\]
+
+
+
+
+
+
+
+
+
+\noindent
+To see that (iv) cannot occur we  
+regard the point $z_0$ and again  use again the normal family to
+obtain a sequence $\{v_n\}$ in $\mathcal P_*(\phi)$
+which converges uniformly to a harmonic function
+$V(z)$ in $D$ where
+\[ 
+V(z_0)=H^*_\phi(z_0)\tag{v}
+\]
+
+
+
+\noindent
+Now we can derive a contradiction if (iii) fails. 
+Namely, in $\Omega$
+we have the subharmonic function
+$w_n=\text{max}\,(u_n,v_n)$
+and taking its harmonic majorant inside $D$
+we get a new sequence $\{w_n^*\}$
+in
+$\mathcal P^*_\phi$. Passing to a subsequence if necessary
+$w_n^*$ converges to a limit function $W(z)$
+which is harmonic in $D$ and by construction it is
+$\geq$ both to $U$ and to $V$.
+But from (ii) we have 
+\[
+U(a)=H^*_\phi(a)\implies U(a)=W(a)\tag {vi}
+\]
+
+
+\noindent
+At the same time
+$V\leq W$ and $V(z_0)= W(z_0)>U(z_0)$.
+Hence we get a strict inequality
+\[
+\frac{1}{2\pi}\,\int_0^{2\pi}
+U(a+re^{i\theta})\cdot d\theta< 
+\frac{1}{2\pi}\,\int_0^{2\pi}
+\,W(a+re^{i\theta})d\theta\tag {vii}
+\]
+
+
+\noindent
+But this
+contradicts the equality $U(a)=W(a)$ from
+(vi) since both terms in
+(vii) by the mean value equality express
+$U(a)$ and $W(a)$.
+Hence equality holds in (iii) and Theorem 4.1  is proved.
+
+
+
+
+\bigskip
+
+
+\centerline{\bf 5. Maximum of several harmonic functions}
+
+
+\bigskip
+
+\noindent
+Let $H_1,\ldots,H_k$ be a finite family of harmonic functions
+defined in some open set $\Omega$.
+Put
+\[
+u(x,y)=\text{max}\,\{H_1(x,y),\ldots,H_k(x,y)\}
+\]
+Since harmonic functions satisfy the mean-value
+condition it follows that the mean-value inequality holds for $u$ and hence
+$u$ is subharmonic.
+We are going to  describe the non-negative measure
+$\Delta(u)$.
+To attain this we introduce the set
+\[
+\Gamma=\,\bigcup_{i\neq\nu}\, \{H_i=H_\nu\}
+\]
+
+
+\noindent
+Recall from XXX that the zero set of an arbitrary  harmonic function
+consists of
+a union of smooth real analytic curves
+$\{\gamma_\alpha\}$ where each pair of these curves
+may interest in a discrete set and when it occurs this
+intersection is transveral.
+Since $\Gamma$ is a finite union of zero sets of
+harmonic functions it enjoys the same
+description.
+There appears also the discrete set $\sigma(\Gamma)$
+where at least two curves intersect. Now
+$\Gamma\setminus\sigma(\Gamma)$
+is a disjoint union of smooth and connected real-analytic curves
+$\{\gamma_k\}$  called
+the
+\emph{regular branches} of $\Gamma$.
+If $\Omega_0$ is a relatively compact subset of
+$\Omega$ only finitely many regular branches intersect
+$\Omega_0$.
+\medskip
+
+
+\noindent
+Next, the open complement $\Omega\setminus\Gamma$
+has connected components denoted by
+$\{\Omega_\alpha\}$. To every such component it is clear from the definition of $u$
+that there exists
+an integer $1\leq i(\alpha)\leq k$ such that
+\[
+u=H_{i(\alpha)}\quad\text{holds in}\quad  \Omega_\alpha\tag{1}
+\]
+
+\noindent
+Let us now consider a regular branch $\gamma_k$ of $\Gamma$.
+It borders two connected components, say
+$\Omega_\alpha$ and $\Omega_\beta$.
+From (1) we get the   pair $H_{i(\alpha)}$ and
+$H_{i(\beta)}$ where
+\[ 
+H_{i(\alpha)}=H_{i(\beta)}\quad\text{holds on}\,\,\gamma_k
+\]
+
+
+\noindent
+Since $\gamma_k$ is a regular branch it follows that the two gradient vectors
+$\nabla(H_{i(\alpha)}$ and $\nabla)H_{i(\beta)}$
+are not equal at any point on $\gamma_k$.
+Let $\mathfrak{n}_\alpha$ be the normal to
+$\gamma_k$ which is directed into $\Omega_\alpha$.
+This means that
+\[
+H_{i(\alpha)}>H_{i(\beta)}\quad\text{holds in}\quad  \Omega_\alpha
+\]
+and with this choice of
+$\mathfrak{n}_\alpha$ we have
+\[
+\partial_{\mathfrak{n}_\alpha}(H_{i(\alpha)})>
+\partial_{\mathfrak{n}_\alpha}(H_{i(\beta)})\quad\text{on}\,\,\gamma_k
+\] 
+
+
+\noindent Thus, if $ds$ is the arc-length measure on $\gamma_k$
+we get the positive measure
+\[ 
+\mu_{\gamma_k}=
+[\partial_{\mathfrak{n}_\alpha}(H_{i(\alpha)})-
+\partial_{\mathfrak{n}_\alpha}(H_{i(\beta)})]\cdot
+ds\tag{*}
+\]
+
+
+
+\medskip
+
+\noindent 
+{\bf 5.1 Proposition.}
+\emph{Along $\gamma_k$ the measure $\Delta(u)$ is given
+by the positive density above.}
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Prove this result where the hint us to apply
+Stokes formula.
+\medskip
+
+\noindent
+Proposition 5.1 gives   the following
+conclusive result:
+\medskip
+
+\noindent
+{\bf{5.2 Theorem.}}
+\emph{The non-negative Riesz measure
+$\Delta(u)$ is equal to}
+\[ 
+\sum\, \mu_{\gamma_k}
+\]
+ \emph{where the sum is taken over all regular branches of $\Gamma$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+By Propostion 5.1. there only remains to show that
+$\Delta(u)$ cannot contain a discrete part from 
+discrete point masses in $\sigma(\Gamma)$.
+But this is clear for if 
+$\Delta(u)$ contains a discrete measure
+$c\cdot \delta_p$ with $c\neq 0$ and $p\in\sigma(\Gamma)$
+then the logarithimc potential of this point mass yields a
+discontinuous function while $u$ from the start
+obviously is a continuos function.
+\bigskip
+
+\noindent {\bf 5.3 Subharmonic configurations.}
+Above we have clarified that every 
+finite set of harmonic functions  
+$H_1,\ldots,H_k$ yields a 
+subharmonic maximum function.
+One may ask if this $k$-tuple can be used to construct other subharmonic functions
+$u$ than the maximum function. Let us give
+\medskip
+
+\noindent
+{\bf{5.4 Definition.}}
+\emph{A subharmonic configuration of
+$H_1,\ldots,H_k$
+is a subharmonic function $u$ in
+$\Omega$ whose Laplacian is supported by $\Gamma$
+and for 
+every connected component 
+$\Omega_\alpha$ of of 
+$\Omega\setminus\Gamma$ one has:}
+\[
+u=H_{i(\alpha)}\quad\text{for some}\quad
+ 1\leq i(\alpha)\leq k \tag{*}
+\]
+\medskip
+
+\noindent
+Thus, when $u$ is a subharmonic configuration
+then
+$\Omega\setminus\Gamma$ is covered by
+by a $k$-tuple of pairwise
+disjoint open
+sets $W_1,\ldots,W_k$ such that
+$u=H_i$ holds in $W_i$. Moreover, every
+$W$-set is a union of connected components of
+$\Omega\setminus\Gamma$.
+\medskip
+
+
+\noindent
+{\bf{An example.}}
+It turns out that there exist subharmonic configurations which
+which are not given by the maximum function.
+The following example is due to Borsea and Bšgvad in [B-B]:
+\bigskip
+
+GIVE Example.
+\bigskip
+
+\noindent
+{\bf{Local uniqueness. }}
+The example above leads us  to find
+conditions on the
+harmonic functions in order
+that they only admit the
+obvious subharmonic configuration.
+In the article [B-B-B] a local uniqueness result is proved which goes
+as follows: Let $p\in\Omega$ be a point such that
+$k$-tuple of gradient vectors
+$\{\nabla(H_i)(p)\}$
+all are extreme points in the convex hull they generate
+in ${\bf{R}}^2$. Under this condition one has
+
+\noindent
+
+\medskip
+
+\noindent
+{\bf{5.5 Theorem.}}
+\emph{Let $u$ be a subharmonic configuration of $H_1,\ldots,H_k$ 
+defined in some open neighborhood of $p$ where 
+all the $H$-functions are active, i.e. the closure of  the open set where
+$u=H_i$ contains $\{p\}$ for each $1\leq i\leq k $.
+Then}
+\[ 
+u=\max\,(H_1,\ldots,H_k)
+\] 
+\emph{holds in a neighborhood of $p$.}
+
+
+
+
+\bigskip
+
+\noindent
+
+
+
+
+
+
+\noindent
+{\bf {5.6 A study of Cauchy transforms}}
+Let $\mu$ be a non-negative Riesz measure
+whose support is a compact null set $K$.
+Now we get the Cauchy transform
+\[ 
+\mathcal C_\mu(z)=\int_K\,\frac{d\mu(\zeta)}{z-\zeta}
+\]
+Let $\Omega$ be an open set which contains $K$ and $g_1,\ldots,g_k$ 
+is some $k$-tuple of holomorphic
+functions in $\Omega$.
+We can impose the condition that
+for every
+connected component $\Omega_\alpha$ of
+there exists $1\leq i(\alpha)\leq k$
+such that
+\[
+\mathcal C_\mu|\Omega_\alpha=g_{i(\alpha)}\tag{*}
+\]
+
+
+\noindent
+Let us also consider the logarithmic potential
+\[ 
+U_\mu(z)= \int_K\,\text{Log}\, (|z-\zeta|)\cdot d\mu(\zeta)
+\] 
+It turns out that the subharmonic function
+$U_\mu$ is 
+locally piecewise harmonic in $\Omega$. To prove this
+it suffices to 
+work 
+locally inside $\Omega$ so without loss of generality
+we may  assume that
+$\Omega$ from the start is simply connected Then there exist
+primitive analytic functions $G_1,\ldots,G_k$ of the 
+$g$-functions.
+The formulas from XXX show that (*) is equivalent   to the condition
+that
+for every $\Omega_\alpha$ there exists a constant $c_\alpha$ such that
+\[
+U_\mu(z)|\Omega_\alpha=\mathfrak{Re}(G_{i(\alpha)})+c_\alpha\tag{2}
+\]
+Here $\{H_i=\mathfrak{Re}(G_i)\}$ are harmonic functions in
+$\Omega$.
+If the number of the  constants $\{c_\alpha\}$ which appear above is finite 
+it  follows that $U_\mu$ is piecewise harmonic with respect to
+a finite set of harmonic functions, i.e. given by 
+the family $\{H_i\}$
+plus eventual constants via (2) above.
+In this \emph{favourable}
+case we get the similar  result  as in Theorem 5.2.
+In particular
+we conclude that the support of $\Delta(\mu)$
+is a union of real-analytic $\gamma$-arcs.
+In [BV-B-B] the following affirmative result is proved without any initial assumption of
+the local finiteness of  the $c$-constants. 
+\bigskip
+
+\noindent
+{\bf{5.7 Theorem.}}
+\emph{When (*) holds above
+it follows that the logarthmic potential
+$U_\mu$ is locally piecewise harmonic and hence 
+the support of $\Delta(\mu)$ consists of a locally finite union
+of real-analytic curves.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The proof Theorem 5.7  is quite involved and we  refer to
+[B-B-B] for details.
+The difficulty  is to show that (*)
+implies that the number of $c$-constants from (**) is locally finite.
+
+
+
+\bigskip
+
+
+
+\noindent
+{\bf 5.8 Cauchy transforms and algebraic functions.}
+As above   $\mu$ is a non-negative measure 
+supported by a compact null set $K$ in
+${\bf{C}}$. The  Cauchy transform
+$\mathcal C_\mu(z)$ is analytic in ${\bf{C}}\setminus K$.
+Suppose  it satisfies an algebraic equation, i.e.
+there exists some $m\geq 1$
+and polynomials  $p_0(z),\ldots,p_m(z)$ such that
+\[
+p_m(z)\cdot \mathcal C^m_\mu(z)+\ldots
+p_1(z)\cdot \mathcal C_\mu(z)+
+p_0(z)=0\quad\colon\quad
+z\in{\bf{C}}\setminus K\tag{*}
+\]
+\medskip
+
+\noindent
+Using Theorem  5.7 it is proved in [B-B-B] that
+(*) implies that $K$ is a finite union of real-analytic curves
+which  are related to
+roots of the algebraic equation
+\[
+p_m(z)\cdot y^m +\ldots
+p_1(z)\cdot y+
+p_0(z)=0\quad\colon\quad
+z\in{\bf{C}}\setminus K\tag{**}
+\]
+\medskip
+
+\noindent
+{\bf{5.9 Remark.}}
+The  result in 5.8 is illustrated by
+examples from the article [Bergquist-RullgŒrd).
+Here asymptotic expansions for distributions of roots
+of eigenpolynomials which appear for a 
+class of ODE-equations which
+extend the usual hypergeometric equation. 
+The asymptotic distributions of roots are given by probability measures $\mu$ whose Cauchy transforms
+satisfy an algebraic equation of the form
+\[ 
+\mathcal C_\mu^m(z)=\frac{1}{Q(z)}(*)
+\] 
+where $Q(z)$ is a monic polynomial of degree $m$ with simple zeros
+$\alpha_1,\ldots,\alpha_k$.
+It is proved in [B-R] that there exists a \emph{unique}  probability measure
+$\mu$ with compact support  whose Cauchy transform satisfies (*).
+Moreover, the support of $\mu$ is an analytic tree
+$\Gamma$, i.e. a connected set given  by
+a finite union of real-analytic  Jordan
+arcs which meet at some corner points. Moreover.
+${\bf{C}}\setminus\Gamma$ is connected.
+
+
+\newpage
+
+\centerline{\bf{6. On zero sets of subharmonic functions.}}
+
+\medskip
+
+\noindent
+Let  $\Omega$ in ${\bf{C}}$ be a bounded open set and
+denote by
+$\text{SH}_0(\Omega)$
+the set of  subharmonic functions in   $\Omega$
+whose Laplacian is a Riesz measure supported by a 
+compact null set. Every such function $v$ is locally a
+logarithmic potential of $\Delta(V)$ plus a harmonic function
+and 
+can therefore be taken to be
+upper
+semi-continuous. Moreover,  the distribution
+derivatives  $\partial V/\partial x$
+and
+$\partial V/\partial y$  belong to
+$L^1_{\text{loc}}(\Omega)$.
+Before we announce Theorem 6.1 
+we introduce a geometric construction.
+If $U$ is an open subset of $\Omega$
+we  construct
+its forward star\vvv domain
+as follows:
+To each $\zeta\in U$
+we find the largest $s(\zeta)>0$
+such that the line segment
+\[
+\ell\uuu\zeta(s(\zeta))=
+\{ \zeta+x\,\colon \, 0\leq x<s(\zeta)\}\subset \Omega
+\]
+Now we put
+\[ 
+\mathfrak{s}(U)=\bigcup\uuu{\zeta\in U}\, 
+\ell\uuu\zeta(s(\zeta))\tag{*}
+\]
+and refer to this open set as the
+forward star domain of $U$.
+\bigskip
+
+\noindent{\bf{6.1 Theorem.}}
+\emph{Let 
+$V\in\text{SH}_0(\Omega)$ and put
+$K=\text{Supp}(\Delta(V))$. Suppose that
+$V=0$ in an open subset $U$ of $\Omega\setminus K$
+and furthermore}
+\[
+\partial V/\partial x(z)<0,\quad\text{holds in}\quad 
+\Omega
+\setminus (K\cup U)\,.\tag{*}
+\]
+\emph{Then $V=0$ in $\mathfrak{s}(U)$.}
+\medskip
+
+
+
+\noindent
+\emph{Proof.}
+It is clear that it suffices to show the following:
+Let $z_0\in U$ and consider a horisontal
+line segment 
+\[
+\ell=\{z=z_0+s\,\colon\,
+0\leq s\leq s_0\}
+\]
+which is contained in $\Omega$.
+Then, if $0<\delta<\text{dist}(\ell,\partial\Omega)$
+and the open disc $D_\delta(z_0)$ of radius $\delta$ centered at
+$z_0$ is contained in $U$, it follows that $V$ vanishes in the open set
+\[
+\{z\,\colon\, \text{dist}(z,\ell)<\delta\}\tag{1}
+\]
+
+
+
+\noindent
+Notice  that (1) is a relatively compact subset of $\Omega$.
+Consider the complex derivative
+\[
+\partial V/\partial z=
+\frac{1}{2}(\partial V/\partial x\vvv i
+\partial V/\partial y)
+\]
+This yields a complex\vvv valued and locally integrable function
+and since $V=0$ in $D\uuu\delta(z\uuu 0)$
+it is clear that $V=0$ in the open set from (1) if we  prove that
+$\partial V/\partial z=0$ holds almost everywhere in (1)
+To prove this we take some  $\epsilon>0$ and put
+\[
+\Psi\uuu\epsilon (z)=\log \, (\partial V/\partial z\vvv\epsilon)
+\tag{2}
+\]
+\medskip
+where the single-valued branch of the complex Log-function
+is chosen so that
+\[
+\pi/2<\mathfrak{Im}\,\Psi\uuu\epsilon <3\pi/2\tag{3}
+\]
+Hence we can write
+\[
+\Psi\uuu\epsilon (z)=\text{Log}|\epsilon-\partial V/\partial z|+i\tau(z)
+\quad\,\colon\quad  \pi/2<\tau(z)<3\pi/2\tag{4}
+\]
+
+
+\noindent 
+\emph{A regularisation.}
+Choose a non-negative
+test-function $\phi$ with compact support in
+$|z|\leq \delta$ while  $\phi(z)>0$ if $|z|<\delta$
+and $\iint \phi(z)dxdy=1$. We construct the
+convolution $\sigma*\Psi\uuu\epsilon $ which is defined in the
+subset of $\Omega$ whose points have distance 
+$>\delta$ to $\partial\Omega$.
+Rules for first order derivations of a convolution
+give
+
+\[
+\bar\partial/\bar\partial\bar z\bigl(\phi \ast \Psi\uuu\epsilon \bigr )=
+\frac{\phi\ast \bar\partial\partial (V)}{\partial V/\partial z)\vvv
+\epsilon}=
+\frac{1}{4}\cdot\frac{1}{\partial V/\partial z\vvv\epsilon}\cdot 
+\phi\ast \Delta(V)
+\]
+Taking the real part we get 
+\[
+\mathfrak{Re}(\bar\partial/\bar\partial\bar z(\phi\ast \Psi\uuu\epsilon))=
+\frac{\partial V/\partial x\vvv \epsilon}{4
+|\epsilon-\partial V/\partial z|^2}\cdot\phi*\Delta(V)\tag{5}
+\]
+
+
+\medskip
+\noindent
+To simplify notations we set
+\[
+\sigma(z)=\text{Log}|\epsilon-\partial V/\partial z|\tag{6}
+ \]
+
+
+\medskip
+
+
+\noindent
+The definition
+of the $\bar\partial$-derivative and the decomposition
+$\Psi\uuu\epsilon =\sigma+i\cdot \tau$
+together with the inequality (5) give
+\[
+\partial_x(\phi*\sigma)\leq\partial_y(\phi*\tau)\tag{7}
+\]
+
+\medskip
+
+\noindent
+In the right hand side we 
+use the partial $y$\vvv derivative on $\phi$, i.e. we use the general formula:
+\[
+\partial_y(\phi*\tau)=
+\partial_y(\phi)*\tau
+\]
+Since $\pi/2\leq \tau\leq 3\pi/2$ the absolute value of this function
+is majorized by
+\[
+M=\frac{3\pi}{2}\cdot||\partial_y(\phi)||_1\tag{8}
+\]
+where
+$||\partial_y(\phi)||_1$ denotes the $L^1$-norm.
+Next,  
+consider the function $s\mapsto \phi*\sigma(z\uuu 0+s)$
+where $0\leq s\leq s_0$ whose  $s$-derivative becomes
+$\partial_x(\phi*\sigma)(z+s)$. Hence (7\vvv 8) give:
+
+\[
+\frac{d}{ds}(\phi*\sigma(z+s))\leq M
+\]
+\[
+\implies
+\phi*\sigma(z\uuu 0+s\uuu 0)\leq\phi*\sigma(z\uuu 0)+M\cdot s_0\tag{9}
+\]
+
+\medskip 
+
+\noindent 
+From now on  $\epsilon<1$ so that $\log \epsilon<0$. 
+Since $V=0$ in $D\uuu\delta(z\uuu 0)$
+we also have $\partial V/\partial z=0$ in this disc
+and conclude that
+\[
+\phi*\sigma(z\uuu 0)=\log\,\epsilon\tag{10}
+\]
+Next, we have
+\[ 
+\sigma=\log\,\epsilon+
+\log\,|1\vvv \frac{\partial V/\partial z}{\epsilon}|
+\]
+Put
+\[
+f\uuu\epsilon=\log\,|1\vvv \frac{\partial V/\partial z}{\epsilon}|\tag{11}
+\]
+Then (9\vvv 10) give the inequality
+\[
+\phi\ast f\uuu\epsilon(z\uuu 0+s\uuu 0)\leq M\cdot s\uuu 0\tag{12}
+\]
+So from 
+the construction of a convolution this means that
+\[
+\iint\uuu{|\zeta|\leq \delta }\,
+f\uuu\epsilon (z\uuu 0+s\uuu 0+\zeta)\cdot \phi(\zeta)\cdot d\xi d\eta
+\leq M\cdot s\uuu 0\tag{13}
+\]
+
+
+
+
+
+\medskip
+
+\noindent
+Next, we can write
+\[
+f\uuu\epsilon (z)= \frac{1}{2}\cdot \log\, \bigl(
+(1\vvv \frac{\partial V/\partial x}{\epsilon})^2+
+(\frac{\partial V/\partial y}{\epsilon})^2\bigr)\tag{14}
+\]
+Since $\partial V/\partial x\leq 0$ holds almost everywhere we have
+$f\geq 0$ almost everywhere and 
+at each point $z$ where $\partial V/\partial z\neq 0$
+we have
+\[ 
+\lim\uuu{\epsilon\to 0}\, f\uuu\epsilon(z)=+\infty\tag{15}
+\]
+Since (13 holds for each $\epsilon>0$
+and $\phi>0$ in the open disc $|\zeta|<\delta$
+we conclude that
+$\partial V/\partial z=0$ must hold almost everywhere
+in the disc $D\uuu\delta(z\uuu 0+s\uuu 0)$.
+Here we considered the largest $s$\vvv value 
+along the horisontal line $\ell$.
+Of course, we get a similar conclusion for each $0<s<s\uuu 0$
+and hence $\partial V/\partial z=0$ holds almost everywhere in
+the open set (1).
+At the same time
+$V=0$ in $D\uuu\delta(z\uuu 0)$ and we conclude that
+$V=0$ in the open set from (1) as requested.
+\bigskip
+
+\noindent
+{\bf{Remark.}}
+The method used in the
+proof above is due to Bergqvist\vvv RullgŒrd in [Be\vvv Ru]
+where the Theorem  was proved under the assumption
+that
+the range of $V$ is a finite set. But the essential idea to regard
+the complex log\vvv function from (2) in the proof and employ
+regularisations already occur in [Be\vvv Ru].
+
+
+
+
+\newpage
+
+\centerline{\bf{7. A subharmonic majorization.}}
+\bigskip
+
+\noindent
+Let $\{0<\beta\uuu 1<\beta\uuu 2<\ldots\}$ be a sequence of positive real numbers.
+Given $a>0$ we construct harmonic functions in the right half\vvv plane
+$\Omega=\{\mathfrak{Re}\, z> a\}$ as follows: Set $q\uuu\nu=a+i\beta\uuu\nu$ and
+to each $z\in\Omega $  we get  the triangle
+with corner points at the three points $z,eq_\nu,eq\uuu{\nu+1}$
+where $e$ is Neper's constant.
+Denote the angle at $z$ by $\theta\uuu\nu(z)$. Notice that 
+$0<\theta_\nu(z)<\pi$.
+As explained in
+¤ XX  $\theta_\nu(z)$ is a harmonic function
+with the boundary value $\pi$  on $\mathfrak{Re}\, z=a$
+when  $\beta\uuu\nu<y<\beta\uuu{\nu+1}$ 
+while the boundary value is zero outside the closed 
+$y$\vvv interval $[\beta\nu,\beta\uuu{\nu+1}]$.
+If we instead consider the points $\{q^*\uuu\nu=a\vvv ie\beta\uuu\nu\}$
+we get similar harmonic angle functions
+$\{\theta\uuu\nu^*\}$
+when we regard the angle at $z$ formed by the triangle
+with corner points at $z \vvv eq\uuu\nu,\vvv eq\uuu{\nu+1}$.
+
+\medskip
+
+\noindent
+{\bf{Exercise.}} Show by euclidian geometry that
+if $b<0$ is real and positive then
+\[ 
+\sin\,\theta\uuu\nu(a+b)= \frac{eb(\beta\uuu{\nu+1}\vvv\beta\uuu\nu)}{
+\sqrt{ (\beta\uuu\nu^2+b^2)(\beta\uuu{\nu+1}^2+b^2)}}\tag{1}
+\]
+Use also that $\beta\uuu \nu<\beta\uuu{\nu+1}$ and show
+that (1) gives
+
+\[
+\theta\uuu\nu (a+b)> \frac{e b\beta\uuu 1^2\cdot (\beta\uuu{\nu+1} \vvv\beta\uuu\nu)}
+{\beta\uuu{\nu+1}\cdot \beta\uuu\nu\cdot(e^2 \beta\uuu 1^2+b^2)}=
+C(b,\beta\uuu 1)\cdot (\frac{1}{\beta\uuu\nu}\vvv\frac{1}{\beta\uuu{\nu+1}})
+\quad\colon\quad
+C(b,\beta\uuu 1)=\frac{e b\beta\uuu 1^2}{e^2 \beta\uuu 1^2+b^2}
+\]
+
+\medskip
+
+\noindent
+In addition to these $\theta\uuu\nu$\vvv functions we get the angle functions
+$\{\theta^*\uuu n\}$ where we for each $n\geq 2$ consider the
+harmonic extension to the half\vvv plane whose boundary
+values are $\pi$  on $y>\beta\uuu n$ and zero when
+$y<\beta\uuu n$.
+This harmonic function is denoted by $\theta^*\uuu n(z)$
+and by a figure the reader can verify  that
+\[
+\sin\, \theta^*\uuu n(a+b)=\frac{b}{\beta\uuu n^2+b^2)}\implies
+\theta^*\uuu n(a+b)>\frac{eb\beta\uuu 1^2}{e^2 \beta\uuu 1^2+b^2}
+\cdot \frac{1}{\beta\uuu n}\tag{2}
+ \]
+ 
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{7.1 A class of harmonic functions.}}
+Let us also consider a sequence
+of positive real numbers
+$\{\lambda\uuu\nu\}$. To each  $n\geq 2$ we get the harmonic function
+$u\uuu n(x,y)$ in $\Omega$
+defined by
+\[
+u\uuu n(x,y)=\frac{1}{\pi}\cdot \sum\uuu{\nu=1}^{\nu=n\vvv 1} \lambda\uuu\nu\cdot
+(\theta\uuu\nu+\theta^*\uuu\nu)+
+\lambda\uuu n\cdot (\theta\uuu n+\theta^*\uuu n)\tag{3}
+\]
+If $z=a+b$ is real with $b>0$ the inequalities in (1\vvv 2) give
+\[
+u\uuu n(a+b)\geq \frac{C(b,\beta\uuu 1)}{\pi}
+\cdot
+\bigl[\, \sum\uuu{\nu=1}^{\nu=n\vvv 1}\,
+\lambda\uuu\nu(\frac{1}{\beta\uuu\nu}\vvv \frac{1}{\beta\uuu{\nu+1}})+
+\frac{\lambda\uuu n}{\beta\uuu n}\,\bigr]\tag{4}
+\]
+
+
+
+\noindent
+From the above we get:
+
+
+\medskip
+
+\noindent
+{\bf{7.2 Proposition.}}
+\emph{Let $\{\lambda\uuu\nu\}$ and $\{\beta\uuu\nu\}$ be such that}
+\[ 
+\lim\uuu{n\to\infty}\,
+\bigl[\, \sum\uuu{\nu=1}^{\nu=n\vvv 1}\,
+\lambda\uuu\nu(\frac{1}{\beta\uuu\nu}\vvv \frac{1}{\beta\uuu{\nu+1}})=+\infty\tag{*}
+\]
+\emph{Then the sequence $\{u\uuu n(a+b)\}$ increases to $+\infty$ for every $b>0$.}
+
+\medskip
+
+\noindent
+{\bf{Remark.}} If  
+the $\lambda$\vvv sequence  increases  a partial summation gives
+\[
+\sum\uuu{\nu=1}^{\nu=n}\, \frac{\lambda\uuu \nu\vvv\lambda\uuu{\nu\vvv 1}}
+{\beta\uuu\nu}= \sum\uuu{\nu=1}^{\nu=n\vvv 1}\,
+\lambda\uuu\nu(\frac{1}{\beta\uuu\nu}\vvv \frac{1}{\beta\uuu{\nu+1}})
+\]
+where we have put $\lambda\uuu 0=0$. Hence (*) is equivalent to the divergence of
+the 
+positive series 
+\[
+\sum\uuu{\nu=1}^\infty \, \frac{\lambda\uuu \nu\vvv\lambda\uuu{\nu\vvv 1}}
+{\beta\uuu\nu}\tag{**}
+\]
+\medskip
+
+
+\noindent
+{\bf{7.3 An application.}}
+Let $\{\beta\uuu\nu\}$ and $\{\lambda\uuu\nu\}$ 
+be  two  strictly increasing sequences
+of positive real numbers.
+Consider an analytic function $\Phi(z)$ defined in
+the half\vvv plane $\mathfrak{Re}\,z>a$ with continuous
+boundary values on $\mathfrak{Re}\,z=a$ which satisfies the inequalities
+
+\[
+|\Phi(z)|\leq \bigl(\frac{\beta\uuu\nu}{|z|}\,\bigr )^{\lambda\uuu\nu}
+\quad\colon\quad \nu=1,2,\ldots\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{7.4 Exercise.}}
+Denote by $u\uuu *(z)$ the harmonic function in
+the half\vvv plane whose boundary values are one on
+$\vvv\beta\uuu 1<y<\beta\uuu 1$ and otherwise zero.
+Show that   (*) 
+gives the following inequality on
+$\mathfrak{Re}\, z=a$ for every $n\geq 0$ and $-\infty<y<+\infty$
+ \[
+\log\,|\Phi(a+iy)|+u\uuu n(a+iy)\leq 
+\log K\cdot u\uuu *(a+iy)\quad\colon\quad 
+K=\max\uuu {\vvv\beta\uuu 1\leq  y\leq \beta\uuu 1}\, |\Phi(a+iy)|\tag{7.4.1}
+\]
+
+\medskip
+
+\noindent
+Since $u\uuu n$ and $u\uuu *$ are  harmonic functions
+while $\log\,|\Phi\,|$ is subharmonic, 
+the principle of harmonic majorization implies that  (7.4.1) holds
+in $\Omega$.
+In particular, for every
+real 
+$b>0$ we have
+\[
+\log\,|\Phi(a+ib)|+u\uuu n(a+ib)\leq \log K\cdot u\uuu *(a+ib)\tag{7.4.2}
+\]
+
+
+\noindent
+When $\Phi$ is not identically zero  we can  fix some
+$b>0$ where
+$\Phi(a+ib)\neq 0$ and (7.4.2) entails that
+the sequence $\{u\uuu n(a+ib)\}$ is bounded.
+Hence Proposition 7.2  gives
+
+\medskip
+
+\noindent
+{\bf{7.5 Theorem.}} \emph{Assume there exists a non\vvv zero analytic function
+$\Phi(z)$ in the half\vvv plane
+$\mathfrak{Re}\, z>a$ such that (*) holds in (7.3). Then}
+\[
+\sum\uuu{\nu=1}^\infty \, \frac{\lambda\uuu \nu\vvv\lambda\uuu{\nu\vvv 1}}
+{\beta\uuu\nu}<\infty
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}} We can rephrase the result above and get a 
+vanishing principle. Namely, if the positive series in Theorem 7.5 is divergent
+an analytic function $\Phi(z)$ in the half\vvv plane satisfying
+(7.3) must be identically zero.
+\medskip
+
+
+\noindent
+{\bf{7.6 Example.}}
+Let $\{c\uuu n\}$ be a sequence of positive real numbers.
+Suppose that $\Phi(z)$ is analytic in the half\vvv space
+and satisfies
+\[
+|\Phi(z)|\leq \frac{c\uuu n}{|z|^n}\quad\colon\quad n=1,2,\ldots
+\]
+Then $\Phi$ must vanish identically if the series
+
+\[
+\sum\uuu{n=1}^\infty\, \frac{1}{c\uuu n^{\frac{1}{n}}}=+\infty
+\]
+
+\medskip
+
+
+\noindent
+\centerline {\bf{7.7 A determined moment problem.}}
+\medskip
+
+
+\noindent
+In a moment problem one asks for the existence of
+a non\vvv negative measure $\mu$ on the real $x$\vvv axis
+such that
+all higher order moments
+\[ 
+\int\uuu 0^\infty\, x^n\cdot d\mu(x)= c\uuu n\tag{*}
+\] 
+where the sequence $\{c\uuu n\}$ is given in advance.
+In 1894 Stieltjes settled this problem. Namely,
+a necessary and sufficient condition for the existence of $\mu$ is that
+if
+$\{\beta\uuu\nu\}$ are the  coefficients in the
+continued fractions associated to
+$\{c\uuu n\}$, then
+the series
+\[ 
+\sum\, (\vvv 1)^{\nu}\cdot \frac{\beta\uuu\nu}{x^{\nu+1}}
+\] 
+is positive.
+We shall now prove
+a uniqueness in relation to the moment problem.
+Namely, let $\{c\uuu n\}$ be given and suppose that
+(*) has at least one solution $\mu$.
+Following Stieltjes one says that the moment problem is 
+determined if
+two solutions $\mu$ and $\gamma$ only differ 
+by a discrete measure.
+A necessary and sufficient condition for the moment problem to be
+determined was established by Hamburger in [XX]. The
+condition is that the continued fractions of $\{c\uuu n\}$
+is completely convergent. For this notion we refer to 
+[ibid] and also to [Japanese] as well as the article
+\emph{sur le probleme des moments} by M. Riesz in [Arkiv 1923].
+\medskip
+
+\noindent 
+Since the  calculation of a continued fraction is quite involved
+one may ask for   growth conditions on
+$\{c\uuu n\}$ which at least are are sufficient for the moment problem to be determined.
+Using the previous results
+the following sufficiency result was proved in
+[Carleman\vvv Chapter VIII]:
+\medskip
+
+\noindent
+{\bf{7.8 Theorem.}}
+\emph{Hamburger's  moment problem is determined if}
+\[
+\sum\,\frac{1}{c\uuu n^{\frac{1}{2n}}}=+\infty
+\]
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Recall from ¤ xx that a signed measure $\nu$ without  atoms. 
+is determined by the transform
+\[ 
+V(z)= 
+\int\uuu{\vvv\infty}^\infty\, \frac{d\nu(x)}{z\vvv x}
+\]
+More precisely, if $V(z)$ vanishes identically in the half\vvv plane
+$\mathfrak{Im}\, z>0$ then $\nu=0$.
+from this we can deduce Theorem 7.8 as follows. Suppose that
+$\mu\uuu 1$ and $\mu\uuu 2$ are two non\vvv negative measures
+which solve the moment problem and that 
+the difference $\nu=\mu\uuu 1\vvv\mu\uuu 2$ has no atoms.
+Set
+\[ 
+F\uuu k(z)=
+\int\uuu{\vvv\infty}^\infty\, \frac{d\mu\uuu k(x)}{z\vvv x}
+\quad\colon\quad k=1,2
+\]
+So now $V=F\uuu 1\vvv F\uuu 2$. Next, or each $n\geq 1$
+we can write
+\[ 
+\frac{1}{z\vvv x}=\vvv XXX
+\]
+page 80!!!
+
+\medskip
+It follows that
+
+\[ 
+F\uuu k(z)= \vvv \sum\, \frac{c\uuu \nu}{z^{\nu+1}}\vvv
+XXX
+\]
+Taking the difference it follows that
+
+\[ 
+V(z)= F\uuu 1(z)\vvv F\uuu 2(z)= \frac{1}{z^{2n+1}}\,
+\int\, \frac{x^{2n}\cdot d\nu(x)} {1\vvv \frac{x}{z}}
+\]
+Next, notice that if $z$ is in the upper half\vvv plane then
+\[
+|1\vvv \frac{x}{z}|\leq \frac{|z|}{\mathfrak{Im}\, z)}
+\]
+So if  $\mathfrak{Im}\,z\geq 1$ , the triangle inequality gives
+
+\[  
+|V(z)|\leq \frac{1}{|z|^{2n}}\cdot \int\, x^{2n}\cdot |d\nu(x)|
+\leq \frac{2c\uuu{2n}}{|z|^{2n}}
+\]
+\medskip
+
+\noindent
+Now the assumed divergence in the theorem and (xx) imply that
+$V$ is identically zero and Theorem XX is proved.
+
+\bigskip
+after a TRICK to get Stieltjes case. see page 81 in carleman.
+
+
+\newpage
+
+
+\centerline{\bf{8. Subharmonic minorant of a given function.}}
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+Let $\Omega$ be a bounded
+open and connected subset of ${\bf{C}}$ and
+$F$  a non-negative and upper semi-continuous function in
+$\Omega$ which may take values $+\infty$ at some points. 
+Denote by $\mathcal F_*$ the class of subharmonic functions $u$ in
+$\Omega$ such that  $u(x)\leq F(x)$ hold for every
+$x\in\Omega$.
+Set
+\[ 
+\mathcal S_F(x)= \max_{u\in \mathcal F_*}\, u(x)
+\]
+We refer to $\mathcal S_F$ as Sjšberg's maximal function associated to
+$F$.
+Recall that every subharmonic function $u$ 
+is upper semicontinuous which implies that
+for every compact subset $K$ of $\Omega$ there is a constant $C$
+such that $u(x)\leq C$ on $K$.
+It turns out that this is the sole obstruction in order
+that $\mathcal S_F$ itself
+subharmonic.
+More precisely the following result  was proved by
+Sjšberg in [1938; Scand. Congress Helsinki]
+\medskip
+
+\noindent
+{\bf{8.1. Theorem.}}
+\emph{If  
+$\mathcal S_F$ is bounded on  every compact subset of
+$\Omega$ then it is subharmonic and gives therefore the largest subharmonic function
+in the class
+$\mathcal F_*$.}
+
+\bigskip
+
+
+\noindent
+{\bf{Remark.}}
+In addition to [Sjšberg[ we refer to Domar's article
+\emph{Subharmonic minorants of a given function}
+[Arkiv 1954] where Sjšberg's resuts is extended in a wider context
+and a similar result is proved for subharmonic functions in
+${\bf{R}}^k$ when $k\geq 3$.
+One expects
+that
+if  $F(x)$
+enjoys some finiteness condition then
+Sjšberg's condition holds so that  $\mathcal S_F$  gives
+the largest subharmonic minorant to $F$.
+The following sufficency
+result was proved by  Beurling in [Beurling xx]:
+
+\medskip
+
+\noindent
+{\bf{8.2. Theorem.}} \emph{The function $\mathcal S_F$ is subharmonic
+if  there exists $\epsilon>0$ such that}
+\[
+\iint_\Omega\, \bigl[\log^+F(x,y)\,\bigr]^{1+\epsilon}<\infty\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Assume (*) and with $\epsilon$ kept fixed the
+integral is denoted by 
+$J(F)$.
+We shall prove that 
+if $K$Êis a compact subset of $\Omega$
+then there exists an integer $n$
+such that
+\[
+\max_{x\in K} u(x)\leq e^n\tag{1}
+\]
+hold for every $u\in\mathcal F_*$ and 
+Sjšberg's result entails that
+$\mathcal S_F$Êis subharmonic.
+To prove (1)
+we  fix a positive integer $\lambda$ and
+a positive constant $C$ such that
+\[
+\frac{e}{\pi C^2}+e^{-\lambda}\leq 1\tag{2}
+\]
+Let us  take some $u\in \mathcal F_*$ and to each integer $\nu$ we set
+\[ 
+U_\nu=\{ e^\nu\leq u<e^{\nu+1}\}\tag{3}
+\]
+Here  $\{U_\nu\}$ is a family of disjoint sets whose union is
+$\Omega$ and to each $\nu$ we denote by $\ell_\nu$ the area of $U_\nu$.
+Next, suppose that for some integer  $n>\lambda $ 
+there exists  a point $z_n\in \Omega$ 
+such that 
+\[
+u(x_n)\geq e^n\quad\text{and}\quad 
+\text{dist}(x_,\partial\Omega)>C\cdot \sqrt{\ell_{n-\lambda}+\ldots +\ell_n}\tag{4}
+\]
+
+
+
+\noindent
+Consider the disc $D_n^*=\{|z-z_n|\leq 
+C\cdot \sqrt{\ell_{n-\lambda}+\ldots +\ell_n}\}$.
+\medskip
+
+\noindent
+\emph{Sublemma.}\emph{The inequality (4) entails that}
+\[
+\max_{z\in D_n^*}\, u(z)\geq e^{n+1}
+\tag{5}
+\]
+
+
+\noindent
+\emph{Proof.}
+We 
+argue by a contradiction. Set
+\[
+\rho=C\cdot \sqrt{\ell_{n-\lambda}+\ldots +\ell_n}
+\]
+
+
+
+\noindent
+If  (5) fails the upper semi-continuity of $u$ gives
+some $\rho_*>\rho$
+such that  the disc
+$\Delta= \{|z-z_n|\leq\rho^*$ is  contained in $\Omega$
+and
+$u\leq e^{n+1}$ holds in $\Delta$.
+The mean-value inequality gives
+\[ 
+e^n\leq u(z_n)\leq \frac{1}{\pi\rho_*^2}\,
+\iint_\Delta\, u(x,y)\,dxdy\tag{6}
+\]
+Now $U_\nu\cap \Delta=\emptyset$ if $\nu>n$
+and since the $U$-sets are disjoint 
+the right
+hand side in (6) is  majorised by
+\[
+\frac{1}{\pi\rho_*^2}\cdot 
+e^{n+1}(\ell_n+\dots+\ell_{n-\lambda})+e^{n-\lambda}
+=e^n\cdot \frac{\rho^2}{\rho_*^2}\cdot [
+e\cdot\frac{\ell_n+\dots+\ell_{n-\lambda}}{\pi}+e^{-\lambda}]\tag{7}
+\]
+The last factor is $\frac{e}{\pi C^2}+ e^{-\lambda}$
+which is $\leq 1$ by (2) above.
+Hence  (6-7) would give
+\[
+e^n\leq  e^n\cdot \frac{\rho^2}{\rho_*^2}
+\]
+Thus is a contradiction since
+$\rho_*>\rho$ and  
+hence 
+$(4)\implies(5)$ holds.
+
+\medskip
+
+\noindent
+\emph{Proof continued.}
+Next, given  $z_n\in \Omega$ where
+$u(z_n)\geq e^n$ we set
+\[ 
+\xi(m)= C\cdot\sum_{\nu=n}^{\nu=m}\, 
+\sqrt{\ell_{\nu-\lambda}+\ldots+\ell_\nu}\quad\colon\, \forall\, m>n
+\]
+
+
+\noindent
+Repeated use of $(4)\implies (5)$
+shows that when $m>n$ and 
+the disc $\{|z-z_n|\leq\xi(m)\}$ stays in $\Omega$ then it contains a point $z_m$ 
+where $u(z_m)\geq e^m$.
+Since
+$u$ is bounded over compact subsets of $\Omega$
+we must have
+\[
+\text{dist}(z_n,\partial\Omega)\leq
+C\cdot \sum_{\nu=n}^\infty\, 
+\sqrt{\ell_{\nu-\lambda}+\ldots+\ell_\nu}\tag{*}
+\]
+\medskip
+
+\noindent
+Let us  majorize the right hand side in (*).
+Since $\sqrt{a_1+\ldots+a_k}\leq \sqrt{a_1}+\ldots +\sqrt{a_k}$
+hold for all tuples of positive numbers 
+the right hand side in (*) is majorized
+by
+\[
+C\cdot \sum _{\nu=n}^\infty\, 
+[\sqrt{\lambda_{\nu-\lambda}+\ldots+\lambda_\nu}]\leq
+C\cdot(\lambda+1)
+\sum_{\nu=n-\lambda} ^\infty
+\, \sqrt{\lambda_\nu}
+\]
+To estimate the sum of the square roots
+we pick the positive $\epsilon$ in the Theorem and write
+\[
+\sum_{\nu=n-\lambda} ^\infty
+\, \sqrt{\lambda_\nu}=
+\sum_{\nu=n-\lambda} ^\infty
+\,\nu^{-1/2-\epsilon/2}\cdot   \sqrt{\lambda_\nu}\cdot \nu^{1/2+\epsilon/2}\leq
+\sqrt{\sum_{\nu=n-\lambda} ^\infty
+\,\nu^{-1-\epsilon}}\cdot 
+\sqrt{\sum_{\nu=n-\lambda}
+\lambda_\nu\cdot \nu^{1+\epsilon}}
+\]
+where the Cauchy-Schwarz inequality was used.
+Since $\epsilon>0$
+the first factor 
+is a function $n\mapsto \tau(n)$ given as a  square root of  tail sums
+of a convergent series and hence $\tau(n)\to 0$ when
+$n\to+\infty$.
+Now (*) is majorised by
+\[ 
+C\cdot \tau(n)\cdot 
+\sqrt{\sum_{\nu=n-\lambda}
+\lambda_\nu\cdot \nu^{1+\epsilon}}\tag{**}
+\]
+Next, we have 
+\[
+\log^+\,u(z)\geq \nu\,\colon|, z\in U_\nu\}
+\]
+Since the sets $\{U_\nu\}$ are disjoint it follows that
+
+\[
+\sum_{\nu=n-\lambda}
+\lambda_\nu\cdot \nu^{1+\epsilon}\leq
+\iint_\Omega\, [\log^+\, u(x,y)|^{1+\epsilon}\, dxdy\leq J(F)
+\]
+where the last inequality follows since
+$u\leq F$.
+Hence (*) gives
+
+\[ 
+\text{dist}(z_n,\partial\Omega)\leq
+C\cdot \sqrt{J(F)}\cdot \tau(n)
+\]
+
+
+\noindent
+Finally, if $K$ is a compact subset of $\Omega$ its distance to
+$\partial\Omega$ is a positive number $a_K$
+and since
+$\tau(n)\to 0$ we find a large integer $N$
+such that
+$C\cdot \sqrt{J(F)}\cdot \tau(n)\leq a_K$ and by the above 
+$u\leq e^n$ holds on $K$. Since $u\in\mathcal F_*$ was arbitrary
+we have proved that $\mathcal S_F$ is bounded on $K$ and Theorem 2 is proved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

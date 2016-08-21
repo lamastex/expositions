@@ -1,0 +1,286 @@
+
+
+\documentclass[12pt]{amsart}
+
+
+\usepackage[applemac]{inputenc}
+
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22 mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+\centerline{\bf{Contractions}}
+
+
+\bigskip
+
+
+\noindent
+A bounded linear operator $A$ on the Hilbert space $\mathcal H$ is called a contraction if
+its operator norm is $\leq 1$, i.e.
+if
+\[
+ ||Ax||\leq ||x||\quad\colon\quad x\in\mathcal H\tag{1}
+\] 
+This means that if $x\in\mathcal H$ then
+
+\[
+\langle Ax,Ax\rangle \leq ||x||^2=\langle x,x\rangle\tag{2}
+\]
+Let $E$ be the identity operator on $\mathcal H$.
+Now $E-A^*A$ is a self-adjoint operator and we see that (2) entails
+\[
+\langle x-A^*Ax,x\rangle=||x||^2-||Ax||^2\geq 0
+\]
+So this self-adjoint operator is non-negative and by ¤ xx it has a square root, i.e.
+there exists the self-adjoint operator
+\[ 
+B_1=\sqrt{E-A^*A}
+\]
+Next, recall that the operator norms of $A$ and its adjoint $A^*$ are the same so
+$A^*$ is also a contraction and the bidaišity formula $A^{**}=A$
+entails that we get another self-adjoint operator
+\[
+B_2=\sqrt{E-AA^*}
+\]
+Since we have not assumed that $AA^*=A^*A$ the two self-adjoint operators
+$B_1,B_2$ need not be equal.
+However, the follwonig hold:
+
+\medskip
+
+\noindent
+{\bf{Propostion.}}
+\emph{One has the equalities}
+
+\[ 
+AB_1=B_2A\quad\text{and}\quad A^*B_2= B_1A^*
+\]
+\medskip
+
+
+\noindent
+\emph{Proof.}
+If $n$ is a positive integer we notice that
+\[
+A(A^*A)^n=(AA^*)^nA\tag{i}
+\]
+Now $A^*A$ is a self-adjoint operator whose compact spectrum is confined to
+the closed unit interval $[0,1]$.
+if $f\in C^0[0,1]$
+is a real-valued continuous function it can be approximated uniformly
+by a sequence of polynomials $\{p_n\}$
+and the operational calculus from ¤ XX yields an operator
+$f(A^*A)$ such that the perator norms tend to zero, i.e.
+\[
+\lim\, ||p_n(A^*A)-f(A^*A)||=0
+\]
+Since the spectrum of $AA^*$ also is confined to $[0,1]$
+it follows that when ewe take the same polynomial sequence
+$\{p_n\}$ then
+we get an operator $f(AA^*)$ and
+
+\[
+\lim\, ||p_n(AA^*)-f(AA^*)||=0
+\]
+Now (i) and the teo limit formulas above entail that
+
+\[
+Af(A^*A)= f(AA^*)A\tag{ii}
+\]
+In particular we can use the continuous function
+$f(t)= \sqrt{1-t}$
+and then Proposition XX follows.
+\medskip
+
+\noindent{\bf{The unitary operator $U_A$}}.
+On the Hilbert space $\mathcal H\times \mathcal H$
+we define a linear operator $U_A$ represented by the block matrix
+
+\[
+U_A=
+\begin{pmatrix} A& B_2\\
+B_1&-A^*
+\end{pmatrix}
+\]
+\medskip
+
+\noindent
+{\bf{Proposition.}}
+\emph{$U_A$ is a unitary operator on
+ $\mathcal H\times \mathcal H$}.
+ 
+ \medskip
+ 
+ \noindent
+ \emph{Proof.}
+ For a pair of vectors $x,y$ in $\mathcal H$
+ we must prove the equality
+\[
+|| U_A(x\oplus y)||^2=||x||^2+||y||^2\tag{i}
+\]
+To prove this we first notice that for every vector $h\in\mathcal H$ 
+the self-adjointness of $B_1$ gives
+
+\[
+||B_1h||^2=\langle B_1h,B_1h\rangle=
+\langle B_1^2h,h\rangle=\langle h-A^*Ah,h\rangle=
+||h||^2-||Ah||^2\tag{ii}
+\]
+Above the last equality holds since
+$\langle A^*Ah,h\rangle =\langle Ah,A^{**}h\rangle =||Ah||^2$
+where we used the biduality formula $A=A^{**}$.
+In the same way we find that
+
+\[
+||B_2h||^2=||h||^2-||A^*h||^2\tag{iii}
+\]
+\medskip
+
+\noindent
+Next, by the construction of $U_A$ the left hand side in (i) becomes
+
+\[
+||Ax+B_2y||^2+||B_1x-A^*y||^2\tag{iv}
+\]
+Using (iii) the first term in (iv)becomes
+\[
+||Ax+B_2y||^2=||Ax||^2+||y||^2-||A^*y||^2+
+\langle Ax,B_2y\rangle+ \langle B_2 y,Ax\rangle
+\]
+By (ii) the second term becomes
+\[
+||B_1x-A^*y||^2=||x||^2-||Ax||^2+||A^*y||^2-
+\langle B_1x,A^*y\rangle- \langle A^*y,B_ x\rangle
+\]
+Adding this we conclude that (i) follows from the equality
+
+\[
+\langle Ax,B_2y\rangle+ 
+\langle B_2 y,Ax\rangle=
+\langle B_1x,A^*y\rangle+ \langle A^*y,B_ x\rangle\tag{v}
+\]
+To get (v) we use Proposition XX which for example gives
+\[
+\langle Ax,B_2y\rangle=
+\langle x,A^*B_2y\rangle=
+\langle x,B_1A^*y\rangle=
+\langle B_1x,A^*y\rangle
+\]
+where the last equality used that $B_1$ is self-adjoint. In the same way one verifies that
+\[
+\langle B_2 y,Ax\rangle=
+ \langle A^*y,B_ x\rangle
+\]
+and (v) follows.
+
+\newpage
+
+
+\noindent
+\emph{The Nagy-Szegš theorem.}
+The constructions above yield the following result which is 
+due to Nagy and Szegš 
+\medskip
+
+\noindent
+{\bf{Theorem}}
+\emph{For every bounded linear operator $A$ on a Hilbert space
+$\mathcal H$ there exists a Hilbert space
+$\mathcal H^*$ which contains $\mathcal H$ and a unitary operator $U$
+on $\mathcal U_1$ such that}
+\[
+A^n=\mathcal P\cdot U^n\quad\colon\quad n=1,2,\ldots
+\]
+where $\mathcal P$ is the orthogonal projection from
+$\mathcal H_1$ onto $\mathcal H$.
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Take $\mathcal H_1=\mathcal H\times\mathcal H$ where we have the unitary
+operator $U_A$ above and let
+$\mathcal P(x,y)= x$ be the projection onto the first
+factor.
+By the boock from of $U_A$ we have
+$A=\mathcal PU_A$ and we leave it to the reader to show that
+the previous constructions imply that
+$A^n=\mathcal P\cdot U^n$ hold for every $n\geq 1$.
+\bigskip
+
+\noindent
+{\bf{A general norm inequality.}}
+The Nahy-Szegš resut has
+an important conseqeunce. 
+Let $A$ as above be a contraction. If
+$p(z)=
+c_0+c_1<+\ldots+c_nz^n$ is an arbitrary polynomial with
+complex coefficients
+we get the 
+operator $p(A)=\sum\,c_\nu A^\nu$ and 
+with these notations one has:
+
+\medskip
+
+\noindent
+{\bf{Theorem}}
+\emph{For every pair $A,p(z)$ as above one has}
+
+\[
+||p(A)||\leq \max_{z\in D}\, |p(z)|
+\] 
+\emph{where the the maximum in the right hand side is taken on the unit disc.}
+\medskip
+
+\noindent
+\emph{Proof.} Theroem X gives $p(A)= \mathcal P\cdot p(U_A)$.
+Since the orthogonal $\mathcal P$-projection is norm decreasing we get
+
+\[
+||p(A)(\xi)||^2\leq ||p(U_A)(\xi,0)||^2
+\]
+Now the operational calculus from ¤ 7 is applied to the unitaty operator
+$U_A$ which yields a
+probablity measure $\mu_\xi$ on
+the unit circle such that
+\[
+ ||p(U_A)(\xi,0)||^2=
+ \int_0^{2\pi}\, |p(e^{i\theta})|^2\cdot d\mu_\xi(\theta)
+ \]
+The right hand side is majorized by $|p|_D^2$ and Theorem XX follows.
+
+\medskip
+
+\noindent
+{\bf{Corollary.}}
+Let $A(D)$ be the disc algebra. Since each $f\in A(D)$ can be 
+uniformly approximated by analytic 
+polynomials, Theorem X entails that
+there exists a bounded linear operator $f(A)$ for every contraction $A$.
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

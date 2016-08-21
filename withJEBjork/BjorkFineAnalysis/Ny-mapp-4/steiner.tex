@@ -1,0 +1,420 @@
+%\documentclass{amsart}
+
+%\usepackage[applemac]{inputenc}
+%\def\uuu{_}
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+\bigskip
+
+\centerline{\bf\large{19. An isoperimetric inequality.}}
+\bigskip
+
+\noindent
+A planar domain whose boundary
+curve has  prescribed length
+has a maximal   area when it it is a disc.  
+It turns out that discs solve a more extensive class
+of extremal problems.
+Consider a function
+$f(r)$ defined for
+$r>0$ which is continuous and increasing with
+$f(0)=0$. 
+If $p$ and $q$ are two points in ${\bf{R}}^2$ their euclidian distance is denoted by
+$|p-q|$.
+When $U$ is a bounded open domain we set
+ \[
+J(U)=\iint_{U\times U}\, f(|p-q|)\cdot dA_p\cdot dA_q
+ \]
+where $dA_p$ and $dA_q$ denote the  area measures.
+Given a positive number $\mathcal A$ one seeks
+to maximize the $J$-functional  in the
+family of domains with  prescribed area  $\mathcal A$. 
+The $J$-number is  unchanged under a
+translation  or a rotation
+of a  domain and the family of discs is
+stable under these operations. So
+the following result makes sense:
+\medskip
+
+\noindent
+{\bf{1. Theorem.}}
+\emph{The $J$-functional 
+takes its maximum on discs $D$
+of radius $r$ with $\pi r^2=\mathcal A$.
+Moreover, for every domain $U$ with area $\mathcal A$
+which is not a disc one has a strict inequality}
+\[ 
+J(U)<J(D)
+\] 
+\medskip
+
+\noindent
+When $f(r)$ is a strictly convex function 
+Theorem 1  was established by Blaschke. 
+For a general $f$-function which need not be convex the
+theorem   was proved by Carleman in [Car]
+using 
+the symmetrisation process   by
+W. Gros from  his article (Monatshefte math.physik 1917).
+At the end of [Carleman] it is pointed out that
+Theorem 1 leads to another property of discs.
+
+\medskip
+
+\noindent
+{\bf{2. Theorem.}}
+\emph{Let $\Omega$ be a domain in the family $\mathcal D(C^1)$
+and denote by $ds$ the arc\vvv length measure on its boundary.
+If the
+function}
+
+\[
+ p\mapsto \int\uuu{\partial\Omega}\, f(|p\vvv q|)\cdot ds(q)
+ \] 
+\emph{is constant as $p$ varies in $\partial\Omega$ it follows that
+$\Omega$ is a disc.}
+ 
+
+
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+Theorem 1  can be extended to 
+any dimension $n\geq 3$ using
+the  result  due to  Gros that
+successive symmetrisations of domains
+taken in different directions converge to the unit
+ball in ${\bf{R}}^n$.
+The proof of Theorem 1 relies upon the result in
+Proposition 2.1 below.
+\medskip
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline {\bf{2. A fundamental  inequality}}
+\medskip
+
+\noindent
+Let $M>0$ and
+on the    lines $\{x=0\}$ and $\{x=M\}$
+we consider 
+two subsets $G_*$ and $G^*$ which both consist of a finite union of closed intervals.
+Let $\{[a_\nu,b_\nu]\}$ be the $G_*$-intervals taken in the $y$\vvv coordinates
+and  
+$\{[c_j,d_j]\}$ are the $G^*$-intervals.
+Here $a_\nu<b_\nu<a_{\nu+1}$ holds, and similarly
+the $G^*$-intervals are ordered with increasing $y$-coordinates.
+The number of intervals of the two sets are arbitrary and 
+need not be the same.
+Given  $f(r) $ as in the Theorem 1 we set
+
+\[ 
+I(G_*,G^*)=
+\sum_\nu\sum_j\, \int_{a_\nu}^{b_\nu}\int_{c_j}^{d_j}\,f(|y-y'|)\cdot dydy'
+\]
+Consider the variational problem where we seek to minimize these $I$-integrals
+for pairs all pairs $(G_*,G^*)$ as above under the
+constraints:
+  \[
+\sum\,(b_\nu-a_\nu)=\ell_*\quad\text{and}\quad  \sum\,(d_j-c_j)=\ell^*\tag{*}
+\]
+
+
+\noindent
+That is, the sum of the lengths of the intervals are prescribed on $G_*$ and $G^*$.
+
+\medskip
+
+\noindent
+{\bf{2.1 Proposition.}} \emph
+{For every  pair $(\ell_*,\ell^*)$ the $I$-integral is minimized when
+both $G_*$ and $G^*$ 
+consist of a single interval and the mid-points of
+the two intervals have equal $y$-coordinate.}
+\medskip
+
+\noindent
+{\bf{Proof.}} 
+First we prove the
+result when  $G_*=(a,b)$ and $G^*=(c,d)$ both are intervals.
+We must prove that the $I$-intergal is a minimum when
+\[
+\frac{a+b}{2}=\frac{c+d}{2}\tag{i}
+\]
+Suppose that inequality holds. Since the $I$-integral is symmetric with respect to the pair 
+of intervals, we may assume that
+\[
+\frac{c+d}{2}=s+\frac{a+b}{2}\quad\text{where}\quad  s>0
+\]
+Now $I(G_*,G^*)$ is unchanged 
+when we translate the two intervals, i.e. if we for some
+number
+$\xi$ take
+$(a+\xi,b+\xi)$ and $(c+\xi,d+\xi)$.
+By such a translation we can assume that $a=-b$
+so  the mid-point of
+$G_*$ becomes $y=0$ and we have:
+
+
+\[
+I=\int_{-b}^b\int _c^d\, f(\sqrt{M^2+(y-y')^2})\cdot dydy'
+\]
+Under the variable substitutions
+$u=y'-y$ and $v=y'+y$ we have:
+\[
+-b+c\leq u\leq d+b\implies
+\]
+\[
+I=2b\int_{-b+c}^{d+b}\, f(\sqrt{M^2+v^2})\cdot dv
+\]
+With
+\[ 
+s=d-\frac{d+c}{2}= \frac{d-c}{2}
+\]
+we can write
+\[ 
+I=2b\cdot \int_{w-s}^{w+s} f(\sqrt{M^2+u^2})\cdot dv\quad\colon
+w=b+\frac{d+c}{2}
+\]
+The last integral is a function of $s$, i.e. for every $s\geq 0$ we set
+\[
+\Phi(s)=2b\cdot \int_{w-s}^{w+s} f(\sqrt{M^2+u^2})\cdot dv\quad\colon
+w=b+\frac{d+c}{2}
+\]
+The derivative of $s$ becomes
+\[ 
+\Phi'(s)= f(\sqrt{M^2+(w+s)^2})- 
+ f(\sqrt{M^2+(w-s)^2})
+ \] 
+Since $f(r)$ was increasing the derivative is 
+$>0$ when $s>0$.  Hence the minimum is achieved when $s=0$
+which means that $G_*$ and $G^*$ have a common mid-point and
+Proposition 2.1 is proved for the case of an interval pair.
+\bigskip
+
+
+\noindent
+\emph{The general case.}
+If $G_*=\{(a_\nu,b_\nu)\}$ and $G^*=\{(c_k,d_k)\}$
+we make an induction over the total number of intervals which appear in the 
+two families.
+Let 
+\[
+\xi^*=\frac{c^*+d^*}{2}
+\]
+be the largest mid-point from the $G^*$-family
+which means that $k$ is maximal,
+In the $G_*$-family
+we also get the largest mid-point
+is
+\[
+\eta^*= \frac{a^*+b^*}{2}
+\]
+If $xi^*>|\eta^*$ the previous 
+case shows that the double sum representing $I$ decreases as long as
+when the interval $(c^*,d^*)$ is lowered.
+In this process two cases can occur:
+Namely the lowered $(c^*,d^*)$-interval hits $(c_{k\vvv 1},d_{k\vvv 1})$ before
+the mid-point equality appears. To be precise, this occurs if
+
+\[
+c^*-d_{k\vvv 1}<\xi^*-\eta^*
+\]
+In this case we replace $G^*$ by a union of intervals where
+the number of intervals therefore has decreased by one.
+If (ii) does not hold we lower $(c^*,d^*)$ until
+$\xi^*=\eta^*$.
+After this we lower the two top-intervals at the same time
+until
+one of them hits
+the second largest $G$-interval and in this way the total number of intervals is
+decreased while the double sum for $I$ is not enlarged.
+This gives the requested induction step and the proof of
+Proposition 2.1 is finished.
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\centerline {\bf{3. Proof of Theorem 1 in the convex case}}
+\medskip
+
+\noindent
+Consider a  domain $U$ 
+defined by
+\[ 
+g_1(x)\leq y\leq g_2(x)\quad\colon\quad a\leq x\leq b\tag{1}
+\]
+where $g_1(a)=g_2(a)$ and $g_1(b)=g_2(b)$.
+To $U$ we associate the symmetric domain $U^*$
+defined by 
+\[
+- \frac{1}{2}\bigl[ g_2(x)-g_1(x)\bigr]\leq y\leq
+ \frac{1}{2}\bigl[ g_2(x)-g_1(x)\bigr]\quad\colon\quad a\leq x\leq b\tag{2}
+\]
+\medskip
+
+
+\noindent
+Notice that $U$ and $U^*$ have the same area.
+Set
+
+\[ J=\iint_{U\times U}\,
+f\bigl(\sqrt{(x-x')^2+(y-y')^2}\bigr)\cdot dxdx'dydy'
+\]
+
+\[ J^*=\iint_{U^*\times U^*}\,
+f\bigl(\sqrt{(x-x')^2+(y-y')^2}\bigr)\cdot dxdx'dydy'
+\]
+\medskip
+
+\noindent
+{\bf{Lemma 3.1.}} \emph{One has the inequality}
+$J\leq J^*$.
+\medskip
+
+\noindent 
+\emph{Proof.} Set 
+$h(x)=\frac{1}{2}[g_2(x)-g_1(x)]$
+and 
+introduce the  function
+\medskip
+
+\[ 
+H^*(x,x')=\int_{y=-h(x)}^{h(x)}
+\int_{y'=-h(x')}^{h(x')}
+\,\rho\bigl(\sqrt{(x-x')^2+(y-y')^2}\bigr)\cdot dydy'
+\]
+We have also the function
+\[
+H(x,x')=\int_{y=g_1(x)}^{g_2(x)}
+\int_{y'=g_1(x')}^{g_2(x')}
+f\,\bigl(\sqrt{(x-x')^2+(y-y')^2}\bigr)\cdot dydy'
+\]
+It is clear that
+
+\[ J=\int_a^b\int_a^b\, H(x,x')dxdx'\quad\text{and}\quad
+J^*=\int_a^b\int_a^b\, H^*(x,x')dxdx'
+\]
+
+\noindent
+Lemma 3.1 follows if we have proved the inequality 
+\[
+H(x,x')\leq H^*(x,x')\tag{*}
+\]
+for all pairs $x,x'$ in $[a,b]$.
+But this follows via Fubini's theorem
+when Proposition 2.1 applied in the special case where
+$G_*$ and $G^*$ both consist of a single interval.
+
+\bigskip
+
+\noindent
+{\bf{3.2 Variation with convex sets.}}
+Let $\mathcal A$ be the prescribed area in Theorem 1 and consider
+a convex domain $U$ whose area is $\mathcal A$.
+By elementary geometry we see that after a translation and a rotation the convex
+domain
+$U$
+can be represented as in(1) from ¤ 3 above.
+Then we construct 
+$U_*$ which is a new convex domain and
+by Proposition 2.1 gives  $J(U_*)\leq J(U)$.
+In the next step
+we perform a symmetrisation of $U_*$ 
+along some other line which cuts $U_*$ to get 
+a new domain
+$U_{**}$ where we now have
+$J(U_{**})\leq J(U_*)\leq J(U)$.
+Finally we use the  geometric result
+due to Steiner for  convex domains which
+asserts   that when
+symmetrisations as above are repeated infinitely often while 
+the angle to the angle of the directions to the
+$x$-axis  change with some
+irrational multiple of $2\pi$, then
+the resulting sequence of convex domains converge to a disc.
+This  proves that the $J$-functional on a disc is $\leq J(U)$ for every convex domain.
+ 
+\bigskip
+
+
+\centerline {\bf{4. The non-convex case}}
+
+\medskip
+
+\noindent 
+Here we  use 
+the symmetrisation process by
+Gros.
+Let $U$ be a domain. Its symmetrisation in the $x$-direction
+is defined  as follows: To every $x$ we get the open
+set
+\[
+\ell_U(x)=\{y\,\colon\,(x,y)\in U\}\tag{1}
+\]
+Let
+$\{(a_\nu,b_\nu)\}$ be the  disjoint intervals of $\ell\uuu U(x)$
+and put 
+\[
+ d(x)=\frac{1}{2}\cdot
+ \sum\, (b_\nu-a_\nu)
+\]
+ 
+\noindent
+We get  the domain $U^*$ which is symmetric with respect to the $x$-axis where
+\[ 
+\ell_{U^*}(x)=(-d(x),d(x))
+\]
+Notice that $U$ and $U^*$ have equal  area.
+Proposition 2.1 applies and gives
+the inequality
+\[
+J(U)\leq J(U^*)\tag{2}
+\]
+Now Theorem 1 follows when we start from a non-convex domain $U$.
+Namely, by the  result  in  [Gros], it holds
+that after inifinitely many symmetrizations as above using
+different directions, the sequence of
+$U$-sets converge to a disc.
+
+
+
+\newpage
+
+
+
+
+
+
+%\end{document}

@@ -1,0 +1,434 @@
+
+
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\begin{document}
+
+
+\newpage
+
+
+
+\noindent
+{\bf{Example.}}
+Let $n=3$ and consider a PDE-operator
+\[
+L=
+\sum_{p=1}^{p=3}\sum_{q=1}^{q=3}\, a_{pq}(x)\cdot \frac{\partial ^2}{\partial x_p\partial x_q}+
+\sum_{p=1}^{p=3}\, a_p(x)
+\frac{\partial }{\partial x_p}+a_0(x)
+\]
+The $a$-functions are real-valued and
+defined in a neighborhood of the closure of a bounded
+domain
+$\Omega$ with a $C^1$-boundary.
+Here one has the symmetry $a_{pq}=a_{qp}$, and 
+$\{a_{pq}\}$ are
+of class $C^2$, $\{a_p\}$  of class $C^1$ and $a_0$ is continuous.
+The elliptic property of
+ $L$ means that
+for
+every $x\in\Omega$ the eigenvalues of the symmetric
+matrix
+$A(x)$ with elements $\{a_{pq}(x)\}$
+are positive.
+Under these conditions, a  result which goes back to work by 
+Neumann and PoincarŽ,
+gives
+a positive constant
+$\kappa_0$ such that
+if $\kappa\geq \kappa_0$ then
+the inhomogeneous equation
+\[
+L(u)-\kappa^2\cdot u=f\quad\colon f\in L^2(\Omega)
+\]
+has a unique solution $u$ which is a $C^2$.-function 
+in
+$\Omega$ and  extends to the closure where it is zero on
+$\partial\Omega$.
+Moreover, there exists some $\kappa_0$
+and for each $\kappa\geq \kappa_0$ a
+Green's function
+$G(x,y;\kappa)$ such that
+\[
+(L-\kappa^2)(\frac{1}{4\pi}\cdot \int_\Omega\, 
+G(x,y;\kappa)\, f(y)\, dy )= -f(x)\quad\colon f\in L^2(\Omega)\tag{i}
+\]
+This  means  that the bounded linear operator on
+$L^2(\Omega$ defined by
+\[
+f\mapsto 
+-\frac{1}{4\pi}\cdot \int_\Omega\, 
+G(x,y;\kappa)\, f(y)\, dy\tag{ii}
+\]
+is Neumann's resolvent
+to the densely defined operator
+$L-\kappa^2$ on the 
+Hilbert space $L^2(\Omega)$.
+After a detailed study of these $G$-functions, Carleman established
+an asymptotic formula for
+the discrete sequence of eigenvalues $\{\lambda_n\}$. In general they
+are complex but arranged so that
+the absolute values increase. To begin with one proves rather easily that they
+are "almost real" in the sense that there exist positive constants
+$C$ and $c$ such that
+\[
+|\mathfrak{Im}(\lambda_n)|\leq
+C\cdot(\mathfrak{Re}(\lambda_n)+c)
+\] 
+hold for every $n$.
+Next, the elliptic
+hypothesis means that
+the determinant function
+\[
+D(x)=\det(a_{p,q}(x))
+\]
+is positive in $\Omega$. With these notations one has
+
+\medskip
+
+
+
+\noindent
+{\bf{ Theorem.}}
+\emph{The following limit formula holds:}
+\[
+\lim_{n\to\infty}\, \frac{\mathfrak{Re}(\lambda_n)}{n^{\frac{2}{3}}}
+=\frac{1}{6\pi^2}\cdot \int_\Omega\, 
+\frac{1}{\sqrt{D(x)}}\, dx\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The formula above is due to Courant and Weyl  when
+$P$ is symmetric and was extended to
+non-symmetric operators during 
+Carleman 's lectures at Institute Mittag-Leffler in  1935.
+Weyl and Courant used calculus of variation
+in the symmetric case 
+while Carleman employed  different methods which
+have the merit that the passage to the non-symmetric case
+does not cause any  trouble. 
+As pointed out by
+Carleman the methods in the  proof  
+give similar asymptotic formulas 
+in   other boundary value problems such as
+those considered by Neumann where one imposes boundary value conditions on
+outer normals, and so on.
+A crucial step during the  proof of the theorem above
+is to
+construct a fundamental solution $\Phi(x,\xi;\kappa)$
+to the PDE-operators
+$L-\kappa^2$ which is exposed in ¤ E.
+
+
+
+
+
+\newpage
+
+\centerline {\bf{2. Green's functions.}}
+\bigskip
+
+
+\noindent
+Let $\Omega$ be a bounded domain in
+${\bf{R}}^3$.
+A Green's function $G(x,y;\kappa)$ attached to this domain
+and the PDE-operator $P(x,\partial_x;\kappa)$
+is a function which for fixed $\kappa$ is a function in 
+$\Omega\times\Omega$
+with the following properties:
+\[ 
+G(x,y;\kappa)=0\quad\text{when}\quad x\in\partial \Omega\quad \text{and}\quad
+y\in\Omega\tag{*}
+\]
+\[
+\psi(y)=\int_\Omega\, (P^*(x,\partial_x)-\kappa^2)
+(\psi(x))\cdot G(x,y;\kappa)\, dx\quad\colon\quad y\in\Omega\tag{**}
+\]
+
+
+\noindent
+hold for all $C^2$-functions $\psi$ with compact support in
+$\Omega$.
+To find $G$ one 
+solves a   Dirchlet problem.
+With
+$\xi\in\Omega$ kept fixed one has the continuous function on
+$\partial\Omega$:
+\[ 
+x\mapsto \Phi^*(x,\xi;\kappa)
+\]
+
+
+
+\noindent
+Solving Dirchlet's problem gives  a unique $C^2$-function
+$w(x)$ which satisfies:
+\[ 
+P(x,\partial_x)(w)+\kappa^2\cdot w=0 \quad\text{holds  in}\quad \Omega
+\quad\text{and}\quad w(x)= \Phi(x,\xi;\kappa)\quad\colon x\in\partial\Omega=0
+\]
+
+\medskip
+
+\noindent
+From the above it is clear that
+this gives the requested $G$-function, i.e. 
+
+\medskip
+
+\noindent
+{\bf{2.1 Proposition.}} \emph{The 
+the function }
+\[ 
+G(x,\xi;\kappa)=
+\Phi(x,\xi;\kappa)-w(x)
+\quad \text{satisfies}\quad (*-**)
+\]
+
+
+ 
+\noindent
+Using the estimates for the $\phi$-function from ¤ 1
+we shall establish 
+estimates for the $G$-function above where
+we start with  a sufficiently large
+$\kappa_0$ so  that 
+$\Phi^*(x,\xi;\kappa_0)$ is a positive function of
+$(x,\xi)$. 
+\medskip
+
+
+\noindent
+{\bf{2.2 Theorem.}}
+\emph{One has}
+\[ 
+G(x,\xi;\kappa_0)=
+\frac{1}{\sqrt{\Delta(x)}\cdot\sqrt{\Phi(x,\xi;\kappa_0)}}
++R(x,\xi)
+\]
+
+\noindent
+\emph{where the remainder function satisfies the following for all pairs
+$(x,\xi)$ in $\Omega$:}
+\[ 
+|R(x,\xi)|\leq C\cdot |x-\xi|^{-\frac{1}{4}}
+\]
+
+
+\noindent
+\emph{with a    constant $C$ which   depends on the  domain 
+$\Omega$ and
+the PDE-operator $P$.}
+\bigskip
+
+\noindent
+{\bf{2.3 Remark.}}
+Above the negative power  of 
+$|x-\xi|$ is  a fourth-root which means that  the remainder term $R$ 
+is more regular  compared
+to the first term which behaves like $|x-\xi|^{-1}$ on the diagonal $x=\xi$.
+A detailed proof of Theroem 2.2 is given in
+[Carleman: page 125-127]. 
+
+\bigskip
+
+\centerline {\bf{2.4 The integral operator
+$\mathcal J$}}. 
+\medskip
+
+
+\noindent
+From now on we admit Theorem 2.2 and
+consider the integral operator
+which sends a function
+$u$ in $\Omega$ to 
+\[
+\mathcal J_u(x)=\int_\Omega\, G(x,\xi;\kappa_0)\cdot u(\xi)\, d\xi
+\]
+
+
+\noindent
+The construction of the Green's function gives:
+\[
+(P-\kappa_0^2)(\mathcal J_u)(x)=u(x)\quad\colon\quad x\in\Omega\tag{2.4.1}
+\] 
+This , if $E$ denotes the identity we have
+the operator equality
+
+\[
+P(x,\partial_x)\circ \mathcal J_u=\kappa_0^2\cdot  \mathcal J+E\tag{2.4.2}
+\]
+
+
+
+\noindent
+Consider a pair $(u$ and a real number $\gamma)$ such that 
+\[
+u(x)+ \gamma\cdot \mathcal J_u(x)=0\quad\colon\quad x\in\Omega\tag{2.4.3}
+\] 
+The vanishing from (*) for the $G$-function 
+implies that $J_u(x)=0$ on $\partial\Omega$. Hence  every
+$u$-function which satisfies
+in (2.4.3) for some  constant $\gamma$
+vanishes   on $\partial\Omega$.
+Next, when $P$ is applied to
+(2.4.3) 
+the operator equation  (2.4.2) gives
+
+\[
+0=P(u)+\gamma \kappa_0^2\cdot \mathcal J_u+\gamma\cdot u\implies
+P(u)+(\gamma-\kappa_0^2)u=0
+\]
+\medskip
+
+\noindent
+{\bf{2.4.4 Conclusion.}}
+The boundary value problem (*) from 0.B
+is equivalent to find eigenfunctions of 
+$\mathcal J$ via (2.4.3) above.
+
+\medskip
+
+\noindent
+\centerline {\bf{3. Almost reality of eigenvalues.}}
+\medskip
+
+\noindent
+Consider the set of eigenvalues $\lambda$ to (*) in (0.B).
+Then we have:
+
+\medskip
+
+\noindent
+{\bf{3.1 Proposition.}}
+\emph{There exist positive constants $C_*$ and $c_*$ such that
+every eigenvalue  $\lambda$ to  (*) in (0.B) satisfies}
+
+\[
+|\mathfrak{Im}\,\lambda|^2\leq C_*(\mathfrak{Re}\,\lambda)+c_*)
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $u$ be an eigenfunction where
+$P(u)+\lambda\cdot u=0$.
+Stokes theorem and the vanishing of $u|\partial\Omega$
+give:
+\[
+0=\int_\Omega\, \bar u\cdot (P+\lambda)(u)\,dx
+=-\int_\Omega \, \sum_{p,q}\, a_{pq}(x)\cdot \frac{\partial u}{\partial x_p}
+\frac {\partial \bar u}{\partial x_q}\, dx+
+\int_\Omega\, \bar u\cdot( \sum \, a_p(x)
+\frac{\partial u}{\partial x_p}\,)\, dx+
+\] 
+\[
+\int_\Omega\, |u(x)|^2\cdot b(x)\, dx+
+\lambda\cdot \int\, |u(x)|^2\, dx
+\]
+\medskip
+
+
+\noindent
+Write $\lambda=\xi+i\eta$.
+Separating real and imaginary parts we find the two equations:
+\[
+\xi\int\, |u|^2\, dx=
+\int\, \sum_{p,q} a_{p,q}(x)\,\frac{\partial u}{\partial x_p}\cdot 
+\frac{\partial \bar u}{\partial x_q}\, dx+
+\int\, \bigl(\frac{1}{2}\cdot \sum\, \frac{\partial a_p}{\partial x_p}- b\,\bigr )
+\cdot |u|^2\, dx\tag{i}
+\]
+\[
+\eta\int\, |u|^2\, dx=\frac{1}{2i}\int \sum\, a_p\bigl(
+u\frac{\partial \bar u}{\partial x_p}-
+\bar u \frac{\partial u}{\partial x_p}\,\bigl )\, dx\tag{ii}
+\]
+
+
+\noindent
+Set
+\[ A= \int\, |u|^2\,dx\quad\colon\quad
+B= \int\, |\nabla(u)|^2\,dx
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+Since $P$ is elliptic there exists a positive constant $k$ such that
+\[
+\sum_{p,q} a_{p,q}(x)\,\frac{\partial u}{\partial x_p}>
+k\cdot |\nabla(u)|^2
+\]
+From this we see that (i-ii) gives positive constants $c_1,c_2,c_3$ such that
+\[
+A\xi>c_1B-c_2B\quad\colon\quad A|\eta|<c_3\cdot \sqrt{AB}\tag{iii}
+\]
+\medskip
+
+\noindent
+Here (iii) implies that $\xi>-c_2$ and the reader can also confirm that
+\[ 
+B<\frac{A}{c-1}(\xi+c-2)\quad\colon\quad
+A|\eta|< A\cdot c_2\cdot \sqrt{\frac{\xi+c_2}{c_1}}\quad\colon\quad
+|\eta|< c_3\cdot \sqrt{\frac{\xi+c_2}{c_1}}\tag{iv}
+\]
+
+
+\noindent Finally it is obvious that (iv) above gives the requested
+inequality in Proposition 3.1.
+
+\bigskip
+
+\centerline{\bf{4. The asymptotic  formula.}}
+\bigskip
+
+
+\noindent
+Using the results above
+where we have found  a good control of the integral operator
+$\mathcal J$ and the identification of eigenvalues to $\mathcal j$ and those from (*) in (0.B), one can proceed and apply Tauberian theorems to derive
+the asymptotic formula  in Theorem 1 using 
+similar methods as described in ¤ XX where we treated
+the Laplace operator. 
+For details the reader may consult [Carleman:p age xx-xx].
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+

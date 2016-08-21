@@ -1,0 +1,969 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+
+
+\centerline{\bf{9. Neumann-Poincaré  boundary value problems}}
+
+\bigskip
+
+\noindent
+{\bf{Introduction.}}
+Several fundamental  results were
+achieved by Carl  Neumann in his pioneering  article
+emph{xxx} from 1877.
+Apart from an elegant solution to the
+Dirichlet problem, Neumann solved boundary
+valued problems where  double-layer potentials occur.
+His results were carried out in dimension 3.
+The  strategy was to  use resolvents and 
+prove
+that
+certain poles are absent while
+meromorphic extensions of  operator-valued  series are constructed
+which after has become
+a widespread tool to study elliptic differential equations.
+Neumann's studies were   confined to convex
+domains
+where
+certain majorizations become straighforward since one deals with 
+positive integral kernels. 
+The extension  to  general domains with a $C^2$-boundary  
+was achieved by Poincaré in the article \emph{xxx} from 1897
+where  new methods were introduced to overcome
+the failure of positivity for the
+non-symmetric kernel defining the double-layer potential.
+In § xx we expose Poincaré's solution to the Neumann problem in
+dimension two and mention only that
+a similar proof is available in higher dimension.
+In these proof analytic function theory appears which
+to establish existence results for elliptic
+boundary value problems.
+For example, a crucial point during the proof of Theorem
+xx is that
+one first has found a certain meromorphic operator-valued function
+and following Poincaré one shows that uniqueness entails that
+a pole is absent at the critical value $\lambda=1$.
+
+\medskip
+
+\noindent
+Here we shall  restrict the  discussion  to planar domains
+$\Omega$ borded by a finite union of closed Jordan arcs
+of class $C^2$. 
+Let $\Gamma$ denote $\Omega$ and 
+following Poincaré in his article
+\emph{La méthode de Neumann et le problème de Dirhclet}
+one introduces the certain  linear operators acting on
+continuous functions on
+$\Gamma$ as follows:
+\medskip
+
+\noindent
+ Denote by ${\bf{n}}$  the
+\emph{inner normal} to $\Gamma$, i.e. the unit normal along
+$\partial\Omega$ which is directed  into the domain, and 
+let $ds$ be   the arc-length.
+When $\psi$ and $\phi$ are continuous functions on
+$\Gamma$ we put:
+\[
+\mathcal N_\psi(x)= \int_\Gamma\, \frac{\langle x-p,{\bf{n}}(x)\rangle}
+{|x-p|^2}\cdot \psi(p)\, ds(p)
+\quad\&\quad 
+\mathcal D_\phi(x)= \int_\Gamma\, \frac{\langle x-p,{\bf{n}}(p)\rangle}
+{|x-p|^2}\cdot \phi(p)\, ds(p)\tag{*}
+\]
+We refer to $\mathcal N$ as the Neumann operator and
+$\mathcal D$ as the Dirichlet operator.
+Poincaré proved that both these linear operators acting on the
+Banach space $C^0(\Gamma)$ 
+have a real spectrum whose sole cluster point is at the origin
+and the eigenspace at
+every spectral point is 1-dimensional.
+This  can be expressed by saying that the operator valued functions
+\[
+\lambda\mapsto(\mathcal N-\lambda\cdot E)
+\quad\&\quad
+\lambda\mapsto(\mathcal D-\lambda\cdot E)
+\tag{**}
+\]
+are  holomorphic in a disc centered at the origin and extend
+to  meromorphic functions in  the complex parameter $\lambda$
+with a discrete set of simple real poles whose absolute values tend to
+$\infty$.
+
+
+
+\medskip
+
+
+\centerline{\bf{The case when $\Gamma$ has corner points.}}
+
+\medskip
+
+\noindent
+Certain existence theorems  for planar domains where
+isolated corner points are allowed were 
+established by Zarmela in 1904.
+Further results which led  to
+quite precise facts about the spectra for operators as above 
+were obtained 
+in Carleman's thesis \emph{xxx} from 1916.
+A novelty in this work was  that solutions to equations of the form
+\[
+\mathcal N_\psi=\lambda\cdot \psi
+\quad\&\quad
+\mathcal D_\phi= \lambda\cdot \phi\tag{0.1}
+\]
+were stided for  functions which only 
+are  integrable on the boundary.
+This leads to new phenomena for the spectra of the operators in (*),
+i.e. they need not  
+be  confined to discrete subsets of the
+complex $\lambda$-plane since the equations (0.1) can have 
+$L^1$-solutions for values of $\lambda$ where no
+continous function appears.
+The reason is that the oprecence of corner pints
+means that the operators in (*) are unbounded
+when they act on a space like $L^1(\Gamma)$.
+Let me  recall some  results from Carleman's 
+thesis which I personally find to be
+worth studying even today  by  readers  interested in
+elliptic boundary value problems.
+As far as I know  the sharp results from [ibid] for planar domains
+have not been improved  in more recent literature
+and  methods initiated in [ibid]
+have benn adopted by generations of authors later n.
+
+
+\medskip
+
+\noindent
+Suppose that $\Gamma$ has a finite set of corner points
+where interior angles $\{\alpha_1,\ldots,\alpha_M$ appear
+and give numbers
+\[
+R_\nu= \frac{\pi}{|\pi-\alpha_\nu|}>1\tag{i}
+\]
+Notice that a small $R$-value means that the 
+corresponding corner point is rather  accute.
+When the corner points appear 
+a first result in [ibid] goes as follows.
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Let $R_*$ be the smallest number from  (i),
+Then each of 
+the operator-valued functions in (**) acting on $C^0(\Gamma)$ 
+are  meromorphic in the open disc
+$|\lambda|<R_*$ with a finite number of poles
+which are all real and simple.}
+\medskip
+
+
+\noindent
+A more involved analysis appears in the second chapter from
+[ibid] where Carleman studies the spectrum in the closed complement of
+the disc of radius $R_*$.
+Consider for example a given continuous function $f$ on
+$\Gamma$ and the equation
+\[
+\psi-\lambda\cdot \mathcal N_\psi=f\tag{i}
+\]
+Under the hypothesis that $f$ is Hölder continuous of some order
+$\delta>0$ close to the corner point where
+the minimal $R$-value is attained,
+the solutions to (i) as $\lambda$ is close to $R_*$ can be
+expressed via an algebraic function of $\lambda$ with
+a branch  at $\lambda=R_*$.
+For the precise
+expansions which occur  we refer to [ibid].
+\medskip
+
+\noindent
+One may also consider the homogenous equations
+\[
+\psi-\lambda\cdot \mathcal N_\psi=0
+\quad\&\quad
+\phi-\lambda\cdot \mathcal D_\phi=0
+\tag{ii}
+\]
+Carleman  proved non-zero 
+continuous solutions only occurs at
+a discrete set of real numbers which
+tends to $\infty$  and  the spectra  are the same for 
+Neumann's and Dirichlet's operators.
+Moreover, the dimesion  of the solution spaces in
+(ii) are equal at every
+spectral $\lambda$-value.
+
+
+\medskip
+
+\noindent
+One can also 
+solutions to (ii) where $\psi$ or $\phi$  only are integrable with
+respect to the arc-length meaure,.
+In that case Carleman  proved that the spectrum 
+becomes  quite extensive, i.e. it has positive area and  contains
+an assigned geometrically  define planar domain
+which is described explicityl in [ibid].
+It   would briung us too far to discuss this further since
+it requires  familarity about unbounded linear operstors.
+But  readers  interested to
+learn about examples where peculiar
+spectra  of linear operators appear
+should consult Carleamn's thesis
+which provides "concrete" and yet
+highly non-trivial examples.
+A    survey of  (ibid]  appears in
+the article \emph{Sur les recherches de M. Carelab relatives fonctions harmoniques}
+(Comptes Rendus  vol. 43 1920) by Erik Holmgen.
+\medskip
+
+\noindent
+{\bf{PDE-equations in unbounded domains.}}
+At the Scandinavian congress in matheamtics 1925, Niles Bohr
+put forward the phyciual signiciance of solutions in
+$L^({\bf{R}}^3)$ to equations of th form
+\[
+\Delta(u)+W\cdot u+\lambda\cdot u=0
+\]
+where $W(p)$ is a potentia, function 
+of the form
+\[
+W(p)=\sum\, \frac{m_\nu}{|p-q_\nu|}
+\]
+with the sum taken over a
+finite set of pints
+$\{q_\nu\}$ in
+${\bf{R}}^3$ and $\{m_\nu\}$ are postivie real numbers.
+It turns out that (*) has non-zero $L^2$-solutions for
+a discrete set of real numbers
+which tend to $+\infty$.
+The first demonstration of this result is due to carelan who
+gave an affirative answer to Bohr's
+raides questi on via an immediate appication of this general theory
+about 
+\emph{unbounded self-adjoint operators on Hilbert spaces}.
+which was created in his 
+monograph  \emph{Sur les équations singuliers
+à noyeau réel et symmetrique} 
+published by  Uppsala University is 1923, a work which can be seen as a historic landmark
+in
+operator theory. Here one finds the 
+contructions of spectral resolutions  and their properties
+assigned to an  unbounded self-ajoint operator
+whuch has
+a wide range of applications.
+Hundreds  - ot reven thousands - of articles
+have later exploited Carleman's original work.
+Concerning the equation (*) it is a special case of
+more general equations where one seeks $L^2$-functions $u$ which satisfy
+
+\[
+\Delta(u)+c(x,y,z)\cdot u+\lambda\cdot u=0
+\]
+where $c$ is a real-valued and locally square integrable function
+in
+${\bf{R}}^3$.
+The operator
+\[
+L=\Delta+c(x,y,z)
+\]
+is ab example of a denseyl defined and symmetric operator on
+the Hilbert space
+$L^2({\bf{R}}^3)$.
+There remains to find conditions on $c$ in order that
+$L$ is self-adjoint. In Carelan's cited work
+this is equivspent to the condition that
+for every pair $u,v$ in $L^2$ for which
+$L(u)$ and $L(v)$ also are square integrable over
+${\bf{R}}^3$, one has the equation
+\[
+\int\, u\cdot L(v)\, dm=
+\int\, L(u)\cdot v\, dm
+\]
+where $dm$ is the Lebesgue measure in
+${\bf{R}}^3$.
+No general \emph{sufficient  and necessary} condfitions for
+$L$ to be self-adjoin t are known.
+However, one can seek for sufficient con ditions on the $c$-functions
+in order that (xx) holds.
+The following  result of  was
+presented by Carelan in his lectures at instuut Pincaré helt in May 1930.
+It assets that (xx) holds under the condition that
+the locally suare integrable function $c$ satisfies
+\[
+\limsup\, c(x,y,z)<+\infty
+\]
+where the limes superior is taken as
+$|x|^2+|y|^2+|z|^2\to +\infty$.
+Actually the more precise
+condition to be imposed upon $c$ is that
+for everu $u$ siuch that both $u$ and $L(u)$ belong to
+$L^2({\bf{R}}^3$, it follows that
+\[
+\liminf_{r\to \infty}\,
+\int_{B(r)}\, c\cdot u^2\, dm<\infty
+\]
+where $B(r)$ denote the open balls of radius $r$ centered at the origin.
+As far as I know this is still the shapest known sufficency  resut in order that
+$L$ is self-adjoint.
+As expected Carelan's sufficency theorem
+cannot be derived by
+"abstract reasoning". However, the proof is not too cumeersome and is presented
+with all details in Carleman's article
+where systemtic use of Newton's fundaemtnal solution to the Laplace operator in
+${\bf{R}}^3$ is used.
+\bigskip
+
+\noindent
+{\bf{Exercise.}}
+To each $\rho>0$ and every pair of points $p,q$ in
+${\bf{R}}^3$ we set
+\[
+A_\rho(p,q)= \frac{1}{|p-q|}+\frac{|p-q|}{\rho^2}-\frac{2}{\rho}
+\]
+Consider an open domain
+$\Omega$ in ${\bf{R}}^3$ and a Lebesgue measurable function
+$\phi$ in $\Omega$ with the property that
+for  every point $p\in \Omega$ there exists a small
+ball centered at $p$ such that
+\[
+\int_{B_p(\epsilon)}\, \frac{\phi(q)}{|p-q|}\,dm<\infty
+\]
+So in particular $\phi$ is locally integrable.
+Apply Newton's classic formulas to show that
+a function $u$ satisfies the equation
+\[
+\Delta(u)=\phi
+\] 
+in $\Omega$ if and only if the following is valid: For 
+each  point $p\in \Omega$ and every 
+$\rho>0 $ such that   the ball $B_p(\rho)$ is a relatively compact subset of
+$\Omega$, one has the equation
+\[
+u(p)-\frac{1}{2\pi\cdot \rho^2}\cdot
+\int_{B_p(\rho)}\, \frac{u(q)}{|p-q|}\, dm(q)+
+\frac{1}{4\pi}\cdot \int_{B_\rho(p)}\, A_\rho(p.q)\cdot u(q)\, dm(q)=0
+\]
+\medskip
+
+
+\noindent
+Let us  remark that Newton's criterion for solutions to
+the equation (xx) is a gateway to analyze 
+operators such that $L=\delta+c$.
+See also § xxx where we expose Carelan's proof of
+the sufficency in order that the $L$-operator above is self-adjoint.
+For another  intructive lesson  dealing with
+spectral resolutions of unbounded self-adjoint operators
+we refer to § xx which treats Carleman's solution to
+equations related to propagation of sound in from the cited monograph [xxx].
+Here one is led to more refined questions
+about  the spectral resolution, namely if
+they are exhibited by \emph{aboslutely continuous}
+spectral functions.
+In § xx we follow Carleamns' original wojk and prove the
+absolute contoinuity for
+a class of boundsry value probelms
+of the Neumann type where solutions are $L^2$.functions defined over
+unbounded domains in
+${\bf{R}}^3$ which leads to
+spectra whch in general contain
+unbounded real intervals.
+
+\medskip
+
+\noindent
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf{Solutions for regukar boundary curves.}}
+
+
+
+\bigskip
+
+\noindent
+Let $\mathcal C$ be a closed Jordan curve of class $C^2$ whose 
+arc-lengt measure is denoted by $\sigma$.
+If  $g$ is a continuous function on
+$\mathcal C$ the logarithmic  potential
+\[
+L_g(z)=
+\frac{1}{\pi}\int_{\mathcal C}\, \log\,\frac{1}{|z-q|} \cdot g(q)\, d\sigma(q)
+\]
+yields a harmonic function
+in open the complement of  $\mathcal C$. Notice that we one gets  a pair of
+harmonic functions, defined  in the bounded Jordan domain and the
+the exterior domain respectively.
+Since $\log\,|z|$ is locally integrable in
+${\bf{C}}$ and  $L_g(z)$  the convolution of
+this log-function and the compactly supported Riesz measure
+$g\cdot \sigma$, it follows that $L_g$ extends to a continuous function.
+In particular  the pair of harmonic functions in the 
+inner respectively outer component  are equal
+on $\mathcal C$.
+Moreover,  by the result in  § xx
+the  Laplacian of $L_g$ taken in the distribution sense is equal to
+the measure $g\cdot\sigma$. Of course, this was known to 
+Poincaré even if one did not speak about
+distriobutins in those dys, but rather
+"Grundlösungen" and  the fact that the $log$-function
+is a findfsem,tnal solution to the Lpace operator in
+${\bf{R}}^2$ is classic and already used by Isaac Newton,
+
+\medskip
+
+\noindent
+Let us now consider 
+the inner normal derivative as $z$ approaches points
+$p\in\mathcal C$ from the inside to be denoted by
+${\bf{n}}_*$.
+We get 
+the function  on $\mathcal C$ defined by:
+\[
+p\mapsto \frac{\partial L_g}{\partial {\bf{n}}_*}(p)\tag{1.1}
+\]
+It turns out that (1.1)
+is recaptured by an integral kernel
+function $K(p,q)$ defined on
+the product $\mathcal C\times\mathcal C$.
+With  $p\neq q$
+we consider the vector $p-q$ and  the unit vector
+${\bf{n}}_*(q)$ and put
+\[ 
+K(p,q)=
+\frac{\langle p-q,{\bf{n}}_*(q)\rangle}{|p-q|^2}\tag{*}
+\]
+\medskip
+
+
+\noindent
+Let  analyze the behaviour of $K$ close to a point on
+the diagonal.
+Working in local coordinates we can take $p=q=(0,0)$ and close 
+the this boundary point 
+the $C^2$-curve $\mathcal C$ is locally defined by a function
+\[ 
+y=f(x)
+\] 
+where a point 
+$(x,y)$ belongs to the bounded Jordan domain when
+$y>f(x)$.
+By drawing a figure the reader can verify that
+\[
+{\bf{n}}_*(x,f(x))\cdot d\sigma=(-f'(x), 1)\dot dx
+\]
+So with $p=(t,f(t))$ and $q=(x,f(x))$ we have
+
+\[
+K(p,q)\cdot d\sigma(q)=
+\frac{f(t)-f(x)- f'(x)(t-x)}{(t-x)^2+(f(t)-f(x))^2}\cdot dx
+\]
+By hypothesis $f$ is of class $C^2$ which implies that
+the right hand side stays bounded as $t$ and $x$ independently
+of each other approach zero.
+Now one has:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For each $p\in\mathcal C$ one has the equality}
+
+\[
+\frac{\partial U_g}{\partial {\bf{n}}_*}(p)=
+ g(p)+\int_{\mathcal C}\, K(p,q)\cdot g(q)\,d\sigma(q)\tag{0.2}
+ \]
+ \medskip
+ 
+ \noindent
+ {\bf{Exercise.}} Prove (0.2).
+A hint is that by additivity it suffices to take $g$-functions with 
+supports confined to small sub-intervals of $\mathcal C$ and profit upon
+local coordinates and  parametrizations as above when we study 
+$\mathcal C$ close to the support of $g$.
+
+
+\newpage
+
+
+\centerline {\bf{1. Neumann's boundary value problem.}}
+\bigskip
+
+\noindent
+Let $\Omega$ be a bounded domain
+where $\partial\Omega$ consists of a finite set of closed Jordan
+curves of class $C^2$. 
+Let $h$ and $f$
+be a pair of real-valued continuous functions on
+$\partial\Omega$ where  $h$ is positive.
+We seek a function $U$ which is harmonic in $\Omega$
+and on the boundary satisfies
+\[
+\frac{\partial U}{\partial {\bf{n}}_*}(p)=
+ h(p)\cdot U(p)+ f(p)
+\]
+\medskip
+
+\noindent
+Following Poincaré we  announce and prove the following result.
+
+\medskip
+
+\noindent
+{\bf{1.1 Theorem.}}
+\emph{The boundary value problem
+above has a unique solution $U$.}
+
+\medskip
+
+\noindent
+The uniqueness amounts to show that if $V$ is harmonic in $\Omega$ and
+\[
+\frac{\partial V}{\partial {\bf{n}}_*}(p)=
+ h(p)V(p)
+ \] 
+ on $\partial\Omega$, then $V=0$.
+Since 
+$h$ is  positive 
+this follows from  the maximum porinciple
+for harmonic  functions. 
+\medskip
+
+\noindent 
+\emph{Proof of existence.}
+For each $g\in C^0(\partial \Omega)$ we construct 
+$L_g$
+which by Theorem 0.1 solves the Neumann problem if
+$g$  satisfies the integral equation
+\[
+g(p)+\int_{\mathcal C}\, K(p,q)\cdot g(q)\,d\sigma(q)=
+h(p)\cdot \frac{1}{\pi}\cdot\int_{\partial\Omega}\, \log\,\frac{1}{|p-q|}\cdot g(q)\,d\sigma(q)
++f(p)\tag{1}
+\]
+With $h$ kept fixed we introduce the kernel
+\[ 
+K_h(p,q)=h(p)\cdot \frac{1}{\pi}\cdot\log\, \frac{1}{|p-q|}- K(p.q)
+\]
+and  (1) reduces to the equation
+\[
+g(p)-\int_{\partial\Omega}\,K_h(p,q) g(q)\,d\sigma(q)= f(p)\tag{2}
+\]
+\medskip
+To solve (2) we regard
+ the linear operator on
+the Banach space $C^0(\partial\Omega)$
+defined by
+\[ 
+\mathcal K_h(f)=\int_{\partial\Omega}\,K_h(p,q) f(q)\,d\sigma(q)
+\quad\colon\quad
+f\in C^0(\partial\Omega)\tag{3}
+\]
+With this notation a $g$-function satisfies (2) if
+\[
+(E-\mathcal K_h)(g)=f\tag{4}
+\] 
+where $E$ is the identity operator on
+$C^0(\partial\Omega)$.
+Next, from the general result in §§ 
+$\mathcal K_h$ is a compact linear operator and  by
+another general result from § xx  each
+$f\in C^0(\partial\Omega)$
+yields a meromorphic function of the complex parameter
+$\lambda$ given  by
+\[ 
+N_f(\lambda)=
+f+\sum_{n=1}^\infty\, \lambda^n\cdot \mathcal K_h^n(f)
+\]
+If $\delta>0$ is so small that
+$||\mathcal K_h||<\delta^{-1}$ it is clear that
+\[
+(E-\lambda \mathcal K_h)(N_f(\lambda)=f
+\]
+If $N_f(\lambda)$ has no pole at $\lambda=1$ it follows by analyticity that
+\[
+(E-\mathcal K_h)(N_f(1)=f
+\] 
+which means that $g=N_f(1)$
+solves (4) and the existence part  follows.
+So there remains only to show:
+\medskip
+
+\noindent
+\emph {The absence of a pole at $\lambda=1$.}
+Suppose that $N_f(\lambda)$ has a pole at $\lambda=1$
+which entails that there is a positive integer $m$ such that 
+\[ 
+N_f(\lambda)=
+\sum_{k=1} ^{k=m}\, \frac{a_k}{(1-\lambda)^k}+ b(\lambda)
+\] 
+hold when $|\lambda-1|$ is small where $a_m\neq 0$ in 
+$C^0(\partial\Omega)$
+and $b(\lambda)$ is analytic in some disc centered at $\lambda=1$.
+It follows that
+\[
+(1-\lambda)^m N_f(\lambda)=a_m+(1-\lambda)\beta(\lambda)
+\] 
+where 
+$\beta(\lambda)$ again is an analytic $C^0(\partial\Omega)$-valued function
+close to 1.
+Apply $E-\mathcal K_h$ on both sides which gives
+\[
+(1-\lambda)^m (E- \mathcal K_h)(N_f(\lambda))
+=(E-\mathcal K_h)(a_m)+(1-\lambda)
++(E-\mathcal K_h)(\beta(\lambda))
+\]
+Now  $\lambda=1$  gives
+\[
+(E-\mathcal K_h)(a_m)=0\implies
+a_m=\mathcal K_h(a_m)
+\]
+
+\medskip
+
+\noindent
+This  contradicts  the uniqueness part which already has been proved
+and hence the proof of Theiorem 1 is finished.
+
+
+
+\bigskip
+
+\centerline{\bf{2. The case when
+$\mathcal C$ has corner points.}}
+
+\bigskip
+
+
+\noindent
+In the previous  section we  found a unique solution to 
+Neumann's boundary problem where
+the inner normal derivative of $U$
+along $\partial\Omega$ is a continuous function.
+If corner points appear 
+this will no longer be true. But 
+stated in an appropriate way one can  extend
+Theorem 1.1.
+Let us analyze the specific case when
+the boundary curves are piecewise linear, i.e. each
+closed Jordan curve in
+$\partial\Omega$
+is a simple polygon with a finite number of corner points.
+Given one of these curves $\mathcal C$
+we shall study the
+$K$-function locally.
+Let $\xi_1,\ldots,\xi_N$ be the corner points on
+$\mathcal C$.
+On the linear interval $\ell_i$ which joints two succescive
+corner
+points $\xi_i$ and $\xi_{i+1}$ we notice that
+${\bf{n}}_*$ is constant and 
+\[ 
+K(p,q)=0\quad\colon\quad p,q\in \ell_i
+\]
+Indeed, this is obvious for if $p$ and $q$ both belong to $\ell_i$ then
+the vector $p-q$ is parallell to $\ell_i$ and hence $\perp$ to
+the normal of this line.
+Next, keeping $q$ fixed on the open interval $\ell_i$
+while $p$ varies on $\mathcal C\setminus \ell_i$
+the behaviour of the function
+\[ 
+p\mapsto \langle p-q,{\bf{n}}_*(q)\rangle\tag{*}
+\] 
+is can be understood via a picture and it is
+clear that (i) is a continuous function.
+By a picture the reader should discover the different behaviour in the case
+when $\mathcal C$ is convex or not.
+For example, in the non-convex case it is in general not true 
+that $\mathcal C\setminus \ell_i$
+stays in the half-space bordered by the line passing $\ell_i$ and then
+(*) can change sign, i.e. take both positive and negative values.
+In the special case when
+$\mathcal C$ is a convex polygon the reader should confirm that
+(*) is a positive function of $p$ because we have taken the
+\emph{inner} normal 
+${\bf{n}}_*(q)$.
+\medskip
+
+
+\noindent
+{\bf{2.1 Local behaviour at a corner point.}}
+After a linear change of coordinates
+we take a corner point $\xi_*$ placed at the origin
+and one of the $\ell$-lines with end-point at the origin
+is defined by
+the equation $\{y=0\}$ to the left of $\xi_*$ where
+$x<0$ while $y=Ax$ hold to the right for some $A\neq 0$.
+If $A>0$ it means that
+the angle $\alpha$ at the corner point is detemined by
+\[ 
+\alpha=\pi-\text{arctg}(A)
+\]
+If $A<0$ the inner angle is between 0 and $\pi/2$
+which the reader should illustrate by a picture.
+Next, consider
+a pair of points $p=(-x,0)$ and $q=(t,At)$
+where $x,t>0$. So $p$ and $q$ belong to opposite sides of the
+corner point.
+To be specific, suppose that $A>0$ which entails that
+\[ 
+{\bf{n}}_*(q)=\frac{(-A,1)}{\sqrt{1+A^2}}\implies
+K(p,q)\cdot d\sigma(q)=  \frac{Ax+t}{(x+t)^2+A^2t^2}
+\]
+When $x$ and $t$ decrease to the origin the order of magnitude 
+is
+$\frac{1}{x+t}$ so the kernel function is unbounded
+and the order of magnitude is $\frac{1}{x+t}$.
+If $\ell_+$ denotes the boundary interval to the right of the origin
+where $q$ are placed we conclude that
+\[
+\int_{\ell_+}\, K(p,q)\cdot d\sigma(p)\simeq
+\int_0^1\, \frac{dt}{x+t}\simeq \log\,\frac{1}{x}
+\]
+The last function is integrable with respect to $x$. This local computation shows
+that the kernel function $K$ is not too large in 
+the average. In particular
+\[
+\iint_{\mathcal C\times\mathcal C}\,
+|K(p,q)|\cdot d\sigma(p)d\sigma(q)<\infty
+\]
+But
+the
+growth of $K$ near corner points prevail 
+a finite $L^2$-integral, i.e. the reader may verify that
+\[
+\iint_{\mathcal C\times\mathcal C}\,
+|K(p,q)|^2\cdot d\sigma(p)d\sigma(q)=+\infty
+\]
+\medskip
+
+
+\noindent
+{\bf{2.2 The integral operator $\mathcal K_h$}}.
+Let $h$ be a positive continuous function on
+$\partial\Omega$.
+Now we define the kernel function $K_h(p,q)$ exactly as in
+§ 1 and obtain the 
+linear operator
+\[ 
+g\mapsto\int_{\partial\Omega}\, K_h(p,q)g(q)d\sigma(q)
+\]
+It has a natural domain of definition.
+Namely,  introduce the space
+$L^1_*$ which consists of functions on $g$
+on $\partial\Omega$ for which
+\[
+\iint\, \log\frac {R}{|p-q|}\cdot |g(p)|\cdot d\sigma(q)d\sigma(p)<\infty\tag{*}
+\] 
+where  $R>0$ is so large that
+$\frac{R}{|p-q|}>1$  hold for  pairs $p,q$ on $\partial\Omega$.
+Return to the local situation in
+(2.1) and consider a $g$-function in  $L^1_*$. Locally 
+we encounter an integral of the form
+\[
+\iint_{\square_+}\, \frac{1}{x+t}\cdot |g(t,At))|\, dt
+\]
+where $0\leq x,t\leq 1$ hold in
+$\square_+$.
+In this double integral  integration with respect to $x$
+is finite since the inclusion $g\in L^1_*$ entails that
+\[
+\int_0^1\,\log\,\frac{1}{t}\cdot |g(t,At)|\, dt<\infty
+\]
+
+
+\noindent
+From the above we obtain the following:
+
+\medskip
+
+\noindent
+{\bf{2.3 Theorem.}}
+\emph{The kernel function $K_h$ yields a continuous linear operator from
+$L^1_*$ into $L^1(\partial\Omega)$, i.e. there exists a constant
+$C$ such that}
+\[
+\int_{\partial \Omega} |\mathcal K_h(g)|\cdot d\sigma
+\leq C\cdot 
+\iint
+_{\partial \Omega\times \partial \Omega} 
+\, \log\frac {R}{|p-q|}\cdot |g(p)|\cdot d\sigma(q)d\sigma(p)
+\]
+\bigskip
+
+\noindent
+Armed with Theorem 2.3 
+one  can solve Neumann's boundary value problem for domains 
+whose boundary curves are polygons.
+
+\medskip
+\noindent
+{\bf{2.4 Theorem.}}
+\emph{For each $f\in L^1(\partial\Omega$
+there exists
+a unique harmonic function $U$ in $\Omega$ such that}
+\[
+\frac{\partial U}{\partial {\bf{n}}_*}(p)=
+ h(p)U(p)+ f(p)
+\]
+\emph{holds on $\partial \Omega$. Moreover, $U=L_g$ where
+$g\in L^1_*(\partial\Omega)$ solves the integral equation}
+\[
+g-\mathcal K_h(g)=f
+\]
+
+\newpage
+
+
+\noindent
+\emph{Proof of  uniqueness.}
+At corner points the inner normal of $U$ has no limit and
+to establish the uniqueness we use  instead
+an integral formula:
+
+
+\medskip
+
+\noindent{\bf{2.5 Proposition.}}
+\emph{For each $g\in L^1_*$ the potential function $U=L_g$ satisfies}
+
+\[
+\iint_\Omega\ [
+(\frac{\partial U}{\partial x})^2
++(\frac{\partial U}{\partial y})^2]\, dxdy+
+\int_{\partial\Omega}\, U\cdot 
+\frac{\partial U}{\partial {\bf{n}}_*}\,
+d\sigma=0\tag{2.5.1}
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}} Prove this or consult Carleman's Phd-thesis for details.
+
+\bigskip 
+
+\noindent
+The requested uniqueness in Theorem 2..4 follows from (2.5.1).  For if
+$\frac{\partial U}{\partial {\bf{n}}_*}= h\cdot U$
+holds on the boundary we get 
+
+\[
+0=\iint_\Omega\ [
+(\frac{\partial U}{\partial x})^2
++(\frac{\partial U}{\partial y})^2]\, dxdy=\int_{\partial\Omega}\, 
+h\cdot U^2\,
+d\sigma\implies g=0
+\] 
+\medskip
+
+\centerline
+{\emph{2.6 Proof of existence.}}
+\medskip
+
+\noindent
+It  is carried out by the same mehod as in
+§ X. The crucial  point is  that
+the kernel function $K_h$ is sufficiently well-behaved in order that
+every $f\in L^1(\Omega)$
+yields a meromorphic function $N_f(\lambda)$
+where $\mathcal K_h$-powers are applied to $f$ exactly as in XX.
+\medskip
+
+
+\noindent
+{\bf{Exercise.}} Supply details which prove that
+$N_f(\lambda)$ is meromorphic.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+In [Carleman: Part 3] it is proved that
+the unique solution $g$ to the integral equation
+is represented in a canonical fashion using a certain orthonormal family of functions with 
+respect to the $L^2$-function $\log\,\frac{1}{|p-q|}$ 
+wtih respect to the arc-length measure $\sigma\times\sigma$. Moreover, there exists
+a representation formula expressed by convergent series for the 
+equation
+\[ 
+g+\lambda\cdot \mathcal K_h(g)=f
+\] 
+where poles of $N_f(\lambda)$ are taken into the account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,6590 @@
+                                                                                                                                                             
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+
+\def\vvv{-}                                                                                                                                                                                                                                                                                                                                                         
+
+
+\begin{document}
+
+\newpage
+
+                        
+\centerline {\bf{The $p^*$-function.}}
+\medskip
+
+\noindent
+We  shall construct a special harmonic function which 
+is  used
+to get solutions of the Dirichlet problem.
+Let $\Omega$ be an open and connected set in
+${\bf{C}}$ and consider the connected components of
+its 
+closed complement.
+Let $E$ be
+such a connected component which is not reduced to a single point.
+Let us then consider some closed and simple Jordan curve $\gamma$ 
+contained in $\Omega$. For each point $a\in E$
+there exists the winding number
+$\mathfrak{w}_a(\gamma)$
+defined by
+the integer
+\[
+\frac{1}{2\pi i}\int_\gamma \, \frac{dz}{z-a}
+\]
+If $b$  is another point in the connected set 
+$E$  the continuity of the integer-valued winding number
+implies that 
+\[
+\mathfrak{w}_a(\gamma)=\mathfrak{w}_b(\gamma)\tag{*}
+\]
+This  equality  yields  
+a single-valued analytic function
+in $\Omega$ given by
+the difference
+\[
+\text{log}\,(z-a)-\text{log}\,(z-b)
+\]
+Taking the exponential we find
+an analytic function $\psi(z)$ in $\Omega$ such that
+\[
+e^{\Psi(z)}=
+\frac{z-a}{z-b}
+\]
+
+
+\noindent
+Since $a\neq b$
+we see that
+$\Psi(z)\neq 0$
+for all $z\in\Omega$ and obtain the 
+harmonic function  in 
+$\Omega$
+defined by
+\[
+p(z)=\mathfrak{Re}\bigl(\frac{1}{\Psi(z)}\bigr)=
+\frac{\mathfrak{Re}(\Psi(z)}{|\Psi(z)|^2}\tag{*}
+\]
+
+
+\noindent
+Next, we have
+\[
+\mathfrak{Re}(\Psi(z))=\text{Log}\, |z-a|-\text{Log}|z-b|
+\]
+and since
+$\text{log}\, |z-a|\to-\infty$ as $z\to a$
+we see from (*) that
+\[
+\lim_{z\to a}\, p(z)=0\tag{**}
+\]
+
+
+\noindent
+Notice also that
+$\Psi(z)$ exends to a continuous function on
+$\bar\Omega\setminus (a,b)$ and we can
+choose a small $\delta>0$ such that
+\[ 
+\text{Log}|z-a|-\text{Log}\,|z-b|<-1\quad\colon\quad
+|z-a|\leq\delta\tag{ii}
+\]
+
+\noindent 
+From the above we can conclude:
+
+
+\medskip
+
+\noindent {\bf 7.1 Theorem.}
+\emph{Let $a\in\partial\Omega$ be such that
+the connected component of ${\bf{C}}\setminus \Omega$
+which contains $a$ is not reduced to the single point $a$.
+Then there exists a harmonic function
+$p^*(z)$
+in $\Omega$
+for which}
+\[
+\lim_{z\to a}\, p^*(z)=0
+\]
+\emph{and there exists $\delta>0$ such that}
+\[
+0<r<\delta\implies \max_{\{|z-a|=r\}\,\cap\Omega}\, p^*(z)<0\quad\colon\quad
+\]
+\newpage 
+
+\centerline{\bf 1. The Dirichlet Problem.}
+
+
+\bigskip
+
+\noindent
+{\bf Introduction.}
+Let $\Omega$ be a bounded open set
+in ${\bf{C}}$.
+No connectivity assumptions are imposed, i.e. neither
+$\Omega$ or $\partial\Omega$ have to be connected.
+To each  
+$\phi\in C^0(\partial\Omega)$
+we shall construct a harmonic 
+function $H_\phi$  in $\Omega$ by a contruction due to 
+Perron. Denote by
+$\mathcal P(\phi)$  the family of  subharmonic functions $u(z)$ in 
+$\Omega$ satisfying
+\[
+\limsup_{z\to w}\,u(z)\leq \phi(w)
+\quad\colon\, w\in\partial\Omega\tag{0.1}
+\]
+
+
+\noindent 
+One verifies that
+the
+function defined for $z\in \Omega$ by 
+\[
+H_\phi(z)=\max_{u\in\mathcal P(\phi)}\, u(z)\tag{*}
+\]
+
+
+\noindent
+is  harmonic in $\Omega$. A boundary point $a$ is called Dirichlet regular if
+\[
+\lim_{z\to a}\, H_\phi(z)=\phi(a)\quad\colon\,\phi\in C^0(\partial\Omega)\tag{**}
+\]
+
+
+\noindent
+If (**) holds for every boundary point 
+then Perron's solution extends to a continuous function
+on the closure $\bar\Omega$ and 
+solves the Dirichlet problem with the prescribed
+boundary
+function $\phi$.
+We shall prove
+that (**) holds under a certain  
+geometric condition. 
+
+\medskip
+
+\noindent
+{\bf 1.1 Theorem.}
+\emph{Let $a\in\partial \Omega$ be such that
+the connected component of $a$ in the closed complement
+${\bf{C}}\setminus \Omega$
+is not reduced to the singleton set $\{a\}$.
+Then (**) holds for every $\phi$.}
+\bigskip
+
+\noindent
+The proof involves  several steps.
+First we consider
+Perron's solution in the special case when
+\[
+\phi(z)=|z-a|
+\]
+which we denote  by  
+$H_a(z)$. Notice that the function
+\[ 
+z\mapsto |z-a|
+\]
+is subharmonic and hence  Perron's  function $H_a(z)$
+satisfies
+\[ 
+|z-a|\leq H_a(z)\quad\colon\quad z\in\Omega\tag{1}
+\]
+Now we shall prove:
+
+\medskip
+
+
+\noindent
+{\bf 1.2 Boulignad's Lemma.} \emph{Let $a\in\partial\Omega$
+satisfy the condition in Theorem 1.1. Then}
+\[ 
+\lim_{z\to a}\, H_a(z)=0
+\]
+
+\noindent
+\emph{Proof.}
+The assumption upon $a$ and
+Theorem 0.1  
+gives a harmonic   function
+$p^*(z)$ in $\Omega$ such that 
+\[
+\lim_{z\to a}\, p^*(z)=0\quad\text{and}\quad
+\, p^*(z)<0\quad\colon z\in\Omega\tag{1}
+\]
+Next, let $\epsilon>0$.
+Since $a\in\partial\Omega$ we  find
+$0<r\leq\epsilon$
+such that the circle $|z-a|=r$ has a non-empty intersection 
+$\Gamma$
+with
+$\Omega$.
+Put
+\[
+M=\max_{z\in\Omega}\,|z-a|\tag{2}
+\]
+We can choose a compact subset $\Gamma_*$ of $\Gamma$ such that
+\[
+\ell=\text{arc-length}\,\,(\Gamma\setminus\Gamma_*)\leq \frac{\epsilon}{M}
+\tag {3}
+\]
+
+\noindent
+In the disc $D=\{|z-a|<r\}$
+we find the harmonic function $V(z)$
+whose boundary values on $|z-a|=r$ are zero outside the open set
+$\Gamma\setminus\Gamma_*$
+while $V=M$ holds on 
+$\Gamma\setminus\Gamma_*$. 
+Next, since   $\Gamma_*$ is a compact subset of $\Omega$
+and $p_a^*<0$  in
+$\Omega$ there exists $\delta>0$ such that
+\[
+p^*(z)\leq -\delta\quad\colon\quad z\in\Gamma_*\tag{4}
+\]
+Set
+\[
+B(z)= V(z)-\frac{M}{\delta}\cdot p^*(z)\tag{5}
+\]
+
+
+
+\noindent
+This is a harmonic function in $\Omega\cap D$
+and 
+the construction of $V$ together with
+(4) give
+\[
+B(z)\geq M\quad\colon\quad z\in\Gamma\tag{6}
+\]
+
+
+
+
+
+\noindent
+Next, in  the the open set $U=\Omega\,\cap D$
+we have the subharmonic  function
+\[
+g=H_a-B\tag{7}
+\]
+
+
+
+
+\noindent
+Since  $|z-a|\leq\epsilon$  holds in the closed disc
+in $\bar D$
+we have
+\[ 
+\limsup_{z\to w}\, H_a(z)\leq\epsilon
+\quad\colon\, w\in \bar D\cap\partial\Omega\tag{8}
+\]
+
+\noindent
+and (2) implies  that
+$H_a(z)\leq M$ holds in $\Omega$ which gives
+\[ 
+\limsup_{z\to w}\, H_a(z)\leq M
+\quad\colon\, w\in \Gamma\tag{9}
+\]
+
+\noindent
+At this stage we use
+the set-theoretic inclusion
+\[
+\partial(D\cap\Omega)\subset\Gamma
+\cup\, (\bar D\cap\partial\Omega)
+\tag{10}
+\]
+Hence (6) together with
+(7-8) entail that 
+\[
+\limsup_{z\to w}\, H_a(z)-B(z)\leq \epsilon
+\quad\colon\, w\in\partial(\Omega\cap D)\tag{10}
+\]
+
+
+\noindent
+The maximum principle applied to the subharmonic function
+$H-B$ in
+$\Omega\cap D$ and (10) give
+\[
+\limsup_{z\to a}\, H_a(z)\leq \epsilon+
+\limsup_{z\to a}\, B(z)=\epsilon+ V(a)+
+\limsup_{z\to a}p^*(z)=
+\epsilon+ V(a)
+\tag{11}
+\]
+where (1) gives the last equality.
+Finally, 
+the mean-value formula for the harmonic function
+$V$ and (3) entail that
+\[
+V(a)=\ell\cdot M\leq\epsilon\tag{12}
+\]
+
+
+\noindent
+Hence the limes superior in the left hand side of
+(11) is $\leq 2\epsilon$ and since
+$\epsilon>0$ was
+arbitrary small we get 
+$\limsup_{z\to a}\, H_a(z)\leq 0$ which  finishes the proof of
+Boulignad's lemma.
+
+
+\bigskip
+
+
+
+
+
+\centerline{\emph{¤ 1.3 Proof of Theorem 1.1.}}
+\medskip
+
+\noindent
+Let $\phi\in C^0(\partial\Omega)$
+with the Perron solution $H_\phi(z)$.
+If $c$ is a constant it is clear that
+$H_{\phi-c}= H_\phi-c$. Replacing $\phi$ by
+$\phi(z)-\phi(a)$ we may therefore assume that
+$\phi(a)=0$ and it remains to show that
+\[
+\lim_{z\to a}\, H_\phi(z)=0\tag{1}
+\]
+First we consider the limes superior and show that
+\[ 
+\limsup_{z\to a}\, H_\phi(z)\leq 0\tag{2}
+\]
+To get (2) 
+we take some
+$\epsilon>0$ and the continuity of  $\phi$ gives 
+$\delta>0$ such that
+\[
+\phi(z)\leq\epsilon\quad\colon\quad z\in\partial\Omega\,\cap D_a(\delta)
+\]
+Put $M^*=\max_{z\in\partial\Omega}\,|\phi(z)|$ and define
+the harmonic function in
+$\Omega$ by
+\[
+g^*(z)=\epsilon+\frac{M^*}{\delta}\cdot H_a(z)
+\]
+Since $H_a(z)\geq |z-a|$
+we have:
+\[ 
+\liminf_{z\to b}\, g^*(z)\geq M^*\quad\colon\quad
+b\in\partial\Omega\setminus D_a(\delta)
+\]
+
+
+\noindent
+At the same time  $g^*(z)\geq\epsilon$ for every
+$z\in\Omega$ so $g^*\geq \phi$ on the whole boundary
+and the maximum principle for harmonic functions
+gives:
+\[
+u\leq g^*\quad \colon \, u\in\mathcal P(\phi)
+\]
+
+
+
+
+\noindent
+The construction of
+$H_\phi$ entails that
+$H_\phi\leq g^*$ holds in $\Omega$ which implies that
+\[
+\limsup_{z\to a}\, H_\phi(z)\leq 
+\limsup_{z\to a}\, g^*(z)=\epsilon
+\]
+where the last equality follows from Boulignad's Lemma.
+Since $\epsilon$ can be arbitrary small we get (2).
+There remains to show that
+\[
+\liminf_{z\to a}\, H_\phi(z)\geq 0\tag{3}
+\]
+
+
+
+\noindent
+To prove (3)  we put
+\[ 
+g_*(z)=-\epsilon-\frac{M^*}{\delta}\cdot H_a(z)
+\]
+It is clear that
+\[
+\limsup_{z\to\xi}\, g_*(z)\leq\phi(\xi)
+\quad\text{for all boundary points}\,\,\xi\in\partial\Omega
+\]
+Hence $g_*\in\mathcal P(\phi)$
+which gives
+$g_*\leq H_\phi$. So now we have
+\[
+\liminf_{z\to a}\, H_\phi(z)\geq
+\liminf_{z\to a}\, g_*(z)=-\epsilon
+\]
+Since $\epsilon$ can be arbitrary small we get (3) and Theorem
+1.1 is proved.
+
+
+
+
+\newpage
+
+
+
+
+
+\bigskip
+
+\centerline
+{\bf{1.5 Wiener's solution.}}
+
+\medskip
+
+\noindent
+Let $\Omega$ be a bounded open set which in general  consists
+of infinitely many connected components.
+There exists a family
+ $\mathcal F$  of 
+nested sequences of
+strictly increasing relatively compact subsets $\{\Omega_n\}$
+such that $\cup\,\Omega_n=\Omega$ and
+Dirichlet's problem is solvable for each $\Omega_ n$. The nested property means that
+$\bar\Omega_{n-1}$ appears as a compact subset of
+$\Omega_n$ for every $n$.
+For example, if $N\geq 1$ we consider the family
+$\mathcal D\uuu N$
+of dyadic cubes whose sides have length $2^{\vvv N}$.
+We find the finite family $\mathcal D\uuu N(\Omega)$
+of cubes in this family whose closure stay in $\Omega$.
+Their closed union is relatively compact in
+$\Omega$ and it is clear that Dirichlet's problem is solvable for
+the open set given by the union of  interior points in this family.
+With increasing $N$ this is  an example of a nested sequence 
+$\mathcal F$.
+
+\medskip
+
+\noindent
+{\bf{1.6 Theorem.}}
+\emph{For each  $z\in\Omega$ and every nested sequence $\{\Omega\uuu n\}$,
+the harmonic measures 
+$\{\mathfrak {m}\uuu z^{ \Omega\uuu n}\}$
+converge weakly to a unique probability measure $\mathfrak {m}^*\uuu z$
+supported by  $\partial \Omega$, and for each 
+$f\in C^0(\partial\Omega)$  the  function}
+\[
+W\uuu f(z)=\int\, f(\zeta)\cdot d\mathfrak {m}^*\uuu z(\zeta)
+\] 
+\emph{is harmonic in $\Omega$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Let 
+$\phi$ be a continuous function $\phi$
+on the closure $\overline{\Omega}$ which is subharmonic in
+$\Omega$.
+For every $n$ its restriction to $\partial\Omega\uuu n$
+has a harmonic extension $\Phi\uuu n$ to $\Omega\uuu n$.
+Next, let $z$ be a point in $\Omega$ and start 
+with some $n\uuu *$ so that
+$z\in \Omega\uuu{n\uuu *}$.
+To each  $n\geq n\uuu *$ we get  the harmonic measure
+$\mathfrak{m}\uuu z^{\Omega\uuu n}$ and obtain
+\[
+\Phi\uuu n(z)=
+\int\uuu{\partial\Omega\uuu n}
+\,\phi\cdot d\mathfrak{m}\uuu z^{\Omega\uuu n}\tag{1}
+\]
+Since $\phi$ is subharmonic  and $\phi=\Phi\uuu{n+1}$ holds on
+$\partial \Omega\uuu{n+1}$, it follows that
+$\phi\leq \Phi \uuu{n+1}$ in $\Omega\uuu{n+1}$ This holds
+in particular  on $\partial\Omega\uuu n$ which entails that
+
+
+\[
+\Phi\uuu n(z)= \int\uuu{\partial \Omega\uuu n}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}\leq
+\int\uuu{\partial \Omega\uuu n}
+\,\Phi\uuu {n+1}\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}=\Phi\uuu{n+1}(z)
+\tag{2}
+\]
+where the last equality holds since the restriction of $\Phi\uuu{n+1}$ to
+$\Omega\uuu n$ is harmonic.
+Hence (1\vvv 2) entail that
+\[
+\int\uuu{\partial \Omega\uuu n}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}\leq
+\int\uuu{\partial \Omega\uuu {n+1}}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu {n+1}}\quad\text{hold for every}
+\quad  n\geq n\uuu *
+\] 
+So the integrals above give
+a non-decreasing sequence of real numbers which in addition
+is bounded above because the maximum norm of
+$\phi$ on $\bar\Omega$ is finite.
+Hence there exists the limit
+\[
+ L(\phi)=\lim\uuu{n\to\infty}\, 
+\int\uuu{\partial \Omega\uuu n}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}\tag{3}
+\]
+In ¤ XX:B we  show
+that every
+$C^2$-function 
+can be expressed as the difference of two
+subharmonic functions and hence  the limit in (3) exists
+for every $f\in C^2(\partial\Omega)$. Since $C^2(\partial \Omega)$ is dense
+in
+$C^0(\partial\Omega)$,
+Riesz representation Theorem implies  that 
+weak-star limits from subsequences of
+$\{\mathfrak{m}\uuu z^{\Omega\uuu n}\}$ are
+equal and hence the whole sequence has a
+weak-star  limit $\mathfrak{m}\uuu z^*$.
+Moreover, the  
+boundaries
+$\partial\Omega\uuu n$ approach $\partial\Omega$ which entails that 
+$\mathfrak{m}^*_z$ is supported by $\partial\Omega$.
+At this stage we leave to the reader to show
+that
+if $\{U\uuu n\}$ is another nested sequence then the weak star limit of
+of $\{\mathfrak{m}\uuu z^{U\uuu n}\}$
+is equal to 
+the limit measure $\mathfrak{m}\uuu z^*$ constructed via
+$\{\Omega\uuu n\}$. Finally, the constructions above show that
+when $z$ varies in
+$\Omega$ then 
+\[ 
+z\mapsto \int\uuu{\partial\Omega}
+\, f\cdot \mathfrak {m}\uuu z^*
+\] 
+is harmonic in $\Omega$ for every continuous boundary function $f$.
+
+\bigskip
+
+\noindent
+{\bf{1.7 Regular boundary points.}}
+Consider a point $a\in\partial\Omega$.
+It is called  Wiener-regular   if
+\[
+\lim\uuu{z\to a}\, W\uuu f(z)=f(a)\tag{1.7.1}
+\]
+hold for every $f\in C^0(\partial\Omega)$.
+We shall find a potential-theoretic condition
+in order that (1.7.1) holds.
+Without loss of generality we can take $a$ as the origin
+and for each  $n\geq 1$
+we consider the closed annulus
+\[
+A\uuu n=\{2^{\vvv n}\leq |z|\leq 2^{\vvv n+1}\}
+\]
+For each fixed $n$
+the compact set $\partial\Omega\cap A_n$ has a
+capacity 
+$e^{\vvv \gamma\uuu n}$ which by
+¤ XX means that there exists
+a probability measure $\mu\uuu n$ supported by
+$\partial\Omega\cap A\uuu n$ such that the logarithmic potential
+\[ 
+U\uuu n(z)=\frac{1}{\gamma\uuu n}\int\,\log\,\frac{1}{|z\vvv\zeta|}\cdot d\mu\uuu n(\zeta)
+=1\quad\colon
+z\in \partial\Omega\cap A\uuu n
+\]
+
+\medskip
+
+\noindent
+{\bf{1.8 Theorem.}}
+\emph{The boundary point $a$ is regular if and only if}
+\[
+\sum\uuu{n=1}^\infty\, \frac{n}{\gamma\uuu n}=+\infty\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Suppose first that
+(*) is convergent and then we must
+prove that (1.7.1) does not hold.
+To achieve this we take
+some
+$0<\epsilon<1/3$ which is kept fixed from now on where the assumed
+convergence in (*) gives
+an integer $N\uuu *$ such that
+\[
+\sum\uuu{n=N\uuu *}^\infty\,
+ \frac{n}{\gamma\uuu n}
+\leq\epsilon\tag{i}
+\]
+
+\medskip
+
+\noindent
+Choose $F\in C^0(\partial\Omega)$
+with $F(0)=1 $ and
+$F=0$ on $\{|z|\geq 2^{\vvv N\uuu *+1}\cap \partial\Omega\}$
+while the  whole range $F(\bar\partial\Omega)$
+is contained in $[0,1]$. 
+Now we shall argue by contradiction and suppose that
+(1.7.1) holds for $F$. This   gives the existence of a small 
+$s>0$ such that 
+\[
+W\uuu F(z)\geq 1\vvv \epsilon\quad\text{holds Êon}\quad
+D(s)\cap \Omega\tag{ii}
+\]
+where $D(s)$ is the 
+disc of radius $s$ centered at the origin.
+Next, as  $r\to 0$ the discs $D(r)$
+shrink to the singleton set $\{0\}$. So by ¤ XX
+the capacities
+$e^{\vvv \gamma\uuu r}$ of $D(r)\cap \Omega$.
+tend to zero with $r$.
+Let $\nu\uuu r$ be the
+equilibrium distribution
+on $D(r)\cap \partial\Omega$ and put
+\[
+V\uuu r(z)= \frac{1}{\gamma \uuu r}\cdot \int \log\frac{1}{|z\vvv \zeta|}
+\cdot d\nu\uuu r(\zeta)\tag{iii}
+\]
+So here $V(z)=1$ on $D(r)\cap \partial \Omega$.
+Since $\gamma_r\to +\infty$ as $r\to 0$
+we can choose $r<s$ so small that
+\[
+\max\uuu{|z|\geq s}\, V\uuu r(z)\leq\epsilon\tag{iv}
+\]
+Next, let  $M>N\uuu * $ be so large that $2^{\vvv M}\leq r$ and put
+\[ 
+U^*\uuu M(z)=\sum\uuu{n=N\uuu *}^{n=M}\,
+\frac{1}{\gamma\uuu n}\cdot U\uuu n(z)
+\]
+With this choice it is clear that 
+\[
+V(z)+U^*\uuu M(z)\geq 1\quad\text{holds on}\quad 
+D(2^{\vvv N\uuu *+1})\cap \partial \Omega\tag{v}
+\]
+Since $0\leq F\leq 1$ and $F=0$ on
+$\partial\Omega\setminus D(2^{\vvv N\uuu *+1})$
+we have $F\leq V+U^*\uuu M$ on the whole boundary
+of $\Omega$. The minimum principle 
+for super\vvv harmonic functions
+gives the inequality
+\[
+V+U^*\uuu M\geq W\uuu F\quad\text{in}\quad \Omega\tag{vi}
+\]
+Now (i) and (iv) entail that
+\[ 
+\min\uuu{z\in \Omega\cap D(s)}\, U^*\uuu M(z)\geq 1\vvv 2\epsilon \tag{vii}
+\]
+At the same time we have $2^{\vvv M}\leq s$ so the construction of
+$U^*\uuu M$ entails that
+$U^*\uuu M=1$ holds on
+$|z|\cap \partial\Omega$. Together with (vii) we obtain
+\[
+\min\uuu {|z|=s}\, U^*\uuu M(z)\geq 1\vvv 2\epsilon\tag{viii}
+\]
+
+
+\noindent
+Now $U^*\uuu M$ restricts to  a super\vvv harmonic
+function on $D(s)$ 
+so the minimum principle for super\vvv harmonic functions gives
+\[
+1\vvv 2\epsilon\leq U^*\uuu M(0)
+=\sum\uuu{n=N\uuu *}^{n=M}\, 
+\frac{1}{\gamma\uuu n}\int\, \cdot 
+\log\,\frac{1}{|\zeta|}\cdot d\mu\uuu n(\zeta)\tag{ix}
+\]
+Finally, $|\zeta|\geq 2^{\vvv n}$ holds on the support of $\mu\uuu n$
+and hence each integral is $\leq n\cdot \log 2$. So (ix) gives
+the inequality
+\[
+1\vvv 2\epsilon\leq \sum\uuu{n=N\uuu *}^{n=M}\, 
+\frac{n\cdot \log 2}{\gamma\uuu n}<\log 2\cdot \epsilon
+\]
+This cannot hold
+since we have chosen
+$\epsilon<1/3$. It means that  (ii) cannot hold and hence 
+$a$ is not a regular boundary point.
+
+\medskip
+
+
+\centerline {\emph{Proof of sufficiency.}}
+\bigskip
+
+\noindent
+Above we  proved that
+if $a$ is regular then the series (*) in Theorem 1.8 must diverge.
+There remains to show that  if (*) is divergent then $a$ is regular.
+The proof  of this converse is left as an exercise to the reader.
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\bf\large Chapter 5.A Harmonic functions}
+
+
+\bigskip
+
+\noindent 
+\centerline{\emph{Contents}}
+\medskip
+
+\noindent 
+1. The Dirichlet problem
+\medskip
+
+\noindent 
+2. The Harmonic Conjugate.
+\medskip
+
+\noindent 
+3. Harmonic functions in a disc
+\medskip
+
+\noindent 
+4. The mean value property
+\medskip
+
+
+\noindent 
+5. The harmonic measure
+\medskip
+
+\noindent 
+6. The Green's function
+
+
+\medskip
+
+\noindent 
+7. The Neumann problem 
+
+
+\medskip
+
+\noindent 
+8. Example from Hydro mechanics
+
+
+
+\medskip
+
+\noindent 
+9. A result on harmonic majorisation
+
+\medskip
+
+\noindent 
+10. On harmonic measure functions
+\medskip
+
+\noindent 
+11. Some estimates for  harmonic  functions
+\medskip
+
+\noindent 
+12.  A density result for harmonic functions
+
+\medskip
+
+\noindent 
+13.  A representation of rotation invariant harmonic functions
+\medskip
+
+\noindent 
+14.  Ganelius' inequality for conjugate harmonic functions
+\medskip
+
+\noindent 
+15.  Beurling's minimum principle for
+harmonic functions
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\noindent
+\centerline{\bf\large{ Introduction.}}
+\medskip
+
+
+
+\noindent
+Chapter V is divided in two parts, where ¤ B
+treats subharmonic functions.
+A  logical procedure might have started with 
+subharmonic functions. However, we prefer to first study
+harmonic functions even though we are obliged to appeal to
+some facts from  V:B.
+Hopefully the reader will accept this and
+whenever needed consult results in  V:B.
+A crucial fact 
+is that
+every positive harmonic function $u$ in the open unit disc
+is the Poisson extension of a non-negative Riesz measure 
+$\mu$ with finite total mass on
+the unit circle, i.e. with $z=x+iy$ one has 
+\[
+u(x,y)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\frac{1-|z|^2}{|e^{i\theta}-z|^2}\cdot d\mu(\theta)
+\]
+Another useful result is that
+every real-valued continuous function $\phi$ 
+whose Laplacian in the sense of distribution theory
+is of order zero, i.e. given by a signed Riesz measure, 
+is the difference of two subharmonic functions.
+In  particular this is true for real-valued $C^2$-functions.
+Armed with these results to be  proved in 
+V:B   we  solve   the
+ Dirichlet problem in a quite general context where
+the  major results are due to Perron and Wiener.
+In fact, we shal, learn that there exist
+several ways to attain solutions of 
+Dirchlet's problem.
+The less experienced reader
+may
+first consult the 
+material in ¤ 3 and ¤ 4 
+where we study the Poisson kernel in the unit disc
+and  establish the Herglotz formula, while ¤ 4 
+exhibits maximum principles for harmonic functions which
+are derived from local  mean-value equalities.
+
+\medskip
+
+\noindent
+\emph{ Comments on other sections.}
+In  ¤ 5 we study harmonic measures and use these to
+prove  results due to Lindelšf concerning limits
+of  bounded analytic functions.
+In  ¤6 we construct  Green's functions and
+the Neumann problem is treated 
+in ¤ 7. An  example related to hydromechanics appears in
+¤ 8 and ¤ 9
+presents a  proof by Carleman which uses
+differential inequalities in order to
+estimate harmonic functions.
+Section 10 treats  a result due to Nevanlinna about
+critical points for level curves of harmonic measure functions.
+Sections 11-13 contain  supplementary facts about harmonic functions.
+For example, the estimates in ¤ 12 will be used when Lindelšf
+indicators  are studied for analytic functions in strip domains
+in  Special Topics: ¤ XX.
+Sections 14 -15 contain results whose proofs are more involved, especially in
+¤ 15.
+The  results in
+¤ 8-15 
+are not neeeded for the "general theory". However, the proofs
+are instructive and the theorems  quite striking. So they deserve
+to be studied since they teach lessons about
+the usefulness of both harmonic and subharmonic  functions.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Many results can be exended to a more general set-up. 
+One can for example replace the Laplace operator by
+an elliptic second-order PDE-operator with variable coefficients and
+establish solutions to boundary value problems, both in the sense of 
+Dirichlet and Neumann.
+So the subsequent material is rather restricted, 
+but has the merit that
+proofs are quite  constructive and 
+the special results which occur  for  the Laplace operator are 
+used in analytic function theory.
+
+
+
+
+
+\bigskip
+
+
+
+\centerline {\emph{The Dirichlet problem.}}
+
+\medskip
+
+
+\noindent
+Consider a bounded open and connected domain
+$\Omega$ in ${\bf{C}}$.
+To every $f\in C^0(\partial\Omega)$ one
+seeks a harmonic function $H_f$ in $\Omega$ which extends continuously to
+$\bar\Omega$ and whose  boundary value function is $f$.
+The maximum principle for harmonic functions entails that
+$H_f$ is unique if it exists.
+When $\Omega$ is of class $\mathcal D(C^1)$, i.e.
+the boundary is a finite union of
+pairwise disjoint closed Jordan curves of class $C^1$, then
+Dirichlet's problem can be solved for every
+continuous boundary function.
+This  relies upon
+properties of Dirchlet integrals. If
+$F$ is a $C^1$-function defined in a neighborhood of
+the closure of 
+$\Omega$ the Dirichlet norm is defined by
+\[ 
+D(F)=\sqrt{\iint_\Omega\, (F_x^2+F_y^2)\, dxdy}\tag{i}
+\]
+If $F$ and $G$ are two $C^1$-functions which  extend to be
+of class $C^1$ on the boundary, then Greens' formula entails that
+\[
+\iint_\Omega\,[ G\cdot \Delta F+(G_xF_x+G_yF_y)]\, dxdy
+=
+\int_{\partial\Omega}\, G\cdot \frac{\partial F}{\partial n}\, ds\tag{ii}
+\]
+\medskip
+
+\noindent
+{\bf{The case when
+$F$ is harmonic}}. Then (ii) gives
+\[
+\iint_\Omega\,(G_xF_x+G_yF_y)\, dxdy
+=
+\int_{\partial\Omega}\, G\cdot \frac{\partial F}{\partial n}\, ds\tag{iii}
+\]
+With $F=G$ we obtain in particular 
+\[
+D^2(F)=\int_{\partial\Omega}\, F\cdot \frac{\partial F}{\partial n}\, ds\tag{iv}
+\]
+
+\medskip
+
+\noindent
+Next, we notice that
+\[
+D^2(F-G)=D^2(F)+D^2(G)-2\cdot \iint_\Omega\,(G_xF_x+G_yF_y)\, dxdy\tag{v}
+\]
+If $G=F$ holds on $\partial\Omega$ we see that
+(iii-iv) give
+\[
+D^2(F-G)= D^2(G)+D^2(F)-2\cdot \int_{\partial\Omega}\,
+F\cdot \frac{\partial F}{\partial n}\, ds= D^2(G)-D^2(F)
+\]
+Hence we have established
+
+\medskip
+
+
+\noindent
+{\bf{Dirichlet's equation}}
+\emph{Let $F$ be harmonic in $\Omega$. Then}
+\[
+D^2(G)=D^2(F)+D^2(F-G)\tag{*}
+\] 
+\emph{hold for every $G$ such that $G=F$ on $\partial\Omega$.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+This equality   suggests 
+that
+if $f\in C^0(\partial\Omega)$
+then the solution to Dirchlet's problem amounts 
+to settle a variational 
+problem, i.e.  find $F$ such that
+$D(F)$ is minimized while $F=f$ on the boundary.
+It was  pointed out by Weierstrass  that
+a variational problem of this kind
+is not automatically well posed. After a rather 
+refined analysis PoincarŽ demonstrated that
+the variational problem indeed
+leads to the solution of the Dirichlet problem  for domains of class $C^2$.
+For domains with less regularity  we shall learn
+that solutions to the Dirchlet problem can be found
+by a Perron's method.
+His  solution is
+given in
+¤ 5.B after we have become familiar with subharmonic functions.
+\medskip
+
+\noindent
+{\bf{0.2 Wiener's generalised solution.}}
+Examples  of "ugly domains" show that the Dirichlet problem in 
+general cannot be solved.
+However, for an arbitrary bounded open set $\Omega$
+there
+exists for each $\phi\in C^0(\partial\Omega)$ a unique harmonic
+function $W_f$
+which is 
+constructed
+as follows:
+The domain $\Omega$ can be exhausted by a 
+nested sequence of  increasing 
+subdomains $\{U_n\}$ such that
+$\cup \, U_n=\Omega$, and for each $n$ the boundary
+$\partial U_n$ is a finite union of closed Jordan 
+curves of class $C^2$. Moreover, 
+\[
+\lim_{n\to\infty}\, \text{dist}(\partial U_n,\partial\Omega)=0
+\]
+Next,  extending $\phi $ to a continuous function
+$\Phi$ on $\bar \Omega$ 
+we can solve the Dirichlet problem in $U_n$
+which gives  a harmonic function
+$H_n$ in $U_n$ whose boundary value function on 
+$\partial U_n$
+is  the restriction of $\Phi$.
+In ¤ xx we show that the sequence $\{H_n\}$ converges uniformly over
+compact subsets to a limit function  which
+is harmonic in $\Omega$.
+Wiener proved that this limit function does not depend upon the chosen
+nested $U$-sequence, nor upon the chosen 
+continuous extension of $\phi$.
+The resulting function is  denoted by $W_\phi$
+and called Wiener's generalised solution.
+The map $\phi\to W_\phi$ is linear
+and Riesz representation theorem gives  
+for each point $z\in\Omega$   a unique probability measure
+$\mathfrak{m}_z$ on $\partial\Omega$
+such that
+\[ 
+W_\phi(z)=
+\int\, \phi (\zeta)\cdot d\mathfrak{m}_z(\zeta)\tag{*}
+\]
+holds for every $\phi\in C^0(\partial\Omega)$.
+
+
+\medskip
+
+\noindent
+{\bf{0.3 Regular boundary points.}}
+A point $z_0\in\partial\Omega$ is called regular 
+if
+\[
+\lim_{z\to z_0}\,  W_\phi(z)= \phi(z_0)
+\]
+hold for every continuous boundary function.
+A criterion for
+a boundary point to be
+regular was established by 
+Boulignad in 1923. Namely,
+a boundary point $z_0$ is regular if and only if there
+exists a positive harmonic function $V$ in $\Omega$ such that
+\[
+\lim_{z\to z_0} V(z)=0
+\]
+This condition is rather implicit
+so one seeks geometric properties to
+decide if a boundary point is regular or not.
+In his Phd-thesis from 1933, Beurling established a sufficient regularity condition which 
+goes as follows:
+Let $z_0\in\partial \Omega$
+and for a given $R>0$ we consider the
+circular projection of
+the closed complement of $\Omega$ onto the real interval $0<r<R$
+defined by:
+\[ 
+E_\Omega(0,R)=\{ 0<r< R\,\colon\,\exists
+\,\, z\in \{|z-z_0|=r\}\cap {\bf{C}}\setminus \Omega\}
+\]
+Following Beurling one
+ says that $z_0$ is logarithmically dense  (Point
+frontire de
+condensation logarithmique)
+if the integral
+\[
+\int_{E_\Omega(0,R)}\, \log r\, dr=+\infty\tag{1}
+\]
+Beurling proved that if (1) is divergent
+then $z_0$ is a regular boundary point.
+The proof relies upon an inequality which has  independent interest.
+Here is the situation considered in [ibid: page 64-66]:
+Let $\Omega$ be an open set - not necessarily connected - and
+$R>0$ is such that  $\Omega$  contains points of absolute value $\geq R$.
+Consider a harmonic function $h$ in $\Omega$ with the following properties:
+\[ 
+\limsup_{z\to z_*}\, h(z)\leq 0\quad\colon \,
+z_*\in \partial \Omega\cap \{|z|\leq R\}\tag{i}
+\]
+\[
+h(z)\leq  M\quad\colon\, z\in \{|z|=R\}\,\cap D\tag{ii}
+\]
+
+\medskip
+\noindent{\bf{0.3.1 Theorem.}}
+\emph{When (i-ii) hold one has the inequality below for every
+$0<r<R$}
+\[
+\max_{z}\, h(z)\leq 2M\cdot\, e^{-\frac{K}{2}}
+\]
+\emph{where the maximum in the left hand side
+is taken over $\Omega\cap \{r<|z|<R\}$
+and}
+\[ 
+K=\int_{E_\Omega(r,R)}\, \log r\, dr
+\]
+\medskip
+
+\noindent
+In this chapter we shall not expose Beurling's result but refer to ¤ xx.
+Instead we give an account about Wiener's potential-theoretic
+condition for boundary points to be regular in ¤ 1.6.
+
+
+\bigskip
+
+
+
+
+
+
+\noindent
+{\bf 0.4 Harmonic measures.}
+Let $\Omega$ be
+a bounded and connected domain.
+By (*) in (0.2)
+we find a probability measure $\mathfrak{m}_z$
+ on $\partial\Omega$ for each $z\in\Omega$ and
+refer to $\mathfrak{m}\uuu z$ as the harmonic measure of
+$z$. 
+Let
+$g$ be a bounded
+Borel function
+defined on 
+$\partial\Omega$.
+Recall from   \emph{Measure Appendix}
+that we can construct
+integrals of Borel functions with respect to an arbitrary
+Riesz measure.
+If  $z\in\Omega$ we put
+\[
+G(z)=\int_{\partial\Omega}\,
+g(\zeta)\cdot d\mathfrak{m}_z(\zeta)\quad\colon\quad
+\]
+
+
+\noindent
+Then $G$ is a bounded harmonic function in
+$\Omega$. 
+In particular we  take a Borel set $E$ in $\partial\Omega$
+and integrate its characteristic function which
+gives  the harmonic function
+\[ 
+\omega_E(z)=
+\int_E\, d\mathfrak{m}_z(\zeta)
+\]
+One refers to
+$\omega_E$ as the harmonic measure function  with respect
+to the $E$.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+When $z$ varies in $\Omega$, Harnack's inequality 
+for harmonic functions
+shows
+that the family of harmonic measures 
+are absolutely continuous with respect to each other.
+So with   $z\uuu *\in\Omega$ kept fixed every point $z\in\Omega$ gives
+a function $\rho\uuu z\in L^\infty(\mathfrak{m}\uuu{z\uuu *})$
+such that
+\[
+\mathfrak{m}\uuu z= \rho\uuu z\cdot \mathfrak{m}\uuu{z\uuu *}
+\]
+
+
+
+\noindent
+Since $C^0(\partial\Omega)$
+is a dense subspace of
+$L^1(\mathfrak{m}_{z_*})$  
+every
+$f\in L^1(\mathfrak{m}_{z_*})$ yields a harmonic function in
+$\Omega$ defined by
+\[ 
+f^*(z)=\int\, \rho_z(\zeta)\cdot f(\zeta)\cdot
+d\mathfrak{m}_{z_*}(\zeta)
+\]
+
+
+\bigskip
+
+\noindent
+\centerline {\bf {0.5 Other topics.}}
+\medskip
+
+\noindent
+In  ¤ 2 we construct the harmonic conjugate
+of a  harmonic function.
+¤ 3 is devoted to the case when
+$\Omega$ is the unit disc where
+we confirm the solution to
+the Dirichlet problem using the Poisson kernel 
+\[
+P(r,\theta)=
+\frac{1}{2\pi}\cdot \frac{1\vvv r^2}{1+r^2\vvv 2r\cos\theta}
+\] 
+where $0<r<1$ while $0\leq \theta\leq 2\pi$.
+When $u(\theta)$ is a continuous function on the circle its harmonic
+extension to $D$ is given by
+\[
+U(r,\phi)=\int\uuu 0^{2\pi}\,P(r,\theta\vvv \phi)\cdot U(\theta)\, d\theta\tag{1}
+\]
+One often
+rewrites this  integral as:
+\[
+U(r,\phi)=\int\uuu 0^{2\pi}\,P(r,\theta)\cdot u(\theta+\phi)\, d\theta\tag{2}
+\]
+
+
+\noindent
+{\bf{0.6 An estimate of derivatives.}}
+Suppose that $u$ is Lipschitz continuous, i.e. there is a constant 
+$C$ such that
+\[
+|u(\theta\uuu 2)\vvv u(\theta\uuu 1)|\leq C\cdot |\theta\uuu 1\vvv \theta\uuu 2|
+ \]
+Then  (2) implies that
+$U$ restricts to a Lipschitz continuous function of the angular variable
+$\phi$
+with  norm
+$\leq C$ on every circle of radius $r<1$.
+Hence the angular derivatives satisfy
+\[
+|\frac{\partial U}{\partial\phi}(r,\phi)|\leq C\quad\colon\,\,
+0<r<1
+\] 
+To study radial derivatives 
+we use the equation
+\[
+\frac {\partial P(r,\theta)}{\partial r}
+=\frac{1}{2\pi}\cdot \frac{2\cos\theta+2r^2\cos\theta\vvv 4r}
+{(1+r^2\vvv 2r\cos\,\theta)^2}
+\]
+With a fixed $\phi\uuu *$ we consider the function
+\[ 
+r\mapsto \frac{\partial U}{\partial r}(r,\phi\uuu *)\tag{*}
+\]
+Now $\theta\mapsto u(\theta+\phi\uuu *)$ has the same Lipschitz norm
+and we may therefore take $\phi\uuu *=0$ and since
+the partial $r$\vvv derivative of $U$ is unchanged when we add a constant
+we can  replace $u(\theta)$
+by $u(\theta)\vvv u(0)$, i.e assume that $u(0)=0$.
+This    entails that
+\[
+|u(\theta)|\leq C\cdot |\theta|\quad\colon\quad \vvv \pi<\theta<\pi
+\]
+Now (*) is majorized  in absolute value by the integral
+\[
+\frac{C}{2\pi}\int\uuu{\vvv\pi}^\pi\, 
+\frac{\bigl|2\cos\theta+2r^2\cos\theta\vvv 4r\bigr|}
+{(1+r^2\vvv 2r\cos\,\theta)^2}\cdot |\theta|\cdot d\theta
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that the last integral is majorized by an absolute constant which is independent 
+of $0<r<1$ and conclude  
+the following:
+\medskip
+
+\noindent
+{\bf{0.6.1 Theorem.}}
+\emph{There exists an absolute constant $C\uuu *$ such that}
+\[
+\max\uuu{(r,\phi)\in D}\, 
+|\frac{\partial U}{\partial r}(r,\phi)|+|\frac{\partial U}{\partial\phi}(r,\phi)|
+\leq C\uuu *\cdot \frac{||u||\uuu{\text{Lip}}}{2\pi}
+\] 
+\emph{where the last term is the Lipschitz norm of $u$ over $T$.}
+\medskip
+
+\noindent
+{\bf{Remark.}} If we remove a small disc centered at the origin
+the left hand side can be replaced by
+the length of the gradient vector $\nabla U=(U\uuu x,U\uuu y)$.
+For example, we find an absolute constant $C^*$ such that
+\[
+\max\uuu{1/2\leq |z|< 1}\, ||\nabla(U)(z)||\leq C^*\cdot 
+||u||\uuu{\text{Lip}}
+\]
+\bigskip
+
+
+
+\bigskip
+
+
+\newpage
+
+
+\centerline{\bf 1. The Dirichlet Problem.}
+
+
+\bigskip
+
+\noindent
+{\bf Introduction.}
+Let $\Omega$ be a bounded open set
+in ${\bf{C}}$.
+No connectivity assumptions are imposed, i.e. neither
+$\Omega$ or $\partial\Omega$ have to be connected.
+To each  
+$\phi\in C^0(\partial\Omega)$
+we shall construct as harmonic 
+function $H_\phi$  in $\Omega$ using a
+procedure  introduced by
+J. Perron. Denote by
+$\mathcal P(\phi)$  the family of  subharmonic functions $u(z)$ in 
+$\Omega$ satisfying
+\[
+\limsup_{z\to w}\,u(z)\leq \phi(w)
+\quad\colon\, w\in\partial\Omega\tag{0.1}
+\]
+
+
+\noindent 
+In Theorem XX  
+we prove that the function defined by
+\[
+H_\phi(z)=\max_{u\in\mathcal P(\phi)}\, u(z)\quad\colon\, z\in\Omega\tag{*}
+\]
+
+
+\noindent
+is  harmonic in $\Omega$. A boundary point $a$ is called Dirichlet regular if
+\[
+\lim_{z\to a}\, H_\phi(z)=\phi(a)\quad\colon\,\phi\in C^0(\partial\Omega)\tag{**}
+\]
+
+
+\noindent
+If (**) holds for every boundary point 
+then Perron's solution extends to a continuous function
+on the closure $\bar\Omega$ and 
+solves the Dirichlet problem with the prescribed
+boundary
+function $\phi$.
+It turns out that (**) holds under a fairly mild 
+geometric condition. 
+
+\medskip
+
+\noindent
+{\bf 1.1 Theorem.}
+\emph{Let $a\in\partial \Omega$ be such that
+the connected component of $a$ in the closed complement
+${\bf{C}}\setminus \Omega$
+is not reduced to the singleton set $\{a\}$.
+Then (**) holds for every $\phi$.}
+\bigskip
+
+\noindent
+The idea  is to 
+consider
+Perron's solution when 
+$\phi(z)=|z-a|$. Let us denote
+it by  
+$H_a(z)$. 
+We remark that
+outside the origin in
+${\bf{C}}$ the Laplacian of the function
+$|z|= \sqrt{x^2+y^2}$
+is equal to $|z|^{-1}$ and hence a positive function.
+After a translation it follows that
+$\phi(z)= |z-a|$ is subharmionic in $\Omega$
+so Perron's construction entails that
+$H_a$ gives:
+\[ 
+|z-a|\leq H_a(z)\quad\colon\quad z\in\Omega\tag{1}
+\]
+
+
+
+\noindent
+The  crucial step in the proof of Theorem 1.1 is:
+\medskip
+
+
+\noindent
+{\bf 1.2 Boulignad's Lemma.} \emph{Let $a\in\partial\Omega$
+satisfy the condition in Theorem 1.1. Then}
+\[ 
+\lim_{z\to a}\, H_a(z)=0
+\]
+
+\noindent
+\emph{Proof.}
+The assumption on $a$ and
+Theorem XX from Chapter 4
+gives a harmonic   function
+$p^*(z)$ in $\Omega$
+which satisfies:
+\[
+\lim_{z\to a}\, p^*(z)=0\quad\text{and}\quad
+\, p^*(z)<0\quad\colon z\in\Omega\tag{1}
+\]
+Next, let $\epsilon>0$.
+Since $a\in\partial\Omega$ we  find
+$0<r\leq\epsilon$
+such that the circle $|z-a|=r$ has a non-empty intersection 
+$\Gamma$
+with
+$\Omega$.
+Put
+\[
+M=\max_{z\in\Omega}\,|z-a|\tag{2}
+\]
+We can choose a compact subset $\Gamma_*$ of $\Gamma$ such that
+\[
+\ell=\text{arc-length}\,\,(\Gamma\setminus\Gamma_*)\leq \frac{\epsilon}{M}
+\tag {3}
+\]
+
+\noindent
+In the disc $D=\{|z-a|<r\}$
+we find the harmonic function $V(z)$
+whose boundary values on $|z-a|=r$ are zero outside the open set
+$\Gamma\setminus\Gamma_*$
+while $V=M$ holds on 
+$\Gamma\setminus\Gamma_*$. 
+Next, since   $\Gamma_*$ is a compact subset of $\Omega$
+and $p_a^*<0$  in
+$\Omega$ there exists $\delta>0$ such that
+\[
+p^*(z)\leq -\delta\quad\colon\quad z\in\Gamma_*\tag{4}
+\]
+Set
+\[
+B(z)= V(z)-\frac{M}{\delta}\cdot p^*(z)\tag{5}
+\]
+
+
+
+\noindent
+This is a harmonic function in $\Omega\cap D$
+and 
+the construction of $V$ together with
+(4) give
+\[
+B(z)\geq M\quad\colon\quad z\in\Gamma\tag{6}
+\]
+
+
+
+
+
+\noindent
+Next, in  the the open set $U=\Omega\,\cap D$
+we have the subharmonic  function
+\[
+g=H_a-B\tag{7}
+\]
+
+
+
+
+\noindent
+Since  $|z-a|\leq\epsilon$  holds in the closed disc
+in $\bar D$
+we have
+\[ 
+\limsup_{z\to w}\, H_a(z)\leq\epsilon
+\quad\colon\, w\in \bar D\cap\partial\Omega\tag{8}
+\]
+
+\noindent
+From (2) it follows that
+$H_a(z)\leq M$ holds in $\Omega$
+which entails that
+\[ 
+\limsup_{z\to w}\, H_a(z)\leq M
+\quad\colon\, w\in \Gamma\tag{9}
+\]
+
+\noindent
+At this stage we use
+the set-theoretic inclusion
+\[
+\partial(D\cap\Omega)\subset\Gamma
+\cup\, (\bar D\cap\partial\Omega)
+\tag{10}
+\]
+Hence (6) together with
+(7-8) entail that 
+\[
+\limsup_{z\to w}\, H_a(z)-B(z)\leq \epsilon
+\quad\colon\, w\in\partial(\Omega\cap D)\tag{10}
+\]
+
+
+\noindent
+The maximum principle applied to the subharmonic function
+$H-B$ in
+$\Omega\cap D$ and (10) give
+\[
+\limsup_{z\to a}\, H_a(z)\leq \epsilon+
+\limsup_{z\to a}\, B(z)=\epsilon+ V(a)+
+\limsup_{z\to a}p^*(z)=
+\epsilon+ V(a)
+\tag{11}
+\]
+where (1) gives the last equality.
+Finally, 
+the mean-value formula for the harmonic function
+$V$ and (3) entail that
+\[
+V(a)=\ell\cdot M\leq\epsilon\tag{12}
+\]
+
+
+\noindent
+Hence the limes superior in the left hand side of
+(11) is $\leq 2\epsilon$ and since
+$\epsilon>0$ was
+arbitrary small we get 
+$\limsup_{z\to a}\, H_a(z)\leq 0$ which  finishes the proof of
+Boulignad's lemma.
+
+
+\bigskip
+
+
+
+
+
+\centerline{\emph{¤ 1.3 Proof of Theorem 1.1.}}
+\medskip
+
+\noindent
+Let $\phi\in C^0(\partial\Omega)$
+with the Perron solution $H_\phi(z)$.
+If $c$ is a constant it is clear that
+$H_{\phi-c}= H_\phi-c$. Replacing $\phi$ by
+$\phi(z)-\phi(a)$ we may therefore assume that
+$\phi(a)=0$ and it remains to show that
+\[
+\lim_{z\to a}\, H_\phi(z)=0\tag{1}
+\]
+First we consider the limes superior and show that
+\[ 
+\limsup_{z\to a}\, H_\phi(z)\leq 0\tag{2}
+\]
+To get (2) 
+we take some
+$\epsilon>0$ and the continuity of  $\phi$ gives 
+$\delta>0$ such that
+\[
+\phi(z)\leq\epsilon\quad\colon\quad z\in\partial\Omega\,\cap D_a(\delta)
+\]
+Put $M^*=\max_{z\in\partial\Omega}\,|\phi(z)|$ and define
+the harmonic function in
+$\Omega$ by
+\[
+g^*(z)=\epsilon+\frac{M^*}{\delta}\cdot H_a(z)
+\]
+Since $H_a(z)\geq |z-a|$
+we have:
+\[ 
+\liminf_{z\to b}\, g^*(z)\geq M^*\quad\colon\quad
+b\in\partial\Omega\setminus D_a(\delta)
+\]
+
+
+\noindent
+At the same time  $g^*(z)\geq\epsilon$ for every
+$z\in\Omega$ so $g^*\geq \phi$ on the whole boundary
+and the maximum principle for harmonic functions
+gives:
+\[
+u\leq g^*\quad \colon \, u\in\mathcal P(\phi)
+\]
+
+
+
+
+\noindent
+The construction of
+$H_\phi$ entails that
+$H_\phi\leq g^*$ holds in $\Omega$ which implies that
+\[
+\limsup_{z\to a}\, H_\phi(z)\leq 
+\limsup_{z\to a}\, g^*(z)=\epsilon
+\]
+where the last equality follows from Boulignad's Lemma.
+Since $\epsilon$ can be arbitrary small we get (2).
+There remains to show that
+\[
+\liminf_{z\to a}\, H_\phi(z)\geq 0\tag{3}
+\]
+
+
+
+\noindent
+To prove (3)  we put
+\[ 
+g_*(z)=-\epsilon-\frac{M^*}{\delta}\cdot H_a(z)
+\]
+It is clear that
+\[
+\limsup_{z\to\xi}\, g_*(z)\leq\phi(\xi)
+\quad\text{for all boundary points}\,\,\xi\in\partial\Omega
+\]
+Hence $g_*\in\mathcal P(\phi)$
+which gives
+$g_*\leq H_\phi$. So now we have
+\[
+\liminf_{z\to a}\, H_\phi(z)\geq
+\liminf_{z\to a}\, g_*(z)=-\epsilon
+\]
+Since $\epsilon$ can be arbitrary small we get (3) and Theorem
+1.1 is proved.
+\bigskip
+
+\centerline
+{\bf{1.5 Wiener's solution.}}
+
+\medskip
+
+\noindent
+Let $\Omega$ be a bounded open set which in general  consists
+of infinitely many connected components.
+There exists a family
+ $\mathcal F$  of 
+nested sequences of
+strictly increasing relatively compact subsets $\{\Omega_n\}$
+such that $\cup\,\Omega_n=\Omega$ and
+Dirichlet's problem is solvable for each $\Omega_ n$. The nested property means that
+$\bar\Omega_{n-1}$ appears as a compact subset of
+$\Omega_n$ for every $n$.
+For example, if $N\geq 1$ we consider the family
+$\mathcal D\uuu N$
+of dyadic cubes whose sides have length $2^{\vvv N}$.
+We find the finite family $\mathcal D\uuu N(\Omega)$
+of cubes in this family whose closure stay in $\Omega$.
+Their closed union is relatively compact in
+$\Omega$ and it is clear that Dirichlet's problem is solvable for
+the open set given by the union of  interior points in this family.
+With increasing $N$ this is  an example of a nested sequence 
+$\mathcal F$.
+
+\medskip
+
+\noindent
+{\bf{1.6 Theorem.}}
+\emph{For each  $z\in\Omega$ and every nested sequence $\{\Omega\uuu n\}$,
+the harmonic measures 
+$\{\mathfrak {m}\uuu z^{ \Omega\uuu n}\}$
+converge weakly to a unique probability measure $\mathfrak {m}^*\uuu z$
+supported by  $\partial \Omega$, and for each 
+$f\in C^0(\partial\Omega)$  the  function}
+\[
+W\uuu f(z)=\int\, f(\zeta)\cdot d\mathfrak {m}^*\uuu z(\zeta)
+\] 
+\emph{is harmonic in $\Omega$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Let 
+$\phi$ be a continuous function $\phi$
+on the closure $\overline{\Omega}$ which is subharmonic in
+$\Omega$.
+For every $n$ its restriction to $\partial\Omega\uuu n$
+has a harmonic extension $\Phi\uuu n$ to $\Omega\uuu n$.
+Next, let $z$ be a point in $\Omega$ and start 
+with some $n\uuu *$ so that
+$z\in \Omega\uuu{n\uuu *}$.
+To each  $n\geq n\uuu *$ we get  the harmonic measure
+$\mathfrak{m}\uuu z^{\Omega\uuu n}$ and obtain
+\[
+\Phi\uuu n(z)=
+\int\uuu{\partial\Omega\uuu n}
+\,\phi\cdot d\mathfrak{m}\uuu z^{\Omega\uuu n}\tag{1}
+\]
+Since $\phi$ is subharmonic  and $\phi=\Phi\uuu{n+1}$ holds on
+$\partial \Omega\uuu{n+1}$, it follows that
+$\phi\leq \Phi \uuu{n+1}$ in $\Omega\uuu{n+1}$ This holds
+in particular  on $\partial\Omega\uuu n$ which entails that
+
+
+\[
+\Phi\uuu n(z)= \int\uuu{\partial \Omega\uuu n}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}\leq
+\int\uuu{\partial \Omega\uuu n}
+\,\Phi\uuu {n+1}\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}=\Phi\uuu{n+1}(z)
+\tag{2}
+\]
+where the last equality holds since the restriction of $\Phi\uuu{n+1}$ to
+$\Omega\uuu n$ is harmonic.
+Hence (1\vvv 2) entail that
+\[
+\int\uuu{\partial \Omega\uuu n}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}\leq
+\int\uuu{\partial \Omega\uuu {n+1}}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu {n+1}}\quad\text{hold for every}
+\quad  n\geq n\uuu *
+\] 
+So the integrals above give
+a non-decreasing sequence of real numbers which in addition
+is bounded above because the maximum norm of
+$\phi$ on $\bar\Omega$ is finite.
+Hence there exists the limit
+\[
+ L(\phi)=\lim\uuu{n\to\infty}\, 
+\int\uuu{\partial \Omega\uuu n}
+\,\phi\cdot \mathfrak{m}\uuu z^{\Omega\uuu n}\tag{3}
+\]
+In ¤ XX:B we  show
+that every
+$C^2$-function 
+can be expressed as the difference of two
+subharmonic functions and hence  the limit in (3) exists
+for every $f\in C^2(\partial\Omega)$. Since $C^2(\partial \Omega)$ is dense
+in
+$C^0(\partial\Omega)$,
+Riesz representation Theorem implies  that 
+weak-star limits from subsequences of
+$\{\mathfrak{m}\uuu z^{\Omega\uuu n}\}$ are
+equal and hence the whole sequence has a
+weak-star  limit $\mathfrak{m}\uuu z^*$.
+Moreover, the  
+boundaries
+$\partial\Omega\uuu n$ approach $\partial\Omega$ which entails that 
+$\mathfrak{m}^*_z$ is supported by $\partial\Omega$.
+At this stage we leave to the reader to show
+that
+if $\{U\uuu n\}$ is another nested sequence then the weak star limit of
+of $\{\mathfrak{m}\uuu z^{U\uuu n}\}$
+is equal to 
+the limit measure $\mathfrak{m}\uuu z^*$ constructed via
+$\{\Omega\uuu n\}$. Finally, the constructions above show that
+when $z$ varies in
+$\Omega$ then 
+\[ 
+z\mapsto \int\uuu{\partial\Omega}
+\, f\cdot \mathfrak {m}\uuu z^*
+\] 
+is harmonic in $\Omega$ for every continuous boundary function $f$.
+
+\bigskip
+
+\noindent
+{\bf{1.7 Regular boundary points.}}
+Consider a point $a\in\partial\Omega$.
+It is called  Wiener-regular   if
+\[
+\lim\uuu{z\to a}\, W\uuu f(z)=f(a)\tag{1.7.1}
+\]
+hold for every $f\in C^0(\partial\Omega)$.
+We shall find a potential-theoretic condition
+in order that (1.7.1) holds.
+Without loss of generality we can take $a$ as the origin
+and for each  $n\geq 1$
+we consider the closed annulus
+\[
+A\uuu n=\{2^{\vvv n}\leq |z|\leq 2^{\vvv n+1}\}
+\]
+For each fixed $n$
+the compact set $\partial\Omega\cap A_n$ has a
+capacity 
+$e^{\vvv \gamma\uuu n}$ which by
+¤ XX means that there exists
+a probability measure $\mu\uuu n$ supported by
+$\partial\Omega\cap A\uuu n$ such that the logarithmic potential
+\[ 
+U\uuu n(z)=\frac{1}{\gamma\uuu n}\int\,\log\,\frac{1}{|z\vvv\zeta|}\cdot d\mu\uuu n(\zeta)
+=1\quad\colon
+z\in \partial\Omega\cap A\uuu n
+\]
+
+\medskip
+
+\noindent
+{\bf{1.8 Theorem.}}
+\emph{The boundary point $a$ is regular if and only if}
+\[
+\sum\uuu{n=1}^\infty\, \frac{n}{\gamma\uuu n}=+\infty\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Suppose first that
+(*) is convergent and then we must
+prove that (1.7.1) does not hold.
+To achieve this we take
+some
+$0<\epsilon<1/3$ which is kept fixed from now on where the assumed
+convergence in (*) gives
+an integer $N\uuu *$ such that
+\[
+\sum\uuu{n=N\uuu *}^\infty\,
+ \frac{n}{\gamma\uuu n}
+\leq\epsilon\tag{i}
+\]
+
+\medskip
+
+\noindent
+Choose $F\in C^0(\partial\Omega)$
+with $F(0)=1 $ and
+$F=0$ on $\{|z|\geq 2^{\vvv N\uuu *+1}\cap \partial\Omega\}$
+while the  whole range $F(\bar\partial\Omega)$
+is contained in $[0,1]$. 
+Now we shall argue by contradiction and suppose that
+(1.7.1) holds for $F$. This   gives the existence of a small 
+$s>0$ such that 
+\[
+W\uuu F(z)\geq 1\vvv \epsilon\quad\text{holds Êon}\quad
+D(s)\cap \Omega\tag{ii}
+\]
+where $D(s)$ is the 
+disc of radius $s$ centered at the origin.
+Next, as  $r\to 0$ the discs $D(r)$
+shrink to the singleton set $\{0\}$. So by ¤ XX
+the capacities
+$e^{\vvv \gamma\uuu r}$ of $D(r)\cap \Omega$.
+tend to zero with $r$.
+Let $\nu\uuu r$ be the
+equilibrium distribution
+on $D(r)\cap \partial\Omega$ and put
+\[
+V\uuu r(z)= \frac{1}{\gamma \uuu r}\cdot \int \log\frac{1}{|z\vvv \zeta|}
+\cdot d\nu\uuu r(\zeta)\tag{iii}
+\]
+So here $V(z)=1$ on $D(r)\cap \partial \Omega$.
+Since $\gamma_r\to +\infty$ as $r\to 0$
+we can choose $r<s$ so small that
+\[
+\max\uuu{|z|\geq s}\, V\uuu r(z)\leq\epsilon\tag{iv}
+\]
+Next, let  $M>N\uuu * $ be so large that $2^{\vvv M}\leq r$ and put
+\[ 
+U^*\uuu M(z)=\sum\uuu{n=N\uuu *}^{n=M}\,
+\frac{1}{\gamma\uuu n}\cdot U\uuu n(z)
+\]
+With this choice it is clear that 
+\[
+V(z)+U^*\uuu M(z)\geq 1\quad\text{holds on}\quad 
+D(2^{\vvv N\uuu *+1})\cap \partial \Omega\tag{v}
+\]
+Since $0\leq F\leq 1$ and $F=0$ on
+$\partial\Omega\setminus D(2^{\vvv N\uuu *+1})$
+we have $F\leq V+U^*\uuu M$ on the whole boundary
+of $\Omega$. The minimum principle 
+for super\vvv harmonic functions
+gives the inequality
+\[
+V+U^*\uuu M\geq W\uuu F\quad\text{in}\quad \Omega\tag{vi}
+\]
+Now (i) and (iv) entail that
+\[ 
+\min\uuu{z\in \Omega\cap D(s)}\, U^*\uuu M(z)\geq 1\vvv 2\epsilon \tag{vii}
+\]
+At the same time we have $2^{\vvv M}\leq s$ so the construction of
+$U^*\uuu M$ entails that
+$U^*\uuu M=1$ holds on
+$|z|\cap \partial\Omega$. Together with (vii) we obtain
+\[
+\min\uuu {|z|=s}\, U^*\uuu M(z)\geq 1\vvv 2\epsilon\tag{viii}
+\]
+
+
+\noindent
+Now $U^*\uuu M$ restricts to  a super\vvv harmonic
+function on $D(s)$ 
+so the minimum principle for super\vvv harmonic functions gives
+\[
+1\vvv 2\epsilon\leq U^*\uuu M(0)
+=\sum\uuu{n=N\uuu *}^{n=M}\, 
+\frac{1}{\gamma\uuu n}\int\, \cdot 
+\log\,\frac{1}{|\zeta|}\cdot d\mu\uuu n(\zeta)\tag{ix}
+\]
+Finally, $|\zeta|\geq 2^{\vvv n}$ holds on the support of $\mu\uuu n$
+and hence each integral is $\leq n\cdot \log 2$. So (ix) gives
+the inequality
+\[
+1\vvv 2\epsilon\leq \sum\uuu{n=N\uuu *}^{n=M}\, 
+\frac{n\cdot \log 2}{\gamma\uuu n}<\log 2\cdot \epsilon
+\]
+This cannot hold
+since we have chosen
+$\epsilon<1/3$. It means that  (ii) cannot hold and hence 
+$a$ is not a regular boundary point.
+
+\medskip
+
+
+\centerline {\emph{Proof of sufficiency.}}
+\bigskip
+
+\noindent
+Above we  proved that
+if $a$ is regular then the series (*) in Theorem 1.8 must diverge.
+There remains to show that  if (*) is divergent then $a$ is regular.
+The proof  of this converse is left as an exercise to the reader.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline {\bf  2. Harmonic conjugates}
+\bigskip
+
+\noindent
+Let $H(x,y)$ be a harmonic function of class $C^2$ which means
+that 
+\[ 
+\Delta(H)=H_{xx}+H_{yy}=0
+\]
+Put
+\[
+u=H_x\quad v=-H_y
+\]
+Recall from Calculus that
+the mixed second order derivatives $H_{xy}$ and $H_{yx}$ 
+are equal. Hence
+$u_y=-v_x$. Next, we have
+\[
+u_x-v_y=H_{xx}+H_{yy}=0
+\]
+Hence $(u,v)$ is a CR-pair and we can conclude:
+\medskip
+
+\noindent {\bf 2.1 Proposition.} \emph{Let $H$ be harmonic
+in a domain $\Omega$. Then} 
+\[ 
+f(z)=f(x+iy)=H_x-iH_y\in\mathcal O(\Omega)
+\]
+
+
+\noindent
+{\bf 2.2 The harmonic conjugate.} Suppose that the analytic function $f(z)$
+above  has a 
+primitive, i.e. there exists an analytic function $F(z)=U+iV$
+whose complex derivative is $f$. We get
+\[
+F'(z)= H_x-iH_y=U_x+iV_x=-iU_y+V_y\tag{1}
+\] 
+Identifying real and imaginary parts in (1)
+give
+\[ 
+H_x=V_y\quad \text{and}\quad H_y=-V_x\tag{2}
+\]
+We refer to $V$ as the harmonic
+conjugate of $H$ and notice that
+it  is determined up to a constant. 
+\emph{Conversely}, if   $H$ has a harmonic conjugate $V$
+we get  analytic function $F=H+iV$ where
+\[
+F'=H_x+iV_x=H_x-iH_y=f(z)
+\]
+Hence we have proved
+\medskip
+
+\noindent 
+{\bf 2.3 Theorem} \emph{A harmonic function
+ $H$ has a harmonic conjugate if and only if
+the analytic function $H_x-iH_y$ is the complex derivative of an analytic function.}
+\medskip
+
+\noindent 
+{\bf 2.4 Existence of harmonic conjugates.} Consider a domain 
+$\Omega\in\mathcal D(C^1)$.
+Let $H$ be harmonic in $\Omega$ which
+extends to a $C^1$-function  up to the boundary.
+Put $f(z)=H_x-iH_y$. To find an (eventual)   primitive function of $f$
+we fix a point $z_0\in\Omega$ and when  $z\in\Omega$ we 
+choose a path $\gamma$ from $z_0$ to $z$ and take the complex line integral of $f$ along
+$\gamma$. Put
+\[
+F_\gamma(z)=\int_\gamma\, f \,d\zeta\tag{i}
+ \]
+This gives
+an analytic
+function $F(z)$ in $\Omega$
+provided
+that  the integral above
+does 
+not depend upon the particular path $\gamma$
+which joins $z_0$ and $z$.
+This independence holds if and only if the integral of $f$
+is zero along every \emph{closed} curve inside $\Omega$.
+Now $\partial\Omega$ consists of $k$ disjoint closed curves $\Gamma_1,
+\ldots,\Gamma_k$ for some $k\geq 1$.
+By the \emph{topological fact} from  XX 
+the $f$-intergral is zero along each closed curve in $\Omega$
+if and only if
+\[ 
+\int_{\Gamma_i}\,f(z)\, dz=0\quad\colon\quad 1\leq i \leq k\tag{ii}
+\]
+So (ii) gives a necessary and sufficient condition in order
+that $f$ has a primitive analytic function.
+Let us  express  (ii) via 
+derivatives of  the $H$-function.
+We have
+\[ 
+f dz=(H_x-iH_y) dz= H_xdx+H_ydy+i(H_x dy-H_y dx)\tag{iii}
+\]
+Since $\Gamma_i$ is closed 
+the 
+observation from   ¤ xx in Chapter II gives:
+\[ 
+\int_{\Gamma_i}\,H_x \,dx+H_y \,dy =0\tag{iv}
+\] 
+There remains only  the line integrals
+\[ 
+\int_{\Gamma_i}\,H_x \,dy-H_y \,dx=
+\int_{\Gamma_i}\,\bigl[H_x\cdot  {\bf{n}}_x+H_y \cdot{\bf{n}}_y\bigr]\, ds=
+\int_{\Gamma_i}\, H_{{\bf{n}}} \,ds\tag{v}
+\]
+Hence the results above give:
+\medskip
+
+\noindent {\bf 2.5 Proposition.}
+\emph{A harmonic function $H$ which extends to a $C^1$-function on $\bar\Omega$ has a
+harmonic conjugate if and only if}
+\[
+\int_{\Gamma_i}\, H_{{\bf{n}}}\,  ds\quad\colon\, \quad 1\leq i\leq k
+\]
+\emph{where $H_{{\bf{n}}}$ is the  normal derivative and
+$ds$ the arc-length measure.}
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+By Theorem XX from Chapter II  the line integral of $H\uuu {{\bf{n}}}$
+taken along the whole boundary is always zero, i.e.
+for every harmonic function $H$ one has
+\[
+\sum\uuu{i=1}^{i=k}\, \int_{\Gamma_i}\, H_{{\bf{n}}}\,  ds
+\]
+So in order to check the conditions in Proposition 2.5 it suffices to regard
+$p\vvv 1$ many boundary curves.
+
+
+\medskip
+
+\noindent
+{\bf 2.6 The case $k=1$.} If $\Omega$ only has one boundary curve 
+$\Gamma_1$ the remark above
+shows that
+every harmonic function has a conjugate.
+Recall  that $\Omega$ is a \emph{Jordan domain}
+when its boundary consists of a single closed curve.
+Thus, in every Jordan domains there exist harmonic conjugates.
+If $\Omega$ is not a Jordan domain
+we cannot always find harmonic conjugates.
+\medskip
+
+\noindent 
+{\bf 2.7 Example.}
+Consider an annulus $\Omega=\{r<|z|<R\}$. Here
+we have the harmonic function $H(z)=\log\,|z|$.
+On the boundary curve $|z|=R$ we notice that $H_n=\frac{1}{R}$
+and since $ds=Rd\theta$ is the arc-length measure we get
+\[
+\int_{\{|z|=R\}}\, H_{{\bf{n}}}\, ds=\int_0^{2\pi} d\theta=2\pi
+\]
+So here there does not exist a harmonic conjugate which
+reflects the fact that
+$\log z$ is multi\vvv valued and hence prevents the analytic function
+$\frac{1}{z}$ to have a primitive in the annulus.
+
+
+\medskip 
+
+\noindent
+{\bf {2.8 A special construction.}}
+Let $\Omega\in\mathcal D(C^1)$
+where $\partial\Omega$
+consists of $p$ many pairwise disjoint and closed Jordan
+curves $\Gamma_1,\dots,\Gamma_p$ and 
+$\Gamma_p$ is the outer curve. 
+We assume that $p\geq 2$ and consider a harmonic function
+$H(z)$ which extends to a $C^1$\vvv function on $\bar\Omega$.
+Put
+\[ 
+a_j=
+\int_{\Gamma_j}\,H_{{\bf{n}}}\, ds
+\quad\,\, 1\leq j\leq p-1\,.
+\]
+Suppose
+there exist integers $m_1,\ldots,m_{p-1}$ such that
+\[
+a_j=2\pi\cdot m_j\quad\,\, 1\leq j\leq p\tag{*}
+\]
+For each $1\leq j\leq p-1$
+we choose a point $z_j$ in the interior of the Jordan domain
+bordered by $\Gamma_j$ and set
+\[
+H^*(z)=H(z)-\sum_{j=1}^{j=p-1}\, m_j\cdot\text{log}\, |z-z_j|\tag{1}
+\] 
+Then we see that
+\[
+\int_{\Gamma_j}\,H^*_{{\bf{n}}}\, ds=0
+\quad\,\, 1\leq j\leq p-1\,.
+\]
+Proposition 2.5 shows that
+$H^*$ has a harmonic conjugate $V^*$ and there
+exists the analytic function
+\[ 
+f(z)=H^*(z)+iV^*(z)\tag{2}
+\]
+It follows that
+
+\[
+\bigl|e^{f(z)}\bigr|=e^{H^*(z)}= e^{H(z)}\cdot
+\bigl| (z-z_1)^{-m_1}\cdots (z-z_{p-1})^{-m_{p-1}}\bigr|
+\]
+
+\medskip
+
+
+\noindent
+Hence, with $g(z)=(z-z_1)^{m\uuu 1}\cdots [z-z_{p-1})^{m_{p-1}}\cdot e^{f(z)}$ 
+we have :
+\medskip
+
+\noindent
+{\bf 2.9 Theorem.}
+\emph{Let $H(z)$ be a harmonic function in
+$\Omega$ such that the periods $a_1,\ldots,a_{p-1}$ are integer multiples of
+$2\pi$.
+Then there exists a zero\vvv free  analytic function $g(z)\in\mathcal O(\Omega)$ 
+such that}
+\[ 
+|g(z)|= e^{H(z)}
+\]
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+By the construction above the $g$\vvv function extends to a 
+$C^1$\vvv function on the closure
+$\bar\Omega$ and 
+the reader should verify that
+\[
+\int_{\Gamma_j}\,H_{{\bf{n}}}\, ds
+=\mathfrak{Im}\bigl[\,
+\int_{\Gamma_j}\,
+\frac{g'(z)dz}{g(z)-w}\,\bigr]
+\]
+hold for every boundary curve.
+Show also  the converse to
+Theorem 2.9. Thus, assume that there exists an
+analytic function $g(z)$ with no zeros in $\Omega$ such that
+$|g(z)|= e^{H(z)}$ holds and deduce that   the period numbers $\{a\uuu j\}$
+are integers times $2\pi$.
+
+\medskip
+
+
+
+
+
+
+
+\noindent
+{\bf 2.10 The case when
+$H$ is constant on boundary curves.}
+Let $H$ be as in Theorem 2.8
+and suppose also that
+$H(z)= c_j$ is a constant on every  boundary curve of $\Omega$.
+Then  $|g(z)|= e^{c_j}$
+is constant on each $\Gamma_j$.
+Let $w$ be a complex number whose absolute value is
+$\neq e^{c_j}$ for every $j$.
+Let $\mathcal N(g:w)$ be the
+number of zeros of $g(z)$ in $\Omega$
+counted with multiplicity.
+The  formula from
+Theorem XXX in Chapter 4 gives:
+\[
+\mathcal N(g:w)=
+\mathfrak{Im}\,\bigl[\frac{1}{2\pi}\sum_{\nu=1}^p\,
+\int_{\Gamma_\nu}\,
+\frac{g'(z)\,dz}{g(z)-w}\bigr]
+\]
+
+
+\noindent
+As explained in XX each single integral
+\[
+\mathfrak{Im}\bigl[\frac{1}{2\pi}\cdot \int_{\Gamma_\nu}\,
+\frac{g'(z)\,dz}{g(z)-w}\bigr]\tag{ii}
+\]
+is equal to the winding number of the
+image curve
+$(g(z)-w)\circ\Gamma_\nu$.
+This individual winding number is zero if
+$|w|> e^{c_j}$ and if
+$|w|<e^{c_j}$ the stability of the winding number under
+a homotopic deformation identifies (ii) with
+the value when $w=0$.
+Next, Theorem 2.9 gives
+the equality
+\[ 
+g'(z)= g(z)\cdot (H_x-iH_y)
+\]
+So with $w=0$ it follows that
+(ii) becomes
+\[
+\mathfrak{Im}\bigl[\frac{1}{2\pi}\cdot \int_{\Gamma_\nu}\,
+(H_x-iH_y)\, dz \bigr]=
+\frac{1}{2\pi}\cdot \int_{\Gamma_\nu}\,
+H_x\,dy+
+H_y\, dx=
+\frac{1}{2\pi}\cdot \int_{\Gamma_\nu}\,
+H_{\bf{n}}\,ds
+\]
+Hence we have proved the following:
+
+\medskip
+
+\noindent
+{\bf 2.11 Theorem}
+\emph{Let  $w$ be a complex number such that
+$|w|\neq e^{c_j}$ for every
+$j$ and denote by $w(*)$ the set of 
+those $j$:s  for which
+$|w|<e^{c_j}$. Then one has the equality}
+
+\[
+\mathcal N(g:w)=\frac{1}{2\pi}\cdot
+\sum_{j\in w(*)} \, a_j
+\]
+
+
+\medskip
+
+
+\noindent
+{\bf 2.12 Example.}
+Suppose that $a_p=2\pi\cdot m$
+for some positive integer $m$ while $a_\nu=-2\pi\cdot $
+for every $1\leq\nu\leq p-1$.
+Suppose that $w$ belongs to the open image set $g(\Omega)$
+which means that the sum in Theorem  2.11 is a positive integer.
+Since $a_j\leq 0$
+when $j\leq p-1$
+it follows that the term from $a_1$ must be $>0$ and hence
+$|w|<e^{c\vvv 1}$.
+Thus, $g(\Omega)$ is contained in the
+disc of radius $e^{c_1}$.
+Moreover, there cannot exist
+$2\leq j\leq p-1$ with
+$e^{c_j}>e^{c-1}$
+for then we can choose
+$|w|>e^{c_1}$ while $|w|<e^{c_j}$
+and then the right hand side in Theorem  2.11 would be a negative
+integer.
+
+\newpage
+
+\centerline {\bf 3. Harmonic functions in a disc.} 
+\bigskip
+
+\noindent
+Above we studied general  domains
+$\Omega\in\mathcal D(C^1)$. 
+Here we specialize to the case when
+$\Omega=D$ is the unit disc
+centered at the origin.
+Already in Chapter 1 we  encountered
+the Poisson kernel and described   how  to solve
+the Dirichlet problem. Let us  resume this 
+and give  alternative proofs.
+If $f$ is analytic in a neighborhood of $\bar D$ we have:
+\[
+f(z)=\frac{1}{2\pi i}\int_{|\zeta|=1|}\, \frac{f(\zeta)\,d\zeta}{\zeta-z}=
+\frac{1}{2\pi }\int_0^{2\pi}\, 
+\frac{f(e^{i\theta}) \, d\theta}
+{1-ze^{-i\theta}}
+\]
+Since   $z^nf(z)$ is analytic
+for each
+non-negative integer $n$ we have 
+\[ 
+\int_{|\zeta|=1}\,\zeta^n f(\zeta)\,d\zeta=
+i\cdot \int_0^{2\pi}\, e^{i(n+1)\theta}\,f(e^{i\theta})\, d\theta=0\tag{i}
+\]
+Consider the geometric series
+\[
+\frac{\bar ze^{i\theta}}{1-\bar z e^{i\theta}}=
+\sum_{n=0}^\infty \bar z^{n+1}e^{i(n+1)\theta}
+\]
+Since the series converges absolutely when $|z|<1$, the vanishing (i) gives
+\[
+\int_0^{2\pi}\, 
+\frac{\bar ze^{i\theta}\cdot f(e^{i\theta})\cdot d\theta}{1-\bar z e^{i\theta}}=0\tag{*}
+\]
+\medskip
+
+\noindent 
+{\bf 3.1 The Poisson kernel}.
+Let us add the zero term (*)  to
+the Cauchy integral and put
+\[
+P(z,\theta)=\frac{1}{2\pi}\cdot 
+\frac{1}{1-ze^{-i\theta}}+
+\frac{\bar ze^{i\theta}d\theta}{1-\bar z e^{i\theta}}=
+\frac{1-|z|^2}{|1- z e^{-i\theta}|^2}
+\]
+\medskip
+
+\noindent
+where the last equality follows since
+$|1- z e^{-i\theta}|^2=(1- z e^{-i\theta})(1- \bar z e^{i\theta})$.
+We refer to $P(z,\theta)$ as the \emph{Poisson kernel}. 
+The results above give
+\bigskip
+
+
+\noindent 
+{\bf 3.2 Theorem} \emph{For each analytic function $f$ in $D$ which extends
+continuously to $\bar D$ one has}
+\[
+f(z)=
+\int_0^{2\pi}\, P(z,\theta)f(e^{i\theta})\,d\theta\quad\colon\quad
+z\in D
+\]
+\medskip
+
+\noindent
+Since the Poisson kernel is \emph{real-valued} we can decompose $f=u+iv$ into
+its real and imaginary parts and obtain
+\[
+u(z)=\int_0^{2\pi}\, P(z,\theta)u(e^{i\theta})\,d\theta\quad\colon\quad
+v(z)=\int_0^{2\pi}\, P(z,\theta)v(e^{i\theta})\,d\theta
+\]
+\medskip
+
+\noindent
+{\bf 3.3 Solution to Dirichlet's Problem}
+Keeping $\theta$ fixed we have 
+a function in $D$ defined by
+$z\mapsto P(z,\theta)$.
+From the construction we have
+\[ 
+2\pi\cdot P(z,\theta)=
+\frac{1}{1-ze^{-i\theta}}+
+\frac{\bar ze^{i\theta}d\theta}{1-\bar z e^{i\theta}}
+\]
+The first term is an analytic function of $z$ in $D$ and since both
+the real and imaginary parts of an analytic function are harmonic, this complex 
+valued function satisfies the Laplace equation. The second term  is
+an \emph{anti-analytic function}, i.e. analytic with respect to the conjugate
+complex variable. These functions also satisfy the Laplace
+equation and hence the function
+$z\to P(z,\theta)$ is harmonic in $D$.
+Now we 
+solve  the Dirichlet problem in $D$.
+
+\newpage
+
+\noindent {\bf 3.4 Theorem} \emph{Let $h\in C^0(T)$. Put}
+\[ 
+H(z)=\int_0^{2\pi} P(z,\theta)h(e^{i\theta})\, d\theta
+\]
+\emph{Then $H$ solves the Dirichlet problem, i.e.
+it extends to  a continuous function on
+$T$ where it is equal to $h$.}
+\medskip
+
+\noindent
+{\bf Proof.}
+We use that $h$ is uniformly continuous and define its modulus of continuity:
+\[ 
+\omega(\delta)=\max\,|h(\theta_1)-h(\theta_2)|\quad
+\colon\quad |\theta_1-\theta_2|\leq
+\delta 
+\]
+For each $0\leq\alpha\leq 2\pi$
+we  take a difference and obtain
+
+\[
+2\pi\cdot [H(re^{i\alpha})-h(e^{i\alpha})]= 
+\int_0^{2\pi}\,\frac{(1-r^2)[h(e^{i(\theta+\alpha)}- h(e^{i\alpha})]\cdot d\theta}
+{1+r^2-2r\text{cos}\,\theta}
+\]
+By the triangle inequality and the definition of the $\omega$-function,
+the absolute value of the left hand side
+is majorized by
+\[
+\int_0^{2\pi}\,
+\frac{(1-r^2)\cdot \omega(\theta)}
+{1+r^2-2r\text{cos}\,\theta}\, d\theta
+\]
+With $\delta>0$ given we split the $\theta$-integral in two parts, where we integrate over
+$-\delta<\theta<\delta$ and in the second part $|\theta|\geq\delta$.
+Since the $\omega$-function is non-decreasing, i.e.
+$\omega(\theta)\leq \omega(\delta)$ hold when $|\theta|\leq\delta$ we then majorize the integral above by
+\[ 
+\omega(\delta)+
+M\cdot \int_{|\theta|\geq \delta}\,
+\frac{(1-r^2)\,d\theta}
+{1+r^2-2r\text{cos}\,\theta}
+\]
+where $M$ is the maximum norm of the $\omega$-function.
+With $r=1-s$ and $0<s\leq 1$ the last integral above is majorized by
+\[
+2Ms\cdot 
+\int_{|\theta|\geq \delta}\,\frac{d\theta}{(2-s)(1-\text{cos}\,\theta)}
+\leq
+2Ms\cdot 
+\int_{|\theta|\geq \delta}\,\frac{d\theta}{1-\text{cos}\,\theta}
+\]
+where the positive contribution of $s^2$ in the denominator is
+removed since this only strenghtens the inequality.
+Next, since 
+$(1-\text{cos}\,\theta\geq \theta^2/2$ the lat integral is majorised
+by
+\[
+\int_{|\theta|\geq \delta}\,\frac{2d\theta}{\theta^2}=4\frac{\pi\vvv\delta}{\delta}
+\leq \frac{4\pi }{\delta}
+\]
+Hence
+(*) is majorized by
+\[
+\omega(\delta)+\frac{8\pi M(1\vvv r)}{\delta}
+\]
+The required limit as $r\to 1$ follows since the $\omega$-function tends to zero, 
+i.e. given $\epsilon$ we choose $\delta$ so that $\omega(\delta)<\epsilon$
+and after we choose $1\vvv r<\frac{1}{8\pi M}\delta\epsilon$ which majorizes
+(*) with $2\epsilon$.
+\bigskip
+
+\noindent 
+{\bf 3.5 Remark} When the boundary function $h$ has
+extra continuity, say that it is of class $C^1$ one can improve the
+rate of convergence.
+But we shall not  to discuss detailed
+estimates concerned with  the rate of convergence of 
+\medskip
+\[ 
+r\mapsto \max_\theta\, |\,H(re^{i\theta})-h(e^{i\theta})\,|
+\] 
+as $r\to 1$.
+One may also consider boundary functions 
+for any $L^1$\vvv function
+$h(\theta)$ on the
+unit circle we can apply the Poisson kernel and obtain a harmonic
+function $H(z)$ in the unit disc defined by
+\[ 
+H(z)=\int_0^{2\pi}\,P(z,\theta)\cdot  h(\theta)d\theta
+\]
+
+\noindent
+The question arises if the $H$-function has \emph{radial limit values}, i.e. if
+there exist limits of the form
+\[ 
+\lim_{r\to 1}
+H(re^{i\theta})=h(\theta)\tag{*}
+\]
+One expects that the radial limit exists for all $\theta$ outside 
+a null set, i.e.  convergence holds almost 
+everywhere in the sense of Lebesgue. This is indeed true.
+More precisely (*) holds at every Lebesgue point of the $L^1$\vvv function $h$.
+We refer to ¤ 3.18  for  further details about  
+boundary values of $H$ when we start from a Riesz measure on
+$T$.
+
+
+\bigskip
+
+
+
+\centerline {\bf 3.6 Herglotz formula.}
+\medskip
+
+\noindent
+Given a real-valued continuos  function $u$ on the unit circle we define
+a function $U(z)$ in  $D$ by
+\[
+U(z)=\frac{1}{2\pi}\int_0^{2\pi}\frac{e^{i\theta}+z}
+{e^{i\theta}-z}\cdot u(e^{i\theta})\cdot d\theta\tag{*}
+\]
+It is clear that $U(z)$ is an analytic function in $D$ since 
+the
+geometric series of  the denominator converges when $|z|<1$.
+Next, multiply with $e^{-i\theta}-\bar z$ which is the complex conjugate of the denominator and notice that:
+
+\[ 
+(e^{-i\theta}-\bar z)(e^{i\theta}-z)=
+1-|z|^2-2i\cdot \mathfrak{Im}(ze^{-i\theta})
+\]
+It follows that
+\[
+U(z)=\frac{1}{2\pi}\int_0^{2\pi}\,[\frac{1-|z|^2}{|e^{i\theta}-z|^2}
+\cdot u(e^{i\theta})d\theta+
+\frac{i}{2\pi}\int_0^{2\pi}\,[\frac{ \mathfrak{Im}(ze^{-i\theta})}{|e^{i\theta}-z|^2}
+\cdot u(e^{i\theta})d\theta\tag{**}
+\]
+Hence the real part of $U$ is the Poisson integral of $u$, i.e. $\mathfrak{Re}(U)$
+is the harmonic extension of $u$.
+The second integral which yields the 
+harmonic conjugate to
+$\mathfrak{Re}(U)$.
+Starting with an analytic function $f(z)=u+iv$ and choosing $h=u|T$ as a boundary function, the construction gives
+\medskip
+
+\noindent {\bf 3.7 Theorem.} 
+\emph{Let $f(z)$ be analytic in $D$ with continuous boundary values. Then}
+\[
+f(z)=\frac{1}{2\pi}\int_0^{2\pi}\frac{e^{i\theta}+z}
+{e^{i\theta}-z} \cdot \mathfrak{Re}(f(e^{i\theta}))\cdot d\theta+
+i\cdot \mathfrak{Im}(f(0))\quad\colon\quad z\in D
+\]
+\medskip  
+
+\noindent
+Hence $f$ is represented by a boundary integral
+expressed by its real part only, except for the value
+of its imaginary part at the origin.
+\bigskip
+
+\noindent 
+{\bf 3.8 Formula for a  harmonic conjugate}.
+Start with some real-valued continuous function
+$u$ on the unit circle $T$.
+We find the unique analytic function $f(z)$
+in $D$ whose real part is $u$ on $T$ while $f(0)$ is real.
+Now $\mathfrak{Im}\, f$
+is 
+the harmonic conjugate of $\mathfrak{Re}\ f$
+and (**) above gives:
+
+\medskip
+
+\[
+\mathfrak{Im} f(z)=
+\frac{1}{2\pi}\int_0^{2\pi}\,\frac{ \mathfrak{Im}(ze^{-i\theta})}{|e^{i\theta}-z|^2}
+\cdot u(e^{i\theta})d\theta\tag{***}
+\]
+\medskip
+
+\noindent
+{\bf{3.9 The conjugate kernel $\mathcal C$}}.
+In the product set $D\times T$
+we define the function
+\medskip
+
+\[
+\mathcal C(z,\theta)=
+\frac{1}{2\pi}\cdot\frac{ \mathfrak{Im}(ze^{-i\theta})}{|e^{i\theta}-z|^2}
+\] 
+\medskip
+
+\noindent 
+The $\mathcal C$-function
+is no longer positive
+and the integrals with respect to $\theta$
+of its absolute value increase when $|z|\to 1$.
+Namely, let  $z=r=1-s$ with $0<s<1$.
+Then
+\[
+|\mathcal C(z,\theta)|=
+\frac{1-s}{2\pi}\cdot\frac{| \text{sin}\,\theta\,|}{
+[\,s^2+2(1-s)(1-\text{cos}\,\theta)\,]^2}
+\]
+So when $s$ and $\theta$ both are close to zero  the order
+of magnitude of $\mathcal C$ becomes
+\[ 
+|\mathcal C(s,\theta)|\simeq\frac{|\theta|}{(s^2+\theta^2)^2}\tag{1}
+\]
+This explains why the map which sends 
+a boundary function $u(e^{i\theta}) $ into 
+the boundary value function
+$v(e^{i\theta}$ of the harmonic conjugate of the
+harmonic extension of $u$ 
+is not so well-behaved. 
+However, certain estimates are available.
+In particular the BMO-norm of the conjugate boundary
+value function $v$ can be estimated by the maximum norm of $u$.
+\bigskip
+
+\noindent
+{\bf 3.10 Theorem.}
+\emph{There exists an absolute  constant $C$ such that}
+\[ 
+[v|_{\text{BMO}}\leq C\cdot\max_\theta\,|u(e^{i\theta})|
+\]
+\medskip
+
+\noindent
+The proof  
+boils down to
+an exercise in one variable analysis.
+Namely, regard the following linear operators:
+\medskip
+
+\noindent {\bf 3.11 Definition.} \emph{To each $s>0$ we define
+the  operator $T_s$ acting on real-valued functions $f(x)$ with support in
+$[-1,1]$ by}
+\[ 
+T_s(f)(y)=
+\int_{-1}^1\, \frac{x}{x^2+s^2}\cdot f(x+y)dy
+\]
+In the case when $f$ is an even function we notice that
+$T_s(f)(0)=0$.
+From the definition of functions in BMO and 
+recalling that $\text{sin}\,\theta\simeq\theta$ for small $\theta$,
+the reader will have no difficulty to derive Theorem 3.10  from
+the following result:
+\bigskip
+
+\noindent 
+{\bf 3.12 Proposition.}
+\emph{There exists a constant $C$ such that the following holds when
+$f$ is even and has support in $[-1,1]$:}
+\medskip
+\[
+|\int
+\frac{1}{2h}\int_{-h}^h\, T_s(f)(y)dy|\leq |f|_\infty\quad\colon
+\forall \,\,\, 0< s,h<1
+\]
+\medskip
+
+\noindent \emph{Proof.} By partial integration
+the term above becomes
+\[
+\frac{1}{2h}\int\,\text{Log}\,[\frac{(\xi-h)^2+s^2}{
+(\xi+h)^2+s^2}\,]\cdot f(\xi)d\xi
+\]
+Hence there only remains to show that there exists $C$ so that
+\[
+\int_{-1}^1\,
+|\text{Log}\,[\,\,\frac{(\xi-h)^2+s^2}{(\xi+h)^2+s^2}]\,|d\xi\leq C\cdot h
+\]
+Obviously $C$ exists if there is a constant $C^*$ such that
+\[ 
+\int_0^1\,
+\text{Log}\,|\frac{(\xi+h)^2+s^2}{\xi^2+s^2}|d\xi\leq C^*\cdot h\tag{i}
+\]
+Now we use that
+\[
+\frac{\xi+h)^2+s^2}{\xi^2+s^2}=1+\frac{2h\xi+h^2}{\xi^2+s^2}\leq
+1+\frac{2h^2+\xi^2}{\xi^2}= 2+2\frac{h^2}{\xi^2}
+\]
+So there remains only to show
+\[
+\int_0^1\,
+\text{Log}\,[2+2\frac{h^2}{\xi^2}\,]\cdot d\xi\leq
+C^*\cdot h\quad\colon\, 0<h<1\tag{ii}
+\]
+With $\xi=hu$ this follows since
+\[
+\int_0^\infty\,
+\text{Log}\,[2+2\frac{1}{u^2}]\cdot du<\infty\tag{iii}
+\] 
+In other words, we can take  $C^*$ as the value of this
+convergent integral.
+\bigskip
+
+\centerline {\bf 3.13 A duality theorem.}
+\medskip
+
+\noindent
+Theorem 3.10 shows
+that the harmonic conjugation functor 
+expressed via the boundary value function 
+\[ 
+u\mapsto \mathcal C(u)
+\quad\colon\, u(e^{i\theta})\in L^\infty(T)
+\]
+\medskip
+
+\noindent
+is a continuous linear operator from $L^\infty(T)$ into BMO.
+Next,   consider the
+Hardy space $H^1(T)$ which consists of
+those $f\in L^1(T)$ which are boundary values
+of analytic functions in $D$, or equivalently those 
+integrable functions on the unit circle for
+for which
+\medskip
+
+\[ 
+\int_0^{2\pi}\, e^{in\theta}\cdot f(e^{i\theta})\cdot d\theta=0
+\quad\colon\, n=1,2,\ldots
+\]
+\medskip
+
+\noindent
+The following result is due to C. Fefferman and E. Stein in [F-S]:
+\medskip
+
+\noindent
+{\bf 3.14 Theorem}
+\emph{There exists an absolute constant $C$
+such that}
+
+
+\[
+|\int_0^{2\pi}\,\phi(e^{i\theta})\cdot
+f(e^{i\theta})\cdot d\theta\,|\leq C\cdot 
+|\phi|_{\text{BMO}}\cdot |f|_1
+\] 
+\emph{hold for all pairs $f\in H^1(T)$ and $\phi$ in BMO.}
+ 
+\bigskip
+
+\noindent 
+For the proof of Theorem 3.14 and an account about
+Hardy spaces and  BMO  the reader is
+referred to text-books by E. Stein. See in particular (St:xxx].
+\bigskip
+
+\centerline {\bf 3.15 The Riesz transform}
+\medskip
+
+\noindent
+Let $f(\theta)\in L^1(T)$.
+We get the Fourier coefficients
+
+
+\[ 
+\hat f(n)=
+\int_0^{2\pi}\,e^{-in\theta}f(\theta)d\theta
+\]
+A dense subspace of $L^1(T)$ consists of trigonometric
+polynomials, i.e.
+those functions on $T$ with a finite Fourier series.
+Denote this subspace by $\mathcal P$.
+On this subspace we define the linear operator
+$\mathcal R$  by
+\[
+\mathcal R(e^{i\nu\theta})=-e^{i\nu\theta}\,\,\colon\,\nu\leq -1\quad\colon
+\mathcal R(e^{i\nu\theta})=e^{i\nu\theta}\,\,\colon\,\nu\geq 1
+\quad\colon\,\mathcal R(1)=0\tag{*}
+\]
+
+
+\noindent
+This operator is closely related to the harmonic conjugation functor.
+To see this, let $n\geq 1$ and 
+and put
+\[
+u_n(\theta)=
+\frac{1}{2}[e^{in\theta}+e^{-in\theta}]
+\]
+Its harmonic extension to $D$ is $\mathfrak{Re}\,(z^n)$
+and hence the boundary function of the harmonic conjugate is
+\[ 
+v(\theta)=
+\frac{1}{2}[e^{in\theta}-e^{-in\theta}]\implies
+\]
+\[ 
+\mathcal C(u)=v=\mathcal R(u)\tag{**}
+\]
+Taking linear sums we conclude that
+$\mathcal R$ via the associated Fourier series
+coincides with  the harmonic conjugation functor.
+Passing to functions $f(\theta)$ which belong to $H^\infty(T)$
+Theorem 3.10 therefore proves  that
+$\mathcal R(f)$ has a bounded means oscillation.
+In other words,
+$\mathcal R$
+gives a continuous linear operator from
+$H^\infty(T)$ to $\text{BMO}(T)$.
+We shall not continue this discussion since it is a topic
+in the theory about singular integral operators.
+See the text-books by E. Stein which
+presents this theory from many aspects including 
+higher dimensional cases.
+
+\bigskip
+
+
+
+
+\bigskip
+
+\centerline{\bf{3.16 Poisson integrals of Riesz measures.}}
+\medskip
+
+\noindent
+Let $\mu$ be a real Riesz measure on $T$.
+In general it is decomposed into $\\mu\uuu c+\mu\uuu s$
+where $\mu\uuu c$ is absolutely continuous and $\mu\uuu s$ is
+singular. We obtain a harmonic function $H\uuu \mu(z)$ in $D$
+defined by
+
+\[
+H\uuu \mu(z)= \frac{1}{2\pi}\int\,
+\frac{1\vvv |z|^2}{|e^{i\theta}\vvv z|^2}\cdot d\mu(\theta)
+\]
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show the inequality below for each $r<1$:
+\[
+\int\uuu 0^{2\pi}\, |H(re^{i\phi}|\cdot d\phi\leq ||\mu||
+\quad \colon\quad ||\mu\||\quad \text{is the total variation of}\quad \mu
+\tag{1}
+\] 
+Next, let $g(\theta)$ be a continuous function on $T$ identified
+with the $2\pi$\vvv periodic $\theta$\vvv interval.
+Using the uniform continuity of $g$
+the reader may verify the limit formula
+\[
+\lim\uuu{r\to 1}\, 
+\int\uuu 0^{2\pi}\, g(\theta)\cdot H(re^{i\theta})=
+\int\uuu 0^{2\pi}\, g(\theta)\cdot d\mu(\theta)\tag{2}
+\]
+Since (2) holds for every $g\in C^0(T)$ it means that
+the absolutely continuous measures
+$\{H(re^{i\theta})\}$ converge weakly to $\mu$ where
+Riesz' representation theorem  identifies
+the dual space of $C^0(T)$ with Riesz measures on $T$.
+\medskip
+
+\noindent
+{\bf{A converse result.}}
+Let $H(z)$ be harmonic in $D$ and assume that there is a constant
+$C$ such that
+\[
+\int\uuu 0^{2\pi}\, |H(re^{i\theta})|\cdot d\theta\leq C
+\quad \text{hold for all}\quad  r<1\tag{*}
+\]
+
+\medskip
+
+\noindent
+{\bf{3.17 Theorem.}}
+\emph{When (*) holds there exists a unique Riesz measure $\mu$ on $T$
+such that $H=H\uuu \mu$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Notice that (*) means that the family of 
+absolutely continuous measures on $T$
+given by the family $\{\mu\uuu r(\theta)= H(re^{i\theta})\}$
+is bounded. So by the compactness in the weak topology
+of measures  there exists 
+an increasing sequence $\{r\uuu n\}$
+where $r\uuu n\to 1$ and a Riesz measure $\mu$
+such that
+\[
+\lim\uuu {n\to\infty}\, 
+\int\uuu 0^{2\pi}\, g(\theta)\cdot H(r\uuu n e^{i\theta})d\theta=
+\int\uuu 0^{2\pi}\, g(\theta)\cdot d\mu(\theta)\tag{i}
+\] 
+hold for every $g\in C^0(T)$.
+There remains to see why this gives $H=H\uuu \mu$ in $D$.
+To prove this we fix $z\in D$ and if $r\uuu n>|z|$
+we have the Poisson formula
+\[
+H(z)= 
+\int\uuu 0^{2\pi}\, \frac{r\uuu n^2\vvv |z|^2}{
+r\uuu n e^{i\theta}\vvv z|^2}\cdot 
+H(r\uuu n e^{i\theta})d\theta\tag{ii}
+\]
+Keeping $z\in D$ fixed we set 
+\[
+g\uuu n(\theta)=
+\frac{1}{2\pi}
+\cdot  \frac{r\uuu n^2\vvv |z|^2}{
+|r\uuu n e^{i\theta}\vvv z|^2}\quad\text{and}\quad
+g\uuu *(\theta)=\frac{1}{2\pi}
+\cdot  \frac{1\vvv |z|^2}{
+|e^{i\theta}\vvv z|^2}
+\]
+It is clear that $g\uuu n\to g\uuu *$ holds uniformly 
+over $0\leq\theta\leq 2\pi$
+as $n\to \infty$.
+So if $\epsilon>0$ we can find $n*$ such that $n\geq n\uuu *$ entails
+\[
+\bigl |H(z)\vvv \int\uuu 0^{2\pi}\, g\uuu *(\theta)\cdot 
+H(r\uuu n e^{i\theta})d\theta\,\bigr|<\epsilon
+\]
+Now
+\[
+H\uuu \mu(z)= \int\uuu 0^{2\pi}\,g\uuu *(\theta)\cdot d\mu(\theta)
+\]
+and at the same time (i) holds. So when $n\geq n*$ we see that
+\[
+|H(z)\vvv H\uuu\mu(z)|<2\epsilon
+\] 
+Finally, since $\epsilon>0$ is arbitrary we get $H=H\uuu\mu$ as required.
+\medskip
+
+\noindent{\bf{Remark.}}
+Theorem 3.17 gives a 1\vvv 1 correspondence between the space of 
+Riesz measures on $T$ and harmonic functions in $D$
+satisfying the $L^1$\vvv condition (*).
+\medskip
+
+\noindent
+{\bf{3.18 Radial limits.}}
+Let $\mu$ be a Riesz measure on $T$
+which gives the harmonic function $H\uuu\mu$.
+it turns out that radial limits exist almost everywhere.
+
+
+\medskip
+
+\noindent
+{\bf{3.19 Theorem.}}
+\emph{Write $\mu=\mu\uuu c+\mu\uuu s$.
+Then there exists a null set $E$ on $T$ such that}
+\[
+\lim\uuu{r\to 1}\, H\uuu\mu(re^{i\theta})= \mu\uuu c(e^{i\theta})
+\] 
+\emph{holds when $\theta\in T\setminus E$ and 
+$\theta$ is a Lebesgue point of the $L^1(T)$\vvv function
+$\mu\uuu c(e^{i\theta})$}
+\medskip
+
+\noindent
+{\bf{Exercise.}} Prove this result.
+A hint concerning the singular part $\mu\uuu s$
+is as follows: Since $\mu\uuu s$ is singular we know from
+XX that there exists a null set
+$F$ on $T$ such that
+\[
+\lim\uuu {\delta\to 0}\,
+\frac{1}{\delta}\cdot \int\uuu {\theta\vvv \delta}^{\theta+\delta}\, 
+|d\mu\uuu s(\theta)|=0
+\]
+for each $\theta\in T\setminus F$.
+Using the expression of the Poisson kernel the reader can verify
+that this gives:
+\[
+\lim\uuu {r\to 1}\, H\uuu{\mu\uuu s}(re^{i\theta})=0\quad\text{
+for each}\quad \theta\in T\setminus F
+\]
+\medskip
+
+\noindent
+{\bf{3.20 A class of analytic functions.}}
+Let $\mu$ be a singular measure on $T$.
+In $D$ we get the analytic function
+
+\[
+U\uuu \mu (z)=\frac{1}{2\pi}\int_0^{2\pi}\frac{e^{i\theta}+z}
+{e^{i\theta}-z}\cdot d\mu(\theta)
+\]
+We see that $\mathfrak{Re}\, U\uuu\mu=H\uuu \mu$ and
+taking the exponential  we get the analytic function
+
+\[ 
+\omega\uuu \mu(z)=e^{U\mu(z)}
+\]
+Here
+the absolute value
+\[
+ |\,\omega\uuu\mu(z)|= e^{H\uuu \mu(z)}
+\]
+Theorem 3.19 entails that there is a null set $F$ on $T$ such that
+\[
+\lim\uuu {r\to 1}\, |\omega\uuu\mu(re^{i\theta})|=1
+\quad\colon\quad \theta\in T\setminus F\tag{1}
+\] 
+
+
+\noindent
+The question arises if there  exist radial limits
+\[
+\lim\uuu {r\to 1}\, 
+\omega\uuu\mu(re^{i\theta})=\omega\uuu *(e^{i\theta})
+\]
+outside a null set.
+This turns out to be true but the proof is more involved and relies 
+upon the Brothers Riesz theorem which is established in 
+Section X from Special Topics
+and a further study of analytic functions of the form
+$\omega\uuu \mu(z)$ for singular Riesz measures is treated in 
+XX from Special Topics.
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\noindent
+\centerline {\bf\large  4. The mean value property}
+\bigskip
+
+\noindent
+Let $H$ be a harmonic function defined in an open 
+domain $\Omega$. Let $z_0\in\Omega$ and  $D$ is a disc centered at $z_0$
+of some radius $R$ with $R$ chosen so that 
+$\bar D\subset \Omega$. 
+We already know 
+the mean-value formula:
+
+\[
+H(z_0)=\frac{1}{2\pi}\int_0^{2\pi}\, H(z_0+Re^{i\theta})d\theta\tag{*}
+\] 
+It turns out that the converse is true. More precisely
+a real-valued and continuous
+function in $\Omega$
+satisfying a local mean-value formula at every point in $\Omega$
+is harmonic. 
+Since the condition to be harmonic is local it suffices to
+prove this when $\Omega$ is a disc. 
+\medskip
+
+\noindent
+{\bf 4.1 Theorem} \emph{Let $\bar D$ be a closed disc of some radius $R$ centered at the origin. Let $h\in C^0(\bar D)$ and assume that to every $z_0\in D$ there exists some 
+$0<r\leq\text{dist}(z_0,\partial D)$ such that $h(z_0)$ equals its mean value over 
+the circle $|z-z_0|=r$. Then $h$ is harmonic in $D$.}
+\medskip
+
+\noindent 
+\emph{Proof.} We  solve the Dirichlet problem and find a harmonic 
+function $H$ in $D$ which extends to a continuous function 
+on $\bar D$ where $H=h$ on the circle $\{|z|=R\}$.
+Now we claim that $h=H$. Assume the contrary and suppose 
+for example that there exists a point $z_0$ where $h(z_0)>H(z_0)$. 
+Since a continuos function achieves its maximum on the compact set 
+$\bar D$ we get the closed set $K$ where
+$h-H$ takes its maximum. Here $K$ must be inside the open disc since
+$h=H0$ on the boundary. Choose a point $z^*\in K$
+such that $|z^*|\geq |z|$ for any other point $z\in K$.
+By hypothesis there exists a circle of some radius $r\leq R-|z^*|$ such that
+$h(z^*)$ is equal to its mean value over the circle $T=\{|z-z^*|=r\}$.
+Since the harmonic function $H$ satisfies the mean value condition  everywhere, 
+it follows that
+\[
+h(z^*)-H(z^*)=\frac{1}{2\pi}\int_0^{2\pi}\,
+(h-H)(z^*+re^{i\theta}])d\theta\tag{i}
+\]
+But this gives a contradicton. For $H-h$
+takes its maximum at
+$z^*$ and by the choice of $z^*$ we can find
+$\theta$ such that $z^*+re^{i\theta}$ is outside the set $K$
+and then the integral in (i) cannot be equal to
+$h(z^*)-H(z^*)$.
+This proves that $h\leq H$ holds in the whole disc.
+Since $-h$ also satisfies the local mean value condition we prove that
+$h\geq H$ in the same way and Theorem 3.1 follows.
+
+\bigskip
+
+\noindent
+{\bf 4.2 Remark} 
+Notice that Theorem 4.1 implies that if $h$ is
+\emph{not} harmonic then
+there must exist
+some point $z_0\in D$ such that
+\[
+h(z_0)\neq\frac{1}{2\pi}\int_0^{2\pi}\, h(z_0+re^{i\theta})d\theta
+\] 
+hold for all $0<r\leq R-|z_0|$.
+Notice also that this inequality means that $h(z_0)$ is either 
+strictly less or strictly larger
+than all mean-values above.
+
+\bigskip
+
+
+
+\noindent
+{\bf 4.3 A study of $\log\,|f|$.}
+Let $\Omega\in\mathcal D(C^1)$
+and $f$ is an analytic function in $\Omega$ which extends to
+a continuos function on $\bar\Omega$. We also assume that
+$f\neq 0$ on $\partial\Omega$ but inside $\Omega$ it has some zeros 
+$a_1,\ldots,a_k$ where the multiplicity
+of each zero can be any positive integer.
+Outside these zeros 
+$\log \,|f|$ exists as a harmonic  function.
+Now one has the following  inequality:
+\medskip  
+
+\noindent
+{\bf 4.4 Proposition} \emph{Let $h$ solve Dirichlet's problem for the boundary function
+$\log\,|f|$. Then} 
+\[
+\log\,|f(z)|\leq h(z)\quad\,\colon\quad z\in
+\Omega\setminus (a_1,\ldots,a_k)
+\]
+\medskip
+
+\noindent
+{\bf Proof.}
+Let $\epsilon>0$ be small and let $\Omega_\epsilon$ be the open set 
+where the closed
+discs of radius $\epsilon$ around the zeros of $f$ are removed from
+$\Omega$.
+If $m$ is the order of a zero of $f$ at $a_\nu$ we have
+\[
+\log(|f|)(z-a_\nu)=
+m\cdot \log\,|z-a_\nu|+\,\,\,\text{a bounded function}
+\]
+when $z$ is close to $a_\nu$.
+So on the boundaries  of the removed discs the harmonic function
+$\log \,|f|$ is negative and $\simeq$ to the negative number
+$m\cdot \log (\epsilon)$. For a sufficiently small $\epsilon$ it therefore follows that
+\[ 
+\log |f|(z)\leq h(z)\quad\,\colon\quad z\in\cup\,\partial D_\epsilon(a_\nu)
+\]
+\medskip
+At the same time equality holds on $\partial\Omega$. Hence the maximum principle
+for harmonic functions gives  
+the inequality
+\[
+\text{Log}(|f|)(z)\leq h(z)\quad\,\colon\quad z\in\Omega\setminus
+\cup\,\bar D_\epsilon(a_\nu)
+\]
+Since we can take any small $\epsilon$  Proposition 2.4 follows.
+
+
+\bigskip
+
+\noindent {\bf 4.5 A specific majorisation.}
+Let $f(z)$ be analytic in the  half-plane $\mathfrak{Im}\, z>0$ which
+extends continuously to the real line $\{\mathfrak{Im}\,z=0\}$.
+Consider a finite sequence of real numbers 
+$a_0<a_1<\ldots a_N$ where some $a_\nu$ may be negative.
+We get the pairwise disjoint intervals
+\[
+J_0=(-\infty,a_0)\quad J_\nu=(a_\nu,a_{\nu+1})\colon\,\,
+0\leq\nu\leq N-1\quad J_N=(a_n,+\infty)
+\]
+Suppose there are constants $c_0,\ldots,c_N$ such that
+\[
+\text{Log}\,|f(x)|\leq c_\nu\quad\colon\quad x\in J_\nu
+\quad\colon \quad 0\leq\nu\leq N
+\]
+In addition to this we assume that
+\[
+\lim_{|z|\to \infty}\,f(z)=0\tag{*}
+\]
+where $z$ stay in the closed upper half-plane during the limit.
+In this case we can chose a specific harmonic majorant
+to
+$\log\,|f(x)|$. Namely, put
+\[
+H(z)=\sum_{\nu=0}^{\nu=N}\, c_\nu\cdot H_{J_\nu}(z)
+\]
+where $\{H_{J_\nu}\}$ are the harmonic measure
+functions of the $J$-intervals.
+Then we have
+\[
+\log\,|f(x)|\leq H(x)
+\]
+for real $x$. 
+
+\noindent
+{\bf{Exercise.}}
+Show that (*)  entails the global inequality:
+\[
+\log\,|f(z)|\leq H(z)\quad\colon\quad z\in U
+ \]
+
+
+
+\newpage
+
+\newpage
+
+\centerline{\bf 5. Harmonic measures}
+\bigskip
+
+\noindent
+Let $\Omega$ be a bounded connected and  open set where
+Dirichlets problem can be solved.
+If $z\in\Omega$
+we get a linear form on $C^0(\partial\Omega)$ defined by
+\[ 
+\phi\mapsto H_\phi(z)\tag{1}
+\]
+
+
+\noindent
+Thus, we evaluate the unique harmonic extension of
+the boundary function $\phi$ at the point $z$.
+If $\phi\geq 0$ then $H_\phi(z)\geq 0$ and when
+$\phi=1$ is the identity we have $H_\phi=1$.
+Riesz' Representation Formula
+gives a unique probability measure
+on $\partial\Omega$ denoted by $\mathfrak{m}_z$
+such that
+\[
+H_\phi(z)=\int_{\partial\Omega}\,\phi(\zeta)\cdot
+d\mathfrak{m}_z(\zeta)\tag{2}
+\]
+
+
+\noindent
+When $z$ varies in $\Omega$ these measures are absolutely continuous with
+respect to each other.
+To see this we fix
+some point $p$ in $\Omega$. Let $q$ be another point and suppose that
+$\mathfrak{m}\uuu q$ is not absolutely continuous with respect to
+$\mathfrak{m}\uuu p$ which gives 
+a closed subset $E$ of $\partial\Omega$
+where $\mathfrak {m}\uuu p(E)=0$ and $\mathfrak{m}\uuu q(E)=a>0$.
+Now we  can  choose a sequence of continuous boundary functions
+$\{\phi\uuu n\}$ such that $0\leq\phi\uuu n\leq 1$ while $\phi\uuu n=1$ on $E$ and
+\[
+\lim\uuu{n\to\infty}\, \int\uuu{\partial\Omega}\phi\uuu n\cdot d\mathfrak{m}\uuu p=0\tag{1}
+\]
+Here $\{H\uuu n=H\uuu{\phi\uuu n}\}$ is a sequence of harmonic functions
+such that $0\leq H\uuu n\leq 1$ holds and $H\uuu n(p)\to 0$.
+The minium principle for harmonic functions entails that $H\uuu n\to 0$
+holds on uniformly on every compact subset of $\Omega$. In particular
+$H\uuu n(q)\to 0$. But this  gives a contradiction since the
+$\phi$\vvv functions give $H\uuu n(q)\geq a$ for all $n$.
+
+\medskip
+
+\noindent
+{\emph{…ksendal's theorem.}}
+If may occur that the boundary
+$\partial\omega$ has a positive 2\vvv dimensional Lebesgue measure.
+But the harmonic measures are always concentrated to null sets
+with respect to the Lebesgue measure in ${\bf{R}}^2$.
+Nasmely, one has
+
+\medskip
+
+\noindent
+{\bf{5.0 Theorem.}} \emph{There exists a null\vvv set $E$ 
+in $\partial\Omega$
+such that
+$\mathfrak m\uuu p(E)=1$ for every $p\in\Omega$.}
+\medskip
+
+\noindent
+We prove this result in 5.x below after some
+results concerning majorisation principles for harmonic measures have
+been established.
+
+\medskip
+
+\noindent
+{\emph{The principle of
+Gebietserweiterung.}}
+The inequality in (*) below is used in many situations.
+Let $\Omega$ and $U$ be two domains where the Dirichlet problem is solvable for both.
+Suppose that $\Omega\subset U$ and put
+\[ 
+\partial\Omega=\gamma\cup \gamma
+\] 
+where $\gamma$ is a compact subset of $\partial U$ while $\Gamma$ is a
+subset of $\bar \Omega$.
+Consider also a compact subset $K$ of $\partial U$ such that
+$\bar\Omega\cap K=\emptyset$.
+Let $z$ be a point in $\Omega$ which also may be regarded as a point in $U$.
+We get the harmonic measure $\mathfrak{m}\uuu z^U(K)$, i.e.
+the value at $z$ of the harmonic function $h$ in $U$ for which
+$h=1$ on $K$ while $h=0$ on $\partial U\setminus K$.
+At the same time we have the harmonic measure 
+$\mathfrak{m}^\Omega\uuu z(\Gamma)$
+which equals  $H(z)$ for the harmonic function in
+$\Omega$ which is one on $\Gamma$ and zero on
+$\gamma\setminus \Gamma$.
+Since $0\leq h\leq 1$ holds in $U$
+it follows that $h\leq H$ on $\Gamma$
+and at the same time both $H$ and $h$ are zero on 
+$\gamma\setminus\Gamma$.
+Hence $h\leq H$ holds on $\partial\Omega$ so the maximum principle for harmonic functions entails that
+\[
+\mathfrak{m}\uuu z^U(K)\leq \mathfrak{m}\uuu z(\Gamma)\tag{*}
+\]
+
+
+\noindent
+{\bf 5.1. Conformal invariance.}
+Let $\Omega$ and $\Omega^*$ be two bounded and  connected
+open sets which both are of class $\mathcal D(C^1)$.
+Let  $g\colon\,\Omega\to\Omega^*$
+be a conformal map which extends to the boundary and gives a
+homeomorphism from $\bar\Omega$ to $\bar\Omega^*$.
+As explained in XX the $g$-function sends
+a harmonic function
+$H$ in $\Omega^*$ to the harmonic function
+$H\circ g$ in $\Omega$. Let $\Gamma_1,\ldots,\Gamma_p$
+be the closed boundary curves to $\Omega$. Their images
+$\{g(\Gamma_\nu)\}$ give the boundary curves of $\Omega^*$.
+Let $E$ be some Borel set in $\partial\Omega$ which gives the
+harmonic measure function
+\[
+H_E(z)=\int_E\, d\mathfrak{m}_z(\zeta)
+\]
+Similarly  we get the harmonic measure function
+\[
+H^*_{g(E)}(w)=
+\int_{g(E)}\, d\mathfrak{m}^*_w(\zeta)
+\]
+where $\mathfrak{m}^*_w$ is the harmonic measure on
+$\partial\Omega^*$. Now we have the equality
+\[ 
+H_E(z)=H^*_{g(E)}\circ g(z)\implies
+\]
+\[
+\int_E\, d\mathfrak{m}_z(\zeta)=
+\int_{g(E)}\, d\mathfrak{m}^*_{g(z)}(\zeta)
+\quad\text{holds for all points }\quad z\in\Omega\tag{*}
+\]
+Since $g$ restricts to a homeomorphism from
+$\partial\Omega$ into $\partial\Omega^*$
+this gives a transformation rule for the harmonic measure.
+This invariance 
+is often used and we
+shall meet such  applications  in the chapter about conformal mappings.
+\bigskip
+
+
+
+\medskip
+
+\noindent
+{\bf{5.2 Harmonic measures in half-discs.}}
+Let $R>1$ and consider the half-disc
+$D^+_R=D_R\,\cap \{y>0\}$.
+which is contained in the upper half-plane
+$\mathfrak{Im}(z)>0$. Here
+there exists the harmonic function
+\[ 
+u(z)=\mathfrak{Im}(\text{Log}(z-R))-
+\mathfrak{Im}(\text{Log}(z+R))=
+\text{arg}(z-R)-\text{arg}(z+R)
+\]
+As already pointed out in XX we have
+\[ 
+\lim_{y\to 0}\, u(x+iy)=\pi\quad\colon\quad -R<x<R
+\]
+Moreover, by euclidian geometry we have
+\[
+u(Re^{i\theta})=\frac{\pi}{2}\quad
+\colon\,0<\theta<\pi
+\]
+Set
+\[ 
+u^*(z)=\frac{2}{\pi}\cdot (u(z)-\frac{\pi}{2})\tag{*}
+\]
+Then $u^*(x)=1$ on the real interval $(-R,R)$ while
+$u^*=0$ on the portion of $\partial D_R^+$ where
+$|z|=R$.
+Hence, if $0<a<R$ then the harmonic measure
+of the point $ai$ with respect to
+the boundary piece $(-R,R)$ is equal to $u^*(ai)$.
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that
+\[ 
+u^*(ai)= \frac{2}{\pi}\cdot \text{arctg}(\frac{R}{a})
+\]
+
+
+\noindent
+We have also the harmonic measure with respect to the circular boundary
+where $|z|=R$ which is given by the function $1-u^*$.
+hence, the harmonic measure at $ai$ with respect to this
+circular portion is equal to 
+\[
+1-\frac{2}{\pi}\cdot \text{arctg}(\frac{R}{a})
+=\frac{2}{\pi}\cdot \int_{R/a}\, \frac{dt}{1+t^2}
+\]
+The last term is majorised by
+\[
+\frac{2}{\pi}\cdot \int_{R/a}\, \frac{dt}{t^2}=
+\frac{2a}{\pi R}\tag{*}
+\]
+In particular this harmonic measure behaves like $O(\frac{1}{R})$ when
+$R\to+\infty$ while $a$ stays in a bounded interval.
+
+
+\bigskip
+
+
+
+
+
+
+\centerline{\bf{5.3 Lindelšf's theorem.}}
+\medskip
+
+
+\noindent
+Let $D^+$ be a half\vvv disc where $|z|<R$ and $\mathfrak{Im} \,z>0$.
+Let $f(z)$ be a bounded analytic
+function in $D^+$ with maximum norm $\leq 1$.
+Consider also  a Jordan arc
+$\gamma$ which belongs to $D^+$ except for the endpoint $\gamma(1)$
+which is taken as the origin.
+Suppose that $f$ converges to zero along $\gamma$, i.e.
+\[
+\lim\uuu{s\to 1}\, f(\gamma(s))=0
+\]
+Then Lindelšf proved that $f$ has a non\vvv tangential limit
+at $z=0$. More precisely, for each $0<\alpha<\pi/2$ one has
+
+\[
+\lim\uuu {r\to 0}\, [\max\uuu {\alpha\leq \theta\leq \pi\vvv \alpha}\,
+|f(re^{i\theta})|\,]=0\tag{*}
+\]
+\medskip
+
+\noindent
+\emph{Proof}. Consider the subharmonic function
+$u(z)=\log\,|f(z)|$.
+For each large  $M>0$  it follows from
+(1) that there exists $s\uuu 0<1$
+such that
+\[
+u(\gamma(s))\leq \vvv M\tag{i}
+\] 
+for all $s\uuu 0\leq s<1$.
+Now we choose  $0<R\uuu *<R$ such that
+the smallest $s$ for which $|\gamma(s)|=R\uuu *$
+holds is $\geq s\uuu 0$. Denote this $s$\vvv number with
+$s\uuu *$
+So if $D^+\uuu *$
+is the half\vvv disc where $|z|<R\uuu *$
+then
+\[
+u(\gamma(s))\leq \vvv M\tag{ii}
+\]
+for all $s\uuu *\leq s<1$ and  the
+half\vvv open Jordan curve
+$\gamma[s\uuu *,1)$ stays in $D\uuu *$.
+It follows from Jordan's theorem
+that this curve divides $D^+\uuu *$
+into a pair of disjoint Jordan domains
+$\Omega\uuu 1$ and $\Omega\uuu 2$.
+Moreover, as illustrated by a picture
+the real intervals $[\vvv R\uuu *,0]$ and
+$[0,R\uuu *]$  appear in the boundary of
+each $\Omega$\vvv domain. We may assume that
+\[
+[\vvv R\uuu *,0]\subset\partial  \Omega\uuu 1
+\]
+In addition $\partial\Omega\uuu 1$
+consists of the Jordan arc $\gamma[s\uuu *,1]$
+and an arc of the circle $|z|=R\uuu*$
+with end\vvv points at $\vvv R\uuu *$ and
+$\gamma(s\uuu *)$.
+Next, given  $0<\alpha<\pi$
+we consider points $z\in\Omega\uuu 1$
+such that:
+\[ 
+z=re^{i\theta}\quad \colon\quad
+\alpha\leq \theta\leq \pi\vvv\alpha\quad\text{and}
+\quad 0<r<R\uuu */2\tag{iii}
+\]
+
+
+\noindent
+For each such point $z$ we have the harmonic measure
+$\mathfrak{m}\uuu z$ on $\partial\Omega\uuu 1$.
+Since $|f|\leq 1$ was assumed we have $u\leq 0$ 
+and since $u$ is  subharmonic we get:
+\[
+u(z)\leq \vvv M\cdot 
+\mathfrak{m}\uuu z(\Omega\uuu 1\cap \gamma)\tag{iv}
+\]
+
+
+\noindent
+At this stage
+we use
+the principle of \emph{Gebietserweiterung}. Consider the
+whole half\vvv disc $D^+\uuu *$.
+Here $[0,R\uuu *]$Êis the portion of its boundary
+and since
+the Jordan  arc $\gamma$ separates the half disc where
+$[0,R\uuu *]\subset\partial\Omega\uuu 2$
+one has the inequality
+\[
+\mathfrak{m}\uuu z(\Omega\uuu 1\cap \gamma)
+\geq \mathfrak {m}^*\uuu z([0,R\uuu *])
+\] 
+
+
+
+\noindent
+where $\mathfrak{m}\uuu z^*$
+is the harmonic measure for $z$ in the half disc.
+It follows from (iv) that 
+\[
+u(z)\leq \vvv M\cdot 
+\mathfrak{m}\uuu z^*(([0,R\uuu *])/tag{v}
+\]
+Finally, since $z$ satisfies (1) it follows that
+\[
+\mathfrak{m}\uuu z^*(([0,R\uuu *])\geq \rho(\alpha)\tag{vi}
+\] 
+where $\rho(\alpha)$ is a positive number which can
+be computed via a conformal mapping. See XX for details.
+So when $z$ is as in (iii) we get the estimate
+\[
+ u(z)\leq \vvv \rho(\alpha)\cdot M
+\]
+Here $\rho(\alpha)$ depends on the fixed $\alpha$\vvv value only while
+$M$ can be arbitrary large while $R\uuu *$ gets small
+and this obviously entails that we have the requested limit
+(*) in the sector $\alpha\leq \arg(z)\leq \pi\vvv\alpha$.
+Finally, we proved that the limit when $z$ stays in
+$\Omega\uuu 1$. Reversing the role where one instead
+works with the interval $[\vvv R\uuu *,0]$
+we get again the  limit in (*) and Lindelšf's theorem is proved.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The original proof by Lindelšf appears in [Lindelšf].
+The idea to employ harmonic measures and estimate  the subharmonic
+function $\log\,|f(z)|$ was  introduced by Carleman. See
+page xxxx in Nevanlinna's book [Nev] for an account about the principle
+for harmonic measures under a change of domains.
+
+\bigskip
+
+\noindent
+{\bf{5.4 Application to Laurent series.}}
+Let $f(z)$ be analytic in a punctured disc $0<|z|<1$.
+If $0<r<1/2$ and $|z|=r$
+we find estimates for harmonic measures as follows.
+To each $0<\epsilon <r$
+we have the annulus $\epsilon <|z|<1/2$
+and put
+\[
+\omega(z)=
+ \frac{1}{\log\,\frac{1}{2\epsilon}}\cdot \log \frac{|z|}{\epsilon}
+ \]
+This yields a harmonic function  and we conclude that
+\[ 
+\mathfrak{m}\uuu z(T\uuu *)=
+ \frac{1}{\log\,\frac{1}{2\epsilon}}\cdot \log \frac{2r}{2\epsilon}=1+
+ \frac{\log 2r}{\log\,\frac{1}{2\epsilon}}
+\]
+where $T\uuu *$ is the circle $|z|=1/2$.
+It follows that the harmonic measure with
+respect to the inner circle $T\uuu \epsilon=|z|=\epsilon$
+becomes
+\[ 
+\mathfrak{m}\uuu z(T\uuu \epsilon)=
+1\vvv \mathfrak{m}\uuu z(T\uuu *)=
+ \frac{\log \frac{1}{2r}}{\log\,\frac{1}{2\epsilon}}\tag{1}
+\]
+Suppose now that $f(z)$ is bounded in the punctured disc with a maximum norm
+$M$. At the same time we consider the maximum norm
+of $|f|$ on the circle $|z|=1/2$
+which we denote by $M\uuu *$.
+Since $\log\,|f|$ is subharmonic it follows from
+(1) that we have
+\[
+\log\,|f(z)|\leq \log M\uuu *+
+M\cdot  \frac{\log \frac{1}{2r}}{\log\,\frac{1}{2\epsilon}}\tag{2}
+\]
+This inequality holds for every $|epsilon>0$ and since
+$\frac{1}{2\epsilon}\to+\infty$ we conclude that
+$\log\,|f(z)|\leq \log M\uuu *$ which entails that
+\[
+|f(z)|\leq M\uuu *\tag{3}
+\]
+The point is that (3) does not depend upon $M$. Now we give
+an application:
+\medskip
+
+\noindent
+{\bf{5.5 Theorem.}}
+\emph{Let $f$ be an analytic function in the punctured disc
+$0<|z|<1$ where $f$ and all is derivatives $\{f^{(n)}\}$ are bounded.
+Then $f$ extends
+to an analytic function in the disc $|z|<1$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+Let $M$ be the maximum norm of $f$ in $0<|z|<1$.
+If $n\geq 1$ then Cauchy's inequality entails that
+
+\[
+|f^{(n)}(z)|\leq n\,!\cdot 2^n\cdot M\tag{i}
+\] 
+for each $|z|=1/2$.
+Using (3) applied to the analytic function $f^{(n)}$ it follows that
+(i) holds for all $0<|z|<1/2$.
+Now we consider the series expansion
+at $z=1/4$:
+
+\[ 
+f(1/4+z)= \sum\, \frac{f^{(n)}(1/4)}{n\,!}\cdot z^n\tag{ii}
+\]
+Since (i) hold with $z=1/4$ we see that the series (ii) has a radius of convergence which is 
+at least $1/2$ which implies that $f(z)$ extends beyond $z=0$.
+\bigskip
+
+\noindent
+
+\centerline {\emph{5.6 Proof of …ksendal's theorem.}}
+\bigskip
+
+\noindent
+We shall interpretate harmonic measures
+via the hitting probability
+for a Browninan motion.
+To begin with we consider the following situation.
+Let $\delta>0$
+and  start a Brownian motion a point $p$ with $|p|=\delta$.
+Suppose also that there is a closed subset
+$\Gamma$ on a circle $|z|=r$ for some $\delta/2\leq r<3\delta/4$
+whose linear measure is $(1\vvv \epsilon)\cdot 2\pi r$
+for some $0<\epsilon<1$.
+This set is viewed as an obstacle and we seek the probability that the
+Brownian motion reaches some point on  the circle $|z|=\delta/2$ before it
+has hit $\Gamma$ which
+means that a Brownian path during passages
+through $|z|=r$ must stay in one of the open intervals
+on this circle which form the open complement of
+$\Gamma$.
+With this in mind one has
+
+\medskip
+
+\noindent
+{\bf{5.7 Proposition.}} \emph{There exists an absolute constant $C$
+which is independent of both $\delta$ and $\epsilon$ such that
+the survival probalility
+is $\leq C\cdot\epsilon$.}
+\medskip
+
+
+\noindent
+The result is 
+intuitively clear and for a formal proof we refer to XXX.
+There remains to see why Propostion 5.7 gives Theorem 5.0.
+To achieve this we study Lebesgue points on the compact set
+$\partial\Omega$ where we assume that its 2\vvv dimensional measure is
+$>0$ since otherwise Theorem 5.0 is trivial.
+With $C$ chosen as above we set
+\[
+\epsilon=\frac{1}{8C}\tag{1}
+\]
+For each positive integer $M$
+we let $K\uuu M$ be the subset of $\partial\Omega$ such that
+if $x\in K\uuu M$ then
+\[
+0<\delta\leq 2^{\vvv M}\implies
+\frac{|\partial\Omega\,\cap B\uuu z(\delta)|\uuu 2}{\pi\delta^2}\geq
+1\vvv \epsilon\tag{2}
+\]
+By Lebegue's Theorem we have
+\[ 
+\lim\uuu{M\to\infty}\, |\Omega\setminus K\uuu M|\uuu 2=0\tag{3}
+\]
+Next, fix a point $p\in \Omega$ and consider the 
+measure$\mathfrak{m}\uuu p$.
+We must show that this Riesz measure is singular and 
+from (3) it suffices to show that its restriction to
+$K\uuu M$ is singular for all $M$.
+Since the sets $\{K\uuu M\}$ increase with $M$ 
+it suffices to show this when we start from $M$\vvv values such that
+the distance of $p$ to 
+$\partial\Omega$ is strictly greater than
+$2^{\vvv M}$.
+By the general result in MEASURE
+the restriction $\mathfrak{m}\uuu p|K\uuu M$
+is singular if
+\[
+\lim\uuu{N\to\infty}\, 
+4^N\cdot 
+\mathfrak{m}\uuu p(B\uuu z(2^{\vvv N}))=0\tag{5}
+\] 
+for each $z\uuu *\in K\uuu M$.
+To prove (5) we consider integers $N\geq M+1$
+and identify
+$\mathfrak{m}\uuu p(B\uuu {z\uuu *}(2^{\vvv N}))$ with the 
+probability that
+a Brownian path starting at $p$ reaches
+the circle $|z\vvv z\uuu *|=2^{\vvv N}$
+before it has hit $\partial\Omega$.
+In order that such a path survives it must
+pass the circles $T\uuu k=|z\vvv z\uuu *|= 2^{\vvv k}$
+for every $M\leq k\leq N$.
+If the path has reached a point $p\in T\uuu k$
+the probability that it also reaches $T\uuu{k+1}$
+can be estimated above by
+Proposition 5.7. 
+Namely, for a given $k$
+we set
+
+\[
+\rho\uuu k=\max\uuu r\frac{1}{2\pi r}\cdot \, \text{Length of}\quad
+\partial \Omega\cap T\uuu r|
+\]
+where the maximum is taken when
+$2^{\vvv (k+1)}\leq r\leq
+3\cdot 2^{\vvv k}/4$.
+It follows that the area:
+\[
+|\Omega\cap B\uuu{z\uuu *}(2^{\vvv k}|\uuu 2\geq
+(1\vvv \rho\uuu k)\pi \cdot 2^{\vvv 2k}\cdot (9/16\vvv 1/4)
+\]
+On the other hand, since
+$z\uuu *\in K\uuu M$ we also have
+\[
+|\Omega\cap B\uuu{z\uuu *}(2^{\vvv k})|\uuu 2\leq
+\epsilon\cdot \pi\cdot 2^{\vvv 2k}
+\]
+It follows that
+
+\[
+1\vvv\rho\uuu k\leq \frac{16}{5}\cdot \epsilon\implies \rho\uuu k\geq
+1\vvv \frac{16}{5}\cdot \epsilon
+\]
+Hence we find a radius $r$ in the interval above
+where the length of
+$\partial \Omega\cap T\uuu r$ is at least
+$(1\vvv \frac{16}{5}\cdot \epsilon)\cdot 2\pi r$.
+This set is an obstacle and  Proposition  5.7
+together with the general principle in 5.1 imply that
+the probability to move from $p$ to a point on $T\uuu{k+1}$
+without reaching  $\partial\Omega$
+is majorized by
+\[ 
+C\cdot \frac{16}{5}\cdot \epsilon=\frac{1}{8}
+\]
+where (1) above gives the last inequality.
+At this stage we easily get (5).
+For in order to move from a point $p$ on the circle 
+$|z\vvv z\uuu *|= 2^{\vvv M}$
+to a point on $|z\vvv z\uuu *|= 2^{\vvv N}$
+we must survive the passage for each $k$ as above, i.e. we must survive
+a passage $N\vvv M\vvv 1$ many times.
+By (**) the probability for this survivial is estimated above by
+\[
+\frac{1}{8^{N\vvv M\vvv 1}}
+= 4^{\vvv N}\cdot 8^{M+1}\cdot 2^{\vvv N}
+\]
+It follows that
+
+\[
+4^N\cdot 
+\mathfrak{m}\uuu p(B\uuu z(2^{\vvv N}))\leq  8^{M+1}\cdot 2^{\vvv N}
+\]
+With $M$ fixed the right hand side tends to zero with $N$ and hence (5) follows which finishes the proof of …ksendal's theorem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf 6. Green's functions.}
+\bigskip
+
+\noindent
+Let $\Omega$ be a bounded and connected set
+of class $\mathcal D(C^1)$.
+Let $z_*\in\Omega$ which gives 
+the continuous boundary function
+\[ 
+\zeta\to\text{Log}\,|\zeta-z_*|\tag{1}
+\]
+In $\Omega$ we get the unique harmonic function
+whose boundary function is (1). It depends upon $z_*$ and is denoted by
+$H(z_*;z)$ where 
+$z$
+is the "active variable".
+Keeping $z_*$ fixed
+the values of $H$ inside $\Omega$ are recaptured by the harmonic measure:
+
+\medskip
+
+\[ 
+H(z_*;z)=
+\int_{\partial\Omega}\,
+\log\,|\zeta-z_*|\, d\mathfrak {m}_z(\zeta)\quad\colon\,z\in\Omega\tag{2}
+\]
+\medskip
+
+\noindent
+Keeping $z$ fixed
+the measure $\mathfrak{m}\uuu z$ can be weakly approximated by a sequence of discrete measures of the form $\rho=\sum\, p\uuu k\cdot \delta\uuu{\zeta\uuu k}$
+where $\sum\, p\uuu k=1$ and $\{\zeta\uuu k\}$ is a finite subset of
+$\partial\Omega$.
+Since the functions
+\[
+ z\uuu *\mapsto \log| z\vvv z\uuu*|
+\]
+are harmonic in $\Omega$
+for each $\zeta\in\partial\Omega$ it follows that
+the functions
+\[ 
+\zeta\uuu *\mapsto H(z\uuu *;z)
+\] 
+are harmonic for every fixed $z$.
+It turns out that one has  symmetry.
+\bigskip
+
+\noindent
+{\bf 6.1. Theorem.}
+\emph{For each pair of points $z_*,z$ in $\Omega$ one has:}
+\[ 
+H(z_*,z)=H(z,z_*)
+\]
+
+
+\noindent
+\emph{Proof.}
+By the construction of the $H$\vvv function we have
+\[ 
+H(z\uuu *,\zeta)=\log|\zeta\vvv z\uuu *|
+\quad\colon\quad \zeta\in\partial\Omega\tag{1}
+\]
+Next,
+for  each pair of distinct points
+in $\Omega$ we set:
+\[ 
+G(z_*;z)=H(z_*;z)-\log\,|z-z_*|\quad\colon\, z_*\neq z\tag{2}
+\]
+
+\noindent
+Then (1) entails that
+\[ 
+G(z_*;\zeta)=0\quad\colon\,\zeta\in\partial\Omega\tag{3}
+\]
+
+\noindent
+At the same time
+the function of $z$ defined by
+\[ 
+-G(z;z_*)=
+\log\,|z-z_*|-H(z_*;z)
+\] 
+is subharmonic
+in $\Omega$ and tends to $-\infty$ as $z\to z_*$.
+By (3) it vanishes on $\partial\Omega$ so by the maximum principle for
+subharmonic functions it is $<0$ in $\Omega\setminus z_*$ which means that
+\[
+G(z_*;z)>0\quad\colon\, z\in\Omega\setminus z_*\tag{4}
+\]
+\medskip
+Next, since  $\log \,|z-z_*|$ is symmetric we have:
+\[
+G(z_*;z)-G(z;z_*)=H(z_*;z)-H(z;z_*)
+\]
+
+\medskip
+
+\noindent
+Keeping $z_*$ fixed (3) and (4)  show that the left hand side
+is $<0$ when $z\in\partial\Omega$. Hence the maximum principle
+for harmonic functions gives
+\[
+G(z_*;z)-G(z;z_*)\geq 0
+\]
+Reversing the role the reader finds the opposite inequality and
+Theorem 6.1 follows.
+\medskip
+
+\noindent
+{\bf 6.2 Remark.} The $G$-function is called the Green's function 
+attached to the domain $\Omega$.
+Theorem 6.1 implies also that Green's function  also enjoys 
+symmetry,  i.e. 
+\[
+G(z_*,;z)= G(z;z_*)\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf 6.3 Harmonic measure and normal derivatives of $G$.}
+It turns out that $G$ recaptures harmonic measures.
+Keeping $z_*$ fixed we know that
+$z\to G(z_*;z)$ is positive in $\Omega$
+and tends to zero as $z\to\partial\Omega$.
+Now  
+we can apply Green's formula starting with
+an arbitrary harmonic function $u$ in $\Omega$
+which extends to a $C^1$-function on the boundary.
+More precisely, for a small $\epsilon>0$
+we remove the disc $D\uuu\epsilon=|z\vvv z\uuu *|\leq\epsilon$
+and with $\Omega\uuu\epsilon=
+\Omega\setminus D\uuu\epsilon$ we apply
+Green's formula  to the pair $u$ and $G(z\uuu *,\zeta)$. This gives
+the equality
+\[
+\int_{\partial\Omega\uuu\epsilon}\,
+u(\zeta)\cdot \partial G/\partial{\bf{n}}(\zeta)\cdot ds(\zeta)=
+\int_{\partial D\uuu\epsilon}\,
+G(z\uuu *,\zeta)\cdot \partial u/\partial {\bf{n}}(\zeta)\cdot ds(\zeta)
+\]
+where we used that $G(z\uuu *,\zeta)=0$
+on $\partial\Omega$.
+\medskip
+
+\noindent
+Notice that we have taken outer normals with respect to the domain
+$\Omega\uuu\epsilon$.
+A passage to the limit when  $\epsilon\to 0$
+gives the equality
+ \[ 
+ u(z\uuu *)
+ =\frac{1}{2\pi}\cdot
+ \int_{\partial\Omega}\,
+u(\zeta)\cdot \partial G/\partial{\bf{n\uuu *}}\cdot ds(\zeta)\tag{*}
+\]
+where we have taken the \emph{inner normal} of
+$G(z\uuu *,\zeta)$ along $\partial\Omega$.
+This choice is natural since $G>0$ in $\Omega$ so that  the inner normal is 
+non\vvv negative which means that we obtain
+a representation by a
+non\vvv negative measure.
+Hence we  get the equality
+\[
+d\mathfrak{m}\uuu{z\uuu *}= 
+\partial G/\partial{\bf{n\uuu *}}\cdot ds\tag{**}
+\] 
+where $ds$ is the arc\vvv length measure on the boundary.
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf 6.5 Example.} Let $\Omega=D$ be the unit disc.
+In this case we have:
+\[ 
+G(z,\zeta)=
+\text{Log}\,\frac{|1-z\cdot \bar\zeta|}{|z-\zeta|}
+\]
+\medskip
+
+\noindent
+With $z_*\in D$ kept fixed
+and $\zeta=e^{i\theta}$ is on the boundary circle $T$
+we see  the inner  normal derivative becomes
+\[
+\frac{d}{dr}\bigr[(\text{Log}\,\frac{|re^{i\theta}-z_*|}
+{|1-re^{-i\theta}\cdot z_*|}\bigl]
+\]
+where this  derivative is evaluated when $r=1$.
+At the same time the arc-length measure is $d\theta$.
+The reader may now verify that
+the formula in (**)  corresponds to Poisson's formula
+for the harmonic extension of the boundary function
+$u(e^{i\theta})$.
+\bigskip
+
+
+\noindent
+{\bf{6.6 Harmonic measures with respect to arcs.}}
+Let $\Omega$  be a domain in the class $\mathcal D(C^1)$
+and 
+$\gamma$  a simple $C^1$\vvv curve
+which appears as a compact subset of $\Omega$.
+compact subset of $\Omega$.
+The  Dirichlet problem has a solution for the domain
+$\Omega\setminus \gamma$.
+Let $H$ be harmonic in
+$\Omega\setminus\gamma$ with continuous boundary
+values.
+Along $\gamma$  the outer normal derivative
+of $H$ is taken from two sides while we apply Green's formula.
+See XXX for a detailed discussion.
+If $z\uuu 0\in\Omega\setminus \gamma$
+we apply Green's formula to $H(\zeta)$ and $G(z\uuu 0,\zeta)$
+while a small disc centered at $z\uuu 0$ is removed.
+Since $G=0$ on $\partial\Omega$ we obtain 
+\[
+\int\uuu{\partial\Omega} H\cdot \partial G(z\uuu 0,\zeta)
+/\partial{\bf{n}}\cdot ds+
+\int\uuu\gamma  H\cdot \partial G(z\uuu 0,\zeta)/\partial{\bf{n}}\cdot ds
++\int\uuu{\partial D\uuu\epsilon}
+H\cdot \partial G(z\uuu 0,\zeta)/\partial{\bf{n}}\cdot ds=
+\]
+\[
+\int\uuu\gamma  G(z\uuu 0,\zeta)\cdot \partial H/\partial{\bf{n}}\cdot ds
++\int\uuu{\partial D\uuu\epsilon}
+G(z\uuu 0,\zeta)\cdot \partial H/\partial{\bf{n}}\cdot ds
+\]
+Passing to the limit as $\epsilon\to 0$ 
+we get the equality
+\[
+\int\uuu{\partial\Omega} H\cdot \partial G(z\uuu 0,\zeta)
+/\partial{\bf{n}}\cdot ds+
+\int\uuu\gamma  H\cdot \partial G(z\uuu 0,\zeta)/\partial{\bf{n}}\cdot ds
+\vvv 2\pi\cdot H(z\uuu 0)
+=\int\uuu\gamma  G(z\uuu 0,\zeta)\cdot \partial H/\partial{\bf{n}}\cdot ds
+\tag{1}
+\]
+Now $\zeta\mapsto G(z\uuu 0,\zeta)$
+is harmonic in a neighborhood of $\gamma$
+and hence quite regular which implies that the outer normal derivatives
+along the two sides of $\gamma$ cancel each other so
+the second integral above vanishes and there remains
+the equality
+\[
+\int\uuu{\partial\Omega} H\cdot \partial G(z\uuu 0,\zeta)
+/\partial{\bf{n}}\cdot ds\vvv 2\pi\cdot H(z\uuu 0)
+=\int\uuu\gamma  G(z\uuu 0,\zeta)\cdot \partial H/\partial{\bf{n}}\cdot ds\tag{2}
+\]
+In particular we can apply (*) when $H=0$ on $\partial\Omega$ and 
+identically one on $\gamma$.
+This means that $H(z\uuu 0)$ evaluates the harmonic measure at
+$z\uuu 0=$ with respect to the compact set $\gamma$
+inside the domain $\Omega$.
+We set $H(z)= w\uuu\gamma(z)$
+where one should consider $\Omega$ as fixed while $\gamma$
+is a simple curve situated inside $\Omega$.
+Since $w\uuu\gamma =0$ on $\partial\Omega$
+we arrive at the formula
+\[
+w\uuu\gamma(z\uuu 0)=
+\frac{1}{2\pi}\cdot  
+\int\uuu\gamma  G(z\uuu 0,\zeta)\cdot 
+\partial w\uuu\gamma /\partial{\bf{n\uuu *}}\cdot ds\tag{3}
+\]
+where we use the inner normal of $w\uuu\gamma$.
+Denote by $\sigma_\gamma$
+the non\vvv negative measure defined by
+the density $\frac{1}{2\pi}\cdot
+\partial w\uuu\gamma /\partial{\bf{n\uuu *}}\cdot ds$.
+So we can write
+\[
+w\uuu\gamma(z\uuu 0)=
+\int\uuu\gamma  G(z\uuu 0,\zeta)\cdot 
+d\sigma\uuu\gamma(\zeta)\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+Notice that   (*) holds for every point
+$z\uuu 0\in\Omega\setminus\gamma$
+while the non\vvv negative measure $\sigma\uuu\gamma$ is fixed.
+\bigskip
+
+\noindent
+\centerline
+{\bf{6.7  Beurling's projection theorem.}}
+\bigskip
+
+\noindent
+The formula (*) in (6.6) has several  applications.
+We shall give one  which is due to Beurling.
+Let $\Omega$ be the unit disc $D$
+and consider an arc $\gamma$ inside $D$ which does not contain the origin.
+Keeping $\gamma$ fixed we set $\sigma=\sigma\uuu\gamma$.
+Now we have the circular projection
+\[ 
+z\mapsto |z|\tag{1}
+\] 
+which sends $\gamma$ onto some interval $[a,b]$
+on the positive $x$\vvv axis with $0<a\leq b<1$.
+The exceptional equality $a=b$ holds if $\gamma$ happens 
+an arc on the circle $|z|=a$.
+As illustrated by a figure the map (1) is in general
+not bijective.
+However, there always exists the push\vvv forward measure 
+denoted by $\sigma^*$ which is supported by $[a,b]$ and 
+\[
+\int\uuu a^b\, \phi(s)\cdot d\sigma^*(s)=
+\int\uuu\gamma\, \phi(|\zeta|)\cdot d\sigma(\zeta)\tag{2}
+\]
+holds for every $\phi\in C^0[a,b]$.
+We consider only the case $a<b$
+and assume
+also 
+the measure $\sigma^*$ is absolutely continuous.
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that
+$\sigma^*$ is absolutely continuous if
+the
+arc
+$\gamma$ is  real\vvv
+analytic.
+\medskip
+
+\noindent
+Next, 
+consider the function
+\[ 
+V(z)= \int\uuu a^b\, G(z,s)\cdot d\sigma^*(s)\tag{3}
+\]
+It is clear that $V(z)$ is a harmonic function in
+$D\setminus\gamma$ and $V=0$ on
+the unit circle $T$. 
+Since $z\mapsto g(z,\zeta)$ 
+are super\vvv harmonic for every $\zeta$ and $\sigma^*\geq 0$, it
+follows that $V(z)$ is super\vvv harmonic in the whole disc $D$.
+
+\medskip
+
+\noindent
+{\bf{6.7.1 Proposition.}}
+\emph{For each $a\leq s\uuu *\leq b$ one has}
+\[
+\liminf\uuu{z\to s\uuu *}\,  V(z)\geq 1
+\]
+\emph{where the $\liminf$ is taken as $z\in D\setminus
+[a,b]$ approach $s\uuu *$.}
+\medskip
+
+\noindent
+\emph{Proof.}
+We have $s\uuu *=|z\uuu *|$ for some $z\uuu *\in \gamma$
+where $z\uuu *=s\uuu *\cdot e^{i\theta}$
+for some $\theta$.
+If $\liminf$ is taken along some sequence $\{z\uuu k$
+we put $z\uuu k^*= |z\uuu k|\cdot e^{i\theta}$
+which implies that $ z\uuu k^*\to z\uuu *$.
+Since $w\uuu \gamma=1$ on $\gamma$
+it follows that
+\[
+\lim \,\int\, G(z\uuu k^*,\zeta)\cdot d\sigma(\zeta)=1\tag{i}
+\]
+Since $\sigma\geq 0$ the inequality for $G$ in (xx)
+entails that the integrals above are majorized
+by
+\[
+\int\, G(|z\uuu k^*|,|\zeta|)\cdot d\sigma(\zeta )=
+\int\, G(|z\uuu k|,s)\cdot d\sigma^*(s)
+\tag{ii}
+\]
+where the last equality used (2) above
+and the equalities $|z^*\uuu k|= z\uuu k|$
+At the same time we have
+\[
+V(z\uuu k)=\int\uuu a^b\, G(z\uuu k,s)\cdot d\sigma^*(s)\tag{iii}
+\]
+Now
+we have the 
+limit formulas
+\[ 
+\lim\, z\uuu k=\lim |z\uuu k|= s\uuu *
+\]
+We have assumed
+that $d\sigma^*(s)$ is an absolutely continuous measure
+Moreover, 
+it is clear the functions $s\mapsto G(z,s)$ are
+$L^1$\vvv functions on $[a,b]$
+for every $z\in D$ which in addition
+satisfy
+\[
+\lim \int\uuu a^b\, |G(z,s)\vvv G(z',s)|\cdot d\sigma^*(s)=0
+ \] 
+ when $|z|\vvv z'|\to  0$. 
+ Since $|z\uuu k\vvv |z\uuu k|\to 0$
+we have
+\[
+\lim V(z\uuu k)= \lim V(|z\uuu k|)
+\] 
+Finally,  the majorization from (ii) and the limit formula
+(i) give  Proposition 6.7.1.
+\bigskip
+
+\noindent
+{\bf{6.7.2 An estimate for harmonic measures.}}
+The inequality in Proposition 6.7.1  implies that the
+$V$\vvv function majorizes 
+the harmonic measure function with respect to the interval $[a,b]$.
+Hence we get the inequality
+\[ 
+w\uuu{[a,b]}(\vvv [z|)\leq V(\vvv |z|)=\int\uuu a^b\, G(\vvv |z|,s)\cdot
+d\sigma^*(s)\tag{i}
+\]
+for each $z\in D$.
+By (2) the right hand side is equal to
+\[ 
+\int\uuu\gamma\, G(\vvv |z|,|\zeta|)\cdot d\sigma(\zeta)\tag{ii}
+\]
+Now the inequality from (xxx) shows that (ii) is majorized by
+\[
+\int\uuu\gamma\, G(z,\zeta)\cdot d\sigma(\zeta)=
+w\uuu\gamma(z)
+\tag{iii}
+\]
+Hence we arrive at the following
+\medskip
+
+\noindent
+{\bf{6.7.3 Theorem.}}
+\emph{For every $z\in D$ one has the inequality}
+\[
+w\uuu{[a,b]}(\vvv |z|)\leq w\uuu\gamma(z)
+\]
+\emph{where $[a,b]$ is the circular projection of $\gamma$.}
+\bigskip
+
+\noindent
+{\bf{Remark.}}
+The result above gives the starting point fora far\vvv reaching
+study concerned with estimates of harmonic measures.
+We refer to Section 9 in chapter III in [Garnett\vvv Marshall]
+for further  results of this nature and mention that [ibid]
+also contains several instructive
+exercises and  references to
+the literature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline {\bf 7. The Neumann problem.}
+
+\bigskip
+
+\noindent
+Let $\Omega$ be a domain in
+the class $\mathcal D(C^1)$
+bordered by $p$ many closed Jordan curves
+$\Gamma_1,\ldots,\Gamma_p$ where
+$p\geq 2$.
+Given a continuous function
+$f$ on $\partial\Omega$
+we seek a harmonic function $v$ in
+$\Omega$ whose outer normal derivative satisfies
+\[
+\partial v/\partial{\bf{n}}(p)=f(p)\quad\colon\quad p\in\partial\Omega\tag{*}
+\]
+Since
+\[ 
+\int\uuu{\partial\Omega}\partial v/\partial{\bf{n}}\cdot ds=0
+\] 
+hold for every harmonic function a necessary condition in order that
+(*) can  be solved is that
+\[ 
+\int\uuu{\partial\Omega}\,f\cdot ds=0\tag{**}
+\] 
+
+
+
+\noindent
+We are going to prove that (*) has a unique solution when
+$f$ satisfies (**).
+Before we enter the proof we
+establish a  mean-value inequality
+which is due to Schwarz. Namely, 
+let $v$ be harmonic in $\Omega$ and suppose it extends to a
+$C^1$-function on the boundary. Let
+$\gamma$ be an arc of one boundary
+curve, say $\Gamma_1$, and suppose that
+\[
+\partial v/\partial{\bf{n}}(p) =0\,\,\text{for all}\,\,p\in\gamma\tag{i}
+\]
+If $a$ and $b$ are the two end-points 
+of $\gamma$ we can construct
+a closed Jordan curve
+$J$ where $\gamma$ appears as an arc and 
+$J\setminus\gamma$ is a simple Jordan curve contained in
+$\Omega$. As explained by a figure we may construct
+$J$ so that $a$ and $b$ are two corner points and otherwise $J$ is of class
+$C^1$.
+With this given one has the following result:
+\medskip
+
+\noindent
+{\bf 7.1 Schwarz integral formula.}
+\emph{Assume that (i) above holds. Then, for every point
+$p\in\gamma$ there exists a probability measure $\mu_p$ supported by
+$J\setminus\gamma$ such that}
+\[
+v(p)=\int_{J\setminus\gamma}\, v(z)\cdot d\mu_p(z)
+\]
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Riemann's mapping theorem gives
+a conformal map $\phi$ from the Jordan domain bordered by
+$J$ onto the upper half-disc $D^+$ where
+$|w|<1$ and 
+$\mathfrak{Im}(w)>0\}$, 
+such that $\phi(\gamma)$ is the real interval
+$(-1,1)$ while $\phi(J\setminus\gamma)$
+is the half circle.
+Then $V=v\circ\phi^{-1}$
+is harmonic in
+$D^+$ and with the complex coordinate $\zeta=\xi+i\eta$
+in $D^+$ we see that
+(i) means that
+\[
+\frac{\partial V}{\partial\eta}(\xi,0)=0\quad\colon\quad -1<\xi<1\,.\tag{ii}
+\]
+Let $U$ be the harmonic conjugate of $V$ and consider the analytic function
+\[ 
+F(\zeta)=U+iV
+\]
+The Cauchy-Riemann equations and (ii) give
+$\frac{\partial U}{\partial\xi}(\xi,0)=0$.
+Hence $U$ is a constant  on this real interval and since
+we can choose this conjugate harmonic function up to a constant we
+may assume that $U(\xi,0)=0$.
+Hence Schwarz'  reflection principle can be applied, i.e. we find
+an analytic function $\hat F(\zeta)$ defined in the unit disc
+$|\zeta|<1$ with
+\[
+\hat F(\zeta)=\bar F(\bar\zeta)\quad\colon\quad \, \mathfrak{Im}(\zeta)<0
+\]
+If $-1<\xi<1$ we  represent $\hat F(\xi)$ by the Poisson integral over
+$|\zeta|=1$ and since $\xi$ is real we get
+\[
+\hat F(\xi)=
+2\cdot\int_0^\pi\, 
+P(\xi,e^{i\theta})\cdot F(e^{i\theta})\cdot d\theta
+\]
+Taking the real part we can write
+\[ 
+V(\xi)= 2\cdot \int_0^\pi\, 
+P(\xi,e^{i\theta})\cdot V(e^{i\theta})\cdot d\theta
+\]
+Here $2\cdot \int_0^\pi\, P(\xi,e^{i\theta})d\theta=1$. So 
+$V(\xi)$ is a convex sum of values of $V$ taken on
+the half-circle $\phi(J\setminus\gamma)$.
+Returning to the $v$-function   this means that there exists a probability measure
+$\mu_\xi$ supported by
+$J\setminus\gamma$ such that
+\[
+v(\phi^{-1}(\xi))=
+\int_{J\setminus\gamma}\, v(z)\cdot d\mu_\xi(z)
+\]
+Since  $\phi^{-1}(\xi))$ corresponds to any preassigned point on
+$\gamma$ we have proved Schwarz'  integral formula. 
+\medskip
+
+
+\noindent
+{\bf 7.2 A uniqueness result.}
+Let $v$ be harmonic in
+$\Omega$ and suppose that
+\[
+\frac{\partial v}{\partial{\bf{n}}}(p)=0\,\,\text{holds for every}
+\,\,p\in\partial\Omega
+\]
+\medskip
+
+\noindent
+Then Schwarz'  integral formula  and 
+the maximum principle for harmonic function
+implies that
+$v$ is a constant. In fact, let
+$M$ be the maximum of $v$ over
+$\partial\Omega$ and choose $p\in\partial\Omega$
+where $v(p)=M$.  
+If $v$ is not a constant we have seen in XX that
+$v(q)<M$ for every
+$q\in\Omega$. This strict inequality means that we cannot
+obtain a measure $\mu_p$  in the integral formula above.
+On the other hand we can find such a non-trivial formula when
+$\frac{\partial v}{\partial{\bf{n}}}$ is identically zero on
+$\partial\Omega$. Hence  $v$ must be  reduced to a constant.
+This proves the uniqueness part for a solution to the equation (*).
+Their remains to prove the existence. Before this is done
+we establish another result of independent interest.
+
+\bigskip
+
+\noindent
+{\bf 7.3 A non-singular matrix for  harmonic measure functions.}
+To each boundary $\Gamma_i$
+we have the harmonic function $H_i$ in
+$\Omega$ with boundary value one on
+$\Gamma_i$ while $H_i=0$ on the remaining
+boundary curves. Let $\Gamma_p$ be the outer curve
+and  consider the functions
+$H_1,\ldots,H_{p-1}$. We get the
+$(p-1)\times(p-1)$-matrix $A$
+with elements
+\[ 
+a_{j,\nu}=
+\int_{\Gamma_\nu}\,
+\frac{\partial H_j}{\partial{\bf{n}}}\cdot ds\quad\colon\, 1\leq j,\nu\leq p-1\tag{i}
+\]
+\medskip
+
+\noindent
+{\bf Proposition.} \emph{7.4 The matrix $A$ is non-singular.}
+\medskip
+
+\noindent
+\emph{Proof.}
+ Assume the contrary. This gives some $p-1$-tuple
+ $c_1,\ldots,c_{p-1}$ which are not all zero such that
+ \[
+ c_1\cdot a_{1,\nu}+\ldots+c_{p-1}\cdot a_{p-1,\nu}=0
+ \quad\colon\quad 1\leq \nu\leq p-1\tag{ii}
+ \]
+Set $V=c_1H_1+\ldots+c_{p-1}H_{p-1}$.
+ Then (i) and (ii) give
+ \[
+ \int_{\Gamma_\nu}\,
+\frac{\partial V}{\partial{\bf{n}}}\cdot ds=0
+\quad\colon\quad 1\leq \nu\leq p-1\tag{iii}
+\]
+From (xx) it follows that
+$V$ has a harmonic conjugate
+$U$ and we get the analytic function
+$F=U+iV$.
+Next, the \emph{tangential} derivative of 
+a harmonic measure function $H_j$
+is  identically zero on every boundary
+curve.
+By the Cauchy- Riemann  equations it follows that
+the normal derivative of $U$ is identically zero on
+every boundary curve and then the
+uniqueness result in 7,2 above implies
+that 
+$U$ is a constant. But then $V$ would also be reduced
+to a constant which obviously cannot occur when
+some $c_k\neq 0$.
+Hence the $A$-matrix is non-singular.
+
+
+\bigskip
+
+
+\noindent{{\bf{7.5 A consequence.}}
+Now we consider the whole $p$-tuple $H_1,\ldots,H_p$
+and the $p\times p$-matrix $B$ with elements
+
+\[ 
+b_{j\nu}=
+\int_{\Gamma_\nu}\,
+\frac{\partial H_j}{\partial{\bf{n}}}\cdot ds\quad\colon\, 1\leq j,\nu\leq p\tag{i}
+\]
+By xx we have $b_{1\nu}+\ldots+b_{n\nu }=0$ for every $\nu$
+and therefore the $B$-matrix must be singular,
+From Proposition xx its rank is $p-1$. More precisely, the
+column vectors when $1\leq \nu\leq p-1$ are linearly independent.
+Hence we can find complex numbers
+$\rho_1,\ldots,\rho_{p-1}$ such that
+
+\[
+\int_{\Gamma_\nu}\,
+\frac{\partial H_p}{\partial{\bf{n}}}\cdot ds=
+\sum_{j=1}^{p-1}\,\rho_j\cdot 
+\int_{\Gamma_\nu}\,
+\frac{\partial H_j}{\partial{\bf{n}}}\cdot ds
+\quad\colon\, 1\leq  \nu\leq p\tag{ii}
+\]
+\medskip
+
+
+
+
+
+
+\centerline {\bf 7.6 Solution to the Neuman problem.}
+\medskip
+
+
+
+\noindent
+Since the equation (*) is linear it suffices by additivity to show that
+it has a solution when the function $f$ is identically zero on
+$(p-1)$ many boundary curves and $\neq 0$ on one of them.
+Consider the case when
+$f=0$ on the inner curves. Notice that (**) entails that
+
+\[
+\int_{\gamma_p}\, f\cdot ds=0\tag{1}
+\]
+where $ds$ is the arc-length measure along $\gamma_p$.
+Fix a point $z_*$ on $\gamma_p$ 
+and we move in the positive direction of this oriented curve
+to construct a primitive function with respect to $s$, i.e. we 
+obtain a continuous function $F$ on $\gamma_p$ such that
+$F(z_*)=0$ and its  derivative with respect to
+$s$ is equal to $f$ on $\gamma\uuu p$.
+.Next, we solve the Dirichlet problem 
+and find $G$ where
+$\Delta(G)=0$ in $\Omega$ while $G=F$ on $\gamma_p$ and $G=0$ 
+on the inner boundary
+curves.
+By 7.4 we can find constants $a_1,\ldots,a_{p-1}$ such that the function
+$g=G-(a_1H_1+\ldots+a_{p-1}H_{p-1})$ has a harmonic conjugate
+which we denote by $v$.
+Since $H_1,\ldots,H_{p-1}$  are constant functions on the boundary curves, 
+the tangential $g$-derivative is equal to that of $G$ along each
+boundary
+curve. From the construction of $G$ this means that
+the tangential $g$-derivatives are zero on all inner curves and
+equal to $f$ on the outer curve.
+Finally, if $v$ is the conjugate harmonic  function to $g$
+it follows that
+$v$ is a solution to (*).
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\centerline{\bf 8. An example from Hydro mechanics.}
+\bigskip
+
+\noindent
+{\bf Introduction.}
+Consider a stationary
+motion of an ideal  fluid in the plane which
+means that 
+the velocity vector $(u,v)$ at each point
+$(x,y)$ is independent of the time.
+We   also 
+assume that the fluid is  incompressible
+which means that whenever
+$\Omega $ is some domain, then
+\[
+\int_{\partial \Omega}\, (u\cdot {\bf{n}}_x+
+v\cdot {\bf{n}}_y\bigr)\cdot ds=0
+\]
+Stokes theorem implies  that the area integral
+\[
+\iint_\Omega\, (u_x+v_y)\cdot dxdy=0
+\]
+Since this holds for every small domain  the
+velocity vector satisfies the equation
+\[
+u_x+v_y=0\tag{*}
+\]
+This is the continuity equation for an incompressible fluid.
+Next, one defines the
+\emph{rotation}  by
+\[
+\rho=\frac{1}{2}(v_x-u_y)\tag{i}
+\]
+Assume that (*) holds in the whole plane which gives
+a function
+$\psi$ such that
+\[
+\frac{\partial\psi}{\partial x}=-v\quad \,\,\text{and}\,\,\quad  
+\frac{\partial\psi}{\partial y}=u\,.\tag{ii}
+\]
+
+\noindent
+From (i-ii) we get
+\[
+\Delta(\psi)+2\rho=0\tag{iii}
+\]
+
+\noindent
+{\bf{An example.}}
+Consider  the case when
+\[
+\lim_{x^2+y^2\to+\infty}\,
+(u,v)=(0,0)
+\]
+and there exists a bounded
+Jordan domain
+$\Omega$ such that
+\[
+\rho(x,y)=A=\text{a constant when }\,\,\,\, (x,y)\in\Omega
+\quad\text{and}\,\, \rho=0\,\,\text{in}\,\,{\bf{C}}\setminus\Omega
+\]
+
+\noindent
+Then the $\psi$-function satisfies:
+\[ \Delta(\psi)=0\,\,\text{outside}\,\,\Omega\quad\text{and}\quad
+\Delta(\psi)(x,y)=-2A\,\,\colon\,\,(x,y)\in\Omega\tag{1}
+\]
+\[ 
+\lim_{x^2+y^2\to\infty}\,
+\bigr[\bigl(\frac{\partial\psi}{\partial x}\bigr)^2+
+\bigl(\frac{\partial\psi}{\partial y}\bigr)^2\bigr]=0\tag{2}
+\]
+
+
+\noindent
+The Riesz representation formula for subharmonic functions gives:
+
+\medskip
+
+
+\noindent
+{\bf 8.1 Proposition.} \emph{The $\psi$-function is given by}
+
+\[
+\psi(x,y)=\frac{A}{\pi}\iint_\Omega\,
+\text{log}\,\frac{1}{|z-\zeta|}\cdot dxdy+C
+\]
+\emph{where $C$ is some constant.}
+
+\medskip
+
+\noindent
+Above we found a formula for the $\psi$-function. It turns out
+{the domain $\Omega$ cannot be arbitrary. Namely, one has:
+\medskip
+
+\noindent
+\bf 8.2 Theorem}. \emph{Under the assumptions above 
+$\Omega$ is a disc.}
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Since the motion is stationary
+it follows from
+the general physical principle
+by Helmholtz that the boundary
+curve
+$\partial\Omega$
+must be a streamline. By (ii) above this means that
+the $\psi$-function is a constant $C_0$ on $\partial\Omega$, i.e. we have
+\[ 
+\frac{A}{\pi}\iint_\Omega\,
+\text{log}\,\frac{1}{|z-\zeta|}\cdot d\xi d\eta=C_0\quad\text{for all}\,\, z\in
+\partial\Omega\tag{**}
+\]
+
+
+\noindent
+But then the  general result below
+shows that
+$\Omega$ is a disc. 
+
+
+\newpage
+
+\noindent
+{\bf 8.3 An isoperimetric result.} Let $f(r)$ be a positive function defined on
+$r>0$ which is strictly decreasing.
+Next, 
+for 
+an arbitrary   Jordan domain $\Omega$ with a $C^1$-boundary
+we define the function
+\[ 
+F_\Omega(z)=
+\iint_\Omega\, f(|z-\zeta|)\cdot d\xi d\eta\tag{*}
+\]
+With these notations Theorem 8.2  is a special case of
+the result below applied to the special function
+\[
+f(r)=\text{Log}\,\frac{1}{r}
+\]
+\medskip
+
+\noindent
+{\bf 8.5 Theorem.}
+\emph{If $\Omega$ is a Jordan domain such that
+$F_\Omega(z)$ is a constant function on
+$\partial\Omega$ then
+$\Omega$ is a disc.}
+\medskip
+
+\noindent
+{\bf Remark.} 
+We refer to
+XXX for the proof of this isoperimetric result.
+Notice that 
+we can express Theorem 8.2 in physical terms as follows:
+\medskip
+
+\noindent
+{\bf 8.6 Theorem.} \emph{Every stationary motion 
+of an incompressible fluid
+with constant rotational
+density and a simply connected
+(Querschnitt) is circular.}
+\medskip
+
+
+\newpage
+
+
+\centerline{\bf{9. A differential inequality}}
+\bigskip
+
+
+\noindent
+In this section we  expose a result from Carleman's  article
+\emph{Sur les fonctions inverses des fonctions entires d'ordre fini}
+which was published in 1920
+and gave   the first example  how the principle of harmonic
+majorisation can be applied in a  fruitful manner.
+Here is the situation: A connected domain $\Omega$ is given. It is contained
+in $\mathfrak{Re}(z)>0$ and for every $\xi>0$ we assume that the
+set
+\[ 
+\ell(\xi)=\{ y\quad\colon\, (\xi,y)\in \Omega\}\tag{1}
+\] 
+is bounded. Hence $\ell(\xi)$
+is some union of open intervals. We  assume that
+that $\ell(\xi)\neq\emptyset$ for all $\xi$ and
+the sum of the lengths of the intervals 
+yields a positive function
+$h(\xi)$.
+Next, let $f(z)$ be an analytic function in $\Omega$ with maximum norm
+$|f(z)|\uuu\Omega \leq 1$.
+For every $\xi>0$ we set
+\[ 
+M(\xi)=\max_{z\in\ell(\xi)}\, |f(z)|\tag{2}
+\]
+We shall assume that $M(\xi)$ tends to $+\infty$ as $\xi$ increases.
+In particular there exists some $\xi_*$ such that $M(\xi_*)>1$.
+The maximum principle  $f$ shows that 
+$\xi\mapsto M(\xi)$
+is non-decreasing when $\xi\geq \xi_*$.
+\medskip
+
+\noindent
+{\bf{9.1 Theorem.}} \emph{One has the inequality}
+\[
+\log \,M(\xi)\geq
+ \log \,M(\xi_*)\cdot \text{exp}
+ \bigl[ \frac{4}{\pi}\int_{\xi_*}^\xi\, \frac{dt}{h(t)}\bigr]\quad\text{for all}\quad
+ \xi>\xi_*
+ \]
+
+
+\noindent
+\emph{Proof.}
+Let $\xi>\xi_*$ and choose  $p\in\ell(\xi)$ where
+$M(\xi)=|f(p)|$ and
+put
+\[ 
+U(x+iy)=\log\, |f(x+iy)|\tag{i}
+\]
+Choose some  $\xi^*>\xi$ and let
+$D$  be the connected subdomain  of 
+the set
+\[
+\Omega\cap\{0<\mathfrak{Re}\, z<\xi^*\}
+\]
+which
+contains  $p$. In $D$ we 
+have the Green's function $G$ with a
+pole at $p$ while $G(z)$ is harmonic in
+$D\setminus\{p\}$ and  zero on
+$\partial D$. Next, in  $\partial D$ we have the portion
+\[ 
+L(\xi_*)=\partial D\cap \ell(\xi_*)
+\]
+\medskip
+
+\noindent With these notations we apply
+the general formula in XX to $G$ and
+$U$ which by
+¤ XX gives the  inequality
+
+\[ 
+2\pi\cdot  U(p)\leq
+\int_{L(\xi_*)}\,
+U\cdot \frac{\partial G}{\partial{\bf{n}}}\cdot ds\leq
+\log\, M(\xi_*)\cdot 
+\int_{L(\xi_*)}\,
+\frac{\partial G}{\partial{\bf{n}}}\cdot ds\tag{*}
+\] 
+where we have used that $U\leq 0$ on
+$\partial D\setminus L(\xi)$.
+Now we use the principle of harmonic majorisation 
+from ¤ XX. Namely,  consider the half-plane $\mathfrak{Re}\, z<\xi_*$
+and let $G^*$ be the Green's function for this half-plane with a pole at
+$p$. The majorisation principle from ¤ XX gives:
+\[
+ \frac{\partial G}{\partial{\bf{n}}}\leq
+  \frac{\partial G^*}{\partial{\bf{n}}}\quad\text{on}\quad L(\xi_*)
+  \] 
+
+
+\noindent 
+Next, with $p=(\xi,y_0)$
+the explicit formula for $G^*$ gives
+ \[
+ \int_{L(\xi_*)}\,
+\frac{\partial G^*}{\partial{\bf{n}}}\cdot ds=
+\int_{L(\xi_*)}\, 
+\frac{\xi_*-\xi}{
+(\xi_*-\xi)^2+(y-y_0)^2}\cdot dy\tag{1}
+\]
+Now (1) is $\leq$ than the integral taken over
+$\ell(\xi_*)$  and since $h(\xi_*)$
+is the sum of the lengths of these intervals
+it is clear that
+(1) is majorised by
+\[
+\frac{2}{\pi}\cdot \text{arctg}\, \frac{h(\xi_*)}{2(\xi_*-\xi)}\tag{2}
+\]
+Hence we have proved the inequality
+\[
+ \log\, M(\xi)\leq
+\frac{2}{\pi}\cdot \text{arctg}\, \frac{h(\xi_*)}{2(\xi_*-\xi)}
+\cdot  \log\, M(\xi)\quad\text{for all}\quad \xi>\xi_*
+\tag{3}
+\]
+Apply
+(3) when $\xi=\xi_*+\delta$ and $\delta\to 0$ which gives:
+\[
+\frac{2}{\pi}\cdot \text{arctg}\, \frac{h(\xi_*)}{2\delta}=
+1-\frac{4\delta}{\pi\cdot h(\xi)}+O(\delta^2)
+\]
+Passing to the limit as $\delta\to 0$ we get the differential inequality
+\[
+\frac{d}{d\xi}\,\bigr[ \log\, M(\xi)\bigl]\geq
+\frac{4}{\pi\cdot h(\xi)}
+\]
+Finally  an integration gives the inequality in Theorem 9.1.
+
+
+\newpage
+
+
+\centerline{\bf{10. On harmonic measure functions.}}
+
+\bigskip
+
+\noindent
+We  expose  material from [¤ 5: Chapter 1]
+in Nevanlinna's text-book
+[Nev].
+Let $\Omega$ be a domain in $\mathcal D(C^1)$ with
+boundary curves $\Gamma_1,\ldots,\Gamma_p$ where $\Gamma_p$ is taken as the outer
+boundary curve.
+On each $\Gamma_\nu$
+we consider a function $\phi_\nu$
+which takes the value +1 on a finite
+union of intervals and  zero on the complementary intervals.
+So unless $\phi$ happens to be constant on a single
+curve  $\Gamma_\nu$
+we get jumps 
+at common boundary points of  intervals where $\phi_\nu$ is constant.
+The number of such points is  an even integer denoted by $2\cdot k_\nu$
+where
+$k_\nu=0$ means that
+$\phi_\nu$ is identically 1 or 0 on $\Gamma_\nu$.
+Solving  Dirichlet's problem we get a harmonic function $\omega(z)$
+whose boundary function is  $\phi$. At jump points
+the boundary value is discontinuous. But in any case $\omega$ is defined
+in $\Omega$  where it takes values in the open interval $(0,1)$ when we assume that
+the range of the $\phi$-function contains both 1 and 0.
+In fact, the strict inequality
+
+\[ 
+0<\omega(z)<1\quad\colon\,z\in \Omega
+\]
+follows from the maximum principle for harmonic functions.
+For every  $0<\lambda<1$  the level curve
+$\{\omega=\lambda\}$ is denoted by $S(\lambda)$.
+Since $\partial\Omega$ is of class $C^1$ it follows 
+that $S(\lambda)$ contains all jump points, i.e. if $z_*\in\Gamma_\nu$
+is a jump point for some
+$\nu$ then
+$S(\lambda)$ contains an arc which has $z_*$ as end-point.
+This is proved
+using
+a locally defined conformal mapping and
+a straighforward local  analysis which takes place when
+$\Omega$ is an open half-disc
+bordered by a real segment $-r\leq x\leq r$ and the upper half-circle
+$|z|=r$ where $y\geq 0$. When $\phi(x)=0$ for $-r<x< 0$
+and $\phi(x)=1$ when $0<x<r$
+we describe the level curves
+$S(\lambda)$ in XX  below which proves
+the claim above.
+\medskip
+
+\noindent
+Let us introduce
+the critical points for
+the $\omega$-function defined by:
+\[
+\mathcal C_\omega=\{ z=x+iy\quad\colon \,\nabla(\omega)(x,y)=0\}
+\]
+where $\nabla(\omega)=(\omega_x,\omega_y)$ is the gradient vector.
+Consider the analytic function
+\[ 
+g(z)= \omega_x-i\cdot \omega_y
+\]
+Then $\mathcal C\uuu \Omega$ is equal to the zeros of 
+$g$ 
+in
+$\Omega$. 
+
+
+\medskip
+
+\noindent
+{\bf{10.1 Theorem.}} \emph{The number of zeros of $g$ counted
+with multiplicities is equal to}
+\[
+k_1+\ldots+k_p+p-2
+\]
+\medskip
+
+\noindent
+{\bf{10.1 Examples.}}
+Consider the 
+when $\Omega$ is the unit disc $D$ so that $p=1$.
+So here $T=\Gamma_1$
+is the sole boundar curve.
+Let $k_1=1$ which means that 
+$\phi=1$ on some interval $(\theta_0,\theta_1)$ and 0 on the complementary interval.
+Theorem 10.1  asserts  that 
+$g$ has no zeros and hence each
+curve
+$S(\lambda)$ is smooth. In fact, as shown by a figure $S(\lambda)$ will
+be a simple  curve with end-points at 
+$^{i\theta_0}$ and
+ $e^{i\theta_1}$.
+Next, consider the case $k_1=2$ which  means that
+$\phi$ is 1 on two disjoint intervals. Suppose they
+are
+$\{-a<\theta<a\}$ and $\pi-b<\theta<\pi+b\}$ for some  pair 
+$0<a,b<\pi/2$.
+In this case there exists a unique $0<\lambda_*<1$ where the level curve
+$S(\lambda_*)$
+fails to be smooth.
+For symmetric reason the branch point of $S(\lambda_*)$ 
+belongs to  the real axis, i.e. at a point
+$-1<x_*<1$  where  two pieces of $S(\lambda_*)$ intersect at a right angle 
+by the general result about level curves for harmonic functions in XX.
+As explained in the introduction to these notes
+we have
+\[ 
+g(z)=
+\frac{1}{e^{ia}-z}+ 
+\frac{1}{e^{i\pi+b}-z}-
+\frac{1}{e^{-ia}-z}-
+\frac{1}{e^{i\pi-b}-z}
+\]
+With $B(z)=(e^{ia}-z)(e^{-ia}-z)(e^{ib}-z)(e^{-ib}-z)$
+ a computation shows that
+the rational function $g(z)$ is of the form
+\[
+g(z)= \frac{A(z)}{B(z)}
+\]
+whereÊ$A(z)$ is a polynomial of second degree.
+Nevanlinna's result is confirmed if one employs a computer
+to
+find the two zeros of $a$, where one is in $D$ and the other 
+belongs to the exterior disc.
+\medskip
+
+\noindent{\bf{More involved cases.}}
+Keeping $\Omega=D$
+while $k_1$ increases
+more involved computations occur.
+A computer is needed for plots while Nevanlinna's theorem  
+indicates
+what will occur during such  numerical investigations.
+
+\medskip
+
+\noindent
+{\bf{The case $p=2$.}}
+Let $\Omega$ be an annulus $\{1<|z|<R\}$ for some $R>1$.
+Let
+$\phi=0$ on $\{|z|=1\}$,
+and on the outer circle we take some interval $-a<\theta<a$ where
+$\phi(Re^{i\theta})=+1$ while $\phi=0$ on the remaining part of
+$\{|z|=R\}$.
+Here $k_1=1$ and $p=2$ so $g$ has one simple zero
+which corresponds to a unique $\lambda_*$ where $S(\lambda_*$ fails to 
+be smooth.
+The reader is again invited to use a computer and to determine the zero of $g$ and plot
+the critical level curve $S(\lambda_*)$.
+
+\bigskip
+
+\centerline{\bf{Proof of Theorem 10.1}}
+\medskip
+
+\noindent
+Along the outer Jordan curve $\Gamma_p$ we let
+$s\mapsto z(s)$ be the parametrization with respect  to the arc-length.
+The function
+\[ 
+s\mapsto \omega(z(s))
+\] 
+is constant
+on each of the intervals between eventual jumps.
+If $J$ is such an interval we have
+\[ 
+0=\frac{d \omega(z(s))}{ds}=
+\omega_x((z(s))\cdot \frac{dx}{ds}+
+\omega_y((z(s))\cdot \frac{dy}{ds}
+\]
+With $\dot z(s)=\frac{dx}{ds}+i\cdot \frac{dy}{ds}$
+this means that
+\[
+\mathfrak{Re}\bigl(\omega_x-i\omega_y)\cdot \dot z(s)\bigr)=0
+\]
+This entails that the argument function
+\[ 
+s\mapsto \arg g(z(s))+\arg z(s)
+\]
+is constant on the interval $J$.
+So after integration over $J$ we have the equality
+for the variation of the arguments
+\[ 
+\int_J\, \arg g\cdot ds=\int_J\, \arg z\cdot ds\tag{i}
+\]
+If $k_p=0$
+it follows that
+\[ 
+\int_{\Gamma_p}\,  \arg g\cdot ds
+-\int_{\Gamma_p}\,  \arg z\cdot ds=-2\pi
+\] 
+where the last equality follows since
+$\Gamma_p$ is the outer Jordan curve.
+If $k_p=m \geq 1$ we consider
+the $m$ many intervals 
+between jumps. Let $p_\nu$ and
+$q_\nu$ be the end-points of the $\nu$:th interval.
+With a small $\epsilon>0$
+one constructs circular arcs
+of radius $\epsilon$ centered at
+the $2m$ many jumps as illustrated with Figure XX.
+Denote these by $\mathcal  C(P_\nu)$ and $\mathcal C(q_\nu)$.
+With $\epsilon$ small we apply (i) to the $J$-intervals and get
+\[
+\int_{\Gamma_p}\,  \arg g\cdot ds\simeq -2\pi+
+\sum_{\nu=1}^{\nu=m}\, 
+\int_{\mathcal C(p_\nu)}\,  \arg g\cdot ds+
+\sum_{\nu=1}^{\nu=m}\,\int_{\mathcal C(q_\nu)}\,  \arg g\cdot ds\tag{1}
+\]
+\medskip
+
+\noindent
+If $p\geq 2$ a similar reasoning applies to
+each inner curve. Here
+one has
+\[
+\int_{\Gamma_j}\,  \arg z\cdot ds=-2\pi\quad\colon\, j=1,\ldots(p-1)
+\]
+This entails that if $1\leq k\leq p-1$ then
+\[
+\int_{\Gamma_j}\,  \arg g\cdot ds\simeq 2\pi+
+\sum_{\nu=1}^{\nu=k_j}\, 
+\int_{\mathcal C(p^j_\nu)}\,  \arg g\cdot ds+
+\sum_{\nu=1}^{\nu=k_j}\,\int_{\mathcal C(q^j_\nu)}\,  \arg g\cdot ds\tag{2}
+\]
+where $\{p_\nu^j,q_\nu^j\}$ are thr jump points when
+$k_j\geq 1$.
+\medskip
+
+
+\noindent
+Next, by the argument principle the number of zeros of $g$
+counted with multiplicities in $\Omega$ is equal to
+\[
+\frac{1}{2\pi}\cdot \sum_{j=1}^{j=p}\, \int_{\Gamma_j}\,  \arg g\cdot ds\tag{3}
+\]
+\medskip
+
+\noindent
+Adding (1) and (2)
+we conclude  that Theorem 10.1 follows if the following
+limit  formula holds at every jump point $\xi$
+which belong to one of thr bordering curves whether it
+is
+the outer curve
+$\Gamma_p$ or an inner curve:
+\[
+\lim_{\epsilon\to 0}\,\int_{\mathcal C(\xi)}\,  \arg g\cdot ds=\pi\tag{*}
+\]
+\bigskip
+
+\centerline{\bf{Proof of (*)}}
+\bigskip
+
+
+\noindent
+By local conformal mappings
+of small arcs centered at $\xi$ on
+the $\Gamma$-curve which contains this jump point
+the reader may verify that
+the proof of (*) boils dow to the
+study the infinitemal variation of arguments when
+we take the upper half-plane $\mathfrak{Im}\, z>0$
+and consider the harmonic function $\omega(z)$ which
+takes the value +1 on the negative  real $x$-axis and zero on
+$x\geq 0$, or vice versa.
+In the case when $\omega(x)=1$ for $x<0$
+while $\omega(x)=0$ when
+$x>0$ we have
+\[ 
+\omega(x)=\frac{1}{\pi i}\cdot \mathfrak{Im}\, \log z
+\]
+It follows that
+\[
+g(z)=\frac{1}{\pi i}\cdot \frac{1}{z}
+\]
+Now  $z$ moves on the half-circle of radius $\epsilon$
+from $-\epsilon$ to $\epsilon$. Here
+\[ g(-\epsilon)=-\frac{1}{\pi i\cdot \epsilon}\implies
+\arg\, g(-\epsilon)=\frac{\pi}{2}
+\]
+When $z=\epsilon\cdot i$
+we see that
+\[ 
+g(\epsilon\cdot i)=-\frac{1}{\pi\epsilon}\implies
+\arg g(\epsilon\cdot i)=\pi
+\]
+Finally the reader can check that
+\[
+\arg g(\epsilon)=\frac{3\pi}{2}
+\]
+So the function
+\[
+\theta\mapsto \arg\, g(\epsilon\cdot e^{i\theta})
+\]
+increases from $\frac{\pi}{2}$ to $\frac{3\pi}{2}$
+and hence the jump of the argument is $\pi$.
+Let us  instead consider the function
+\[ 
+g_*(z)=-\frac{1}{\pi i}\cdot \frac{1}{z}
+\]
+Ths time the reader can verify that
+the functon
+\[
+\theta\mapsto \arg\, g_*(\epsilon\cdot e^{i\theta})
+\] 
+increases from $-\frac{\pi}{2}$ to $\frac{pi}{2}$
+so again the argument increases by $\pi$.
+This gives (*) and Nevanlinna's theorem is proved.
+
+
+
+\newpage
+
+\centerline{\bf{11. Some estimates
+for harmonic functions.}}
+
+\bigskip
+
+
+\noindent
+Let $u$ be harmonic in the unit disc $D$ and 
+suppose that 
+\[ 
+\iint\uuu D\,  \sqrt{|u(x,y)|}\cdot dxdy=1\tag{*}
+\]
+We seek   estimates of the maximum modulus function
+\[ 
+M(r)=\max\uuu \theta\, |u(r,\theta)|
+\]
+where $re^{i\theta}= x+iy$ are 
+the polar coordinates. Put
+
+\[ 
+I(r)=\frac{1}{2\pi} \int\uuu 0^{2\pi}\,  \sqrt{|u(r,\theta)|}\cdot d\theta
+\]
+If $0<r<1$ we represent values of $u$ on $|z|= r^2$
+by a Poisson integral over $|z|=r$
+and find that
+
+\[ 
+M(r^2)\leq\frac{1+r}{1\vvv r}\cdot \frac{1}{2\pi}\int
+\int\uuu 0^{2\pi}\,|u(r,\theta)|\cdot d\theta
+\]
+The right hand side is estimated above by
+$\frac{2}{1\vvv r}\cdot \sqrt{M(r)}\cdot I(r)$ which gives  the inequality
+\[
+M(r^2)\leq \frac{2}{1\vvv r}\cdot \sqrt{M(r)}\cdot I(r)\implies
+\] 
+\[
+\log\, M(r^2)\leq 
+\log\, \frac{2}{1\vvv r}+
+\frac{1}{2}\cdot \log M(r)+\log  I(r)\tag{i}
+\]
+Put
+\[
+\mathcal M(A)=  \int\uuu A^1\, \log\, M(s)\cdot \frac{ds}{s}
+\]
+The substitution $s=r^2$ gives
+\[
+\mathcal M(A)= 2\cdot \int\uuu {\sqrt{A}}^1\, \log\, M(r^2)\cdot \frac{dr}{r}
+\]
+Using (i) we obtain
+\[ 
+\mathcal M(A)\leq 
+2\cdot \int\uuu {\sqrt{A}}^1\, \log\,\frac{2}{1\vvv r}\cdot\frac{dr}{r}
++\int\uuu {\sqrt{A)}}^1\,\log M(r)\cdot dr+
+2\cdot \int\uuu {\sqrt{A}}^1\log I(r)\cdot \frac{dr}{r}\tag{ii}
+\]
+Put
+\[
+C(A)=2\cdot \int\uuu {\sqrt{A}}^1\, \log\,\frac{2}{1\vvv r}\cdot\frac{dr}{r}
+\]
+Then (ii) gives
+\[
+\int\uuu A^{\sqrt{A}}\, \log\, M(s)\cdot \frac{ds}{s}
+\leq C(A)+
+2\cdot \int\uuu {\sqrt{A}}^1\log I(r)\cdot \frac{dr}{r}
+\]
+Since $M(r)$ is increasing
+the left hand side majorizes
+\[
+\log M(A)\cdot 
+\int\uuu A^{\sqrt{A}}\,\frac{ds}{s}=
+\log M(A)\cdot \frac{1}{2}\cdot
+\log\,\frac{1}{A}
+\]
+So for each $1/2\leq A<1$ we have
+\[
+\log M(A)\cdot \frac{1}{2}\cdot
+\log\,\frac{1}{A}\leq C(A)+
+2\cdot \int\uuu {\sqrt{A}}^1\log I(r)\cdot \frac{dr}{r}\tag{iii}
+\]
+
+\medskip
+
+\noindent
+{\bf{The case $A\geq 1/2$}}.
+Then
+$r\geq \sqrt{A}\geq \sqrt{1/2}$ during the integration and 
+the last integral in (iii) is estimated by
+\[
+2\sqrt{2}\cdot \int\uuu {\sqrt{A}}^1\log I(r)\cdot dr
+\]
+Let us also write
+$\sqrt{A}=1\vvv s$ 
+where we will study the situation as $s\to 0$.
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that there exists an absolute constant such that
+when $A\geq 1/2$
+then
+\[ 
+C(A)\leq C\cdot s
+\]
+Use also that
+\[
+s\mapsto \log\,\frac{1}{(1\vvv s)^2}
+\] 
+starts a Taylor expansion with $2s$ and conclude that
+there is an absolute constant $C$ such that
+\[
+\log M((1\vvv s)^2)\leq 
+C\bigl[1+ s^{\vvv 1}\cdot \int\uuu{1\vvv s}^1\,
+\log I(r)\cdot dr\,\bigr]\tag{*}
+\]
+
+
+
+
+
+
+\noindent
+Next, since the Log\vvv function is concave
+we get the inequality
+\[
+\frac{1}{s}\cdot  \int\uuu {1\vvv s}^1\log I(r)\cdot dr\leq
+\log\,\bigr[\,
+\frac{1}{s}
+ \int\uuu {1\vvv s}^1\,I(r)\cdot dr\,\bigr ]
+\]
+and  the normalisation (*) gives
+\[ 
+1=2\pi\cdot \iint\uuu 0^1\, I(r)\cdot rdr
+\]
+It follows that the integrals
+\[
+\Phi(s)= \int\uuu {1\vvv s}^1\,I(r)\cdot dr
+\]
+converge to zero as $s\to 0$ and with
+$r=1\vvv s$
+we  obtain
+\[
+\log M(r^2)\leq C[1+\frac{\Phi(1\vvv r)}{1\vvv r}]\tag{**}
+\]
+This estimate is probably not very sharp so
+we are led to the following:
+
+\medskip
+
+\noindent
+{\bf{11.1 Question.}}
+What kind of upper bounds can hold for  $M(r)$ as $r\to 1$.
+
+
+\bigskip
+
+\noindent
+{\bf{11.2 Interior estimates.}}
+Ignoring the eventual growth of $M(r)$ as $r\to 1$
+we  fix $r=1/2$ and get the inequality
+\[ 
+M(1/4)\leq C[1+2\Phi(1/2)]\tag{1}
+\]
+for an absolute constant $C$.
+Moreover, the normalisation
+\[
+1=2\pi\cdot \int\uuu 0^1\, I(r)\cdot r\cdot dr\implies
+\]
+\[
+\Phi(1/2)\leq 2\cdot \int\uuu{1/2}^1\, 
+I(r) \cdot rdr\leq \frac{1}{\pi}
+\]
+Hence (1) gives another  absolute constant $C^*$ such that
+\[ 
+M(1/2)\leq C^*
+\]
+In particular we can estimate $u(0)$ and the discussion  above leads to
+
+\medskip
+
+\noindent
+{\bf{11.3 Theorem.}}
+\emph{In the family of harmonic functions $u$ where (*) holds
+there is an absolute constant $C$ such that}
+\[ 
+|u(0)|\leq C
+\]
+ 
+ \newpage
+ 
+ 
+ \centerline{\bf{12. A density result for harmonic functions.}}
+  \bigskip
+ 
+ 
+\noindent
+Consider the interval $[\vvv a,a]$ on the real $x$\vvv line
+for some $0<a<1$ which in general is small.
+Let  $H(x,y)$ be harmonic in $D$  and
+$H^*$ is the harmonic conjugate which gives  the analytic function
+$f=h+iH^*$ whose complex derivative becomes
+$f'=H\uuu x\vvv iH\uuu y$.
+If both $H$ and the partial derivative $H\uuu y$
+are identically zero on $[\vvv a,a]$
+it follows that $f'=0$ on this interval. So by analyticity $f$ is a constant and 
+it follows that
+$H=0$ in $D$.
+Hence, the pair of restricted functions
+$H$ and $H\uuu y$ to $[\vvv a,a]$ determine $H$ in $D$.
+We  use this to establish some   density theorems.
+To each $\vvv a\leq x\leq a$
+we have the Poisson kernel
+\[
+ P\uuu x(\theta)= \frac{1}{2\pi}\cdot
+\frac{1\vvv x^2}{1+x^2\vvv 2x\cos\,\theta}
+\]
+We also introduce a partial $y$\vvv derivative and define
+\[ 
+\partial\uuu y(P\uuu x)(\theta)=\frac{1}{2\pi}\cdot
+\frac{(1\vvv x^2)\cdot \cos\,\theta}{(1+x^2\vvv 2x\cos\,\theta)^2}
+\]
+It means that whenever $h(\theta)$ is a continuous function on the unit circle
+and $H(z)$ its harmonic extension to $D$ then
+\[
+\partial\uuu y(H)(x,0)=
+\int\uuu 0^{2\pi} \partial\uuu y(P\uuu x)(\theta)\cdot h(\theta)\cdot d\theta
+\]
+\medskip
+
+\noindent
+{\bf{12.1 Proposition.}} \emph{For each $0<a<1$ the linear space of
+functions on $T$ generated by
+$\{ P\uuu x\}$ and $\partial\uuu y(P\uuu x)\}$
+as $\vvv a\leq x\leq a$ is dense in $L^2(T)$}.
+\medskip
+
+\noindent
+\emph{Proof.}
+If  $h\in L^2$ is $\perp$ to this space it follows
+from the above that its harmonic extension
+is identically
+zero and since $h(\theta)$ is almost everywhere
+equal to the  radial limit of its harmonic extension it follows that $h=0$. 
+This proves the requested density.
+\bigskip
+
+
+\noindent
+Let us now consider a point $z\in D$ which is outside the interval.
+Now $\theta\mapsto P\uuu z(\theta)$ is an $L^2$\vvv function.
+So to each $\epsilon>0$ there exist
+finite subsets $\{\alpha\uuu\nu\}$ and $\{\beta\uuu\nu\}$
+in $[\vvv a,a]$ such that an
+${\bf{R}}$\vvv linear combination
+\[
+\sum \, c\uuu j\cdot P\uuu{\alpha \uuu j}(\theta)+
++\sum \, d\uuu k\cdot \partial\uuu y(P\uuu{\beta \uuu k}(\theta)\tag{1}
+\]
+has distance $\leq\epsilon$ in  the $L^2$\vvv norm to $P\uuu z$.
+Applying Cauchy\vvv Schwarz inequality it follows that
+for every harmonic function $H$ in the unit disc
+whose boundary function $h(\theta)$  belongs to $L^2(T)$
+one has 
+\[
+\bigl |H(p)\vvv \sum\, c\uuu j\cdot H(\alpha \uuu j)\vvv
+\, \sum\, d\uuu k\cdot \partial\uuu y(H)(\beta \uuu k)\,\bigr|\leq
+\sqrt{\epsilon}\cdot ||h||\uuu2\tag{*}
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+The family of $L^2(T)$\vvv functions used for the density in
+Proposition 12.1 is not orthogonal and it appears to be cumbersome to
+exhibit an orthonormal  family in an efficient manner.
+So above we have just proved a density theorem while no specific control
+is given to the constants $\{c\uuu \nu\}$ or $\{d\uuu k\}$
+which in addition depend on $z$ when the $\epsilon$\vvv approximation 
+in
+(*) is attained. But a merit is that (*) hold for all harmonic functions $H$ with
+$h\in L^2(T)$.
+This can for example be used to study growth properties of harmonic functions in 
+strip domains. See the section \emph{Lindelšf functions} 
+in Special Topics  XXX for such an application. 
+
+
+\bigskip
+
+\noindent
+{\bf{12.2 On inner normal derivatives.}}
+Consider the domain
+\[
+\Omega\uuu A=
+\{ 0<x<1\}\,\cap \{ x> A|y|\}
+\] 
+where $A>0$.
+If $A$ is small this domain is almost a half\vvv disc while it
+shrinks as $A$ increases. See figure XX.
+Let $u(x,y)$ be harmonic in $\Omega\uuu A$ with continuous boundary values where
+$u(0,0)=0$ and $u\geq 0$ in $\bar\Omega$.
+This entails that $u>0$ in $\Omega$ and in particular we get
+the positive number
+$u(1/2)$.
+Now we  estimate $u(x,0)$ from below as $x\to 0$.
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that there exists a positive number $A\uuu *$ which depends on $A$
+only such that
+\[ 
+u(x,0)\geq A\uuu *\cdot u(1/2,0)\cdot x
+\]
+hold for all $0<x<1/2$ and every harmonic function $u$ as above.
+A hint is to employ the conformal map $F$
+from $\Omega\uuu A$ onto the half\vvv disc $D\uuu +$
+in the right half\vvv plane where 
+\[
+F(z)= z^{\frac{1}{A}}
+\]
+Then we can pass to the half\vvv disc
+and seek $B\uuu *$ such that
+\[
+U(x^{\frac{1}{A}},0)\geq B\uuu *\cdot U(2^{\vvv\frac{1}{A}},0)\cdot
+x^{\frac{1}{A}}
+\]
+for non\vvv negative harmonic functions in the half\vvv disc
+which is achieved using a suitable version of Harnack's inequality
+which is left to the reader to analyze in detail.
+
+\medskip
+
+\noindent
+{\bf{An application.}}
+Let $\Omega$ be a connected domain
+where the origin is a boundary point which contain
+$\Omega\uuu A$ for some $A>0$.
+Prove that there again exists a constant $A\uuu{**}$ which depends on
+$A$ only such that
+(*) above holds for every harmonic function
+$u$ in $\Omega$ which is $>0$ in $\Omega$ while $u(0,0)=0$.
+This entails in particular that 
+\[ 
+\liminf\uuu{x\to 0}\frac{u(x)}{x}>0
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+A special case occurs when $\partial\Omega$ is of class $C^1$
+and working locally close to the boundary point $(0,0)$ the domain is defined by an equation
+$\{x>\rho(y)\}$ where $\rho(y)$ is a real\vvv valued $C^1$\vvv function with
+$\rho(0)=0$.
+In that case we get (xx) above
+and this strict inequality for $C^1$\vvv domains is sometimes referred to as 
+Hopf's lemma who established similar inequalities in higher dimensions.
+See also [Krantz\vvv Green: page 440\vvv 444] 
+which describes how Hopf's Lemma is used to establish certain 
+smoothness results for
+conformal mappings.
+
+
+
+
+
+\newpage
+
+\centerline{\bf{13. Representations of rotation invariant harmonic functions.}}
+
+\bigskip
+
+\noindent
+Let $(x,t,s)$ be the real coordinates in
+${\bf{R}}^3$. A real\vvv valued $C^2$\vvv function
+$u(x,t,s)$ is harmonic if it satisfies the Laplace equation.
+We shall consider the subclass of harmonic 
+ functions which are invariant under rotations of the
+ $(t,s)$\vvv coordinates.
+More precisely, suppose that $u$ is defined in
+in an open set $U$ given as the product of an interval 
+$(-A,A)$
+on the $x$\vvv axis and
+a disc $\{t^2+s^2<R^2\}$. 
+The invariance
+means that the function
+\[
+\phi\mapsto u(x,r\cos\phi.r\sin\,\phi) 
+ \] 
+is constant for each $x$ and $0<r<R$.
+Let $\square$ be the rectangle in the
+$z$\vvv plane defined by 
+\[ 
+\{z=x+iy\,\colon\, 
+- A<x<A,\colon\, - R< y<R\}
+\]
+\medskip
+
+
+\noindent
+Let $f(z)$ be analytic in
+$\square$ assume that
+$f(x)$ is real-valued when
+$-A<x<A$.
+Then we have
+
+\medskip
+
+\noindent
+{\bf{13.1 Theorem.}}
+\emph{Define $u$ in $U$ by}
+\[ 
+u(x,t,s)= 
+\frac{1}{\pi}\int\uuu 0^\pi\, f(x+i\sqrt{t^2+s^2}\cdot\cos\,\phi)\, d\phi
+\]
+\emph{Then  $u$ is  harmonic and rotation invariant in $U$}
+\medskip
+
+
+\noindent
+\emph{Proof.}
+The existence of complex derivative of $f$ give
+\[
+\partial\uuu x^2(u)=
+\frac{1}{\pi}\int\uuu 0^\pi\, f''(x+i\sqrt{t^2+s^2}\cdot\cos\,\phi)\, d\phi\tag{i}
+\]
+\[ 
+\partial\uuu t(u)=
+\frac{1}{\pi}\int\uuu 0^\pi\, i\cos\,\phi\cdot
+\frac{t}{\sqrt{t^2+s^2}}\cdot
+f'(x+i\sqrt{t^2+s^2}\cdot\cos\,\phi)\, d\phi\implies
+\]
+\[ 
+\partial\uuu t^2(u)=
+\frac{1}{\pi}\int\uuu 0^\pi\, [\vvv \cos^2\,\phi\cdot
+\frac{t^2}{t^2+s^2}+i\cos\,\phi\cdot\frac{s^2}{(t^2+s^2)^{3/2}}\bigr]\cdot 
+f''(x+i\sqrt{t^2+s^2}\cdot\cos\,\phi)\, d\phi\tag{ii}
+\]
+A similar expression is found for
+$\partial\uuu s^2(u)$ and adding the result we find that
+\[
+\Delta(u)=
+\frac{1}{\pi}\int\uuu 0^\pi\, \bigl(\sin^2\phi\cdot f''+
+i\cos\phi\cdot \frac{1}{\sqrt{t^2+s^2}}\cdot f'\,\bigr )\, d\phi\tag{iii}
+\]
+where $1\vvv \cos^2\phi=\sin^2\phi$ was used.
+Next, notice that
+\[
+\partial\uuu\phi(f'(x+i\sqrt{t^2+s^2}\cos\phi)=
+\vvv i\sqrt{t^2+s^2}\cdot \sin\phi\cdot f''(x+\sqrt{t^2+s^2}\cos\phi)\tag{iv}
+\]
+
+
+\noindent
+BY partial integration of the
+first term in (iii), the reader can check that
+(iv) entails that $\Delta(u)=0$.
+Next, the integral equation in the theorem shows that
+$u$ is rotation invariant and 
+\[ 
+u(x,0,0)= f(x)
+\]
+Since $f(x)$ was real-valued the reader can 
+confirm that $u$ is real-valued in $U$ and the proof is finished.
+\medskip
+
+
+\noindent
+{\bf{A converse result.}}
+Let $u$ be 
+a rotation invariant harmonic function. Then there exists
+an analytic function $f(z)$ in $\square$ such that
+$u$ is represented as in the theorem.
+To prove this we  use that
+harmonic functions are real-analytic
+and define $f$ on the real $x$-interval $(-A,A)$ by
+\[
+f(x)= u(x,0,0)
+\]
+At this stage we leave as an exercise to the reader to confirm that
+$f$ extends to an analytic funcituon in
+$\square$ and that $u$ is represented via $f$ as in the theorem.
+A hint is to apply the general result below.
+\newpage
+
+
+\noindent
+{\bf{13.2 Integrals expression solutions to elliptic equations.}}
+Let $a(x,y),b(x,y),c(x,y)$ be real\vvv valued and
+real\vvv analytic functions in a rectangle
+\[
+\square=\{z= x+iy\,\colon -A<x < A\,\colon\, 
+\vvv B<y<B\}
+\]
+Denote by $\mathcal S$ the class of
+real-valued functions
+$u(x,y)$  which solve the elliptic equation
+\[ 
+\Delta(u)+ a\frac{\partial u}{\partial x}+
+b\frac{\partial u}{\partial y}+c=0
+\]
+in $\square$.
+\medskip
+
+\noindent
+{\bf{13.3 Theorem.}}
+\emph{There exists a function $V(x,y,\zeta)$
+where $\zeta$ is a new complex variable such that 
+$V$ is complex analytic with
+respect to $\zeta$, and the general solution $u$ is of the form}
+\[
+u(x,y)= A\cdot V(x,y,0)+
+\mathfrak {Re}\, \int\uuu 0^{x+iy}\, V(x,y,\zeta)\cdot f(\zeta)\, d\zeta
+\]
+\emph{where $A$ is a real constant and $f$ an arbitray continous
+complex analytic function.}
+\medskip
+
+\noindent
+{\bf{13.4 Remark.}}
+The results above appear in Carleman's article
+\emph{Applications de la thŽorie des fonctions analytiques
+ˆ la resolutions de certaines Žquations fonctionelles} [Acad. Italia Volta 1940].
+A special case of Theorem 13.3 appears whgen we regard
+solutions to the elliptic equation 
+\[
+\Delta(u)-k^2\cdot u=0
+\] 
+where $k>0$ is a constant.
+Here the general $u$-solution defined in some disc centered at the origin
+takes the form
+\[
+u(x,y)= \mathfrak{Re}\, \int_0^z\, J_0(ik\sqrt{|z|^2-\bar z\cdot \zeta})\cdot f(\zeta)\, d\zeta
+\]
+where $z=x+iy$ and $J_0$  the usual Bessel function.
+
+
+\newpage
+
+
+\centerline{\bf{14. Ganelius' inequality for conjugate harmonic functions.}}
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+We   prove a result due to Ganelius from the article
+\emph{Sequences of analytic functions and their zeros} Arkiv fšr matematik. Vol 3 (1953).
+Here is the situation: Let $u$
+be a harmonic funtion 
+defined in some open neighborhood
+of
+the closed unit disc where 
+$u(0)=0$. Its harmonic conjugate $v$
+is normalised so that
+$v(0)$. The constants  $H,K$ are defined by:
+\[ 
+\max_\theta\, u(e^{i\theta})=H\quad\colon\quad
+\max_\theta\, \frac{\partial v}{\partial\theta}(e^{i\theta})=K\tag{*}
+\]
+where the maximum is taken over
+$0\leq \theta\leq 2\pi$.
+
+\medskip
+
+\noindent
+{\bf{14.1 Theorem.}}
+\emph{There exists an absolute constant $C$ such that}
+\[ 
+\max_{z\in D}\, |v(z)|\leq C\cdot \sqrt{HK}
+\]
+
+\bigskip
+
+\noindent{\emph{Proof}.
+For a small $\epsilon>0$ and a positive number $\lambda$ we set
+\[ 
+G(z)= \log\, \bigl| \frac{1+z^\lambda}{1-z^\lambda}\bigr |
+\]
+where $G$  is defined in the intersection of the unit disc $D$ and the
+sector $S=\{z\,\colon\,|\arg z|<\frac{\pi}{2\lambda}\}$.
+If $z=r\cdot e^{i\pi/2\lambda}$ we see that
+$G(z)=\log \frac{/1+ir}{1-ir}\bigr |=0$
+and the reader may verify that
+the normal derviative
+$\frac{\partial G}{\partial r}=0$ if
+$z=e^{i\theta}$  when $0<|\theta|<\frac{\pi}{2\lambda}$.
+
+\medskip
+
+\noindent
+{\bf{1. Exercise.}}
+Apply  Green's formula  to domains
+$S\cap \{|z-1|>\epsilon\}$ and  show that the passage to the
+limit when
+ $\epsilon\to 0$ gives the equation
+ below for each $0\leq \phi\leq 2\pi$:
+ \[
+2\lambda\cdot \int_0^1
+\,  \frac{u(re^{i(\phi-\frac{\pi}{2\lambda})}+
+u(re^{i(\phi+\frac{\pi}{2\lambda}})}{1+r^2}\,r^{\lambda-1}\, dr-\pi u(e^{i\phi})=
+\]
+\[
+\int_ {\frac{\pi}{2\lambda}}^{\frac{\pi}{2\lambda}}
+\,\log\,\frac{\cos(\lambda\theta/2)}{
+\sin(\lambda\theta/2)}\cdot 
+\frac{\partial u}{\partial r}(
+re^{i(\phi+\theta})\,d\theta\tag{1}
+\]
+\bigskip
+
+
+\noindent
+Next, the restriction of the harmonic conjugate
+$v$ to the unit circle is written as:
+\[
+v^*(\theta)= v(e^{i\theta})
+\]
+The Cauchy-Riemann equations give
+\[
+\frac{\partial u}{\partial r}(
+re^{i(\phi+\theta})= \frac{\partial v^*}{\partial\theta}(\phi+ \theta)
+\]
+Choose some
+$0<\xi<\pi$
+and integrate
+(1) with respect to $\phi$ over $(-\xi,\xi)$.
+The equality
+\[
+\frac{\partial v^*}{\partial\theta}(\phi+ \theta)=
+\frac{\partial v^*}{\partial\phi}(\phi+ \theta)\tag{2}
+\] 
+implies that
+the integral of the last term in (1) becomes
+\[
+\int_ {\frac{\pi}{2\lambda}}^{\frac{\pi}{2\lambda}}
+\,\log\,\frac{\cos(\lambda\theta/2)}{
+\sin(\lambda\theta/2)}\cdot  \bigl[v^*(\xi+\theta)-v^*(-\xi+\theta)\bigr ]
+\,d\theta\tag{3}
+\]
+\medskip
+
+\noindent
+{\bf{2. Exercise.}}
+Recall that $u$ is harmonic with $u(0)=0$ and by (*) we have 
+$u^*(\theta)\leq H$ for all $\theta$.
+Show that
+\[ 
+\int_a^b\, u(\theta)\,d\theta\geq  -2\pi H
+\] 
+hold for all intervals $(a,b)($ on the unit circle
+and deduce that 
+the integral of the first two terms in (1)
+taken over an interval $-\xi<\phi<\xi)$ is bounded below by
+$-4\pi H$ for each $0<\xi\leq \pi$.
+
+\bigskip
+
+\noindent
+From the above
+it follows that
+\[
+\int_ {\frac{\pi}{2\lambda}}^{\frac{\pi}{2\lambda}}
+\,\log\,\frac{\cos(\lambda\theta/2)}{
+\sin(\lambda\theta/2)}\cdot  
+\bigl[v^*(\xi+\theta)-v^*(-\xi+\theta)\bigr ]
+\,d\theta\geq -4\pi H\tag{4}
+\]
+
+\noindent
+At this stage we   use the upper bound for the
+$\theta$-derivative of $v^*$.
+To simplify notations we set
+\[ 
+J_\lambda(\theta)=\log\,\frac{\cos(\lambda\theta/2)}{
+\sin(\lambda\theta/2)}\tag{5}
+\]
+\medskip
+
+\noindent
+{\bf{3. Exercise.}}
+Use the ineqality $\frac{dv^*}{d\theta}\leq K$
+for the
+$\theta$-periodic $v^*$-function to show that
+\[
+v^*(\xi+\theta)-v^*(-\xi+\theta)\leq
+v^*(\xi-\frac{\pi}{2\lambda})-
+v^*(-\xi+\frac{\pi}{2\lambda})+K\cdot \frac{\pi}{\lambda}
+\quad\colon\quad 
+ -\frac{\pi}{2\lambda}<\theta<\frac{\pi}{2\lambda}\tag{6}
+\]
+\medskip
+
+\noindent
+Since $J_\lambda(\theta)\geq  0$ for all $\theta$
+it follows from (4-5) that we have the inequality
+\[
+v^*(\xi-\frac{\pi}{2\lambda})-
+v^*(-\xi+\frac{\pi}{2\lambda})+K\cdot \frac{\pi}{\lambda}
+\geq
+- \frac{1}{I(\lambda)}\cdot  4\pi H
+\quad\colon\quad I(\lambda)= 
+\int_ {\frac{\pi}{2\lambda}}^{\frac{\pi}{2\lambda}}
+J_\lambda\theta)\,d\theta\tag{7}
+\]
+
+\noindent
+{\bf{4. Exercise.}}
+Show that
+
+\[
+I(\lambda)=\frac{4}{\lambda}\int_1^\infty\, \frac{\log t}{1+t^2}\, dt
+= \frac{4}{\lambda}\cdot k\quad\colon
+k= 1+ \sum_{m=1}^\infty\,(-1)^m\cdot \frac{1}{(m+1)^2} \simeq
+0,916\ldots
+\]
+\medskip
+
+\noindent
+{\bf{5. The  choice of $\lambda$.}}
+The inequality (7) hold for all $\xi$ and 
+and we choose $\lambda$ to minimize
+\[
+K\cdot \frac{\pi}{\lambda}+ \frac{4}{\lambda}\cdot k\cdot H
+\]
+It means that we take
+$\lambda= \sqrt{\frac{Kk}{\pi H}}$ and
+(7) gives the inequality
+\[
+v^*(\xi-\frac{\pi}{2\lambda})-
+v^*(-\xi+\frac{\pi}{2\lambda})\geq
+-2\pi\cdot \sqrt{\frac{\pi}{k}HK}\tag{8}
+\]
+\medskip
+
+\noindent
+Since  (8) hold for all $\xi$ and 
+$v^*$ is $2\pi$-periodic we obtain
+\[
+v^*(2\kappa+\xi)-v^*( \xi)\geq
+-2\pi\cdot \sqrt{\frac{\pi}{k}HK}\quad\forall\,\,
+0\leq \xi,\kappa\leq 2\pi
+\tag{9}
+\]
+Finally, since $v(0)=0$ and $v$ is harmonic
+the boundary value function $v^*$ has at least one zero $\xi_0$
+and we  can  choose $\kappa$ so that
+\[
+v^*(2\kappa+\xi_0)= \min_\theta\,V^*(\theta)
+\]
+ Then (9) implies that
+ the minimum of $v^*$ is
+ $\geq -2\pi\cdot \sqrt{\frac{\pi}{k}HK}$. In  the same way the
+ reader can verify that the maximum of $v^*$ cannot exceed
+ $2\pi\cdot \sqrt{\frac{\pi}{k}HK}$.
+Hence (*) in Theorem 14.1 holds
+with
+\[
+C=2\pi\cdot \sqrt{\frac{\pi}{k}}\tag{10}
+\]
+where $k$ is the constant from Exercise 4.
+
+
+\bigskip
+
+
+
+
+\centerline {\bf{14.2 Applications to zeros of polynomials.}}
+\medskip
+
+
+
+
+\noindent
+Let $n\geq 1$ and consider a polynomial 
+\[
+p(z)=\prod\, (1-ze^{-i\theta_\nu})
+\]
+where $\{\theta_\nu\}$ is some $n$-tuple 
+in the periodic  interval $[0,2\pi]$.
+Let $(\alpha,\beta)$ be an interval on the unit circle.
+Denote by $N(\alpha,\beta)$ the number
+of $\theta_\nu$ satisfying
+\[
+\alpha<\theta_\nu<\beta
+\]
+and  $|p|_D$ is  the maximun norm of
+$p$ over the unit disc.
+
+\medskip
+
+\noindent
+{\bf{14.3 Theorem}}. \emph{With the same absolute constant as in Theorem 14.1 one has}
+\[
+\bigl[ \frac{N(\alpha,\beta)}{n}-\frac{\beta-\alpha}{2\pi}\bigr|\leq
+C\cdot \sqrt{n\cdot \log |p|_D}
+\]
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Consider  the
+harmonic function $u(z)$ in the unit disc defined by
+\[
+ u(z)=\frac{1}{\pi}\log\, |p(z)|=
+ \frac{1}{\pi}\cdot \sum\, \log\,|1-ze^{-i\theta_\nu}|
+\]
+It follows that
+the conjugate harmonic function becomes
+\[ 
+v(z)= \frac{1}{\pi}\cdot \sum\, \arg\,(1-z\cdot e^{-i\theta_\nu})
+\]
+From this the reader can verify  the inequality
+\[
+\frac{\partial v}{\partial\theta} (re^{i\theta})\leq
+\frac{n}{2\pi}\quad\colon\, 0<r<1
+\]
+
+\noindent 
+From the above  Theorem 14.1 gives
+\[
+ \max_\theta\, v(\theta) \leq C\sqrt{\frac{n}{2\pi}\cdot \log\, |p|_D}
+ =
+\sqrt{ \frac{2\pi}{k}}\cdot \sqrt{n\cdot  \log\, |p|_D}
+\]
+where $k$ is Catalani's constant from Exercise 4.
+ 
+ 
+ \bigskip
+ 
+ NOW DONE by generalformula !
+
+
+\bigskip
+
+\centerline {\bf{14.4 Schur's inequality.}}
+\bigskip
+
+ \noindent
+ A  polynomial $P(z)$ of degree $n$ with constant term $a_0\neq 0$ can be written
+as
+\[ 
+P(z)= a_0\cdot \prod\,(1-\frac{z}{\alpha_k})
+\]
+which entails that the absolute value of coefficient $a_n$ of $z^ n$ becomes
+\[ 
+|a_n|= \frac{|a_0|}{\prod\, |\alpha_k|}\tag{1}
+\]
+Put  $\alpha_k= \rho_k\cdot e^{i\theta_k}$
+and set
+\[ 
+p(z)= \prod\, (1-e^{-i\theta_k}z)
+\]
+\medskip
+
+\noindent
+{\bf{14.5 Theorem.}}
+\emph{One has the inequality}
+\[
+|p|_D\leq \frac{|P|_D}{\sqrt{|a_0a_n|}}
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+For each $k$ one we set $|\alpha_k|= r_k$ and notice that
+\[
+r_k\cdot |1-\frac{e^{i\theta}}{\alpha_k}|^2=
+r_k+\frac{1}{r_k}-2\cos(\theta-\theta_k)\geq 2-
+2\cos(\theta-\theta_k)= |1-e^{i(\theta-\theta_k)}|^2
+\]
+This holds for each $\theta$
+we choose $\theta$
+where $|p|$ takes its maximum and conclude that
+\[
+|p|_D^2\leq \frac{\prod\, r_k}{|a_0|^2}\cdot |P|^2_D
+\]
+Taking the square root and using (1)  above we get Theorem 14.5
+\bigskip
+
+
+\noindent
+{\bf{14.6 Carlson's formula.}}
+Studies of zeros of polynomials, and more generally 
+of analytic functions, in sectors
+were  treated by F. Carlson in the article
+\emph{Sur quelques suites de polynomes}.
+We present a specific formula by Carlson.
+Let $P(z)$ be a polynomial of some degree $n$
+where  $P(x)\neq 0$ for every real $x\leq 0$.
+The argument of each root $\alpha_\nu$ of $P$
+is taken in the interval $(-\pi,\pi)$.
+If $0<\phi<\pi$
+we set
+\[ 
+J(\phi) =\sum\, (\phi-|\arg\alpha_\nu)|
+\] 
+where the sum is taken over roots of $P$ with their arguments in
+$(-\phi,\phi)$. 
+
+\medskip
+
+\noindent
+{\bf{14.6.1 Theorem.}}
+\emph{For each $\phi$ one has the equality}
+
+\[
+J(\phi)= \frac{n\phi^2}{2\pi}+
+ \frac{1}{2\pi}\int_0^\infty\,\frac{\log |P(re^{i\phi})|\cdot 
+\log |P(re^{-i\phi})|}{|\log P(r)|^2}\, \frac{dr}{r}
+\]
+\medskip
+
+\noindent
+\emph{Proof}
+By a factorisation of $P$
+the proof is reduced to the case $n=1$ with
+$P(z)=1-\frac{1}{\alpha}$ for some
+non-zero complex number $\alpha$ and here the verification is left 
+as an exercise to the reader.
+\bigskip
+
+\noindent
+The formula above is  special and yet instructive.
+Let us  finally mention
+that 
+one can study distributions of zeros for Dirichlet series and
+exponential polynomials. This requires a further
+analysis and will not be exposed here.
+The reader may consult the cited
+article by Ganelis for results about
+complex zeros of
+exponential polynomials.
+
+
+
+
+
+\newpage
+
+\centerline
+{\bf{15. Beurling's  minimum principle for positive harmonic functions}}
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+We expose a result  from the article [Beurling:Ann.sci, Fennica].
+ Let $\Omega$ be a simply connected
+domain.
+Let $g(z,\zeta)$ be the Green function for $\Omega$.
+If
+$p\in\partial\Omega$
+a  Martin function with respect to $p$ 
+is a positive harmonic function
+$\phi$ in $\Omega$ such that
+\[ 
+\lim_{z\to q}\,\phi(z)=0\quad\colon\,\forall\,\, q\in\partial\Omega\setminus \{p\}
+\]
+The class of these Martin functions is denoted by
+$\mathcal M(p)$.
+Following  Beurling  we give
+
+\medskip
+
+\noindent
+{\bf{15.0 Definition.}}
+\emph{
+A sequence $\mathcal S=\{ z_n\}$  in
+$\Omega$ which convergs to the boundary point $p$
+is an equivalence sequence 
+at $p$ if the following implication
+hold for every positive harmonic function $u$ in $D$,
+every real $\lambda>0$ and each  $\phi\in \mathcal M(p)$}
+\[
+u-\lambda\cdot \phi\bigl| S\geq 0\implies u\geq \lambda\cdot \phi \quad\text{holds in the whole 
+domain}\,\,\Omega
+\]
+\medskip
+
+
+
+\noindent
+{\bf{15.1 Theorem.}}
+\emph{A sequence $\mathcal S=\{z_n\}$ which converges to $p$
+is an equivalence at $p$
+if and only if it constains a subsequence
+$\{\xi_k= z_{n_k}\}$ such that}
+\[
+\sup_{k\neq j}\, g(\xi_j,\xi_k)<\infty\quad\text{and}\quad
+\sum_{k=1}^\infty\, g(z,\xi_k)\cdot \phi(\xi_k)= +\infty
+\quad\colon\, z\in\Omega
+\]
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+The necessity in Theorem 15.1  proved rather easily. See ¤ xx below.
+From now on
+we treat   the non-trivial part, i.e.we prove  that the two conditions in Theorem 15.1
+entail that $\mathcal S$ is an equivalence at $p$.
+By Riemann's mapping theorem it suffices to prove this sufficiency
+when
+$\Omega$ is the unit disc $D$.
+Since every positive harmonic function $u$ in $D$
+is the Poisson extension of a non-negative Riesz measure on $T$,
+it follows 
+that every  $\phi\in \mathcal M(p)$
+is 
+the
+Poisson extension of the unit point mass at $p$ times a positive constant
+$\lambda$, i.e. of the form
+\[
+\phi_\lambda(z)= \frac{\lambda}{2\pi}\cdot \frac{1-|z|^2}{|1-z|^2}
+\]
+where the mean-value property gives $\phi_\lambda (0)=\lambda$.
+Moreover, if $u$
+is a positive harmonic function
+given by  the Poisson extension $P_\mu$ of some 
+non-negative Riesz measure $\mu$ in $D$.
+then 
+the inequality $P_\mu\geq \phi_\lambda $
+holds everywhere in   $D$ if and only if
+the measure
+$\mu$ has
+an atom at $z=1$ of mass $\geq \lambda $.
+Up to scaling it suffices to consider the
+case $\lambda=1$ and hence
+$\mathcal S$ is an equivalence sequence if 
+and only if the following hold for 
+every
+non-negative Riesz measure on $T$:
+\[
+P_\mu(z_n)\geq \phi_1(z_n)\quad\colon\, n=1,2,\ldots\implies
+\mu(\{1\})\geq 1\tag{* }
+\]
+
+\noindent
+To prove (*) we  prefer to work in
+the upper half-plane  where  $p$Êis taken as $\infty$. Here we get 
+Martin function $\phi(x,y)= y$ and 
+Green's  function is
+\[ 
+g(\zeta,z)=\log\, \frac{|z-\bar\zeta|}{|z-\zeta)}
+\]
+When $z=re^{i\theta}$
+where $r$ is large and $0<\theta<\pi$
+one has
+\[ 
+\frac{|re^{i\theta}+i|^2}{|re^{i\theta}-i|^2}
+=\frac{r^2+1+2r\sin\theta}{ r^2+1-2r\sin\theta}
+\]
+It follows that
+\[
+g(i,re^{i\theta})=
+\frac{2\sin\,\theta}{r}+O(r^{-2})
+\]
+
+\noindent
+in polar coordinates we write
+$\{\zeta_k=r_ke^{i\theta_k}\}$ }
+where $\{0<\theta_k=\arg \xi_k<\pi\}$
+and from the above it is clear that
+the  two conditions in Theorem 15.1 are  equivalent to
+\[
+\inf_{j\neq k}\, \frac{|\xi_j-\xi_k|}
+{|\xi_j-\bar \xi_k|}
+\quad\colon\quad 
+\sum_{k=1}^\infty\, \sin^2\,\theta_k=+\infty \tag{**}
+\]
+
+
+\newpage
+
+
+\noindent
+At this stage
+we need a result  which has independent interest. 
+In the final part of the proof of Theorem 15.2
+below we
+derive the
+sufficiency in
+Theorem 15.1.
+
+
+
+\medskip
+
+
+
+\noindent
+{\bf{15.2 Theorem.}}\emph{
+For each positive harmonic  function $u(x,y)$  in $U_+$
+we put}
+\[
+E_u=\{ x+iy\in U_+\quad\colon\, u(x,y)\geq y\}
+\]
+\emph{Then one has the implication}
+\[
+U_+\setminus E_u\neq\emptyset\implies
+\int_{E_u}\,\frac{dxdy}{1+x^2+y^2}<\infty\tag{15.2}
+\]
+\medskip
+
+
+
+
+\noindent{\emph{Proof}.
+The impliction (15.2) is obvious
+when
+$u(x,y)=ay$ for some positive real number $a$, i.e.
+regard the cases $a<1$ and $a\geq 1$ separately.
+From now on we assume that
+$u(x,y)$ is not a linear function of $y$ and the
+Harnack-Hopf inequality from ¤ XX gives
+the strict inequality
+\[ 
+\frac{\partial u}{\partial y}(x,y)<\frac{u(x,y)}{y}
+\quad\colon\, (x,y)\in U_+\tag{1}
+\]
+\medskip
+
+\noindent
+Set $u_*=y-u$ which entails that
+\[ 
+\{u_*>0\}=U_+\setminus E_u\tag{2}
+\]
+
+\medskip
+
+\noindent
+\emph {3. A simply connected domain.}
+Assume that the set $U_+\setminus E_u$ is non-emtpy and let
+$\Omega$ be  a  connected component of this open set.
+Replacing $u$ by the harmonic
+function $u(x+a,y)$ for a suitable 
+real $a$
+we may assume that
+$\Omega$ contains a point on the imaginary axis and after a scaling
+that $i\in\Omega$.
+Next, (1) gives
+\[ 
+\frac{\partial u_*}{\partial y}=1-\frac{\partial u}{\partial y}
+>1-\frac{u}{y}\tag{4}
+\]
+Starting at a point $(x,y)\in\Omega$ it follows that
+$s\mapsto u_*(x,y+is)$ increases strictly  on $\{s\geq 0\}$ and
+hence the open set
+$\Omega$ is placed above a graph, i.e. there exists an interval $(a,b)$
+on the real $x$-axis and a non-negative 
+continuous function $g(x)$ on $(a,b)$ such that
+\[ 
+\Omega=\{ (x,y)\,\colon a<x<b\,\,\colon\,\, y>g(x)\}\tag{5}
+\]
+In (5)
+it  may occur that the interval $(a,b)$
+is unbounded and may even be
+the whole $x$-axis in which   case $\Omega$ is the sole component of
+$U_+\setminus E_u$. In any case, since $i\in\Omega$
+one has
+$a<0<b$
+and $\Omega$ contains
+the the set $\{ai\colon\, a\geq 1\}$.
+Next, for each $r>2$ we put
+\[ 
+C_r=U_+\cap \{|z+i|<r\}\tag{6}
+\]
+Notice that
+$C_r$ contains the point $(r-1)i$
+which also belongs to $\Omega$.
+Denote by  $\gamma_r$ be the largest open interval on the
+circle $\{|z+i|= r$ which contains 
+$(r-1)i$ and at the same time is 
+contained in $\partial\Omega$.
+With the aid of a figure it is clear that the
+set $\Omega _r= \Omega\cap C_r$ 
+is simply connected where 
+$\gamma_r$ is a part of
+$\partial  D_r$ and   $u_*=0$ on
+$\partial D_r\setminus \gamma_r$.
+\medskip
+
+
+
+\noindent{\emph{ The use of harmonic measure.}}
+Let $h_r(z)$ be the harmonic function in
+$\Omega_r$ which is 1 on
+$\gamma_r$ and zero on the rest of the boundary.
+By the above and the maximum principle for harmonic functions
+we have the inequality
+\[ 
+u_*(i)\leq h_r(i)\cdot \max_{z\in\partial D_r} u_*(z)\leq r\tag{7}
+\]
+where the last inequality follows since
+$u_*(x,y)\leq y\leq  r$.
+To  estimate  the function $h_r(z)$ with respect to  $r$ and $z$
+we  use
+the harmonic function
+\[
+\Psi(z)= \log\, \bigl|\frac{z+i}{2i}\bigr |\implies
+|\nabla(\Psi)|^2=\Psi_x^2+\Psi_y^2=\frac{1}{|z+i|^2}\tag{8}
+\]
+Set
+\[ 
+m(r)=
+\frac{1}{\pi}\,  \iint_{E_u\cap C_r}\,|\nabla(\Psi)|^2\, dxdy=
+\frac{1}{\pi}\,  \iint_{E_u\cap C_r}\,\frac{1}{|z+i|^2}|\, dxdy\tag{9}
+\]
+Notice  that
+\[
+\frac{1}{\pi}\,  \iint_{C_r}\,\frac{1}{|z+i|^2}|\, dxdy<\log r\tag{10}
+\]
+Together (9-10) give the inequality
+\[
+\frac{1}{\pi}\,  \iint_{\Omega_r}\,|\nabla(\Psi)|^2\, dxdy<
+\log r-m(r)\tag{11}
+\]
+
+
+\noindent
+Next, we notice that
+ \[ 
+ \Psi(z)= \log r-\log 2\quad\text{on}\quad \gamma_r\quad\text{and}\quad
+ \Psi(i)=0\tag{12}
+ \] 
+
+
+\noindent
+Now we can apply the general inequality from ¤ XX in [Beurling-Special Topics]
+and conclude that (11-12) 
+give
+the inequality
+ \[ 
+ h_r(i)\leq e^{-\frac{\pi L^2}{A}} \quad\text{where}\quad
+ L=\log r-\log 2 \tag{13}
+\]
+
+
+\noindent
+Next, the reader may verify
+that there exists a constant $C$
+which is independent of $r\geq 2$ such that
+\[
+ \frac{\pi L^2}{A}\geq \frac{\lg r-\log 2)^2}{\log r-\log m(r)}
+ \geq \log r-2\log 2+m(r)\cdot \bigl[1-\frac{C}{\log r}]\tag{14}
+ \]
+ \medskip
+ 
+ \noindent
+Then (13-14)
+gives a constant $C_1$ such that
+\[
+h_r(i)\leq  e^{-\frac{\pi L^2}{A}}\leq C_1\cdot \frac{1}{r}\cdot e^{-m(r)}
+\quad\colon\, r\geq 2\tag{15}
+\]
+
+\noindent
+Then (7) and  (15) give
+\[ 
+u_*(i)\leq C_1\cdot \cdot e^{-m(r)}\tag{*}
+\]
+
+\medskip
+
+\noindent
+This inequality hold for all $r>2$ and since
+$u_*(i)>0$
+there must exist a finite limit
+\[ 
+\lim_{r\to\infty} m(r)=m^*\tag{**}
+\]
+The requested implication in Theorem 15.2
+follows since  (9)  this means that
+\[
+\iint_{E_u}\, \frac{1}{|z+i|^2}\, dxdy=\lim_{r\to\infty} m(r)
+\]
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

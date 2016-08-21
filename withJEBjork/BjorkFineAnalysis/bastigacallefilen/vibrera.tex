@@ -1,0 +1,1173 @@
+\documentclass{amsart}
+
+\usepackage[applemac]{inputenc}
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+
+\begin{document}
+
+
+
+
+
+
+\newpage
+
+
+\noindent
+Analytic  function theory and Fourier analysis offer  useful tools
+in
+many applications to theoretical probability theory.
+We shall illuminate this
+by some specific examples and start with the moment problem.
+In  general, let $g(x)$
+be a non-negative continous function on $[0,+\infty]$
+whose integral
+\[
+\int_0^\infty\, g(x)\, dx=1
+\]
+Thus, $g$ is the frequency function of a probability distribution
+with mass concentrated to $\{x\geq 0\}$.
+Let us assume that the distribution has finite moments, i.e.
+\[
+\frak{m}_k^2= \int_0^\infty\, x^k\cdot g(x)\, dx<\infty\quad\colon\, k=1,2,\ldots
+\]
+where 
+$\frak{m}_k$ is a sequence of positive numbers.
+The pioneering work by Stieltjes about continued fractions from
+1894 gave examples of distinct frequency functions
+$f$ and $g$ as above with equal moments.
+Moreover, it was proved by Stieltjes , and independently  by Emile Borel,
+that the family of all possible moment sequences 
+$\{\frak{m}_k\}$
+"is as ample as it possibly can be".
+More precisely, a classic result which goes back to Heine in 1850
+shows that a sequence $\{\frak{m}_k\}$
+give moments of a frequency  function if and only if
+the quadratic forms
+\[
+\sum_{p=0}^{p=n}\, \frak{m}^2_{p+q}\, x_px_q
+\]
+are positive definite for every $n\geq 1$.
+To obtain
+such sequences one can Fourier's expansions of
+real-valued infinitely differentiable functions.
+Let us take a test-function $f(x)$ on the real $x$-line with support contained in
+the closed unit intervak $[0,1]$.
+Notice  that this implies that $f$ is flat at the end-points $x=0$ and $x=\pi$, i.e.
+at these points the derivaties vanish in every order.
+We define the  function of the real variable $s$ by:
+\[
+\Phi(s)= \int_0^1\, \cos(st)\cdot f(t)\,dt
+\]
+Parseval's equality applied to $f$ gives
+\[
+\int_0^\infty\, f(x)^2\, dx=\frac{2}{\pi}\cdot \int_0^\infty\, \Phi(s)^2\, ds
+\]
+next, define a non-decreasing function $G(x)$ on $x\geq 0$ by
+\[
+G(x)= \frac{2}{\pi}\cdot \int_0^{\sqrt{x}}\, \Phi(s)^2\, ds
+\]
+With $f$ choen so that the left hand side in (x) us equal to one,it follows
+that
+$G(x)$ is a distribnution function of a stochastic variable with mass concenttrated to
+$\{x\geq 0\}$.
+The frequerncy functiuon of $G$ becomes
+\[
+g(x)= \frac{1}{\pi\cdot \sqrt{x}}\cdot \, \Phi(\sqrt{x})^2
+\]
+If $p\geq 1$ we obtain
+\[
+\int_0^\infty\, x^p\cdot g(x)\, dx=
+\int_0^\infty\, s^{2p}\cdot 2s\cdot g(s^2)\, ds=
+\frac{2}{\pi}\cdot 
+\int_0^\infty\, s^{2p}\cdot\Phi^2(s)\, ds
+\]
+These moment integrals
+can be recaptured from the given test-function $f$.
+Namely, since $f$ is flat at $x=0$ and $x=1$, a partial integration gives
+the following equality for every $p\geq 1$:
+\[
+(-1)^p\cdot 
+\int_0^1\, \cos(st)\cdot f^{(p)}(t)\,dt
+=\int_0^1\, \frac{d^p}{dt^p}(\cos (st))\cdot f(t)\, dt
+\]
+Applying Paresval's equality to
+$f^{(p)}$ and
+cosinie. respecetly sdine-ttenaforms the reasder can deduce that
+(xx) gives the equlaity
+\[
+\frak{m}_p^2=\int_0^1\, f^{(p)}(t)^2\, dt
+\]
+In particular all the moments of the distribution function $G$ are finite.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf{Lecture IV: Eigenvalues for the Laplace operator.}} 
+
+
+\bigskip
+
+
+\noindent
+Let $\Omega$ be a connected bounded domain in the complex
+$z$-plane of class $\mathcal D(C^1)$.
+In the Hilbert space $L^2(\Omega)$ 
+we seek functions $u$ satisfying
+\[ 
+\Delta(u)+\lambda\cdot u=0\tag{0.1}
+\] 
+for some constnat $\lambda$, which in
+addition
+extend to continuous functions which are
+identically zero on the boundary.
+Stokes theoren gives
+for every $u$
+satisfying (0.1):
+\[
+\iint_\Omega\, [\,(\frac{\partial u}{\partial x})^2+
+(\frac{\partial u}{\partial y})^2]\, dxdy
+=\lambda\cdot \iint_\Omega\, u^2\, dxdy\tag{0.2}
+\]
+Hence non-zero  solutions in (0.1)  can only exist when
+$\lambda$ are real and positive.
+The result below 
+is a special case from the Fredholm-Hilbert theory:
+
+\medskip
+
+\noindent 
+{\bf{0.3 Theorem.}}
+\emph{There exists a non-decreasing sequence 
+$0<\lambda_1\leq \lambda_2\leq \ldots$
+of positive real numbers and to each $\lambda_n$ one has a 
+real-valued function $\phi_n$
+where $\phi_n=0$ on $\partial\Omega$ and
+\[ 
+\Delta(\phi_n)+\lambda_n\cdot \phi_n=0
+\]
+holds in $\Omega$. Here $\{\phi_n\}$
+is an orthonormal set in the Hibert space
+$L^2(\Omega)$ and  Green's function
+satisfies the equation}
+\[ 
+G(p,q)=
+\frac{1}{2\pi}\, \sum_{n=1}^\infty\, \frac{\phi_n(p)\phi_n(q)}{\lambda_n}
+\]
+\emph{where the right hand side converges when $p\neq q$.}
+
+\medskip
+
+\noindent
+{\bf{Remark.}} As usual eigenvalues are repated when
+the corresponding finite dimensional eigenspace has dimension $>1$.
+
+
+\bigskip
+
+\centerline {\bf{¤ 1. Asymptotic formulas.}}
+
+\bigskip
+
+
+\noindent
+Theorem 0.1 and 
+Ikehara's theorem lead to
+asymptotic formulas.
+The first result  is due to Weyl:
+
+
+\medskip
+
+\noindent
+{\bf{1.1 Theorem.}}
+\emph{One has the limit formula}
+\[ 
+\lim_{n\to \infty}\, \frac{\lambda_n}{n}=
+\frac{4\pi}{\text{area}(\Omega)}
+\]
+
+
+\noindent
+Concerning the eigenfunctions the following 
+remarkabel resut was presented by
+Carleman
+at the Scandinavian Congress in  Copenhagen  1934.
+
+\medskip
+
+
+\noindent
+{\bf{1.2 Theorem.}}
+\emph{For every  $p\in\Omega$ one has}
+\[
+\lim_{n\to \infty}\, 
+\frac{1}{\lambda_n}\cdot \sum_{k=1}^{k=n}\,
+\phi_k(p)^2=\frac{1}{4\pi}
+\]
+
+
+\noindent
+Passing to partial derivatives of the $\phi$-functions
+similar asymptotic
+formulas hold. The result for
+first order partial derivatives is:
+\[
+\lim_{n\to \infty}\, 
+\frac{1}{\lambda^2_n}\cdot \sum_{k=1}^{k=n}\,
+\bigl(\frac{\partial\phi_k }{\partial x}(p)\bigr)^2=\frac{1}{16\pi}\tag{1.2.1 }
+\]
+and similarly for the partial $y$-derivative.
+
+\bigskip
+
+
+\noindent
+The remarkable faxt is of course thst thr teo limit formulas hold for 
+every point in $\Omega$
+and the limit does not depend on the domain.
+The detailed proof is presented in ¤ xx.
+
+
+\newpage
+
+
+
+\centerline{\bf{4. Vibrating planes.}}
+\bigskip
+
+\noindent
+Let $D$ be a membrance with contant density of mass $m$
+and  tension $k>0$. The boundary is fixed by a plane curve
+$C$ placed in the horizontal $(x,y)$-plane and
+the function $u=u(x,y,t)$ is the deviation in the vertical direction
+while the membrance is in motion. Here $t$ is a time variable 
+and by Hooke's law the $y$-function satisfies the wave equation
+
+\[
+\frac{d^2u}{dt^2}= \frac{k}{m}\cdot \Delta u\tag{*}
+\]
+where the boundary condition is that $u(p,t)=0$ for each
+$p\in C$.
+The time dependent kinetic energy becomes
+\[
+T(t)= \frac{m}{2}\iint_\Omega\, (\frac{du}{dt})^2dxdy
+\]
+The potential energy becomes
+\[
+V(t)= \frac{k}{2}\iint_\Omega\,
+\bigl[ (\frac{\partial u}{\partial x})^2+
+\frac{\partial u}{\partial x})^2\,\bigr]\, dxdy
+\]
+
+
+\noindent
+With $\kappa_\nu=\sqrt{\lambda_\nu}$
+the general solution to (*) becomes: 
+\[ 
+u(p,t)=
+2\cdot \sum_{\nu=1}^\infty \, c_\nu \cos(\kappa_\nu t)\,\phi_\nu(p)\tag{**}
+\]
+where $\{c_\nu\}$ is a sequence of real numbers.
+Define the mean kinetic energy at individual points
+$p\in D$ by
+\[ 
+L(p)=
+\frac{m}{2}\cdot \lim_{\tau\to\infty}\, \frac{1}{\tau}\cdot \int_0^\tau\,
+(\frac{du}{dt})^2(p)\cdot d\tau
+\]
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that (**) entails that
+\[ 
+L(p)=
+k\cdot \sum\, |c_\nu|^2\lambda_\nu \phi_\nu(p)^2\tag{***}
+\]
+\medskip
+
+\noindent
+The $c$-numbers decay in a physically realistic solution so
+that the series above converges. 
+
+\bigskip
+
+\noindent
+{\bf{High frequencies.}}
+For each positive number
+$w$ the contribution from high frequencies is defined by:
+\[ 
+L_w(p)=k\cdot \sum_{\lambda_\nu>w}
+\, |c_\nu|^2\lambda_\nu \cdot \phi_\nu(p)^2
+\]
+
+
+\noindent
+Similarly, the   mean potential energy  from high frequencies
+is defined by
+
+\[
+V_w(p)=k\cdot \sum_{\lambda_\nu>w}\, |c_\nu|^2\cdot \bigl[\frac{\partial \phi_\nu}{\partial x}(p)^2
++\frac{\partial \phi_\nu}{\partial y}(p)^2\bigr]
+\]
+
+\medskip
+
+
+
+\noindent
+Let us analyze
+the limit behaviour of the two functions above when
+$w\to+\infty$.
+Let  $a(\lambda)$ be a $C^2$-function defined for$\lambda>0$ such that
+$a(\lambda_\nu)=|c_\nu|^2$ for each $\nu$ and set
+\[
+P(\lambda)= \sum_{\lambda_\nu\leq \lambda}\,\lambda_\nu\cdot \phi_\nu(p)^2
+\]
+It follows that
+\[
+L_w(p)
+= k\cdot \int_w^\infty\, a(\lambda)\cdot dP(\lambda)
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Show first that
+Theorem 0.1 entails that
+\[
+P(\lambda)\simeq\frac{1}{8\pi}\cdot \lambda^2
+\]
+Suppose now that $a(\lambda)$ is decreasing where
+\[ 
+\lambda^2\cdot a(\lambda)\leq K\cdot 
+\int_\lambda^\infty \lambda\cdot a(\lambda)\, d\lambda
+\]
+hold for some constant $K$.
+Show that this gives the asymptotic formula:
+\[ 
+L_w(p)\simeq \frac{k}{4\pi}\, \int_w^\infty\, a(\lambda)\, d\lambda
+\]
+The point is that
+the right hand side is independent of $p$.
+So when (xx) holds it follows that
+
+\[
+\lim_{w\to \infty}\, \frac{L_w(p)}{L_w(q)}=1
+\] 
+hold for all  pairs $p,q$ in $\Omega$.
+\medskip
+
+\noindent
+{\bf{Exercise}} Use Theorem 0.1 to deduce a similar asymptotic formula for
+the
+$V$-function and conclude that
+\[
+\lim_{w\to \infty}\, \frac{L_w(p)}{V_w(q)}=1
+\] 
+hold for each point $p$ in $\Omega$.
+
+
+
+
+
+
+
+\newpage
+
+\noindent
+When the regularity of $\mathcal \partial\Omega$
+is relaxed, for example if $\partial\Omega$ 
+is a union of planar parts where pairs
+intersect at
+lines and "ugly corner points" appear when more than two
+planar parts meet,
+then the kernel function
+$K_h$ is  
+unbounded and may even fail to the square integrable, i.e.
+it can occur that
+\[
+\iint_{\partial\Omega \times\partial\Omega}\,
+|K(p,q)|^2\, d\sigma (p)d\sigma(q)=+\infty
+\] 
+In this situation the analysis becomes  more involved
+and leads to the spectral theory of
+unbounded linear operators.
+One can also go further and allow
+$u$-solutions to  the equation
+$u=\lambda\cdot \mathcal K_h(u)$
+which   are 
+measurable functions.
+In other words, 
+the domain 
+of definition for the integral operator
+$\mathcal K_h$ is extended.
+Then it turns out that the spectrum
+of $\mathcal K_h$ may 
+contain non-discrete parts outside the real line.
+We  treat this case for planar domains in ¤ XX where 
+a specific case occurs if $\Omega$ is a bounded open subset of ${\bf{R}}^2$ 
+bordered by a finite family of 
+disjoint piecewise linear Jordan 
+curves, i.e. by polygons. When $h$ is a positive function on
+$\partial\Omega$ the planar kernel is given by
+\[
+K_h(p,q)=\frac{1}{\pi}\cdot 
+\frac {\langle p-q,{\bf{n}}_*(q)\rangle}{|p-q|^2}
+\]
+Let  $\{\alpha_\nu\}$ 
+be  the family  of  interior angles at the corner points from the union of
+the polygons above. So here
+$0<\alpha_\nu<\pi$ for each $\nu$ and put: 
+\[ 
+R= \min_\nu\, \frac{\pi}{\pi-\alpha_\nu}
+\]
+In his thesis \emph{†ber das Neumann-PoincarŽsche Problem
+fŸr ein gebiet mit Ecken}
+from 1916, Carleman proved that
+$\mathcal K_h(\lambda)$
+extends to a meromorphic function in the open disc
+$|\lambda|<R$ where a finite set of real and simple
+poles can occur. But in contrast to 
+the smooth case
+the continuation beyond this disc is in general quite complicated.
+More precisely, when the domain of $\mathcal K_h$ is extended to
+measurable functions $u$ with finite 
+logarithmic energy:
+\[
+\iint_ {\partial\Omega\times\partial\Omega}
+\, \bigl|\log\,\frac{1}{|p-q|}\bigr |\cdot |u(p)|\cdot |u(q)|\, d\sigma(p)d\sigma(q)
+<\infty
+\]
+there appears in general a non-real spectrum outside 
+the disc of radius $R$ which need not consist of discrete points.
+We remark that Carleman's 
+study of the Neumann-PoincarŽ operators for 
+non-smooth domains 
+led to the theory about
+unbounded self-adjoint operators on Hilbert spaces.
+
+
+
+
+
+Carleman's book \emph{Sur les Žquations singuliers
+ˆ noyeau rŽel et symmetrique} from 1923
+proves the spectral theorem for unbounded
+operators and constitutes one if his major contributions in mathematics.
+
+
+
+
+
+
+
+
+
+
+\newpage 
+
+\medskip
+
+\noindent
+
+
+
+We shall prove the results above using material 
+from
+Carleman's lecture at the Scandinavian Congress in  Copenhagen  1934.
+The major step is to
+establish properties of the function
+$\Phi(p,s)$ introduced in ¤ 1.4 below.
+First we recall the construction of
+Green resolvents.
+For every complex number
+$\lambda$ outside the discrete set
+$\{\lambda_n\}$
+we find the function
+which for each fixed
+$q\in\Lambda$  satisfies
+\[ 
+\Delta G(p,q;\lambda)
++\lambda\cdot G(p,q;\lambda)=0\quad\colon\quad p\in \Omega\setminus 
+\{q\}
+\]
+and at $p=q$ it has the same singularity as $G(p,q)$, i.e.
+$\log\,\frac{1}{|p-q|}$.
+Finally, $G(p,q;\lambda)=0$ when
+$p\in\partial\Omega$.
+Theorem 0.1 gives the equation:
+
+
+\medskip
+
+\noindent
+{\bf{1.4 Theorem}} \emph{One has the equality}
+\[
+G(p,q;\lambda)-G(p,q)=
+\frac{1}{2\pi\lambda  }\, 
+\sum_{n=1}^\infty\, \frac{\phi_n(p)\phi_n(q)}{\lambda_n(\lambda-\lambda_n)}
+\]
+
+
+
+
+
+
+
+
+\noindent
+{\bf{1.5 The function $\Phi(p,s)$}}.
+For each $p\in\Omega$ we define  a function of the 
+complex variable $s$:
+\[
+\Phi(p,s)=\sum_{n=1}^\infty \,
+\frac{\phi^2_n(p)}{\lambda_n^s}
+\]
+
+\medskip
+
+\noindent
+{\bf{1.6 Theorem}}
+\emph{The function $\Phi(p,s)$ extends to a  meromorphic
+in the whole complex
+$s$-plane with a simple pole at $s=1$ whose residue is
+$\frac{1}{4\pi}$ and   zeros at 
+$0,-1,-2,\dots$.}
+
+
+\bigskip
+
+\centerline{\bf{2. Proof of Theorem 1.6.}}
+
+
+\medskip
+
+\noindent
+We shall need two
+equations which are proved via residue calculus
+and left to the reader.
+
+
+
+\medskip
+
+\noindent
+{\bf{2.1 Lemma}}
+\emph{For every pair $0<a<b$ of real numbers 
+and each comlex number
+$s$ with
+$\mathfrak{Re}\, s>1$ one has
+the equations:}
+
+\[
+b^{-s}=
+ \frac{1}{2\pi i}\,\int_{a-i\infty}^{a+i\infty}\,
+\frac{\lambda}{b(\lambda-b)\lambda^s}\cdot d\lambda=
+\]
+
+\[
+\frac{a^{s-1}}{2\pi}\int_{-\pi}^\pi\, 
+\frac{e^{i(1-s)\theta}}{b(b-a^{i\theta})}\, d\theta+
++\frac{\sin \pi s}{\pi}\cdot \int_a^\infty \frac{1}{b(b+\lambda)\lambda^s} \, d\lambda
+\]
+\medskip
+
+
+
+
+\noindent
+{\bf{2.2 The function $F(p,\lambda)$}}.
+Since $G(p,q;\lambda)$ and $G(p,q)$ have the same singularity
+$\log\,\frac{1}{|p-q|}$ along the diagonal it follows that 
+\[ 
+G(p,p;\lambda)-G(p,p)=\frac{1}{2\pi\lambda  }\, 
+\sum_{n=1}^\infty\, \frac{\phi_n(p)^2}{\lambda_n(\lambda-\lambda_n)}
+\tag{i}
+\]
+when $p\in\Omega$ where
+the right hand side is   a meromorphic function of $\lambda$ with
+poles confined to the
+set $\{\lambda_n\}$. Set
+\[ 
+F(p,\lambda)= G(p,p;\lambda)-G(p,p)
+\]
+
+\medskip
+
+
+
+\noindent
+Keeping $p\in\Omega$  fixed 
+we apply Lemma 2.1  with $b=\lambda_n$ for 
+every $n\geq 1$
+and with a real $a$ such that
+$0<a<\lambda_1$.
+A  summation over $n$ gives the equation  below for each
+$\mathfrak{Re}\, s>1$: 
+\medskip
+
+\noindent
+{\bf{Lemma 2.3}}
+\emph{One has the equality}
+\[
+\Phi(p,s)= \frac{a^{s-1}}{4\pi^2}\int_{-\pi}^\pi\, 
+e^{i(1-s)\theta}\cdot F(p,ae^{i\theta})\, d\theta
++\frac{\sin \pi s}{2\pi^2 }\cdot \int_a^\infty \,\frac{F(p,-\lambda)}{\lambda^s}\, 
+d\lambda\tag{*}
+\]
+
+\medskip
+
+
+\noindent
+The 
+first term in (*)  is an entire function of $s$ since
+$0<a<\lambda_1$ is a fixed real number and $F(p,\lambda)$ is analytic in
+the open disc of radius $|\lambda_1|$ centered at the origin.
+So $\Phi(p,s)$ extends to a  meromorphic function
+with a simple pole at
+$s=1$ if the same is true for the function
+\[
+F_*(p,s)=
+\frac{\sin \pi s}{2\pi^2 }\cdot \int_a^\infty \,\frac{F(p,-\lambda)}{\lambda^s}\, 
+d\lambda\tag{2.4}
+\]
+where we in addition should verify that
+the residue at 
+$s=1$ is  $\frac{1}{4\pi}$.
+To attain this we shall find
+another
+integral formula for the $F_*$-function.
+
+
+
+
+
+
+\medskip
+
+
+\noindent
+{\bf{ 2.5 The functions $H(p,q;\kappa). $}}
+Define  the analytic function $K(z)$  in the
+half-plane $\mathfrak{Re}\, z>0$ by
+\[ 
+K(z)= \int_1^\infty\, \frac{e^{-zt}}{\sqrt{t^2-1}}\, dt
+\]
+If $p$ and $q$ is a pair of points on
+$\Omega$ their euclidian distance is denoted by
+$|p-q|$.
+To each $\kappa>0 $ we get the function defined in
+$\Omega\times\Omega$ by:
+\[ 
+K_\kappa (p,q)= K(\kappa|p-q|)
+\] 
+
+
+\noindent
+{\bf{Exercise.}}
+Verify the limit formula below where $\gamma$ is the Euler constant:
+\[
+\lim_{q\to p}\, K_\kappa(p,q)=\log\,\frac{1}{|p-q|}
+-\log\kappa +\log 2-\log\gamma\tag{iii}
+\]
+Hence we encounter the same singularity as for $G(p,q)$
+which means that the function
+\[
+g_\kappa(p,q)=K_\kappa(p,q)-G(p,q)\tag{iv}
+\]
+is defined in the whole product $\Omega\times\Omega$.
+Next,
+for each $\lambda>0$ we set
+$\kappa=\sqrt{\lambda}$ and 
+define the function
+$H(p,q;\kappa)$
+outside the diagonal in $\Omega\times\Omega$ by:
+\[ 
+H(p,q;\kappa)= 
+K_\kappa(p,q)-G(p,q;\lambda)\tag{2.5.1}
+\]
+
+
+\noindent
+By (iii) the functions
+$K_\kappa(p,q)$ and
+$G(p,q;\lambda)$
+have the same logarithmic singularity
+along the diagonal which entails that
+$H(p,q;\kappa)$ is defined in
+the whole prodct $\Omega\times\Omega$.
+When $p\in\partial\Omega$ is kept fixed
+the vanishing of the Greeen's function
+gives
+\[
+H(p,q;\kappa)= K_\kappa(p,q;\kappa)\quad\colon q\in\Omega
+\]
+The reader may also verifiy that
+when $p\in\partial \Omega$ is kepts fixed
+then the function
+$q\mapsto H(p,q;\kappa)$ satisfies
+the equation below in $\Omega$:
+\[ 
+\Delta H(p,q;\kappa)-\kappa^2\cdot H(p,q;\kappa)=0
+\]
+
+
+\noindent
+{\bf{Exercise.}}
+Use the results above
+to show that there exist  constants $A$ and $\alpha>0$ 
+which are independent of $\kappa$ and of $p\in\Omega$ such that
+\[ 
+0\leq H(p,p;\kappa)\leq K(\kappa\cdot \text{dist}(p,\partial\Omega)\quad\text{and}\quad
+H(p,p;\kappa)\leq A\cdot e^{-\alpha\kappa}
+\] 
+\medskip
+
+
+
+
+\noindent
+{\bf{2.6 Passage to a limit.}}
+In (2.5.1) we can pass to the limit as $q\to p$
+inside $\Omega$ and the construction of $F$ in (2.2) gives:
+\[
+H(p,p;\kappa) =
+-\log\kappa +\log 2-\log\gamma+g_\kappa(p,p)-F(p,-\lambda)\tag{2.6.1}
+\]
+where we recall that
+$\kappa^2=\lambda$. It follows that
+\[ 
+F_*(p,s)=\frac{\sin\pi s}{2\pi^2}\cdot \bigl[
+-\int_a^\infty\, \frac{\log\,\sqrt{\lambda}}{\lambda^s}\, d\lambda+
+\int_a^\infty
+\frac{1}{\lambda^s}\,[
+ g_\kappa(p,p)+\log 2-\log \gamma- H(p,p;\kappa)]\,d\lambda\tag{2.6.2}
+\] 
+\medskip
+
+
+\noindent
+A computation gives:
+
+\[
+-\int_a^\infty\, \frac{\log\,\sqrt{\lambda}}{\lambda^s}\, d\lambda=
+-\frac{1}{2}\cdot 
+\frac{a^{s-1}\log a}{s-1}+
+\frac{1}{2}\cdot \frac{a^{s-1}}{(s-1)^2}\tag{2.6.3}
+\]
+\medskip
+
+\noindent
+In (2.6.3 ) we have a double pole at $s=1$
+which after multiplication with
+the sine-function gives
+a simple pole and the reader can verify that
+the residue is $\frac{1}{4\pi}$.
+Finally, using
+the estimate in Exercise 2.5.2 the reader may verify that
+the second term in (2.6.2) yields an entire function of $s$
+Hence $s\mapsto F_*(p,s)$
+is meromorphic with a simple pole at $s=1$ with
+residue
+$\frac{1}{4\pi}$ and  
+Theorem 1.6 is proved.
+
+
+
+\newpage
+
+
+\centerline{\emph{3. Proofs of the asymptotic formulas.}}
+\bigskip
+
+
+\noindent
+Theorem 1.6 and Ikehara's theorem from ¤ xX
+entail that
+\[
+\lim_{n\to\infty}\, \frac{1}{\lambda_n}\cdot
+\sum_{k=1}^{k=n}\,\phi_k(p)^2
+= \frac{1}{4\pi}\tag{3.1}
+\]
+\medskip
+
+\noindent
+This proves Theorem 1.2 is proved and to
+get Theorem 1.1 we perform an integration over
+$\Omega$  so that
+\[
+\sum_{n=1}^\infty\,\frac{1}{\lambda_n^s}
+=\iint_\Omega\, \Phi(p,s)\, dxdy
+\] 
+where we simply have used that each $\phi$-function 
+has a squared integral equal to one over
+$\Omega$.
+When $\mathfrak{Re}\, s>1$
+the equations from the proof of Theorem 1.6  show that after
+an integration over $\Omega$ one has
+\[
+\sum_{n=1}^\infty\,\frac{1}{\lambda_n^s}=
+\frac{\text{Area}(\Omega)}{4\pi} \cdot \frac{1}{s-1}+ J(s)
+\]
+where $J(s)$ is analytic in
+$\mathfrak{Re}>1$. 
+By (*) in Lemma 2.3 the $J$-function is a sum of an entire function
+and the
+function
+
+\[
+s\mapsto \iint_\Omega\, \bigl[\frac{\sin\pi s}{2\pi^2}\cdot
+\int_a^\infty
+\frac{1}{\lambda^s}\,[
+ g_\kappa(p,p)+\log 2-\log \gamma- H(p,p;\kappa)]\,d\lambda\, \bigr]\, dxdy\tag{2.6.2}
+\]
+\medskip
+
+
+\noindent
+From this it is clear that the requested continuity of $J$ up to $s=1$
+follows if the integrals
+\[
+\iint_\Omega\bigl[\int_a^\infty
+\frac{1}{\lambda}\,
+H(p,p;\kappa)]\,d\lambda\,\bigr ]\, dxdy<\infty
+\tag{i}
+\]
+and similarly with
+$H(p,p;\kappa)$ replaced by $g_\kappa(p,p)$.
+To prove (i) we use the estimate in (2.5.2) which
+shows that (i) is majorised by
+\[ 
+A\cdot\iint_\Omega\bigl [
+\int_a^\infty\,\frac{1}{\lambda}e^{-\alpha\cdot \sqrt{\lambda}
+\cdot\text{dist}(p,\partial\Omega)}\, d\lambda\bigr]\, dxdy
+\]
+Put  $\ell(p)=\text{dist}(p,\partial\Omega)$ and consider for a fixed
+$p\in\Omega$:
+\[
+\int_a^\infty\,\frac{1}{\lambda}e^{-\alpha\cdot \sqrt{\lambda}
+\cdot\ell(p)}\, d\lambda
+\]
+Above $a$ and $\alpha$ are fixed positive constants
+and the reader may verify that this gives another pair of constants
+$b,c$ which are independent of $p$ such that (i) is majorized by
+\[
+c\cdot [\log^+\,\frac{b}{\ell (p)}]^2
+\]
+This function of $p$ is integrable over $\Omega$ and
+in the same way the reader can check the convergence when
+$H(p,p,\kappa)$ is replaced by $g_\kappa(p,p)$.
+
+
+\bigskip
+
+\noindent
+\emph{3.2. The limit formula (1.3.)}
+The proof of (1.3) uses similar methods as above but 
+some extra technicalities appear  because
+estimates
+for partial derivatives of the Green's function are needed.
+The reader may consult
+[Carleman: page 38-40] for the details which gives (1.3)
+or try to carry out the proof.
+In [ibid]
+a general limit formula for
+higher order mixed partial derivatives of the $\phi$-functions
+is proved. The result is:
+
+\bigskip
+
+\noindent
+{\bf{3.3. Theorem.}}
+\emph{For every pair  of non-negative integers $j,m$ 
+and each $p\in\Omega$ one has the limit formula}
+
+\[ \lim_{n\to\infty}\,
+\frac{1}{\lambda_n^{j+m+1}}\cdot
+\sum_{k=1}^{k=n}\, \bigl(\frac{\partial^{j+m}\phi_k}{\partial x^j\partial y^j}
+\bigr)^2(p)=
+\frac{1}{\pi\cdot 2^{2m+2j+2}}\cdot
+\frac{(2m)!\cdot (2j)!}{m!\cdot j!\cdot (m+j+1)!}
+\]
+
+
+\bigskip
+
+
+\centerline{\bf{4. Vibrating planes.}}
+\bigskip
+
+\noindent
+Let $D$ be a membrance with contant density of mass $m$
+and  tension $k>0$. The boundary is fixed by a plane curve
+$C$ placed in the horizontal $(x,y)$-plane and
+the function $u=u(x,y,t)$ is the deviation in the vertical direction
+while the membrance is in motion. Here $t$ is a time variable 
+and by Hooke's law the $y$-function satisfies the wave equation
+
+\[
+\frac{d^2u}{dt^2}= \frac{k}{m}\cdot \Delta u\tag{*}
+\]
+where the boundary condition is that $u(p,t)=0$ for each
+$p\in C$.
+The time dependent kinetic energy becomes
+\[
+T(t)= \frac{m}{2}\iint_\Omega\, (\frac{du}{dt})^2dxdy
+\]
+The potential energy becomes
+\[
+V(t)= \frac{k}{2}\iint_\Omega\,
+\bigl[ (\frac{\partial u}{\partial x})^2+
+\frac{\partial u}{\partial x})^2\,\bigr]\, dxdy
+\]
+
+
+\noindent
+With $\kappa_\nu=\sqrt{\lambda_\nu}$
+the general solution to (*) becomes: 
+\[ 
+u(p,t)=
+2\cdot \sum_{\nu=1}^\infty \, c_\nu \cos(\kappa_\nu t)\,\phi_\nu(p)\tag{**}
+\]
+where $\{c_\nu\}$ is a sequence of real numbers.
+Define the mean kinetic energy at individual points
+$p\in D$ by
+\[ 
+L(p)=
+\frac{m}{2}\cdot \lim_{\tau\to\infty}\, \frac{1}{\tau}\cdot \int_0^\tau\,
+(\frac{du}{dt})^2(p)\cdot d\tau
+\]
+
+\medskip
+
+\noindent
+{\bf{Exercise.}}
+Show that (**) entails that
+\[ 
+L(p)=
+k\cdot \sum\, |c_\nu|^2\lambda_\nu \phi_\nu(p)^2\tag{***}
+\]
+\medskip
+
+\noindent
+The $c$-numbers decay in a physically realistic solution so
+that the series above converges. 
+
+\bigskip
+
+\noindent
+{\bf{High frequencies.}}
+For each positive number
+$w$ the contribution from high frequencies is defined by:
+\[ 
+L_w(p)=k\cdot \sum_{\lambda_\nu>w}
+\, |c_\nu|^2\lambda_\nu \cdot \phi_\nu(p)^2
+\]
+
+
+\noindent
+Similarly, the   mean potential energy  from high frequencies
+is defined by
+
+\[
+V_w(p)=k\cdot \sum_{\lambda_\nu>w}\, |c_\nu|^2\cdot \bigl[\frac{\partial \phi_\nu}{\partial x}(p)^2
++\frac{\partial \phi_\nu}{\partial y}(p)^2\bigr]
+\]
+
+\medskip
+
+
+
+\noindent
+Let us analyze
+the limit behaviour of the two functions above when
+$w\to+\infty$.
+Let  $a(\lambda)$ be a $C^2$-function defined for$\lambda>0$ such that
+$a(\lambda_\nu)=|c_\nu|^2$ for each $\nu$ and set
+\[
+P(\lambda)= \sum_{\lambda_\nu\leq \lambda}\,\lambda_\nu\cdot \phi_\nu(p)^2
+\]
+It follows that
+\[
+L_w(p)
+= k\cdot \int_w^\infty\, a(\lambda)\cdot dP(\lambda)
+\]
+\medskip
+
+
+\noindent
+{\bf{Exercise.}}
+Show first that
+Theorem 0.1 entails that
+\[
+P(\lambda)\simeq\frac{1}{8\pi}\cdot \lambda^2
+\]
+Suppose now that $a(\lambda)$ is decreasing where
+\[ 
+\lambda^2\cdot a(\lambda)\leq K\cdot 
+\int_\lambda^\infty \lambda\cdot a(\lambda)\, d\lambda
+\]
+hold for some constant $K$.
+Show that this gives the asymptotic formula:
+\[ 
+L_w(p)\simeq \frac{k}{4\pi}\, \int_w^\infty\, a(\lambda)\, d\lambda
+\]
+The point is that
+the right hand side is independent of $p$.
+So when (xx) holds it follows that
+
+\[
+\lim_{w\to \infty}\, \frac{L_w(p)}{L_w(q)}=1
+\] 
+hold for all  pairs $p,q$ in $\Omega$.
+\medskip
+
+\noindent
+{\bf{Exercise}} Use Theorem 0.1 to deduce a similar asymptotic formula for
+the
+$V$-function and conclude that
+\[
+\lim_{w\to \infty}\, \frac{L_w(p)}{V_w(q)}=1
+\] 
+hold for each point $p$ in $\Omega$.
+
+
+
+
+
+
+
+\newpage
+
+\noindent
+When the regularity of $\mathcal \partial\Omega$
+is relaxed, for example if $\partial\Omega$ 
+is a union of planar parts where pairs
+intersect at
+lines and "ugly corner points" appear when more than two
+planar parts meet,
+then the kernel function
+$K_h$ is  
+unbounded and may even fail to the square integrable, i.e.
+it can occur that
+\[
+\iint_{\partial\Omega \times\partial\Omega}\,
+|K(p,q)|^2\, d\sigma (p)d\sigma(q)=+\infty
+\] 
+In this situation the analysis becomes  more involved
+and leads to the spectral theory of
+unbounded linear operators.
+One can also go further and allow
+$u$-solutions to  the equation
+$u=\lambda\cdot \mathcal K_h(u)$
+which   are 
+measurable functions.
+In other words, 
+the domain 
+of definition for the integral operator
+$\mathcal K_h$ is extended.
+Then it turns out that the spectrum
+of $\mathcal K_h$ may 
+contain non-discrete parts outside the real line.
+We  treat this case for planar domains in ¤ XX where 
+a specific case occurs if $\Omega$ is a bounded open subset of ${\bf{R}}^2$ 
+bordered by a finite family of 
+disjoint piecewise linear Jordan 
+curves, i.e. by polygons. When $h$ is a positive function on
+$\partial\Omega$ the planar kernel is given by
+\[
+K_h(p,q)=\frac{1}{\pi}\cdot 
+\frac {\langle p-q,{\bf{n}}_*(q)\rangle}{|p-q|^2}
+\]
+Let  $\{\alpha_\nu\}$ 
+be  the family  of  interior angles at the corner points from the union of
+the polygons above. So here
+$0<\alpha_\nu<\pi$ for each $\nu$ and put: 
+\[ 
+R= \min_\nu\, \frac{\pi}{\pi-\alpha_\nu}
+\]
+In his thesis \emph{†ber das Neumann-PoincarŽsche Problem
+fŸr ein gebiet mit Ecken}
+from 1916, Carleman proved that
+$\mathcal K_h(\lambda)$
+extends to a meromorphic function in the open disc
+$|\lambda|<R$ where a finite set of real and simple
+poles can occur. But in contrast to 
+the smooth case
+the continuation beyond this disc is in general quite complicated.
+More precisely, when the domain of $\mathcal K_h$ is extended to
+measurable functions $u$ with finite 
+logarithmic energy:
+\[
+\iint_ {\partial\Omega\times\partial\Omega}
+\, \bigl|\log\,\frac{1}{|p-q|}\bigr |\cdot |u(p)|\cdot |u(q)|\, d\sigma(p)d\sigma(q)
+<\infty
+\]
+there appears in general a non-real spectrum outside 
+the disc of radius $R$ which need not consist of discrete points.
+We remark that Carleman's 
+study of the Neumann-PoincarŽ operators for 
+non-smooth domains 
+led to the theory about
+unbounded self-adjoint operators on Hilbert spaces.
+Carleman's book \emph{Sur les Žquations singuliers
+ˆ noyeau rŽel et symmetrique} from 1923
+proves the spectral theorem for unbounded
+operators and constitutes one if his major contributions in mathematics.
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage

@@ -1,0 +1,1125 @@
+%\documentclass{amsart}
+%\usepackage[applemac]{inputenc}
+
+
+%\addtolength{\hoffset}{-12mm}
+%\addtolength{\textwidth}{22mm}
+%\addtolength{\voffset}{-10mm}
+%\addtolength{\textheight}{20mm}
+
+
+%\def\uuu{_}
+
+
+%\def\vvv{-}
+
+%\begin{document}
+
+
+\centerline{\bf\large{16. Entire functions of exponential type}}
+
+\bigskip
+
+
+\noindent
+{\bf{Introduction.}}
+The class $\mathcal E$ of entire functions of exponential type is defined as follows:
+\bigskip
+
+\noindent
+{\bf{0.1 Definition.}} \emph{An entire function $f$ belongs to
+$\mathcal E$ if and only if there exists constants
+$A$ andÊ$C$ such that}
+\[
+ |f(z)|\leq C\cdot e^{A|z|}\quad\colon\,\, z\in{\bf{C}}\tag{*}
+\] 
+
+\medskip
+
+\noindent
+We refer to the literature for studies of
+of the more extensive class 
+of entire functions with arbitrary finite order, i.e.
+those $f$ where (*)  is 
+replaced by $|z|^\rho$ for some
+$\rho>0$.
+The results in Sections A\vvv B are foremost due to Hadamard and Lindelšf.
+The  class $\mathcal N$ appears in Section 3
+and was
+was introduced by Carleman
+who used it to prove certain approximation theorems related to moment problems.
+Our main concern deal with
+Tauberian theorems which is treated in section D
+whose material is based upon Chapter V in [Paley\vvv Wiener].
+Let us present some  of the results to be proved in Section D
+while we refer to Section A and B for
+more elementary material about the class $\mathcal E$.
+ Consider a non\vvv decreasing sequence $\{\lambda\uuu\nu\}$
+of positive real numbers such that the series
+\[ 
+\sum\, \lambda\uuu \nu^{\vvv 2}<\infty\tag{1}
+\]
+When this holds there exists the entire function
+given by a product series:
+
+\[ 
+H(z)=\prod\, (1\vvv \frac{z^2}{\lambda\nu^2})
+\]
+Indeed, this was already proved in III: Chapter.
+Notice tha $H8z)$ is even and on the positive imaginary
+axis it is positive. We study the function defined for real $y>0$:
+\[
+y\mapsto \frac{\log H(iy)}{y}=
+\frac{1}{y}\, \sum \log\, (1+ \frac{y^2}{\lambda\nu^2})
+\]
+At the same time we can consider the intergals
+
+\[ 
+J(R)=\int\uuu{\vvv R}^R\, \frac {\log |H(x)|\cdot dx}{x^2}
+\]
+With these notations one has
+
+\medskip
+\noindent
+{\bf{0.1 Theorem.}} \emph{The statements }
+\[
+\lim\uuu{y\to \infty}\, \frac{\log H(iy)}{y}= \pi A y\tag{i}
+\] 
+\emph{and}
+\[
+\lim\uuu{R\to \infty} J(R)=\vvv \pi^2A\tag{ii}
+\]
+\emph{hold for some $A\geq 0$ are completely equivalent}
+\medskip
+
+\noindent
+{\bf{Example.}}
+Consider the case when $\{\lambda\nu\}$ is the set of positive integers.
+In XX we explain the formula
+
+\[
+\frac{\sin\, \pi z}{\pi z}=\prod\uuu{n=1}^\infty\, (1\vvv \frac{z^2}{n^2})
+\]
+Notice that
+\[
+|\sin\, \pi iy|= \frac{e^{\pi y}\vvv e^{\vvv \pi y}}{2}
+\] 
+when $y>0$.
+From this it follows that we get the constant $A$ in (i) above.
+At the same time we proved by redidue calculus in [Residue:XXX]
+that if $f(z)=\frac{\sin\, \pi z}{\pi z}$ then 
+\[
+\lim\uuu{R\to \infty}\,
+\int\uuu{\vvv R}^R\, \frac {\log |f(x)|\cdot dx}{x^2}=\vvv \pi^2
+\]
+which is in accordance with (ii) in Theorem 0.1.
+Of special interest is the case when
+the limit in (ii) is automatic via an integrability condition, i.e. when
+we from start has an absolutely convergent integral
+
+\[
+\int\uuu{\vvv\infty}^\infty\,\frac {\bigl|\log |H(x)|\,\bigr |\cdot dx}{x^2}\tag{*}
+<\infty
+\]
+In this case the $J$\vvv integrals converge and as a consequence 
+there is a limit in (i) for some $A\geq 0$.
+It turns out that further conclusions can be made.
+namely, the convergence of (*) implies that
+the
+sequence $\{\lambda\uuu\nu\}$
+also has a regular growth in the sense that if $N(r)$ is the counting function
+which for every $r>0$ counts the number of $\lambda\nu\leq r$, then
+there exists the limit
+\[ 
+\lim\uuu{R\to\infty}\,
+\frac{N(R)}{R}=A
+\]
+with $A$ determined via Theorem 0.1.
+We shall prove this in Section D and remark that the integrability condition
+(*) is related to the study of the Carleman class in
+Section C.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The general Tauberian theorems for entire functions 
+of exponential type are foremost due to Wiener. 
+See his pioneering article [Wiener].
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf{A. Growth of entire functions.}}
+
+
+\bigskip
+
+\noindent
+here we start the study with arbitrary entire functions $f(z)$.
+To each such $f$
+we  associate   certain functions
+which describe the growth  and the number  of its zeros
+in discs of radius $R$ centered at the origin.
+We can always  write
+\[ 
+f(z)=az^m\cdot f_*(z)
+\] 
+where $f_*$ is entire and $f_*(0)=1$.
+The  case when $f(0)=1$ is therefore not so special and
+several formulas take a simpler form when this holds.
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{A.1 The functions $T_f(R)$ and $m_f(R)$}}.
+They are defined for every $R>0$ by
+\[ 
+T_f(R)=\frac{1}{2\pi}\cdot   \int_0^{2\pi}\,
+\text{Log}^+\,\bigl  |f(R(e^{i\theta})\bigr |\cdot d\theta\tag{i}
+\]
+\[
+m_f(R)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\text{Log}^+\bigl[\frac{1}{\,\bigl  |f(R(e^{i\theta})\bigr |}\bigr]
+\cdot d\theta\tag{ii}
+\]
+\medskip
+
+\noindent
+{\bf{A.2 The maximum modulus function.}} It is defined by
+\[ M_f(R)= \max_
+{0\leq \theta\leq 2\pi}\, |f(Re^{i\theta})|
+\]
+\medskip
+
+\noindent
+{\bf{A.3  The counting function $N_f(R)$}}.
+To each $R>0$ we count the number of zeros of
+$f$ in the punctured disc $0<|z|<R$. This integer is denoted by
+$N_f(R)$, where
+multiple zeros are counted according to their
+multiplicities.
+Jensen's formula shows that if
+$f(0)=1$ then
+\[
+\int_0^R\, \frac{N_f(s)}{s}\cdot ds
+=\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\text{Log}\,\bigl  |f(R(e^{i\theta})\bigr |\cdot d\theta=
+T_f(R)-m_f(R)\tag{*}
+\]
+\medskip
+
+\noindent
+Since the left hand side always is
+$\geq 0$ the inequality below holds under the hypothesis that
+$f(0)=1$:
+\[ 
+m_f(R)\leq T_f(R)\tag{**}
+\]
+Next, since $N_f(R)$ is increasing we get
+\[
+\log 2\cdot N_f(R)\leq \int_R^{2R}\, \frac{N_f(s)}{s}\cdot ds
+\leq T_f(2R)\implies
+\]
+\[
+ N_f(R)\leq\frac{T_f(2R)}{\log 2}\tag{***}
+ \]
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{A.4 Harnack's inequality.}}
+The function $\text{Log}^+|f|$ is subharmonic
+which implies that whenever $0<r<R$ then
+one has
+\[
+\text{Log}^+|f(re^{i\alpha})|\leq
+\frac{1}{2\pi}\cdot \int_0^{2\pi}\,
+\frac{R+r}{R-r}\cdot 
+\text{Log}^+\,\bigl  |f(R(e^{i\theta})\bigr |\cdot d\theta
+\]
+
+
+\noindent
+It follows that
+\[
+M_f(r)\leq \frac{R+r}{R-r}\cdot T_f(R)
+\]
+In particular we can take $R=2r$ and conclude that
+\[
+M_f(r)\leq 3\cdot T_f(2r)\quad\text{hold for every}\quad  r>0
+\]
+The last inequality gives:
+\medskip
+
+\noindent
+{\bf{A.5 Theorem.}}
+\emph{An entire function $f$ belongs to $\mathcal E$ if and only if there
+exists a constant $A$ such that}
+\[ 
+T_f(R)\leq A\cdot R
+\]
+\emph{holds for every $R$.}
+\bigskip
+
+\noindent
+{\bf{A.6 A division theorem.}}
+Let $f$ and $g$ be in $\mathcal E$ and assume that
+$h=\frac{f}{g}$ is entire. Now
+\[ 
+\log^+|h|\leq \log^+|f|+\log^+|g|\tag{i}
+\]
+In the case when $g(0)=1$ we apply (**) in A.3 and conclude that
+\[ 
+T_h(R)\leq T_f(R)+T_g(R)
+\]
+Hence Theorem A.5 implies that
+$h$ belongs to $\mathcal E$.
+We leave it to the reader to verify that this conclusion holds
+in general, i.e. without any assumption on
+$g(0)$.
+
+
+
+
+\bigskip
+
+
+
+\medskip
+
+\noindent {\bf{A.7 Hadamard products.}}
+Let $\{\alpha_\nu\}$ be a sequence of complex numbers
+arranged so that the absolute values are non-decreasing.
+The counting function of the sequence is 
+denoted by $N_{\alpha(\bullet)}(R)$. Suppose that the counting function
+satisfies:
+\[
+N_{\alpha(\bullet)}(R)\leq A\cdot R\quad\text{for all}\quad R\geq 1\tag{*}
+\]
+
+\medskip
+
+\noindent 
+{\bf{A.8 Theorem}}
+\emph{When (*) holds the infinite product}
+\[
+\prod\, (1-\frac{z}{\alpha_\nu})\cdot e^{\frac{z}{\alpha_\nu}}
+\]
+\emph{converges for every $z$ and gives an entire function to be denoted by
+$H_{\alpha(\bullet)}$ and  called the Hadamard product of the
+$\alpha$-sequence.}
+
+\medskip
+
+\noindent
+{\bf{A.9 Exercise.}}
+Prove this theorem and show also
+that there exists a constant $C$ which is independent of $A$ such that
+the Hadamard product satisfies the growth condition:
+\[
+\bigl|H_{\alpha(\bullet)}(z)\bigr| \leq
+C\cdot \text{exp}\bigr[ A\cdot |z|\cdot \log\,|z|\bigl]\quad
+\text{for all}\quad |z|\geq e
+\]
+\medskip
+
+
+\noindent{\bf{A.10 Lindelšf's condition.}}
+For a sequence $\{\alpha\uuu\nu\}$ we define the Lindelšf function
+\[ 
+L(R)= \sum_{|\alpha_\nu|<R}\, \frac{1}{\alpha_\nu}
+\]
+
+\noindent
+We say that $\{\alpha\uuu\nu\}$
+is of Lindelšf type  if there there exists a constant $L^*$ such that
+\[
+\bigl|L(R)\bigr|\leq L^*\quad\text{hold  for all}\quad  R.
+\tag{**}
+\]
+
+
+
+
+\bigskip
+
+\noindent
+{\bf{A.11 Theorem.}}
+\emph{If the $\alpha$-sequence satisfies (*) in A.8 and is of the Lindelšf type
+then
+there exists a constant $C$ such that the maximum modules function of
+$H\uuu {\alpha(\bullet)}$ satisfies}
+\[
+M_{H_{\alpha(\bullet)}}(R)\leq C\cdot e^{AR}
+\]
+\emph{and hence the Hadamard product belongs to $\mathcal E$.}
+
+\medskip
+
+\noindent
+{\bf{A.12 Exercise.}}
+Prove this result.
+A hint is to study the products
+\[
+\prod_{|\alpha_\nu|<2R}\,(1-\frac{z}{\alpha_\nu})e^{\frac{z}{\alpha_\nu}}
+\quad\text{and}\quad 
+\prod_{|\alpha_\nu|\geq 2R}\,(1-\frac{z}{\alpha\uuu\nu})e^{\frac{z}{\alpha_\nu}}
+\] 
+separately for every $R\geq 1$. Try also to find an upper bound for 
+$C$ expressed by  $A$ and $L^*$.
+
+\bigskip
+
+\noindent
+{\bf{A converse result.}}
+Le $f$ belong to $\mathcal L$. Then it turns out that
+its set of zeros satisfies (**) in A.10 for a constant $L^*$.
+To prove this we shall use:
+\medskip
+
+
+\noindent
+{\bf{A.13 An integral formula.}}
+With $R>0$ we put
+$g(z)=\frac{1}{z}-\frac{\bar z}{R^2}$.
+This is a is harmonic function in $\{0<|z|>R\}$ and 
+$g=0$ on  $|z|=R$.
+Apply Green's formula to $g$ and $\text{Log}\,|f|$
+on an annulus $\{\epsilon<|z|<R\}$. Let $f(z)$ be an entire function
+with $f(0)=1$
+and consider a pair $0<\epsilon<R$ where
+$f$ has not zeros in
+$|z|\leq\epsilon$.
+\bigskip
+
+\noindent
+{\bf{A.14 Exercise.}} Show that 
+\[
+\sum_{|\alpha_\nu|<R}\, \,\bigl[ \frac{1}{\alpha_\nu}-
+\frac{\bar\alpha_\nu}{R^2}\bigr]
+= \frac{1}{\pi\cdot R}\cdot \int_0^{2\pi}\,
+\text{Log}\,|f(Re^{i\theta})|  \cdot e^{-i\theta}\cdot d\theta-f'(0)
+\tag{*}
+\]
+where the sum is taken over zeros of $f$ repeated with multiplicities in
+the disc $\{|z|<R\}$.
+\bigskip
+
+\noindent
+{\bf{A.15 The case $f\in\mathcal E$}}.
+Asumme this. From XX we have seen that
+the counting function $N\uuu f(R)$ is bounded by
+$C\cdot R$ for some constant $C$ and this implies that the series
+\[
+\sum\,|\alpha\uuu\nu|^{\vvv 2}<\infty
+\]
+To show that the Lindelšf function $L(R)$
+is bounded it therefore sufficices
+to show that the function
+
+\[
+R\mapsto \frac{1}{\pi\cdot R}\cdot \int_0^{2\pi}\,
+\text{Log}\,|f(Re^{i\theta})|  \cdot e^{-i\theta}\cdot d\theta
+\] 
+is bounded and this follows from A.XX.
+
+
+
+
+
+
+ 
+\bigskip
+
+
+\centerline {\bf{B. The factorisation theorem for  $\mathcal E$}}
+
+\bigskip
+
+\noindent
+Consider some 
+$f\in\mathcal E$. 
+If $f$ has a  zero at
+the origin we can write
+\[ 
+f(z)= az^m\cdot f_*(z)\quad\text{where}\quad f_*(0)=1
+\]
+It is clear that $f_*$ again belongs to $\mathcal E$ and in this way
+we essentially reduce the study of $\mathcal E$-functions
+$f$ to the case when $f(0)=1$. 
+Above we proved that the set of zeros satisfies Lindelšf's condition
+and therefore the Hadamard product
+
+\[ 
+H_f(z)=\prod\,(1-\frac{z}{\alpha_\nu})\cdot e^{\frac{z}{\alpha_\nu}}
+\] 
+taken over all zeros of $f$ outside the origin belongs to $\mathcal E$.
+Now the quotient $f/H\uuu f$ is entire and we shall prove:
+
+
+\medskip
+
+
+
+
+\noindent{\bf{B.1 Theorem}}
+\emph{Let $f\in\mathcal E$ where $f(0)=1$. Then
+there exists a complex number $b$ such that}
+\[ 
+f(z)=e^{bz}\cdot H_f(z)
+\]
+\medskip
+
+\noindent
+\emph{Proof}.
+The division
+in
+A.6 shows that the function
+\[ 
+G=\frac{f}{H_f}
+\] 
+is entire and belongs to $\mathcal E$.
+By construction $G$ is zero\vvv free
+which gives
+the entire
+function
+$g=\log G$ for we have 
+the inequality
+
+\[ 
+|g(z)|\leq 1+\log^+|G(z)|\leq 1+C|z|
+\]
+Since $G\in\mathcal E$ we see that 
+$|g|$ increases at most like a linear function so by Liouvile's
+theorem it is a polynomial of degree 1. 
+Since $f(0)=1$  we have  $g(0)=0$ and hence $g(z)=bz$ for a complex number $b$
+and the 
+formula in Theorem B.1 follows.
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf\large C. The Carleman class $\mathcal N$}
+
+\medskip
+
+\noindent 
+Let $f\in\mathcal E$. On the real $x$-axis we have the non-negative function
+$\log^+\,|f(x)|$. If the integral
+\[
+\int_{-\infty}^\infty\, \frac{\log^+\,|f(x)| \cdot dx}{1+x^2}<\infty\tag{*}
+\]
+
+
+
+\noindent 
+we say that $f$ belongs to the Carleman class 
+denoted by $\mathcal N$. To study
+$\mathcal N$ the following integral formula
+plays an important role.
+
+\bigskip
+
+\noindent 
+{\bf C.1 Integral formula in a half-plane.}
+Let $g(z)$ be analytic in the half plane $\mathfrak{Im}(z)>0$. Assume that $g$
+extends continuously to the boundary $y=0$, i.e. to the real $x$-axis
+and that $g(0)=1$. Given a pair $0<\ell<R$
+we consider the domain
+
+\[
+\Omega_{\ell,R}=\{\ell^2<x^2+y^2<R^2\}\cap\,\{y>0\}
+\]
+
+
+\noindent
+With $z=re^{i\theta}$
+we have the harmonic function
+\[
+v(r,\theta)=(\frac{1}{r}-\frac{r}{R^2})\sin\,\theta=\frac{y}{x^2+y^2}-\frac{y}{R^2}
+\]
+Here $v=0$ on the upper half circle where $ |z|=R$ and $y>0$
+and 
+the outer normal derivative along the $x$-axis becomes
+\[ 
+\partial_n(v)=-\partial_y(v)=-\frac{1}{x^2}+\frac{1}{R^2}\quad\colon\,\quad x\neq 0
+\]
+Let $\{\alpha_\nu\}$ be the zeros of $g$ counted with multiplicites 
+in the upper half-plane.Then Green's formula gives:
+\medskip
+
+\noindent
+{\bf{C.2 Proposition.}} \emph{One has the formula}
+
+\medskip
+
+\[ 
+2\pi\cdot\sum\,\frac {\mathfrak{Im}\,\alpha\uuu\nu}{|\alpha\nu|^2}\vvv
+\frac{\mathfrak{Im}\, \alpha_\nu}{R^2}
+=
+\]
+\[
+\int_\ell^R\,\,\bigl(\frac{1}{R^2}-\frac{1}{x^2}\bigr)\cdot
+\text{Log}\,|g(x)\cdot g(-x)|
+\cdot dx
+\vvv\frac{2}{R}\int_0^\pi\, \text{sin}(\theta)\cdot 
+\text{Log}\,|g(Re^{i\theta})|\cdot d\theta+\chi(\ell)\tag{*}
+\]
+where $\chi(\ell)$ is a contribution from line integrals along
+the half circle $|z|=\ell$ with $y>0$.
+
+\bigskip
+
+
+
+\noindent
+{\bf {C.3 Exercise}}
+Prove  via Green's theorem.
+Notice that
+the term $\chi(\ell)$ is independent of $R$ so
+the formula can be used to study  asymptotic behaviour as $R\to+\infty$.
+\medskip
+
+\noindent
+Next, the family of analytic functions $g(z)$ in the upper half\vvv plane
+is identified with $\mathcal O(D)$
+using a conformal map, i.e. with a given $g$ we get $g\uuu *\in \mathcal O(D)$
+where
+\[
+g\uuu *(\frac{z\vvv i}{z+i})= g(z)
+\] 
+holds when $\mathfrak{Im}(z)>0$.
+When $g$ extends to a continuous function on
+the real $x$\vvv axis we have the equality
+As explained in XXX this gives the equality
+
+\[
+\int\uuu 0^{2\pi}\, \log^+|g\uuu *(e^{i\theta})|\cdot d\theta=
+2\cdot \int_{-\infty}^\infty\, \frac{\log^+\,|g(x)| \cdot dx}{1+x^2}\tag{*}
+\]
+This means that the last integral is finite if and only if
+$g\uuu *$ belongs to the Jensen\vvv Nevanlinna class
+and in XX we proved that this entails that
+\[
+\int\uuu 0^{2\pi}\, \log^+\frac{1}{|g\uuu *(e^{i\theta})|}\cdot d\theta<\infty
+\]
+In particular we conclude that if an entire function $f$
+satisfies (*) above then it follows that
+\[
+\int_{-\infty}^\infty\, \log^+\frac{1}{|f(x)|} \cdot 
+\frac{dx}{1+x^2}\tag{**}
+\]
+in other words, (*) entails that the absolute value
+$|\log\,|f(x)|\,|$ is integrable with respect to
+the density $\frac{1}{1+x^2}$.
+Using (**) we can prove:
+
+
+
+\bigskip
+
+ \noindent {\bf C.4  Theorem} \emph{Let $f\in\mathcal N$. Then}
+\[
+\sum^*\,\mathfrak{Im}\frac{1}{\alpha_\nu}<\infty
+\]
+\emph{where the sum is taken over all zeros of $f$ 
+which belong to the  upper half-plane.}
+\bigskip
+
+
+\noindent
+\emph{Proof.}
+Since $f\in\mathcal E$
+there exists a constant $C$ such that $N\uuu f(R)\leq C\cdot R$.
+If $R\geq 1$ it follows that
+\[ 
+\bigl|
+R^{\vvv 2}\sum\,\bar\alpha_\nu|\leq R^{\vvv 2}\cdot R\cdot N\uuu f(R)\leq C
+\]
+where  the sum is taken over zeros in $\Omega\uuu{\ell,R}$
+Next, since $\mathfrak{Im}\,\alpha\uuu\nu>0$ in this open set
+it follows that 
+\[
+\frac{\mathfrak{Im}\,\alpha_\nu}{|\alpha\uuu \nu|^2}>0
+\]
+ for every zero in the upper half\vvv plane. In particular this holds for the
+ zeros in 
+$\Omega\uuu{\ell,R}$ and 
+passing to the limit as $R\to \infty$
+it suffices to establish an upper bound in the right hand side of
+Proposition C.2 with $g=f$.
+The integral taken over the half\vvv circle where $|z|=R$
+is uniformly  bounded with respect to $R$
+since $f\in \mathcal E$
+and we have the inequality XX from A.XX.
+For the integral on the $x$\vvv axis we therefore only need an upper bound.
+Since $R^{\vvv 2}\vvv x^{\vvv 2}\leq 0$
+during the integration it suffices to find a constant $C$ such that
+\[
+\int_\ell^R\,\,\bigl(\frac{1}{x^2}-\frac{1}{R^2}\bigr)\cdot
+\log^+\frac{1}{\,|f(x)\cdot f(-x)|}
+\cdot dx\leq C\quad\text{hold for all}\quad R\geq 1
+\]
+The reader may verify that such a constant $C$ since (**) above holds.
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+\noindent{\bf C.5 A limit for the counting function.}
+Using the Tauberian theorem which is proved in
+Section D  one has the  following:
+
+\bigskip
+
+\noindent
+{\bf C.6 Theorem} \emph{For each $f\in\mathcal N$ there exists the limit:}
+\[ 
+\lim_{R\to\infty}\,\frac{N_f(R)}{R}
+\]
+
+
+\noindent 
+{\bf{C.7 Remark.}}
+To prove this we first notice that
+if $f\in\mathcal N$ then the product $f(z)\cdot f(\vvv z)$ also 
+belongs to $\mathcal N$ and for this even function
+the counting function is twice that of $f$. So it suffices to prove
+Theorem XX when $f$ is even.
+We may also assume that $f(0)=1$ and since
+$f\in\mathcal E$ it is given by a Hadamard product
+
+\[
+f(z)=\prod^*\, (1-\frac{z^2}{\alpha_\nu^2})\tag{1}
+\]
+where $\prod^*$ indicates the we  take the product of zeros whose
+real part is $>0$ and if they are purely imaginary 
+they are of the form $b\cdot i$ with $b>0$.
+We can  replace the zeros by their absolute values and construct
+\[
+f_*(z)=\prod^*\, (1-\frac{z^2}{|\alpha_\nu|^2})\tag{2}
+\]
+
+
+\noindent
+If $x$ is real we see that 
+\[
+|f_*[x)|\leq |f(x)|\tag{3}
+\]
+We conclude that if $f$ belongs to
+$\mathcal N$ so does $f_*$.
+At the same time their counting functions of zeros are equal.
+This reduces the proof of Theorem XX to the special case when
+$f$ is even and the zeros  are real.
+In the next section we study entire and even functions
+in $\mathcal E$ whose zeros are real and via a general Tauberian theorem
+deduce Theorem C.6 above.
+
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\bf\large D. A Tauberian Theorem}
+
+
+\bigskip
+
+\noindent
+To every non-decreasing and discrete sequence of positive real numbers
+$\{0<t_1\leq t_2\leq \ldots\}$ we associate the even sequence where we include 
+$\{-t_\nu\}$.
+Assume that
+$\mathcal N_\Lambda(R)\leq C\cdot R$ for some constant.
+We get the entire function
+\[
+f(z)=
+\prod\,(1-\frac{z^2}{t_\nu^2})
+\]
+which by the results in Section A belongs to $\mathcal E$.
+If $R>0$ we set:
+\[
+ J_1(R)=\frac{\text{log}\, f(iR)}{R}
+\quad\text{and}\quad 
+J_2(R)=\int_{-R}^R\, \frac{\text{Log}\,| f(x)|}{x^2}\cdot dx\tag{*}
+\]
+\medskip
+
+
+\noindent
+{\bf{D.1 Theorem.}}
+\emph{There exists a limit }
+\[ 
+\lim\uuu {R\to\infty}\, \frac{N\uuu f(R)}{R}=2A
+\]
+\emph{if and only if at least one of the $J$\vvv functions has
+a limit as $R\to\infty$. Moreover, when this holds
+one has the equalities:}
+
+\[
+\lim_{R\to\infty} J_1(R)=\frac{\pi\cdot A}{2}\quad\text{and}\quad
+\lim_{R\to\infty} J_2(R)=\vvv \frac{\pi^2\cdot A}{2}
+\]
+\bigskip
+
+\noindent
+To prove this
+we introduce the following:
+\medskip
+
+
+\noindent
+{\bf{D.2 The $W$\vvv functions.}}
+On the positive real $t$-line we define the following functions:
+\[ 
+W_0(t)=\frac{1}{t}\quad\colon \,\,t\geq 1\quad
+\text{and}\quad W_0(t)=0\quad\text{when}\,\,\, t<1\tag{1}
+\]
+\[
+W_1(t)=\frac{\text{Log}(1+t^2)}{t}\tag{2}
+\]
+\[
+W_2(t)=
+\int_0^t
+\frac{\text{Log}\,|1-x^2|}{x^2}\cdot dx\tag{3}
+\]
+
+\noindent
+Next, 
+the
+real   sequence
+$\Lambda=\{t_\nu\}$   gives a discrete measure
+on the positive real axis where one  assigns a unit point mass at
+every $t_\nu$. If repetitions occur, i.e. if some
+$t$-numbers are equal we
+add these unit point-masses.
+Let $\rho$ denote  the resulting  discrete measure. 
+The constructions of the $J$\vvv functions obviously give:
+\[ 
+\frac{\mathcal N_\Lambda (R)}{R}=
+2\cdot \int_0^\infty\, W_0(R/t)\cdot \frac{d\rho(t)}{t}\tag{*}
+\]
+\[
+J_k(R)=
+\int_0^\infty\,W_k\bigl(\frac{R}{t}\bigr)\cdot\frac{d\rho(t)}{t}
+\quad\colon\, k=1,2\tag{**}
+ \]
+\medskip
+
+\noindent{\bf{D.3 Exercise.}}
+Show that under the assumption that
+the function $\frac{\mathcal N_\Lambda (R)}{R}$ is bounded, it follows
+the three $\mathcal W$-functions belong to
+the $\mathcal {BW}$-algebra defined by the measure $\rho$
+as explained in XXX.
+
+
+\bigskip
+\noindent
+{\bf  D.4 Fourier transforms.} Recall that on $\{t>0\}$ we have the Haar
+measure 
+$\frac{dt}{t}$. 
+We leave it to the reader to verify that all  the $W$-functions above  belong to $L^1({\bf{R}}^+)$, i.e. 
+\[ 
+\int_0^\infty\, \bigl|W_k(t)\bigr|\cdot \frac{dt}{t}<\infty\quad\colon
+k=0,1,2
+\tag{i}
+\]
+The Fourier
+transforms  are defined by
+\[ 
+\widehat W_k(s)=
+\int_0^\infty\,  W_k(t)\cdot t^{-(is+1)}\cdot dt\tag{ii}
+\]
+We shall prefer to use the functions with reversed sign on $s$, i.e. set
+\[
+\mathcal F\,W_k(s)=\int_0^\infty\,  W_k(t)\cdot t^{is-1}\cdot dt\tag{iii}
+\]
+
+\medskip
+
+\noindent
+{\bf{D.5 Proposition}} \emph{One has the formulas}
+\[
+\mathcal F\,W_0(s)=\frac{1}{1-is}\tag{i}
+\]
+
+
+\[
+\mathcal F\,W_1(s)= 
+\frac {\pi \cdot e^{\vvv \pi s/2}}{(1\vvv is)\cdot (1+e^{\vvv \pi s})}
+\]
+
+
+\[
+\mathcal F\,W_2(s)=
+\frac{2\pi}{(1-is)\cdot (e^{\pi s/2}+e^{-\pi s/2})}\tag{iii}
+\]
+
+
+\bigskip
+
+\noindent
+\emph{Proof.}
+The equation (i) is easily verified.
+To prove (ii) we notice that a partial integration gives
+\[
+\mathcal F\,W_1(s)=\frac{1}{is\vvv 1}\cdot
+\int\uuu 0^\infty\,\frac{2\cdot t^{is}\cdot dt}{1+t^2}
+\]
+To compute this integral we employ residue calculus where
+we
+consider the function
+\[ 
+\phi(z)=\frac{z^{is}}{1+z^2}
+\]
+We perform  line integrals over 
+large half\vvv circles where $z=Re^{i\theta}$ and $0\leq \theta\leq \pi$.
+A reside occurs at $z=i$. Notice also that if $t>0$ then
+\[
+ (\vvv t)^{is}= t^{is}\cdot e^{\vvv \pi s}
+ \]
+ which gives
+\[
+ \mathcal FW\uuu 1(s)
+ \frac{1}{1\vvv is)\cdot (1+e^{\vvv \pi s})}
+ \cdot
+ \lim\uuu {R\to\infty}\, \int\uuu{\vvv R}^R\, \phi(t)\cdot dt
+\]
+Here $\phi$ has a simple pole at $z=1$
+so by residue calculus the last integral becomes
+\[
+\vvv 2\pi i\cdot (i)^{is}\cdot  \frac{1}{2i}
+ =\vvv \pi\cdot e^{\vvv \pi s/2}
+\]
+Taking the minus sign into the account we conclude that
+
+\[
+ \mathcal FW\uuu 1(s)=
+ \frac {\pi \cdot e^{\vvv \pi s/2}}{(1\vvv is)\cdot (1+e^{\vvv \pi s})}
+\]
+ 
+
+
+\noindent
+For (iii) a partial integration gives
+\[
+\mathcal F\,W_2(s)=\vvv \frac{1}{is}\cdot
+\int\uuu 0^\infty\, \log|1\vvv t^2|\cdot t^{is\vvv 2}\cdot dt
+\]
+Here we computed the right hand side in
+[Residue Calculus] which gives the requested formula (iii).
+\bigskip
+
+
+\noindent
+{\bf{D.6 Evaluations at $s=0$}}
+From (i\vvv iiii) we find that 
+\[ 
+\mathcal F W\uuu 2(0)=\frac{\pi}{2}
+\quad\text{and}\quad
+\mathcal F W\uuu 2(0)=\vvv\frac{\pi^2}{2}
+\]
+Since we also have $\mathcal F\uuu 1(0)=1$
+we apply the general Tauberian Theorem in XX and can read off
+the results in Theorem D.1.
+
+\bigskip
+
+
+\centerline {\emph{ D.8  Proof of Theorem D.1}}
+\medskip
+
+\noindent
+The formulas for the Fourier transforms in Proposition D.5  show that each
+of them is $\neq 0$ on the whole real $s$-line.
+Hence we can apply the general result in XX
+to the discrete measure $\rho$ since
+the
+$\mathcal W$-functions belong to
+the $\mathcal {BW}$-algebra from XXX. 
+This implies that if one of the three
+limits in Theorem D.3  above exists, so do the other.
+To get the relation between the limit values we 
+only have to evaluate the Fourier transform at $s=0$.
+From Proposition D.5 we see that
+\[
+\mathcal FW_0(0)=1\quad\,\colon\quad 
+F\mathcal W_1(0)=1\quad\text{and}\,\quad
+F\mathcal W_2(0)=\pi\tag{**}
+\]
+
+
+
+\noindent 
+This gives the formulas
+in
+Theorem D.3 by the general result for $\mathcal{BW}$\vvv algebras in XXX.
+
+\medskip
+
+
+\bigskip
+
+
+\centerline{\bf{Application to measures with compact support.}}
+\bigskip
+
+\noindent
+Le $\mu$ be a Riesz measure on the real $t$\vvv line with
+compact support in an interval $[\vvv a,a]$ where
+we assume that both end\vvv points belong to the support.
+The measure is in general complex\vvv valued.
+Now we get the entire function
+
+\[
+f(z)= \int\uuu{\vvv a}^a\, e^{\vvv izt}\cdot d\mu(t)
+\]
+Here $f$ restricts to a bounded function on the real $x$\vvv axis with
+maximum norm $\leq ||\mu||$.
+Hence $f$ belongs to $\mathcal N$ which means that
+Theorem D.x holds.
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{One has the equality}
+\[
+\lim\uuu{R\to \infty}\,\frac{N\uuu f(R)}{R}=\frac{a}{\pi}
+\]
+
+
+\bigskip
+
+
+At the same time we notice that if $z=x+iy$ then we have
+\[ |e^{\vvv izt}|= e^{yt}\leq e^{a|y|}
+\]
+for all $\vvv a\leq t\leq a$.
+From this it follows that
+\[
+|f(x+iy)|\leq ||\mu||\cdot e^{a|y|}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+\centerline{\bf {E. Tauberian theorems with a remainder term}}
+\medskip
+
+\noindent
+Results  which i addition to Theorem D.1 also contain remainder terms were
+established by Beurling in 1936.
+An example of such a theorem with remainder term goes as follows:
+Let
+\[ 
+f(z)=\prod\,(1\vvv \frac{z^2}{t\uuu\nu^2})
+\]
+be an even and entire function of exponential type with real zeros
+as in section D. Then one has:
+
+\medskip
+
+\noindent
+{\bf{E.1 Theorem.}}
+\emph{Let $A>0$ and $0<a<1$ and assume that there 
+exists a constant $C\uuu 0$ such that}
+
+\[
+\bigl|\vvv \frac{1}{\pi^2}\cdot \int\uuu 0^R\,
+ \frac{\log |f(x)|}{x^2}\cdot dx\vvv A\,\bigr|\leq
+ C\uuu 0\cdot R^{\vvv a}
+ \]
+\emph{hold for all $R\geq 1$.
+Then there is another constant $C$ such that}
+\[
+\bigl|\, N\uuu f(R)\vvv R\bigr|\leq C\uuu 1\cdot R^{1\vvv a/2}
+\]
+Beurling's original manuscript which proved Theorem E.1 as well as other 
+results dealing with remainder terms    has remained
+unpublished. But
+it was   resumed with details of proofs
+in  a Master's Thesis at 
+Stockholm University 
+by F. GŸlkan in 1994.
+As remarked by Beurling in his article
+[Beurling] proofs of 
+results with remainders require the full force from the theory of
+Fourier integrals in addition to more 
+direct use of analytic functions of exponential type.
+The interested reader should also consult articles by
+Beurlings former Ph.d student
+S. Lyttkens which prove various Tauberian theorems with
+remainder terms. See also work by T. Ganelius 
+for closely related material.
+
+
+
+
+
+%\end{document}

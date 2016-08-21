@@ -1,0 +1,810 @@
+
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+\newpage
+
+
+
+
+
+\centerline{\bf{Almost periodic functions.}}
+\bigskip
+
+\noindent
+{\bf Introduction.} The theory about almost periodic functions is due to Harald Bohr 
+and was 
+developed
+in the years 1910-1930. The reader may consult the text-book
+[Bohr] for a detailed account of Bohr's contributions.
+Here is the baisc defintion:
+\medskip
+
+\noindent
+{\bf Defintion.}
+\emph{A continuous function $f(x)$ on the real line
+is called almost periodic if there to each $\epsilon>0$ exists some
+positive number $\ell(\epsilon)$
+such that every interval of length
+$\ell(\epsilon)$  contains a point
+$\tau$ such that the maximum norm}
+\[
+\max{x\in{\bf{R}}} |f(x+\tau)-f(x)|\leq\epsilon\tag{*}
+\]
+\emph{The class of these functions is denoted by
+$\mathcal{AP}$.}
+\medskip
+
+\noindent
+{\bf Trigonometric polynomials.}
+They consist of functions
+given by finite sums:
+\[ 
+A(x)=c_1e^{i\lambda x}+\ldots+c_Ne^{i\lambda_Nx}
+\]
+where $\lambda_1,\ldots,\lambda_N$ is some $N$-tuple of real  numbers and
+$c_1,\ldots,c_N$ are complex numbers.
+Every trigonometric polynomial belongs to
+$\mathcal{AP}$. Indeed this follows from the following
+elementary fact:
+\medskip
+
+\noindent
+{\bf Proposition.}
+\emph{Let $\lambda_1,\ldots,\lambda_N$
+be a finite set of real numbers. To each $\epsilon>0$ there
+exists some positive number $\ell(\delta)$ such that
+every interval on the real line if length $\ell(\delta)$
+contains a point $\tau$ such that}
+\[ 
+\frac{\lambda_\nu}{2\pi}\cdot\tau=\delta_\nu+b_\nu\quad\colon\quad
+|\delta_\nu|<\epsilon\quad\colon\, b_\nu\in{\bf{Z}}
+\]
+
+
+\noindent
+Apply this to a trigonometric polynomial $A(x)$. Then  we see that
+\[
+A(x+\tau)-A(x)=\sum\, c_\nu(\, e^{2\pi i\delta_\nu}-1)\cdot e^{i\lambda_\nu x}
+\]
+and conclude that $A(x)\in\mathcal{AP}$.
+Conversely one has
+
+\medskip
+
+{\noindent
+{\bf Theorem.}
+\emph{Every $f\in\mathcal{SAP}$ can be uniformly
+approximated by trigonometric polynomials,
+i.e. there exists a sequence of trigonometric polynomials
+$A_1,A_2,\ldots$ such that}
+
+\[ \lim_{n\to\infty}\,\max_{x\in{\bf{R}}}\,
+|A_n(x)-f(x)|=0
+\]
+
+\medskip
+
+\noindent
+The proof is left as an exercise. The hint is to use 
+approximation for periodic functions via Fourier series.
+
+\medskip
+
+\noindent
+{\bf The spectral function.}
+Let $f(x)$ be almost periodic.
+From Theorem 1  it follows easily that we get  a continuous and bounded
+function $\Phi(x)$ defined by
+\[ 
+\Phi(x)=
+\lim_{w\to\infty}\, \int_{-w}^w\,
+f(x+t)\bar f(t)\cdot dt
+\]
+\medskip
+
+\noindent Following Bohr we refer to
+$\Phi(x)$ as the spectral function of $f$.
+If $x_p$ and $x_q$ are teo real numbers we notice that
+\[
+ \Phi(x_p-x_q)=
+\lim_{w\to\infty}\, \int_{-w}^w\,
+f(x_p+t)\bar f(x_q+t)\cdot dt
+\]
+So of $x_1,\ldots,x_N$is an $N$-tuple of real numbers
+and $a\uuu 1,\ldots,a_N$ an $N$-tuple of complex numbers we get
+\[
+\sum\sum a_p\bar a_q \Phi(x_p-x_q)=
+\lim_{w\to\infty}\, \int_{-w}^w\,
+|\sum a_pf(x_p+t)|^2\cdot dt\tag{*}
+\]
+Hence $\Phi(x)$ is a $\mathcal{B}$-function and Theorem X.1 
+gives  a non-negative measure
+$\sigma$ such that
+\[ 
+\Phi(x)=\int\, e^{ix\xi}\cdot d\mu(\xi)
+\]
+\medskip
+
+\noindent
+Following Bohr the non-negative measure $\mu$
+is called the spectral measure associated to $f$.
+A major result about almost periodic functions is:
+
+\bigskip
+
+\noindent
+{\bf{Theorem.}} \emph{The spectral measure of an
+almost periodic function is always discrete. Moreover one has the limit formula:}
+
+\[ 
+\lim_{w\to\infty}\, \frac{1}{2w}\int_{-w}^w\,
+\bigl |\, f(x)-\sum\, c_\nu\cdot e^{i\lambda_\nu x}\bigr |^2\cdot dx=0
+\]
+\emph{where $\mu=\sum\, c\uuu\nu\cdot \delta\uuu{\lambda\uuu\nu}$.}
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+\centerline{\bf Operational calculus on $L^1({\bf{R}})$}
+
+
+\bigskip
+\noindent
+
+
+
+
+
+
+Let $f(x)$ be in $L^1({\bf{R}})$ and denote its Fourier transform
+by $g(\xi)$, i.e.
+\[ 
+g(\xi)=\int\, e^{-ix\xi}f(x)dx\tag{*}
+\]
+We know that
+$g(\xi)$ is a continuous and complex-valued function.
+Let $[a,b]$ be a closed interval on the real $\xi$-line,
+Put  $w=g(\xi)$ which gives the compact subset
+$g[a,b])$ of the complex $w$-plane.
+Let 
+$\Phi(w)$ be an analytic function
+defined in some open neighborhood of
+$g[a,b]$.
+With these notations one has
+\medskip
+
+\noindent
+{\bf Theorem.}
+\emph{There exists a function
+$\phi(x)\in L^1({\bf{R}})$ whose Fourier transform
+satisfies}
+\[ 
+\hat\phi(\xi)=\Phi(g(\xi))\quad\colon\quad a\leq\xi\leq b
+\]
+\medskip
+
+\noindent
+\emph{Proof.}
+Consider  some point $a\leq \xi_*\leq b$.
+By the analyticity of $\Phi$ there
+exists a  series expansion
+\medskip
+
+\[ 
+\Phi(w)=\Phi(w_*)+\sum_{\nu=1}^\infty\, c_\nu(w-w^*)^\nu
+\quad\colon w^*=g(\xi_*)
+\]
+which is convergent in some open disc centered at $w_*$. In particular we can
+find  $\delta>0$ and a constant $M$
+such that
+\medskip
+\[
+|c_\nu|\leq M\cdot\delta^{-\nu}\quad\colon\quad \nu=0,1,\ldots\tag{i}
+\]
+Next, we consider the special function
+
+\[
+W(\xi)=1\quad\colon\quad |\xi|\leq1 \quad\colon
+W(\xi)=2-|\xi|\quad\colon\quad 1\leq |\xi|\leq 2
+\]
+Recall from XX that $W$ is the Fourier transform of an
+$L^1$-function $P(x)$. Fourier's inversion formula gives:
+\[ 
+P(x)=\frac{1}{2\pi}\int e^{ix\xi}\cdot W(\xi)d\xi\tag{ii}
+\]
+Next, when $|g(\xi)-g(\xi_*)|<\delta$
+it follows from (i) that
+\[ 
+\Phi(g(\xi))-\Phi(g(\xi_*)=\sum\, c_\nu(g(\xi)-g(\xi_*))^\nu\tag{iii}
+\]
+Let $k>0$ and put
+\medskip
+
+
+\[ \psi_k(\xi)= W(k(\xi-\xi_*))\cdot \Phi(g(\xi_*))+
+\sum\, c_\nu\cdot\bigl[ W(k(\xi-\xi_*))\cdot (g(\xi)-g(\xi_*)\,\bigr]^\nu\tag{iii}
+\]
+\medskip
+
+\noindent
+Rules for dilation under the Fourier transform and (ii) give
+\medskip
+\[
+\frac{1}{k}\cdot e^{i\xi_*\cdot x}\cdot P(\frac{x}{k})=
+\text{inverse Fourier transform of }\,\, W(k(\xi-\xi_*))\tag{iv}
+\]
+\medskip
+
+\noindent
+More precisely, we have
+\[
+\frac{1}{k}\cdot e^{i\xi_*\cdot x}\cdot P(\frac{x}{k})=
+\frac{1}{2\pi}\cdot\int e^{ix\xi}\cdot W(k(\xi-\xi_*))\cdot d\xi\tag{*}
+\]
+\bigskip
+
+\noindent
+Define the function $Q_k(x)$ by:
+
+\[
+Q_k(x)= \frac{1}{k}\int e^{i\xi_*(x-y)}\bigl [ P(\frac{x-y}{k}-P(\frac{x}{k})\,\bigr]
+f(y) dy\tag{v}
+\]
+Then (*) and Fourier's inversion formula give:
+
+\[
+W(k(\xi-\xi_*))\cdot (g(\xi)-g(\xi_*)=
+\int e^{-ix\xi} \cdot Q_k(x)dx\tag{vi}
+\]
+\medskip
+
+\noindent 
+Next, the triangle inequality applied to the
+right hand side in (vi) gives:
+\medskip
+
+\[ \int\,|Q_k(x)|\cdot dx\leq 
+\frac{1}{k} \iint
+| P(\frac{x-y}{k}-P(\frac{x}{k})|\cdot |f(y)|\cdot dxdy=
+\]
+\[
+||f||_1\cdot 
+\int\, \bigl |P(x-\frac{y}{k})-P(\frac{x}{k})\bigr |\cdot dx\tag{**}
+\]
+\medskip
+
+\noindent
+Since $P\in L^1({\bf{R}})$
+the Riemann-Lebesgue theorem gives
+\[ 
+\lim_{k\to 0}\, 
+\int\, \bigl |P(x-\frac{y}{k})-P(\frac{x}{k})\bigr |\cdot dx=0
+\]
+Together with the   inequality (**)
+we therefore obtain
+\medskip
+
+\noindent
+{\bf Sublemma.}
+One has
+
+\[ ||Q_k||_1=\lambda(k)\quad\colon\quad\lim_{k\to 0}\,\lambda(k)=0
+\]
+\medskip
+
+\noindent
+For each
+$\nu\geq 2$ we construct the $\nu$:th fold convolution of
+$Q_k$ which we denote by
+$Q_k(\nu)$. The multiplicative inequality for
+$L^1$-norms and the Sublemma give:
+\medskip
+
+\[ 
+||Q_k(\nu)||_1\leq \lambda(k)^\nu\quad\colon\quad \nu=1,2,3,\ldots\tag{***}
+\]
+\medskip
+
+\noindent
+We can choose $k$ so large that
+$\lambda(k)<\delta$. it follow from (xx) that
+\[
+G(x)= 
+\sum_{\nu=1}^\infty\, c_\nu\cdot Q_k(\nu)(x)
+\]
+converges in the Banach space $L^1({\bf{R}})$.
+Hence we obtain the $L^1({\bf{R}})$-function defined by
+\[
+G^*(x)= \frac{1}{k}\cdot\Phi(g(\xi_*))\cdot e^{i\xi_*\cdot x}
+\cdot P\bigl[\frac{x}{k}\bigr)+ G(x)
+\]
+\medskip
+
+\noindent
+From the previous constructions it is clear that the
+Fourier transform of $G^*(x)$ is equal to
+the function $\psi_k(\xi)$ from (iii).
+Finally,
+from the construction of the $W$-function and the original series expansion of
+$\Phi$ we have the equality
+\[
+\psi_k(\xi)=\Phi(g(\xi))\quad\colon\quad
+|\xi-\xi_*|\leq\frac{1}{k}\tag{****}
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+Above the integer $k$ was chosen to ensure
+that $\lambda(k)<\delta$. In the
+Sublemma we used the inequality (**) where
+the $P$-function does not depend on $f$ or on $\Phi$.
+So we conclude that when we restrict the attention to $L^1$-functions $f$ of norm
+$\leq 1$, then it suffices to choose
+$k$ so large that
+\[
+\int\, \bigl |P(x-\frac{y}{k})-P(\frac{x}{k})\bigr |\cdot dx<\delta
+\]
+\medskip
+
+\noindent
+{\bf Final part of the proof.}
+By the remark above we find
+$L^1$-functions whose Fourier transforms agree with
+$\Phi(g(\xi))$ on small intervals around every point $a\leq\xi_*\leq b$.
+By the Heine-Borel Lemma and a $C^\infty$-partition of the unit
+we can finish the proof of Theorem xx. To be precise, we use that
+if $h(\xi)$ is a test-functionon the real $\xi$-line then it is the
+Fourier transform of some $L^1$-function.
+
+
+\bigskip
+
+\centerline{\bf Bochner's moment theorem}
+
+\bigskip
+
+\noindent
+In probability theory
+the frequency  of a 
+stochastic variable is expressed
+by a probability measure
+$\mu$ on the real line where we take $t$
+as the coordinate. The characteristic function
+is by definition the Fourier transform
+of $\mu$ and we set
+\[ 
+f(x)=\int\, e^{-ixt}\cdot d\mu(t)\tag{*}
+\]
+Let
+$x_1,\ldots,x_N$ be some $N$-tuple of real numbers
+and $\alpha_1,\ldots,\alpha_N$ some $N$-tuple of complex numbers.
+Then 
+\medskip
+\[ 
+\sum\sum\, f(x_p-x_q)\alpha_p\cdot\bar\alpha_q=
+\int\,\bigl |\sum\, \alpha_p\cdot e^{-ix_p\cdot t}\bigr|^2d\mu(t)\tag{**}
+\]
+Since $\mu\geq 0$ it follows that the
+right hand side is $\geq 0$.
+It turns out that this inequality characterizes the family of
+bounded continuous functions $f(x)$ which are Fourier
+transforms of non-negative measures. First we introduce a class of functions:
+
+\medskip
+
+\noindent
+\emph{The class $\mathcal{B}$}. It consists
+of
+continuous  functions $f(x)$ on the real $x$-line such that
+$f(0)=1$ and }
+\[
+\sum\sum\, f(x_p-x_q)\alpha_p\cdot\bar\alpha_q\geq 0\quad\colon\quad
+f(0)=1
+\]
+
+\noindent
+hold for all
+$N$\vvv tuples
+$x_\bullet$ and $\alpha_\bullet$
+as above.
+\medskip
+
+\noindent
+{\bf Remark.}
+Given $x>0$ we take $N=2$ with $x_1=0$ and $x_2=x$
+and $\alpha_1=1$ while $\alpha-2=e^{i\theta}$.
+Then Bochner's condition gives
+\[
+2\cdot f(0)+ e^{i\theta}f(x)+e^{-it\theta}f(-x)\geq 0\tag{i}
+\]
+With  $\theta=\pi/2$ it  follows that
+$f(-x)=\bar f(x)$ and then the inequality (i)   gives
+\[ 
+|f(x)|\leq f(0)=1\tag{ii}
+\]
+So functions in $\mathcal B$ are automatically bounded.
+Theorem 1 is due to Bochner and was for example
+presented in his  
+book [Boch]
+\emph{Vorlesungen Ÿber Fouriersche Integrale} from 1932.
+\medskip
+
+\noindent
+{\bf 1. Theorem.} \emph{For each $f\in\mathcal{B}$ there exists
+a unique non-negative measure $\mu$ such that}
+\[
+f(x)=\int e^{-ixt}d\mu(t)
+\]
+\medskip
+
+
+\noindent
+The subsequent proof of
+Theorem 1 uses   a representation formula for positive harmonic functions
+in the upper half-plane which in its turn is a special case of
+more general representations of harmonic functions in half\vvv planes due to 
+the Brothers Nevanlinna in the article [Nev\vvv Nev] from  1920.
+Let us also remark that the periodic version 
+preceeded  Theorem 1 and is due 
+to
+G. Herglotz who proved the following
+in his article   [Herg] 
+from 1911:
+\newpage
+
+\noindent
+{\bf 2. Theorem.} \emph{Let $\{m_n\,\colon -\infty<n<\infty\}$
+be a sequence of complex numbers.
+In order that there exists a non-negative Riesz measure
+$\mu$ on the interval $[0,2\pi]$ such that}
+\[ m_n=\int_0^{2\pi}\, e^{in\theta}\cdot d\mu(\theta)
+\]
+\emph{it is necessary and sufficient that}
+\[
+\sum_{\nu=-N}^{\nu=N}\sum_{j=-N}^{j=N}\, m_{\nu-j}\cdot \alpha_\nu\cdot\bar\alpha_j\geq 0
+\]
+\emph{holds for and finite sequence of complex numbers}
+$\alpha_{-N}\ldots,\alpha_N$.
+
+
+\bigskip
+
+\noindent
+To prove Theorem 1 we
+shall need
+the following result:
+\medskip
+
+\noindent
+{\bf 3. Proposition.}
+\emph{For each pair of real numbers
+$\xi,\eta$ with $\eta>0$
+there exists a function $\phi(x)\in L^1({\bf{R}})$
+such that}
+\[
+e^{-i\xi x-\eta|x|}= \int_{-\infty}^\infty\,
+\phi(x+y)\cdot\bar \phi(y)\cdot dy\quad\colon\, -\infty<x<\infty
+\]
+\medskip
+
+\noindent
+\emph {Proof}
+Define the function
+\[
+g(t)=\sqrt{\frac{1}{2\pi}}\cdot 
+\sqrt{\frac{\eta}{\eta^2+(\xi+t)^2}}
+\tag{i}
+\]
+Put
+\[
+\phi(x)=\sqrt{\frac{1}{2\pi}}\cdot \int\, e^{itx}\cdot g(t)\cdot dt\tag{ii}
+\]
+\medskip
+
+\noindent 
+We leave as an exercise to the reader to verify that
+$\phi(x)\in L^1({\bf{R}})$
+and that
+the equality in Proposition 3 holds.
+\medskip
+
+\centerline{\emph{ Proof of Theorem 1.}}
+
+\medskip
+
+\noindent
+Consider the function
+\[ 
+\Phi(\xi,\eta)=\int_{-\infty}^\infty\, 
+e^{-i\xi x-\eta|x|}\cdot
+f(x)\cdot dx\quad\colon\, \xi\in{\bf{R}}\quad\colon\eta>0\tag{1}
+\]
+\medskip
+
+
+\noindent
+Proposition 3 gives:
+\[
+\Phi(\xi,\eta)=
+\iint\,
+\phi(x+y)\cdot\bar \phi(y)\cdot f(x)\cdot dxdy=
+\]
+\[
+\iint\,
+\phi(x)\cdot\bar \phi(y)\cdot f(x-y)\cdot dxdy
+\]
+Since both $f$ and $\phi$ belong to $L^1$ we can approximate
+the last double integral by Riemann sums
+which  take the  form
+
+\[
+\sum\, f(x_p-x_q)\cdot\alpha_p\bar \alpha_q
+\]
+Since 
+$f\in\mathcal B$ it follows 
+that
+the $\Phi$-function is $\geq 0$.
+Next, for each fixed $x$ we consider the function
+\[ 
+(\xi,\eta)\mapsto e^{-i\xi x-\eta|x|}\tag{*}
+\]
+Since $i^2=-1$ we see that this function is harmonic. Approximating
+the integral (1) by Riemann sums we conclude that
+$\Phi(\xi,\eta)$ is a harmonic function in the
+upper half-plane
+$\eta>0$.
+Since $|f(x)|\leq 1$ for all $x$ and $|e^{-ix\xi}|=1$
+the
+the triangle inequality gives
+\[ |\Phi(\xi,\eta)|\leq
+\int_{-\infty}^\infty\, 
+e^{-\eta|x|}\cdot
+dx=
+\frac{2}{\eta}\tag{2}
+\]
+\medskip
+
+\noindent
+Now $\Phi$ is harmonic and $\geq 0$
+in the upper half-plane. Hence  the inequality (i) and
+the general result in XX
+gives a non-negative measure $\mu$ of finite total mass such that
+
+\[ 
+\Phi(\xi,\eta)=\frac{1}{\pi}\cdot
+\int_{-\infty}^\infty\, \frac{\eta}{\eta^2+(\xi-t)^2}\cdot d\mu(t)\tag{3}
+\]
+\medskip
+
+\noindent
+With $\eta>0$ kept fixed we notice that (2) means that the function
+$\xi\mapsto \Phi(\xi,\eta)$ is the Fourier transform of
+$e^{-\eta|x|}f(x)$. Hence  (3) and Fourier's inversion formula 
+yield:
+\[
+e^{-\eta|x|}f(x)=
+\frac{1}{2\pi^2}\cdot\int_{-\infty}^\infty\,\, 
+e^{ix\xi}\cdot \bigr[ \int_{-\infty}^\infty\, \frac{\eta}{\eta^2+(\xi-t)^2}\cdot d\mu(t)
+\bigl]\cdot d\xi=
+\]
+\[
+\frac{1}{2\pi^2}\cdot\int\,
+\bigr[ \int_{-\infty}^\infty\, \frac{\eta\cdot e^{ix\xi}}{\eta^2+(\xi-t)^2}\bigl]\,
+d\mu(t)\quad\colon\quad \eta>0
+\tag{4}
+\]
+\medskip
+
+\noindent
+Now we use the limit formula:
+
+\[
+\frac{1}{\pi}\cdot \lim_{\eta\to 0}
+\int_{-\infty}^ \infty e^{ix\xi}\cdot \frac{\eta}{\eta^2+(\xi-t)^2}\cdot d\xi=e^{ixt}
+\quad\colon\,-\infty<t<\infty 
+\]
+\medskip
+
+
+\noindent
+At the same time we have
+\[
+\lim_{\epsilon\to 0}\, e^{-\epsilon|x|}\cdot f(x)\to f(x)
+\]
+\medskip
+
+\noindent
+So after the passage to the limit as
+$\eta\to 0$ we  get:
+
+\[ f(x)=\frac{1}{2\pi}\cdot\, \int\, e^{ixt}\cdot d\mu(t)\tag{5}
+\]
+\medskip
+
+\noindent 
+If we wish to use $e^{\vvv ixt}$
+we just have to replace
+$\mu$
+by $\mu^*$ where $d\mu^*(t)=d\mu(-t)$ and 
+Theorem 1 follows.
+
+\newpage
+
+\centerline{\bf A uniqueness for  a moment problem.}
+\bigskip
+
+{\bf Introduction.}
+The first general study of
+moment problems is due to Stieltjes who asked for
+a non-negative Riesz measure $\mu$ defined on $x\geq 0$ such that
+the moments
+\[ \
+\int_0^\infty\, t^n\cdot d\mu(t)=c_n\quad\colon\quad n=0,1,\ldots\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf Remark.}
+In 1880 the notion of general measure was not
+Conditions for the existence of solutions to (*) as well as uniqueness
+were proved by Stieltjes using continued fraction expansions
+corresponding to the series
+\[ 
+\sum\, \frac{(-1)^\nu\cdot c_\nu}{t^{\nu+1}}
+\]
+We shall not discuss this any further but refer to original work
+by Stieltjes. Instead we study the
+moment problem where integration takes place over the whole real line, i.e. this time
+we regard a non-negative measure $\mu$
+with support on the real line and set
+\[
+c_\nu=\int_{-\infty}^\infty\, t^\nu\cdot d\mu(t)\quad\colon\quad \nu=0,1,\ldots\tag{**}
+\]
+This moment problem was 
+studied by
+Hamburger in (Math.Annalen 81-82). See also R. Nevanlinna's
+article \emph{Asymptotische Entwicklungen beschrŠnkter Funktionen
+und das Stieltjesche Momentproblem}.
+A conclusive  uniqueness result was presented 
+by T. Carleman at the Scandianavian Congress of mathematics at 
+Helsinki in 1922.
+Before we 
+announce this  uniqueness theorem
+we remark that
+in order that (*) has a meaning we only regard non-negative measures
+$\mu$ on the real $t$-axis for which
+\[
+\int_{-\infty}^\infty\, t^{2n}\cdot d\mu(t)<\infty
+\quad\colon\quad n=0,1,\ldots
+\]
+\medskip
+
+\noindent
+This means that $\mu$ does not carry much mass when
+$|x|$ is large. In particular  the function
+\[ 
+F(z)=\int\,\frac{d\mu(t)}{t-z}
+\]
+exists as analytic function of the complex variable
+$z$ outside the real axis, i.e. $F(z)$ is analytic in both
+the upper and the lower half-plane.
+Moreover, 
+$F(z)$ determines $\mu$, i.e. if $F$ is identically zero
+then
+$\mu=0$. This is  used
+to settle uniquness for the moment equation
+(**)
+where the 
+result from  [Car: p. 80] goes as follows:
+
+
+\bigskip
+
+\noindent
+{\bf Theorem.}
+\emph{Let $\{c_\nu\}$ be a sequence of real numbers such that
+the series}
+\[ 
+\sum_{n=0}^\infty\, \frac{1}{
+\bigl|c_{2n}\bigr|^{\frac{1}{2n}}}=+\infty
+\]
+\emph{Then (*) has at most one solution.}
+\medskip
+
+\noindent{\bf Remark.}
+PROOF via cauchy integralsgiven on page
+80 is  elegant ...
+
+\noindent
+{\bf A case of non-uniqueness.}
+Consider  a  $C^\infty$- function $f(x)$
+which vanishes with all its derivatives at
+$x=0$ and $x=1$.
+Put
+\[
+m^2_p=\int_0^1\, |f^{(p)}(x)|^2\cdot dx
+\]
+Then there exist several measures  $\mu$ such that
+\[ 
+\int_0^\infty x^p\cdot d\mu(x)=m_p^2
+\]
+EXPLICIT constructions appear in Carleman on page 85.
+
+
+
+
+
+
+
+\bigskip
+
+\centerline{\bf{Another condition for  uniqueness}}
+\medskip
+
+\noindent
+Let $\mu $ be as above, i.e. 
+denote the class of
+\[ 
+\int\, t^{2p}\cdot d\mu(t)<\infty
+\]
+hold for every $p\geq 1$.
+\medskip
+
+\noindent
+Then we can use the Gram\vvv Schmidt
+procedure and construct 
+a sequence of polynomials $\{P\uuu\nu\}$
+which are orthogonal, i.e.
+\[
+\int\, P_n(t)\cdot \bar P_m(t)\cdot d\mu(t)=
+\text{Kronecker's delta function}
+\tag{*}
+\]
+\medskip
+
+\noindent
+where each $P\uuu n(t)$ is monic and of degree $n$.
+So to the given measure  $\mu$ belongs
+the  series:
+\medskip
+
+\[
+\mathcal P^*_\mu(z)= \sum_{n=0}^\infty\, |P_n(z)|^2\quad\colon\tag{**}
+z=t+is
+\]
+A sufficient condition for
+the uniqueness is given as follows:
+ 
+\medskip
+
+\noindent
+{\bf Theorem.}
+\emph{Let $\mu\in\mathcal R$ be such that
+(**) is divergent for
+every $s\neq 0$. Then
+$\mu$ is determined by the sequence  $\{c_j\}$.}
+\medskip
+
+\end{document}
+
+ 
+
+

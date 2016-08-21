@@ -1,0 +1,7679 @@
+\documentclass[12pt]{amsart}
+
+
+\usepackage[applemac]{inputenc}
+
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22 mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+\centerline{\bf\large{Analytic function theory in one complex variable}}
+
+
+\bigskip
+
+\[ 
+\text{By Jan\vvv Erik Björk}
+\]
+
+\bigskip
+
+\[ 
+\text{Department of Mathematics Stockholm University}
+\]
+
+
+
+\bigskip
+
+
+
+\centerline{\emph{Contents}}
+
+
+
+
+\bigskip
+
+\noindent
+{\bf{Chapter I:}}
+\medskip
+
+\noindent
+\emph{Part A:  Complex numbers}
+
+\medskip 
+
+\noindent
+\emph{Part B:  Series}
+
+
+
+\medskip
+
+
+\noindent
+\emph{Part C:  Linear algebra}
+\medskip
+
+
+\noindent
+\emph{Part D:  Zeros of polynomials}
+\medskip
+
+
+\noindent
+\emph{Part E:  Fourier series}
+
+
+
+
+
+\medskip 
+
+\noindent{\bf{Chapter II}}
+\medskip 
+
+\noindent
+\emph{Stokes Theorem and Line integrals}
+
+\bigskip
+
+
+\noindent{\bf{Chapter III.}}
+
+\medskip
+
+\noindent
+\emph{Analytic functions}
+ \bigskip
+
+ 
+
+
+\noindent
+{\bf{Chapter IV. }}
+\medskip
+
+\noindent
+\emph{Multi-valued functions}
+\bigskip
+
+\noindent
+{\bf{Chapter V. }}
+
+\medskip
+
+\noindent
+\emph{A. Harmonic functions}
+\medskip
+
+\noindent
+\emph{B. Subharmonic functions}
+
+
+\bigskip
+
+\noindent
+{\bf{Chapter VI. }}
+\medskip
+
+\noindent
+\emph{Conformal mappings}
+
+\bigskip
+
+\noindent
+{\bf{Chapter VII. }}
+\medskip
+
+\noindent
+\emph{Residue calculus}
+
+\bigskip
+
+\noindent
+{\bf{Chapter VIII. }}
+\medskip
+
+
+\noindent
+\emph{The $\Gamma$\vvv function and Riemann's $\zeta$\vvv function}
+
+\bigskip
+
+\noindent
+{\bf{Appendix.}}
+\medskip
+
+\noindent
+\emph{1: Measure theory}
+\medskip
+
+\noindent
+\emph{2: Distributions and boundary values of analytic functions}
+\medskip
+
+\noindent
+\emph{3: Functional analysis}
+
+\newpage
+
+
+\centerline{\emph{List of detailed contents}}
+
+\bigskip
+
+
+\centerline{\bf{I:A Complex numbers}}
+
+\bigskip
+
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+1.A: Basic facts.
+\medskip
+
+\noindent
+1.B: The fundamental theorem of algebra
+\medskip
+
+\noindent
+1:C. Interpolation by polynomials
+
+\medskip
+
+\noindent
+1:D Tchebysheff polynomials and transfinite diameters.
+\medskip
+
+\noindent
+1:E Exercises
+\medskip
+
+\noindent
+2. Möbius functions
+
+
+\medskip
+
+\noindent
+3. The Laplace operator
+\medskip
+
+\noindent
+4. Some complex mappings
+\medskip
+
+\noindent
+5. The stereographic projection
+
+\bigskip
+
+\centerline{\bf\ Chapter I:B. Series}
+\bigskip
+
+
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+1. Additive series
+\medskip
+
+\noindent
+1:B Counting functions
+
+\medskip
+
+\noindent
+2. Power series
+
+
+\medskip
+
+
+
+\noindent
+2:B Radial limits
+\medskip
+
+\noindent
+2:C A theorem by Landau
+
+\medskip
+
+
+\noindent
+3. Product series
+\medskip
+
+\noindent
+4. Blascke products
+\medskip
+
+\noindent
+5. Estimates using the counting function
+\medskip
+
+\noindent
+6. Convergence on the boundary
+\medskip
+
+\noindent
+7. An example by Hardy
+\medskip
+
+\noindent
+8. Convergence under substitution
+\medskip
+
+\noindent
+9. The series $\sum\, (a_1\cdots a_\nu)^{\frac{1}{\nu}}$
+\medskip
+
+\noindent
+10. Thorin's convexity theorem.
+
+
+\medskip
+
+\noindent
+11. Cesaro and Hölder limits
+\medskip
+
+\noindent
+12. Power series and arithmetic means
+\medskip
+
+\noindent
+13. Taylor series and quasi\vvv analytic functions
+
+\newpage
+
+
+\centerline {\bf I:C  Complex vector spaces}
+
+\bigskip
+
+
+
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+1. Wedderburn's Theorem
+\medskip
+
+\noindent
+2. Resolvent marices
+
+
+\medskip
+
+\noindent
+3. Jordan's theorem
+\medskip
+
+\noindent
+4. Hermitian and normal operators
+\medskip
+
+\noindent
+5. Fundamental solutions to ODE-equations
+
+\medskip
+
+\noindent
+6. Carleman's  inequality for resolvents
+
+\medskip
+
+\noindent
+7. Examples and exercises.
+
+
+\bigskip
+
+\centerline{\bf {I:D On zeros of polynomials}}
+\bigskip
+
+
+
+
+\noindent
+A: Preliminary results
+\medskip
+
+\noindent
+B: The Laguerre operators $A_\zeta^n$
+
+
+\medskip
+
+\noindent
+C: Properties of Laguerre forms
+\medskip
+
+\noindent
+D: Proof of Theorem 0.1
+\medskip
+
+\noindent
+E: Proof of Theorem 0.2 and 0.1
+
+
+
+
+\medskip
+
+\noindent
+F: Legendre polynomials
+
+
+\bigskip
+
+
+
+\centerline{\bf {I:E. Fourier series}}
+\bigskip
+
+
+
+\noindent
+\emph{A: The Fejer kernel}
+
+\medskip
+
+
+\noindent
+\emph{B: Legendre polynomials}
+
+
+
+\medskip
+
+
+\noindent
+\emph{C. The space $\mathcal T_n$}
+
+
+\medskip
+
+
+\noindent
+\emph{D. Tchebysheff  polynomials and transfinite diameters}
+\medskip
+
+
+\noindent
+\emph{E. Fejer sums and Gibbs phenomenon}
+
+\medskip
+
+
+\noindent
+\emph{F. Partial Fourier sums and convergence in the mean}
+
+
+\bigskip
+
+\centerline{\bf{II. Line integrals and Stokes theorem.}}
+
+
+\medskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+0: A. Calculus in ${\bf{R}}^2$.
+
+\medskip
+
+
+\noindent
+1. Some physical explanations
+
+\medskip
+
+
+\noindent
+2. Stokes Theorem in ${\bf{R^2}}$
+\medskip
+
+
+\noindent
+3. Line integrals via differentials
+\medskip
+
+
+\noindent
+4. Green's formula and the Dirichlet problem
+\medskip
+
+
+\noindent
+5. Exact versus closed 1-forms
+
+\medskip
+\noindent
+6. An integral formula for the Laplace operator
+
+
+
+\newpage
+
+
+
+\centerline{\bf Chapter III. Complex analytic functions}
+
+\bigskip
+
+
+\noindent
+0. Introduction
+\medskip
+
+
+\noindent
+1. Complex line integrals
+\medskip
+
+\noindent
+2. The Cauchy-Riemann equations
+\medskip
+
+\noindent
+3. The $\bar\partial$-operator
+\medskip
+
+
+\noindent
+4. The complex derivative
+\medskip
+
+\noindent
+5. Theorems by Morera and Goursat
+\medskip
+
+
+
+
+
+\noindent
+6. Cauchy's Formula
+\medskip
+
+\noindent
+7. Complex differentials 
+\medskip
+
+\noindent
+8. The Pompieu formula
+\medskip
+
+
+\noindent
+9. Normal families
+\medskip
+
+\noindent
+10. Laurent series
+\medskip
+
+\noindent
+11. An area formula
+\medskip
+
+
+
+\noindent
+12. A theorem by Jentsch
+\medskip
+
+\noindent
+13. An inequality by Siegel 
+\medskip
+
+\noindent
+14. Zeros of product series.
+
+\bigskip
+
+
+
+\centerline{\bf  Chapter 4: Multi-valued analytic functions}
+
+\bigskip
+
+\noindent
+0. Introduction
+\medskip
+
+\noindent
+1. Angular variation and Winding numbers
+\medskip
+
+\noindent
+2. The argument principle
+\medskip
+
+\noindent
+3. Multi-valued functions
+
+\medskip
+
+
+\noindent
+4. The monodromy theorem
+\medskip
+
+\noindent
+5. Homotopy and Covering spaces
+\medskip
+
+\noindent
+6. The uniformisation theorem
+\medskip
+
+
+\noindent
+7. The $\mathfrak{p}^*$-function
+
+
+\medskip
+
+
+\noindent
+9. Reflections across a boundary
+
+
+\medskip
+
+\noindent
+10. The elliptic modular function
+\medskip
+
+
+\noindent 
+11. Work by Henri Poincaré
+
+
+
+\newpage
+
+\centerline{\bf Chapter 5.A Harmonic functions}
+
+
+\bigskip
+
+
+\noindent 
+1. The Dirichlet problem
+\medskip
+
+\noindent 
+2. The Harmonic Conjugate.
+\medskip
+
+\noindent 
+3. Harmonic functions in a disc
+\medskip
+
+\noindent 
+4. The mean value property
+\medskip
+
+
+\noindent 
+5. The harmonic measure
+\medskip
+
+\noindent 
+6. The Green's function
+
+
+\medskip
+
+\noindent 
+7. The Neumann problem 
+
+
+\medskip
+
+\noindent 
+8. Example from Hydro mechanics
+
+
+
+\medskip
+
+\noindent 
+9. A result on harmonic majorisation
+
+\medskip
+
+\noindent 
+10. On harmonic measure functions
+\medskip
+
+\noindent 
+11. Some estimates for  harmonic  functions
+\medskip
+
+\noindent 
+12.  A density result for harmonic functions
+
+\bigskip
+
+\centerline{\bf Chapter 5.B. Subharmonic functions }
+
+\bigskip
+
+
+
+\noindent 
+1. The subharmonic Log-function
+\medskip
+
+
+\noindent 
+2. Basic facts about subharmonic functions
+\medskip
+
+\noindent 
+3. Riesz representation formula
+\medskip
+
+\noindent 
+4. Perron families
+
+\medskip
+
+\noindent
+5. Piecewise harmonic subharmonic functions
+
+\medskip
+
+\noindent
+6. On zero sets of subharmonic functions.
+
+\bigskip
+
+\centerline{\bf{Chapter 6. Conformal mappings.}}
+
+
+\bigskip
+
+
+\noindent
+1.A.  Riemann's mapping theorem for  simply connected domains
+
+
+\medskip
+
+\noindent
+1.B.  The  mapping theorem for   connected domains
+ 
+
+\medskip
+
+\noindent
+2. Boundary behaviour
+\medskip
+
+\noindent
+3. Picard's theorem
+
+
+
+\medskip
+
+\noindent
+4. Geometric results
+
+
+\medskip
+
+\noindent
+5. Schwartz-Christoffell maps
+\medskip
+
+\noindent
+6. Privalov's theorem
+\medskip
+
+\noindent
+7. Maps between multiple connected domains
+\medskip
+
+\noindent
+8. The Bergman kernel
+\medskip
+
+\noindent
+9. The electric equilibrium potential
+\medskip
+
+
+\noindent
+10. Conformal maps of circular domains
+\medskip
+
+\noindent
+11. Beurling's mapping theorem
+
+
+
+\newpage
+
+
+\centerline{\bf {Chapter 7. Residue calculus.}}
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+\emph{0: Introduction}
+
+\medskip
+
+
+\noindent
+\emph{0.A Five examples of residue calculus }
+
+\medskip
+
+
+\noindent
+\emph{0:B Summation formulas}
+\medskip
+
+
+\noindent
+\emph{0:C Asymptotic expansions}
+\medskip
+
+
+\noindent
+\emph{0:D Ugly examples}
+
+
+
+\medskip
+
+
+\noindent
+\emph{0:E Fractional decomposition}
+
+
+\medskip
+
+
+\noindent
+\emph{0:F Computing local residues}
+
+
+
+\medskip
+
+
+\noindent
+\emph{0.G Line integrals of multi-valued functions}
+\medskip
+
+
+\noindent
+\emph{0:H Solving a differential equation}
+
+
+\medskip
+
+
+\noindent
+\emph{0:I More involved integrals}
+\medskip
+
+
+\noindent
+\emph{0:J  Abel integrals and equations}
+
+\medskip
+
+
+\noindent
+\emph{0:K  Location of zeros of polynomials}
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\emph{Special integrals.}}
+\bigskip
+
+\noindent
+\emph{A: The integral $e^{-x^2}$}
+
+
+\medskip
+
+\noindent
+\emph{B: Integrals of rational functions}
+
+
+\medskip
+
+\noindent
+\emph{C: The integral $\int_0^\infty\,\frac{dx}{P(x)}$}
+
+\medskip
+
+\noindent
+\emph{D: The integrals $\int_{-\infty}^\infty\,\frac{e^{iax}\cdot dx}{P(x)}$}
+
+\medskip
+
+\noindent
+\emph{E: Principal value integrals}
+\medskip
+
+\noindent
+\emph{F: The integral $\int_0^\infty\,\frac{T(\sin x)}{P(x)}\cdot dx$}
+
+\medskip
+
+\noindent
+\emph{G: Adding complex zeros to $P$}
+
+
+\medskip
+
+\noindent
+\emph{H: The integral $\int_0^\infty\, \frac{x^a}{1+x^2}\cdot dx$}
+
+
+
+
+
+\medskip
+
+\noindent
+\emph{I: The use of the log-function}
+
+
+
+\medskip
+\noindent
+\emph{J: Trigonometric integrals}
+
+
+\medskip
+
+\noindent
+\emph{K: Summation formulas.}
+
+\medskip
+
+\noindent
+\emph{L:  Fourier integral}
+\medskip
+
+\noindent
+\emph{M: Multi-valued Laplace integrals}
+
+\newpage
+
+\centerline{\bf{Chapter VIII  The Gamma function and Riemann's $\zeta$-function}}
+
+\bigskip
+
+\noindent
+\emph{1. The Gamma function}
+\medskip
+
+
+\noindent
+\emph{2. The $\zeta$-function}
+
+
+
+\medskip
+\noindent
+\emph{3. The Riemann hypothesis}
+\medskip
+
+
+\noindent
+\emph{4. The prime number theorem.}
+
+
+\medskip
+
+\noindent
+\emph{5. A uniqueness
+result for the $\zeta$\vvv function.}
+\medskip
+
+\noindent
+\emph {6. A theorem on functions defined by a semi\vvv group}
+\medskip
+
+\noindent
+\emph{7. Beurling's criterion for the Rieman hypothesis}
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{Appendix A: Measure theory}}
+
+
+\bigskip
+
+
+
+\noindent
+0. Introduction
+\medskip
+
+
+
+\noindent
+0.1. Rational series and measure theory
+
+\medskip
+
+
+\noindent
+2. Abstract measure theory
+
+\medskip
+\noindent
+3. The Lebesgue measure
+
+\medskip
+\noindent
+4. Riesz measures
+
+\medskip
+\noindent
+5.  Stokes theorem in dimension $n$
+
+
+
+\medskip
+\noindent
+6. The Hardy-Littelwood maximal function
+
+\medskip
+
+\noindent 
+7. Rademacher functions
+\medskip
+
+\noindent
+8. The Browninan motion
+
+\bigskip
+
+
+\centerline{\bf{Appendix B.  Distributions and boundary values of analytic functions}}
+
+\bigskip
+
+
+
+
+\noindent
+0. Examples related to distribution theory.
+\medskip
+
+
+
+
+
+\noindent
+0.A The origin of distributions
+\medskip
+
+
+
+
+
+\noindent
+0.B A bird's view on distributions on the real line
+\medskip
+
+
+
+
+
+\noindent
+1. Tempered distributions on the real line
+\medskip
+
+\noindent
+2. Boundary values of analytic functions
+\medskip
+
+\noindent
+3. Fourier-Carleman  transforms
+\medskip
+
+\noindent
+4. The Paley-Wiener theorem
+\medskip
+
+\noindent
+5. Runge's theorem
+
+\medskip
+
+
+\noindent
+6. The generalised Fourier transform 
+
+\medskip
+\noindent
+8. Carleman's inequality for differentiable functions 
+
+\medskip
+\noindent
+9. Carleman's inequality for the inverse Fourier transform
+in $L^2({\bf{R}}^+)$.
+
+\medskip
+
+
+
+\noindent
+9. An integral equation.
+
+\medskip
+\noindent
+10. Spectral synthesis
+
+\medskip
+
+
+
+\noindent
+11. On  inhomogeneous $\bar\partial$-equations.
+
+
+
+\medskip
+
+
+
+\noindent
+12. Integral equations of Planck and Laplace
+
+
+\medskip
+
+
+
+\noindent
+13. The Carleman-Hardy theorem
+
+\medskip
+
+\noindent
+14. The log-potential and Abel's inversion formula
+
+\medskip
+
+\noindent
+15. An $L^1$\vvv inequality for inverse Fourier transforms.
+\medskip
+
+\noindent
+16. On functions with a spectral gap.
+
+\medskip
+
+\noindent
+17. A result by Beurling
+
+
+
+\medskip
+
+\noindent
+18. Lindeberg's central limit theorem
+
+\bigskip
+
+\centerline{\bf{Appendix C: Functional analysis.}}
+
+\bigskip
+
+
+\noindent
+\emph{0.A. Introduction}
+\medskip
+
+\noindent
+\emph{0. B: Hilbert's spectral theorem}
+\medskip
+
+\noindent
+\emph{0. C: Carleman's spectral theorem}
+
+
+
+
+\bigskip
+
+\noindent
+\emph{1. Normed spaces}
+
+\medskip
+
+\noindent
+\emph{2. Banach spaces}
+
+
+\medskip
+
+\noindent
+\emph{3. Linear operators}
+
+\medskip
+
+\noindent
+\emph{4. Hilbert spaces}
+
+\medskip
+
+\noindent
+\emph{4. B: Eigenvalues of matrices}
+\medskip
+
+
+\noindent
+\emph{5. Dual spaces}
+
+\medskip
+
+\noindent
+\emph{6. Fredholm theory}
+
+\medskip
+
+\noindent
+\emph{7. Calculus on Banach spaces}
+\medskip
+
+\noindent
+\emph{8. Bounded self-adjoint operators}
+\medskip
+
+\noindent
+\emph{9. Unbounded self-adjoint operators}
+
+\medskip
+
+\noindent
+\emph{10. Commuative Banach algebras.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline {\bf{Introduction.}}
+
+\bigskip
+
+
+\noindent
+These notes   are foremost devoted to  analytic function theory
+of one  variable but there also occur  material about measures and
+Fourier analysis.
+The borderline between complex and real
+situations
+is not strict since each profits from the other.
+The level varies  where   results of  foundational character appear
+together 
+with more advanced material.
+The less prepared reader may first  study
+basic material and
+for   experienced readers   the chapters  provide
+background to
+\emph{Special Topics}.
+Most of the results in these notes 
+are of a relatively  old vintage which 
+is no surprise
+since analytic function theory is
+a  subject which has been developed for more than   two centuries.
+Contributions by
+Gauss, Cauchy and Abel, followed by 
+Riemann, Schwarz, Weierstrass and Poincaré, 
+put the subject into a level which has 
+inspired later research in analytic function theory.
+Let us finsh the introduction by some
+examples.
+The reader may of course skip this at a first instant and
+move directly to the heading 
+\emph{An overwiev}.
+But the subsections below illustrate 
+the flavour of these notes where
+an ambition is to
+show how analytic function theory intervenves with other subjects.
+
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf{The heat equation.}}
+\bigskip
+
+\noindent
+An equation which appears
+in many situations, including probability theory,
+where it is related to the Brownian motion, is the PDE-equation
+\[
+\frac{\partial u}{\partial x}=
+\frac{\partial^2 u}{\partial y^2}
+\] 
+which is satisfied in
+a domain
+$B=\{ -\infty<x<\infty\}\times \{0<y<A\}$.
+The question arises if the vanishing of $u$ on some line 
+$\{y=a\}$ with
+$ 0<a<A$ implies that
+$u$ is identically zero in $B$.
+If
+there exists a constant $k$ such that
+\[
+|u(x,y)|\leq e^{kx^2}\quad\colon (x,y)\in B\tag{i}
+\]
+the answer is affirmative. In fact, for each 
+$0<a<A$ one has the integral formula
+\[ 
+u(x,y)=
+\frac{1}{2\sqrt{\pi (y-a)}}\int_{-\infty}^\infty\,
+u(\xi,a)\cdot U(x-\xi,y-a)\, d\xi\quad\colon a<y<a\tag{ii}
+\]
+where $U(x,y)$ is the function which is zero when $y\leq 0$ and 
+\[
+U(x,y)= e^{-x^2/y}\,\colon\, y>0
+\]
+If (i) does not hold uniqueness can fail, i.e.
+without   growth conditions there exist solutions to
+the heat equation in $B$ which vanish identically on
+a line $\{y=a\}$.
+A sufficient
+and "almost necessary" condition for the uniqueness
+was proved by Erik Holmgren in the article
+\emph{Sur les solution quasi-analytique d l'équation de chaleur}
+[Arkiv för matematik. 1924].
+
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Suppose there exists a constant $k$ such that}
+\[
+|u(x,y]|\leq e^{kx^2\cdot \log(e+|x|)}\quad\colon\, (x,y)\in B
+\] 
+\emph{Then, if $u(x,a)=0$ holds identically in $x$ for some
+$0<a<A$,
+it follows that
+$u$ is identically zero.}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+A complete investigation of the uniqueness problem for the heat equation  was
+carried out by Täcklund
+in [Täcklund] which shows that Holmgren's sufficiency theorem is quite sharp.
+In § xx we expose constructions due to
+Beurling devoted to  
+solutions of the heat equation satisfying 
+\[
+u(x,y)|\leq e^{\epsilon(|x|)\cdot x^2\cdot \log(e+|x|)}\tag{iii}
+\]
+where  $\epsilon(r)$  tends to zero as
+$r\to+\infty$. Here 
+Holmgren's growth condition holds
+and hence 
+uniqueness holds.
+Beurling constructed a
+kernel $U^*$
+which is used to express 
+a solution $u$ satisfying (iii)  by
+an integral formula like  (ii) above.
+Several steps are needed to get $U^*$
+where a crucial role is
+played by
+the analytic function
+defined in
+${\bf{C}}\setminus (-\infty,-e]$ by
+\[
+\gamma(z)=[\log(z+e)]^z= e^{z\cdot \log\,(z+e)}
+\]
+Here $e$ is Neper's constant and
+a single-valued branch of the complex log-function
+$\log\,(z+e)$ is found when
+the
+real interval $(-\infty,-e]$ has been removed.
+\medskip
+
+\noindent
+The discussion above illustrates that
+analytic function theory is needed in
+refined questions from PDE-theory.
+Readers who feel "an appetite" for the results  above
+will hopefully find  these notes 
+interesting, while those who prefer
+"abstract  theories"  without involved estimates
+may just as well 
+refrain from studying  
+these notes.
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline {\bf{Runge's theorem and Schwarz' reflection principle.}}
+\bigskip
+
+
+\noindent
+With $z=x+iy$ we consider a rectangle
+$\square=\{-a<x<a\}\times \{-b<y<b\}$.
+It contains
+the upper part
+$\square_+= \{-a<x<a\}\times \{0<y<b\}$ and  the lower part
+$\square_-=\square\cap \{y<0\}$.
+Let 
+$\phi(z)$ be an analytic function
+in $\square_+$ which extends continuously to its closure.
+A classic result, known as Runge's theorem,
+entails that for every $\delta>0$ there exists
+a sequence of polynomials $\{P_n(z)$
+such that the maximum norms $|P_n-\phi|_{\square_+}$ tend to zero
+and at the same time
+the maximum norms of $|P_n|$ taken over
+the rectangle
+$\square(-\delta)=\{-a<x<a\}\times \{-b<y<\delta\}$ tend to zero.
+While such an approximation takes place
+the maximum norms
+of $\{P_n\}$ taken over $\square$ cannot remain uniformly bounded
+when $\delta\to 0$.
+For if this  holds, another classic  result, known as Montel's theorem,
+implies that there exists
+a sequence of polynomials which converge
+to an analytic function $g$ in $\square$, where this convergence is
+uniform over compact subsets of $\square$.
+Here $g$ is   zero in
+$\square(-\delta)$ which by analyticity entails that
+$g$ is identically zero in $\square$. At the same time
+$g=\phi$ in $\square_+$
+which contradicts the assumption that
+$\phi$ is not identically zero.
+
+\medskip
+
+\noindent
+To compensate for this one   introduces the
+family
+$\mathcal W$
+of real-valued continuous
+functions $\omega(y)$
+which are
+even  and positive $y\neq 0$, and 
+decrease to zero  as $y$ approaches zero
+through positive or negative values.
+An example is $\omega(y)=y^2$ and
+another is 
+$\omega(y)= e^{-1/y^2}$
+which decreases quite rapidly to zero with
+$y$.
+With $\phi(z)$ given as above
+and $\omega\in\mathcal W$ we say that
+a weighted Runge approximation holds if there
+exists a sequence of polynomials $\{P_n(z)\}$
+such that
+\[
+\lim_{n\to\infty}\,
+||\omega(y)(P_n(z)-\phi(z)||_{\square_+}+
+||\omega(y)(P_n(z)||_{\square_-}=0\tag{*}
+\]
+It turns out that
+such a weighted approximation exists
+if
+$\omega(y)$ tends to zero sufficiently fast.
+The following
+necesssary and sufficient condition
+was established  by
+Beurling
+ín the article  \emph{Analytic continuations along a linear boundary:
+Acta mathematica 1953}.
+
+\medskip
+
+\noindent
+{\bf{A. Theorem}}
+\emph{The weighted Runge approximation (*) exists
+if and only if}
+\[
+\int_0^b\, \log\log \frac{1}{\omega(y)}\, dy=+\infty\tag{*}
+\]
+\medskip
+
+\noindent
+Beurling's result will
+be proved in § xx from the appendix about distributions.
+Another
+fundamental issue is about
+analytic extensions across a linear boundary.
+Schwarz' reflection principle in its
+most wellknown version
+asserts that if
+$\phi$ and $\psi$ is a pair of analytic functions in 
+the upper, resp. the lower rectangle 
+which extend continuously to the real
+interval $(-a<x <a)$
+where
+$\phi(x)= \psi(x)$,
+then
+they are analytic continuations of each other.
+Relaxed conditions which entail analytic continuation across
+$(-a,a)$ were
+established by Carleman in lectures at the Mittag-Leffler Institute in 1935.
+Here one starts with a pair $\phi,\psi$ where no
+growth conditions are imposed as one approaches the real axis, i.e.
+$y\mapsto |\phi(x_0+iy)|$ can
+increase to $+\infty$ with no restriction upon its rate as
+$y$ descreases to zero while $-a<x_0<a$ is kept fixed, and
+similar increasing
+slice functions of $\psi$ can be present.
+However, the following sufficient condition holds:
+
+\medskip
+
+\noindent
+{\bf{B. Theorem.}} \emph{Assume that}
+\[
+\lim_{y\to 0}\, \int_a^b\, \bigl |\phi(x+iy)-\psi (x-iy)\bigr |\, dx=0
+\]
+\emph{Then $\phi$ and $\psi$ are analytic continuations of each other.}
+\medskip
+
+\noindent
+The proof is given in  § xx from the appendix about
+distributions.
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The two results above illustrate the spirit of these notes.
+The proofs rely upon solutions to
+the Dirichlet problem and
+constructions of suitable subharmonic functions.
+
+
+
+
+
+
+
+
+\bigskip
+
+
+\centerline{\bf{The Dirichlet problem.}}
+
+\bigskip
+
+\noindent
+Let
+$D$ be  a bounded and simply connected domain in
+${\bf{C}}$.
+Given a continuous function $\phi$ on
+the boundary $\partial D$ one seeks a harmonic function
+$\Phi$ in $D$ whose boundary values agree with
+$\phi$.
+With no regularity conditions upon
+$\partial D$
+one cannot achive a solution. However, there
+always exists a unique $\Phi$ whose generalised boundary values agree with
+$\phi$. The precise assertion is due to 
+Norbert Wiener and is given
+in Chapter V.
+Various applications and refinements of this result will appear
+in more advanced sections.
+Let us illustrate this by a result due to Beurling
+where
+geometric constructions interfere with analytic
+estimates.
+Here is the set-up: Let $\square=\{-a<x<a\}\times \{-b<y<b\}$
+be a rectangle in the complex $z$-plane where $z=x+iy$.
+Denote by $\mathcal D^*$ the family of simply connected
+subdomains $D$ with the property that
+if $\zeta=\xi+i\eta\in\partial D$ then
+the rectangle
+\[ 
+P_\zeta=\{x+iy\colon |x|<|\xi,\, |y|<\eta|\}\subset D
+\]
+Next, denote by $\mathcal F$ the family of 
+even  and real-valued functions $\omega(y)$ 
+defined when $0<|y|<b$ with the property that
+$y\mapsto \omega(y)$ descreases on $(0,b]$
+and there is a constant $C$ such that
+$\omega(y)+C\geq 0\colon\ 0<y\leq b\}$.
+Moreover,  
+\[
+\int_0^b\,\omega(y)\,dy<\infty
+\]
+The last condition means roughly that $\omega$ is not too large
+when $y\simeq 0$.
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For each  $\omega\in\mathcal F$
+there exists a constant $c$ and some
+$\omega_1\in\mathcal F$  with $\omega_1\geq \omega$
+and a domain $D\in\mathcal D^*$
+such that the generalized Dirichet
+problem for $D$ with boundary function}
+\[
+\phi(\xi+i\eta)= e^{\omega_1(\eta)}
+\]
+\emph{has a solution $\Phi$ satisfying}
+\[
+0<\phi(x+iy)< 2e^{\omega_1(\eta)}+ c\quad\colon x+iy
+\in P_\zeta\, \colon\,\zeta=\xi+i\eta \in\partial D
+\]
+
+
+\noindent
+{\bf{Remark.}}
+This result appears in the  
+article  \emph{Analytic continuations along a linear boundary}
+cited before and  
+used to
+prove Theorem A  in
+the previous paragraph.
+It goes without saying that the theorem above
+belongs to one of the harder
+results in these notes. Here
+"good familarity"  with subharmonic functions is
+essential  to pursue the details in Beurling's proof
+which is presented 
+in § xx from the appendix about distributions.
+
+\bigskip
+
+
+\centerline {\bf{The Riemann-Schwarz inequality.}}
+\bigskip
+
+\noindent
+Let $\sigma$
+be 
+a hyperbolic metric  on  a Riemann surface $X$, i.e. 
+it has  negative curvature which means that in
+an open chart identified with
+a 
+subset of the complex $z$-plane,
+the $\sigma$-distance 
+is given by
+$e^{u(z)}\cdot |dz|$ where
+$u(z)$ is  a  subharmonic function.
+To each  pair of points $p,q$ in $X$ we denote by 
+$\mathcal C(p,q)$ the family of
+curves in $x$ with end-points at $p$ and $q$.
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For every pair
+$\gamma_1,\gamma_2$ in  $\mathcal C(p,q)$
+and
+each point $\xi\in\gamma_1$,
+there exist  curves $\alpha,\beta$ with
+$\alpha\in\mathcal C(p,q)$ while $\beta$ has end-points
+at $\xi$ and some point $\eta\in \gamma_2$ such that}
+\[
+\ell(\alpha)^2+\ell(\beta)^2\leq
+\frac{1}{2}\bigr (\ell(\gamma_2)^2+\ell(\gamma_3)^2\,\bigl )\tag{*}
+\]
+\emph{where $\ell(\gamma)$ denotes the $\sigma$-length of a curve in $X$.
+Moreover, the inequality (*) is strict with the exception for
+special rhombic configurations.}
+\medskip
+
+\noindent
+We prove (*) in a chapter devoted to
+Riemann surfaces.
+The theorem  gives the  existence of unique geodesic  curves
+on $X$ which join a pair of points.
+The proof employs the 
+uniformisation theorem for Riemann surfaces
+which
+reduces the 
+proof to show the following: 
+\medskip
+
+\noindent
+\emph{Let
+$D$ be the unit disc and $0<\theta<\pi/2$ and consider   the unique
+circle $C_\theta$ which
+contains
+$e^{i\theta}$
+and $e^{-i\theta}$ and intersects the unit circle at right angles at these points.
+Let $\alpha$ denote the circular subarc of $C_\theta$  contained in
+$D$.
+Then the following inequality holds for
+every subharmonic function $u$ in $D$:}
+\[
+\bigl(\int_{-1}^1\, e^{u(x)}\, dx\bigr)^2+
+\bigl(\int_\alpha\, e^{u(z)}\, |dz|\bigr)^2\leq
+\frac{1}{4}\cdot\bigl( \int_0^{2\pi}\, e^{u(e^{i\phi})}\,d\phi\bigr)^2
+\] 
+\bigskip
+
+
+
+\centerline {\bf{An inequality for Dirichlet integrals.}}
+\medskip
+
+
+\noindent
+Let  
+$\Omega$ be a bounded open set in
+${\bf{R}}^2$
+and $f$ a real-valued continuously differentiable function in
+$\Omega$ with partial derivatives
+$f_x$ and $f_y$. 
+The Dirichlet integral is defined by
+\[
+D^2_\Omega(f)=\iint_\Omega\, (f_x^2(x,y)+f_y^2(x,y))\, dxdy\tag{*}
+\]
+When
+$\Omega$ is the square
+$\{0\leq x\leq \pi\}\times\{0\leq y\leq \pi\}$,
+$D_\Omega^2(f)$ is given by a Fourier series.
+More precisely, with 
+\[
+a_0=\frac{1}{\pi^2}\,\iint_\Omega\, f(x,y)\, dxdy\quad\colon\,
+\widehat f(k,m)=\iint_\Omega \, f(x,y)\cdot
+\sin kx\cdot \sin my\, dxdy
+\]
+it  follows that
+\[
+D^2_\Omega (f)=
+\sum_{k=1}^\infty\sum_{m=1}^\infty\,
+(k^2+m^2)\cdot\widehat{ f}(k,m)^2
+\]
+At the same time the $L^2$-integral
+\[
+\iint_\Omega \, f^2(x,y)\, dxdy=\pi^2\cdot a_0^2+
+\sum_{k=1}^\infty\sum_{m=1}^\infty\,
+\widehat{ f}(k,m)^2
+\]
+So if the mean value of $f$ over $\Omega$  vanishes, i.e. if $a_0=0$
+then
+\[
+\iint_\Omega\, f^2(x,y)\, dxdy\leq D^2_\Omega (f)\tag{*}
+\]
+It turns out that (*) holds when the square
+is replaced by
+an arbitrary
+bounded and simply connected
+open set $U$.
+The proof follows from the existence  
+of a conformal mapping from the square above  onto $U$
+and is given in
+(*) where we also describe
+ how (*)  can be  used to
+settle the
+Dirichlet problem  for simply connected domains with
+smooth boundaries.
+
+
+
+\bigskip
+
+
+
+\centerline {\bf{Carleman-Hadamard functions.}}
+\bigskip
+
+
+\noindent
+Let $\Omega$ be a bounded and connected 
+open set in ${\bf{C}}$.
+The family of analytic functions in
+$\Omega$ is denoted by $\mathcal O(\Omega)$.
+Each $f\in \mathcal O(\Omega)$ is 
+locally represented
+by convergent power series: 
+\[ 
+f(z)= f(z_0)+\sum_{n=1}^\infty\, 
+\frac{f^{(n)}(z_0)}{n!}\cdot (z-z_0)^n
+\quad\colon\, z_0\in\Omega
+\tag{1}
+\]
+Let $d(z_0,\partial\Omega)$
+be the distance of $z_0$ to the  boundary
+and  $D_\Omega(z_0)$ is the open disc of radius
+$d(z_0,\partial\Omega)$ centered at $z_0$
+The power series in (1) 
+may   converge in a larger disc
+whose radius is denoted by $\rho_f(z_0)$. We exclude the
+case when
+$f$ is the restriction to
+$\Omega$ of an analytic function $F$ defined in some large
+disc containing $\Omega$ which means that
+there exists a constant $M$ such that
+$\rho_f(z_0)\leq M$ hold for every
+$z_0\in \Omega$.
+Hadamard's formula gives:
+\[ 
+\frac{1}{\rho_f(z_0)}=\limsup_{n\to \infty}
+\bigl[\frac{|f^{(n)}(z_0)|}{n!} \,\bigr]^{\frac{1}{n}}\tag{2}
+\]
+Regarding a picture  one
+verifies the inequality below for each
+$z_0\in\Omega$:
+\[
+|\rho_f(z)-\rho_f(z_0)|\leq |z-z_0|\quad\colon z\in D_\Omega(z_0)
+\]
+It follows that
+$\rho_f(z)$
+is a continuous and positive function in
+$\Omega$.
+The  Carleman-Hadamard function is defined by
+\[
+\mathcal{CH}_f(z)=\log\,\frac{1}{\rho_f(z)}
+\]
+A crucial  fact is that this function is
+subharmonic, i.e its Laplacian
+taken in
+the sense of distributions
+yields a non-negative Riesz measure in
+$\Omega$. To prove this we
+take a positive integer
+$N$ and set
+\[ 
+\gamma_N(z)=\max_{n\geq N}\,\frac{1}{n}\cdot 
+\log\, \frac{|f^{(n)}(z)|}{n!}
+\]
+Since the  complex derivatives
+$\{f^{(n)}(z)\}$ belong to $\mathcal O(\Omega)$,
+$\gamma_N(z)$ is the maximum of subharmonic functions and
+therefore itself subharmonic.
+Now $\{\gamma_N(z)\}$ is a non-increasing sequence of functions 
+which  by (2)  converge pointwise to
+$\log\,\frac{1}{\rho_f}$.
+The subharmonicity of the $\gamma$-functions
+imply that $\{\Delta(\gamma_N)\}$
+are non-negative Riesz measures in $\Omega$ and then the  pointwise
+convergence implies convergence in the weak distribution sense
+which implies  that 
+$\Delta(\log\,\frac{1}{\rho_f})$
+is a non-negative Riesz measure in
+$\Omega$ and hence
+$\mathcal{CH}_f$ is subharmonic.
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+The subharmonicity of
+$\mathcal{CH}_f$
+was put forward by Carleman in lectures at the Mittag-Leffler Institute in 1935
+who used this  fact to 
+construct 
+boundary values of analytic functions
+which
+led to an extension of Fourier's inversion formula where
+so called 
+hyperfunctions 
+extend  
+the class of   distributions on real intervals.
+Let us also remark that
+the Carleman-Hadamard function measures 
+the singularities of $f$ when one approaches the boundary.
+Namely, the  condition that
+$f$ does not extend analytically across in a neighborhood of
+a boundary point
+$p\in \partial\Omega$ means that
+$\rho_f(z)\to 0$ as $z\to\partial \Omega$, or equivalently that
+\[ 
+\lim_{z\to p}\, \mathcal{CH}_f(z)=+\infty\quad\colon p\in \partial\Omega
+\]
+In addition to this the mass distribution
+of non-negative Riesz measure
+$\Delta(\mathcal{CH}_f)$
+reflects the boundary behaviour of $f$
+in a  refined way.
+A special subharmonic  function arises when
+we take
+\[ 
+u_\Omega(z)=\log\,\frac{1}{d(z,\partial\Omega)}
+\]
+The non-negative Riesz measure
+$\Delta(u_\Omega(z))$
+is  an
+invariant attached to the bounded domain $\Omega$ which 
+measure proportions in a logarithmic scale and 
+leads us to the next topic.
+
+
+\newpage
+
+
+\centerline {\bf{Logarithmic capacity.}}
+\bigskip
+
+\noindent
+A new era in analytic function theory
+started  with  Iversen's Ph.d-thesis
+\emph{Recherches sur les fonctions meromorphes}
+from Helsinki University in 1914 
+and led for example to  the  theory
+about
+value distributions of meromorphic functions
+where
+major results are due to R. Nevanlinna.
+In these notes
+attention is given to
+logarithmic capacity.
+A  compact
+set $E$  of the unit circle
+has  logarithmic capacity equal to zero
+if the energy
+integral
+\[
+\iint_{E\times E}\,
+\log\, \frac{1}{|z-\zeta|}\,d\mu(z)\cdot d\mu(\zeta)=+\infty
+\]
+for every probability measure supported by $E$.
+\emph{Special Topics} contain sections
+devoted to
+thin sets and  boundary values
+of analytic functions.
+Here is an example where  logarithmic
+capacity intervenes with function theory.
+Let $f(z)$ be a meromorphic function in the unit disc
+with no pole at $z=0$. Put
+\[
+T_f(r)=\frac{1}{2\pi}\cdot \int_0^{2\pi}\,\log ^+|f(re^{i\theta})|\,d\theta
+\quad\colon\, P_f(r)= \int_0^r\, \frac{n_\infty(\rho)}{\rho}\, d\rho
+\] 
+where
+$n_\infty(\rho)$ counts  the number of poles with their orders in
+the disc
+$\{|z|<\rho\}$. One says that the meromorphic function
+$f$ has unbounded characteristic if
+\[
+\lim_{r\to 1}\, T_f(r)+ P_f(r)=+\infty
+\]
+Next, a complex number
+$\alpha$
+belongs to the essential range set $R(f)$
+if there exists a sequence $\{z_n\}$ in $D$ where
+$|z_n|\to 1$ and  $f(z_n)= \alpha$
+hold for every $n$.
+With these notation
+the following result was proved by Frostman in
+[xxx]:
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{If $f$ has unbounded  characteristic
+then the logarithmic capacity of the set
+${\bf{C}}\setminus R(f)$
+is zero.}
+\medskip
+
+\noindent
+Results as above
+motivate why an extensive appendix devoted to
+measure theory has been included.
+The next
+example  illustrates how complex analysis in one variable
+intervenes
+with measure theoretic considerations.
+
+
+\bigskip
+
+
+\centerline {\bf{Borel-Denjoy series.}}
+\bigskip
+
+\noindent
+Let $A_1,A_2,\ldots$ be a sequence of complex numbers
+which tends to zero and assume that
+\[ 
+\sum_{k=1}^\infty\, |A_k|\cdot \log\, \frac{1}{|A_k|}<\infty
+\]
+Let $\{\alpha_\nu\}$ be a sequence of complex numbers
+where the sole condition is that
+$\alpha_k\neq \alpha_\nu$ when
+$\nu\neq k$.
+An example could be
+a sequence  with rational coordinates
+arranged in such a way that
+every point in
+${\bf{C}}$ is a cluster point for the $\alpha$-sequence.
+Next, let $P(t)$ 
+be a polynomials with complex   coefficients. 
+To each $N\geq 1$ 
+we consider the function
+\[ 
+S_N(t)=\sum_{k=1}^{k=N}\, \frac{A_k}{P(t)-\alpha_k}
+\]
+As a complex-valued function of the real variable $t$
+this partial sum function is defined outside a finite set of $t$-values
+where $P(t)$ happens to be $\alpha_k$ for some $k\leq N$.
+It means that one only has to
+avoid a denumerable
+set of $t$-values in order that
+the partial sums are defined for every $N$.
+But absolute values $|P(t)-\alpha_k|$
+can be small quite often 
+and the 
+question arises when 
+there exists a limit
+\[
+\lim_{N\to\infty}\,S_N(t) =S_*(t)
+\]
+for those  $t$-values where
+$P(t)\neq \alpha_k$  for all $k$.
+It turns out that convergence holds almost everywhere in
+the sense of Lebesgue.
+In other words, there exists a subset $\mathcal N_P$ of the real $t$-line whose
+linear Lebegue measure is zero and the partial sums converge to a limit 
+for all $t$ outside $\mathcal N_P$. 
+How does one start the proof of this assertion?
+An ambition in these notes
+is 
+to supply the reader with 
+"enough muscles" in analytic function theory
+so that
+articles which settle a result as above
+can be studied with relative ease.
+
+\bigskip
+
+
+
+\centerline {\bf{The $\Gamma$-function}}.
+\medskip
+
+
+\noindent
+It is
+defined by
+\[ 
+\Gamma(z)= \int_0^\infty\, t^{z-1} \cdot e^{-t}\, dt
+\]
+The function is  analytic in the half-space $\mathfrak{Re}\, z>0$
+and partial integration gives the functional equation
+\[
+z\cdot \Gamma(z)=\Gamma(z+1)
+\]
+From this it follows that
+the $\Gamma$-function
+extends to a meromorphic
+function in the whole complex plane with simple poles at
+$0,-1,-2,\ldots$. Less obvious is that
+ $\frac{1}{\Gamma(z)}$ is an entire function.
+Another remarkable result
+is Euler's integral formula 
+which will be proved in
+§ XX devoted to the $\Gamma$-function:
+\[ 
+\Gamma(z)=\frac{1}{z}\cdot e^{-\gamma\cdot z+
+z^2\int_1^\infty
+\frac{[t]}{t^2(t+z)}} \, dt\tag{*}
+\]
+Here  $\gamma$ is Euler's constant and
+$[t]$ the integral part of $t$ which gives
+\[
+z^2\int_1^\infty
+\frac{[t]}{t^2(t+z)} \, dt
+=\sum_{n=1}^\infty\, z^2\cdot n\cdot \int_n^{n+1}\,\frac{dt}{t^2(t+z)}=
+\] 
+\[
+\sum_{n=1}^\infty\, n\cdot
+\int_n^{n+1}\,[\frac{1}{t+z}+ \frac{z-t}{t^2}]\,dt
+=n\bigl[\log\,(1+\frac{1}{n+z})+\frac{z}{n(n+1)}-\log (1+\frac{1}{n})\,]
+\]
+Euler's clever choice of 
+the constant $\gamma$
+gives the equation (*). 
+An example where (*) is used
+appear 
+during the construction of  kernels which
+give solutions to the heat equation in the non-analytic case
+where the usual  heat  kernel cannot be applied.
+This  illustrates how analytic function theory applies to
+problems about differential equations.
+
+
+\newpage
+
+
+
+\centerline {\bf{Critical values for harmonic level curves.}}
+\bigskip
+
+
+\noindent
+Let $D$ be the unit disc and consider
+a sequence of real numbers
+\[ 
+0<\alpha_1<\beta_1<\alpha_2<\ldots<\beta_{m-1}<\alpha_m<\beta_m<2\pi
+\]
+They give rise to $m$ disjoint intervals on the unit circle:
+\[ 
+J_\nu=\{e^{i\theta}\colon\, \alpha_\nu\leq \theta<\beta_\nu\}\quad\colon
+1\leq\nu\leq m
+\]
+Now there exists the harmonic function
+$\omega(z)$ in the unit disc whose boundary
+values are one on
+each $J_\nu$ and
+zero on the closed complement of these $J$-intervals.
+Poisson's integral formula gives
+\[
+\omega(z)= \frac{1}{2\pi}\cdot \sum_{\nu=1}^{\nu=m}\,
+\int_{\alpha_\nu}^{\beta_\nu}\frac{1-|z|^2}{|e^{i\theta}-z|^2}\, d\theta
+\]
+To each $0<s<1$ we get the level set
+$L(s)=\{\omega(z)=s\}$ in $D$.
+When $s$ is close to one
+it is easily seen that
+$L(s)$ is the disjoint union of arcs
+which stay close to the unit circle and join
+end-points of the $J$-intervals. Similarly,  if $s\simeq 0$ then
+$L(s)$ is a disjoint union of arcs which join
+end-points of the complementary intervals.
+When $m\geq 2$ one sees from a picture that
+in between there must occur $s$-values where
+the level set
+$L(s)$ cannot be a union of
+$m$ disjoint Jordan arcs.
+It means that self-intersections occur and we shall learn that
+they are caused by
+zeros of the gradient vector for
+$\omega$.
+Here
+$\omega(z)$ 
+has
+a harmonic conjugate $\omega^*(z)$ such that
+the complex-valued function $\omega(z)+i\cdot \omega^*(z)$ is analytic given
+by the Herglotz formula:
+\[
+\omega(z)+i\cdot \omega^*(z)=
+\frac{1}{2\pi}\cdot \sum_{\nu=1}^{\nu=m}\,
+\int_{\alpha_\nu}^{\beta_\nu}\frac{e^{i\theta}+z}{e^{i\theta}-z}\, d\theta\tag{*}
+\]
+The Cauchy-Riemann equations show  that
+the gradient vector $\nabla(\omega)= (\omega_x,\omega_y)$
+vanishes
+at a point $z$ if and only if
+the complex derivative of (*) is zero at $z$.
+Taking the derivative with respect to
+$z$
+in (*) we get the analytic function
+\[
+\phi(z)=
+ \frac{1}{2\pi}\cdot \sum_{\nu=1}^{\nu=m}\,
+\int_{\alpha_\nu}^{\beta_\nu}\frac{2\cdot e^{i\theta}}{(e^{i\theta}-z)^2}\, d\theta
+\]
+For each $\nu$ 
+the $\theta$-derivative of
+$(e^{i\theta}-z)^{-1}$ is equal to  $-ie^{i\theta}\cdot (e^{i\theta}-z)^{-2}$
+which gives
+\[
+\phi(z)= \frac{1}{\pi\cdot i} \cdot\bigl [
+\sum_{\nu=1}^{\nu=m}\,\frac{1}{e^{i\beta_\nu}-z}-
+\sum_{\nu=1}^{\nu=m}\,\frac{1}{e^{i\alpha_\nu}-z}\bigr]
+\]
+It turns out that
+the rational function $\phi(z)$ has $m-1$ zeros counted with multiplicity
+in
+the unit disc.
+The proof 
+is very instructive and  relies upon the argument principle.
+Details appear
+in § XX where we treat
+a  general result due to Nevanlinna which applies to level curves
+of harmonic measure functions
+in domains which are not necessarily simply connected.
+
+\newpage
+
+
+\centerline{\bf{Absolute values of complex polynomials.}}
+\bigskip
+
+\noindent
+Let $P(z)=(z-\alpha_1)\cdots (z-\alpha_n)$
+be a polynomial of degree $n$ with simple zeros which means that
+$\{\alpha_k\}$ is an $n$-tuple of disctinct numbers.
+To every $a>0$ we get the subset of the complex $z$-plane defined
+by the level curve of $|P(z)|$:
+\[
+ \gamma_a=\{|P(z)|= a\}
+\]
+We have also the open
+sets
+\[
+\Omega_a=\{|P(z)|< a\}
+\]
+If $a$ is small it is clear that
+$\gamma_a$
+is the disjoint union of $n$ many small simple and closed curves
+around the zeros. If $a$ is very large
+the term $z^n$ dominates and $\gamma_a$ is a simple closed
+curve
+which stays close to the circle $|z|= a^{\frac{1}{n}}$.
+Hence some  changes must occur as $a$ increases from small to large values.
+In particular the number of connected
+components of the $\Omega$-sets
+change.
+Under the extra assumption that
+the derivative
+$P'(z)$ also has
+simple zeros, say $\beta_1,\ldots,\beta_{n-1}$ and
+the absolute values $\{|P(\beta_\nu)|\}$
+are
+all distinct  one gets the following
+topological picture. Arrange the absolute values
+$\{a_k=|P(\beta_k)|\}$   so that
+$0<a_1<\ldots<a_{n-1}$.
+In § XX we  show
+that  if $a_k<a<a_{k+1}$
+for some $1\leq k\leq n-2$, then
+$\gamma_k$
+is the union of $n-k$
+simple closed curves and hence
+$\Omega_k$ has $n-k$ connected components.
+If $a>a_{n-1}$ then 
+$\gamma_a$ is 
+a simple closed curve so that  $\omega_a$ is a connected
+a Jordan domain.
+One can
+visualize  the change of the
+$\Omega$-domains as $a$ increases 
+on a computer.
+As a specific example one can take
+the polynomial 
+$P(z)= z^7-\delta\cdot z-1$ where $\delta$ is a positive real number.
+ One easily verifies 
+that
+the conditions above hold for every
+$\delta>0$.
+With $\delta$  small, say
+$10^{-2}$
+the computer 
+illustrates how the
+domains
+$\{|P|<a\}$
+change and thanks to
+contemporary programs
+one 
+watch the  changing configurations
+like a moving film which gives intuitive feeling for
+a  complex analytic
+situation
+
+\bigskip
+
+
+\centerline {\bf{Ordinary differential equations.}}
+\bigskip
+
+\noindent
+Let $m\geq 2$ and $p_0(x),\ldots,p_m(x)$
+are polynomials which in general may have
+complex coefficients.
+With $\partial= \frac{\partial}{\partial x}$
+one has the  differential operator
+\[
+P(x,\partial)= p_m(x)\partial^m+\ldots+ p_1(x)\partial +p_0(x)
+\]
+If the leading polynomial $p_m$ has no real zeros one says that
+the elliptic case occurs. Then it is wellknown that
+the homogeneous solutions to
+$P$ is an $m$-dimensional vector space
+formed by real-analytic functions on the $x$-line.
+If $p_m$ has real zeros
+the determination of all distributions
+$\mu$ on the $x$-line satisfying $P(\mu)=0$
+is not so obvious.
+Expressing distributions via boundary values of analytic functions we
+shall prove that the
+$P$-kernel on the space
+${\mathfrak{Db}(\bf{R}})$
+is a vector space of dimension $m+k$, where
+$k$
+is the number of real zeros of $p_m$ counted with multiplicities.
+Moreover, the $P$-kernel 
+contains specific subspaces for each
+real zero $a$ of $p_m$.
+Namely, let 
+$p_m(z)=(z-a)^e\cdot q(z)$ for some $e\geq 1$
+where $q(a)\neq 0$. In §§ we prove that 
+$\text{Ker}_P{\mathfrak{Db}(\bf{R}})$
+contains an $e$-dimensional subspace
+of distributions
+supported by the half-line $[a,+\infty)$ and that
+$P$ has a fundamental solution $\gamma$ supported by
+this half-line, i.e.
+\[ 
+P(x,\partial)(\gamma)= \delta_a
+\]
+where $\delta_a$ is the Dirac distribution at $a$.
+\medskip
+
+\noindent
+{\bf{Example.}}
+Set $\nabla=(x\partial)^2=x^2\partial^2-x\partial$
+and
+consider Bessel's differential operator
+\[
+P(x,\partial)= \nabla^2+x^2-1
+\]
+Here one finds
+an entire function $f(z)$ such that
+$P(f)=0$ whose series expansion at $\{z=0\}$ starts with
+$f(z)= z+c_3z^3+\ldots$.
+In addition 
+there exists a multi-valued solution
+\[
+\phi(z)= f(z)\cdot \log z+a(z)
+\]
+where $a(z)$ is a meromorphic function with
+a simple pole at $\{z=0\}$.
+Now
+we get the distribution supported by $\{x\geq 0\}$
+defined by
+\[
+\mu= f(x)\cdot (\log x)_++ a_+(x)
+\]
+where $(\log x)_+$ and $a_+(x)$ are  Euler's distribution extension to
+$\{x\geq 0\} $ of the densities
+$\log x)$ and $ a(x)$ on $\{x>0\}$ to be defined in § xx where we also
+verify that
+$\mu$ is  a fundamental  solution to $P$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf{An overwiew to these notes.}}
+\bigskip
+
+
+
+
+
+\noindent
+The material in  § 0.1-0.10 
+describes various  aspects in analytic function theory and
+applications to other subjects.
+The less experienced reader may prefer to
+study the subsections (0.1-0.10)  at a later occasion since
+rather advanced concepts sometimes appear.
+The  section devoted to work by Beurling and Carleman
+has been inserted both for its historic reconsiliation, and
+since 
+many results in these notes
+are due to Beurling and Carleman.
+
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+\centerline{\emph{References.}}
+
+
+
+
+
+\medskip
+
+
+
+\noindent
+Much inspiration in these notes, including  sources  for    historic accounts,
+come from Ludwig Bieberbach's  text-books [Bi:1,2]
+which cover  analytic function theory
+up to 1925.
+In several sections I  borrow proofs from these text-books 
+where my presentation  is only slightly different.
+An example is the Uniformisation
+Theorem for multiply connected domains
+in ${\bf{C}}$ 
+where I have followed Bieberbach's  presentation of the elegant 
+proof due to  Caratheodory. 
+The text book [Cartan] by Henri Cartan 
+has inspired the way I have organised the chapters devoted to analytic
+functions.
+Here the reader may  find
+exercises which give very good illustrations to
+theoretical results.
+The book [Ko] by Paul Koosis
+has also been a valuable source.
+At several places
+material  from Koosis' original text are
+presented with  minor changes,
+such as in the proof of Donald  Marshall's convexity theorem for inner
+functions in the unit disc.
+I have also profited 
+upon material from
+the two volumes about the logarithmic potential by Koosis which
+is a good reference for further studies in analytic function theory.
+Material devoted to
+Runge's Theorem is inspired by
+Raghavan Narasimhan's text-book [Na]
+where the reader also may find
+a nice introduction to  Riemann surfaces.
+Basic facts about
+the harmonic measure and the Lindelöf-Pick principle 
+is  inspired  by R. Nevanlinna's book [xx]. 
+E. Landau's book [xx] has contributed to sections
+devoted to series.
+Topics from   the  book [PE] by Raymond Paley
+and Norbert Wiener also appear.
+Apart  from the text-books above
+there also occur  some problems taken 
+from  [Po-Sz] by Polya and Szegö. 
+An example  is a result 
+due to Siegel which gives an 
+upper bound for products of roots to  polynomial
+in any degree expressed by the size of its coefficients. 
+Siegel's  proof 
+gives   a  good lesson since it teaches
+how complex analysis can be used in an  unexpected
+fashion. 
+\medskip
+
+\noindent
+In addition to the references above I have  been inspired by
+the over-all presentation  
+in the text-book [Kr] by  Steven G. Krantz.
+Here the reader will find 
+a number of results  about
+conformal maps of multiply connected domains and
+their associated automorphism groups
+together with a study
+of the Bergman kernel  and 
+constructions of
+various metrics. The reader may also consult
+the text\vvv book by John Conway, especially part II which contains
+material  of considerable
+interest. For example a chapter is devoted to De Brange's proof of the Bieberbach
+conjecture
+which for more than half a century was
+an open problem in a analytic function theory.
+Chapters devoted to harmonic and subharmonic functions
+also merit attention such the exposition of the 
+Fine Topology in ${\bf{C}}$  which by definition is the 
+weakest topology making every subharmonic function with values in
+the extended interval $\vvv \infty,\infty]$ into continuous functions.
+Another recommended text-book is [Andersson] which
+presents  elegant proofs  of  advanced
+results such as Carleson's Corona theorem.
+
+
+
+
+
+\bigskip
+
+\noindent
+Finally I must mention the text-books [1-2] by Lars Ahlfors.
+His masterful presentation  in
+[1]
+is  recommended to everybody who enters  studies
+devoted to complex analysis. 
+Since [1] was a veritable   "bible"
+for me as a graduate student, it is clear that
+the text by Ahlfors has inspired much  material in
+these notes, foremost in  sections devoted to
+the foundations in analytic function theory.
+Concerning the more advanced book [Ahl-2]
+there occur references in these notes to 
+the general Uniformisation Theorem.
+But I have not tried to pursue this  in detail.
+One reason is that these notes  do not treat
+potential theory.
+But hopefully these
+notes may inspire  readers to study [Ahl:2].
+One must also mention 
+the deep studies of moduli problems  in  articles such as [Ahl-Beu]
+where the authors seek
+invariants to decide when
+a pair of  multiple connected  domains
+are conformally  equivalent
+and
+from  work by
+Ahlfors one should  mention  his
+far reaching studies of
+quasi-conformal maps. His
+article [Ah. Acta 1935] 
+is even today
+an inspiration for  contemporary
+research. 
+The  lyric comments 
+when  Caratheodory
+presented Ahlofor's contributions  at the IMU-congress in 1936
+where he bacame  the first mathematician
+to receive a Fields medal,
+is a recommended reading even today.
+Twenty years later Ahlfors discovered an explicit analytic solution
+to the Beltrami equation and soon after, in collaboration with Lipman
+Bers, quasiconformal variations were applied to
+study Kleinian groups. 
+Among
+more recent topics
+of  advanced nature
+we mention  
+complex dynamics where  Sullivan's theorem
+about Julia sets is an  example. A 
+proof  of this result appears in the
+text-book 
+[Ca-Ga] by
+L. Carleson and J. Garnett.
+Finally, we  already mentioned
+the text-book
+[Ga-Ma] by J. Garnett and Marshall devoted to  recent discoveries
+about 
+harmonic measure and extremal length. 
+
+
+
+\newpage
+
+
+
+
+\centerline {\emph{Remarks about the contents.}}
+\bigskip
+
+
+
+\noindent
+I have tried to make the notes reasonably self-contained. For example,
+a detailed proof of \emph{Stokes Theorem} is given
+together with
+the formulas of
+Green and Gauss where  attention also is given 
+to the notion of differential forms.
+With $z=x+iy$ we identify the complex $z$-plane with
+${\bf{R}}^2$. Consider 
+a differential 1-form
+$W= f\cdot dx+g\cdot dy$ where 
+$f$ and $g$ is a pair  real-valued $C^1$-functions.
+The 1-form $W$ is  closed when 
+\[ 
+dW= (-f'_y+g'_x)\cdot dx\wedge dy=0\tag{*}
+\]
+In  Chapter II
+we establish a  result expressing the 
+difference of two line integrals
+of a 1-form $W$ which is not
+necessarily closed, taken
+over a pair of curves $\Gamma_1$ and $\Gamma_0$ 
+with common end-points
+and linked by a continuous family of similar curves.
+The  formula  in Theorem 5.7 from  Chapter II is a
+result in real 2-variable analysis which  contains  the subsequent
+study of complex line integrals as a special case
+when the integrands 
+are complex analytic functions.
+So the reader should be aware of the fact that
+ordinary Calculus  provide many
+tools to attain
+integral formulas in analytic function theory.
+However, we  shall prove results in the complex analytic set-up
+for its own sake. One reason for doing this extra job
+is that
+complex line integrals are  nicely 
+expressed by taking complex Riemann sums. Another is the special flavour which 
+arises  from complex arguments. A typical case 
+occurs  in § 2 from Chapter 4 where the argument principle 
+counts zeros of an analytic function via its complex logarithmic derivative.
+
+
+\medskip
+
+
+\noindent
+An example where calculus in one real variable
+becomes useful in analytic function theory
+is a convexity theorem 
+from 1906 by
+Jensen which goes as follows:
+Let  
+$\{\alpha_\nu\}$
+be a decreasing sequence of positive real numbers
+with $\alpha_1\leq 1$
+and let
+$\{p_\nu\}$ another sequence of positive numbers.
+Assume that there exists some
+$\delta>0$  such that the series
+$\Phi(r)=\sum\, p_\nu\cdot r^{\alpha_\nu}$
+converges when $0<r<\delta$.
+Then Jensen proved  that
+$\text{log}\,\Phi(r)$ is a convex
+function of
+$\text{log}\,r$.
+This   can be used
+to  prove convexity theorems
+expressed by 
+integrals connected to analytic functions and more
+generally to subharmonic functions.
+For example, Jensen's result was used when Hardy in his work 
+\emph{The Mean Value of the Modulus of an Analytic function}
+from 1915 proved that the function
+$r\mapsto\int_0^{2\pi}\, |f(re^{i\theta})|\cdot d\theta$
+is a convex function of
+$\text{log}\,r$ when $f(z)$ is  analytic in some disc
+centered at the origin.
+Many early results such as those of Hardy were later superseeded
+by the  systematic use of subharmonic functions and
+Thorin's convexity theorem which is exposed in § XX.
+
+
+
+
+
+\medskip
+
+
+\centerline {\emph{A general comment.}}
+\medskip
+
+\noindent
+These notes do not strive to present the theory in its most
+perfect form and I often try
+to give a historic perspective, perhaps a bit too  affected by my own
+experience as undergraduate student at Stockholm University
+in the early 60:s when I was taught function theory by
+Otto Frostman in a way I appreciated very much. 
+Theorems  
+are often proved in a "pedestrian manner" rather than
+using the full force of concepts from functional analysis.
+This is not just a matter  of a "historic reconcilation". One reason is that
+results
+are better understood if one  can find a
+constructive proof rather than to rely upon the axiom of choice
+via the Hahn Banach theorem or the existence of maximal ideals which
+appear
+in commutative Banach algebras.
+A typical case is when we start from a function $f(x)\in L^1({\bf{R}})$
+and regard its Fourier transform $\hat f(\xi)$.
+Suppose  that $a\leq\xi\leq b$
+is an interval on the real $\xi$-line and let
+$\Phi(z)$ be an analytic function defined in an open
+neighborhood of the compact image set
+$\hat f([a,b])$.
+Then there exists $g(x)\in L^1({\bf{R}})$
+whose Fourier transform
+$\hat g(\xi)$ is equal to $\Phi(\hat f(\xi))$
+when $a\leq\xi\leq b$.
+The mere existence of $g$ follows easily 
+by an abstract reasoning. However, one can
+construct $g$ in a rather explicit manner
+using the local power series expansions
+of the analytic $\Phi$-function.
+We shall give this "pedestrain proof" 
+based
+upon a lecture by Carleman at Institute of Mittag
+Leffler in 1935
+which has the merit
+that it is constructive. Of course, this 
+requires more effort
+as compared to the "abstract proof". But I think it teaches
+the student more. 
+
+\medskip
+
+\noindent
+The reader   will  also find 
+repetitions of similar
+arguments which appear in slightly different contexts.
+A typical case occurs  in studies of various maximal functions.
+It would be possible to
+concentrate all this to some few general results
+in
+a general context where one regards Riesz measures on metric spaces
+whose distribution of mass satisfies certain conditions with respect to the given metric.
+This 
+would lead to short
+proofs but often with less control of a priori constants.
+So  we often
+prefer to repeat similar arguments in  specific
+situations.
+For an account about
+general maximal functions we refer to
+the elegant article
+[Smith] which becomes especially useful 
+when  analytic function theory in one
+complex variable is replaced by studies of  harmonic and subharmonic functions in
+${\bf{R}}^d$ for $d\geq 3$.
+
+
+
+
+
+
+
+
+\medskip
+
+
+\noindent {\emph{ A  (nasty ?) remark.}}
+Personally I do not understand the contemporary
+trend in the teaching  of mathematics where subjects
+tend to be isolated from each other into  small 
+separate courses devoted to measures, function theory, 
+Fourier series and so on. Not to
+mention the unreasonable 
+borderline between algebra and analysis.
+To give an example. In the past
+Eisenstein's famous theorem from 1852 was demonstrated to
+most  students entering graduate studies.
+The elegant proof of Heine from 1854 (presented in
+Chapter XX)
+combines  algebraic facts about
+irreducible polynomials in two 
+variables  
+with  analytic function theory.
+Recall that Eisenstein's theorem
+says  that
+if the power series expansion $\sum\, c_\nu(z-z_0)^\nu$
+of a 
+regular local branch of an algebraic function
+is such that every $c_\nu$ is a rational number, then there exists a
+positive integer $k$ so that $k^\nu\cdot c_\nu\in{\bf{Z}}$ for all
+$\nu$.
+My question to contemporary teaching is whether any
+course in mathematics  for beginning graduate students
+is suited to present
+Eisenstein's theorem. 
+
+\medskip
+
+
+\centerline {\emph{Measure theory.}}
+\medskip
+
+\noindent
+An appendix is devoted to 
+Lebegue theory and  
+Riesz measures.
+A major result due to Lebesgue asserts that
+every 
+non-decreasing and continuous function on the real 
+line has a classical derivative outside a null-set.
+We  give a detailed proof  which  illustrates
+the high standard in classical analysis
+and  remark that   "abstract methods"  do not   improve Lebegue's original 
+proof. In analytic function theory Lebegue's result 
+was used by
+Fatou to show
+that if $f(z)$
+is a bounded analytic function in the unit disc, then
+the radial limit $\lim_{r\to 1}\, f(re^{i\theta})$
+exists for almost all $\theta$. 
+Fatou
+used the primitive function $F$ of $f$. Here $F$
+has a continuous  extension to the closed disc
+and Fatou's  proved that
+if the function $F(e^{i\theta})$
+of the angular variable has an ordinary derivative at
+a point $\theta_0$, then the radial limit 
+for $f$ exists at this $\theta$-value.
+Later Friedrich Riesz adopted measure theory in a
+most succesful manner 
+and proved  that there is a 1-1 correspondence between
+the class of non-negative Riesz measures $\mu$ on the unit circle $T$ and 
+the family of positive harmonic functions $u$ in the unit disc.
+More precisely, every such $u$ is the Poisson extension $P_\mu$ of 
+a unique non-negative Riesz measure on $T$.
+This is proved in Chapter V and
+for readers who are less familiar with measure theory
+the result by Riesz helps  to "feel  more comfortable"
+with   abstract notions of measures, especially 
+the  "hidden family" 
+of singular Riesz measures
+which carry their  whole mass on null sets in the sense of Lebesgue.
+\medskip
+
+\noindent
+Many subtle results in analytic function theory
+are expressed via measures.
+An example is a result due to Beurling which
+goes as follows: Let $\mu$ be a non-negative Riesz measure on
+the unit circle with
+no atom at $\theta=0$, i.e. it has no mass at the singleton
+set $\{z=1\}$. Let
+\[ 
+P_\mu(z)=\frac{1}{2\pi}\int\, \frac{1-|z|^2}{|e^{i\theta}-z|^2}\cdot d\mu(\theta)
+\]
+be Poisson's harmonic extension of $\mu$ to the unit disc.
+To each real number $a$ we put
+\[
+E_a=\{ z\in D\,\colon\, P_\mu(z)\geq \frac{a}{|1-z|}\}
+\]
+Beurling proved that 
+the integral
+\[ 
+\iint_{E_a}\, \frac{dxdy}{|1-z|}<\infty
+\]
+At first sight this may appear as an exercise in measure theory. But in § xx
+we shall learn that
+the proof requires  results
+based upon harmonic measures and  estimates using
+the theory of 
+extremal lengths.
+This illustrates that
+in order to 
+understand measure theory in 
+"concrete situations" it is far from sufficient to 
+digest some  abstract notions
+which interpretate measures as representatives
+of linear functionals on spaces of continuous functions.
+
+
+
+
+
+
+
+
+
+\bigskip
+
+
+
+
+
+
+
+\centerline {\emph{Series.}}
+
+\medskip
+\noindent
+Since analytic functions are locally
+represented by convergent power series the
+study of series is an imporant issue.
+In § 2 from Chapter I we start with 
+elementary facts about series and 
+proceed to  more involved  results.
+An example   is a  theorem by
+Hardy and Littlewood   which
+asserts that if $\{a_n\}$ is a sequence of positive real numbers
+such that  there exists the limit
+\[
+\lim_{x\to 1}\, (1-x)\cdot\sum_{n=1}^\infty\, a_n\cdot x^n=A
+\]
+then there exists the mean-value limit
+\[
+\lim_{n\to \infty}\, \frac{a_1+\ldots+a_n}{n}=A
+\]
+
+
+\noindent
+The remarkable fact is  that no
+other condition than positivity of the $a$-numbers has been imposed.
+It is  very instructive to follow  the single  steps in the proof which
+are put together in an ingenious fashion.
+One might say that the Hardy-Littlewood theorem  
+illustrates what analysis
+is all about, i.e. \emph{to put small seemingly 
+unrelated
+threads together.} 
+The proof of the  theorem above
+is  "elementary" in the sense that
+no functional analysis is used.
+A case where  functional analysis is used appears in
+\emph{Ikehara's Theorem}
+which goes as follows: Let
+$\mu$ be  a non-negative Riesz measure on $[1,+\infty)$
+such that
+the integrals 
+\[
+\int_1^\infty\, x^{-\delta}\cdot d\mu(x)<\infty\quad\text{for all }\quad 
+\delta>1
+\]
+Assume also
+that there exists a continuous function $G(u)$ such that
+\[
+\lim_{\epsilon\to 0}\,
+\bigl[\,\int_0^\infty\, x^{iu-(1+\epsilon) }\cdot d\mu(x)-
+\frac{A}{\epsilon+iu}\,\bigr]=G(u)
+\]
+holds uniformly over all bounded intervals $-b\leq u\leq b$.
+Then one has the limit formula:
+\[ 
+\lim_{x\to\infty}\, \frac{1}{x}\int_0^x\,d\mu(t)=A
+\]
+Let us finish this discussion with
+a result  proved by Volterra in 1913.
+He considered  an $L^1$-function $K(x)$ supported
+by $[0,+\infty)$ and defined the function
+\[
+\Phi(x)=\sum_{n=1}^\infty\,(-1)^n\cdot K^n(x)
+\quad\, K^n(x)\,\, \text{is the n-fold convolution of }\,\, K(x)\,.
+\]
+The question arises when
+$\Phi(x)$ also belongs to $L^1({\bf{R}}^+)$.
+To settle this we consider the Laplace transform
+\[ 
+\hat K(w)=\int_0^\infty\, e^{-wx}\cdot K(x)\cdot dx\,,
+\quad\,\mathfrak{Re}\,w\geq 0\,.
+\]
+Volterra proved that
+$\Phi$ is integrable if and only if
+\[
+\frac{\hat K(w)}{1+\hat K(w)}\neq 0\,\quad\text{for all}\,\,
+\quad\,\mathfrak{Re}\,w\geq 0\,.
+\]
+In 1913 the proof was quite involved.
+Today, with the aid of   general results about Banach algebras,
+Volterra's result is  an easy exercise
+which we explain in the Chapter XX.
+So  this example illustrates that  it is  profitable 
+to learn    abstract theories.
+
+
+
+\bigskip
+
+
+
+
+
+
+
+\centerline {\emph{The use of geometry.}}
+\bigskip
+
+
+
+
+
+
+\noindent
+It is often profitable to employ geometric considerations.
+An example is \emph{Poisson's formula}
+expressing the values taken by a harmonic function in the unit disc from
+its boundary values.
+Actually it was Hermann Schwarz,
+one of the great pioneers
+in function theory, who
+established this formula in the context of analytic function theory.
+His
+geometric description of the Poisson kernel 
+leads to  invariance 
+properties  for the spherical, respectively
+the hyperbolic metric.
+An example where geometric considerations appear
+in analytic function theory  is   a result due to Julia and Caratheodory
+which goes as follows:
+\medskip
+
+\noindent
+\emph{Let $f(z)= u(x,y)+iv(x,y)$
+be an analytic function in the right
+half-plane $U=\mathfrak{Re}(z)>0$
+whose real part $u$ is a positive function
+and satisfies:}
+\[
+\inf_{x+iy\in U}\, \frac{u(x+iy)}{x}=0
+\]
+\emph{Then it follows that}
+\[
+\lim_{x\to +\infty}\, \frac{f(x+iy)}{x}=0
+\quad\,\, \text{\emph{uniformly every  sector}}\,\, \{y\leq N\cdot x\}
+\quad\colon N=1,2,\ldots
+\]
+This  is remarkable   since no assumption
+is imposed on the imaginary part of $f$.  As we shall see
+in XX   the proof of the Julia-Caratheodory theorem
+relies upon a general principle for the
+spherical measure on domains in
+${\bf{C}}$. The  result above was used when Julia studied
+iterated maps which   leads to Julia sets and  fractals, a
+subject 
+which has  become  "fashion" since many
+phenomena  can be illustrated
+by computers. 
+Deeper results arise when geometric ideas and
+hard analysis are put together.
+An example
+is the notion \emph{Carleson measures}
+which is essential  in the proofs
+of two famous theorems due to 
+Lennart Carleson:  The Corona problem and
+the interpolation by bounded analytic functions.
+These  results
+are exposed  in a section from  \emph{Special Topics}
+and  may be regarded as a veritable  "high-light" in these notes.
+
+\medskip
+
+
+
+\centerline{\emph{Hardy spaces.}}
+\bigskip
+
+
+\noindent
+Problems 
+in complex analysis has initiated  many results in measure theory
+such as in 
+studies of Hardy spaces
+which appear in many places, foremost in
+§ 2-3 from Special Topics.
+A result due to
+C. Fefferman and E. Stein  asserts that 
+a measurable function $f(\theta)$ on the unit circle  has
+bounded mean oscillation if and only if the squared length of the
+gradient vector
+$\nabla(H\uuu f)= (\partial H\uuu f/\partial x,\partial H\uuu f/\partial y)$
+of its harmonic extension $H\uuu f(z)$ to the unit disc satisfies:
+\[
+\frac{1}{h}\cdot \iint\uuu{S\uuu h(\theta)}\, 
+|z|\cdot \log\,\frac{1}{|z|}\cdot
+\bigl |\nabla(H\uuu f)\bigr |^2\cdot dxdy\leq C
+\]
+for some constant $C$ and  every $0<h<1/2$, where $S\uuu h(\theta)$
+is the subset of $D$ defined by
+\[
+S\uuu h(\theta)=\{ z=re^{i\phi}\,
+\colon 1\vvv h<r<1\,\colon |\phi\vvv \theta|<h\}
+\]
+This result illustrates how  geometric ideas together with
+analytic estimates 
+are used to attain deep results.
+Another  result which exhibits  the
+distinction between absolutely continuous, respectively
+singular measures on the unit circle $T$ appears 
+in a  closure  theorem due to Beurling.
+Every  non-negative 
+measure $\mu$ on $T$ gives  a bounded
+analytic function
+$g(z)$ in the unit disc $D$ defined by
+\[ 
+g(z)=\exp\,\bigl[-\frac{1}{2\pi}\int_0^{2\pi}\, \frac{e^{it}+z}{e^{it}-z}\cdot d\mu(t)\bigr]
+\]
+The $g$ -function is quite special. It has no zeros in $D$
+and $g(0)=e^{-a}$ where $a=\frac{1}{2\pi}\int_0^{2\pi}\, d\mu(t)$ is a positive constant.
+At the same time
+$\log|g|$ is the Poisson integral of $-\mu$ and by a result which goes back to
+F. Riesz and Fatou this implies that
+the radial limit
+\[ 
+\lim_{r\to 1}\, |g(re^{i\theta})|=1
+\] 
+exists for almost every $\theta$ in the sense of Lebesgue.
+Next, let $H^2(T)$ be the Hardy space whose elements are square integrable functions
+on $T$ which are boundary values of analytic functions in $D$.
+This is a Hilbert spaces
+where the exponential functions
+$\{e^{in\theta}\colon n=0,1,2,\ldots\}$
+is an orthonormal basis.
+One might expect that
+multiplication
+with $g$ yields a linear operator on
+$H^2(T)$ whose range is dense. But this turns out to
+be false in general. Beurling proved that
+$g\cdot H^2(T)$ is a closed proper subspace of
+$H^2(T)$ as soon as the singular part of the  measure
+$\mu$
+is $\neq 0$.
+On the other hand, if $\mu=\phi(t)\cdot dt$ is absolutely  continouos, i.e when
+$\phi(t)$ is an $L^1$-function on $T$, then
+$g_\mu\cdot H^2(T)$ is a dense subspace of $H^2(T)$.
+The proof  appears in 
+Section XX and gives an instructive lesson 
+since  a mixture of 
+measure theory, functional analysis and
+analytic function theory appear in the proof.
+
+
+
+\bigskip
+
+
+
+
+
+
+\centerline {\emph{ A final comment.}}
+\medskip
+
+
+\noindent
+My personal  opinion while entering  graduate studies in
+mathematics  is that it is  rewarding to pursue  specific proofs
+of a more involved nature, rather than to "swallow  
+a mass of general 
+concepts".
+My
+favourite example  is due to Carleman.
+In
+the article [Ca]  it is proved that
+there exists an absolute constant $\mathcal C$ with the following property:
+\medskip
+
+
+\noindent
+\emph{For every pair $(f,n)$ where $n$ is a positive integer
+and $f$
+a non-negative real-valued $C^\infty$- function 
+defined on  the closed unit interval $[0,1]$
+whose  derivatives up to order $n$ vanish at the
+two end points,  one has the inequality}
+\[
+\sum_{\nu=1}^{\nu=n}\,
+\,\frac{1}{[\beta_\nu]^{\frac{1}{\nu}}}\leq
+\mathcal C\cdot\int_0^1\,f(x)dx\quad\colon\quad
+\beta_\nu=\sqrt{\int_0^1\, [f^{(\nu)}(x)]^2\cdot dx}\tag{*}
+\]
+The remarkable fact is  that $\mathcal C$ is independent of
+$n$. 
+Carleman's inequality
+is sharp in the sense that there exists a constant $C_*$
+such that one for every $n\geq 2$ can 
+find functions $f_n(x)$ as above so that 
+the opposed inequality
+(*) holds with $C_*$. Let us remark
+that (*) 
+demonstrates
+that the standard cut-off  functions which
+in  many applications 
+are used to keep maximum norms of derivatives small up to
+order $n$ small are optimal up to a constant.
+So the theoretical result in (*)
+plays 
+a role in numerical analysis where one often uses smoothing
+methods.
+The ingenious proof  of (*) 
+employs
+certain  estimates for harmonic measures
+applied to the subharmonic Log-function of the absolute value of the
+Laplace transform of $f$.
+
+\medskip
+
+
+\centerline {\emph{An open problem.}}
+\medskip
+
+\noindent
+Let me finish  by describing an open problem
+in the spirit of these notes.
+Let $n\geq 2$ and consider a  polynomial
+\[
+f(z)= a\uuu 0+a\uuu1\cdot  x+\ldots+a\uuu n\cdot z^n
+\]
+where the sole assumption is that $a\uuu 0$ and $a\uuu n$ both are
+$\neq 0$. The coefficients are in general complex numbers.
+To each $0<\theta<\pi$
+we  count the number of zeros  in
+the sector of the complex $z$\vvv plane whose points have argument
+in the interval $(\vvv\theta,\theta)$. Denote this integer by $n\uuu f(\theta)$
+where  multiple zeros are repeated according to their multiplicities.
+By the fundamental theorem of algebra $f$ has $n$ complex zeros and if
+$n$ is large one expects that in average 
+\[ 
+\frac{n\uuu f(\theta)}{n}\simeq \frac{\theta}{\pi}\tag{*}
+\]
+This "statistical result" is indeed true and goes back to work by Schur.
+The search for a more
+precise control of the deviation in (*) 
+stimulated  further  research.
+The following result was proved by
+Erdös and Turan in [Annals of math. vol. 51 (1950)]
+ 
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{There exists a constant $C^*$ which is independent of $n$
+such that the following hold for every $0<\theta<\pi$ and
+every polynomial $f$ as above:}
+\[
+\bigl|\frac{n\uuu f(\theta)}{n}
+\vvv\frac{\theta}{\pi}\,\bigr|\leq 
+C^*\cdot n^{\vvv 1/2}\cdot \log\, \frac{
+|a\uuu 0|+|a\uuu 1|+\ldots+|a\uuu n|}{\sqrt{|a\uuu 0\cdot a\uuu n|}}\tag{*}
+\]
+
+
+\noindent
+In § XX we give a proof due to Ganelius 
+which
+shows that one can take
+\[ 
+C^*=\sqrt{\frac{2\pi}{\mathcal G}}
+\quad\colon\quad \mathcal G= 1+\sum\uuu{\nu=1}^\infty \, (\vvv 1)^\nu\cdot 
+\frac{1}{(2\nu+1)^2}\simeq 0,916\ldots
+\]
+However, this upper bound is not sharp so the question remains if one
+can determine the best  constant $C^*$ above, or at least
+"as sharp as possible" which eventually only has to  work
+for all sufficiently large $n$.
+\medskip
+
+\noindent
+{\emph{A related problem about Fourier series.}}
+The major step to estimate  $C^*$ from above 
+stems from
+a result about trigonometric polynomials which goes as follows:
+Let $H$ and $K$ be  positive real numbers.
+Consider all pairs
+of finite sequences of real numbers $\{a\uuu k\}$ and 
+$\{b\uuu k\}$ indexed by positive integers $k$
+such that the following two inequalities hold
+for every $0\leq \phi\leq 2\pi$:
+\[
+\sum\, a\uuu k\cdot \cos\,k\phi+
+b\uuu k\cdot \sin\,k\phi\leq K\tag{i}
+\]
+\[
+\sum\, k\cdot (a\uuu k\cdot \sin\,k\phi\vvv
+b\uuu k\cdot \cos\,k\phi)\leq H\tag{ii}
+\]
+\medskip
+
+\noindent
+Set
+\[
+v(\phi)=\sum\, a\uuu k\cdot \sin\,k\phi\vvv
+b\uuu k\cdot \cos\,k\phi
+\]
+\medskip
+
+\noindent
+In § XX we expose the following result which is due to T. Ganelius:
+
+\medskip
+
+
+\noindent
+{\bf{B. Theorem.}} \emph
+{Put $C\uuu*=2\pi^{\frac{3}{2}}\cdot \mathcal G^{\vvv 1/2}$.
+Then
+(i\vvv ii) entail that}
+\[
+\bigl|v(\beta)\vvv v(\alpha)|\leq C\uuu *\cdot \sqrt{HK}
+\]
+\emph{hold for all pairs $0\leq \beta<\alpha<2\pi$.}
+\medskip
+
+\noindent
+However, this constant is not sharp so one can   ask for a best constant 
+which would improve the choice of  $C^*$ in Ganelius' theorem.
+
+
+\newpage
+
+
+
+
+
+\newpage
+ 
+\centerline {\emph{Work by Beurling and Carleman.}}
+\medskip
+
+\noindent
+Many  results in these notes are
+due to Arne Beurling and Torsten Carleman.
+This reflects  my personal taste since I regard them
+as two of 
+the most prominent mathematicians ever in analysis.
+Let me first recall  some of Carleman's contributions.
+The appendix  devoted to  functional analysis treats
+spectral resolutions for unbounded
+self-adjoint operators on a Hilbert space
+which Carleman established in 1923.
+This  
+result  has  a wide range of applications.
+Carleman also introduced a 
+method to handle non-symmetric operators
+which admit suitable factorisations in order to 
+reduce the spectral analysis to the case of 
+symmetric kernels. We describe such a case in § 11 in the appendix devoted to 
+functional analysis.
+Among   contributions  prior to 1920
+one can mention
+Carleman's  inequality for the operator norm of resolvents which
+is a veritable cornerstone in the spectral theory of linear operators.
+He   also used subharmonic
+functions to extend
+results of the Phragmén-Lindelöf type.
+Here is an example. Put $B=\{ 0<\mathfrak{Re}\, z <0\}$ which
+is an open and simply connected domain in
+${\bf{C}}$. Let $f(z)$ be analytic in
+$B$ and for each $0<x<1$ we put
+\[
+m(x)= \max_y\, |f(x+iy)|\quad\text{and}\quad
+\phi(x)= \int_{-\infty}^\infty\, |f(x+iy]|^2\, dy
+\]
+We assume that these functions  are bounded
+on
+all intervals $\delta\leq x\leq 1-\delta$ when $\delta>0$ are small.
+Phragmén and Lindelöf proved that the function
+$\phi(x)$ is convex on $(0,1)$. 
+Carleman proved 
+that $\phi(x)$
+satisfies the differential inequality
+\[
+\phi''(x)\geq \frac{\phi'(x)^2+m(x)}{\phi(x)}\tag{*}
+\]
+which in particular gives the convexity.
+In § xx we shall give the proof of (*) which employs
+the subharmonic function $\log\,|f|$.
+\medskip
+
+
+\noindent
+{\emph{Liouville's theorem}}.
+Consider  arcs parametrized
+by  injective and continuous
+ maps $s\to \gamma(s)= x(s)+iy(s)$
+from the half-open interval $[0,1)$ in ${\bf{C}}$
+where $\gamma(0)=0$ is the origin and
+$|\gamma(s)|\to +\infty$ as $s\to 1$.
+Let
+$\gamma_1,\gamma_2$ be a pair of such arcs
+whose sole common point
+is the origin and  together give  an unbounded
+domain $\Omega$ whose boundary
+is the union of the two arcs.
+Suppose  that
+$f(z)$ is analytic in
+$\Omega$ and extends continuously to $\partial\Omega$
+with a finite maximum norm
+\[
+m^*=\sup_{z\in \gamma_1\cup\gamma_2}\, |f(z)|
+\]
+Since 
+we can find $\gamma$-arcs inside $\Omega$ which
+tend to inifinity
+one cannot
+appeal to the ordinary maximum principle and conclude that
+the absolute value $|f(z)|$ stays below $m^*$
+for all $z\in \Omega$.
+However, if the  maximum principle fails then
+the function 
+\[
+\omega_f(\theta)= \max_r\, |f(re^{i\theta)}|\quad\colon re^{i\theta}\in\Omega
+\] 
+cannot stay too small. Lindelöf gave examples of 
+non-constant entire functions $f$
+where the $\omega_f$-functions is bounded for all
+$\theta$-angles outside a null-set.
+By scrutinizing  how these Lindelöf-functions increase, Carleman 
+established 
+the following 
+in the article 
+\emph{Sur l'éxtension d'un
+theoréme de Liouville}:   
+\emph{When the 
+$\gamma$-arcs are straight half-lines so that
+$\Omega=\{ \alpha<\arg z<\beta\}$
+is a sector and 
+the maximum principle fails, then one must have a divergent integral}:
+\[
+\int_\alpha^\beta\ \log\,\log^+\omega_f(\theta)\ d\theta=+\infty
+\]
+Above a double log-function appears so the
+the divergence forces the $\omega_f$-function to be very large in
+the avergage.
+A proof is given in § XX and in § XX we also expose
+an improved version
+due to
+Beurling where
+the pair of $\gamma$-curves are of a more general type than straight lines.
+
+
+
+
+
+
+
+\medskip
+
+
+\centerline {\emph{Carleman's work on PDE\vvv equations.}}
+\medskip
+
+\noindent
+The student in analysis is confronted with several disciplines where 
+analytic function theory and Fourier analysis is one aspect, and PDE\vvv theory another.
+As expected the interaction is close and many results in PDE\vvv theory use
+complex methods and Fourier analysis. 
+Let us  describe  one of  Carleman's results whose   proof
+rely upon methods  from all these disciplines.
+
+
+\medskip
+
+\noindent
+Let $\Omega$ be a bounded open domain in
+${\bf{R}}^3$ with a $C^1$\vvv boundary.
+We are given a symmetric $3\times 3$\vvv matrix $A(x)$ whose 
+elements  $\{a\uuu{pq}(x)\}$ are real\vvv valued continuous functions on the closure
+$\bar\Omega$.
+Let $b\uuu 1,b\uuu 2,b\uuu 3$ and $c$ be four other real\vvv valued
+continuous functions on $\bar\Omega$.
+We get the differential operator $L$ acting on $C^2$\vvv functions
+$u(x)$   by
+\[ 
+L(u)= 
+\sum\uuu{p=1}^{p=3}\, 
+\sum\uuu{q=1}^{q=3}\, a\uuu {pq}(x) \frac{\partial ^2 u}
+{\partial x\uuu p\partial x\uuu q} + \sum\uuu{p=1}^{p=3}
+\,b\uuu p(x) \frac{\partial u} {\partial x\uuu p}
++c(x)u
+\]
+Assume that $L$ is elliptic which means that there is a constant $\rho>0$ such that
+\[
+\min\uuu \xi\, |\,\sum\uuu{p=1}^{p=3}\,  
+\sum\uuu{q=1}^{q=3}\, a\uuu {pq}(x)\cdot \xi\uuu p\xi \uuu q\,|
+\geq \rho
+\] 
+where the minimum is taken over all $x\in\bar\Omega$ and every real 
+$\xi$\vvv vector of unit length.
+Fredholm's classical  theory about integral equations implies
+that the  eigenvalues $\lambda$ for which there exists a non\vvv zero function $u$
+such that
+\[ 
+L(u)+\lambda\cdot u=0\quad\text{and}\quad u|\partial\Omega=0
+\]
+is a discrete set of complex numbers.
+When $L$ is symmetric these eigenvalues are real and
+tend to $+\infty$ and
+results about their  asymptotic distribution were established
+by Weyl and Courant.
+In the article [Carleman 1936] the asymptotic expansion 
+was extended to cover
+non\vvv symmetric elliptic operators.
+The result from [ibid] goes as follows where we for each
+$x\in\Omega$ introduce the non\vvv zero value of the 
+determinant of $A(x)$ which  
+by the elliptic condition may be taken to be everywhere positive.
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Let $|\lambda\uuu n|$ be the absolute value of the
+$n$:th eigenvalue  ordered in a non\vvv decreasing sequence.
+Then}
+\[ 
+|\lambda\uuu n|\simeq
+ \bigl[\,\frac{1}{6\pi}\int\uuu\Omega\,
+ \frac{dx}{\det A(x)}\,\bigr]^{\vvv \frac{2}{3}}\cdot n^{2/3}
+\]
+
+ 
+\noindent
+{\bf{Remark.}}
+The $\simeq$\vvv sign means that the difference of
+the  terms above are of small ordo $n^{2/3}$ as $n\to +\infty$. 
+Notice that   the asymptotic formula is the same as in the symmetric case, i.e.
+the lower order differentials of $L$ do not affect the asymptotic 
+distribution of eigenvalues.
+This is no surprise since one can easily show that
+even if eigenvalues can be complex, they 
+are asymptotically real. More precisely, when
+the elliptic operator $L$ is given, then there are positive constants
+$c\uuu 1,c\uuu 2$ such that
+$\mathfrak{Re}\,\lambda\geq \vvv c\uuu 1$ and
+\[
+\bigr |\mathfrak {Im}\,\lambda\,|\leq
+c\uuu 2\cdot \sqrt{\mathfrak{Re}\,\lambda+c\uuu 1}
+\] 
+hold for all  eigenvalues.
+
+\bigskip
+
+
+
+\centerline {\emph{Work by Arne Beurling.}}
+\bigskip
+
+
+\noindent
+Several sections  expose results   by Beurling
+which not only offer striking theorems but 
+have the merit that the proofs are both highly original and instructive. 
+Many of Beurling's   methods 
+have led to 
+new areas  in analytic function theory, 
+harmonic analysis and
+potential theory. 
+We have not 
+tried to include his deepest results which for example appear
+in joint articles  with Lars Ahlfors and Paul Malliavin.
+For a more detailed account we refer 
+to  [Beurling:Collected Works 1-2]
+whose   foreword contains 
+a very  informative text  written by 
+Lars Ahlfors and Lennart Carleson.
+A  feature in Beurling's work is the  mixture of
+geometric constructions  and "hard calculus".
+An example
+is the notion 
+of extremal distances which
+Beurling  introduced in 1929
+and applied in  many different situations, foremost to
+estimate harmonic measures.
+Below follows
+a description of  some  major results in his thesis
+\emph{Études sur un problème de majoration}
+form Uppsala in 1933.
+Personally I find Beurling's proofs in [ibid]
+utmost  intstructive 
+and  transparent. So 
+[ibid] constitutes 
+a veritable classic in
+analytic function theory.
+The results below speak  for themselves, though the  less experienced reader may
+consider the subsequent material as a "bird's view" 
+and whenever necessary 
+consult Chapters for  background about  
+concepts  which are used without hesitation below.
+
+\bigskip
+
+
+\centerline{\emph{A. The Milloux problem.}}
+
+
+
+\medskip
+
+
+\noindent
+Consider an analytic function $f(z)$ in the unit disc
+where $|f(z)|<1$ for all $z$ and suppose there exist some
+$\delta>0$ such that
+\[
+ \min_\theta\, |f(re^{i\theta})|\leq \delta\quad\forall\,\ 0\leq r<1
+\] 
+\emph{Then it follows that}
+\[
+\max_\theta\, |f(re^{i\theta})|\leq \delta^{\frac{2}{\pi}\cdot
+\arcsin\,\frac{1-r}{1+r}}
+ \quad\colon\, 0<r<1 \tag {*}
+\]
+
+\noindent
+Prior to this result
+M.E  Schmidt had proved (*) under the constraint that
+there exists a Jordan arc from the origin to the unit 
+circle along which
+$|f|$ is $\leq \delta$ in which case one  profits upon a suitable 
+conformal mapping which in a simllar context had been used by Koebe.
+To prove (*) in the general case
+Beurling introduced   totally new ideas.
+
+\newpage
+
+
+\centerline{\emph{Minimum modulus of analytic functions.}}
+\medskip
+
+\noindent
+Chapter XX in [ibid]
+studies
+the minimum modulus of an analytic function.
+When $f(z)$ is analytic in a disc $\{|z|<R\}$
+we set
+\[
+m_f(r)= \max_{|z|= r}\, |f(z)|\quad\colon\, \mu_f(r)=
+ \min_{|z|= r}\, |f(z)\quad\colon 0<r<R
+\]
+
+
+\noindent
+The following  is proved in [ibid: page 94]:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Let $0<r_1<r_2<R$ and 
+$\alpha>0$ satisfies 
+$0<\alpha\leq m_f(r_1)$. Then}
+\[
+\int_{r_1}^{r_2}\, \chi(\{\mu_f\leq \alpha\} \cdot \log r\, dr \leq
+\log 4+2 \int_{r_1}^{r_2} \,\log\log \frac{m_f(r)}{\alpha}\, dr\tag{**}
+\]
+\emph{where 
+$\chi(\{\mu_f\leq \alpha\})$ is the characteristic function of the set
+where $\mu_f(r)\leq\alpha$.}
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+In the article [xxx] from 1933
+Nevanlinna found another proof of (*) above 
+which has the merit that
+it  consolidates why  (*) is sharp.
+Using the constructions by Nevanlinna, Beurling
+could then  demonstrate that
+the inequality  (**) gets sharp when $\alpha$ tends to zero
+which
+is the interesting part of (**) above.
+\medskip
+
+\centerline{\emph{Upper bounds for harmonic measures}}
+\medskip
+
+\noindent
+ Let
+$D$ be a simply connected domain and $\gamma\subset\partial D$
+a subarc.
+If $z\in D$ we denote by $r(z;\partial D)$, resp. $r(z,\gamma)$ the euclidian 
+distance from $z$
+to the boundary and to $\gamma$ respectively.
+With these notations Theorem III : page 55 in [ibid] asserts that
+\[
+\mathfrak{m}(D,\gamma;z)\leq
+\frac{4}{\pi} \cdot \arctan\,\sqrt{\frac{r(z,\partial D)}{r(z,\gamma)}}\tag{***}
+\]
+where the left hand side is the harmonic measure at $z$ with respect to
+$\gamma$. Examples show that
+this upper bound is sharp.
+Next,  an inequality, which in a slightly weaker form
+was established in Beulring's thesis to 
+demonstrate 
+the Denjoy conjecture, 
+was  refined later in the  article [xx] from 1940
+and goes as follows:
+Let $\Omega$ be a Jordan domain
+and  $\omega\subset\partial\Omega$
+a sub-arc of its boundary. Let $z_0\in\Omega$ and suppose there exists a
+positive harmonic function $\psi$ in $\Omega$ satisfying:
+\[
+\psi(z_0)=0 
+\quad\colon 
+A=\iint_\Omega\, |\nabla(\psi)|^2\, dxdy<\infty
+\]
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Set $\min_{z\in\omega}|, \psi(z)=L$. Then one has the inequality}
+\[
+\mathfrak{m}(\Omega;\omega)(z_0)\leq
+e^{-\pi\cdot \frac{L^2}{A}}
+\]
+
+
+\medskip
+
+\noindent
+{\bf{Remark.}}
+A detailed proof 
+appears in
+section §§ from Special Topics.
+
+\bigskip
+
+
+\centerline {\emph{Regular points for the Dirichlet problem.}}
+\medskip
+
+\noindent
+Sections in [ibid:page 63-69]
+are devoted to Dirchlet's problem. Let $\Omega$ be an open 
+subset of
+${\bf{C}}$.
+If $f$ is a real-valued and continuous function on
+$\partial\Omega$ it can be extended to some
+$F\in C^0(\bar\partial\Omega)$.
+Now $\Omega$ can be exhausted by an increasing sequence of subdomains
+$\{\Omega_n\}$ for which the Dirichlet problem is solvable. Such exhaustions were
+considered by Lebesgue
+and explicit constructions
+were given by de Vallé Poussin in 1910.
+To each $n$ we find the harmonic function $H_n$ in $\Omega_n$
+which solves the Dirichlet problem with boundary
+values given by the restriction of $F$ to $\partial\Omega_n$.
+In Chapter V we prove Wiener's result
+that the sequence $\{H_n\}$ converges to a unique  harmonic function
+$W_f$ in $\Omega$ which is independent of the chosen
+exhaustion. One refers to $W_f$ as Wiener's generalised solution.
+A boundary point $z_0$ is called regular if
+\[
+\lim_{z\to z_0} W_f(z)= f(z_0)\quad\colon\forall\, f\in C^0(\partial\Omega)
+\]
+
+A criterion for
+a boundary point to be
+regular was established by 
+Boulignad in 1923. Namely,
+a boundary point $z_0$ is regular if and only if there
+exists a positive harmonic function $V$ in $\Omega$ such that
+\[
+\lim_{z\to z_0} V(z)=0
+\]
+This condition is rather implicit
+so one seeks geometric properties to
+decide if a boundary point is regular or not.
+In [ibid] Beurling established a sufficient regularity condition which 
+goes as follows:
+Let $z_0\in\partial \Omega$
+and for a given $R>0$ we consider the
+circular projection of
+the closed complement of $\Omega$ onto the real interval $0<r<R$
+defined by:
+\[ 
+E_\Omega(0,R)=\{ 0<r< R\,\colon\,\exists
+\,\, z\in \{|z-z_0|=r\}\cap {\bf{C}}\setminus \Omega\}
+\]
+Following Beurling one
+ says that $z_0$ is logarithmically dense  (Point
+frontière de
+condensation logarithmique)
+if the integral
+\[
+\int_{E_\Omega(0,R)}\, \log r\, dr=+\infty\tag{1}
+\]
+Beurling proved that if (1) is divergent
+then $z_0$ is a regular boundary point.
+The proof relies upon an inequality which has  independent interest.
+Here is the situation considered in [ibid: page 64-66]:
+Let $\Omega$ be an open set - not necessarily connected and
+$R>0$ where $\Omega$ is general contains points of absolute value $\geq R$.
+Consider a harmonic function $U$ in $\Omega$ with the following properties:
+\[ 
+\limsup_{z\to z_*}\, U(z)\leq 0\quad\colon \,
+z_*\in \partial \Omega\cap \{|z|\leq R\}\tag{i}
+\]
+\[
+U(z)\leq  M\quad\colon\, z\in \{|z|=R\}\,\cap D\tag{ii}
+\]
+
+\medskip
+\noindent{\bf{Theorem.}}
+\emph{When (i-ii) hold one has the inequality below for every
+$0<r<R$}
+\[
+\max_{z}\, U(z)\leq 2M\cdot\, e^{-\frac{K}{2}}
+\]
+\emph{where the maximum in the left hand side
+is taken over $\Omega\cap \{r<|z|<R\}$
+and}
+\[ 
+K=\int_{E_\Omega(r,R)}\, \log r\, dr
+\]
+
+
+
+
+
+\bigskip
+
+
+
+
+
+\centerline{\emph{Extremal length.}}
+\medskip
+
+
+\noindent
+Let us first cite
+Beurling
+where he gives the following
+attribute to original work
+by Poincaré:
+\emph{Rappelons que dans la 
+théorie des fonctions analytiques, on a introduit
+des élements géometriques non euclidiennes, invariants
+par rapports a certaines transformation, et
+cela surtout pour simplifier la thérie dont il s'agit}.
+In his 
+lecture at the Scandinavian Congress in
+Copenhagen 1946, Beurling describes in more detail 
+the  usefulness of
+extremal
+lengths.
+
+\medskip
+
+\noindent
+\emph{In geometric function theory one often tries to
+characterize or determine a certain mapping or quantity by
+an extremal property. The method goes back to Riemann
+who introduced variational methods in function theory in the form of
+Dirichlet's principle. When you want to characterize
+a function by an extremal property , then the class of competing functions
+is very important. The wider you can make this class the more you can say
+about the extremal function 
+and the easier it becomes to find
+good majorants or minorants, as the case may be.}
+
+
+
+
+\medskip
+
+\noindent
+In his thesis
+Beurling defined  an extremal distance between
+pairs of points $z_0,z_1$ in  simply conected domains $\Omega$
+with a finite area. The construction goes as follows:
+First 
+the interior distance 
+is defined by
+\[
+\rho(z_0,z_1;\Omega)= \inf_\gamma\, \int_\gamma\, |dz|
+\]
+where the infimimum is taken over
+rectifiable
+Jordan arcs which
+stay in $\Omega$ and join the two points.
+Set
+\[
+\lambda_*(z_0,z_1;\Omega)=\sqrt{\frac{\pi}{\text{Area}(\Omega)}}|\cdot
+\rho(z_0,z_1,\Omega)
+\]
+One refers to $\lambda_*$
+as  the reduced distance. It is
+not a conformal invariant and to  overcome this default
+Beurling considered
+the family of \emph{all triples} $(\Omega^*,z_0^*,z_1^*)$
+which are conformally equivalent
+to the given triple, i.e. 
+there exists a conformal mapping $f\colon \Omega\to \Omega^*$
+such that $f(z_\nu)= z_\nu^*$.
+The \emph{extremal distance} is now defined by
+\[
+\lambda(z_0,z_1;\Omega)=
+\sup\, \lambda_*(z^*_0,z^*_1;\Omega^*)
+\]
+with the supremum taken over all equivalent 
+triples.
+By this construction $\lambda$ yields a conformal invariant.
+Next, consider
+a 
+triple $(z_0,z_1, \Omega)$
+is the  Green's function $G(z_0,z_1;\Omega)$.
+Recall that $G$ is a symmetric function of the pair $z_0,z_1$
+and keeping $z_1$ fixed
+\[ 
+z\mapsto  G(z,z_1;\Omega)-\log\, \frac{1}{z-z_1|}
+\]
+is a harmonic function
+$\Omega$ which is zero on
+$\partial\Omega$.
+In [ibid: Théorème 1: page 29] the following fundamental result is proved:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For each triple $(z_0,z_1;\Omega)$ one has the equality}
+\[ 
+e^{-2G}+e^{-\lambda^2}=1\tag{*}
+\]
+
+
+\noindent
+\emph{About the proof.}
+By conformal invariance it suffices to prove the equality 
+for a triple $(0,a,D)$ where $D$ is the unit disc
+where  the pair of points is the origin and a real point $0<a<1$.
+In this case
+\[
+G=\log\,\frac{1}{a}
+\]
+Hence the theorem amounts to prove the equality
+\[ 
+e^{-\lambda^2}= 1-a^2
+\]
+or equivalently that
+\[
+\lambda^2=\log\,\frac{1}{1-a^2}\tag{*}
+\]
+We will show (*) in § XX.
+The equation  has several applications but at this monent
+we refrain form
+discussing more details.
+ 
+
+
+
+
+
+
+
+
+\medskip
+
+\centerline{\emph{General extremal metrics.}}
+\medskip
+
+\noindent
+Ten years later Beurling realised the need for a
+more extensive class of extremal distances which
+can be applied for domains  which are not 
+simply connected. The  constructions below appear in 
+the section  \emph{Extremal Distance and estimates for Harmonic Mesure}
+[Collected work. Vol 1. page 361-385].
+
+
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+\emph{The numbers 
+$\lambda(E,K;\Omega)(z_0).$}
+Let  $\Omega$ be a Jordan domain in the complex $z$-plane
+and consider a pair of sets $E,K$
+where
+$E\subset\partial \Omega$ and $K$ is a compact subset
+of $\Omega$. To a point 
+$z_0\in\Omega\setminus K$
+we introduce the family $\mathcal J(E,K;z_0)$ of  rectifiable Jordan
+arcs $\gamma$ with the following properties:
+Apart from its end-points 
+$\gamma$ stays in
+$\Omega\setminus K$ and  passes through  $z_0$. Moreover, the end-points
+of $\gamma$ divides  the Jordan curve $\partial\Omega$
+into a pair of closed intervals $\omega_1$ and
+$\omega_2$ and the last constraint on $\gamma$
+is that
+$E$
+is contained in one  of these $\omega$-intervals.
+Notice that neither $K$ or $E$
+are assumed to be connected.
+Next, let $\mathcal A$ be the family of positive and continuous
+functions $\rho$ in $\Omega$ for which the squared area integral
+\[ 
+\iint_\Omega\, \rho^2(x,y)\,dxdy=1
+\]
+To each such $\rho$-function we set
+\[
+L(\rho)=\inf_{\gamma\in\mathcal J}\int\,  \,\rho(z)\,|dz|\tag{*}
+\]
+where we for simplicity  put
+$\mathcal J= \mathcal J(E,K;z_0)$.
+ The extremal distance between
+$E$ and $z_0$ taken in
+$\Omega\setminus K$ is  defined by
+\[ 
+\lambda(E,K;\Omega)(z_0)= \sup_{\rho\in\mathcal A}
+\,L(\rho)\tag{**}
+\]
+
+
+\noindent
+These  $\lambda$-numbers are conformal invariants.
+More precisely, let 
+$(E^*,\Omega^*,K^*)$ be  another triple and 
+$f\colon \Omega\setminus K\to \Omega^*\setminus K^*$
+is  a conformal mapping
+which extends 
+continuously   to   the boundary and
+gives a homeomorphism
+between the closed Jordan arcs
+$\partial\Omega$ and $\partial\Omega^*$ where $E^*=f(E)$.
+Then one has the equality
+\[
+\lambda(E,K;\Omega)(z_0)=\lambda(E^*,K^*;\Omega^*)(f(z_0))
+\]
+
+
+
+
+\noindent
+Consider  a triple $(E;\Omega,K)$ as above
+and when $z_0\in\Omega\setminus K$ there exists
+the harmonic measure
+$\mathfrak{m}(E;\Omega,K)(z_0)$.
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{For every  triple $E;\Omega,K)$ and each
+$z_0\in\Omega\setminus K$ 
+where  $\lambda(E;\Omega,K)(z_0)\geq 2$ 
+one has the inequality}
+\[
+\mathfrak{m}(E;\Omega,K)(z_0)\leq
+3\pi\cdot e^{-\pi\cdot \lambda(E;\Omega,K)(z_0)}
+\]
+
+
+\noindent
+This result  is often used to
+estimate harmonic measures. The point is
+that in the right hand side we can use
+$\rho$-functions which need
+not maximize the
+$L$-functional in (**) and since $L(\rho)\leq\lambda(E;\Omega,K)(z_0)$
+one has  in particular
+\[
+\mathfrak{m}(E;\Omega,K)(z_0)\leq
+3\pi\cdot e^{-\pi\cdot L(\rho)}
+\]
+Examples in § XX  demonstrate the usefulness of such
+majorisations. 
+\medskip
+
+\noindent
+{\bf{The simply connected case.}}
+Here $\Omega$ is  a Jordan domain 
+and  $K=\emptyset$. Consider
+a pair of closed subsets
+$E$ and $F$ in $\partial\Omega$
+which both are   a finite unions of closed subintervals.
+Denote by  $\mathcal J(E,F)$  the family of
+Jordan arcs $\gamma$ with
+one end-point in $E$ and the other in $F$
+while the interior stays in $\Omega$. Set
+\[
+\lambda(E;F:\Omega)=
+\max_\rho\min_{\gamma\in\mathcal J}\,
+\,\int_\gamma \, \rho\cdot d|z|\quad\colon\,\rho\in\mathcal A
+\]
+This yields  a conformal invariant which can
+be determined under the extra condition that the sets
+$E$ and $F$ are \emph{separated} which means
+that
+there exists a pair of points $p,q$ in $\partial \Omega\setminus E\cup F$
+which divide $\partial \Omega$ in two intervals where $E$ belongs to one
+and $F$ to the other.
+Under this condition one has the equality
+\[
+\lambda(E;F:\Omega)=\mathcal{NS}(E;F:\Omega)\tag{1}
+\]
+Here  $\mathcal{NS}(E;F:\Omega)$ is  the Neumann-Schwarz number associated
+to the triple $(E,F;\Omega)$ which is    found as follows:
+Let $u$ be the 
+harmonic function in
+$\Omega$ with boundary values
+$u=1$ on $E$ and 
+zero on $F$ while the normal derivative
+$\frac{\partial\phi}{\partial n}=0$ on $\partial\Omega\setminus E\,\cup F$.
+If $v$ is the harmonic conjugate
+then $v$ is increases on $E$ and decreases on $F$
+and when  $v$ is normalised so that
+the range $v(E)$ is an interval $[0,h]$ it follows that
+$f=u+iv$ is a conformal mapping from
+$\Omega$ onto a rectangular slit domain:
+\[ 
+\{0<x<1\}\times \{ 0<y<h\}\cup S_\nu 
+\] 
+where $\{S_\nu\}$ are horizontal intervals directed   into the rectangle
+and with end-points on one of the vertical sides
+$\{x=0\}$ or $\{y=0\}$. See  § XX for a figure.
+The Neumann-Schwarz number is given by
+\[
+\mathcal{NS}(E,F;\Omega)=\frac{1}{\sqrt{h}}
+\]
+In § xx we prove that it is a conformal invariant which reduces
+the proof of (1) to the case when
+$\Omega$ is a rectangle as above with some removed
+spikes while $E$ and $F$ are the opposed vertical lines.
+If  $\rho^*$ is the constant function
+$\frac{1}{\sqrt{h}}$ the fact that horisontal straight lines minimize
+arc-lengths when we move from $E$ to $F$ imply that
+\[ 
+L(\rho^*)=\frac{1}{\sqrt{h}}\tag{2}
+\]
+On the other hand, let $\rho\in\mathcal A$ be non-constant.
+Now
+\[
+0<\iint_\Omega\, (\rho-\frac{1}{\sqrt{h}})^2dxdy=2-\frac{2}{\sqrt{h}}\iint_\Omega \rho\, dxdy\implies
+\iint_\Omega \rho\, dxdy<\sqrt{h}
+\]
+It follows that
+\[
+\min_{0\leq y\leq h}\, \int_0^1\,\rho(x,y)\,dx<\frac{1}{\sqrt{h}}
+\]
+In the left hand side appear competing $\gamma$-curves and hence
+\[ 
+L(\rho)<\frac{1}{\sqrt{h}}
+\]
+This proves that $\rho^*$ maximizes the $L$-function and 
+the equality (2) entails (1).
+
+\medskip
+
+
+
+
+
+
+
+\noindent
+{\bf{Another inequality.}}
+Let $\Omega$
+be a bounded and connected
+domain whose boundary consists of a finite family of disjoint closed Jordan
+curves $\{\Gamma_\nu\}$. Consider a pair $(z_0,\gamma)$
+where $z_0\in\Omega$ and $\gamma$ is a Jordan arc
+starting at $z_0$ and with
+an end-point $p$ on one
+boundary curve, say
+$\Gamma_1$.
+Next, let $K$ be a compact subset of
+$\Gamma_1\setminus\{p\}$.
+For each point $z\in \gamma$ we get the harmonic
+measure
+$\mathfrak{m}_K(z)$
+which is the value at $z$ of the harmonic function in
+$\Omega$ whose boundary values are one on $K$ and zero in
+$\partial\Omega\setminus K$.
+Set
+\[ 
+h^*(K,\gamma;z_0)= \max_{z\in\gamma}\, \mathfrak{m}_K(z)
+\]
+The  interpretation
+is that one seeks a point $z\in\gamma$ where the probability for
+the Browninan motion which starts at $z$
+and escapes at some point in $K$
+before it has reached points in
+$\partial\Omega\setminus K$,
+is as large as possible.
+An upper bound
+of $h^*$ is found using the notion of extremal length. Namely,
+let
+$\lambda(K;\gamma)$ be the extremal length for  the family of
+curves in $\Omega$
+with one end-point in $K$ and the other on
+$\gamma$. Then Beurling proved that
+\[
+h^*(K,\gamma;z_0)\leq 5\cdot e^{-\pi\cdot \lambda(K;\gamma)}\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Remark.}}
+In  random walks under a Brownian motion the inequality above
+shows that if $K$ is a  large obstacle
+and $\gamma$ small, then the $h^*$-function
+can be majorised if
+some lower bound for
+the extremal length can be proved. This is of interest
+in configurations
+with "narrow channels" when one seeks
+paths  out to the boundary and 
+illustrates a typical  application of extremal lengths.
+
+\bigskip
+
+
+
+
+
+
+\centerline{\bf{On quasianalytic series.}}
+\medskip
+
+\noindent
+Let us finish with   a  result which
+illustrates
+Beurling's vigour in "hard analysis". The theorem below was presented
+in a lecture  at the
+Scandinvian congress in Helsinki 1938.
+A closed subset
+$E$ of ${\bf{C}}$ has positive    perimeter if 
+there exists a positive constant $c$ such that
+\[
+\sum\ell(\gamma_\nu)\geq c
+\] 
+hold for every denumerable famly of
+closed and rectifiable Jordan curves
+$\{\gamma_\nu\}$
+which surround $E$, i.e. $E$ is contained in the union of the
+associated open Jordan domains.
+Let $\{\alpha_k\}$ 
+be a sequences of distinct complex numbers
+and $\{A_k\}$  another sequence  sequence such that
+\[
+\sum\, |A_k|<\infty\tag{i}
+\]
+ Set
+\[ 
+F(z)= \sum\,\frac{A_k}{z-\alpha_k}\tag{*}
+\]
+To each $k$ we put $r_k= |A_1|+\ldots |A_k|$ and
+define  $\mathcal E_f$ by
+\[
+ \mathcal E_f=\{ z\in{\bf{C}} \quad\colon\,
+\sum_{k=2}^\infty\, \frac{A_k}{\sqrt{r_{k-1}}} \cdot \frac{1}{|z-\alpha_k|} <\infty\}
+\]
+It is easily seen that (i) entails that
+the complement of $\mathcal E_f$ is a null set in
+${\bf{C}}$. 
+One says that
+(*) is quasi-analytic if $F(z)$ cannot vanish 
+on a closed subset $E$ of $\mathcal E_F$ with positive perimeter.
+The following was proved in [ibid];
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{The series (*) is quasi-analytic in the sense above if}
+\[
+\liminf_{n\to \infty}\,r_n^{\frac{1}{n}}<1
+\]
+In § XX we  expose some  steps in the proof based upon
+some remarkable inequalities
+for 
+rational functions.
+
+
+
+
+\newpage
+
+
+
+\centerline{\emph{A  final comment}}
+\medskip
+
+\noindent
+Carleman and Beurling  studied
+at Uppsala University, where Carleman entered in 1911 and Beurling in 1924.
+Both had 
+Erik  Holmgren and Anders Wiman as teachers
+and to this one can add that  as young
+researchers they  also met Ernst Lindelöf whose classic text-book
+\emph{Théorie des Residues} from 1907
+was studied at an early stage by them both.
+The  major contents in Beurling's Ph.D-thesis
+was  already written in 1929 and presented  on November 4 1933.
+At that time
+ Carleman had   served during  five years as director at
+Institute Mittag-Leffler.
+In the period 1933-1937 
+Beurling  attended Carleman's lectures at
+the Mittag-Leffler institute and  got 
+considerable  inspiration from this.
+One can mention Carleman's lectures about the generalised Fourier transform in
+1935
+and  refined versions of Ikehara's theorem and other  Tauberian results.
+A few years later 
+Beurling   proved Tauberian theorems with
+remaineder terms.
+There was never a "competetive situation" 
+during the years
+when  Beurling
+prepared his application for the chair  at Uppsala University
+replacing  Homgren after his retirement   in 1937.
+On the contrary, preserved
+letters between Carleman and Beurling
+show that
+they esteemed  each others work.
+For example, in his thesis Beurling
+inserted the following comments upon Carleman's
+new proof from 1933 of the Denjoy conjecture 
+with a sharp bound $2n$ for entire functions of order
+$n$:
+\emph{Plus récemmment 
+M. Carleman en perfectionnant sa méthode initiale 
+est arrivé au resultat $\leq 2n$ d'une manière fort élegante}.
+Beurling's  proof from 1929
+has like Carleman's proof the merit
+that it
+can be adapted to other cases than
+asymptotic values.
+An example is the following
+remarkable result from his thesis:
+
+\bigskip
+
+\noindent
+{\bf{Theorem}}
+\emph{Let $f(z)$ be a bounded analytic function in
+the half space
+$\mathfrak{Re}\, z>0$. Set}
+\[ 
+\mu(r,f)= \min_
+{-\pi/2<\theta<\pi/2}\ |f(re^{i\theta})|
+\]
+ 
+\noindent
+\emph{Then
+$f$ converges uniformly to zero 
+in
+every sector $-\pi/2+\delta\leq\theta\leq \pi/2-\delta$
+under the condition that}
+\[
+\lim_{r\to\infty}\ \mu(r,f)=0
+\]
+
+\medskip
+
+\noindent
+Carleman's last major article
+At the end of 1930:s Carleman's health became weak and from this 
+time Beurling
+took 
+the leading role in Swedish mathematics. 
+His work after 1940 contains
+a wealth of new results where one may mention his ingenious idea to
+relate inner functions in the unit disc with closed subspaces of the Hilbert space
+$H^2(T)$ which are invariant under multiplication with $z$.
+While reading articles from their  collected work
+I always get fascinated by the
+transparency  and 
+generality while they
+announce and prove deep results.
+I can only hope that
+the sections in these notes which expose
+material from their work 
+may inspire readers to continue  studies 
+of articles by these  eminent mathematicians.
+
+
+
+
+
+\newpage
+
+
+
+
+\centerline{\bf{The use of computers.}}
+\medskip
+
+\noindent
+Today's  student 
+is confronted with another
+world than in the past since
+computers offer
+numerical solutions
+and provide
+figures which 
+can be illustrated in a mobile way.
+This is a veritable
+revolution and one may even  ask
+if   traditional text-books in mathematics are out-dated.
+Hopefully the answer is a compromise, i.e.
+pure theory should help
+to create more accurate computer programs and
+conversely computers   contribute to
+new theoretical discoveries.
+Apart from the standard programs \emph{Matlab, Mathematica} and \emph{ Maple}
+we recommend
+the
+excellent programs delivered by \emph{Comsol}. Here
+refined numerical mathematics has been
+developed during the last decade 
+which in particular  are suitable for  numerical solutions to non-linear
+PDE:s. 
+The computer offers accurate numerical solutions to both linear and
+non-linear
+boundary value problems. 
+An example
+is the boundary value problem where one seeks a function $u(x,y)$ in the open
+unit disc which satisfying  the non-linear PDE-equation
+\[ 
+\Delta(u)+ u(u-1)
+\] 
+and  a boundary condition 
+\[
+u(e^{i\theta})= P(\theta)
+\] 
+where $P$ for example is a trigonometric polynomial  
+$A\cos^\theta+\sin^2\theta$ for some positive constant $A>1$.
+ The solution $u$
+ will
+ be subharmonic in the region $\{u<1\}$ while it is super-harmonic in
+ $\{u>1\}$.
+To find critical points in the open disc where the gradient vector
+$\nabla(u)=(0,0)$ one must rely upon the numerial solutions
+based upon  the computer's efficency to solve non-linear PDE-equations by
+the method of finite elements in fine grids.
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\centerline{\emph{Contents of special subsections}}
+
+\bigskip
+
+
+\noindent
+\emph{0.1 The isoperimetric inequality.}
+
+\medskip
+
+\noindent
+\emph{0.2 Neumann's boundary value problem.}\medskip
+
+\medskip
+
+\noindent
+\emph{0.2.1  Comments by Beurling about the Helmholtz equation}
+
+\medskip
+
+\noindent
+\emph{0.2.2  Calculus of variation.}
+
+\medskip
+
+
+\noindent
+\emph {0.3 Hadamard's extension theorem.}\medskip
+
+\noindent
+\emph{0.4 The role of
+inequalities.}
+\medskip
+
+\noindent
+\emph{0.4.1 Distributions of zeros of polynomials.}
+\medskip
+
+\noindent
+\emph{0.4.2 Infinite systems of linear equations}
+\medskip
+
+\noindent
+\emph{0.4.3 The heat equation.}
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+\emph{0.5 Why one should study complex analysis}
+
+\medskip
+
+\noindent
+\emph{0.6 Jensen's formula and logarithmic potentials.}
+
+
+\medskip
+
+\noindent
+\emph{0.7 Riemann's $\zeta$-function}
+
+\medskip
+
+\noindent
+\emph{0.8 Kepler's equation and Lagrange's problem}
+
+\medskip
+
+\noindent
+\emph{0.9 The Dagerholm series and comments on more recent theories}
+
+\medskip
+
+\noindent
+\emph{0.10 Mathematical physics and boundary value problems}
+
+\medskip
+
+\noindent
+\emph{0.11 The use of computers.}
+
+\medskip
+
+\noindent
+\emph{0.12 Acknowledgent: Work by Beurling and Carleman}
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\centerline{\emph{0.1 The isoperimetric inequality.}}
+\medskip
+
+
+\noindent
+Many
+problems which from the start are
+given in a real context are solved via   complex analysis.
+An example is the isoperimetric inequality which asserts that if
+$C$ is a simple closed curve
+in ${\bf{R}}^3$ of length $L$, then
+the area of the minimal surface
+bordered by $C$ is majorized by
+$\frac{1}{4\pi}\cdot L^2$ and equality holds only if
+$C$ is a planar circle.
+The proof  relies upon  a result  established by
+Weierstrass in 1861 which shows that every
+minimal surface is parametrized via an  
+analytic function defined on a simply connected domain.
+More precisely, let $M$ be  the minimal surface bordered by $C$
+and $(x,y,z)$ denote coordinates
+in ${\bf{R}}^3$. After a
+change of variables which includes  sterographic projection
+and Riemann's  conformal mapping theorem, 
+Weierstrass proved  there exists an analytic function $F(u)$ defined in the
+open unit disc $D$ where $u$ is the complex coordinates
+such that points $(x,y,z)$ in $M$
+are given by
+the equations
+\[
+x=\mathfrak{Re}\int_0^u\, (1-\zeta^2)F(\zeta)d\zeta\,
+\colon\, 
+y=\mathfrak {Re}\int_0^u\, i(1+\zeta^2) F(\zeta)d\zeta\,\colon
+z=\mathfrak {Re}\int_0^u\, 2\zeta F(\zeta)d\zeta
+\]
+From this
+the sharp isoperimetric inequality boils down to prove
+the following inequality for every pair of analytic functions $f,g$ in the unit disc:
+\[
+\iint_D\, |f(z)|\cdot |g(z)|\, dxdy\leq
+\frac{1}{4\pi}\, \int_0^{2\pi}\, |f(e^{i\theta})|\, d\theta\cdot
+ \int_0^{2\pi}\, |g(e^{i\theta})|\, d\theta\tag{*}
+ \]
+That (*) holds was demonstrated by Carleman in an article from 1921.
+One reason that Weierstrass himself did not
+find the sharp isoperimetric inequality might  be
+that the Blaschke-Jensen factorization was not known until 
+1910.
+In  § XX from Special Topics we shall learn that this 
+factorisation leads to the proof of
+(*).
+\medskip
+
+\noindent
+Another example of an
+isoperimetric inequality 
+related to function theory goes as follows:
+Let $r(z)= \frac{p(z)}{q(z)}$ be a rational function where 
+the polynomials $p,q$ have no common root.
+No hypothesis is imposed on their degrees.
+Let $D=\{|z|<1\}$ be the open unit disc
+and for each real number $t$
+we put
+\[ 
+D_r(t)=\{ z\in D \,\colon\, |r(z)|<t\}
+\]
+The boundary of $D_r(t)$ is a union of Jordan arcs and
+some  finite set of corner points. In this family occur 
+subarcs of the unit circle. Denote by
+$\lambda_r(t)$  the sum of their
+lengths while 
+$L_r(t)$ is the sum the lengths of the boundary arcs  contained
+in
+$D$.
+With these notations one has the inequality
+\[
+L_r(t)\geq 2\sin\,\frac{\lambda_r(t)}{2}\tag{*}
+\]
+In §§ we shall prove (*) together with
+other inequalities about rational functions which are due to Beurling.
+Here geometry, variational inequalities and analytic function theory appear in a most fruitful manner.
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\emph{0.2 Neumann's boundary value problem.}}
+\medskip
+
+\noindent
+In the  pioneering article
+\emph{Untersuchungen über das Logarithmische und Newtonsche Potential}
+from 1877, Gustav Neumann  
+introduced 
+operator-valued meromorphic series
+to
+solve the
+boundary value problem
+\[
+\frac{\partial U}{\partial {\bf{n}}_*}(p)= h(p)\cdot U(p)+f(p)\tag{1}
+\]
+where $\Omega$ is a bounded domain in
+${\bf{R}}^3$, 
+$U$ is  harmonic in $\Omega$
+and (1)  hold for points $p$ on the boundary
+and
+$\frac{\partial U}{\partial {\bf{n}}_*}$ denotes the inner normal derivative.
+Above $h$ is assumed to be a positive continuous function on
+$\partial\Omega$ while $f$ is an arbitrary real-valued continuous function.
+Neumann proved existence and uniqueness  for each such pair $(h,f)$
+when $\Omega$ is a
+bounded and strictly  convex domains with
+a $C^2$-boundary.
+His work was later resumed by
+Poincaré whose article 
+[Acta:20: 1897 ]
+\emph{La méthode de Neumann et le problème de Dirichlet}
+where existence and uniqueness was proved
+under the solve assumption that
+$\partial\Omega$ is of class $C^2$, i.e. the convexity 
+assumption is not neeeded.
+In § xx we shall consider neumann's boundsry value problem in dimension two
+while the 3-dimensional case is treated in § xx.
+\medskip
+
+
+\noindent
+{\bf{The inhomogeneous Laplace equation.}}
+We discuss the 2-dimensional case where
+$\Omega$ is a connected and bounded
+bounded domain in
+${\bf{R}}^2$
+whose boundary
+is a finite union of pairwise disjoint and differentiable
+closed Jordan curves.
+Under this condition the Diriclhet probelm is sovlable, i.e., for
+every
+$h\in C^0(\partial\Omega)$ there exists a unique harmonic function
+$H$ in $\Omega$ whichextends to a continuous function on the closure and
+$H=h$ on $\partial\Omega$.
+This will be proved in § xx from Chapter V.
+In particular we take a point $p\in\Omega$
+and find the harmonic function
+$H_p(q)$ in $\Omega$ such that
+\[ 
+H_p(q)= \log \, |p-q|\quad\colon q\in \partial\Omega
+\]
+The Greens' function 
+is 
+defined for pairs $(p,q)$ in
+in $\Omega\times\Omega$ with $p\neq q$ by
+\[
+ G(p,q)=\log\,\frac{1}{|p-q|}- H_p(q)
+\]
+In § xx from Chapter V we prove that
+$G$ is symmetric, i.e. $G(p,q)= G(q,p)$.
+Next one gets a nintegral operator
+$\mathcal G$
+defined by
+\[
+\mathcal G_f(p)= 
+\frac{1}{2\pi}\cdot \int_\Omega\,
+G(p,q)\cdot f(q)\, dq
+\]
+So above $q=(x,y)$ and $dq=dxdy$.
+For each fixed $p\in\Omega$ the function
+$q\mapsto   G(p,q)$ is integrable over
+$\Omega$ and from this we shall learn that
+(x) is defined for fun cions
+$f\in L^2(\Omega)$, i.e.
+complex-valued square integrable functions in the sense of Lebesgue.
+Moreover one easily verifies that 
+\[
+\iint_{\Omega\times\Omega}\, |G(p,q)|^2\, dp dq<\infty
+\]
+It means that
+$\mathcal G$ is a Hilbert-Schmidt  operator and
+in particular compact.
+Next, we can apply the Laplce operator and a crucial resut is
+that
+for every $f\in L^2(\Omega)$ it holds that
+$\Delta(\mathcal G_f)$ exists in the distribution sense
+and is equal to $-f$ in the Hilbert space
+$L^2(\Omega$, i.e. one has the operator equation
+\[
+\Delta\circ \mathcal G=-E
+\] 
+where $E$ is the identity operator on $L^2(D)$.
+In §§ we shall learn that
+$L^2(\Omega$ has an orthonormal basis
+$\{\phi_n\}$ where
+\[ 
+\frac{1}{2\pi}\cdot \int_\Omega\,
+G(p,q)\cdot \phi_n(q)\, dq=\lambda_n^{-1}\cdot \phi_n(p)
+\]
+and $\{\lambda_n\}$ is a non-decreasing sequence of positive real numbers
+which tend to $+\infty$ as  $n\to\infty$.
+From (x) we see that (xx) means that
+\[ 
+\Delta(\phi_n)+\lambda_n\cdot \phi_n=0
+\] 
+holds in $\Omega$. Moreover, by the construction of
+$\mathcal G$ 
+one verifies that
+each   
+$\phi_n$
+extends to a contionuous function on
+the closure with boundary value equal to zero.
+\medskip
+
+
+\noindent{\bf{Asymptotic results.}}
+The resuts above are due to Neumann and Poincaré and sved as a model in
+more general studies 
+of integral operatoes by Fredholm
+and Hilbert.
+A regined study of the asymptotic
+behaviour  of the eigenvalues $\{\lambda_n\}$
+was later established by Weyl who proved the following limit formula
+for every domain
+$\Omega$ as above:
+\[
+ \lim_{n\to\infty}\, \frac{\lambda_n}{n}= 
+\frac{4\pi}{\text{area}(\Omega)}\tag{*}
+\]
+
+\medskip
+
+\noindent
+Using some further refinements in
+Weyl's proof and a general Tuaberian theorem due to Wiener
+the following result was proved by Carleman:
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{ For each $p\in\Omega$ one has}
+\[
+\lim_{n\to\infty}\,
+\frac{1}{n}\cdot
+\sum_{k=1}^{k=n}\, \phi^2_k(p)=
+\frac{1}{\text{area}(\Omega)}
+\]
+\medskip
+
+|noindent
+The proolf of this theorem is given in § xx where
+the crucial point is to study the Dirichlet series
+below for each $p\in\Omega$:
+\[ 
+\Phi_p(s)=\sum _{n=1}^\infty \, \frac{\phi_n(p)^2}{\lambda_n^s}
+\]
+It is easily seen that
+$\Phi_p(s)$ is analytic in a half-space
+$\mathfrak{Re} s>b$ for a large $b$.
+Less trivial is that
+there exists an entire function
+$\Psi_p(s)$ such that
+\[
+\Phi_p(s)=\Psi_p(s)+\frac{1}{4\pi(s-1)}
+\]
+Hence $\Phi_p(s)$ is meromorphic in the complex $s$-plane with a simple pole
+at $s=1$.
+The proof that (xx) holds is given in § xx and offers an instructive lesson
+in analytic functiuon theory where
+residue caluculs and changes of contioours appear.
+We remark that this elegant procedure goes back to
+constructions by Riemann whose original work
+paved the way towards many discoveries.
+Concernibngt Theorem xx we also mention that it
+can be used to analyze asymptotic behaviour of heat-eqautions with
+related to   vibrating membrans. See § xx for an account.
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+SKIP
+
+
+\bigskip
+
+
+
+
+
+
+
+We   the proof in §  which uses 
+Ikehara's Theorem. So here
+"pure real analysis" and 
+Dirichlet series with a complex parameter
+intervene during   the proof.
+By a further study of  estimates for Green's resolvents,
+Carleman  proved that
+the eigenfunctions and all their higher derivatives also
+satisfy a limit formula. The result is that
+for each pair of non-negative integers $j,m$ and every $p\in \Omega$ one has
+\[ 
+\lim_{n\to\infty}\,
+\frac{1}{\lambda_n^{j+m+1}}\cdot
+\sum_{k=1}^{k=n}\, \bigl(\frac{\partial^{j+m}\phi_k}{\partial x^j\partial y^j}
+\bigr)^2(p)=
+\frac{1}{\pi\cdot 2^{2m+2j+2}}\cdot
+\frac{(2m)!\cdot (2j)!}{m!\cdot j!\cdot (m+j+1)!}
+\]
+So in particular
+\[
+\lim_{n\to\infty}\,
+\frac{1}{n}\cdot
+\sum_{k=1}^{k=n}\, \phi^2_k(p)=
+\frac{1}{\text{area}(\Omega)}
+\]
+where a notable   point is that the limit is independent of $p$.
+Background to the proofs of the results above
+is covered by
+material  
+in the chapters where the ordinary Dirichlet problem
+is solved  and
+Green's functions are constructed in Chapter 5, while 
+material related to harmonic analysis and  spectral theory which is 
+needed to get Ikehara's theorem
+is covered by an appendix devoted to functional analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Poincaré solved
+the boundary value problem as follows: 
+Given a positive continuous function
+$h$
+on $\partial\Omega$ he associated
+the kernel function $K_h(p,q)$ defined 
+outside the diagonal  of   $\partial\Omega\times\partial\Omega$ by
+\[ 
+K_h(p,q)=
+\frac{1}{4\pi}\cdot \frac {\langle p-q,{\bf{n}}_*(q)\rangle}{|p-q|^3}
+\]
+where  inner product between  the vectors $p-q$ 
+and the inner normal ${\bf{n}}_*(q)$ 
+appear in the denominator
+while 
+the third power of the
+euclidian distance between points  $p,q$ in $\partial\Omega$
+appear in the numerator.
+With a complex parameter $\lambda$
+one gets the integral equatiion
+\[ 
+u(p)-\lambda\cdot \int_{\partial\Omega}\, K_h(p,q)u(q)\cdot d\sigma (q)=
+f(q)\tag{2}
+\] 
+where
+$d\sigma (q)$ denotes the area measure on $\partial \Omega$.
+It means that for each $f\in C^0(\partial\Omega)$ one seeks
+$u\in C^0(\partial\Omega)$ such that (2) holds.
+If $u$ solves (2) when
+$\lambda=1$, then Green's formula shows that
+the solution $U$ to (1) is found via
+Newton's harmonic extension of $u$, i.e. 
+\[
+U(p)= \int_{\partial\Omega}\, \frac{1}{p-q|}\cdot u(q)\, d\sigma(q)
+\quad\colon\quad p\in \Omega\tag{3}
+\]
+
+
+\noindent
+The   merit in the approach  by   Neumann 
+and Poincaré  is that these authors
+realized the importance of
+studying  
+the
+operator-valued function 
+\[ 
+\lambda\mapsto  E-\lambda\cdot \mathcal K_h
+\]
+where
+$\mathcal K_h$ is the integral operator
+defined by the kernel function $K_h(p,q)$.
+For domains whose boundary is sufficiently
+regular 
+$\mathcal K_h$ is a bounded linear operator and to solve
+(2) one considers the resolvent
+\[
+R_h(\lambda)=(E-\lambda\cdot \mathcal K_h)^{-1}\tag{*}
+\]
+Poincaré 
+proved that for a domain $\Omega$ with $C^2$-boundary, this operator-valued function
+extends to a meromorphic function of $\lambda$ defined in 
+the whole complex plane whose poles are
+real and simple. He
+also demonstrated that no pole occurs when
+$\lambda=1$ which
+gives the requested solution $u$  to (2) given by
+\[ 
+u=R_h(1)(f)
+\]
+
+\medskip
+
+
+\noindent
+Inspired by the Neumann-Poincaré methods to handle boundary value problems,
+Fredholm and Hilbert studied
+the eigenvalue problem
+where one seeks functions $u$ in a domain $\Omega$ as above such that
+\[ 
+\Delta(U)+\lambda\cdot U=0\quad\text{and}\quad U|\partial\Omega=0\tag{1}
+\]
+In § xx we shall treat this in the planar case where
+$\partial\Omega$ consists of a finite family of disjoint and closed Jordan curves
+of class $C^1$.
+The first fact is that
+non-trivial solutions to (1) only  occur when
+$\lambda$ is real and positive and
+using  general facts about integral equations, Fredholm and Hilbert demonstrated that
+the eigenvalues for a discrete  sequence 
+$\{0<\lambda_1\leq \lambda_2\leq \ldots\}$
+where eventual eigenvalues whose eigenspace has dimension $>1$ is repated
+according to this multiplicity.
+The associated eigenfunctions
+$\{\phi_k\}$ are real-valued and can be chosen so that 
+they form an orthonormal set in the Hilbert space
+$L^2(\Omega)$.
+The search for  asymptotic formulas of the eigenvalues
+became a natural issue and was settled by Weyl who proved the  limit
+formula:
+\[
+ \lim_{n\to\infty}\, \frac{\lambda_n}{n}= 
+\frac{4\pi}{\text{area}(\Omega)}
+\]
+
+\medskip
+
+\noindent
+We give  the proof in §  which uses 
+Ikehara's Theorem. So here
+"pure real analysis" and 
+Dirichlet series with a complex parameter
+intervene during   the proof.
+By a further study of  estimates for Green's resolvents,
+Carleman  proved that
+the eigenfunctions and all their higher derivatives also
+satisfy a limit formula. The result is that
+for each pair of non-negative integers $j,m$ and every $p\in \Omega$ one has
+\[ 
+\lim_{n\to\infty}\,
+\frac{1}{\lambda_n^{j+m+1}}\cdot
+\sum_{k=1}^{k=n}\, \bigl(\frac{\partial^{j+m}\phi_k}{\partial x^j\partial y^j}
+\bigr)^2(p)=
+\frac{1}{\pi\cdot 2^{2m+2j+2}}\cdot
+\frac{(2m)!\cdot (2j)!}{m!\cdot j!\cdot (m+j+1)!}
+\]
+So in particular
+\[
+\lim_{n\to\infty}\,
+\frac{1}{n}\cdot
+\sum_{k=1}^{k=n}\, \phi^2_k(p)=
+\frac{1}{\text{area}(\Omega)}
+\]
+where a notable   point is that the limit is independent of $p$.
+Background to the proofs of the results above
+is covered by
+material  
+in the chapters where the ordinary Dirichlet problem
+is solved  and
+Green's functions are constructed in Chapter 5, while 
+material related to harmonic analysis and  spectral theory which is 
+needed to get Ikehara's theorem
+is covered by an appendix devoted to functional analysis.
+
+
+
+\newpage
+
+
+
+\centerline {\emph{0.2.1 Comments by Beurling about  the Helmholtz equation.}}
+\medskip
+
+\noindent 
+While referring to applications 
+in physics
+of analytic function theory 
+and 
+elliptic boundary value problems in
+${\bf{R}}^3$ one should be  prudent. Here follows an excerpt from a lecture
+by Beurling in Lund 1951 which points out some  problematic features.
+
+\medskip
+
+\noindent
+ \emph{Hydromechanics is filled with paradoxes which begin already 
+with the simplest problem; the motion of an ideal incompressible fluid in a force-free
+field. In that case the velocity vector is the gradient of  a harmonic function
+$\phi$ whose normal derivative vanishes on fixed walls 
+which limit the fluid's expansion in space.
+If we bound a certain portion of the fluid by two surfaces $A$ and $B$ 
+which are orthogonal to the stream-lines, we obtain a domain 
+$\mathcal R$ bounded by certain fixed wall $C$. The function $\phi$ is then a solution
+to Laplace's differential equation with boundary conditions
+$\phi=a$ on $A$; $\phi=b$ on $B$; $\frac{\partial\phi}{\partial n}=0$ on $C$
+where $a$ and $b$ are constants.}
+\medskip
+
+\noindent
+\emph{In spite of  exact mathematical solutions to the boundary value problem 
+describing a potential flow, it is of limited interest both from a 
+theoretical and practial point of view.
+The  mathematical equations
+which describe the flow is usually in poor agreement with the empirical facts
+and  give rise to a variety of contradictions, i.e. d'Alemebert's paradox.
+In 1868 Helmholtz introduced a new model with the objective
+of fitting the theory better to physical facts.
+Here the flowing fluid only fills up a
+certain subdomain $\mathcal R_0$ not given in advance, while the remaining
+set $\mathcal R\setminus \mathcal R_0$
+is filled with fluid at rest, so called "deadwater" or "wakes".
+By Bernoulli's relations the flowing fluid has constant
+speed on the boundary $F$ between
+$\mathcal R\setminus \mathcal R_0$ and $\mathcal R_0$
+which mathematically
+leads to a free boundary value problem.}
+\medskip
+
+\noindent 
+\emph{However, the Helmholtz's flow problem leads to great 
+difficulties and still belongs on the whole
+to an unexplored region of potential theory.
+Certain 2-dimensional problems  were settled by Weinstein
+when polygonal boundaries
+appear where  analytic function theory and
+ hodographic methods can be  used, and some  other 2-dimensional problems
+ have  been solved
+ by
+Leray using rather complicated techniques. Passing to dimension three
+there is of now the lack of mathematical methods ...}
+\medskip
+
+\noindent
+{\bf{Remark.}}
+The reader may consult Birkhoff's 
+text-book \emph{Hydromechanics, a Study in Logic,
+fact and Similtude} 
+(Princeton University Press 1950)  and 
+articles by Weinstein, especially
+\emph{Non-linear problems in the Theory of
+Fluid Motion with free Boundaries} [Proc.of first symp. applied math. 1949]
+for a further account.
+The article \emph{On measurement of velocity by Pitot tube}
+by B.J. Andersoon in [Arkiv för mat. 1955]
+was inspired by Beurling's lecture and contains
+a specific solution to a 2-dimensional problem with a free boundary where
+analytic function theory is used to construct theoretical solutions.
+This theoretical work was carried out together with empirical experiments
+which showed  discrepancy between
+expermintal data and the theoretical solution but within errors of a few percentages.
+A  Pitot tube is well adapted
+for a mathematical treatment  because it is supposed to have a long range
+which makes it easy to start with a stationary fluid at a long distance before
+wakes appear.
+Passing to dimension three the discrepancy increases rather drastically
+between experminental data and
+mathematical solutions.
+\medskip
+
+
+\noindent
+Beurling's lecture was delivered more than half a century.
+Thanks to comuters one can nowadays
+exhibit  numerical solutions. But from a pure theoretical 
+point if view
+little   
+progress 
+has been achieved
+about equations of Helmholtz type during  more recent decades and
+one may ask if it is worth efforts to
+find more theoretical results for various 
+linear boundsry value problems.
+Well, hopefully some n
+further mathematical discoveries  can  contribute to
+develop a more efficient   numerical analysis.
+Non-linearity caused by viscosity lead to   more
+involved  equations such as a mixture of a classical Navier-Stokes equation and
+free boundaries in the sense of Helmholtz and here one is more or 
+less totally dependent upon numerical solutions.
+This   means that
+a \emph{very   important issue}  in current mathematical research
+is the 
+search for   improved numerical algorithms. A  typical problem is to adapt
+grids in order that the computer can
+start calculations to find approximative solutions
+to PDE-equations.
+Recall that the major difficulity in Navier-Stokes equations occur in
+the physically relevant case when
+the viscosity is small and here one is more or less totally dependent 
+to find numerical solutions since the associated PDE-equations do not fit with
+any
+manageable class.
+
+ 
+\bigskip
+
+
+\centerline{\emph{0.2.2 Calculus of variation.}}
+
+\bigskip
+
+
+\noindent
+This is a subject which would
+require an extensive chapter. Optimization
+problems  solved by calculus of variation  played a significant role while
+analysis was developed. 
+Fermat's  
+early studies
+led to the principle of least action and 
+Huyghen's applied this to  many delicate variational problems.
+Recall for  example his fundamental  discovery that
+the Law of Momentum
+implies that a hanging chain under gravity with
+its end-points fixed on some veritcal wall, minimizes
+the potential energy.
+Dynamical situations
+led  to the solution of the Brachistone problem and
+extensive classes  of variational problems were
+considered  by Euler. Here  the Euler equations
+express necessary conditions for
+extremals in a variational problem.
+In classical mechanics the
+principle of virtual work was introduced by d'Alembert 
+and a 
+conclusive result appears in Lagrange's  famous text-book
+on \emph{Mechanique} from 1770 (?) 
+which gives the equations of motion
+for  every  system  
+with a finite degree of freedom. Here
+the external forces can be arbitrary, i.e.
+non-conservative  cases can occur.
+The d'Alembert-Lagrange equations have a wide range of applications,
+foremost in
+engineering.
+The crucial role of convexity (or concavity)
+in order to
+ensure that a specific problem has a unique
+minimum (or maximum)  was clarified by Legendre. 
+Later  physical discoveries, such as the Briot-Savart Law
+from 1800 led to more involved 
+problems related to mathematical
+physics.
+From a geometric point of view
+one should mention  contributions by Gauss 
+who introduced the notion of curvature
+in differential geometry.
+A specific case is the Dirichlet problem
+where we consider the following 
+boundary value problem in dimension two: Let
+$\Omega$ be a connected domain of
+class $\mathcal D(C^1)$ which means that
+$\partial\Omega$
+consists of a finite union of disjoint closed 
+and differentiable Jordan curves.
+Let $g\in C^0(\partial\Omega)$ be
+real-valued
+and
+$\phi(x,y)$ is a continuous function in
+$\bar \Omega$ which takes positive values in the open interior.
+One seeks a function $u$ such that
+$u=g$ on $\partial\Omega$ while
+\[ 
+\Delta(u)+\phi\cdot u=0
+\] 
+holds in $\Omega$.
+To solve this one introduces the functional
+\[ 
+J(u)=
+\iint_\Omega\, (u_x^2+u_y^2)\, dxdy+
+\iint_\Omega\, \phi\cdot u^2\, dxdy
+\]
+It is defined on functions $u\in C^0(\bar\Omega)$ for which
+$u=g$ on $\partial\Omega$ and
+its first order partial derivatives exist in $\Omega$ so that
+the first integral above is finite, i.e.
+$u$ has a finite Dirichlet integral.
+The $J$-functional is strictly
+convex in  Legendre's sense.
+For if
+$h\in C^1(\Omega)$  vanishes on
+$\partial\Omega$ then the function of the real variable $s$
+defined by
+\[
+s\mapsto J(u+sh)
+\] 
+is strictly convex. In fact, this follows because
+the second order derivative at $s=0$ is equal to 
+$J(h)$ which is $>0$ for every $h$ above which is not identically zero.
+If $u_*$  minimizes the $J$-functional it gives a solution to
+the boundary value problem. The reason is that
+if $h$ is an arbitrary $C^2$-function
+with compact support in $\Omega$ then
+the inequality
+\[ 
+J(u_*+\Delta\cdot h)\geq J(u_*)
+\] 
+for all small $\delta$ which may be either positive or negative
+entails that
+\[
+\iint\, (u_xh_x+u_yh_y)\, dxdy+\iint\, \phi\cdot u\cdot h\, dxdy=0
+\]
+Greens'  formula applied to the pair $u_*,h$
+and the elliptic property of the Laplace operator imply that 
+$u_*$ is a $C^2$-function in $\Omega$ where it  satisfies the
+requested PDE-equation
+$\Delta(u_*)+\phi\cdot u_*=0$.
+
+\medskip
+
+
+\noindent
+{\bf{Remark.}}
+Above the competing family of $u$-functions
+are of the form $u=G+w$ where
+$G$ is the ordinary solution to the Dirichlet problem, i.e. harmonic in
+$\Omega$ while $G=g$ on $\partial\Omega$, while $w$ are
+functions with a finite Dirichlet integral and boundary values zero.
+After Hilbert's creation of general Hilbert spaces
+the solution to the variational probelm above was consolidated
+by Weyl who  regarded
+the space of $w$-functions as above for which
+$J(w)<\infty$.
+Weyl
+considered   
+the class $C^1_0(\Omega)$
+of continuously differentiable
+$w$-functions 
+with  compact support which
+gives  a dense subspace  of a  Hilbert space
+denoted by $W_0^1(\Omega)$ whose
+functions have first order
+derivatives in $L^2_\text{loc}(\Omega)$ in
+the sense of distributions, while $J(w)<\infty$ and the inner product of a pair
+$(w,v)$ is defined by
+\[ 
+\langle w,v\rangle=
+\iint\, (w_xv_x+w_yv_y)\, dxdy+\iint\, \phi\cdot w\cdot v\, dxdy
+\]
+From this  the existence and uniquness of $u_*$ follows from
+general facts about
+strictly convex functionals on Hilbert spaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{\emph {0.3 Hadamard's extension theorem.}}
+\medskip
+
+
+\noindent
+A good example of  
+"an old vintage result "
+is due to Jaques Hadamard. Text\vvv books are in most cases content
+to announce the
+formula for
+the radius of convergence of a power series
+$\sum\, c\uuu nz^n$  by the equality
+\[
+\frac{1}{\rho}= \limsup\uuu{n\to \infty}\,
+|c\uuu n|^{\frac{1}{n}}\tag{*}
+\]
+This is     a    minor observation
+compared to   the contents  in Hadamard's thesis
+\emph{Essai sur l'études des fonctions donnés par leur
+développement de Taylor} 
+from 1893. 
+Let us recall the major result
+in [ibid] since it  has a wide range of applications
+and is seldom  mentioned  in contemporary text-books.
+Consider a power  series   whose radius of convergence is a positive  number
+$\rho$. To every pair $p\geq 1$ and $n\geq 0$
+we have  the
+Hankel determinants:
+\[
+\mathcal D\uuu n^{(p)}=
+\text{det}
+\begin{pmatrix}
+c\uuu n&c\uuu{n+1}&\ldots&c\uuu{n+p}\\
+c\uuu {n+1}&c\uuu{n+2}&\ldots&c\uuu{n+p+1}\\
+\ldots&\ldots&\ldots&\ldots\\
+c\uuu {n+p}&c\uuu{n+p+1}&\ldots&c\uuu{n+2p}\\
+\end{pmatrix}
+\]
+
+
+\noindent
+To each $p\geq 1$ we set
+\[
+\limsup\uuu {n\to\infty}\, |\mathcal D\uuu n^{(p)}|^{\frac{1}{n}}=\delta(p)
+\]
+From (*) it follows easily that
+\[
+\delta(p)\leq \rho^{\vvv p\vvv 1}
+\quad\colon\,  p\geq 1\tag{1}
+\]
+If strict inequality holds for some positive integer in  (1) the 
+following result was proved in [loc.cit] where we put $f(z)= \sum\, c\uuu nz^n$.
+
+\medskip
+
+\noindent
+{\bf{Theorem.}}
+\emph{Assume  there exists a positive integer $p$
+and some
+$\rho\uuu*>\rho$
+such that 
+$\delta(q)=\rho^{\vvv q\vvv 1}$ when $0\leq q\leq p\vvv 1$ while}
+\[
+\delta(p)=\rho^{\vvv p}\cdot \rho\uuu *^{\vvv 1}
+\]
+\emph{Then there exists a polynomial $Q(z)$ of degree
+$p$  at most such that $Q(z)\cdot f(z)$ extends to an analytic function in the disc
+$\{|z|<\rho^*\}$.}
+
+
+\medskip
+
+\noindent
+Hadamard's proof shows also that
+the coefficients of the $Q$\vvv polynomial are found
+via  robust  limit formulas which arise  
+from  linear systems of
+equations derived  from the given
+sequence $\{c\uuu n\}$.
+
+
+
+\medskip
+
+
+
+\centerline {\emph{A result by Jentsch.}}
+\medskip
+
+
+\noindent
+The following result is due  Jentsch in the article
+\emph{xxx} from 1917.
+Let $\{a_k\}$ be a sequence of complex numbers such that 
+\[ 
+\lim_{k\to\infty}\,|a_k|^{\frac{1}{k}}=1\tag{1}
+\]
+To each positive integer $n$ we get the polynomial
+\[ 
+s_n(z)= a_0+a_1z+\ldots+a_nz^n
+\]
+Let $\{\alpha_1^{(n)},\ldots,\alpha_n^{(n)})$
+be its zeros and construct the probability measure
+\[ 
+\mu_n= \frac{1}{n}\cdot\sum _{k=1}^{k=n}\,\delta( \alpha_n^{(n)})\tag{2}
+\]
+Jentsch proved that the sequence $\{\mu_n\}$ converges to the
+Haar measure on the unit circle, i.e. for every
+continuous function
+$f$ in ${\bf{C}}$ one has the limit formula
+\[ 
+\lim_{n\to\infty}\, \int\, f\cdot d\mu_n=
+\frac{1}{2\pi}\int_0^{2\pi}\, f(e^{i\theta})\, d\theta\tag{*}
+\]
+To prove (*)  Jentsch
+considered the
+sequece of locally integrable functions
+\[
+\phi_n(z)=
+\frac{\log\,|s_n(z)|}{n}\tag{3}
+\]
+In § xx we show that
+(1) entails that the sequence $\{\phi_n(z)\}$
+converges in the sense of
+distributions to the function $U(z)$ which is zero in
+$|z|<1$ and equal to $\log\,|z|$ when $|z|\geq 1$. After this (*) follows when
+one applies the Laplace operator. So here 
+measure theory intervenes with analytic function theory.
+The result is quite remarkable. The simplest case occurs when $a_n=1$ 
+for all $n$. Here 
+\[
+s_n(z)= 1+z+\ldots+z^n
+\] 
+whose  zeros are
+the roots of unity $\{e^{2\pi i\nu/(n+1)}\quad\colon \nu= 1,\dots, n\}$.
+These $n$-tuples are
+equi-distributed so after the normlisation with
+the factor $\frac{1}{n}$ one gets  (*).
+But for other sequences the limit  (*)
+is not evident.
+For example we can take 
+$\{a_\nu= e^{\i\cdot\theta_\nu}\}$
+where the sequence $\{0\leq\theta_\nu\leq 2\pi\}$ is arbitrary.
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+\centerline{
+\emph{0.4 The role of
+inequalities.}}
+\medskip
+
+
+\noindent
+For students aiming to learn     "big theories" 
+the search for    inequalites  may appear
+to be a modest or even  trivial  issue
+compared to studies of
+axiomatic concepts.
+But the truth is that more or less all
+deep
+results in mathematics rely upon inequalities.
+An example is the Riemann Hypothesis which is 
+the utmost challenge among  open problems in the world of mathematics.
+A necessary and sufficient condition
+for its validity
+goes as follows: For each real number $x$ we denote
+by $\{x\}$ the largest integer such that
+$0\leq x\vvv \{x\}<1$.
+To each   positive integer $M$ we get $M$ many functions
+$\{\rho\uuu j(x)\}$ defined on the open unit  interval $(0,1)$
+by
+\[
+\rho\uuu j(x)=\frac{j}{M x}\vvv
+\{\frac{j}{M x}\}\quad\colon\quad 1\leq j\leq M
+\]
+Set
+\[ \beta(M)= \min\uuu{c\uuu\bullet}\,
+\int\uuu 0^1\, \bigl(\, \sum\uuu{j=1}^{M}\,
+c\uuu j\cdot \rho\uuu j(x)\vvv 1\,\bigr)^2\cdot dx\tag{1}
+\]
+with the minimum taken over
+all $M$\vvv tuples of real numbers such that
+\[
+\sum\uuu{j=1}^{j=M}\, j\cdot c\uuu j=0
+\]
+Beurling has shown
+that the Riemann Hypothesis is true  if and only if
+\[
+\lim\uuu{M\to\infty}\,\beta(M)=0\tag{*}
+\]
+
+
+\noindent
+When $M$ is fixed  (1) is minimized  by a unique
+$M$\vvv tuple $c\uuu\bullet$ since we are dealing with a 
+positive definite quadratic form and then   $\beta(M)$ is recovered from
+Lagrange's multiplier. The obstacle is that the 
+$\rho$\vvv functions become  irregular   as $M$ increases and
+mathematics has not yet  become enough developed
+to establish  bounds of the
+$\beta$\vvv numbers in order to 
+decide whether  (*) holds or not.
+\medskip
+
+\noindent 
+However 
+we are able to exhibit many inequalities.
+An example is 
+a mini-max result for
+polynomials
+which goes as follows.
+ Let $P(z)$ be a polynomial of some degree $n\geq 2$ where
+$P(0)=1$.
+To each pair $0<a<b<1$
+we set
+\[
+\omega_P(a,b)= \max_{a\leq r\leq b}\, \min_\theta\, |P(re^{i\theta})|
+\]
+Thus, while the radius $r$ varies between
+$a$ and $b$ we seek some $r$
+such that the minimum modulus of $P$ on the circle
+$|z|=r$ is as large as possible.
+In his thesis \emph{Études sur in problème de majoration}
+at Uppsala University from  1933, Beurling found
+a lower bound hold for these $\omega$-functions.
+More precisely, the following hold for
+all pairs $0<a<b$ and each normalised  polynomial $P$ as above with degree $n$:
+\[
+ \omega_P(a,b)\geq \bigl(\frac{\sqrt{b}-\sqrt{a}}{\sqrt{b}+\sqrt{a}}\,\bigr)^n\tag{*}
+\]
+In § XX we  expose the proof
+which
+relies upon a study of
+logarithmic potentials.
+Let us  remark that (*)
+gets  sharp when $n$ increases.
+A result of a similar nature from [ibid: page 96]
+goes as follows: Let $R>0$ and $f(z)$ is analytic in
+$\{|z|<R\}$. To every
+$0<r<R$ we denote by $M(r)$ the maximum 
+of $|f(z)|$ taken on the circle of radius $r$.
+Let $\mu>0$  and consider a pair
+$0<r_1<r_2<R$ where $M(r_1)>\mu$ is holds and put
+\[ 
+E=\{ r_1<r<r_2\,\colon\, M(r)\leq \mu\}
+\]
+The integral of $r^{-1}$ over $E$ measures its logarithmic length. Set
+\[
+\mathcal L(r_1,r_2;\mu)=
+\frac{1}{2}\cdot e^{\int_{r_1}^{r_2}\, \frac{dr}{r}}
+\]
+With this notation one has the inequality
+\[
+\frac{M(r_2)}{\mu}\geq
+\bigl[ \frac{M(r_1)}{\mu}\bigr]^{\mathcal L(r_1,r_2;\mu)}\tag{**}
+\]
+
+
+
+\medskip
+
+
+
+\centerline{\emph{0.4.1 Distributions of zeros of polynomials}}
+\medskip
+
+
+\noindent
+Let
+$n\geq 2$ and $\{e^{i\theta_k}\}$
+is an $n$-tuple of points on the unit circle
+where $-\pi<\theta_k<\pi$, i.e. $-1$ does not occur.
+For each $0<\alpha<\pi$ we denote by $N(\alpha)$ the
+number of $\theta$-points such that $-\alpha<\theta_k<\alpha$
+and set
+\[
+J(\alpha)= \bigl|\frac{N(\alpha)}{n}-\frac{\alpha}{2\pi}|
+\]
+It turns out that the $J$-function is majorized
+via 
+a maximum norm of the polynomial
+$p(z)= \prod \,(1-e^{-i\theta_\nu} z)$.
+Namely, one has the inequality
+\[ 
+|J(\alpha)| \leq \sqrt{\frac{2\pi}{kn}}\cdot
+\sqrt{\log |p|_D}
+\]
+where $|p|_D$ is the maximum norm of $p$ on the unit disc and
+$k\simeq 0,916\ldots$ is Catalani's constant.
+We prove this in Chapter 5. § 13
+under the heading Ganelius' theorem.
+\medskip
+
+
+
+\centerline{\emph{0.4.2 A result by Lindwart and Polya.}}
+\medskip
+
+
+\noindent
+The result below was proved in their joint article
+\emph{Über eine Zusammenhang zwischen der Konvergenz von Polynomfolgen und der Verteilering ihrer Wurzeln}
+[Palermo 1914].
+Here is the situation:
+Let $\{P_n(z)\}$ be a sequence of polynomials
+which converges uniformly on the closed unit disc $\{|z|\leq 1\}$
+to a function which is not identically zero. Suppose also that there exists some
+$0<\phi<\pi/2$ and some $a>0$
+such that the polynomials are zero free in the union of the
+sector $\{-\phi<\arg z< \phi\}$ and the half space
+$\mathfrak{Re}\, z>a$.
+Under these  conditions
+the sequence
+$\{P_n(z)\}$ converges uniformly on compact subsets
+of ${\bf{C}}$ to an entire function
+$f(z)$ of order $\rho\leq 2$.
+The last assertion means
+that if 
+$\{a_k\}$ are the coefficients
+in the series expansion of $f$ then
+\[ 
+\liminf_{k\to \infty}\,\frac{\log\, \frac{1}{|a_k|}}
+{k\cdot \log k}= \frac{1}{\rho}
+\]
+
+\medskip
+
+\noindent
+The proof contains several unexpected ingredients
+and illustrates that
+analytic function theory
+contains a wealth of results
+where individual proofs  often
+require some 
+ingenious  idea, i.e. the theory is not 
+"stream-lined". The proof of the Lindwart-Polya theorem
+is given in § XX.
+
+\newpage
+
+
+\centerline{\emph{0.4.3 An inequality by Nevanlinna.}}
+\medskip
+
+\noindent
+A subject which is not covered in these notes is Nevanlinna's value distribution theory 
+for meromorphic functions.
+It is treated in the text-book (Nevanlinna). 
+But let  us 
+recall one major result
+which leads to  
+an extension of Picard's theorem. Let 
+$f(z)$ be a meromorphic function 
+in ${\bf{C}}$ and consider
+Nevanlinna's reduced counting functions, i.e.
+when
+$a$ is a complex number then
+$ N_*(r;a)$ which
+counts the number of points $|z|<r$ where $f(z)=a$ irrespectively of multiplicity.
+If   $a=\infty$ we count poles in the same way 
+irrespectively
+of the order of the poles.
+Nevannlina proved that 
+there exists a constant $C_f$ which depends
+on the given
+meromorphic function such that
+the inequality below holds for all $r>0$:
+\[ 
+\frac{1}{2\pi}\cdot \int_0^{2\pi}\,\log^+\,|f(re^{i\theta})|\,d\theta\leq
+N_*(0;r)+N_*(1;r)+ N_*(\infty;r) + C_f\cdot\log (r+2)\tag{*}
+\]
+\medskip
+
+
+
+\centerline{\emph{0.4.4 An inequality for convolutions.}}
+\medskip
+
+
+\noindent
+Let $k(x,y)$ be a complex-valued continuous function on the  square
+$\{0\leq x,y\leq 1\}$. Symmetry is not assumed, 
+i.e,
+$k(x,y)\neq k(y,x)$ may occur
+Let $f_0(x)$ be another  continuous function  on $[0,1]$
+and 
+assume that the maximum norms of $k$ and $f$ both are $<1$.
+Inductively
+we get a sequence $\{f_ n\}$ where
+\[
+f\uuu n(x)=\int\uuu 0^1\, k(x,y)\cdot f\uuu{n\vvv 1}(y)\cdot dy
+\quad \colon\quad n\geq 1
+\]
+
+
+\noindent
+To each $0\leq x\leq 1$ and every pair of positive integers $n,p$ 
+one has the Hankel determinant:
+\[
+\mathcal D_n^{(p)}(x)=
+\det
+\begin{pmatrix}
+f_{n+1}(x)
+&f_{n+2}(x)
+&\ldots&\ldots
+& f_{n+p}(x)\\
+f_{n+2}(x)
+&f_{n+3}(x)
+&\ldots&\ldots
+& f_{n+p+1}(x)\\
+
+\ldots &\ldots &\ldots&\ldots \\
+\ldots &\ldots&\ldots&\ldots\\
+f_{n+p}(x)
+&f_{n+p+1}(x)
+&\ldots&\ldots
+& f_{n+2p-1}(x)\\
+\end{pmatrix}
+\]
+
+\noindent
+With these notation the inequality below
+will
+be proved in 
+Chapter I:C : § 10:
+
+\medskip
+
+\noindent
+{\bf{0.4.5 Theorem }} \emph{For every $p\geq 2$ and $0\leq x\leq 1$ one has
+the inequality}
+\[
+\bigl |\,  \mathcal D\uuu n^{(p)}(x))\,\bigr|\leq 
+(p\, !)^{\vvv n}\cdot \bigl( p^{\frac{p}{2}}) ^n\cdot \frac{p^p}{p\,!}\tag{*}
+\]
+
+
+\noindent
+Using (*) and Hadamard's inequality from § 0.3
+we also show
+that
+if $\lambda$ is a new complex variable then
+the power series
+\[
+u\uuu\lambda(x)= \sum\uuu{n=0}^\infty\, f\uuu n(x)\cdot \lambda^n
+\] 
+which to begin with
+converges if  $|\lambda|<1$ 
+extends to a meromorphic
+function in the whole complex plane whose the poles
+are related to a certain compact integral operator.
+Above one regards
+$u_\lambda$ as a function of $\lambda$ with values in the
+Banach space of continuous functions on the closed unit interval
+and 
+we shall see many examples where
+the ordinary family of  complex-valued analytic functions
+is extended to analytic functions with values in
+Banach spaces.
+
+
+
+\newpage
+
+\centerline{\emph{0.4.6 An inequality for Fourier series.}}
+\medskip
+
+
+\noindent
+Let $f(x)$ be a continouos and $2\pi$-periodic function.
+The Fourier coefficients are defined by
+\[
+\widehat{f}(\nu)= 
+\frac{1}{2\pi}\, \int_0^{2\pi}\,
+e^{-i\nu x}\, f(x)\ dx
+\]
+For each integer $n$ we get the partial sum
+\[ 
+s_n(x)= 
+\sum_{\nu=-n}^{\nu=n}\, \widehat{f}(\nu)\cdot e^{i\nu x}
+\]
+In general $\{s_n\}$ does not converge to $f$ pointwise convergence.
+Classic examples are due
+to  Gibbs. On the positive side
+a  deep result  due to Carleson asserts that
+\[ 
+\lim_{n\to\infty}\, s_n(x)= f(x)
+\]
+holds almost everywhere, i.e. for every $x$ outside a null set in
+Lebegue's sense.
+An averaged version goes as follows:
+To each $n$ we set
+\[
+\mathcal D_n(f)= \sqrt{\frac{1}{n+1}\cdot
+\sum\uuu{\nu=0}^{\nu=n}\, ||s\uuu\nu\vvv f||^2}
+\]
+where $||s_\nu-f||$ is the maximum norm 
+taken over $[0,2\pi]$.
+The inequality below shows that
+Gibb's phenomenon is sparse when 
+when partial sums occur via
+a random choice of $n$. For a
+$2\pi$-periodic and continuous function $f$ 
+we denote its maximum norm by $||f||$
+and  $\omega_f$ is its
+modulos of continuity. 
+The result below is due to Carleman and will be proved in 
+Chapter I: § XX:
+
+\medskip
+
+
+
+\noindent
+{\bf{Theorem}}. \emph{There exists an absolute constant $K$
+such that the following hold for every 
+$2\pi$-periodic and continuous function $f$,
+every $b\geq 1$ and every positive integer $n$:}
+\[ 
+\mathcal D_n(f)\leq K\cdot ||f||\cdot \bigl[\frac{1}{b}+b\cdot \omega_f(\frac{1}{n})\bigr]
+\]
+\medskip
+
+
+\noindent
+Since $\omega_f(\frac{1}{n})$ tends to zero as $n$ increases
+we can take $b$ arbitrary large  and
+conclude that
+\[
+\lim_{n\to\infty}\, \mathcal D_n(f)=0
+\]
+This shows that Gibb's phenomenon in the average 
+only can occur
+at a  sparse  set of integers.
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\emph{0.4.7 Infinite systems of linear equations.}}
+
+
+
+\medskip
+
+\noindent
+Let $\{a_p\}$ be a sequence of positive real numbers
+such that $a_p\to +\infty$ and
+associate 
+the function $A(r)$ which to each $r>0$
+is the number of $a$-values $<r$. We say that $\{a_p\}$ has a
+positive  asymptotic density if
+there exists the limit
+\[ 
+\lim_{r\to\infty}\, A(r)>0
+\]
+We do not require that the sequence is monotone, i.e 
+$a_p\leq a_{p+1}$ need not always hold.
+Next, let $\{b_q\}$ be another sequence of real numbers which also has
+some
+positive  asymptotic density which in general can be different from that of
+$\{a_p\}$.
+Given such a pair we take some
+$\epsilon>0$ and consider the homogeneous  system of equations:
+\[
+ \sum_{q=1}^\infty\,\frac{x_q}{a_p-b_q-i\epsilon\cdot q}=0\tag{*}
+ \]
+ where $\{x_q\}$ is a complex sequence
+which   belongs to  the Hilbert space $\ell^2$, i.e.
+ $\sum\,|x_q|^2<\infty$. 
+ In § xx we  prove that the homogeneous system only has the trivial null solution.
+ The proof relies upon inequalities for
+ certain fractional sums and a construction of a meromorphic function.
+In the section entitled \emph{Dagerholm Series} in
+ Special Topics we  prove a subtle result
+ where
+ $\epsilon=0$. In this situation we shall find non-trivial 
+ solutions $\{x_q\}$
+ but they need not 
+ be in $\ell^2$.
+The lesson  is that
+ many problems about infinite systems of 
+ linear equations, as well as many problems in functional analysis, 
+ can only be
+ proved 
+ by analytic function theory.
+ \bigskip
+ 
+
+
+\centerline{\emph{0.4.8 Blaschke products and interpolation.}}
+\medskip
+
+
+\noindent
+Let $n\geq 2$ and $E=\{\alpha_1,\ldots,\alpha_n\}$
+is an $n$-tuple of distinct points in the open unit disc $D$.
+To each $n$-tuple of complex numbers
+$w_\bullet=(w_1,\ldots,w_n)$
+one
+seeks to minimize the maximum norm
+\[
+|f|_D=\max_{z\in D}\,|f(z)|
+\]
+in the class of functions which
+solve the interpolation problem
+$f(\alpha_k)= w_k$ for every $k$.
+A result due to Nevanlinna and Pick
+shows that there exists a unique interpolating function
+$f$ with minimal norm. Moreover, 
+\[ 
+f(z)=\rho(w_\bullet)\cdot 
+e^{i\theta}\cdot \prod_{\nu=1}^{\nu=n-1}\,
+\frac{z-\beta_\nu}{1-\bar\beta_\nu\cdot z}
+\]
+Here
+$\rho(w_\bullet)>0$ while $0\leq\theta\leq 2\pi$ and
+$\{\beta_\nu\}$ is an $(n-1)$-tuple in $D$
+which is not necessarily
+distinct.
+We  prove this result in  Special Topics § XX.
+Keeping $E$ fixed we 
+introduce the interpolation constant
+\[
+\mathfrak{int}(E)=\max \,\rho(w_\bullet)
+\]
+where the mximum is taken over $n$-tuples $w_\bullet$ such that
+$|w_k|\leq 1$ for every $k$.
+Next,  denote by $\mathcal B_{n-1}$ the class of functions of the form
+\[
+e^{i\theta}\cdot \prod_{\nu=1}^{\nu=n-1}\,
+\frac{z-\beta_\nu}{1-\bar\beta_\nu\cdot z}
+\]
+where $0\leq\theta<2\pi$ and $\{\beta-\nu\}$ is an $(n-1)$-tuple of points in 
+$D$ which need not be distinct. Put
+\[
+\tau(E)=\min_\phi\, |\phi|_E
+\]
+ where the minimum is taken over all 
+ $\phi\in\mathcal B_{n-1}$ and
+ $|\phi|_E$ is the maximum norm on $E$.
+ The Nevanlinna-Pick theorem easilly entails that one has the equality
+ \[
+ \mathfrak{int}(E)=\frac{1}{\tau(E)}
+ \]
+ Less obvious is the follwing result due to Beurling:
+ \medskip
+ 
+ \noindent
+{\bf{Theorem.}}\emph{
+ Up to multiplication with
+ $e^{i\theta}$ for some complex number, the
+ minimax problem above has a unique solution $\phi_*$. Moreover}
+ \[ 
+ |\phi_*(\alpha_k)|=\tau(E)\quad \colon 1\leq k\leq n
+ \]
+\medskip
+ 
+ 
+\noindent
+A consequence of this result is that
+when the set $E$ is given then the "worst scenario" consists of $n$-vectors $w^*_\bullet$ 
+such that   $\rho(w_\bullet^*)=\mathfrak{int}(E)$ and Beurling's result shows
+that   $|w^*_k|= 1$ hold for every $k$.
+Moreover, this $n$-tuple of points on the unit circle is
+unique up to a common rotation.
+We shall prove this in Special  Topics §§
+which illustrate
+a typical complex
+extremal problem where the given set 
+$E$ determines the 
+$(n-1)$-tuple of zeros of the unique $\phi$-function
+in Beurling's minimax-theorem as well as the
+$n$-tuple $w^*_\bullet$.
+A notable fact which also is due to Beurling
+shows that the extremals
+$\phi_*$ and $w_\bullet^*$ can be found
+by
+a variational  problem  using a suitable
+Hilbert spaces.
+More precisely, consider the Hardy space $H^2(D)$ of analytic functions 
+$F(z)$ in
+the unit disc  equipped with
+the norm
+\[
+ ||F||_2=
+\sqrt{\frac{1}{2\pi}\int_0^{2\pi}\,
+|F(e^{i\theta})|^2}\, d\theta
+\]
+Given $E=\{\alpha_k\}$
+we have the Blaschke product
+\[ 
+B_E(z)=\prod_{k=1}^{k=n}\, \frac{z-\alpha_k}{1-\bar\alpha_k\cdot z}
+\]
+With these notations one
+considers the variational problem
+\[ 
+\max_F\, \sum_{k=1}^{k=n}\, \frac{|F(\alpha_k)|^2}{|B'_E(\alpha_k)|}
+\]
+with the maximum taken over $F$ of unit norm in
+$H^2(D)$.
+Beurling has proved that
+this variational problem has a unique solution $F$
+normalised so that $F(0)$ is real and positive. Moreover,
+the maximum above is equal to
+$\mathfrak{int}(E)$
+and $F(z)$ is a zero-free analytic function in $D$
+where  the $\beta$-zeros of  $\phi_*$  are  determined by 
+the equation
+\[
+\prod_{\nu=1}^{\nu=n-1}\,
+(\bar \zeta-\bar\beta_\nu)(1-\bar\beta_\nu\cdot \zeta)
+=\prod_{k=1}^{k=n}\,|\zeta-\alpha_k|^2\cdot
+\frac{\zeta\cdot F^2(\zeta)}{F^2(0)}
+\quad\colon\, |\zeta|=1
+\]
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\emph {0.5 Why one should study complex analysis}}
+
+
+\bigskip
+
+
+
+
+\noindent
+Apart from its intrinsic beauty which  contains  residue theory and
+conformal mappings, complex analytic methods
+find 
+applications  many areas
+of mathematics.
+Let us remark that
+complex analytic functions are  special.
+For example, an entire function $f(z)$
+is  uniquely determined
+by its values in a dense subset of  an arbitrary
+small open interval on the real line. On the other hand
+the class of entire functions is quite ample.
+In  section XX from Special Topics we prove a result due to Weierstrass 
+which asserts
+that if  $g(x)$ is an arbitrary  complex valued function on
+the real line  and $\epsilon>0$, then there exists an entire function
+$f(z)$ such that $|f(x)-g(x)|<\epsilon$ hold for all real $x$.
+Notice that this is far more precise than the trivial result that
+approximation holds on compact subsets of the real line.
+So just as in the case of Hadamard's
+radius formula this 
+result from 1861
+is a good  example of "old vintage". 
+\medskip
+
+\noindent
+{\bf{Resolvents of linear operators.}}
+An example where analytic functions play a
+crucial role occurs in spectral theory for linear operators.
+Consider a
+Banach space
+$X$  and
+$T\colon X\to X$ is a linear operator
+whose domain of definition is a
+dense subspace
+$\mathcal D(T)$ of $X$.
+ But $T$ is unbounded which means that
+\[
+\max_{x\in \mathcal D_*(T)}\, ||Tx||=+\infty
+\]
+where $\mathcal D_*(T)$ is the intersection of $\mathcal D(T)$ and 
+the unit ball of vectors in
+$X$ with norm $\leq 1$.
+In addition we assume that $T$ is closed which means that
+the graph
+\[ 
+\Gamma(T)=\{(x,Tx)\quad\colon x\in\mathcal D(T)\}
+\]
+is a closed subset of $X\times X$.
+Let $T$ be such a linear operaor and denoted by
+$E$ the identity operator on $X$.
+\medskip
+
+\noindent
+{\bf{Definition.}}
+\emph{A resolvent value of $T$ is a complex number $\lambda$
+such that there range of 
+$\lambda\cdot E-T$  is a dense subspace of  $X$ and there exists a positive constant
+$c$ such that}
+\[
+||\lambda\cdot x-Tx||\geq ||x||\quad\colon x\in\mathcal D(T)\tag{i}
+\]
+Since $T$ is closed it easily follows from (i) that the dense range
+$(\lambda\cdot E-T)(X)$ is equal to $X$ and there exists
+a unique bounded linear operator $R(\lambda;T)$ on $X$ which is injective and has 
+range equal to 
+$\mathcal D(T)$ where
+\[
+R(\lambda;T)\circ(\lambda\cdot E-T)(x)= x\quad\colon x\in\mathcal D(T)
+\]
+and the composed operator $(\lambda\cdot E-T)\circ R=E$.
+One refers to $R(\lambda;T)$ as the  resolvent operator of $T$.
+The construction of such resolvents appeared
+for the first time
+in  Neumann's   article cited in § xx.
+The crucial fact is that if $\lambda$ is a resolvent value of
+$T$  then the open disc of radius $||R(\lambda;T)||$
+centered at $\lambda$  give resolvent values and one has
+the Neumann series
+\[ 
+R(\lambda+\zeta;T)=
+R(\lambda;T)+\sum_{n=1}^\infty\, (-1)^n\cdot \zeta^n\cdot R(\lambda;T)^n
+\quad\colon|\zeta|<||R(\lambda;T)||
+\]
+So if $T$ has at least one resolvent value the set of all
+resolvent values is an open subset of ${\bf{C}}$ whose closed complement is
+denoted by $\sigma(T)$ and called the spectrum of $T$.
+A neat desription of $\sigma(T)$ is available using  the Neumann equation which
+asserts that if $\lambda,\mu$ is an arbitrary pair of resolvent values then
+\[
+R(\lambda;T)-R(\mu;T)=\frac{
+R(\lambda;T)R(\mu;T)}{\mu-\lambda}
+\]
+In the appendix devoted to Functional analysis we shall establish
+the Neumann equation and use it to show
+that
+if $\mu$ is an arbitrary  resolvent value of $T$, then
+\[ 
+\sigma(T)=\{\mu-\frac{1}{s}\,\colon \,s\in \sigma(R(\mu;T))\setminus\{0\}\}\tag{ii}
+\]
+\medskip
+
+\noindent
+A special case occurs when one of the resolvents
+$R(\mu;T)$ is a compact operator. Neumann's equation entails that 
+all resolvent operators are compact operators and
+(ii) implies  that $\sigma(T)$  is a discrete subset
+of ${\bf{C}}$.
+Situations where the resolvent operators are compact
+occur in Fredholm's studies of integral equations and was
+put into a general context by Hilbert in his work
+\emph{Grundzüge einer allgemeinen Theorie der linearen
+Integralgleichungen}
+from 1904 which 
+paved the way to the the theory about spectral
+resolutions of  linear operators.
+When $X$ is a Hilbert space
+and $T$ a densely defined but unbounded self-adjoint 
+operator   conclusive results were
+established by Carleman in his book \emph{xxxx} from 1923. 
+The  appendix devoted to
+Funtional Analysis contains proofs of 
+Carleman's spectral resolution for unbounded self-adjoint operators.
+Here complex methods play a crucial role and  at the same time
+the result has a wide range of applications to situations which at a first glance
+seem to be of a "purely real character".
+An example where Carleman's theory about unbounded self-adjoint operators
+applies is
+the product formula for
+an arbitrary  densely defined and closed linear operator $T$ on a complex Hilbert
+space.
+It asserts that
+there is a unique pair $P,A$ where $A$ is a densely defined self-adjoint 
+operator and $P$ a partial isometry such that
+\[ 
+T=PA
+\]
+One can regard this as the ultimate polar representation of
+complex objects. The proof is given in the appendix devoted to functional analysis.
+
+
+
+
+\medskip
+
+
+
+  
+\noindent
+{\bf{Applications to probability theory.}}
+A
+theorem due to Harald Cramér
+asserts that if $\chi_1,\ldots,\chi_N$ is a family of independent
+random variables whose 
+sum variable $\chi_1+\ldots+\chi_N$ is normally distributed, then
+each single $\chi_\nu$  has a normal distribution. This
+is a useful  fact  for applications in  statistics. Using the existence of complex log\vvv functions of
+entire functions without zeros the
+proof 
+boils down to show
+that an entire function which only increases like $|z|^2$ is a polynomial 
+of degre $\leq 2$. Staying with probability theorem we also recall
+a result due to   Kakutani and Yosida where 
+one regards
+transition probability
+functions defining a Markov process. These authors  proved
+that under
+a rather modest condition
+there exists a finite partition of the given probability space
+which consists of a  dissipative
+part and a finite set of ergodic kernels where
+the process stays once it has arrived to such  kernel.
+The main steps  in the proof use analytic function theory
+and  operators with complex eigenvalues. The proof
+of the Kakutani-Yosida theorem
+is exposed in
+§ XXX,
+
+
+\medskip
+
+\noindent
+{\bf{Linear algebra and Thorin's convexity theorem.}}
+Let $A$ be an
+$n\times n$-matrix with real elements $\{a_{k\nu}\}$.
+To get 
+zeros of the characteristic
+polynomial $P_A(\lambda)= \text{det}(\lambda\cdot E_n-A)$
+one must include those which are complex.  Denote by
+$\rho(A)$ the maximum of the  
+absolute value of these zeros. Now 
+$R_A(\lambda)=(\lambda\cdot E_n-A)^{-1}$ is an analytic matrix-valued function
+defined outside the spectrum $\sigma(A)$. From this it follows 
+that $\rho(A)$ is equal to the spectral radius  computed via an
+an
+\emph{arbitrary norm} on ${\bf{R}}^n$. This  invariance  property
+is
+for example  used to study a matrix $A$ whose elements are positive
+real numbers where the spectral radius formula 
+gives a quick proof of 
+a theorem  due to Perron and Frobenius which    asserts
+that if $A$ is  a matrix with real and positive elements
+then there exists a unique  a real eigenvector
+${\bf{x}}$ where each $x_k>0$ such that $\sum\, x_k=1$
+and $A({\bf{x}})= \rho(A)\cdot {\bf{x}}$.
+This result is a cornerstone in linear programming where
+one seeks solutions which are constrained to convex sets.
+Another example where complex methods are  used appears in
+Thorin's convexity theorem.
+Let  $A=\{c_{\nu k}\}$ be an arbitrary
+$n\times n$-matrix with complex elements. To each pair of real numbers
+$0<a,b<1$ we set
+\[ 
+M(a,b)=\max_{x,y}\, |\sum\sum c_{\nu k}
+\cdot x_\nu\cdot y_k\bigr |
+\quad\colon\, \sum\,|x_\nu|^{1/a}= \sum\,|y_k|^{1/b}=1
+\]
+Via Hadamard's maximum principle for
+analytic functions defined in  strip domains, Thorin proved
+that the function
+\[ 
+(a,b)\mapsto \log M(a,b)
+\] 
+is convex in the square
+$0<a,b<1$.
+The fundamental theorem of algebra is of course a major motivation 
+why complex numbers are so useful.
+The variation of the argument for a complex-valued function which is $\neq 0$ along 
+some curve
+is a fundamental  issue.
+Here is a result which
+can serve as a first challenge for the reader and
+will be explained in Chapter 4.
+Consider a polynomial
+\[ 
+P(z)= z^{2n+1}+a_{2n}z^{2n}+\ldots a_1z+a_0
+\] 
+with real coefficients and
+assume that the function
+\[
+P_*(iy)=\sum_{k=0}^{n}\, a_{2k}\cdot  (iy)^{2k}
+\]
+is $>0$ for all real $y$.
+Then, if $n$ is even it follows
+that
+$P(z)$ has $n$ complex zeros counted with multiplicity in
+the right half-plane $\mathfrak{Re}(z)>0$, while the 
+number of zeros is $n+1$ if $n$ is odd.
+For example, if $n=5$ and
+\[ P(z)= z^5+Az^3+Bz+1
+\] 
+where $A,B$ is any pair of real numbers then
+$P$ has two roots in $\mathfrak{Re} z>0$.
+We shall learn that this follows since the real parti of 
+$P(iy)$ is identically one on the imaginary axis
+which implies
+that the
+variation of
+$\arg(Piy)$  increases from
+$-\pi/2$ when $y=-\infty$ to $\pi/2$ when $y=+\infty$
+while the argument changes by $5\pi$
+when we follows $\arg P(z)$ along a half-circle 
+$\{ z=Re^{i\theta}\colon\, -\pi/2<\theta<\pi/2\}$
+and then a general result from Chapter 4 gives the assertion about
+the number of zeros in
+$\mathfrak{Re}\ z>0$.
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\emph{0.6 Jensen's formula and the Jensen-Nevanlinna class}}
+
+\medskip
+
+\noindent
+One can say that modern analytic function theory started with a  discovery
+by the
+Danish telephone engineer Jensen. In 1899
+he   proved that if $f(z)$ is analytic in a disc
+$|z|\leq R$
+where $f(0)\neq 0$, then
+\[ 
+\frac{1}{2\pi}\cdot \int_0^{2\pi}\, \log |f(Re^{i\theta})|\cdot d\theta=
+\log |f(Re^{i\theta})|+
+\log\,\frac{R^n}{|a_1|\cdots |a_n|}\tag{*}
+\] 
+where $\{a_k\}$ are the zeros of $f$ in the disc
+$\{|z|>R$ repeated with their multiplicitites.
+Today's student learns this theorem with relative ease, i.e.
+one uses a factorisation to get rid of the zeros by a product  of Möbius functions and
+after the mean value formula for a harmonic functions is applied.
+But it took almost a century
+until
+familarity with complex analysis reached a stage when (*)
+was announced. Jensen's formula is a cornerstone in
+analytic function theory
+and our  historic comment illustrates that today's student 
+has to learn a lot of material in order to advance in
+contemporary mathematics. 
+Another  essential  result  is  Herglotz'  
+integral formula which
+exhibits an analytic function $f(z)$ in the unit disc
+by its real part. Namely, if  $h(\theta)$ is
+a continuous function on the unit circle there exists
+an analytic function in the unit disc defined by
+\[
+\mathcal H(z)= \frac{1}{2\pi}\int\uuu 0^{2\pi}\, 
+\frac{e^{i\theta}+z}{e^{i\theta}\vvv z}
+\cdot h(\theta)\cdot d\theta\tag{**}
+\]
+One  refers to (**) as the Herglotz' extension of
+$h$. It is  related to the given $h$\vvv function since the real part
+$\mathfrak{Re}\, \mathcal F$ is expressed by Poisson's formula
+\[
+\mathfrak{Re} \, \mathcal H(z)= \frac{1}{2\pi}\int\uuu 0^{2\pi}\, 
+\frac{1\vvv |z|^2}{|e^{i\theta}\vvv z|^2}
+\cdot h(\theta)\cdot d\theta
+\]
+This means that   $\mathfrak{Re}\mathcal H\uuu u$
+is  the harmonic extension of
+$h$
+to the unit disc.
+Starting from (*) and (**)   
+zero\vvv free functions were
+analyzed by Jensen and Nevanlinna. Here
+one takes exponentials and define
+\[ 
+F\uuu h(z)=
+e^{\mathcal H(z)}
+\]
+This is a zero\vvv free analytic function in $D$ whose
+absolute value is given by:
+\[
+|F\uuu h(z)|=
+e^{\mathfrak{Re}\mathcal H\uuu u(z)}
+\]
+On $T$ we get the equality
+\[
+\log \,|F_h(e^{i\theta})|= h(\theta)
+\]
+and at the origin we find that
+\[ 
+\log F_h(0)= \frac{1}{2\pi}\int\uuu 0^{2\pi} h(\theta)\cdot d\theta
+\]
+
+
+
+\noindent
+A more  extensive class of analytic functions in the unit disc are found
+using
+Herglotz's extensions of   signed
+Borel measure $\mu$ on the unit circle. Here we get
+\[
+\mathcal H_\mu(z)= \frac{1}{2\pi}\int\uuu 0^{2\pi}\, 
+\frac{e^{i\theta}+z}{e^{i\theta}\vvv z}
+\cdot d\mu(\theta)\tag{***}
+\]
+and as above we 
+get a zero-free analytic function $F_\mu(z)=e^{\mathcal H_\mu(z)}$. Next there exist
+Blaschke products where
+Jensen's integral formula gives a precise condition in order that
+they converge and yield analytic functions in the unit disc with
+prescribed zeros.
+In §§ we construct the Jensen-Nevanlinna class of 
+analytic functions $f$ in
+the unit disc
+which are charcterised by the property that
+there exists a constant $C$ so that
+\[
+ \int_0^{2\pi}\, \log^+\,|f(re^{i\theta})\, d\theta\leq C
+\quad\colon\, 0<r<1\tag{***}
+\]
+\medskip
+
+\noindent
+A major result due to Jensen and Nevanlinna asserts that when
+(***) holds and $f(0)=1$
+and $\{\alpha_\nu\}$ are the zeros of $f$
+with multiple zeros repeated according to their multiplicities, then
+there exists a unique Riesz measure $\mu$ on $T$ such that
+\[ 
+f(z)=B(z)\cdot e^{\mathcal H_\mu(z)}\quad\colon\,
+B(z)=
+\prod\,\frac{z-\alpha_\nu}{1-\bar\alpha_\nu\cdot z}
+\]
+
+\medskip
+
+
+\noindent
+{\bf{0.6.1 A special construction.}}
+Let
+$0<\delta<1$ and define the function $\phi(\theta)$ on $T$ by:
+\[
+\phi(\theta)=\log  (\delta^2-\theta^2)\quad\colon -\delta\leq \theta\leq \delta
+\]
+while $\phi=0$ outside this interval on $T$.
+Now we get the analytic function $\mathcal H_\phi(z)$
+and if
+$K$ is  a positive integer we put 
+\[ 
+\Phi(z)=
+e^{K\cdot \mathcal H_\phi(z)}
+\]
+On the unit circle we have
+\[ 
+|\Phi(e^{i\theta})|=
+(\delta^2-\theta^2)^K\quad\colon -\delta\leq \theta\leq \delta
+\]
+while $|\Phi(e^{i\theta})|=1$ outside this interval. 
+Next, let $\mu$ be a real-valued and non-negative Riesz measure
+on the unit circle supported by $T\setminus [-\delta,\delta]$
+and construct the zero-free analytic function $F_\mu(z)$ as above.
+Set
+\[ 
+f(z)=F(z)\cdot \Phi(z)
+\]
+Notice that $|F(e^{is})|=1$ holds  on interval $(-\delta,\delta)$.
+Let us then consider the complex derivative
+$f'(z)$.
+Here an upper bound exists for  radial limits
+as we approach points in $(-\delta,\delta)$. More precisely one has:
+\medskip
+
+\noindent
+{\bf{0.6.2 Proposition.}}
+\emph{There exists an absolute constant $C$ which dpends on $K$ only
+such that}
+\[
+\limsup_{r\to 1}\, |f'(re^{i\theta})|\leq C\cdot (\delta^2-\theta^2)^{K-2}\cdot ||\mu||
+\quad\colon -\delta<\theta<\delta
+\]
+The proof employs Herglotz formula
+which gives the equation below for every $z$ in the open unit disc:
+\[
+f'(z)=
+\frac{1}{\pi}\cdot\bigl[
+\int_{-\delta}^\delta\,
+\frac{\phi(s)\cdot e^{is}}{(e^{is}-z)^2}\, ds+
+\int\,
+\frac{d\mu(s)\cdot e^{is}}{(e^{is}-z)^2}\, ds\bigr]\cdot f(z)
+\]
+Starting from this we will show Proposition 0.6.2 in
+§ xx from the section devoted to the disc algebra in Special Topics.
+where we 
+expose  results due to Carleson about sets of uniquneness for analytic functions.
+Apart for a number of conclusive  results
+Carleson's constructions
+provide some  concrete aspects in measure theory where
+more refined questions   require that one goes
+beyond the  notion of null-sets
+in Lebegue's sense.
+
+
+
+
+\medskip
+
+
+
+
+
+
+
+
+
+\centerline {\emph{0.6.4 Logarithmic potentials.}}
+\medskip
+
+
+
+
+
+
+
+
+\noindent
+A central  issue in these notes
+are logarithmic potentials. 
+A closed subset $E$ of the unit  circle $T$ has logarithmic capacity zero
+if there exists a probability measure $\mu$ on $E$ such that
+\[
+\lim\uuu{r\to 1}
+ \int\uuu E\, \log\,\frac{1}{|e^{i\theta}\vvv r\cdot e^{i\phi}|}
+\cdot d\mu(\theta)=+\infty
+\quad\text{for all points }\quad e^{i\phi}\in E
+\]
+Conversely, $E$ has positive capacity if there exists a probability
+measure $\mu$ on $E$ such that
+the limit of integrals above are bounded by a fixed constant  for
+all $e^{i\phi}\in E$
+which amounts to say that the energy integral
+\[
+J(\mu)=
+\int_E \int_ E\, \log\,\frac{1}{|e^{i\theta}- e^{i\phi}|}\cdot d\mu(\theta)
+\cdot d\mu(\phi)<\infty\tag{1}
+\]
+This energy integral is
+related to
+Dirichlet integrals. Namely, starting from $\mu$
+we obtain a harmonic function  in the unit disc
+defined by
+\[
+U_\mu(re^{i\phi})=
+ \int\uuu E\, \log\,\frac{1}{|e^{i\theta}\vvv r\cdot e^{i\phi}|}
+\cdot d\mu(\theta)\tag{2}
+\]
+Here $U_\mu$ is the real part of the analytic function
+\[ 
+F_\mu(z)=
+ \int\uuu E\, \log\,\frac{1}{1-e^{-i\theta}z}
+\cdot d\mu(\theta)
+=\sum_{n=1}^\infty\,  \frac{\widehat{\mu}(n)}{n}\cdot z^n
+\quad\colon\, \,\,\widehat{\mu}(n)=
+\int_E\, e^{-in\theta}\, d\mu(\theta)\tag{3}
+\]
+Next, to every  analytic
+function $f(z)$ in the unit disc one associates the Dirichlet integral
+\[
+\mathcal D(f)=\frac{1}{\pi}\iint_D\, |f'(z)|^2\, dxdy
+\]
+If $f(z)= f(0)+\sum\, a_nz^n$
+the double integral becomes
+\[
+\sum_{n=1}^\infty\sum_{m=1}^\infty\, n\cdot a_n\cdot m\cdot \bar a_m
+\cdot \frac{1}{\pi}\int_0^1\,\int_0^{2\pi}\,
+r^{n+m-1}\cdot e^{i(n-m)\theta}\, d\theta\, dr
+\tag{4}
+\]
+Since 
+$\int_0^{2\pi}\,
+ e^{ik\theta}\, d\theta=0$ for every non-zero integer
+ it follows that (4) is equal to
+ \[ 
+ \sum_{n=1}^\infty \, n\cdot |a_n|^2
+ \]
+
+
+
+
+\noindent
+So $f$ has a finite Dirichlet integral if and only if
+ the sequence $\{\sqrt{n}\cdot a_n\}$
+belongs to the Hilbert space $\ell^2_+$ of complex sequences
+$\{c_1,c_2,\ldots\}$ for which
+$\sum\, |c_n|^2<\infty$.
+Analytic functions with a finite Dirichlet integral have special interest because
+$\mathcal D(f)$ measures the area of the image domain $f(D)$.
+When $f=F_\mu$ with $F_\mu$ as in (3) one has
+\[ 
+\mathcal D(F_\mu)=\sum\, \frac{1}{n}\cdot |\widehat{\mu}(n)|^2
+\]
+Next, when (1) is finite one has the limit formula
+\[ 
+J(\mu)= \lim_{r\to 1}\,
+\int_E \int_ E\, \log\,\frac{1}{|1- r\cdot e^{i\phi-\theta}|}\cdot d\mu(\theta)
+\cdot d\mu(\phi)<\infty
+\]
+Expanding the log-function one gets the equality
+\[ 
+J(\mu)=\mathcal D(F_\mu)\tag{5}
+\]
+
+
+\noindent
+Beurling used the
+formulas
+above  in
+the article \emph{Ensembles exceptionnels}
+from 1940 to  prove that
+when
+$f$ is an  analytic function in the unit disc with
+a finite Dirichlet integral, then the radial limits
+\[
+\lim_{r\to 1}\, f(re^{i\theta})= f^*(\theta)
+\] 
+exists for all $\theta$ outside a set whose logarithmic capacity
+is zero.
+Beurling's theorem is  established 
+in § XX from Special Topics.
+\medskip
+
+
+
+\centerline{\emph{0.6.5 Carleson's extremal functions.}}
+\medskip
+
+
+\noindent
+The results above suggest the   study
+of pairs $(f,E)$ where
+$E$ is a closed set with positive logarithmic capacity while
+$\mathcal D(f)$ is finite
+and the boundary value function $f^*$ is zero on $E$.
+Denote this family
+by
+ $\mathcal D_E$.
+In the article \emph{Sets of uniqueness for functions regular in
+the unit disc} [Acta 1952]  Carleson
+studied the situation where
+$\mathcal D_E$ contains non-constant functions while
+$E$ has positive logarithmic capacity.
+Let
+$\mathcal D^*_E$
+be the  subfamily
+of functions
+$f\in\mathcal D_E$ where
+$f(0)=0$ and consider
+the variational problem
+\[
+\inf_{f\in \mathcal D^*_E}\, D(f)
+\]
+Carleson proved that
+there exists a unique $f\in \mathcal D^*_E$
+with minimal Dirchlet integral 
+with the property that the complex derivative
+$f'(z)$
+extends to an analytic function in
+${\bf{C}}\setminus E$.
+This  result is established  in  Special Topics § XX.
+The
+reader who can pursue the details of Carleson's proof with the aid of
+material from earlier  chapters has attained
+good familarity with analytic function theory.
+
+\medskip
+
+\noindent
+{\bf{Remark.}} We inserted some   details 
+at this early stage
+in order to illustrate what these notes are striving at.
+The
+proofs  are not
+"sophisticated"  
+but  contain often  a   sequence of seemingly  unrelated
+threads which   constitute the
+innovative part where 
+more delicate  results
+often rely upon  innovative
+constructions which
+are not 
+predicted in advance. A brilliant
+example is
+Carleson's construction  from § XX 
+of a compact set on the unit interval with  positive logarithmic capacity
+while it has
+vanishing Hausdorff measures for all $h$-functions satisfying
+\[
+\int_0^1\, \frac{h(r)}{r}\ dr<\infty
+\]
+
+\noindent
+The main lesson  is  therefore to
+study 
+details of separate proofs
+and in this way become sufficiently familiar with  methods to
+be able to make new discoveries.
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline {\emph{0..7 Riemann's  $\zeta$-function.}} 
+\bigskip
+
+\noindent
+These   notes are foremost directed to students  
+who are  familiar with
+undergraduate calculus and   want to encounter  more advanced 
+topics in analysis.
+While entering such studies it is good
+to have a goal. I cannot imagine anything
+more appealing  than to
+learn about Riemann's  zeta-function defined by the series:
+\[
+\zeta(s)=\sum_{n=1}^\infty\, \frac{1}{n^s}\,,\quad\mathfrak{Re}\, s>1\,.
+\]
+The first result   is due to Euler and
+asserts  that $\zeta(s)$  extends to a meromorphic
+function defined in the whole complex $s$-plane with a simple pole at $s=1$
+and
+the entire function
+$(1-s)\zeta(s)$
+has simple zeros at all even negative integers
+while  the remaining zeros belong to the strip domain
+\[ 
+0<\mathfrak{Re}\, s<1
+\]
+
+\noindent
+In a work which dates back to 1859, Bernhard Riemann conjectured that
+the zeros of the zeta-function 
+belong to the line
+$\mathfrak{Re}\, s=\frac{1}{2}$.
+Numerical
+calculations  confirm the hypothesis up to a very high degree.
+So it is not  likely that one may discover an eventual  zero outside the critical line
+by mere guessing.
+But there  remains to \emph{prove} the hypothesis.
+The study of the zeta-function has contributed to the development in
+analytic function theory.
+An example is the 
+asymptotic formula for the zeros 
+in the critical strip $0<\mathfrak{Re}(s)<1$
+which was already announced by Riemann.
+It asserts that there exists a constant $C_0$
+such that 
+if $\mathcal N(T)$ is the number of zeros counted
+with multiplicities in the rectangle where
+$-T<\mathfrak{Im}\,s<T$ and $0<\mathfrak{Re}\,s<1$,
+then 
+\[
+\mathcal N(T)=\frac{1}{\pi}\cdot T\cdot\text{Log}\,T-
+\frac{1+\text{Log}\,2\pi}{\pi}\cdot T+\rho(T)\cdot \text{Log}\,T\quad\text
+{where}\quad 
+\,|\rho(T)|\leq C_0\tag{*}
+\]
+
+\noindent
+where the constant $C_0$ is indepenent of $T$.
+We  prove (*) in the chapter  devoted to Riemann-s $\zeta$-function
+whose content
+should  be more than
+sufficient to convince that analytic function theory in one complex variable
+is as active as ever within the  curriculum of mathematics.
+Anybody who  tries  to attack the Riemann Hypothesis
+must be well aquainted  with
+function theory and harmonic analysis.
+This explains  why these notes
+in addition to analytic function theory
+contains extensive material about
+the Fourier transform.
+Let us illustrate  this interaction 
+by the following formula 
+which at first sight appears to "almost settle" the Riemann hypothesis:
+Hardy 
+proved the equality below when $\mathfrak{Re}\, s>1$: 
+\[ 
+\zeta(s)=\frac{\pi^{\frac{s}{2}}}{\Gamma(\frac{s}{2})}\cdot
+\int_0^\infty \omega(x)\cdot x^{\frac{s}{2}-1}\cdot dx
+\quad\colon\quad \omega(x)=\sum_{n=1}^\infty\,
+e^{-n^2\pi x}\tag{**}
+\]
+where $\Gamma(s)$ is the Gamma-function.
+The constraint $\mathfrak{Re}\, s>1$
+is needed to ensure that the integral in the right hand side is defined since
+one has the asymptotic formula
+\[
+ \omega(x)\simeq\frac{1}{\sqrt{x}}\quad\, x\to 0
+\]
+ A major fact 
+to be proved in 
+these notes
+is that
+$\frac{1}{\Gamma(s)}$ is an entire 
+function 
+of the complex variable
+$s$. So (**) can be used to investigate
+zeros of the zeta-function after its meromorphic continuation is
+constructed via the Dirichlet integral of the $\omega$-function.
+The equation (**)   was used by Hardy in [Ha] to demonstrate that a
+"considerable amount" of zeros 
+belong to
+the critical line
+$\mathfrak{Re}\, s=1/2$.
+\medskip
+
+\noindent
+{\bf{Beurling's criterion.}}
+A necessary and sufficient condition for the validity of the Riemann hypothesis
+was presented  by Beurling in the article \emph{A closure problem related
+to the Riemann zeta\vvv function} and 
+goes  as follows: Denote by  $\rho(x)$  the
+numerically smallest remainder term modulo 1, i.e.
+$\rho(x)= x$ if $0 < x<1$ and $\rho(x+1)= \rho (x)$
+for all real $x$.
+Given some $N\geq 2$ and an $N$\vvv tuple of real numbers
+$0<\theta\uuu\nu< 1$ and real constants
+$c\uuu 1,\ldots,c\uuu N$ such that
+$\sum\, c\uuu \nu\cdot \theta\uuu \nu=0$ we define a function $f(x)$ on 
+the unit interval $(0,1)$ by
+\[
+ f(x)=\sum\uuu{\nu=1}^{\nu=N}\, c\uuu \nu\cdot \rho(\frac{\theta\uuu\nu}{x})
+\]
+
+
+\noindent
+{\bf{Theorem.}} \emph{The Riemann hypothesis is valid if and only if for each
+$\epsilon>0$ there exists some $N$ and a pair
+of
+$N$\vvv tuples
+$\{\theta\uuu\nu\}$ and $\{c\uuu\nu\}$ as above such that}
+\[
+\int\uuu 0^1\, (1\vvv f(x))^2\cdot dx<\epsilon
+\]
+\medskip
+
+\noindent
+The sufficieny, i.e. that the existence of $f$\vvv functions which
+approximate the identity function in the $L^2$\vvv norm gives the Riemann Hypothesis
+is easy to prove, while 
+the proof of
+necessity relies upon an ingenious blend of
+functional analysis and analytic function theory.
+Personally I find Beurling's proof exceedingly instructive and hope that this
+will be shared by the reader. For details we refer to section xx in Chapter VIII.
+\medskip
+
+
+\noindent
+{\bf Alan Turing and the
+$\zeta$-function.}
+The creation of
+computers 
+is 
+foremost due to
+Turing and  von Neumann.
+Less wellknown
+is perhaps that Turing also was  fascinated by the
+zeta-function.
+His article
+\emph{A method for the calculation of the zeta-function} from 1943
+already suggested  his ambition  to
+build an analog computer specifically intended
+for calculating values of $\zeta(s)$.
+A decade later his
+article \emph{Some calculations of the Riemann
+zeta-function} 
+gave 
+the first extensive calculations of zeros of $\zeta(s)$  by a computer.
+This historic
+reconcilation  illustrates how
+problems in mathematics
+has  stimulated advancement in  applied areas
+of science. The 
+reader  may  consult the
+article by Dennis Hejhal in [Hej] for
+a further account about Turing's work related to the
+$\zeta$-function and up-to-date
+references about the zeta-function.
+
+\newpage
+
+
+
+
+\centerline {\emph{0.8 Kepler's equation and Lagrange's problem}}
+\medskip
+
+
+
+\noindent
+During  intense calculations based upon
+astronomic data
+in the beginning of 1600, Kepler
+encountered the equation
+\[ 
+\zeta_a(z)=a+z\cdot \text{sin}(\zeta_a(z))\tag{*}
+\]
+where $a>0$ is a positive constant which
+may vary.
+At that time
+analytic function theory did not exist and Kepler
+could only manage to derive a part of the series expansion of the $\zeta_a$-function.
+In 1760  Lagrange  found the whole series expansion
+of $\zeta_a(z)$
+and  proved that it is analytic in a disc centered at $z=0$ 
+whose radius of convergence $\rho$ is
+independent of $a$.
+However, no exact formula for $\rho$ is known, i.e. it can only be
+found numerically.
+Personally I find historic examples of this kind
+both instructive and exciting since
+they illustrate how  
+"heroic efforts"  have preceded
+a "more developed theory".
+In these notes the reader will learn
+how basic analytic function theory
+can be applied   to obtain Lagrange's  result about Kepler's 
+$\zeta_a(z)$-functions.
+
+
+
+
+
+
+
+
+\medskip
+
+
+
+\noindent
+\emph{A problem by Lagrange.}
+Let us give another  early example where 
+complex methods appear naturally.
+In a  work from 1782
+Lagrange studied the motion of the planets in the solar system
+which by Newton's  Law of gravity amounts to solve the
+$N$-body problem with
+$N\geq 3$. As a first approximation
+for "la longitude du périhélie de l'orbite d'une planete
+au temps $t$" one needs to determine the argument of a complex-valued 
+trigonometric polynomial
+\[
+ F(t)= a_1e^{i\lambda_1t}+\ldots+a_Ne^{i\lambda_N t}
+\]
+where $\lambda_1,\ldots,\lambda_N$
+are distinct real numbers and
+$a_1,\ldots,a_N$
+some $N$-tuple  of complex numbers.
+Assume that $F(t)\neq 0$ for all $t\geq 0$.
+Then there exists  a continuous argument function
+$\psi(t)$ of $F$ such that:
+\[ 
+F(t)=|F(t)| \cdot e^{i\psi(t)}\quad\colon t\geq 0\,.
+\]
+When $|a_N|>|a_1|+\ldots +|a_{N-1}|$
+it is easily seen that
+\[ 
+\lim_{T\to\infty}\, \frac{\psi(T)}{T}=\lambda_N\,.\tag{*}
+\]
+Lagrange posed the question if there exists a limit in
+the general case when no single $a$-coefficient has a dominating
+absolute value. This problem  with its source in astronomy
+has led to interesting results in analytic function theory.
+In 1908 it was proved by Bohl that (*) always has a limit
+when $N=3$. 
+For $N\geq 4$ quite general results were found  by
+Weyl and later work has studied
+the existence of (*) for the more extensive class of
+almost periodic analytic functions.
+Let us also  mention that
+the study of (*) is closely related to find
+zeros of analytic functions in  vertical strip domains.
+More precisely, given $F(t)$ as above it is the restriction 
+of an entire function
+$F(\zeta)$
+to the
+imaginary axis in the complex
+$\zeta$-plane where
+$\zeta=\sigma+it$.
+For each real $\sigma$
+it turns out that there exists the limit
+\[
+\phi(\sigma)= \text{Lim}_{T\to\infty}\,
+\frac{1}{T}\int_0^T\,\text{log}\, |F(\sigma+it)|\cdot dt\,.
+\]
+A result due to B. Jessen and M. Tornehave in their joint article [Je-Torn]
+from 1945 shows that  the $\phi$-function is continuous and
+convex with respect to
+$\sigma$ and has an ordinary derivative
+outside a set which contains at most denumerable many points.
+Moreover, assuming that
+$\phi$ has a derivative at $\sigma=0$
+one has
+the equality
+\[
+ \text{Lim}_{T\to\infty}\,\frac{\psi(T)}{T}=\phi'(0)\,.
+ \]
+Finally the derivatives of the $\phi$-function 
+determine the asymptotic number of zeros of
+$F(z)$. More precisely, for a given
+pair of real numbers
+$a<b$ we denote by
+$N_{a,b}(T)$ the number of zeros of
+$F(\zeta)$
+in the  domain $\{\zeta=\sigma+it\,\,\colon\,\,
+a<\sigma<b\,\,\text{and}\,\, 0<t<T\}$.
+Then
+\[
+\text{Lim}_{T\to\infty}\,\frac{N(T)}{T}=
+\frac{\phi'(b)-\phi'(a)}{2\pi}
+\]
+hold when $\phi$ has a derivative at $a$ and $b$.
+Results of this kind illustrate the rich interplay between
+analytic function theory and
+other areas of mathematics.
+
+
+
+\bigskip
+
+\noindent
+\centerline{\emph{Conformal mappings.}}
+\medskip
+
+\noindent
+In the 3-dimensional space
+${\bf{R}}^3$ with coordinates
+$(x,y,z)$
+we  consider  a surface $S$ defined   by an equation
+\[ 
+z=g(x,y)
+\] 
+where $g$ is a real-valued 
+function which
+is real-analytic as a function of the two real variables
+$(x,y)$.
+One may imagine a  portion of such a surface which is
+defined when
+$(x,y)$ stays in a small square 
+$\square$
+centered at the origin in
+${\bf{R}}^2$. Given an arbitrary   point $p=(x,y,g(x,y))$
+on $S$  we  consider a pair of curves
+$\gamma$  and $\rho$ passing through $p$.
+They intersect at $p$ with some angle denoted by
+$\langle\gamma,\rho \rangle$. Next, let
+$(\xi,\eta)$ be another set of coordinates
+in ${\bf{R}}^2$
+and consider a map
+\[ 
+\phi \colon\, (x,y,g(x,y))\mapsto (\xi(x,y),\eta(x,y))
+\]
+Working locally we assume that the map is a diffeomorphism
+and preserves orientation
+which means that the Jacobian  $\xi_x\cdot\eta_y-\xi_y\cdot \eta_x>0$.
+Now we can consider the $\rho$-images of a pair of curves
+$\gamma,\rho$ as above and in the $(\xi,\eta)$-plane we regard
+the angle between these two plane curves.
+If the angle is preserved for every pair of curves passing through
+arbitrary
+points on $S$ one says that $\phi$ is an \emph{conformal }
+representation of $S$ onto a plane. 
+The first example of such a conformal map goes back to the astronomer Ptolemy
+who considered the  case when
+$S$ is a portion of a sphere and found the answer by 
+the  
+\emph{stereographic projection} which  has become a
+useful  in
+analytic function theory.
+Recall also that
+Mercator constructed another conformal map
+in 1568 which  has been adopted for the construction of sea-maps.
+In  1779 Lagrange classified all locally defined conformal maps
+from a portion of the sphere  onto the plane and
+in 1821 Gauss described the whole  family of locally defined
+conformal maps from
+an arbitrary surface $S$  onto a planar domain.
+A turning point which led to the contemporary
+analytic function theory was discovered by Riemann
+in his thesis from 1851. He introduced  ideas which have been
+used in later investigations  of conformal representation
+and  showed that the problem itself is of fundamental
+importance for analytic function  theory.
+A major result  
+is that every bounded and 
+simply connected domain in
+ ${\bf{C}}$
+ is conformal with the open unit disc $D$.
+This  is called  \emph{Riemann's Mapping Theorem}.
+The first rigorous proof was given  in 1865
+by
+Hermann Schwartz.
+More generally there is a
+mapping theorem for an arbitrary connected 
+domain $\Omega$ in ${\bf{C}}$. For topological reasons
+we cannot find a conformal map from $\Omega$ onto $D$. But there exist
+locally conformal maps from $\Omega$ onto $D$ expressed by
+\emph{multi-valued} analytic functions on
+$\Omega$ which  are  used to obtain a
+holomorphic function $g(z)$ defined in
+$D$ such that
+the complex derivative
+$g'(z)\neq 0$ for all points and
+the image $g(D)=\Omega$.
+This   identifies  the fundamental group of
+$\Omega$ with a group of Möbius transformations 
+on the unit disc $D$.
+Starting from this fact, 
+Poincaré began to investigate general groups of Möbius transformations.
+He considered  to begin with  a discontinuous group $\mathcal F$
+of Möbius transforms on $D$
+without a fixed point. For such a group
+there exists a
+normal domain $U$
+inside $D$  characterized by the property
+that every orbit under
+$\mathcal F$
+intersects $U$ in exactly one point.
+This result, proved   
+in his  article \emph{Théorie des groupes
+fuchsien} was published in the first volume of
+Acta Mathematica in 1882.
+All this may  at first glance appear as "classic old stuff". But the truth is that
+the
+visions by Riemann and Poincaré continue to
+serve as an inspiration in contemporary mathematics.
+To this one should also say that analytic function theory in one
+variable already had reached a quite advanced level
+more than a century ago. 
+For example, a result which goes
+beyond
+the material in these notes is the study of
+the differential equation
+$\Delta(u)= e^u$
+where one seeks a solution
+$u$ defined on  a closed Riemann surface with
+prescribed singularities.
+This second order differential equation was completeley 
+solved by
+Poincaré in his article [Poinc]
+\emph{Les fonctions fuchsiennes et l'équation
+$\Delta(u)= e^u$} from 1898. 
+
+
+
+\medskip
+
+\centerline
+{\emph{0.9 The Dagerholm series and comments on
+more recent theories.}}
+\medskip
+
+
+\noindent
+Of course, many results in these notes
+are of a more recent origin. An example is
+an extension of the
+Riemann Mapping Theorem by
+Beurling from  an article published in  1953.
+A result which 
+illustrates that  more
+recent theorems  also are    concerned with  
+"concrete problems" was published in 1968
+by Karl Dagerholm who    was 
+Beurling's first Ph.d student from Uppsala University in
+1938, and thirty  years later Dagerholm  was finally able to prove
+the following  result which had remained as an open question from his
+thesis:
+
+\bigskip
+
+\noindent
+{\bf Theorem.} \emph{Up to multiplication with a real  number
+there exists a unique  sequence
+$\{x_q\}$ of real  numbers which is not identically zero and solves the
+infinite system of  equations}
+\[ 
+\sum_{q\neq p}\,\frac{x_q}{p-q}=0\quad\colon\quad p=1,2,\ldots\quad
+\text{where}\,\, \sum_{q=1}^\infty\, \frac{x_q}{q}\,\,\,\,\text{is convergent}.
+\]
+As we shall see the proof this result
+employs many   ingredients from analytic function theory.
+\medskip
+
+\noindent
+{\bf{The Hayman-Wu constant}}.
+To illustrate  that analytic function theory
+in one complex variable  
+contains many active research areas  
+we mention the following  open problem:
+Let
+$\phi\colon D\to \Omega$ be a conformal map from the unit disc onto
+a simply connected domain $\Omega$. 
+Now $\mathfrak{Im}(\phi)$ is a harmonic function in
+$D$ whose gradient is everywhere $\neq 0$.
+As we shall explain later on this implies that
+the zero set $\{\mathfrak{Im}(\phi)=0\}$
+is a union of disjoint open Jordan
+arcs
+$\{\gamma_k\}$
+where each single arc has two end-points on
+the unit circle $\partial D$. 
+Denote by  $\ell(\gamma_k)$  the arc-length of 
+each individual Jordan arc.
+In 1981 it was proved by Hayman and Wu
+that there exists an absolute constant $C$ such that
+\[
+\sum\,\ell(\gamma_k)\leq C\tag{*}
+\]
+The remarkable fact is  that
+$C$ is independent of the conformal map.
+To find the best constant in (*) is an open
+problem.
+So far one knows that $C$ is strictly smaller than
+$4\pi$ [Rohde 2002] and at least $\pi^2$ [Öyma 1993].
+
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+The text-book [GM]
+\emph{Harmonic measure} by
+John B. Garnett and Donald E. Marshall
+has been an inspiration for these notes. Actually
+I  started to write these notes
+to provide 
+background for
+the reader who wants to study more advanced topics in
+[GM]. But as in most projects of this  sort
+my original   material eventually expanded and cover
+subjects in   analytic function theory
+which are not within the main streamline
+in [GM].
+In any case, this text-book is highly recommended.
+For example, Chapter V  offers a brilliant
+account of  results due to Lars Ahlfors and  contains also an
+introduction to the 
+theory  of extremal distances which was created by
+Arne Beurling during the years 1943-44 and 
+presented in his article [Beurling] from 1946.
+An example of a result which goes   beyond the scope of these notes
+appears in  [GM;  Chapter V : Theorem 2.1]
+which  gives a 
+quite sharp lower bound for harmonic measures.
+See also Chapter XX in R. Nevanlinna's text-book
+[Nev] where
+the Carleman-Milloux problem  is studied via
+certain solutions which were found independently by Nevanlinna and Beurling in 1933.
+In these notes we are content to establish results which provide
+upper bounds for harmonic measures in various situations.
+
+\bigskip
+
+
+
+
+\centerline{\emph{0.10 Mathematical physics.}}
+\medskip
+
+\noindent
+Analytic function theory  of one complex variable
+is often used in mathematical physics.
+An  example is the  \emph{Biot-Savart Law} which was
+discovered in 1800 and 
+inspired the development of analytic function theory.
+In 1879 the  electric engineer Robin posed a quite general
+problem which
+led to the study of thin sets and various potential theoretic questions.
+The special case occurs
+when $\Gamma$ is a   closed
+Jordan curve in the complex $z$-plane.
+To determine a density function which gives
+electric equilibrium on
+$\Gamma$ amounts to find a
+positive function
+$\mu$ on $\Gamma$ such that the logarithmic potential
+\[
+\int_\Gamma\, \log\, \frac{1}{|q-p|}\cdot
+\mu(p)\cdot ds(p)\quad\colon\quad  q\in\Gamma\tag{*}
+\]
+where $ds(p)$ is the arc-length along $\Gamma$ and one requirs that
+(*) is 
+constant as 
+$q$ varies on $\Gamma$.
+Riemann demonstrated the existence of such a density
+by
+his conformal mapping theorem. More precisely,
+the equilibrium  density is  unique and equal to a constant times
+$\frac{1}{|f'(z)|}$ where $f'(z)$ is the complex derivative of the
+conformal map from
+the \emph{exterior domain} bordered by $\Gamma$ to the
+exterior disc
+$|w|>1$ in the complex $w$-plane. 
+We  prove this result   in the chapter
+devoted to conformal mappings.
+This example
+is instructive since  it shows
+that one should 
+be aware of the point at infinity. This was
+the reason why Riemann  introduced the Riemann sphere in his fundamental work
+[Rie:xx] from 1857. 
+Let us also remark 
+that analytic function theory does not
+"cover everything" as the following   example shows.
+A classical result due to Helmholtz about
+stationary fluid motion in the plane
+asserts that if
+$\Omega$ is a Jordan domain
+and the function
+\[ z\mapsto \iint_\Omega\,\text{log}\,\frac{1}{|z-\zeta|}\cdot d\xi d\eta\tag{i}
+\]
+is  constant on
+$\partial\Omega$, then
+$\Omega$ must be a disc.
+This fact has a natural physical explanation.
+Less obvious is that that $\Omega$ also must be a disc if
+(i) holds when  the log-potentiao is replaced by
+an integrand  of the form
+$f(|z-\zeta|)$, where $f(r)$ is an arbitrary
+strictly decreasing function  
+defined on $r\geq 0$.
+Here the proof uses calculus of variation and the
+symmetrization process due to W. Gross. See § XX in special topics 
+where the asserted result is proved.
+
+\medskip
+
+\noindent
+{\bf{The use of majorant series.}}
+The idea to use majorant series is due to Cauchy and
+is often used to prove existence results for non-linrear
+equations.
+Let us give an example where Cauchy's method applies.
+Let $\Omega$ be a bounded open domain
+in ${\bf{R}}^3$ whose boundary $\partial\Omega$
+is of class $C^1$. Let $p=(x,y,z)$ denote points in
+${\bf{R}}^3$. 
+The equation
+which obeys the Stefan-Bolzmann law
+for heat conduction  of 
+Black Bodies is to find a function
+$u$ which  is harmonic in
+$\Omega$ outside a  point $p_*$ (the source of heat)
+where $u(p)$ is locally of the form
+$\frac{1}{|p-p_*|}$ plus a harmonic function.
+On the boundary its   interior normal derivative satisfies:
+
+\[ 
+\partial u/\partial {\bf{n}}=k\cdot u^4\quad\colon\,\,k>0\tag{*}
+\]
+Green's formula  shows that  
+the solution to (*) is unique if it exists.
+The proof of existence
+is achieved by regarding intermediate equations
+where $u_h(p)$ for every $0<h<1$ 
+is a solution with the pole at $p_*$ as above and
+\[ 
+\partial u_h/\partial {\bf{n}}=k\cdot ((1-h)u_h+ h\cdot u_h^4)\tag{**}
+\]
+Using the robust properties of solutions to Neumann's 
+linear boundary value problem one shows that if $0\leq h_0<1$
+is given and  the unique solution
+$u_{h_0}$ has been found,  then 
+(**) is solved for $h$-values in some interval $h_0<h<h_0+\delta$
+via a series expansion $u_h=u_{h_0}+\sum_{\nu=1}^\infty\,
+(h-h_0)^\nu\cdot w_\nu$. Here   $\{w_\nu\}$ are functions which
+are found inductively by solving 
+a system of  \emph{ linear}  boundary
+value problems.
+In this way the main burden to obtain a solution to the non-linear 
+Stefan-Boltzmann equation is to prove that various series
+admit a positive radius of convergence.
+In XX we expose Carleman's methods from [Car]
+to solve the more general  non-linear boundary value 
+problem 
+where one  seeks $u$ as above in $\Omega$ while
+\[
+ \partial u/\partial{\bf{n}}(p)= F(u(p),p)\quad
+\colon  p\in\partial\Omega\tag{***}
+\]
+Here the sole condition is that
+$F(u,p)$ is a on-negative continuous function defined on ${\bf{R}}^+\times
+\partial\Omega$, and for each fixed
+$p\in\partial\Omega$ the map 
+ $u\mapsto F(u,p)$ is increasing
+and tends to $+\infty$ with $u$.
+  
+\bigskip
+
+\noindent
+{\bf{Another boundary value problem.}}
+Let  $\Omega$ be a bounded domain in
+the real $(x,y)$\vvv plane of class $\mathcal D(C^1)$, i.e. the boundary
+is a finite union of disjoint and closed differentiable Jordan curves.
+Denote by  
+$\Delta=\partial\uuu x^2+\partial\uuu y^2$  the Laplace operator.
+One seeks functions
+$\phi(x,y)$ which satisfy
+\[ 
+\Delta(\phi)+\lambda\cdot \phi=0
+\] 
+in $\Omega$ for some constant $\lambda$
+where $\phi=0$ on the boundary
+$\partial\Omega$.
+This equation has solutions for a discrete sequence of eigenvalues
+$\{\lambda\uuu n\}$ where
+$0<\lambda\uuu 1\leq \lambda\uuu 2\leq \ldots$ and the corresponding eigenfunctions
+$\{\phi\uuu n\}$ are normalised so that the integrals
+\[
+\iint\uuu\Omega\,  \phi\uuu n(x,y)^2\, dxdy=1
+\]
+Moreover, these $\phi$\vvv functions can be chosen to be
+pairwise orthogonal
+when we take area integrals.
+This is  proved by
+classical methods using 
+Fredholm determinants and  hence  only  calculus in real
+variables is used, while  
+analytic function theory is needed to
+study  asymptotic properties.
+Tohe crucuial result gies as follows where
+$s$ is  a complex variable and $p$ a variable point in
+$\Omega$:
+
+
+\medskip
+
+\noindent
+{\bf{Theorem.}} \emph{The series}
+\[ 
+\Phi(s)= \sum\uuu{n=1}^\infty\, \frac{\phi^2\uuu n(p)}{\lambda\uuu n^s}
+\]
+\emph{is a meromorphic function of $s$ defined in the whole complex $s$\vvv plane
+which is independent of the point $p\in\Omega$.
+Moreover, $\phi$ has a simple pole at $s=1$ whose residue is
+$\frac{1}{4\pi}$ and it has zeros at all non\vvv positive integers.}
+\medskip
+
+\noindent 
+Using Tauberian theorems which also are derived via analytic function theory
+one gets
+the following asymptotic formula:
+
+\medskip
+
+\noindent
+{\bf{Theorem.}} \emph{Let $S$ be the area of $\Omega$. Then}
+\[ 
+\lim\uuu{n\to \infty}\,
+\frac{1}{n}\cdot \sum\uuu{\nu=1}^{\nu=n}\, \phi^2\uuu\nu(p)= 
+\frac{1}{S}
+\]
+\emph{hold for each $p\in \Omega$.}
+\medskip
+
+\noindent
+{\bf{Remark.}} 
+Results such as thoses above 
+illustrate that one  attains "muscles" via 
+studies in analytic function theory
+in order to establish  asymptotic results for solutions to
+ PDE\vvv equations.
+ 
+
+
+
+
+
+
+  
+\bigskip
+  
+\noindent
+{\bf{Quantum mechanics.}}
+Analytic function theory as well as
+extensive use of Fourier integral operators occur also in
+quantum mechanics while one investigates special 
+equations. For example, confluent 
+hypergeometric functions appear as  solutions
+in a Coulomb field   and to 
+continue the study of scattering in a Coulomb field
+where the quantum\vvv mechanical collision problem can be solved exactly,
+it is from a physical point of view important
+to analyze
+the asymptotic behaviour of confluent
+hypergeometric functions. Here  asymptotic expansions
+are
+derived via 
+complex line integrals where  attention must be given
+to the choice of local branches of certain multi\vvv valued analytic functions.
+Examples of this kind illustrate that  classical topics in analytic function theory
+remain  "up\vvv to date" since they provide useful
+tools in quantum mechancs.
+It would lead us to far to even try to 
+give a glimpse of the physical theories.
+For the mathematically oriented reader 
+we recommend the outstanding text\vvv books 
+by L.D. Landau and his former student E.M Lifschitz.
+The third edition of \emph{Non\vvv relativistic quantum mechanics}
+is especially recommended.
+
+
+
+
+
+
+
+
+
+\end{document}

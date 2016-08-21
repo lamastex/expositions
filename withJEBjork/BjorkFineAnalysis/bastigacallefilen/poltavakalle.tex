@@ -1,0 +1,1994 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+
+\def\vvv{-}
+
+\begin{document}
+
+\centerline{\bf{
+Matematik av Arne Beurling och Torsten Carleman}}
+
+ -
+\medskip
+
+\noindent
+I Föreläsningarna söker jag 
+främst söker belysa
+innovativa
+bevismetoder som uppträder i Beurlings och Carlemans matematik.
+I ett nyskrivet  manus som handlar om
+analytisk funktionsteori
+i en komplex variabel och dess tillämpningar
+ingår flera 
+avsnitt som handlar om
+Beurlings och Carlemans arbeten där
+föredragen nedan kan ses som ett axplock av
+innehåll från mitt manus.
+\medskip
+
+\[ 
+\text{Jan-Erik Björk}
+\]
+
+\bigskip
+
+\noindent
+{\bf{1. Harmoniska mått.}}
+Uppskattningar av dessa och deras tillämpningar
+utgör ett centralt tema hos både Beurling och Carleman.
+Föredraget inleds med bevis av Carlemans olikhet för
+derivator hos funktioner som ger 
+skarpa gränser för att   konstruera
+avhuggningsfunktioner. 
+Om $n\geq 2$ betecknar 
+$\mathcal F_n$ alla
+$n$ gånger
+kontinuerligt deriverbara
+funktioner  $f$ på intervallet $[0,1]$
+som är $\geq 0$, har medelvärdet $\int_0^1\, f(x)\, dx=1$
+samt är platt i ändpunkterna, dvs.
+$f$ och alla  derivator upp till ordning $n$ försvinner då
+$x=0$ och $x=1$.
+\medskip
+
+\noindent
+{\bf{Sats.}} \emph{För alla $n\geq 2$ och
+varje  $f\in\mathcal F_n$ gäller olikheten }
+\[
+\sum_{\nu=0}^{\nu=n}\,
+ \frac{1}{||f^{\nu)}||_2}\leq \mathcal C
+\]
+\emph{där $\{||f^{\nu)}||_2\}$
+betecknar $L^2$-normer tagna över $[0,1]$
+och $\mathcal C$ är en absolut konstant.}
+\medskip
+
+
+\noindent Beviset bygger på upskattningar av harmoniska
+mått sedan man tagit en lämplig komplex Laplace transform av funktioner i
+$\mathcal F_n$.
+Därefter beskrivs Beurlings konstruktion av extremallängder från hans
+doktorsavhandling och hur detta kan användas för att uppskatta 
+olika harmoniska mått. Tillsammans
+med  Carlemans precisa resultat om
+egenvärden hos lösningar
+till
+väremekvationen kan man nu analysera 
+simultana sannolikhetsfördelningar
+för position och tid
+hos Brownska slumpvandringar i plana områden med  hinder.
+Några exempel om detta ges i slutet av föredraget. 
+\medskip
+
+\noindent
+{\bf{2. Icke linjära randvärdesproblem och
+Beurlings studier av fria 
+randvärdesproblem.
+}}
+Boltzmann randvärdesproblem för ett område 
+$\Omega$ i ${\bf{R})}^3$ 
+och en given punkt $p_*\in\Omega$ är att finna  en funktion $u$ som är harmonisk
+i $\Omega\setminus
+\{p_*\}$ med Newtonsk pol i $p_*$ och på randen uppfyller
+$u$:s inre normalderivata
+ekvationen
+\[
+\frac{\partial u}{\partial n_i}(p)= F(u(p),p)
+\]
+Här är $F$ definierad på ${\bf{R}}^+\times \partial \Omega$.
+I en uppsats från 1920 visade Carleman
+att om $F$ är kontinuerlig och $\geq 0$ samt funktionen
+$s\mapsto F(s,p)$ är strängt växande för varje $p\in\partial\Omega$, så
+existerar en unik lösning $u$. Beviset bygger på en homotopi där alltmer
+icke-linjära randvärdesproblem löses, en metodik som efter Carlemans pionjärinsats
+brukas flitigt  i studier av
+icke-linjära PDE ekvationer.
+Därefter beskrivs   Beurling resultat
+av 
+Helmholz' ekvationer med  fria ränder uppträder där
+bevismetodiken  är synnerligen
+lärorik
+och bygger på egenskaper hos 
+subharmoniska funktioner.
+Sista delen av föredraget ägnas åt
+kvantmekanikens
+ "svåra"  ekvation
+som Schrödinger ställde upp
+i sin berömda artikel
+\emph{xxx} från 1931 och som leder till
+ett intrikat icke-linjärt Cauchy problem.
+Vi  beskriver Beurlings existensbevis
+i det två-dimensionella fallet som mig veterligt är det
+hittills bästa som gjorts eftersom mycket lite är känt i 
+det 3-dimensionella fallet.
+\bigskip
+
+\noindent
+{\bf{3. Pärlor från
+enskilda  arbeten.}}
+Här ges bevis av några enskilda spektakulära resultat
+av Beurling och Carleman.
+Bland annat Beurlings ekvivalenta formulering av
+Riemanns hypotes om nollställen hos
+$\zeta$-funktionen som  är följande:
+Till varje reellt tal $x$ bildas heltalsdelsen
+$[x]$ och man sätter
+$\rho(x)= x-[x]$.
+Då  $M\geq 2$ och 
+$c_1,\ldots,_M$ är en $M$-tupel
+av reella tal 
+definieras en funktion på $\{0<x<1\}$ genom
+\[
+\phi(x)=\sum_{j=1}^{j=M}\, \rho(\frac{j}{Mx})
+\]
+Sätt
+\[ 
+b(M)= \min\,\int_0^1\, (\phi(x)-1)^2\, dx\quad\colon
+\sum_{j=1}^{j=M}\, j\cdot c_j=0
+\]
+Man skall alltså minimera en kvadratisk form
+med bindande villkor som enligt Lagrange har entydig lösning och
+$b(M)$ är tillhörande Largrangeska multiplikator.
+Beurling  visade 1956  att Riemanns hypotes är ekivalent med 
+att talföljden
+$\{b(M)\}$ går mot noll då $M$ växer !
+Beviset bygger på analytiska funktionsteori i en komplex variabel.
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\centerline{\bf{Den centrumflyende centrifugalkraften.}}
+\medskip
+
+\noindent
+{\bf{Inledning}}.
+Alla har vi erfarenhet av
+centrifugalkrafter. Kör man en bil i hög hastighet in i en vägkurva
+vill den forstätta i tangentens riktning
+varför hjulens grepp i vägen måste vara bra
+samtidigt som man  tvingar vrida  på ratten.
+Många attraktioner på nöjesfält
+bygger på centrifugalkrafter och
+ett drastiskt  exempel är att slunga en delvis vattenfylld hink över 
+sitt eget huvudet med 
+rask armrörelse.
+Isaac Newton gav i slutet av 1660-talet
+en matematik
+ekvation för att ange centrifugalkraftens styrka.
+Det paradoxala 
+är att den uppträder hos kroppar som förflyttas med konstant
+fart men däremot ändrar sin rörelseriktning 
+- precis som
+en bil tvingas till på en krokig väg i Småland medan hastighetsmätaren är konstant lika med 
+70 km/timme.
+Vi skall  först redogöra för en härledning som gavs av 
+Christian Huyghens i början
+av 1650-talet hos  en cirkulär rörelsebana,
+Newton utvecklade satsen till godtycklig kroklinjig
+rörelsee 
+med stöd av den matematiska analys
+som ingår i hans 
+banbrytande läroböcker 
+från mitten av 1660-talet. Deras innehåll på drygt 600 sidor
+täcker 
+kursinnehållet  upp till påbyggnandskurser inom nutida
+högskolematematik. Original texten på latin finns numera översatt 
+så att Newtons samtliga verk är  tillgängliga 
+på engelska.
+En måhända personlig kommentar från min sida är att
+de bevis som förekomer i  Newtons verk, liksom
+i Huyghen's långtgående studier av 
+flytande kroppar och andra raffinerade problem i statik,
+ur "didaktisk synpunkt" är  överlägsna det mesta som skriva i nutida
+läroböcker. Själv har jag
+i varje fall 
+aldrig mött  mer inspirerande
+och klarläggande framställningar 
+än hos dessa två författare.
+Så det finns  skäl att beskriva
+bevis av
+Huyghens och Newton.
+ 
+
+\medskip
+
+\centerline{\bf{Den studsande pucken·}}
+
+\medskip
+
+
+\noindent
+Betrakta en plan cirkelskiva med radie $R$.
+Vi tänker oss att den är innesluten i en rink, dvs. längs
+skivans randcirkel  finns en vertikal vägg.
+Om $N\geq 4$ är ett heltal kan vi skriva in en regelbunden
+$N$-hörning där vinkeln mellan två
+på varandra följande hörnpunkter
+är  $\frac{2\pi}{N}$.
+Cirkelskivans plana botten antas vara glatt som  en perfekt is. En puck 
+skickas iväg längs en av $N$-hörningens sidor varefter den 
+kommer att träffa rinken och efter studs fortsätta till
+nästa sida och så vidare. Utan friktion och luftmotstånd
+och  
+helt elastiska 
+stötar färdas  pucken med konstant hastighetet $v$.
+Notera att varje sida hos  $N$-hörningen har längden
+\[
+\ell=2\cdot R\cdot \sin\frac{\pi}{N}
+\]
+Se figur som visar detta !
+För att fullborda ett varv skall pucken glida längs $N$ sidor, dvs. hela transportsträckan är
+\[ 
+S= 2\cdot R\cdot N\cdot \sin\frac{\pi}{N}
+\]
+Omloppstiden för ett varv blir 
+\[ 
+T=\frac{S}{v}=\frac{ 2\cdot R\cdot N\cdot \sin\frac{\pi}{N}}{v}\tag{1}
+ \]
+ 
+ \medskip
+ 
+\noindent
+ \emph{Studskrafter.}
+ Varje gång pucken träffar ett hörn 
+ studsar 
+ den med sned infalls- och utfallvinkel.
+ Stötkraften $S$ ges av ekvationen
+ \[ 
+ S=M\cdot v\cdot 2\cdot \sin\,\frac{\pi}{N}
+ \]
+ där $M$ är puckens massa.
+ Se figur som klarlägger detta där man
+ utnyttjar att stötkraften är proportionell mot produkten av 
+ massa, hastighet och två gånger sinus för studsvinkeln.
+ Faktorn 2 uppträder då
+studsen är elastisk. 
+ \medskip
+ 
+ \noindent
+ \emph{Huyghens formel.}
+ Under ett varv sker $N$ studsar
+ varför  den total studskraften blir
+ \[ 
+ F= M\cdot v\cdot 2\cdot \sin\,\frac{\pi}{N}\cdot N\implies \frac{F}{T}=
+ M\cdot \frac{v^2}{R}\tag{*}
+ \]
+När $N$ är stort sker många upprepade studsar under ett tidsinterval.
+varför 
+Huyghens
+definierade  den centrumflyende centrifugalkraften enligt formeln.
+ \[
+ M\cdot \frac{v^2}{R}\tag{*}
+ \]
+ 
+\medskip
+
+\noindent
+{\bf{Kommentar.}}
+Lagen om verkan och motverkan gör  att rinken som
+blir utsatt
+för ideliga stötar av den envetna pucken,
+ samtidigt hindras ju  pucken från att lämns rinken  i ett  hörn för att fortsätta
+ i tangentens riktning och bromsas upp av sand eller gräs utanför hockeyrinken.
+ Kraften (*) är  densamma som man känner av på en karusell där vi tänker oss en person
+ placerad på ytterkanten av karusellen med avstånd $R$ från centrat medan
+ karusellen snurrar med konstant vinkelhastighet
+ $\phi$. I det fallet är personens hastighet $R\cdot \phi$ och
+ den centrumflyende centrifugalkraften blir
+ \[ 
+ M\cdot R\cdot \phi^2\tag{**}
+ \]
+ Den ökar alltså med personens vikt så
+ om en stoppkloss hindrar att personen
+ att flyga av fordras en motkraft bestämd  av (**). 
+ \medskip
+ .
+ 
+ 
+
+\centerline {\bf{Krökningsradier hos buktiga kurvor.}}
+  .
+ \medskip
+ 
+ \noindent
+Här följer Newton  mer avancerade kalkyl  om
+ centrifugalkraften hos en icke cirkulär rörelse.
+Betrakta en funktion
+ \[ 
+ y=f(x)
+ \] där $f(x)$ är en växande och konvex funktion av $x$, dvs. 
+ derivatorna $f'(x)$ och $f''(x)$ är båda $>0$. Då $x=0$ antas att
+ $f(0)=f'(0)=0$. Ett exempel kunde vara 
+ $f(x)= ax+bx^2$ där $a,b$ är två positiva konstanter.
+ Precise som i fallet med en rink  tänker vi oss  sig en vertikal vägg 
+ längs kurvan som då 
+ blir en tvångskurva. Mer precist om en partikel,
+ (tänk på en liten puck) skickas iväg
+ från origo kommer den att glida längs kurvan och utan friktion
+ tappar den aldrig fart.
+ För att matematiskt beskriva  detta införs  en tidsvariabel $t$ så att
+ partikelns tidsberoende förflyttning ges av en funktion
+  \[ 
+ t\mapsto (x(t),y(t)
+ \] 
+ där
+ $y(t)= f(x(t))$ gäller för alla $t$.
+ Partikelns fart i kvadrat blir enligt Pythagoras sats
+ summan av de kvadratiska tidsderivatorna:
+ \[ 
+ v^2=\dot x^2(t)+\dot y^2(t)
+ \] 
+ där vi har infört beteckningarna:
+ \[ 
+ \dot x(t)=\frac{dx}{dt}\quad\colon\quad
+ \dot y(t)=\frac{dy}{dt}
+ \]
+ I varje tidsögonblick verkar   tvångskurvan 
+ med en kraft $K(t)$ på partikeln som är riktad i normalen till
+ kurvan. Den har allså  komponenter i $x$- och  $y$-led
+ och  figur visar att:
+ \[ 
+ K_x(t)=-\frac{f'(x(t))}{\sqrt{1+f'(x(t))^2}}\cdot K(x(t))
+ \quad\colon\, 
+ K_y(t)=\frac{1}{\sqrt{1+f'(x(t))^2}}\cdot K(x(t))
+ \]
+\medskip
+
+\noindent 
+Obeservera  minustecknet i uttrycket hos $x$-komponenten !
+ Antag för enkelhets skull att partikeln har enhetsmassa.
+ Newtons kraftlag ger  ekvationer
+ hos  andra ordningens tidsderivator:
+  \[ 
+ \ddot x= -\frac{f'(x(t))}{\sqrt{1+f'(x(t))^2}}\cdot K(x(t))\tag{1}
+ \]
+ \[
+  \ddot y= \frac{1}{\sqrt{1+f'(x(t))^2}}\cdot K(x(t))\tag{2}
+\]
+Vi har ytterligare en ekvation:
+\[
+\dot y= \frac{d}{dt}(f(x(t))= f'(x(t))\cdot \dot x\tag{3}
+\]
+som följer av regeln
+för sammansatt derivata.
+Notera  att
+detta ger
+
+\[ 
+\frac{d}{dt}( \dot x^2+\dot y^2)=
+2\cdot (\ddot x\cdot \dot x+
+\ddot y\cdot \dot y)=
+\frac{2}{\sqrt{1+f'(x(t))^2}} \cdot K(x(t))\cdot (-f'(x(t))\cdot
+\dot x+\dot y)=0\tag{4}
+\]
+Det följer   att $v^2=\dot x^2+\dot y^2$ har 
+försvinnande tidsderivata och alltså är en konstant.
+Detta brukar  uttryckas med att den  kinetiska enerign
+bevaras.
+Låt oss  derivera (3) ännu en gång vilket ger
+\[ 
+\ddot y=f''(x(t))\cdot \dot x^2+f'(x(t))\cdot \ddot x\tag{5}
+\]
+Nu ges  $\ddot x$ och $\ddot y$ av ekvationera (1-2) och  insättning ger
+\[
+\frac{1}{\sqrt{1+f'(x(t))^2}}\cdot K(x(t))=
+f''(x(t))\cdot \dot x^2-f'(x(t)\cdot \frac{f'(x(t))}{\sqrt{1+f'(x(t))^2}}\cdot K(x(t))
+\]
+Flytta över sista termen till vänster och efter  division med
+${\sqrt{1+f'(x(t))^2}}$ erhålles
+\[
+\sqrt{1+f'(x(t))^2}\cdot K(x(t))=f''(x(t))\cdot \dot x^2\implies
+\]
+\[
+ K(x(t))=\frac {f''(x(t)}{ \sqrt{1+f'(x(t))^2}} \cdot \dot x^2\tag{6}
+\]
+\medskip
+
+\noindent
+\emph{En sista kalkyl.}
+Ekvationen  (3)  ger
+\[
+ v^2= \dot x^2+\dot y^2= (1+f'(x(t))^2)\cdot \dot x^2
+ \]
+ \medskip
+ 
+ \noindent Kombineras detta med (6) erhålles 
+  \[
+ K(x(t))=\frac {f''(x(t)}{ [1+f'(x(t))^2]^{\frac{3}{2}}}\cdot v^2\tag{*}
+ \]
+ \medskip
+ 
+ \noindent
+ {\bf{Kommentar.}} Ekvationen (*)    bestämmer
+funktionen $K$ som i  allmännhet varierar med tiden och
+tillhörande kraftvektor  får varierande riktningar.
+Faktorn framför $v^2$  visar 
+sig ha en geometrisk tolkning
+som passar ihop med Huyghens formel för det cirkulära fallet.
+Mer precist, drag  normalen från en punkt på tvångskurvan och 
+på varje punkt $p$ på normalen konstrueras cirkeln med centrum i $p$ som tangerar 
+tvångskurvan i normalens fotpunkt. Nu finns en unik punkt på normalen
+där tillhöranade cirkel tangerar kurvan med \emph{maximal kontakt}.
+Avståndet mellan centrum  för denna cirkel och fotpunkten
+kallas kurvans geometriska krökningsradie och 
+betecknas med $\rho(x)$.
+En kalkyl i Carteiska koordinater visar 
+likheten
+\[
+\rho(x)= 
+\frac{ [1+f'(x(t))^2]^{\frac{3}{2}}}{f''(x(t))}
+ \]
+ Slutsaten är att
+ \[ 
+ K(x(t))= \frac{v^2}{\rho(x(t))}
+ \]
+som alltså stämmer överens med
+Huyghens resultat vid   cirkulär rörelse.
+ Det var med kalkyler ovan som Newton
+ofta visade hur geometriska passar ihop med olika
+dynamiska
+förlopp  och det är  på så vis man
+bäst lär sig
+att
+förstå samband mellan algebra, geometri och analys.
+ \bigskip
+ 
+ \centerline
+ {\bf{Fallet med sträv tvångskurva.}}
+\bigskip
+
+
+\noindent
+Om det finns ett positivt tal $\mu$ som anger friktion mellan tvångskurvan och pucken
+förloras kinetiska energi som övergår i  värme.
+Med stöd av Newtons uttryck för $K$-funktionen ovan
+kan man bestöämma hur puckens hastighet $v$ avtar då tiden växer.
+Regeln är att friktionen
+i varje tidsögonblick
+minskar pucken hastighet $v$ enligt ekvationen
+\[ 
+\frac{dv}{dt}=-\mu\cdot K(x(t))=-\mu\cdot 
+\frac {f''(x(t)}{ [1+f'(x(t))^2]^{\frac{3}{2}}}\cdot v^2\tag{1}
+\]
+\medskip
+
+
+\noindent
+Den första likheten svarar mot att
+$K(x(t))$ är nortmaltrycket och friktionen
+är
+då $\mu\cdot K(x(t))$ som alltså bromsar upp puckens hastighet vilket uttrycks
+med andra ordnigens tidsderivata hos $v$.
+\medskip
+
+
+\noindent
+{\bf{Newtons smarta lösning.}}
+Ekvationen (1) är ett exempel på en icke-linjär andra ordningens
+differentialekvation.
+Likartade ekvationer uppträder i den celesta mekaniken när man  studerar
+planetbanor i solsystemet.
+Newtons metod är att dela upp lösningen i två
+delar. Först betraktas
+$v$ som en funktion av puckens
+$x$-koordinat.
+Vi skall alltså först söka funktionen $x\mapsto v(x)$.
+Här gäller  enligt deriveringsregler:
+
+\[
+\frac{dv}{dt}= \frac{dv}{dx}\cdot \frac{dx}{dt}\tag{2}
+\]
+Ekvationen (1) kan nu skrivas som
+
+\[
+\frac{dv}{dx}\cdot \frac{dx}{dt}
+=-\mu\cdot
+\frac {f''(x(t)}{ [1+f'(x(t))^2]^{\frac{3}{2}}}\cdot v^2\tag{3}
+\]
+Vidare gäller enligt tidigare att:
+
+\[
+v^2=(1+f'(x)^2)\cdot \dot x^2\tag{4}
+\]
+Vi ser då att (3) kan skrivas på formen
+
+\[
+\frac{dv}{dx}=-\mu\cdot
+\frac {f''(x(t)}{ [1+f'(x(t))^2]^{\frac{1}{2}}}\cdot \dot x\tag{5}
+\]
+Användes (4) följer av ovan att
+\[
+\frac{dv}{dx} = -\mu\cdot f''(x)\cdot v\tag{6}
+\]
+Med andra ord, om vi skriver $v'(x)= \frac{dv}{dx}$
+så erhålles första ordningens differentialekvation:
+\[ 
+\frac{v'(x)}{v(x)}= -\mu\cdot f''(x)\tag{7}
+\]
+Här är  $f'(x)$ en primitiv funktion till
+$f''(x)$
+och i vänsterledet står en logaritmisk derivata.
+Slutsatsen är att
+
+\[
+v(x)= v_0\cdot e^{-\mu\cdot \int_0^x\, f'(s)\cdot ds}\tag{*}
+\]
+där $v_0$ är puckens initiala hastighet.
+\medskip
+
+\noindent
+{\bf{Kommentar.}}
+Ekvationen visar att $v$ avtar med $x$ men pucken stannar aldrig helt och hållet vilket förklaras av att friktionens bromsande kraft
+minskar då hastigheten minskar.
+I fallet då tvångskurvan är en cirkel så att
+$f''(x)= a$ är en konstant och alltså
+$f'(x)= ax$ då $x\geq 0$ erhålles 
+
+\[ 
+v(x)= v_0\cdot e^{-\mu\cdot a\cdot x^2/2}
+\]
+\medskip
+
+\noindent
+{\bf{Tidsberoendet.}}
+Med hjälp   av (*) kan  det tidsberoende förloppet bestämmas 
+där man exempelvis söker funktionen $t\mapsto x(t)$.
+Här användes att
+
+\[
+v=\sqrt{1+f'(x)^2}\cdot \frac{dx}{dt}
+\]
+Med $f$ given är högerledet i (*) en känd funktion av $x$
+som betecknas med $G(x)$ och då erhålles
+
+\[
+\frac{dx}{dt}=\frac{G(x)}{\sqrt{1+f'(x)^2}}
+\]
+Med $T>0$ bestäms nu  $x(T)$  av ekvationen
+\[
+T= \int_0^{x(T)}\, \frac{\sqrt{1+f'(x)^2}}{G(x)}
+\, dx
+\]
+I det anförda specialfallet är
+integranden ovan
+\[
+\frac{1}{\sqrt{v_0}}\cdot \sqrt{1+a^2x^2}\cdot e^{\mu\cdot a\cdot x^2/2}
+\]
+För att beräkna fuktionen
+$T\mapsto X(T)$ utnyttjasu dator som ger en numeriskt lösning.
+I äldre tider utfördes
+heroiska kalkyler av ekvationer som ovan, särskilt i astronomi.
+Tva svenska astronomer och matematiker 
+sim utfört många avancerade  kalkyler utan datorer är Hugo Gyldén
+som under 1880-talet var verksam vid
+Observatoret ovanför Sveavägen samt
+Anders Lindstedt som 1885 blev professor i teoeretiskt mekanik
+vid KTH och
+senare högskolans rektor. Förutom  banbrytande forskning
+var det Lindstetds som för ett drygt sekel sedan lade grunden till
+modern ingenjörsutbildning i Sverige och
+hans namn finns som bekant på en väg framför KTH.
+
+
+ \newpage
+ 
+ 
+ 
+ \centerline{\bf{Planetbanor och satelliter.}}
+ 
+\medskip
+\noindent
+Newtons universella gravitationslag är en hörnsten för naturvetenskaperna.
+Den
+lades fram i hands banbrytande arbete
+\emph{Naturevetenskapernas  matematiska principer}
+midsommmardagen 1687.
+Lagen säger att om två partiklar 
+$p_1,p_2$
+med massor $m_1,m_2$ befinner sig på
+inbördes avstånd $r$ så verkar en kraft
+\[ 
+F=\gamma\cdot \frac{m_1\cdot m_2}{r^2}\tag{*}
+\]
+där $F$   attraherar $p_1$ mot $p_2$ och vice versa.
+Vidare är $\gamma$ en universell konstant, dvs. lika för alla
+masspartiklar. Konstantet $\gamma$ är liten, uttryckt i newtonmeter ges den 
+approximativt av
+\[ 
+\gamma=6,7\cdot 10^{-10}
+\]
+Det betyder exempelvis följande:
+Ett klot av  tung metall med täthet 10
+och radien
+10 meter är nersänkt till
+hälften i markytan.
+Dess vikt i kilogram är alltså
+\[ 
+M=\frac{4\pi \cdot 10^3}{3}\cdot 10\cdot 10^3\simeq 4\cdot 10^7
+\]
+där vi använde det grova värdet $\pi\simeq 3$.
+En nyfiken myra kryper försiktigt fram emot det nersänkta klotet och
+befinner sig
+i ett viss ögonblick på  1 meters avstånd från
+klotets cirkulära skärning med markytan.
+Enligt Newtons formel kommer nu myran att ytsättas för en kraft
+riktad mot klotets centrum som har storleken
+
+\[
+\gamma\cdot \frac{m\cdot M}{11^2}
+\]
+Notera att kraften är proportionell mot myrans vikt och tur är det för lättviktiga insekter.
+En krypande person  med lite muskler och eventuell "bilring" som väger 100 kilo
+utsättes på en meters avstånd för
+kraften
+\[
+\gamma\cdot \frac{100 \cdot 4\cdot 10^7}{11^2}
+\]
+där nämnaren är kvadraten på avståndet mellan åersonen och klotets centrum.
+med närmevärdet (*) erhålles approximativt litet grovt en dragningskraft
+\[
+25\cdot 10^{-3}
+\]
+som alltså skall uttryckas i Newtonmeter att jämföras 
+med $g$-kraften som är cirka 9,8 Newtonmeter.
+Även om kraften är liten är den alltså inte helt försumbar och
+fullt mätbar med känsliga instrument. Det var på så vis Cavendish i slutet av
+1700-talet kunde "väga jorden" och få en medeltäthet pä cirka 6 kilo per liter.
+Eftersom alla föremål
+inklusive all luft oanför oss på markytan
+ger upphov till
+en gravitation kommer resultanten till
+sist att domineras av jordklotets samlade massa och riktas 
+mot jordens centrum vilket hindrar oss från oslagbara rekord i exempelvis höjdhopp.
+Newton genomskådade  att (*) även
+reglerar planeterna banor kring solen och
+jordklotets förmåga att hålla kvar månen i ett kretslopp.
+Som bekant kunde Newton också förklara sådana fenomen som 
+tidvatten i världshaven, dvs. de orsakas av månens
+position relativt jorden som ändras
+helta tiden på grund av jordens
+rotation kring sin polaxel.
+\medskip
+
+\noindent
+{\bf{Anmärkning.}} Netwions gravtiationslag reviderades av Einstein som
+1916 ställde upp en ny formel som färdas hos partiklar som fördas med stora
+hastigheter.
+Einsteins allmänna relativitetsteori 
+betyder dock inte att Newtons lag är överspelad eftersom
+mer vardagliga förlopp med stor nogrannhet
+lyder (*).
+Här skall vi inte gå in på Einsteins ekvationer som fordrar en
+betydligt mer avancerad matematik.
+Låt oss nu beskriva hur Newton konfirmerade (*) med stöd 
+av astronomiska observationer.
+Hans första test handlade om månen.
+På 1660-tlrt var astronomin tillräckligt utvecklad för att med god precision
+mäta avståndet
+mellan måne
+och jord.
+Här antas  för enkelheten skull att avståndet är 60 jordradier
+där $R= 637\cdot 10^4$
+är jordens radie uttryckt i meter.
+Om vi  tänker oss att månen cirkulerar kring jorden i en cirkulär bana
+måste två krafter ta ut varandra. Å enda sidan
+verkar den universella gravitationen med en kvarhållande kraft 
+
+\[
+\mathcal G= \gamma\cdot \frac{M\cdot m}{60\cdot 60\cdot R^2}
+\]
+där $m$ är jordens mass och $m$ är månens massa.
+Om$ v$ är månens hastighetet uuttrycket i meter per sekund
+har vi  samtidigt den centrumflyende centrifugalkraften
+\[
+\mathcal C=\frac{m\cdot v^2}{60\cdot R}
+\]
+Likheten $\mathcal G=\mathcal C$ ger efter förkortning med månens massa
+och den gemensamma nämnaren $60\cdot R$:
+\[
+\gamma\cdot M=v^2\cdot 60\cdot R\tag{1}
+\]
+Vänsterledet uttryckte Newton med sitt äpple ty  den vardagliga $g$-kraften
+är 
+ett specialfall av (*) vilket ger ekvationen
+\[
+\gamma\cdot \frac{M}{R^2}= g\tag{2}
+\]
+För $g$ gäller 
+approximativt att $g=9,8$ meter/sekundkvadrat som testas genom
+att mätta falltiden hos
+äpplen som fallet mot marken.
+Ekvationen (1) övergår då till
+\[
+g\cdot R=v^2\cdot 60 \tag{3}
+\]
+Newton utförde  nu - förmodligen
+med darr på  pennan -  den avgörande kalkylen  som visar
+att (3) 
+gäller med hyfsad nogrannhet och på så vis konfirmera (*).
+Approximativt är ett månvarv 28 dygn vilket gör att $v$ uttryckt i meter per sekund
+bestäms av ekvationen:
+\[
+28\cdot 24\cdot 3600\cdot v=2\pi\cdot 60\cdot R\tag{4}
+\]
+Låt oss göra en grov uppskatting där 
+$R\simeq 64\cdot 10^5$ vilket ger
+\[
+28\cdot 24\cdot 3600\cdot v\simeq 2\pi\cdot 60\cdot 64\cdot 10^5
+\]
+Förkortning ger
+\[ 
+v\simeq \frac{2\pi}{6}\cdot \frac{64\cdot 10^4}{28\cdot 24}=
+ \frac{2\pi}{6}\cdot 10^4\cdot \frac{2}{3\cdot 7}
+\]
+Ekvationen (3) med närmevärdet $g\simeq 10$
+ger då
+\[ 
+10\cdot 64\cdot 10^5\simeq  \frac{4\pi^2}{36}\cdot
+10^8\cdot \frac{4}{21^2}\cdot 60\tag{*}
+\]
+Med miniräknare kollas att denna likhet gäller med hyfsad nogrannhet.
+\bigskip
+
+
+\noindent
+{\bf{Kommentr.}}
+Naturligtvis genomförde Newton betydligt mer precisa kalkyler.
+Speciellt visade han  varför den tidens kända  
+astronomiska observationer av planeten Mars
+stämmer väl överens med (*).
+mer precist gäller att kroppar som kretsar  sig i ett
+central kraftfält med solen som centrum har
+en ellips som rörelsebana.
+beviset för detta är synnerligen vackert.
+Betrakta alltså en planet  med massa $m$
+som är utsatt för solens gravitation. det betyder att om
+$r$ är planetens avstånd till solen i ett viss tidsögonblick så 
+attraheras den med kraften
+\[
+\gamma\cdot \frac{m\cdot M}{r^2}
+\] 
+där $m$ är solens massa.
+med solen placerad i origo använder vi polära koordinater och sätter
+\[
+ x=r\cos\theta\quad\colon\quad
+y=r\sin \theta
+\]
+med $t$ some tidsvariabel har planeten en hastighetsvektor
+\[
+{\bf{v}}= (\dot x,\dot y)
+\] 
+där $\ddot x=\frac{dx}{dt}$ är tidsderivata och samma för $y$.
+Accelerationsvektorn blir
+\[
+{\bf{a}}= (\ddot x,\ddot y)
+\]
+Nu är gravitationskraften i varje tidsögonblick riktad
+i vektor mellan solen och planeten.
+Det betyder enligt Newtons kraftlag
+vektorn ${\bf{a}}$ är parallell med
+vektorn från solen. Med andra ord finns i varje tidsögonblick
+ett reellt tal $s$ så att
+\[
+{\bf{a}}= s\cdot (\cos\,\theta,\sin \theta)
+\]
+Detta svarar mot att
+vektorn
+${\bf{a}}$ är $\perp$  mot $(-\sin\theta,\cos\theta)$, dvs. att
+\[
+-\sin\theta\cdot \ddot x+
+\cos\theta\cdot \ddot y=0
+\]
+Efter multilikation med $r$ betyder detta att
+\[
+-y\ddot x+x\ddot y=0\tag{1}
+\]
+\medskip
+
+\noindent
+{\bf{Keplers arealag.}}
+Notera först att
+\[
+\frac{d}{dt}(x\dot y-y\dot x)=x\ddot y-y\ddot x\tag{2}
+ \]
+Enligt (1) försvinner högerledet vilket
+betuyder att vänsterledets tidsderivata är noll. Under planetens rörelse finn därför
+en konstant $\mathcal K$ sådan att
+\[
+x\dot y-y\dot x=\mathcal K\tag{3}
+\]
+Låt oss nu ta tidsderivstor i de två polära ekvationerna. Vi använder nu det 
+från (0) ovan vilket ger:
+\[
+x\dot y= r\cos\theta\cdot (\dot r\sin\theta+ r\cos\theta\cdot \dot\theta)
+\quad\colon\, y\dot x= r\sin\theta\cdot (\dot r\cos \theta- r\sin \theta\cdot \dot\theta)
+\]
+Tillsammans med trigonmetriska ettan ger detta ekvationen
+\[
+x\dot y-y\dot x=r^2\cdot \dot \theta
+\]
+Det följer av (3) att man har
+
+\[ 
+r^2\cdot \dot \theta=\mathcal K\tag{*}
+\]
+Denna ekvation uttrycker Keplers arealag från 1620
+som säger att
+arean som
+bildas av området mellan två solradier
+vid olika tidpunkter är proportionell mot tiden för en sådan förflyttning.
+Läsaren bör illustrera detta med en figur !
+
+\medskip
+
+\noindent
+{\bf{Newtons ekvationer.}}
+Tillämpas kraftekvationen för planetens $x$-komponent erhålles
+
+\[ 
+m\cdot \ddot x=-\gamma\cdot {m\cdot M}{r^2}
+\]
+Här kan vi dividera bort planetens massa och sätter
+$C=\gamma\cdot m$ så att
+\[
+ \ddot x=-\frac{C}{r^2}
+ \]
+ Vi har också att
+ \[ 
+ \dot x=\dot r\cdot \cos\theta- r\sin\theta\cdot \dot \theta
+ =\dot r\cdot \cos\theta- \frac{\mathcal K}{r}\cdot \sin\theta
+\] 
+där sista likheten följer via Keplers arealag
+som ersätter
+$\dot\theta$ med $\frac{\mathcal K}{r^2}$.
+Ytterligare en derivering ger
+
+\[
+\ddot x=\ddot r\cdot \cos\theta- \dot r\cdot \sin\theta\cdot \frac{\mathcal K}{r^2}
++\frac{\mathcal K}{r^2}\cdot \dot r\cdot \sin\theta-
+\frac{\mathcal K}{r}\cos\theta\cdot \frac{\mathcal K}{r^2}=
+\ddot r\cdot \cos\theta-
+\frac{\mathcal K^2}{r^3}\cos\theta\tag{i}
+\]
+Vi har också kraftekvationen
+
+\[ m\cdot \ddot x=
+-m\cdot \frac{C}{r^2}\cdot \cos\theta\tag{ii}
+\]
+Tlllsammans ger (i-ii) efter förkortning med $\cos\theta$:
+
+\[
+\ddot r-
+\frac{\mathcal K^2}{r^3}=
+-\frac{C}{r^2}\tag{iii}
+\]
+Detta är en andra ordningens differentialekvation
+i $r$ som funktion av $t$.
+Dess lösning är  besvärlig så istället
+bestämmer  Newtnon en ekvation $r=r(\theta)$  som beskriver  planetens
+bana.
+\medskip
+
+\noindent
+{\bf{Övning.}}
+Vi har att $r(t)= r(\theta(t))$ som ger
+\[ \dot r= 
+\frac{dr}{d\theta}\cdot \dot \theta=
+\frac{dr}{d\theta}\cdot \frac{\mathcal K}{r^2}
+\]
+Vis att ytterligare
+en derivering ger
+ekvationen
+
+\[ 
+\ddot r=
+\frac{d^2r}{d\theta^2}\cdot \frac{\mathcal K^2}{r^4}
+-[\frac{d r}{d\theta}]^2\cdot \frac{2\mathcal K^2}{r^5}\tag{iv}
+\]
+\medskip
+
+\noindent
+Från (iii) samt (iv) erhålles
+\[
+\frac{d^2r}{d\theta^2}\cdot \frac{\mathcal K^2}{r^2}
+-[\frac{d r}{d\theta}]^2\cdot \frac{2\mathcal K^2}{r^3}=
+\frac{\mathcal K^2}{r}-C
+\tag{*}
+\]
+\medskip
+
+\noindent
+{\bf{Newtons inversion.}}
+För att lösa (*) införs variabeln $u= \frac{1}{r}$.
+Då erhålles enligt deriveringsregler:
+\[
+\frac{du}{d\theta}= -\frac{dr}{d\theta}\cdot r^{-2}\implies
+\frac{d^2u}{d\theta^2}= -\frac{d^2r}{d\theta^2}\cdot r^{-2}+
+2\cdot [\frac{dr}{d\theta}]^2\cdot r^{-3}
+\]
+\medskip
+
+\noindent Tillsammans med (*) följer att
+\[
+\mathcal K^2\cdot \frac{d^2u}{d\theta^2}=C-\mathcal K^2\cdot u\tag{**}
+\]
+Detta är en "snäll" andra ordningens linjär differentialekvation.
+Notera att den kan skriva på formen
+\[
+ u''(\theta)+u(\theta)=\frac{C}{\mathcal K^2}\tag{***}
+\]
+\medskip
+
+
+\noindent
+{\bf{Det cirkulära fallet.}}
+Antag att planeten rör sig i en cirkulär bana där då $r(\theta)= R$ är konstant.
+Då blir $u''(\theta)=0$ och (***) svarar mot ekvationen
+
+\[
+\frac{1}{R}= \frac{C}{\mathcal K^2}\tag{i}
+\]
+Vi påminner nu om att
+\[
+\mathcal K=R^2\cdot \dot\theta
+\]
+Här är $\dot\theta$ en vinkelhastighet och planetens
+hastighet $v= R\cdot \dot \theta$ vilket ger
+\[
+v=\frac{\mathcal K}{R}
+\]
+Alltså svarar (i) mot ekvationen
+
+\[
+\frac{1}{R}=\frac{C}{v^2R^2}\implies\frac{v^2}{R}=
+\frac{C}{R^2}
+\]
+den sista likheten utrycker Huyghens formel eftersom
+$\frac{v^2}{R}$ är den centrumflyende centrifugalkraften medan
+$\frac{C}{R^2}$ svarar mot solens kvarhållande gravitation.
+\medskip
+
+
+\noindent
+{\bf{Att väga solen.}}
+Jordklotet rör sig nästan i en cirkulär bana kring solen. Låt
+oss anta att medelavståndet är $R$ varvid man har ekvationen
+\[
+v^2=C\cdot R
+\]
+Omloppstiden ör ett år och med 365 dagar erhålles jordklotets hastighet i meter
+per sekund:
+\[
+365\cdot 24\cdot 3600\cdot v=2\pi\cdot R
+\]
+det följer att
+\[ 
+C=\frac{4\pi^2\cdot R}{(365\cdot 24\cdot 3600)^2}
+\]
+Vi påmninner om att
+\[ 
+C=\gamma\cdot M
+\]
+där $M$ är solens massa som alltså¨ges av ekvationen
+\[
+M= 
+\gamma^{-1}\cdot \frac{4\pi^2\cdot R}{(365\cdot 24\cdot 3600)^2}
+\]
+varvid $M$ anger solens vikt i kilo.
+Ovan uppträder  mycket stora tal.
+Avståndet till solen är som bekant rätt stort
+eftersom det tar cirka 8 sekunder för ljus att färdas från sol till jord
+vilket betuyder att
+\[ 
+R\simeq 8\cdot 300 000\cdot 10^3= 8\cdot 3\cdot 10^9
+\]
+Efter förkortning med tio-potenser erhålles
+\[ 
+M=\gamma^{-1}\cdot \frac{24\cdot 4\pi^2\cdot 10^5}{(365\cdot 24\cdot 36)^2}
+\]
+Nu gäller  också att
+\[ 
+g\simeq \gamma\cdot\frac{m}{R_*^2}\implies \gamma^{-1}=
+\frac{m}{g\cdot R_*^2}
+\]
+varvid $m$ är jordklotets massa och $R_*$ jordradien.
+
+
+
+
+
+
+Om $c_*$ är medelvärdet för jordens masstäthet
+blir
+\[ 
+m= c_*\cdot 4\pi R_*^3/3
+\]
+Då erhålles
+\[
+g\simeq \gamma\cdot c_*\cdot \frac{4\pi}{3}\cdot R_*
+\]
+
+
+
+
+
+
+
+\medskip
+
+\noindent
+{\bf{Det allmänna fallet.}}
+Differentialekvationen (***) har den allmänna lösningen
+
+\[ 
+u(\theta)=A\cdot \cos(\theta+\theta_0)+ C
+\] 
+där $A$ och $\theta_0$ är konstanter.
+En vridning i $\theta$ ändrar endast vinkelskalan
+så utan inskränkning kan vi anta att $\theta=0$ och skulle $A<0$ väljes
+$\theta=\pi$ så vi kan också anta att $A\geq 0 $ och har 
+ekvationen
+\[
+u(\theta)=A\cdot \cos\theta + \frac{C}{\mathcal K^2}
+\]
+Fallet $A=0$ ger en cirkulär rörelse
+Nu antas  att $A>0$
+varvid
+två fall kan uppträda.
+Om $A>\frac{C}{\mathcal K^2}$ får $u$ ett nollställe vilket  svarar mot att
+$r=u^{-1}$ blir $+\infty$.
+Detta inträffar för besökande kometer i solsystemet
+som alltså
+dyker upp för att seedan försvinna ut i stjärnornas 
+"oändliga värld".
+Om $A<\frac{C}{\mathcal K^2}$ erhålles en periodisk funktion
+av $\theta$ och planeten stannar kvar
+i solststemet.
+Dess maximala avstånd $r^*$ till solen svarar mot att minimera $u$
+och här gäller att
+\[
+\frac{1}{r^*}=\frac{C}{\mathcal K^2}-A
+\]
+Det minimala avståndet uppfyller ekvationen
+\[
+\frac{1}{r_*}=\frac{C}{\mathcal K^2}+A
+\]
+\medskip
+
+\noindent
+{\bf{Kritisk hastighet.}}
+Vid tidpunkten $t=0$ antas att planeten - eller kometen - befinner sig på
+avståndet $R$ från solen och rör sig momentant med
+en hastighet $v$ som är $\perp$ till solradien.
+Detta betyder att $v=R\cdot \dot  \theta(0)$ vilket ger
+\[ 
+\mathcal K= R\cdot v
+\]
+Samtidigt gäller enligt (xx) att
+\[ 
+\frac{1}{R}=A+\frac{C}{\mathcal K^2}
+\]
+Det elliptiska fallet svarar enligt ovan mot att
+\[
+\frac{1}{R}<\frac{2C}{\mathcal K^2}=\frac{2C}{R^2\cdot v^2}
+\]
+Slutsatsen är att vi erhåller en planetrörelse om och endast om
+\[
+v^2<\frac{2C}{R}\tag{*}
+\]
+\medskip
+
+
+\noindent
+{\bf{Datorövning-}}
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ \noindent
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+
+
+
+\newpage
+
+
+
+ 
+\centerline{\bf{Cosinusteoremet och komplexa tal.}}
+
+
+\medskip
+
+\noindent
+Låt $\Delta$ vara  en triangel vars sidor har länderna
+$a,b,c$. Om $\alpha$ är vinkeln i  
+hörnpunkten  
+som står emot sidan $a$ så gäller ekvationen
+\[ 
+\cos\alpha=\frac{b^2+c^2-a^2}{2bc}\tag{*}
+\]
+Låt oss hörleda denna ekvation med
+hjälp avkomplexa tal.
+Utan inskränkning kan hörnet där $\alpha$-vinkeln bildas vara origo
+och sidorna $b$  och
+$c$ representeras nu  av två komplexa tal
+$z$ och $w$.
+Detta ger    $a^2=|z-w|^2$, dvs. kvadraten hos absoluta
+beloppet hos
+det komplexa talet $z-w$.
+En observation är  att i (*) man kan ändra skalan och ersätta $z$ med $rz$ och $w$
+med $rw$ for varje reellt tal $w$.
+Vidare är den sökta likheten invariant under rotation. På så vis reduceras beviset till
+fallet när det komplexa talet $w=1$ och med figur observeras att när $z=x+iy$ blir
+\[ 
+\cos\alpha=\frac{x}{|z|}
+\]
+Det återstår endast  att visa likheten
+\[
+\frac{x}{|z|}=\frac{|z|^2+1-|1-z|^2}{2|z|}\tag{1}
+\]
+Här försvinner $|z|$ och (1) följer av att
+\[
+|z|^2+1-|1-z|^2= x^2+y^2+1-(x-1)^2-y^2= 2x
+\]
+\medskip
+
+
+
+\noindent 
+{\bf{Omskriven cirkel.}}
+Låt $\Delta$ vara en triangel med hörnpunkter
+$A,B,C$. Då existerar en unik cirkel $\mathcal C$
+som passerar genom de tre hörnpunkternan och 
+dess radie $R$ ges av  formeln
+\[
+R=\frac{a}{2\sin \alpha}\tag{*}
+\]
+där
+$\alpha$ är en hörnvinkel och
+$a$ längden hos motstående sida. Notera att sinusteoremet 
+medför att högerledet är oberoende av vilket hörn som väljes i triangeln.
+\medskip
+
+\noindent
+\emph{Bevis}.
+Tag en cirkel med någon radie $R$ och skriv in en triangel. Nu är $a$ en korda i cirkeln och 
+$\alpha$ en periferivinkel
+till
+denna korda. Vi påminner  att medelpunktsvinkeln är dubbelt så stor, dvs.
+$2\alpha$. Drag  höjden från cirkelns medelpunkt till
+kordan $a$.
+Figur visar två rätvinkliga trianglar
+och definitionen av sinusfunktionen ger 
+\[ 
+\sin\alpha=\frac{a}{2R}
+\] 
+varefter (*) följer.
+\medskip
+
+\noindent
+{\bf{Övning}}.
+Visa att medelpunktsvinkeln alltid  är dubbelt så stor som
+en periferivinkel.
+\medskip
+
+\noindent
+{\bf{Konstruktion av omskriven cirkel }}.
+När en triangel $\Delta$ är given skall den
+den omskrivna cirkeln
+$\mathcal C$ konstureras.
+\medskip
+
+\noindent
+\emph{Lösning.} 
+Låt $A$ och $B$ vara två av triangelns hörn.
+Orten för punkter med lika avstånd till
+$A$ och $B$ är
+linjen som ges av mittpunktsnormalen till
+sträckan mellan $A$ och $B$.
+Man kan flytta origo och rotera planet och utan inskränkning anta
+att $A=(0,a)$ och $B=(0,-a)$ for något $a>0$ vilket medför att den omskrivna
+cirkeln 
+$\mathcal C$ har sin mittpunkt på $x$-axeln, d.vs. in en punkt 
+$(x_*,0)$. Om 
+triangelns  tredje hörn $C$ har koordinater $(x,y)$
+gäller nu enligt Pytagoras sats:
+\[ 
+x_*^2+a^2= (x_*-x)^2+y^2\implies
+2xx_*=x^2+y^2-a^2
+\]
+Notera att $x$ kan vara både $>0$ ewller $<0$. med figurer och olika val av
+$(x.y)$ kan läsaren illustrera den omskrivna cirkeln och
+konfirmera ekvationen ovan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf{Höjdernas skärningspunkt i en triangel}}.
+
+\medskip
+
+\noindent
+Betrakta en triangel $\Delta$ där alla vinklar är strikt mindre än 90 grader, dvs.
+de är spetsiga. Låt hörnen vara $A,B,C$. 
+Höjdlinjen från $A$ som
+är 
+vinkelrät mot sidan $BC$ stannar inne i triangeln. Beteckna denna linje med $h_A$.
+På samma vis bildas höjdlinjerna
+$h_B$ och $h_C$.
+
+\medskip
+
+\noindent
+{\bf{Teorem.}} \emph{De tre höjdlinjerna skär varandra i en punkt.}
+
+
+\medskip
+
+\noindent{\bf{Kommentar.}}
+Satsen
+har under drygt två årtusenden  ingått i läroböcker
+i matematik. Bevisets konceptuella svårighetsgrad är
+fullt jämförbart  stoff som
+ingår till och med  fördjupningskurser i högskolematematik.
+Det är alltså ingen enkel uppgift att bevisa påståendet. En hjälp är förstås att  
+rita olika $\Delta$ och "testa" utsagan genom att rita in höjderna och se att allt stämmer.
+Här går också en boskillnad mellan "obligatoriskt
+eller kursivt material" i
+matematikundervisning.
+Dessvärre finns en  tendens  att "proppa in" en massa olika formler i läroböcker utan
+att redovisa varför de gäller och låta examensuppgifter reduceras till
+att
+med stöd  av utantill-läxor lösa  uppgifter.
+I längden blir detta ohållbart. Utan  bevis är det
+svårt att få överblick och framförallt inse samband mellan olika matematiska utsagor.
+Till detta kommer att det borde vara en utmaning och
+ge stimulans att förstå bevis av satser som den ovan nämnda.
+En tolvåring som fascinerades av
+satsen ovan var Albert Einstein .
+Hans syster Maja har beskrivit
+hur Albert som skolpojke brukade   ägna all ledig tid under helgerna åt att
+tänka på olika upgifter i euklidisk geometri:
+ \emph{Knatten upplevde ett  lyckorus
+de gånger han lyckats med att lösa ett geometriskt problem, helst på egen hand utan
+att i detalj följa lärobokens lösning.}
+I sin  självbigorafi \emph{Nekrolog} som Einstein skrev i
+60-årsåldern beskriver han sina känslor när han 
+lyckats förstå satsen ovan:
+\emph{Som  tolvåring upplevde
+jag ett under av helt annat slag än under mitt tidigare liv.
+I ett häfte om euklidisk plangeometri fanns utsagan att de tre höjderna i en triangel alltid skär varandra i en punkt - något som intet vis är en självklarhet men som ändå
+kan bevisas med sådan säkerhet att varje tvivel är uteslutet.
+Denna klarhet gjorde ett obeskrivligt intryck på mig.}
+\medskip
+
+\noindent
+Att   nu under 2000-talet 
+söka "tävla med Einstein" för att göra nya upptäckter om
+naturens lagar torde vara rätt svårt
+- det räcker med att 
+nämna den betydande roll Einstein spelat
+för att vi idag
+kan se TV från världens alla hörn och ringa vart som helst  jorden med "nallar".
+En extra precision kommer från  relativitetsteorin som behövs för att 
+sända  rymdfarkoster till
+Mars. I det perspektivet är det intressant att Einsteins
+tro till sin egen förmåga och
+vilja  att studera vidare stimulerades  av tidiga studier i euklidisk geometri.
+\medskip
+
+\noindent
+{\bf{Hur bevisas satsen.}}
+Läsaren kan försöka upptäcka ett eget bevis med
+fyndiga konstruktioner. 
+En annan - måhända tråkigare men   effektiv metod 
+infördes  av René Descartes på 1630-talet när
+han skapade den analytiska geometrin där koordinater
+införs för att med algebraiska ekvationer härleda geometriska satser.
+Så här visades satsen ovan av Descartes:
+Utan inskränkning kan vi anta att de tre hörnpunkterna är 
+\[
+A=(0,0)\quad\colon\, B=(1,0)\quad\colon C=(a,b)
+\]
+där $0<a<1$ och $b>0$. Som figur visar är vinklarna i denna triangel spetsiga för all 
+sådana par av $a$ och $b$.
+Nu uttnyttjade Descartes
+formel för linjer som är vinkelräta mot varandra.
+I vårt fall är punkterna på 
+linjen som passerar $(1,0)$ och är vinkelrät mot sidan
+$AB$ givna på formen
+\[ 
+x=1- bs\quad\colon y=as\tag{i}
+\] 
+där $s$ genomlöper reella tal. Orten för linjen från $AS$ som är vinkelrät till
+sträckan $BC$ ges av
+\[ 
+x=bt\quad\colon y= (1-a)t\tag{ii}
+\]
+I skärningspunkten $p$ mellan höjderna $h_A$ och $h_B$ gäller nu
+ekvationerna:
+\[
+1-bs=bt\quad\colon\, as=(1-a)t
+\]
+Här kan $s$ elimeras för att bestämma $t$.
+Vi ser att
+\[
+\frac{1-bt}{b}=\frac{(1-a)t}{a}=0\implies t=\frac{a}{b}
+\]
+\medskip
+
+
+\noindent
+\emph{Slutsats.}
+Enligt (i) är $p$:s $x$-koordinatat $bt=b\cdot \frac{a}{b}=a$.
+Men det betyder att $C$ och $P$ har samma $x$-koordinater så att
+linjen 
+från $C$ genom $P$ är lodrät, dvs. den skär $x$ -axeln i en rät vinkel vilket betyder 
+att man dragit höjden $h_C$ och satsen är bevisad.
+
+\bigskip
+
+\centerline{\bf{En svårare uppgift.}}
+
+\bigskip
+
+\noindent
+Då Einstein 1896 som 17-åring avlade studentexampen 
+var proven milt talat tuffa - det handlade ju också om att få
+inträdesbiljett till
+den tidens förnämsta tekniska högskolan i
+Zürich. Geometriprovet bestod av två uppgifter med 
+med fyra timmars skrivtid. Det kan ju låta generöst men frågorna var
+inte så enkla. Ett exempel är följande : Låt $\Delta$ vara en triangel med hörn $A,B,C$
+och $\mathcal C$  den inskrivna cirkeln. Låt $1, \frac{1}{2}$ sant $\frac{1}{3}$
+vara avstånden
+mellan cirkelns medelpunkt och de tre hörnpunkterna.
+Uppgiften är att bestämma cirkelns radie som betecknas med
+$\rho$.
+\medskip
+
+\noindent
+{\bf{Lösning.}} Cirkelns medelpunkt är skärningspunkten för bisektriserna
+Så om $\alpha,\beta,\gamma$ är hörnvinklarna följer enligt definition
+av sinus funktionen:
+
+\[
+\sin\, \frac{\alpha}{2}=\rho
+\quad\colon\,
+\sin\, \frac{\beta}{2}=2\rho
+\quad\colon\,
+\sin\, \frac{\gamma}{2}=3\rho
+\]
+För att lösa ut $\rho$ i dessa tre ekvationer utnyttjade Einstein den
+trigonometriska formeln:
+\[
+\sin^2\frac{\alpha}{2}
++\sin^2\frac{\beta}{2}+
+\sin^2 \frac{\gamma}{2}+2\cdot 
+\sin\alpha\cdot \sin\beta\cdot \sin\gamma=1\tag{*}
+\]
+Efter insättning
+i de tre ekvationerna ovan följer att
+\[ 
+12\rho^2+14\rho^2=1
+\]
+Einstein angav lösningen med Cardanos formel samt genomförde en numeriskt kalkyl som
+angav närmevärdet med 3 demcimalers nogrannhet till
+$\rho=0,243$.
+\medskip
+
+\noindent
+{\bf{Svår övning.}} Härled formeln (*).
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centerline{\bf{Arkimedes tält}}
+\bigskip
+
+
+\noindent
+Ett vilsegånget gäng i ödemarken
+på säg fyra personer
+är utsatta för både mygg och regn framåt kvällen. Det enda skyddet är
+ett medhavt  plastskynke som  kan skydda både mot regn och mygg.
+Strax innnan skymmningen blivit alltför tät upptäcker
+skaran  sju ganska oregelbundet 
+placerade 
+krokar som är väl förankrade i marken.
+De innesluter en area som vi tänker oss är fem kvadratmeter
+men den bildade sjuhörningen är inte särskilt regelbunden.
+Hursomhelst, här kan 
+ett efterlängtat tält sättas upp !
+En tämligen rak gren som är två meter lång
+bryts av från ett träd. Därefter uppstår   palaver inom  gruppen.
+Plastduken måste  p g a myggen
+vara så tät    att viss syrebrist torde uppstå.  Tre av personerna som inte
+känner till
+Arkimedes volymformel funderar därför "skarpt" på
+var trädgrenen skall sättas ner för att plastduken sedan ger ett tält med maximal volym.
+Den fjärde personen som vet bättre funderar
+på  det relevanta problemet
+hur grenen bör placeras
+för att
+göra  det så bekvämt som möjligt
+för  fyra personer  i tältet eftersom hänsyn måste tas till
+sluttande innervägg sedan plastduken spänts upp i
+de sju krokarna. Efter att ha tvingats förklara för de tre andra i gruppen att Arkimedes 
+för drygt tvåtusen år sedan 
+visat att diskussionen om inneslutet volym 
+saknar relevans kunde alla enas om bästa placering av grenen.
+Antag att   grenens spets hamnar 
+en och en halv meter ovanför marken sedan en halv meter skjutis ner
+för att den står stadigt.
+\medskip
+
+\noindent
+{\bf{Teorem.}}
+\emph{Den inneslutna volymen $V$ beror inte var tältpinnen placerats och ges av formeln}
+\[ 
+V= \frac{5\cdot 1,5}{3}\quad\text{kubikmeter} 
+\] 
+\medskip
+
+\noindent{\bf{Lösning.}}
+För att visa denna   volymformel
+genomförde den geniale grekiske matematikern Arkimedes
+följande tankegång:
+Parallellelt med markytan  tänker man sig nya sjuhörningar
+med varierande
+höjd $x$ ovanför marken där $0<x<1,5$.
+Varje sådan plan sjuhörning
+har en area betecknad med $A(x)$.
+Grenens spets befinner sig på avståndet $1,5-x$ och 
+lagen om skaländringar ger likheten
+\[
+A(x)= 5\cdot \frac{(1.5^2-x)^2}{1.5^2}
+\]
+Får ett stort positivt heltal väljes nu
+\[
+ x_k= 1.5\cdot \frac{k}{N}\quad\colon 0\leq k\leq N-1
+\]
+Om  $N$ är stort blir den innestänga volymen med stor nogrannhet lika med
+\[
+\frac{1.5 }{N}\cdot \sum_{k=0}^{N-1}\,5\cdot (1-\frac{k}{N})^2
+\]
+\medskip
+
+\noindent
+Volymformeln följer nu så snart vi har visat följande gränsvärdesformel:
+\[
+\lim_{N\to\infty}\, 
+\frac{1}{N}\cdot \sum_{k=0}^{N-1}\,(1-\frac{k}{N})^2=\frac{1}{3}
+\]
+Läsaren ser lätt att detta är ekvivalent med gränsvärdeslikheten
+\[
+\lim_{N\to\infty}\, 
+\frac{1}{N^3}\cdot \sum_{k=1}^N\,k^2=\frac{1}{3}\tag{*}
+\]
+\medskip
+
+\noindent
+För att visa (*) sätter vi
+\[
+S_N= \sum_{k=1}^N\,k^2
+\] 
+Arkimedes gjorde nu ansatsen
+\[ 
+S_N= AN^3+BN^2+CN+D
+\] 
+där konstaterna $A,B,C,D$ skall bestämmas.
+För detta utnyttjas att
+\[ (N+1)^3= N^3+3N^2+3N+1
+\]
+Eftersom $S_{N+1}S_N= (N+1)^2= N^2+2N+1$ fäljer nu att
+\[
+3AN^2+3AN+1+2BN+B+C=N^2+2N+1
+\]
+Likheten skall gälla för all $N$ vilket ger
+\[
+A=\frac{1}{3}\quad\colon B=\frac{1}{2}\quad\colon C=-\frac{1}{2}
+\] Alltså
+gäller
+\[
+ S_N= \frac{N^3}{3}+\frac{N^2}{2}-\frac{N}{2}+D
+\]
+konstanten $D$ bestäms av att $S_1=1$ som ger $D=-\frac{1}{3}$.
+Av denna exakta formel hos talföljden $\{S_N\}$ inses lätt att
+gränsvärdesformeln (*) gäller.
+\medskip
+
+\noindent
+{\bf{Kommentar.}} 
+Naturligtvis genomförde Arkimedes
+långt mer avancerade
+kalkyler, bl.a. för att beräkna båglängder hos krokiga linjer
+och även  areor hos buktiga ytor.
+Volymformeln ovan utnyttjades av Isaac Newton  
+för att härleda en rad fundamentala formler med anknytning till
+fysik.
+Efter  omfattande fysikaliska och atronomiska
+försök 
+och observationer  som pågick i två årtionden
+publicerade Newton  midsommardagen 1687
+det för matematikvärldens viktigaste
+arbetet  någonsin.
+Här ingår tre större volymer med titeln 
+\emph{Naturvetenskapernas matematiska principer}.
+Det är ingen överdrift
+att säga  matematiken knappast torde ha den roll
+den får spela nuförtiden utan de pionjärinsatser
+som gjordes
+av ämnets två giganter, Arkimedes och Newton.
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+\centerline{\bf{Lantmätaren och sinusfunktionen}}
+
+\bigskip
+
+\noindent
+Vi tänker oss ett slätt landskap och befinner oss i en punkt $A$.
+En träpinne är placerad i marken på ett känt avstånd från
+$A$, exempelvis    en kilometer.
+Lite längre bort i terängen snett åt höger finns ett litet hus  och uppgiften är att
+räkna ut avståndet mellan $A$ och huset.
+Till hjälp har man en vinkelmätare som  består av ett rör som
+kan siktas in mot det föremål man vill betrakta och dessutom kan
+röret vridas på ett stativ försett med
+en gradskiva.
+I punkten $A$ kan lantmätaren   mäta synvinkeln
+$\alpha$ mellan träpinnen och huset.
+Vi föreställer oss att träpinnen och huset befinner sig på andra sidan av en flod 
+medan lantmätaren obehindrat kan
+förflytta sig vinkelrät mot
+siktlinjen mellan $A$ och träpinnen på sin sida av floden.
+Avståndet $L$ mellan $A$ och huset bestäms nu på följande vis: Sedan
+$\alpha$ observerats  förflyttar sig lantmätaren vinkelrät mot
+siktlinjen mellan trädpinnen och $A$
+och går en sträcka $S$ fram till en punkt $P$ där 
+synvinkeln mellan $P$ och huset är 90 grader.
+\medskip
+
+\noindent
+{\bf{Lösning.}}
+Det sökta avståndet $L$ ges  av formeln
+\[ 
+L=\frac{S}{\sin\,\alpha}
+\]
+Beviset av formeln följer enligt nedanstående figur
+som till att börja med visar att vinkeln $\alpha$ utnyttas för att
+erhålla
+likheten
+\[ 
+\frac{\cos\,\alpha}{\sin\alpha}= \frac{\lambda}{S}\tag{1}
+\]
+Efter kvadrering erhålles
+\[
+ \lambda^2=S^2\cdot \frac{\cos^2\,\alpha}{\sin^2\alpha}\tag{2}
+\] 
+Pythagoras sats ger:
+\[ 
+L^2=S^2+\lambda^2= S^2(1+ \frac{\cos^2\,\alpha}{\sin^2\alpha})
+S^2\cdot \frac {\cos^2\,\alpha}{\sin^2\alpha}{\sin^2\alpha}\tag{3}
+\] 
+Ttrigonmetriska ettan ger nu:
+\[ 
+L^2=\frac{S^2}{\sin^2\alpha}\tag{4}
+\] 
+Tar vi kvadratroten på båda sidor följer formeln (*).
+\medskip
+
+
+\centerline{\bf{En areaformel.}}
+\medskip
+
+
+\noindent
+Ett område är inhägnat med
+stängsel som
+bildar en sluten styckvist linjär kurva vars hörn är 
+stolpar på lite lagom avstånd som bär upp stängslet.
+Vår (begåvade !) lantmätare - på uppdrag av taxeringsmyndighet -
+besöker området men blir mött
+av skällande
+vakthundar och en illmarig ägare som
+hoppas att
+lantmätaren inte kan klara uppgiften att 
+mäta det inhägnade  områdets area, särskilt som stolparna är placerade
+lite hur som helst
+varför stängslet utgör en oregelbunden månghörning. 
+Men ägaren har underskattat lantmätarens 
+förmåga som utan att bry sig om
+ägarens grimaser
+inleder en rask
+promenad kring stängslet- vi kan tänka oss att det
+är 4 kilometer långt med en massa inskjutande och utskjutande hörn kring 113
+utplacerade stolpar.
+Ägaren och hans hundar blir litet  oroade när dom upptäcker att  lantmätaren 
+är utrustad med stegmätare samt 
+stannar upp vid varje stolpe och noga kollar en medhavd
+gradskiva.
+Efter fullbordad promenad 
+antecknar lantmätaren arean och delger
+taxeringsmyndighetens regler för skatt eftersom området omsluter
+X många kvadratmeter. Här kan  tilläggas  att en medhavd kalkylator 
+underlättat lantmätarens kvicka uträkningar.
+Ägaren blir  häpen eftersom lantmätarens siffra stämmer 
+väl överens 
+med hans egenhändigt
+uppmätta siffra som till skillnad från lantmätarens
+knappt timslånga promenad
+fordrat   en dryg veckas sysselsättning 
+med hjälp av en fyrkanting matta som ägaren släpat    runt med för att 
+succesivt täcka små bitar av 
+inhägnaden, detta  inspirerad av  en "areakalkyl" som 
+varit beskrivet på
+datorns "bloggnät".
+Nu var detta "matematisk recept" dessvärre amatörmässigt
+och berättade inte alls om den effektiva metod lantmätarenn använde sig av, dvs.
+en vacker area formel som härleddes av 
+Pascal och    Descartes på 1640-talet.
+
+
+\medskip
+
+\noindent
+{\bf{Areaformeln.}}
+Givet är en enkel  sluten kurva $\Gamma$. Vi kan anta att första stolpen är i origo
+och nästa placerad i en punkt $p_1$ på positiva $x$-axeln. Sedan följer punkter
+$p_2,\dots,p_N$ och sista linjestycket går från
+$p_N$ till
+origo. 
+Samtliga avstånd $\ell_k= |p_{k+1}-p_k|$ antas kända.
+Här är $p_0=p_{N+1}=(0,0)$
+Låt vidare $\{\alpha_k\{$ vara yttervinklarna   mellan sträckorna. 
+ Se figur som  visar att
+$0<\alpha_k<\pi$ gäller för all $1\leq k\leq N$.
+Lantmätaren noterat vinklarna  $\alpha_1,\ldots,\alpha_N$
+under  promenaden.
+Låt $\{x_k\}$ beteckna $x$-koordinaterna i
+stolparna  och sätt 
+\[ 
+A_k=\alpha_1+\ldots+\alpha_k\quad\colon 1\leq k\leq N
+\] 
+Med dessa beteckningar ges  aren hos det inneslutna området av:
+\[ 
+\sum_{k=1}^{k=N}\, x_k\sin \,A_k\cdot \ell_k+
+\frac{1}{2}\cdot \sum\, \cos A_k\sin \,A_k\cdot \ell^2_k\tag{*}
+\]
+\medskip
+
+
+\noindent
+Lantmätaren har för sin kalkyl också 
+beräknat $x$-koordinaterna som förutom att $x_1$ är lika med  $x$-koordinaten
+hos  $p_1$, ges av
+ekvationerna:
+\[ 
+x_k=x_1+\sum_{\nu=1}^{\nu=k-1}\, \cos A_\nu\cdot \ell_\nu\quad\colon
+2\leq k\leq N
+\] 
+
+
+\medskip
+
+\noindent
+{\bf{Kalkyler före miniräknarnas tidsepok.}}
+Uträkningar i konkreta fall av (*) 
+kunde   utföras med 
+Pascals 
+additionsmaskin 
+som utan problem kunde addera tusentals tresiffriga tal.
+Vi påminner
+om att
+Drottning Kristina  1650
+köpte
+ett av de allra första exemplaren som 
+kom att användas i Stockholm
+i flera årtionden för olika bokföringsändamål. 
+\medskip
+
+\noindent
+{\bf{Anmärkning.}} Notera att kurvan inte behöver begränsa att konvext område. 
+Det är  instruktivt att
+testa formeln med några  "fantombilder", t.ex.   en 5-hörning som
+inte  är konvex.
+Ett specialfall är fallet  $N=2$ då vi har en triangel.
+Med $P_1=(1,0)$ på $x$-axeln
+ och $P_2=(a,b)$ för ett par $0<a<1$ och $b>0$
+ är den vanliga areaformeln.
+ $\frac{b}{2}$ medan (*) uttrycker  arean  som
+ \[
+ \sin A_1\cdot \ell_1+a\sin A_2\cdot \ell_2+
+ \frac{1}{2}\sum_{k=1}^{k=2} \cdot \cos A_k\sin A_k\cdot \ell_k^2
+ \]
+ Här noteras att
+ \[
+ \ell_1=\sqrt{(a-1)^2+b^2}\quad\colon\ell_2=\sqrt{a^2+b^2}
+ \]
+ \medskip
+ 
+ \noindent
+ Formeln är förstås 
+ komplicerad jämfört med $\frac{b}{2}$ men poängen är att den 
+ ingår i en  allmänn formel för godtyckliga månghörningar.
+ 
+\medskip
+
+\noindent
+{\bf{Om beviset av (*)}}
+Man kan visa formeln med rätt omständiga
+kombinatoriska metoder där området succesivt
+delas in i trianglar. Detta  är dock  artificiellt eftersom det inte
+ existerar någon kanonisk metod för att triangulera
+ området.
+ Det eleganta beviset bygger  på 
+ Arkimedes fundamentala  studier av flytande kroppar varför (*) uttrycker en
+ naturlag
+ snarare än en "knepig  matematisk formel". Mer
+ precist tänker man sig en cylinderkropp där två sidor  
+$S_1$ och $S_2$
+är kopior av månghörningen
+och dess längd relativt stor jämfört med månghörningens inneslutna area.
+Med anpassad specifik
+vikt kommer cylindern att inta ett flytläge
+där 
+dess specifika vikt är anpassad så att $S_1$ och $S_2$ båda befinner sig
+precis under vattenytan i vertikal position. 
+Med stöd av original  manuskript från  Arkimedes tid som 
+utgavs i Europa  i slutet av 1500-talet, genomförde
+den holländske  matematikern och fysikern Stevin i början av 1600-talet 
+ett fullständigt bevis av Arkimedes flytlagar som
+implicerar (*). Hans banbrytande arbeten utgjorde
+en inspirationskälla för Descartes.
+Mer  avancerad analys genomfördes  av Huyghens på 1650-talet då han
+analyserade stabilitet hos flytande kroppar. 
+
+
+
+
+\newpage
+
+
+\centerline{\bf{Exempel på
+nogranna vinkelmätningar.}}
+\medskip
+
+\noindent 
+Ett fenomen som uppmärksammades av astronomer  i mitten av 1600-talet handlar 
+om ljusets
+hastighet och ljusstrålars avböjning.
+En banbrytande insats gjordes av den danske astronomen och matematikern Römer
+i slutet av 1670-talet. Genom att mäta förmörkelsetider hos Jupiters
+måne
+Eo under ett halvt år samt  genomföra en genial geometrisk kalkyl
+angav Römer ljushastighen till
+240 000 km per sekund vilket ju är
+anmärkningsvärt nära det nutida värdet på cirka 300 000 km/sek.
+Newton  tog stort intryck av Römers arbete
+och gav med 
+stöd av sin
+universella gravitationslag
+en formel för ljusstrålars avböjning som  passerar
+i närheten av solens gravitationsfält. Mer precist, om
+$\xi$ är avböjningen mätt  i
+radianer så att en grad är $\frac{\pi}{180}$ o.s.v. 
+så följer av lagarna i Newtons mekanik att
+man har ekvationen
+\[ 
+\xi=\gamma\cdot \frac{M}{R^2\cdot {\b{c}}^2}
+\]
+där $M$ är solens massa i kilo, $R$ dess radie i meter,
+${\bf{c}}$ ljushastigheten i meter per sekund och 
+$\gamma$ den universella gravitationskonstanten.
+Det dröjde ända till slutet av 1700-talet innan Cavendish i ett berömt försök kunde
+approximera $\gamma$ och därmed väga jorden samt ge
+närmevärde på solens masstäthet. Resultatet är
+att en liter sol väger cirka ett halv kilo.
+Vidare är
+\[ 
+\gamma\simeq 6,7\cdot 10^{-8}
+\]
+Under 1800-talet utgick dåtidens astronomer från att
+$\xi$  ges av närmevärdet
+\[
+\xi\simeq
+ 6,7\cdot 10^{-8}\cdot \frac{2\pi R^2}{3}\cdot {\bf{c}}^{-2}
+ \]
+Med ${\bf{c}}\simeq 3\cdot 10^8$ i meter/sekund
+ blir högerledet approximativt
+ \[
+ \frac{6,7\cdot 2\pi }{3\cdot 9}\cdot \frac{R^2}{10^{24}}
+ \]
+ Talet är litet men den stora nämnaren kompenseras hyfsat av solradien
+ $R$ som enligt ovan är tagen i meter.
+ Från senare hälften av 1800-talet kunde  astronomer  mäta
+ så små storheter som ljusavböjningar tack vare
+ utvecklingen av kameror.
+ Det fordras dock månförmörkelser för att kunna studera ljusavböjning i närheten av solen
+ så
+ tillfällen att göra observationer var - och är - relativt ringa.
+ Euklidisk geometri och den klassiska mekanikens postulat
+ sattes  bara på prov utan
+ fordrade en revidering när Einsten med stöd av
+ nya fysikaliska  postulat år 1916 härledde en ny formel där $\xi$ är \emph{dubbelt
+ så stor} jämfört med  det $\xi$-värde Newton angivit.
+Att Einsteins  teori  stämmer konfirmerades  1919
+ av  engelska  astronomer.
+ Precis som  i exempel hämtade från euklidisk geometri
+ är  förutsättningen för att 
+ förstå innebörden av Einsteins allmänna relativitetsteori  att följa
+ detaljer hans  synnerligen eleganta
+ matematiska  härledningar.
+ Ett första test på teorins giltighet gjorde Einstein
+ redan 1916 när han visade att den revidering av Newtons ekvationer som
+ uppträder i den allmänna relativitetsteorin förklarar
+ den oregelbundna rörelsen hos planeten Merkuris som 
+ astronomer under nära ett sekel förgäves sökt förklara med närvaro av månar
+ eller andra ännu icke upptäckta planeter i närheten av Merkuris.
+ Einstein  visade 
+ att
+ man inte längre behövde söka efter  "nålar i solsystemets höstack" eftersom
+ Merkurius bana i  relativitetsteorin
+ lyder i princip samma lagar som alla "normala" planeter.
+ Naturligtvis skall inte matematikens roll
+överdrivas i det 
+här sammanhanget: Einsteins  avgörande och djupa
+tankebanor som
+ledde fram till såväl  den speciella som  den allmänna relativietsteorin
+handlar om fysik. Men under en  tjugoårig
+tankeprocess kring  relativitet  tjänstgjorde 
+matematik   som en god
+hjälpreda för honom.
+Låt oss också påimnna om att Enstein var en "veritable räknenisse". Hans första
+publikationer som han skrev 1900 som 20-åring
+innehåller omfattande kalkyler av
+korrelationskoefficienter från statiska data om kollodiala lösningar.
+Detta ledde seanre fram till
+hans berömda arebete från 1905
+om Brownsk rörelse 
+där lösningar till
+väremekvationer gjorde det möjligt att bestämma Avogrados tal och
+därmed implicit visa existenser av atomer
+innan detta påvisats 
+experimentellt.
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+\end{document}

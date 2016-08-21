@@ -1,0 +1,392 @@
+\documentclass{amsart}
+\usepackage[applemac]{inputenc}
+
+
+\addtolength{\hoffset}{-12mm}
+\addtolength{\textwidth}{22mm}
+\addtolength{\voffset}{-10mm}
+\addtolength{\textheight}{20mm}
+\def\uuu{_}
+
+
+\def\vvv{-}
+
+\begin{document}
+
+
+\centerline{\bf{Hšrmander's  $L^2$-estimate in dimension one}}
+
+\bigskip
+
+\noindent
+Let $\Omega$ be an open  set in  ${\bf{C}}$.
+Every real-valued continuous and non-negative function  $\phi$ in
+$\Omega$ gives
+the Hilbert space 
+$\mathcal H_\phi$
+whose elements are Lebesgue measurable functions $f$ in $\Omega$ such that
+\[ 
+\int_\Omega\, |f|^2\cdot e^{-\phi}\, dxdy<\infty\tag{0.0}
+\]
+and equipped with a norm defined by the square root above.
+Notice that
+$\mathcal H_\phi$ contain the space of test-functions
+wtih compact support in $\Omega$ as a dense subspace.
+Let $\psi$ be another
+continuous and non-negative function 
+which gives the Hilbert space 
+$\mathcal H_\psi $ where the norm of an element $g$ is denoted by $||g||_{\psi}$.
+The 
+$\bar\partial$-operator
+sends a
+test-function $f$   to
+$\bar\partial(f)$.
+Consider 
+the equation
+\[
+\bar\partial(f)= w\quad\colon w\in H_\psi\tag{5.0}
+\]
+where $f$ belongs to $\mathcal H_\phi$ with the additional condition that
+its $\bar\partial$-derivative belongs to
+$\mathcal H_\psi$, i.e this puts a constraint on $f$. Notice  that
+$f$ is not unique   since
+every holomorphic function in
+$\Omega$ with a finite norm in (0.0)
+belongs to the $\bar\partial$-kernel. conversely, since 
+$\bar\partial$ is an elliptic differential operator
+this means 
+the kernel of the densely defined linear operator
+\[
+\bar\partial\colon \mathcal H_\phi\to \mathcal H_\psi\tag{0.1}
+\]
+consists of holomorphic functions for which (0,0) is finite.
+We shall find condions on the pair
+$\phi,\psi$ such that there exists
+a constant $C$ where
+(5.0) has a solution $f$ with
+\[
+ ||f||_\phi\leq C\cdot ||w||_\psi\quad\colon \forall\, w\in H_\psi\tag{*}
+\]
+A sufficent condtion to obtain solutions in (*) with a constant
+$C$ is that the \emph{adjoint} operator in (0.1)
+has  special properties.
+Denote this adjoint  by $\bar\partial^*$. Notice that it is 
+densely defined since
+it
+contains the space of test-funtions in
+$\Omega$.
+Suppose there exists a  positive contant $c_0$ such that
+\[
+||\bar\partial^*(g)||_\phi\geq c_0\cdot ||g||_\psi
+\quad\colon\quad g\in \mathcal D(\bar\partial^*)\tag{0.2}
+\]
+where $\mathcal D(\bar\partial^*$ is the domain of defintion for
+the adjoint operator.
+Then standard  Hilbert space theory gives
+(*) where onr can take $C=c_0^{-1}$.
+To ensure that (0.2) we give:
+
+\medskip
+
+\noindent
+{\bf{1.1 Definition.}}
+\emph{The pair  $\phi,\psi$ satisfies the Hšrmander condition if there exists some 
+positive constant $c_*$ such that }
+\[ 
+\Delta(\psi)\vvv 2\cdot(\psi_x^2+\psi_y^2)+
+\psi_x\phi_x+\psi\uuu y\phi_y\geq
+2\cdot c_*\cdot e^{\psi-\phi}
+\tag{1.1.1}
+\]
+\medskip
+
+
+\noindent
+{\bf{1.2 Theorem.}}
+\emph{If  (1.1.1) holds then (*) has solutions with}
+\[
+C\leq \frac{1}{\sqrt{c_*}}\quad\colon\forall\, w\in\mathcal H_\psi
+\]
+
+
+\medskip
+
+
+\noindent
+\emph{Proof.}
+Let $w$ be in the domain of definition for
+the adjoint operator 
+$\bar\partial^*$. If $f\in C_0^\infty(\Omega)$
+one has 
+\[ 
+\langle \bar\partial(f),w\rangle=\int \bar\partial(f)\cdot \bar w\cdot e^{-\psi}\,dxdy=
+-\int\, f\cdot 
+\bigl[\bar\partial(\bar w)-\bar w\cdot \bar\partial(\psi)\bigr]\cdot
+ e^{-\psi}\,dxdy\tag{i}
+\]
+where Stokes theorem gives the last equality.
+Since $\psi$ is real-valued, 
+$\bar\partial(\bar w)-\bar w\cdot \bar\partial(\psi)$
+is equal to the complex conjugate of
+$\partial(w)-w\cdot\partial(\psi)$. Hence (i) and the construction of adjoint operators give
+\[
+\bar\partial ^*(w)=-\bigl[\partial(w)-w\cdot\partial(\psi)\bigr]\cdot
+ e^{\phi-\psi}\tag{ii}
+\]
+Taking the squared $L^2$-norm in $\mathcal H_\phi$
+we obtain
+\[ 
+||\bar\partial^*(w)||^2_\phi=
+\int\, |\partial(w)-w\cdot\partial(\psi)|^2\cdot
+e^{\phi-2\psi}=
+\]
+\[
+\int\, \bigl(|\partial(w)|^2+|w|^2\cdot|\partial(\psi)|^2\bigr)\cdot
+e^{\phi-2\psi}-2\cdot\mathfrak{Re}\bigl (
+\int\, \partial(w)\cdot\bar w\cdot\bar \partial(\psi)\cdot
+e^{\phi-2\psi}\bigr)\tag{iii}
+\]
+By partial integration
+the last integral in (iii) is equal
+\[
+2\cdot\mathfrak{Re}\bigl(\,  \int\,w\cdot[\partial(\bar w)\cdot\bar \partial(\psi)+
+\bar w\cdot \partial\bar\partial(\psi)\vvv
+2\bar w\cdot \bar \partial(\psi)\cdot \partial (\psi)+
+\bar w\cdot \bar\partial(\psi)\cdot \partial(\phi)]\cdot e^{\phi\vvv 2\psi}\,\bigr)\tag{iv}
+\]
+
+
+\noindent
+Next, the Cauchy-Schwarz inequality gives
+\[
+\bigl|2\cdot 
+\int \, w\cdot  \partial(\bar w)\cdot \bar \partial(\psi)\cdot e^{\phi\vvv 2\psi}\,\bigr|\leq
+\int\, \bigl(|\partial(w)|^2+|w|^2\cdot|\partial(\psi)|^2\bigr)\cdot
+e^{\phi-2\psi}\tag{v}
+\] 
+Together (iii-v) give
+\[
+||\bar\partial^*(w)||^2_\phi\geq 
+2\cdot \mathfrak{Re}\,  \int\, |w|^2\cdot \bigl[\,\partial\bar\partial(\psi)\vvv
+2\cdot \bar \partial(\psi)\cdot \partial (\psi)+
+\bar\partial(\psi)\cdot \partial(\phi)\,\bigr ]\cdot e^{\phi\vvv 2\psi}\tag{iv}
+\]
+Now we recall that
+\[
+\partial\bar\partial(\psi)=\frac{1}{4}\Delta(\psi)\quad\&\quad
+\bar \partial(\psi)\cdot \partial (\psi)=\frac{1}{4}\cdot ( \psi_x^2+\psi_y^2)
+\]
+It follows that
+(iv) is equal to
+\[
+2\cdot \mathfrak{Re}\,  \int\, |w|^2\cdot
+\frac{1}{4}\bigl[\Delta(\psi)\vvv 2\cdot |\nabla(\psi)|^2+
+\psi\uuu x\phi\uuu x+\psi\uuu y\phi\uuu y\,\bigr]\, \cdot e^{\phi\vvv 2\psi}
+\tag{vi}
+\]
+Hence (1.1.1) gives
+\[
+|\bar\partial^*(w)||^2_\phi\geq c\uuu 0^2\cdot \int\, |w|^2\cdot
+e^{\psi\vvv \phi}\cdot e^{\phi\vvv 2\psi}=
+c_*\cdot ||w||^2\uuu\psi\tag{vi}
+\]
+This lower bound gives
+solutions to (*) by general facts about densely defined operators on
+Hilbert spaces.
+and Theorem 5.2 follows.
+
+
+
+
+\bigskip
+
+\noindent {\bf{5.3 Remark.}}
+The full strength of  $L^2$-estimate
+appears in dimension $n\geq 2$ where one works with
+\emph{plurisubharmonic functions}  and 
+impose the condition that $\Omega$ is a
+strictly pesudo-convex set in ${\bf{C}}^n$ and
+solve inhomogeneous $\bar\partial$-equations for 
+differential forms of bi-degree $(p,q)$. 
+In addition to  Hšrmander's original article [Hšrmander] we refer to his text-book
+[Hšrmander] and  Chapter XX in [Hšmander XX-Vol 2]
+where   bounds for $\bar\partial$-equations are 
+established with certain  relaxed assumptions which are used 
+to settle the fundamental principle 
+for over-determined systems of PDE-equations in the smooth case.
+
+
+
+
+
+\centerline{\bf{The case $n=2$}}
+
+\bigskip
+
+\noindent
+The special case below  may help the reader to
+pursue details from
+Hšrmander's work, where I personally recomend his 
+original article from 1962 in Acta matematica.
+Take $n$=2 and let 
+$D^2$ be the 2-dimensional polydisc in ${\bf{C}}^2$ with
+coordinates $z=(z_1,z_2)$. Here $\bar\partial_1$ and $\bar\partial_2$
+are pairwise commuting operators. Let 
+$\phi(z)$  be a real-valued function in $D^2$
+which is at least of class $C^2$.
+We get the
+Hilbert space
+$\mathcal H$
+of locally square integrabše functions with
+finite norm:
+\[
+||a||_\phi =\sqrt{\int_{D^2}\, |a(z)|^2\cdot e^{-\phi(z)}\,d\lambda(z)}
+\]
+where $d\lambda(z)$ is the 4-dimensional Lebesgue meaure.
+Now we consider  the  densely defined
+linear operator $T$ from
+$\mathcal H$ into $\mathcal H\oplus\mathcal H$ defined by
+\[ 
+T(a)=\bar\partial_1(a)\oplus\,\bar\partial_2(a)
+\]
+
+\noindent
+{\bf{A. Exercise.}}
+Let
+$T^*$ be the adjoint of $T$ which sends a pair $(f,g)\in\mathcal H\oplus \mathcal H$
+to $\mathcal H$. Show that 
+\[
+T^*(f,g)=
+-(\partial_1(f)-f\cdot\partial_1(\phi)+\partial_1(g)-g\cdot\partial_1(\phi)]\tag{A}
+\]
+\medskip
+
+\noindent
+{\bf{B. Exercise.}}
+Put
+\[
+ \delta_1(f)= \partial_1(f)-f\cdot \partial_1(\phi)\quad\colon\quad 
+  \delta_2(g)= \partial_2(g)-g\cdot \partial_2(\phi)
+ \]
+Use (A) to
+show that
+\[
+||T^*(f,g)||^2=
+||\delta_1(f)||^2+||\delta_2(g)||^2+2\cdot \mathfrak{Re}\,
+\int\, \delta_1(f)\cdot \overline{ \delta_2(g)}\cdot e^{-\phi}\, d\lambda\tag{B.1}
+\]
+Next, use Stokes theorem to show that
+\[
+\int\, \delta_1(f)\cdot  \overline{ \delta_2(g)}
+\cdot e^{-\phi}\, d\lambda
+=
+- \int f\cdot\overline{\partial_1(\delta_2(g))}\cdot
+e^{-\phi}\,d\lambda\tag{B.2}
+\]
+\medskip
+
+\noindent
+{\bf{C. Exercise.}}
+Put
+\[ 
+H(z)=
+\frac{\partial^2\phi}{\partial z_1\bar\partial z_2}\tag{C.0}
+\]
+and by multiplication one identifies $H$ with a zero-order
+differential operator. Show
+the following
+equality  in  the ring of differential  operators in
+${\bf{C}}^2$:
+\[ 
+\partial_1\circ \delta_2=\delta_2\circ\partial_1-H\tag{C.1}
+\]
+Conclude that
+(B.2) becomes
+\[
+\int\, f\cdot \bar g\cdot \bar H\cdot e^{-\phi}\,d\lambda
+- \int f\cdot\overline{\delta_2\partial_1((g))}\cdot
+e^{-\phi}\,d\lambda\tag{C.2}
+\]
+\medskip
+
+
+\noindent
+{\bf{D. The case $\bar\partial_1(g)= \bar\partial_2(f)$}}.
+Use the above to show that this equality gives
+\[
+-2\cdot \mathfrak{Re}\, \int \bar f\cdot\delta_2(\bar\partial_2((f))\cdot
+e^{-\phi}\,d\lambda=
+-2\cdot \mathfrak{Re}\, \int\, |\partial_2(f)|^2\cdot e^{-\phi}\,d\lambda\tag{D.1}
+\]
+\medskip
+
+\noindent
+{\bf{E. Conclusion.}}
+Show that (A), (B.1-2) and (D.1) and  the equality
+$\bar\partial_1(g)= \bar\partial_1(f)$
+give:
+\[
+||T^*(f,g)||^2=
+||\delta_1(f)||^2+||\delta_2(g)||^2+2\cdot \mathfrak{Re}\,
+\int\, f\cdot\bar  g\cdot H(z)\cdot e^{-\phi}\, d\lambda+
+||\partial_2(f)||^2\tag{E.1}
+\]
+
+
+\noindent
+Above the last term is always $\geq 0$.
+To ensure that there exists a constant $c_0$ such that
+\[
+||f||^2+||g||^2\leq c_0^2\cdot ||T^*(f,g)||^2\tag{E.2}
+\]
+
+\noindent
+one must impose  suitable conditions upon $\phi$ 
+Above the mixed derivative which defines
+the
+$H$-function appears while 
+norms $||\delta_1(f)||^2$ and $||\delta_2(g)||^2$
+can be estimated as in the case $n=1$ applied 
+with  $\phi=\psi$. The reader is invited to contemplate upon conditions 
+which give a constant $c_0$ in (E.2) where 
+Hšrmander's work can be consulted.
+further dertails. Above we treated a  special case
+since we used the same weight  function $\phi$ and not a pair as in
+the case $n=1$.
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+ 
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\centerline{\bf VI. The Corona Theorem.}
+
+\bigskip
+\noindent
+{\bf Introduction.} In  the unit disc $D$ we 
+have the Banach algebra $H^\infty(D)$ of bounded analytic functions.
+Let $\mathfrak{M}_\infty(D)$ denote its maximal ideal space.
+Via point evaluations in $D$ we get a map
