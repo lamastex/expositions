@@ -10,7 +10,9 @@ This work is licensed under the Creative Commons Attribution-Noncommercial-Share
 International License. To view a copy of this license, visit
 [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-This work is currently incomplete due to the lack of opportunity currently to teach courses in computational statisitcs.
+The current PDF of the book is [CSEBook.pdf](CSEBook.pdf).
+
+This work is currently incomplete due to the lack of opportunity to teach courses in computational statistics.
 Please fork and remix as you please under the Creative-Commons terms.
 
 This work was partially supported by NSF grant DMS-03-06497 and NSF/NIGMS grant DMS-02-01037.
